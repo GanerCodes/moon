@@ -626,8 +626,8 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
     ¿s≅󰮈: ↪ rᴍ²󰻾
     ↪ r
 
-⨁´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝𝚢)≕𝚢≅␀∧¬𝚡 ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſ􀳋+)
-⨀´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝𝚢)≕𝚢≅␀∧¬𝚡 ⭜         1 ⭝ 𝚡ſ􀳋⋅)
+⨁´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄☾‹WARN: Deprecated binary use of ⨁, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſ􀳋+)
+⨀´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄☾‹WARN: Deprecated binary use of ⨀, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜         1 ⭝ 𝚡ſ􀳋⋅)
 ∅´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑠()⭝ s⭥ᐖ𝑠())
 ⍁´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑙()⭝ s>0 ⭜s⭥ᐖ[]ᐸ⭝ ⛶´⊚¯s∘[])
 󱖔´ = OPWRAP_(⥌x=␀,y=␀,s=␀↦s≅␀ ⭜ƒ↦ƒ(⠤𝕣(x⋄y))󰅂⭝ s(⠤𝕣(x⋄y)))
@@ -713,8 +713,9 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
              rect(𝚡,𝚢))
 
 𝗋 = 󷺻isclose(⟞󷸚,0)⭜⟞󷸛⭝⟞
+cos,sin,tan,exp,log,acos,asin,atan = 󰂼ₛ󰄎ₛᵢₙ󰄎ₜₐₙ󰄎ₑₓₚ󰄎ₗ󰂼󰄎ₐ󰂼ₛ󰄎ₐₛᵢₙ󰄎ₐₜₐₙᐵ○ᵜ𝗋
 
 􋑃, 􋑂 = lcm, gcd
-􋐳, 􋐲 = with_inv(𝗋○cos, 𝗋○acos), with_inv(𝗋○sin, 𝗋○asin)
-􋐴, 􋐼 = with_inv(𝗋○tan, 𝗋○atan), with_inv(𝗋○exp, 𝗋○log)
-􋑯 = with_inv(𝗋○log, 𝗋○exp)
+􋐳, 􋐲 = with_inv(cos, acos), with_inv(sin, asin)
+􋐴, 􋐼 = with_inv(tan, atan), with_inv(exp, log)
+􋑯 = with_inv(log, exp)

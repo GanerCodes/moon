@@ -1,25 +1,33 @@
-            │ ⟵ screenshot width ≥ that
+            │ ⟵ screenshot width ≥ that  🮦🮧
 EXPR = 󰦥󰦥󰦥󰦥󰦥
-    󷺹⭥⤉≡🃌ᚤ⟞
+󷺹!3⭥󰈲󷺹󷹜∈󷹜⟞²ᐸ→􍪴
 󰦥󰦥󰦥󰦥󰦥
-SS1 = ‹https://ganer.xyz/s/a4348d57bf158e7a›
+SS1 = ‹https://ganer.xyz/s/ff1c5515662333ec›
 
 EXPO = 󰦥󰦥󰦥󰦥󰦥
-󷺹🮦🮦🮦🮦🮦🮦  ƒ of 1 var, inserted here
- ⭥       indices; [0,1,…,len-1]
- 🮧⤉      max, aka len-1
- 🮧🮧≡🮦🮦🮦  equals?
-    🃌🮦🮦  cardinality (length) of
-     ᚤ🮦  unique values of
-      ⟞  the input
+󷺹🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦  ƒ of one var, inserted here
+ !                factorial
+ 🮧3               times three
+ 🮧🮧⭥              as range excluding last
+ 🮧🮧🮧󰈲🮦🮦🮦🮦🮦🮦🮦      filter by
+     󷺹🮦🮦🮦🮦🮦       ƒ of one var, inserted here
+      󷹜             int-to-str
+      🮧∈🮦🮦🮦         contained within?
+        󷹜🮦🮦         int-to-str
+         ⟞²         left arg squared
+           ᐸ        end ƒ
+ 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧→     group
+ 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧􍪴    left-arg-th index of
 󰦥󰦥󰦥󰦥󰦥
-SS2 = ‹https://ganer.xyz/s/0dff9f3075abc01e›
+SS2 = ‹https://ganer.xyz/s/d1b8802894932767›
+EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥
+Go-go gadget galactic alg
+󰦥󰦥󰦥󰦥󰦥
 
-EXEC = 𝚲‹
-ƒ = ⟦EXPR⟧
-ƒ([1,2,6,2])☾
-ƒ([0,1,2])☾
-›
+EXEC = 𝚲󰦥󰦥󰦥󰦥󰦥
+ƒ = %EXPR%
+1󷸻7ᐖ‹⟦⟞⟧ → ⟦ƒ(⟞)⟧›☾
+󰦥󰦥󰦥󰦥󰦥 ⥉ ‹%EXPR%› 󰛔 EXPR
 
  󰤱 auto-generate screenshots somehow
 
@@ -35,7 +43,7 @@ EXPR󷸊⬄𝗻𝘀 ; EXPO󷸊⬄𝗻𝘀 ; EXEC󷸊⬄𝗻𝘀
 ```
 Note: ☾ uses a custom font, but you can run this code in the [Web UI][2]
 
-[![Diagram][4]][4]
+[![Diagram][4]][4]⟦EXTRA_INFO⬄→ᣆ󷺹+ᵜ𝗻⟧
 
   [1]: https://github.com/ganercodes/moon
   [2]: https://ganer.xyz/moon?code=⟦quote∘EXEC⟧
