@@ -84,7 +84,7 @@
                 t󷸊+1
                 x󷸊⹏s
             ↪t
-        ¿s≅<: ↪ ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
+        ¿s≅<: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
         ¿s≅+:  󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
             ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
             ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
