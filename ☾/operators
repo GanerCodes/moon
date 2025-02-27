@@ -499,10 +499,24 @@
     󰤱 make 󰤷 take angles between arb. vectors
     󰤱 tests
 󷰭 ✿ 𝚡∧􊽨𝚢 ᴍflower quadratic reciprocity
-    󰤱 micheal docs
-    󰤱 micheal tests
+    Let a,p∈ℤ
+    a✿p ≡ Kronecker symbol (a/p)
+    a✿p∈[󷰾,0,1]
+    https://en.wikipedia.org/wiki/Kronecker_symbol
+    p∈¶ ⇒ a✿p ≡ p∣a ⭜0⭝ ∃x✣p∣x²-a ⭜1⭝ 󷰾
+    `1✿3 ≡ 1`
+    `󷰾✿3 ≡ 󷰾`
+    `12✿3 ≡ 0`
+    `󷱂✿󷱃 ≡ 1`
 󷰭 ⫚ 𝚡∧􊽨𝚢 ᴍnCr choose
-    󰤱 micheal docs
+    Let n∈ℂ, k∈ℕ
+    n⫚k ≡ binomial of n,k ≡ n(n-1)…(n-k+1)/k!
+    Let n∈ℂ, k⊂ℕ, e.g., k=[2,3,5]
+    n⫚k ≡ multinomial of n,⠤k
+    Let Xᐹ𝗜, k∈ℕ
+    X⫚k ≡ list of lists with k elements from X
+    Let Xᐹ𝗜, k⊂ℕ, e.g., k=[2,3,5]
+    X⫚k ≡ list of ways to choose k₀ elts, then k₁ elts, etc. as list of list of list
     󰤱 micheal tests
 󷰭 ¶ 𝚡∨􊽨𝚡 ᴍpil primes
     󰤱 docs
