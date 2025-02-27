@@ -191,6 +191,11 @@
 󷰡 ᣆ 𝚡∨􊽨𝚢 ᴍcig conditional function application
     `1ᣆ􋄒󷹒 ≡ 󷰾 ≡ 1ᣆ􍯏󰂁⁰󷹒`
     `1ᣆ􋄓󷹒 ≡ 1 ≡ 1ᣆ􍯏󰂁¹󷹒`
+    `1ᣆ􋄓[󷺹+2] ≡ ✗`
+    `1ᣆ􍯏⁻¹[󷺹+2] ≡ 0`
+    `1ᣆ􋄒[󷺹+2] ≡ 3`
+    `1ᣆ􋄓[󷺹+2,󷺹+9] ≡ 3`
+    `1ᣆ􍯏󰂁⁰[󷺹+2,󷺹+9] ≡ 10`
     󰤱 docs
 󷰡 󷷹 𝚡∨􊽨𝚢 ᴍdiaO diamond compose
     󷹇 Requested by Michael for future advanced math things
@@ -382,7 +387,7 @@
     `[1,2,3,4]󰑅󷺹>2ᐸ ≡ 3`
     `[1,2,3,4]󰑅ᔨ󷺹>2ᐸ ≡ 2` 󷹇 index
     󰤱 docs
-󷰭 󷹓󷹕󷹖󷹔 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
+󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
     `"abcdcba"󷹓󷺹≡␛cᐸ ≡ "abc"`
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`

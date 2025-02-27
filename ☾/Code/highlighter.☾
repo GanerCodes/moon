@@ -23,7 +23,7 @@ styd = styf ⥉  ⥉ loads ⥉ ℵ
     ℭ = traceback.linecache.CPY_CACHE
     ə = ε.__traceback__
     TB, i = [], 0
-    ➰i+=1:
+    ➰i󷸊+1:
         ¿i ≥ 50:
             ‹Too long a traceback, stopping at ⟦i⟧ frames!›☾
             ⇥
@@ -45,10 +45,10 @@ styd = styf ⥉  ⥉ loads ⥉ ℵ
             F = F.split(𝗻)
             pps = ⠤ə.tb_frame.f_code.co_positions,
             s, e, a, b = pps􌿰􋕜ₜ􋕞ₗₐₛₜᵢ􊲗₂
-            ¿a≅□: TB += [(f, s, ᐦ, "Missing location!", ᐦ)]
+            ¿a≅□: TB 󷸊+ [(f, s, ᐦ, "Missing location!", ᐦ)]
             l = 𝗻.join(Fₛ₋₁﹕ₑ).encode("utf-8")
             A,B,C = l﹕ₐ⋄lₐ﹕⋄l﹕ ᴍ 󰲡x.decode("utf-8", errors="replace")
-            TB += [(f, s, __highlighter__(A),
+            TB 󷸊+ [(f, s, __highlighter__(A),
                           __highlighter__(B,✓),
                           __highlighter__(C))]
         ¿ə.tb_next≕ə≅□: ⇥
