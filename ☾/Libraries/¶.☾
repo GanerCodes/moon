@@ -1,0 +1,135 @@
+⊢firstℕbool(c,r=2):
+    ¿c(1): ↪1
+    ub=1
+    ➰¬c(ub):
+        ub󷸊⋅r
+    lb=ub⹏r
+    ➰ub-lb>1:
+        m=(ub+lb)⹏2
+        ¿c(m): ub=m
+        ¡: lb=m
+    ↪ub
+
+⊢✿(x,y,s=␀):
+    ¿y≡0: ↪𝑖(⫰x≡1)
+    ¿x≡0: ↪𝑖(y∈±1)
+    ¿􋑂(x,y)>1: ↪0
+    ¿x≡1: ↪1
+    t=󷰾⁰󰂁ˣ􋁔⁰󰂁ʸ
+    ¿y¶²≕r%2∧x%8∈[3,5]: t=-t
+    y󷸊⫰⹏2⌃r
+    ¿y≡1: ↪t
+    x󷸊%y
+    ↪t⋅(✿)(y,x)⋅(󷰾⌃←(x⹏2⌃(x¶²)-1)⋅(y-1)⹏4)
+
+󱀘 ¶´:
+    @cache
+    ⊢__contains__(𝕊,n):
+        ¿n≤1: ↪✗
+        ¿2∣n: ↪n≡2
+        ¿n<10000:  normal test
+            ∀k∈3󷸻²⬒(√n):
+                ¿k∣n: ↪✗
+            ↪✓
+        ∀k∈3󷸻²100:
+            ¿k∣n: ↪✗
+         strong pseudoprime check
+        ¿pow(2,(n-1)⹏2⌃(s≔(n-1)¶²)),n)≕a≠1:
+            ∀r∈s⭥:
+                ¿a≡n-1: ⇥
+                a󷸊 ²%n
+            ¡:
+                ↪✗
+         check for square number 󰤱 make faster by using binary to get good first approx
+        ¿firstℕbool(󷺹²≥n)²≡n: ↪✗
+         strong lucas pseudoprime check
+        D=5
+        ➰(✿)(D,n)≠󷰾: D󷸊ⴵ⋅󷰿-D
+        s=(n+1)¶²
+        d=n+1→⹏2⌃s
+        B=bin(d)₃﹕
+        P,Q=1,(1-D)⹏4
+        U,V,Qk=1,P,Q
+        ∀b∈B:
+            U, V, Qk = U⋅V%n, (V²-2Qk)%n, pow(Qk,2,n)
+            ¿b≡␛1:
+                U, V, Qk = ((2∣𝓽≔P⋅U+V)⭜𝓽⭝𝓽+n)⹏2%n, ((2∣𝓽≔D⋅U+P⋅V)⭜𝓽⭝𝓽+n)⹏2%n, Qk⋅Q%n
+        ¿U:
+            ∀r∈s⭥:
+                ¿¬V: ⇥
+                U,V,Qk=U⋅V%n,(V²-2Qk)%n,pow(Qk,2,n)
+            ¡:
+                ↪✗
+        ¿n<2⁶⁴: ↪✓  Baillie PSW test stops being known here
+         󰤱 pocklington test
+         󰤱 tell if n-1 is easily factored?
+        ¿n<2¹⁵⁰⁰:
+            ✗⨳‹󰤱 implement APRCL for n<2¹⁵⁰⁰›
+         󰤱 APRCL
+        ✗⨳‹󰤱 implement ECPP for n>2¹⁵⁰⁰›
+         󰤱 ECPP
+    __getitem__ = ⥌𝕊,t↦𝚲𝕊.__call__(⠤𝔸,s=t)
+    ⊢ __call__(𝕊,x,s=␀):
+        ¿x≅∞: ↪ ‹󰤱 ∞ primes›
+        ¿s≅␀:  󰤱 speedup
+            ¿x≤1: ↪[2]⋅x
+            t,p=[2],3
+            ➰t🃌<x:
+                ¿p∈¶: t.append(p)
+                p󷸊+2
+            ↪t
+        ¿sᐹℤ:
+            t=0
+            ➰s∣x:
+                t󷸊+1
+                x󷸊⹏s
+            ↪t
+        ¿s≅<: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
+        ¿s≅+:  󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
+            ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
+            ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
+        ¿s≅∣: ↪𝑙(x¶󰻾)  󰤱 speedup
+        ¿s≅*:  󰤱 speedup
+            x󷸊⫰
+            ¿x≡1: ↪⍁
+            t=⍁
+            ➰x>1:
+                t.append(s≔smolfactor(x,t🃌⭜t􍨄-1⭝1))
+                x󷸊⹏s
+            ↪t
+        ¿s≅⊞: ↪ℵ⁰(x¶󰻾)  󰤱 speedup
+        ¿s≅􋑂: x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
+        ¿s≅%:  󰤱 speedup
+            t=󷰾²􋁒ˣ
+            ¿t>0: x󷸊⹏2
+            ¿2∣x: ↪0
+            p=3
+            ➰p≤x:
+                ¿p∣x:
+                    ¿p²∣x: ↪0
+                x󷸊⹏p
+                p󷸊+2
+                t=-t
+            ↪t
+        ¿s≅􋑯:  󰤱 speedup
+            ¿2∣x:
+                ➰2∣x: x󷸊⹏2
+                ↪x≡1∧􋑯(2)
+            p=3
+            ➰p<⬒√x:
+                ¿p∣x:
+                    ➰p∣x: x󷸊⹏p
+                    ↪x≡1∧􋑯(p)
+            ↪􋑯(x)
+¶ = ¶
+
+ 󰤱negative k and speedup with ⹏ and % magic
+⊢smolfactor(n,k=1):
+    ¿k>n: ↪0
+    ¿k<1: ↪1
+    ¿k≡1∧2∣n: ↪2
+    ∀p∈k󷸺n:
+        ¿p∣n: ↪p
+    ↪n
+
+
