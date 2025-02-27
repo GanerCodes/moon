@@ -83,7 +83,7 @@
     ∓±⦢􊽺 two arg mean
 
     ∪⦢􊽺 remove added items from left
-    󷹩⦢􊽺 remove added items from left
+    󷹩⦢􊽺 remove added items from left and add removed items from the left
     ∩⦢􊽺 add back removed items from left
     ∖⦢􊽺 add back removed items
     󰆩⦢􊽺 inverses of eachother
