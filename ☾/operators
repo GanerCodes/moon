@@ -491,11 +491,22 @@
     `√󰁛5 ≡ 5󰁛􍩯`
     "؆25" ⟶ [󷱂, 5]  beware IEEE 754
     "؆³1" ⟶ 3ʳᵈ roots of unity
-󷰭 ! 𝚡. ! factorial
-    Suffix unary
-    `5! ≡ 120`
-    `0! ≡ 1`
-    󰤱 generalize to gamma function
+󷰭 󰤷⦡ 𝚡∨􊽨𝚡 ᴍCC⟦AP⟧ {angle/phase,polar/rectangular conversions}
+    Let 𝖼∈ℂ
+    𝖼󰤷 ≡ 𝖼󷸜󰤷 ≡ 𝖼󷸛󰤷󷸚𝖼 ≡ atan2(𝖼󷸚,𝖼󷸛)
+    𝖼⦡ ≡ (𝖼⫰,󰤷𝖼)
+    𝖼 ≡ (𝖼⫰,󰤷𝖼)⦡ ≡ 𝖼⫰⦡(󰤷𝖼) ≡ 𝖼⫰⦡􍽰󰤷􋐎ˢᵘᵖ
+    󰤱 make 󰤷 take angles between arb. vectors
+    󰤱 tests
+󷰭 ✿ 𝚡∧􊽨𝚢 ᴍflower quadratic reciprocity
+    󰤱 micheal docs
+    󰤱 micheal tests
+󷰭 ⫚ 𝚡∧􊽨𝚢 ᴍnCr choose
+    󰤱 micheal docs
+    󰤱 micheal tests
+󷰭 ¶ 𝚡∨􊽨𝚡 ᴍpil primes
+    󰤱 docs
+    󰤱 basic tests
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
     `0ⴵ   ≡ 0`
@@ -533,6 +544,13 @@
     Opposite of bool value of
 󷰮 ¯ .𝚡 ᴍ_𝕊 negate
     `¯5 ≡ 󷱂`
+󷰷 ! 𝚡. ! factorial
+    Suffix unary
+    `5! ≡ 120`
+    `0! ≡ 1`
+    `3!5! ≡ 720`
+    󰤱 micheal
+    󰤱 generalize to gamma function
 󷰯 …  𝚡∧𝚢 ᴍ..𝕊 indicies between
     Same as 󷸹
 󷰯 ⌃󰁌 𝚡∧􊽨𝚢 ᴍc^ exponential
