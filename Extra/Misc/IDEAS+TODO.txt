@@ -46,6 +46,7 @@
     󰣡󰣢󰣣󰣤󰣥󰣦󰣧 󰫃󰫄󰫅󰫆󰫇󰫈 󰯁󰯂󰯃 🮦 🮧
     ⏶⏷⏴⏵▲▼▶◀🞁🞃🞀🞂▴▾◂▸▵▿◃▹◢◣◤◥◸◹◺◿ ⎔⬡
     𝛬󰎦󰎩󰎬󰎮󰎰󰎵󰎸󰎻󰎾󰎣
+    ᒋᖊᖋᖌᖍᖤᖢᖥᖣᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᕞᕟᕠᕡᖧᖨᖪᖬᕗᕙᗝᗞᗟᗠᗡᗣᗤᗥᗦᗧᗨᗩᗪᗫᗬᗭᗮᗯᗰᗱᗲᗳᗵᗶᗷᗸᗹᗺᗻᗼᗽᗾᗿᘀᘁᘂᘃᘄᘅᘆᘇᘈᘉᘊᘋᘌᘍᘎᘏᘐᘑᘒᘓᘔᘕᘖᘗᘘᘙᘚᘛᘜᘝᘞᘟᘠᘡᘢᘣᘤᘥᘦᘧᘨᘩᘪᘫᘬᘭᘮᘯᘰᘱᘲᘳᘴᘵᘶᘷᘸᘹᘺᘻᘼᘽᘾᘿᙀᙁᙂᙃᙄᙅᙆᙇᙈᙉᙊᙋᙌᙍᙏᙐᙑᙒᙓᙔᙕᙖᙗᙘᙙᙚᙛᙜᙝᙞᙟᙠᙢᙣᙤᙥᙦᙨᙩᙪᙫᙬ᙭᙮ᙯᙰᙱᙲᙳᙴᙵᙶᙷᙸᙹᙺᙻᙼᙽᢰᢱᢲᢳᢴᢵᢶᢷᢸᢹᢺᢻᢼᢽᢾᢿᣀᣁᣂᣃᣄᣅᣇᣈᣉᣊᣋᣌᣍᣎᣏᣐᣑᣒᣓᣠᣡᣢᣣᣤᣥᣦᣧᣨᣩᣪᣫᣬᣭᣮᣯᣰᣱᣲ
     󰅊󰱗󰆏󰆒󱉬󱉧󰅇󰅌󱓥
     󰅲 󰅪 󰅩 󰅴     
     𝼋 ⥾ 𖣂 󰙨 ⹔ 󱗘 󱕛    
@@ -57,6 +58,69 @@
     ᚹᛩᛇᛢᛈᚲᛊᛋᛪᛶᛵᛳᛟᛃᛴᛲ᛬᛫
     ᕻᓐᓒᔥᣛ ᔇᔅᔉᔊᓪᣗᕐᔾᖮ ᣜᣝᓫᕑᣞᣟᐝ ᗮᐪ󰂅ᓑᣕᐡᐢ ᐤᐞᐠᑊᘁᣔ
 § OverPowered STUFF [f,⬤,g,√🍊] ------------------------------------
+
+    
+    4⭥            ⦢􊾢 2⋄2
+    [0,1,2,3]     ⦢􊾢 2⋄2
+    [0,1,2,3]        2⋄2 ᴙ 󰆩
+    [[0,1],[2,3]]         ᴙ 󰆩
+    [[2,3],[0,1]]           󰆩
+    [2,3,0,1]
+
+    ᖘᓕᕋᔨ need to be unified
+    xᓕ⁰⦢􊾢
+
+    󰈲󰈳⦢􊽺 replace matched values
+         󷹇 ᔨ⦢􊽺 replace matched /w new idxs
+    󰒼󰒽⦢􊽺 replace values then sort back
+         󷹇 ᔨ⦢􊽺 replace matched /w new idxs
+    󱑼󷹅⦢􊽺 transpose basically
+         󰤱 what about the padding
+    ⪡⪢⦢􊽺  nums: opposite dir bitshift after
+          list: undo rotate
+         shape: undo reshape
+    +-⦢􊽺 (2 +⦢􍯏² 5 = (2+5)⋅2-5=9)
+    ∓±⦢􊽺 two arg mean
+
+    ∪⦢􊽺 remove added items from left
+    󷹩⦢􊽺 remove added items from left and add removed items from the left
+    ∩⦢􊽺 add back removed items from left
+    ∖⦢􊽺 add back removed items
+    󰆩⦢􊽺 inverses of eachother
+    󷹝⦢􊽺 involution
+    󷹜⦢􊽺 involution (i think?)
+    ⛶⦢􊽺 get first (last might be more useful?)
+    ᴙ⦢􊽺 involution
+    󷸚󷸛󷸙󷸘󷸜󷸗󷸖󷸕⦢􊽺 put back
+    ⋅÷⦢􊽺 inverses of eachother
+         󷹇 mind the new mod case
+    ⫰⫯󷹒⦢􊽺 just move outta sup
+    󰑅󷹓󷹕󷹖󷹔⦢􊽺 replace the val(s)
+         󷹇 ᔨ⦢􊽺 replace val(s) w/ val(s) at new idx?
+    󷸹󷸺󷸻󷸸⦢􊽺 󰤱 lots of options
+    󷹌󷹍󷹎⦢􊽺 join it back w/ OG seperators
+    ⬓▢⬒⦢􊽺 add back on difference
+    󰸵󰸷⦢􊽺 remove num of added elms from start/end
+    ⤉⤈⟷⦢􊽺 replace min/max/both val
+         󷹇 ᔨ⦢􊽺 replace val w/ val at new idx?
+    󷹄⦢􊽺 add back on difference
+    ⭥⦢􊽺 reindex input
+    ↨⦢􊽺 replace & reindex
+    𝌂⦢􊽺 flatten
+        󰤱 do i keep 󰮈'd vals? prob not ∵ ⤉/⤈
+    ᚤ⦢􊽺
+        󰤱 which one
+            replace just first unique with vals
+            replace all duplicates result 
+        󷹇 ᔨ⦢􊽺 replace vals w/ vals at new idx?
+    󰌷⦢􊽺 just rebuild shape
+    √؆⦢􊽺 raise results to 1/1/exp
+    !⦢􊽺 something something inverse gamma
+    ⴵ⦢􊽺 set sign to val
+    ~⦢􊽺 involution
+    ⦢􊽺 undo shuffle…? (what if multiple?)
+    ⍭⦢􊽺 join back with   then  
+    ⌃⦢􊽺 take log
     
     ℂ󷸜󰤷 ≡ ℂ󰤷 ≡ x󰤷y → θ
     ρ⦡θ ≡ (ρ,θ)⦡ → ℂ
