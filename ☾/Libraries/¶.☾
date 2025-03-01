@@ -21,18 +21,6 @@
         ¡: lb=m
     ↪ub
 
-⊢✿(x,y,s=␀):
-    ¿y≡0: ↪𝑖(⫰x≡1)
-    ¿x≡0: ↪𝑖(y∈±1)
-    ¿􋑂(x,y)>1: ↪0
-    ¿x≡1: ↪1
-    t=󷰾⁰󰂁ˣ􋁔⁰󰂁ʸ
-    ¿y¶²≕r%2∧x%8∈[3,5]: t=-t
-    y󷸊⫰⹏2⌃r
-    ¿y≡1: ↪t
-    x󷸊%y
-    ↪t⋅(✿)(y,x)⋅(󷰾⌃←(x⹏2⌃(x¶²)-1)⋅(y-1)⹏4)
-
 󱀘 ¶´:
     @cache
     ⊢__contains__(𝕊,n):
@@ -45,7 +33,7 @@
         ∀k∈3󷸻²100:
             ¿k∣n: ↪✗
          strong pseudoprime check
-        ¿pow(2,(n-1)⹏2⌃(s≔(n-1)¶²)),n)≕a≠1:
+        ¿pow(2,(n-1)⹏2⌃(s≔(n-1)¶²),n)≕a≠1:
             ∀r∈s⭥:
                 ¿a≡n-1: ⇥
                 a󷸊 ²%n
@@ -95,12 +83,12 @@
                 t󷸊+1
                 x󷸊⹏s
             ↪t
-        ¿s≅<: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
-        ¿s≅+:  󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
+        ¿s≅<´: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
+        ¿s≅+´:  󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
             ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
             ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
-        ¿s≅∣: ↪𝑙(x¶󰻾)  󰤱 speedup
-        ¿s≅*:  󰤱 speedup
+        ¿s≅∣´: ↪𝑙(x¶󰻾)  󰤱 speedup
+        ¿s≅*´:  󰤱 speedup
             x󷸊⫰
             ¿x≡1: ↪⍁
             t=⍁
@@ -108,9 +96,9 @@
                 t.append(s≔smolfactor(x,t🃌⭜t􍨄-1⭝1))
                 x󷸊⹏s
             ↪t
-        ¿s≅⊞: ↪ℵ⁰(x¶󰻾)  󰤱 speedup
+        ¿s≅⊞´: ↪ℵ⁰(x¶󰻾)  󰤱 speedup
         ¿s≅􋑂: x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
-        ¿s≅%:  󰤱 speedup
+        ¿s≅%´:  󰤱 speedup
             t=󷰾²􋁒ˣ
             ¿t>0: x󷸊⹏2
             ¿2∣x: ↪0
@@ -132,6 +120,19 @@
                     ➰p∣x: x󷸊⹏p
                     ↪x≡1∧􋑯(p)
             ↪􋑯(x)
-¶ = ¶
+¶´ = ¶´
+
+⊢✿´(x,y,s=␀):
+    ¿y≡0: ↪𝑖(⫰x≡1)
+    ¿x≡0: ↪𝑖(y∈±1)
+    ¿􋑂(x,y)>1: ↪0
+    ¿x≡1: ↪1
+    t=󷰾⁰󰂁ˣ􋁔⁰󰂁ʸ
+    ¿y¶²≕r%2∧x%8∈[3,5]: t=-t
+    y󷸊⫰⹏2⌃r
+    ¿y≡1: ↪t
+    x󷸊%y
+    ↪t⋅(✿)(y,x)⋅(󷰾⌃←(x⹏2⌃(x¶²)-1)⋅(y-1)⹏4)
+
 
 __exports__ = ‹¶ ✿›⍭
