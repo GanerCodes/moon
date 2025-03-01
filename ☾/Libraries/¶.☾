@@ -1,5 +1,14 @@
 ⮌ functools ⨡ cache
 
+ 󰤱negative k and speedup with ⹏ and % magic
+⊢smolfactor(n,k=1):
+    ¿k>n: ↪0
+    ¿k<1: ↪1
+    ¿k≡1∧2∣n: ↪2
+    ∀p∈k󷸺n:
+        ¿p∣n: ↪p
+    ↪n
+
 ⊢firstℕbool(c,r=2):
     ¿c(1): ↪1
     ub=1
@@ -125,13 +134,4 @@
             ↪􋑯(x)
 ¶ = ¶
 
- 󰤱negative k and speedup with ⹏ and % magic
-⊢smolfactor(n,k=1):
-    ¿k>n: ↪0
-    ¿k<1: ↪1
-    ¿k≡1∧2∣n: ↪2
-    ∀p∈k󷸺n:
-        ¿p∣n: ↪p
-    ↪n
-
-
+__exports__ = ‹¶ ✿›⍭
