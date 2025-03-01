@@ -1,3 +1,5 @@
+⮌ functools ⨡ cache
+
 ⊢firstℕbool(c,r=2):
     ¿c(1): ↪1
     ub=1

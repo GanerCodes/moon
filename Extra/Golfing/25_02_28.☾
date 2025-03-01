@@ -1,4 +1,10 @@
-ƒ = 󷺹⍉􊾖󰌷⭢⨝
+֎  https://codegolf.stackexchange.com/questions/102496/interleave-strings
 ƒ = ⨝○󰌷○⍉􊾖
-
+ƒ = 󷺹⍉􊾖󰌷⭢⨝
+ƒ = 󷺹⍉􊾖󰆩⨝
 ƒ("ABCDE"⋄"a c"⋄"123 567")☾
+ƒ(‹"\n$?*›⋄ᐦ⋄‹,(.)" ›)☾ ֎
+
+֎  https://codegolf.stackexchange.com/questions/66197/is-it-a-pangram
+ƒ = 󷺹⫯⊃abc
+ƒ("AbCdEfGhIjKlMnOpQrStUvWxYz")☾ ֎
