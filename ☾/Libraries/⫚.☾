@@ -7,7 +7,7 @@
     ¿xᐹ𝗜∧yᐹℂ:
         ¿y󷹵𝑖∨y<0: ✗⨳‹can't choose ⟦y⟧ things from a list›
         ¿x🃌<y: ↪⍁
-        ¿¬y: ↪[⍁]
+        ¿¬y: ↪⍁􍨅
         ↪⫚(x﹕􍨄,y)+←⫚(x﹕􍨄,y-1)ᐵ+[x􍨄]
     ¿xᐹℂ∧yᐹ𝗜: ↪xᐹ𝑖∧⋀(yᐵᐹ𝑖)⭜x!⹏←(y+[x-←y⨁])ᴍ!⨀⭝x!/←(y+[x-←y⨁])ᴍ!⨀
     ¿xᐹ𝗜∧yᐹ𝗜:
@@ -22,3 +22,4 @@
  ⫚(7⭥,[2,3])🃌≡210→☾ 
  the ways of getting 2 things, then 3 things as a list of list of list
 
+__exports__ = ‹⫚›⍭

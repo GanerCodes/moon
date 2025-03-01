@@ -1,4 +1,8 @@
-IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸕ĵ󷺈󷱽󷱾›),)
+IMPSIMPS = (
+    (␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸕ĵ󷺈󷱽󷱾›),
+    (␛!, ‹!Γ›),
+    (␛⫚, ‹⫚›),
+    (␛¶, ‹¶✿›))
 DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
 IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
 
@@ -16,6 +20,7 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
     ↪ 𝘎
 
 ⊢ 𝔦𝔪𝔭(x):  deprecated
+    ☾‹𝔦𝔪𝔭 is deprecated and will be removed soon!›
     ¿x≡␛s:  system stuff
         ⨡ os, sys, shutil, subprocess
         ⮌ pathlib ⨡ Path as 𝐩
@@ -42,6 +47,7 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
         code_cache_dir=__code_cache_dir__, gram_cache_dir=__gram_cache_dir__,
         header_carry=__header_namespace__, ⠶𝓘𝓚)
     ¿no_isolate:  absolutely beaned
+        ‹This feature doesn't work!›☾
         ¬get_ns ∧ ns≅□ ∧ fname≅□ ⨳
         c = cpy(c, ⠤𝔸, return_code=✓, ⠶𝕂)☾
         ↪ no_isolate_ƒ(c)
