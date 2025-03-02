@@ -1,6 +1,5 @@
 IMPSIMPS = (
     (␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸕ĵ󷺈󷱽󷱾›),
-    (␛!, ‹!Γ›),
     (␛⫚, ‹⫚›),
     (␛¶, ‹¶✿›))
 DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
@@ -104,7 +103,7 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
     ¿g:
         ∀k∈𝑘:
             K = PEV(k)
-             ‹⟦‹✗✓›󰂝􊮇ₘ⟧: Adding "⟦k⟧"(⟦K⟧) from ⟦𝔣⟧ to ⟦𝘎[‹__file__›]⟧›☾
+             ☾‹⟦‹✗✓›󰂝􊮇􍻧⟧: Adding "⟦k⟧"(⟦K⟧) from "⟦𝔣⟧"(⟦𝚗⟧) to ⟦𝘎[‹__file__›]⟧›
             ¿K∈𝘔: 𝘎󰂝 = 𝘔󰂝
             ¡   : ‹Warning, ⟦k⟧∉⟦𝘔⟧›☾
         ¿-∉𝔸∌! ∧ 𝚗𝚊∉𝑘:
