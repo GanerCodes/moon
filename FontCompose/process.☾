@@ -1,5 +1,5 @@
-𝔦𝔪𝔭∘␛s
 ⨡ string as 𝐒
+⨡ shutil
 ⮌ tempfile ⨡ NamedTemporaryFile as NTF
 ⮌ json5 ⨡ load as jl
 ⮌ json ⨡ dumps as jds

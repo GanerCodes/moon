@@ -1,6 +1,10 @@
 󷰜 ⨳ 𝚡∨𝚡 ᴍ## Assertion
     "𝑜 ⨳" ⟶ Asserts 𝑜 is truthy
     "𝑜₁ ⨳ 𝑜₂" ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
+    "⨳˜": Warning
+    "⨳􎒢": Deprecation warning
+    󷹇 you can make the above errors by setting the following environment variables:
+        MOON_WARNING_IS_ERR and MOON_DEPRECATION_IS_ERR
 󷰝 󷺤󷺦  𝚡∧𝚡 ᴍvsx⟦𝕊/⟧ {XOR,NXOR}
     `✓󷺤✗ →≡ ✓ ≡← ✗󷺤✓`
     `✗󷺤✗ →≡ ✗ ≡← ✓󷺤✓`

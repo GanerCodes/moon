@@ -1,5 +1,6 @@
 󰋺("CONFIGURE", *)
-𝔦𝔪𝔭∘␛s ; ldir
+cd(__dir__)
+⨡ shutil, subprocess
 
 in_font        = ‹JuliaMono/JuliaMono-Regular.ttf›
 custom_symbols = ‹MoonCustomSymbols.ttf›
@@ -10,7 +11,7 @@ OUTPUT_EXTS = 𝑠(OUTPUT_EXTSᴍ⫯)
 EXT = "ttf"
 
 󰋺("shut")
-󰋺("process", ⠤"process load_font save_font 𝐩 𝐫"⍭)
+󰋺("process", ⠤"process load_font save_font"⍭)
 󰋺("multisupersubscriptify", "merge_into_font")
 
 in_font, custom_symbols = in_font⋄custom_symbols ᐖ𝐩(⟞).resolve

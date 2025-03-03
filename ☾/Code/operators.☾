@@ -344,11 +344,25 @@ OPWRAP_(⠤‹ᐴ󷹵󷹴›)(⥌𝕏,x=␀,y=␀,s=␀↦(󰲣yᐹˢx, 󰲣¬�
     (𝚲PL_THREAD_∘worker,)⋅(x🃌⤈s)ᴍᴍ
     ↪ vals
 
-⊢ ⨳´(α=␀, β=␀):
-    ¿α≅␀: α,β = β,α
-    assert α, β≅␀ ⭜"Assertion failed!"⭝ β
-    ↪ α
-
+@OPWRAP_
+⊢ ⨳´(𝚡=␀,𝚢=␀,s=␀):
+    try:
+        assert 𝚡
+    except AssertionError as ε:
+        ⮌ os ⨡ environ
+        𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›∈environ
+        𝚍 = 𝚠∨‹MOON_DEPRECATION_IS_ERR›∈environ
+        ¿s≅󰔛´: 𝖻,𝗆 = 𝚍, ‹Deprecation ⟦𝚍⭜"Error"⭝"Warning"⟧›
+        ⸘s≅~´: 𝖻,𝗆 = 𝚠, ‹Warning⟦𝚠⭜" [as Error]"⭝ᐦ⟧›
+        ¡    : 𝖻,𝗆 = ✓, ‹Assertion failed›
+        𝗆 = ‹⟦𝗆⟧! ⟨𝓿=⟦repr(𝚡)⟧⟩⟦𝚢≇␀⭜𝘀+𝚢⭝ᐦ⟧›
+        try:
+            𝗆 = 󰋺(␛🌈).termclr(𝗆, 𝖻⭜‹f22›⭝‹ff2›)
+        except:
+            □
+        𝗆☾
+        ¿𝖻: raise ε
+    ↪ 𝚡
 ⊢ _wherest(𝕏, ƒ=𝑏, 𝘪=✗):
     ¿ƒ≅␀: ƒ=𝑏
     ⸘ƒ󷹵𝗙: ƒ󷸊ᑀ≡󷺽
@@ -629,8 +643,8 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
     ¿s≅󰮈: ↪ rᴍ²󰻾
     ↪ r
 
-⨁´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄☾‹WARN: Deprecated binary use of ⨁, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſ􀳋+)
-⨀´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄☾‹WARN: Deprecated binary use of ⨀, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜         1 ⭝ 𝚡ſ􀳋⋅)
+⨁´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄✗⨳􎒢‹Binary use of ⨁, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſ􀳋+)
+⨀´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄✗⨳􎒢‹Binary use of ⨀, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜         1 ⭝ 𝚡ſ􀳋⋅)
 ∅´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑠()⭝ s⭥ᐖ𝑠())
 ⍁´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑙()⭝ s>0 ⭜s⭥ᐖ[]ᐸ⭝ ⛶´⊚¯s∘[])
 󱖔´ = OPWRAP_(⥌x=␀,y=␀,s=␀↦s≅␀ ⭜ƒ↦ƒ(⠤𝕣(x⋄y))󰅂⭝ s(⠤𝕣(x⋄y)))

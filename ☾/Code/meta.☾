@@ -18,22 +18,20 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
         ¿𝘎[‹__file__›]≠__file__: ⇥
     ↪ 𝘎
 
-⊢ 𝔦𝔪𝔭(x):  deprecated
-    ☾‹𝔦𝔪𝔭 is deprecated and will be removed soon!›
-    ¿x≡␛s:  system stuff
-        ⨡ os, sys, shutil, subprocess
-        ⮌ pathlib ⨡ Path as 𝐩
-        ⮌ subprocess ⨡ Popen as 𝐫
-        ⮌ time ⨡ time, sleep
-        
-        G = outer_globals()
-        G[␛𝐩⥉PEV] = 𝐩
-        G[␛𝐫⥉PEV] = 𝐫
-        G[h≔PEV("𝐩𝐝")] = 𝚲G[‹__file__›] ⥉𝐩→.parent
-        G["subprocess"] = subprocess
-        G["os"], G["sys"], G["shutil"] = os, sys, shutil
-        G["time"], G["sleep"] = time, sleep
-        G["ldir"] = 𝚲os.chdir←Gₕ
+⊢ 𝔦𝔪𝔭(x):
+    ✗⨳􎒢‹𝔦𝔪𝔭 is deprecated and will be removed soon!›
+    ⨡ os, sys, shutil, subprocess
+    ⮌ pathlib ⨡ Path as 𝐩
+    ⮌ subprocess ⨡ Popen as 𝐫
+    ⮌ time ⨡ time, sleep
+    G = outer_globals()
+    G[␛𝐩⥉PEV] = 𝐩
+    G[␛𝐫⥉PEV] = 𝐫
+    G[h≔PEV("𝐩𝐝")] = 𝚲G[‹__file__›] ⥉𝐩→.parent
+    G["subprocess"] = subprocess
+    G["os"], G["sys"], G["shutil"] = os, sys, shutil
+    G["time"], G["sleep"] = time, sleep
+    G["ldir"] = 𝚲os.chdir←Gₕ
 
 ⊢ 󱠨(c, ⠤𝔸, get_ns=✗, ns=□, fname=□,
     interactive_𝕂=□, no_isolate=✗,
