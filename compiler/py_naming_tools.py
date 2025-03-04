@@ -1,6 +1,6 @@
 # Prob should be in the ☾ language folder but im lazy ⎺⟍_⟨ᐛ⟩_⟋⎺
 from util import *
-py_special_mapper  = lambda c, m={'𝗻':'\\n','𝘀':' ','𝘁':'\\t','𝗿':'\\r','󷺗':''}: m[c]
+py_special_mapper  = lambda c, m={'𝗯':'\\b','𝗻':'\\n','𝘀':' ','𝘁':'\\t','𝗿':'\\r','󷺗':''}: m[c]
 py_bad_string_chr  = lambda s: s in "\n\t\\\"'{}"
 py_escape_char     = lambda c, u='\\u': u+HXO(c) if py_bad_string_chr(c) else c
 py_escape_string   = lambda s: ᐦ.join(py_escape_char(c) for c in s)
