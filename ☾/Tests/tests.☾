@@ -257,7 +257,7 @@ d = d()
 ⨳ "abcd"ᙎ􋄒 ≡ [✓⋄␛b, ␛a⋄␛c, ␛b⋄␛d, ␛c⋄✓]
 ⨳ "abcd"ᗢ0⋄2 ≡ [␛b⋄␛c, ␛c⋄␛d]
 ⨳ "abcd"󰑅 󰲡x≠␛a󰅂 ≡ ␛b
-⨳ "abcd"󰑅ᴵ󰲡x≠␛a󰅂 ≡ 1
+⨳ "abcd"󰑅ᔨ󰲡x≠␛a󰅂 ≡ 1
 ⨳ ("aabc"󷹓 ⟥ᑀ≡␛b) ≡ "aab"
 ⨳ ("aabc"󷹔 ⟥ᑀ≡␛b) ≡ "bc"
 ⨳ ("aabc"󷹕 ⟥ᑀ≡␛b) ≡ "aa"

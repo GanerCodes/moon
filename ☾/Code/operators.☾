@@ -368,7 +368,7 @@ OPWRAP_(⠤‹ᐴ󷹵󷹴›)(⥌𝕏,x=␀,y=␀,s=␀↦(󰲣yᐹˢx, 󰲣¬�
     ⸘ƒ󷹵𝗙: ƒ󷸊ᑀ≡󷺽
     ∀i,x∈↨𝕏:
         ¿ƒ(x): ↪𝘪 ⭜i⭝ x
-󰑅´ = 𝑐𝑑(_wherest, I=𝚲_wherest(⠤𝔸,𝘪=✓)) ; 󰑅´􊯛􍺫=󰑅´􊯛󰂛
+󰑅´ = 𝑐𝑑(_wherest, I=𝚲(✗⨳􎒢‹Use 󰑅ᔨ instead›)►_wherest(⠤𝔸,𝘪=✓), 𝘪=𝚲_wherest(⠤𝔸,𝘪=✓))
 @OPWRAP_(⠤‹󷹓󷹔󷹕󷹖›)
 ⊢ _(𝕏,x,ƒ=𝑏,s=␀,𝘪=✗):  󰤱 make "last" versions of these. also ᔐ?
     ¿xᐹᔐᐴƒ: ƒ=󰲡x≠ƒ
