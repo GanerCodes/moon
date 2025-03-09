@@ -558,9 +558,8 @@ def σ_21():
             NUM_P0)
         
     @(yield replacement("op_call", rec='A', n="Refactor assignment infix operators"))
-    def _(n):
+    def _(n): # 󰤱 mods for assignments
         α, Σ, β = n.C
-        # if Σ.c[0].as_txt() or Σ.c[2].as_txt(): return n # 󰤱 allow mods
         
         σ = Σ.C[1].as_txt()
         if σ in {*"≔󷸉󷸊󷸋", ":="}: return make_inline_asgn(α, Σ, β)
@@ -573,7 +572,7 @@ def σ_25():
     @(yield reduction("op_call", rec='B', n="Flatten cmp ops"))
     def _(n):
         a,b,c = n.C
-        if 'λ' in op_man[b] and a != NULL and c != NULL:
+        if 'λ' in op_man[b] and a != NULL != c:
             return [*a.C, b, *c.C]
         return [n]
 
@@ -804,6 +803,7 @@ generator("str_cpy")(make_str_cpy)
 def make_str_money(n):
     s, *C = n.c
     return f'SUBPROCA({make_str_cpy(n.copy(c=C))},"{py_escape_string(SCRIPT.nrm(s.as_txt()))}")'
+
 
 # Ʀexpr = (⠶Ʀatom ∨ Ʀop ∨ 󰆴𝗪)*
 # Ʀatom = Ʀsection ∨ Ʀrange ∨ ƦESC ∨ ƦCHR

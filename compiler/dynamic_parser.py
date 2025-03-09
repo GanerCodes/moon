@@ -10,6 +10,13 @@ from util import *
 from node import *
 from op import OP\n"""
 
+mkvar = lambda x: Node("var", x)
+mkgrp  = lambda *X, b="()": Ņ("group", b[0], X[0] if ⵌ(X)==1 else X, b[1])
+mkexp_ = lambda *n: Node("expr_", [*n])
+mkgxp_ = lambda *n: mkgrp(mkexp_(*n))
+fcall_ = lambda f,*n,E=[]: mkexp_(f, mkgxp_(*J́(n, COMMA)), *E)
+COMMA = Node("oper_lit", ',')
+
 def join_nodes_flat(t, N):
     C = []
     for n in N:
@@ -21,9 +28,22 @@ def into_expr(C):
     if isinstance(C, list): return join_nodes_flat("expr", map(into_expr, C))
     return Node('expr', C if isinstance(C, str) else [C])
 
+def conv_op_call_arg(n):
+    if n is None: return NULL
+    if isinstance(n, list): return into_expr(n)
+    return n
+
 def make_op_call(op, l, r, op_):
-    ch = lambda n: NULL if n is None else into_expr(n) if isinstance(n, list) else n
-    return Node("op_call", [ch(l), op_, ch(r)])
+    l, r = conv_op_call_arg(l), conv_op_call_arg(r)
+    if 'ι' not in op and (l.as_txt() == '⬤' or r.as_txt() == '⬤'):
+        # 󰤱 this is a dumb way of detecting
+        return fcall_(
+            mkvar("OP_CURRY_"),
+            Node("op_call", [NULL, op_, NULL]),
+            l, r)
+    else:
+        return Node("op_call", [l, op_, r])
+    return n
 
 class AbsoluteWrapper:
     def __init__(𝕊, *a, **k):

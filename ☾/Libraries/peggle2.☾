@@ -162,7 +162,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
         ⸘r₀  ∉␛ᔐ␛~: r = (r₀, ⠤r₁﹕ ᴍ 𝕊)
         ↪ 𝐑􊳁􊬁􊮝􊵬≔r →► 𝔦
     𝕊((‹T_root›, ⠤nmp⁺󱑼r⁺ ᴍ 𝑡))
-    𝐑 = 𝐑 ᴍ 󰲡(x₀, ⠤x₁﹕ ᴍ󰲡 (r⁻󰑅ᴵ(≡(x₀)))¿xᐹ𝑡¡x)
+    𝐑 = 𝐑 ᴍ 󰲡(x₀, ⠤x₁﹕ ᴍ󰲡 (r⁻󰑅ᔨ(≡(x₀)))¿xᐹ𝑡¡x)
     ↪ ℵ􋆒|nmp
 
 ⊢ parse_to_tree(𝑅, ℭ, χ, ι, show_table=✗, raise_failed=✓):
