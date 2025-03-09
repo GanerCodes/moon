@@ -1,32 +1,28 @@
             │ ⟵ screenshot width ≥ that  🮦🮧
 EXPR = 󰦥󰦥󰦥󰦥󰦥
-󷺹!3⭥󰈲󷺹󷹜∈󷹜⟞²ᐸ→􍪴
+󰲡⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
 󰦥󰦥󰦥󰦥󰦥
-SS1 = ‹https://ganer.xyz/s/ff1c5515662333ec›
+SS1 = ‹https://ganer.xyz/s/1e8e030427be6550›
 
 EXPO = 󰦥󰦥󰦥󰦥󰦥
-󷺹🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦  ƒ of one var, inserted here
- !                factorial
- 🮧3               times three
- 🮧🮧⭥              as range excluding last
- 🮧🮧🮧󰈲🮦🮦🮦🮦🮦🮦🮦      filter by
-     󷺹🮦🮦🮦🮦🮦       ƒ of one var, inserted here
-      󷹜             int-to-str
-      🮧∈🮦🮦🮦         contained within?
-        󷹜🮦🮦         int-to-str
-         ⟞²         left arg squared
-           ᐸ        end ƒ
- 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧→     group
- 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧􍪴    left-arg-th index of
+x!ʸ : rising factorial in ☾
+⅗􍨅  : (3/5)⌃¯1 ≡ 5/3
+▢   : round, so we get an integer result
+
+󷹇 order of operations are such that concat is higher
+    than multiplication and division.
+⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
+  󷹀 (⅚!ˣ ⋅ 16ˣ ⋅ ½!ˣ) ÷ (2!ˣ ⋅ (⅗􍨅)!ˣ) ▢
+
+Shoutout to Micheal for adding all the fancy math stuffs lol
 󰦥󰦥󰦥󰦥󰦥
-SS2 = ‹https://ganer.xyz/s/d1b8802894932767›
-EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥
-Go-go gadget galactic alg
-󰦥󰦥󰦥󰦥󰦥
+SS2 = ‹https://ganer.xyz/s/c7e71138163b5337›
+
+EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥
 
 EXEC = 𝚲󰦥󰦥󰦥󰦥󰦥
 ƒ = %EXPR%
-1󷸻7ᐖ‹⟦⟞⟧ → ⟦ƒ(⟞)⟧›☾
+ƒ(10)☾
 󰦥󰦥󰦥󰦥󰦥 ⥉ ‹%EXPR%› 󰛔 EXPR
 
  󰤱 auto-generate screenshots somehow
