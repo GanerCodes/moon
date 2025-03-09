@@ -365,6 +365,17 @@
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
+󷰭 󷸓󷸼󷸔 𝚡󷺤􊽨𝚡 ᴍsc⟦s𝕊w⟧ {sub,un,super}script text
+    `‹joe›󷸓󷸔≡‹􋅎􋏛􊿵›`
+    `‹joe›󷸔 ≡‹ʲᵒᵉ›`
+    `‹joe›󷸓 ≡‹ⱼ󰂼ₑ›`
+    `‹joe›󷸔²≡‹􊽿􊾼􊾸›`
+    `25󷸔≡‹²⁵›`
+    `‹ᵃ􊲞›󷸼≡‹a›`
+    `‹ᵃ􊲞›󷸼²≡‹ab›`
+    `‹ᵃ􊲞›󷸼ᔨ􋂝ᵃ􌿅􋂝ʲ≡‹ʲ􊲞›`
+    󰤱 docs
+    󷹇 supports ᔨ
 󷰭 ⫰⫯ 𝚡󷺤􊽨𝚡 ᴍa⟦+-⟧ absolute value {positive / upper,negative / lower}case
     `󷱂⫰ ≡ 5⫰ ≡ 5`
     `󷱂⫯ ≡ 5⫯ ≡ ¯5`
@@ -485,10 +496,12 @@
        `5 󰌷 󷱁 ≡ ¯54`
        `󷱁 󰌷 5 ≡ ¯45`
        `󷱀 󰌷 󷱁 ≡ 34`
-󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤 𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
+󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
     `(󷸚,󷸛,󷸙,󷸘)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [1]`
-󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤 𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈,ℝ/î/ĵ/󷺈} parts of number
-    `(󷸜,󷸗,󷸖,󷸕)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [(1,1),(1,1,1,1)]`
+󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈} parts of number
+    `(󷸜,󷸗,󷸖)ᐵ∘ᑅℍ(⠤󷸺4) ⭢≡ [(1,2),(1,3),(1,4)]`
+󷰭 󷸽󷸕 𝚡󷺤 𝚡 ᴍcc⟦v*⟧ tuple of {î/ĵ/󷺈,ℝ/î/ĵ/󷺈} parts of number
+    `(󷸽,󷸕)ᐵ∘ᑅℍ(1,2,3,4) ⭢≡ [(2,3,4),(1,2,3,4)]`
 󷰭 √؆ .􊽨𝚡 ᴍ⟦⁅sq⁆⁅SQ⁆⟧ {principal,} root{,s}
     `√5  ≡ 5􊽲`
     `√³5 ≡ 5􋀞`
@@ -539,8 +552,6 @@
     `2²⋅5 ¶􋄴 ≡ ℵ⁰({2:[2,2], 5:[5]})`
     `3³ ¶􊽥 ≡ 󷰾`  idk what this does lol
      ¶􀰫 󰤱
-    
-    󰤱 basic tests
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
     `0ⴵ   ≡ 0`

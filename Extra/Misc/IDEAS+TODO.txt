@@ -1,6 +1,7 @@
 § TODOs ------------------------------------
 
     󰤱  Documentation (oh gosh people are finding the project now)
+    󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
         default: hypercube w/ max dim?
@@ -10,8 +11,7 @@
         100 items: shape 10⋄5 = 10⨯5⨯2…?
         100 items: shape ⬤⋄5 = 20⨯5
         124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
-    󰤱  sup/sub 󷸓󷸔
-    󰤱  Angle of complex number
+    󰤱  finish sup/sub 󷸓󷸔
     󰤱  Better window, multidimentional
     󰤱  bootstrap everything
     󰤱  option for operator to ignore superscripts like →
@@ -59,7 +59,6 @@
     ᕻᓐᓒᔥᣛ ᔇᔅᔉᔊᓪᣗᕐᔾᖮ ᣜᣝᓫᕑᣞᣟᐝ ᗮᐪ󰂅ᓑᣕᐡᐢ ᐤᐞᐠᑊᘁᣔ
 § OverPowered STUFF [f,⬤,g,√🍊] ------------------------------------
 
-    
     4⭥            ⦢􊾢 2⋄2
     [0,1,2,3]     ⦢􊾢 2⋄2
     [0,1,2,3]        2⋄2 ᴙ 󰆩
@@ -95,6 +94,7 @@
     ⋅÷⦢􊽺 inverses of eachother
          󷹇 mind the new mod case
     ⫰⫯󷹒⦢􊽺 just move outta sup
+    󷸓󷸼󷸔⦢􊽺 undo involution; can certainly transmit properties to another str
     󰑅󷹓󷹕󷹖󷹔⦢􊽺 replace the val(s)
          󷹇 ᔨ⦢􊽺 replace val(s) w/ val(s) at new idx?
     󷸹󷸺󷸻󷸸⦢􊽺 󰤱 lots of options

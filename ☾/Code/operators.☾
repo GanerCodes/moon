@@ -729,6 +729,21 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
                    𝚡ℇˢ􍢉     )⭝ ␛
              rect(𝚡,𝚢))
 
+@OPWRAP_(⠤‹󷸓󷸼󷸔›)
+⊢ _(𝕏, 𝚡, s=␀, 𝘪=␀):
+    𝚡 = ᔐ(𝚡)
+    ¿𝘪≇␀:
+        ¿𝕏≡␛󷸼:
+            s≅␀⨳‹󰤱›
+            𝘪ᐹ𝗙⨳‹󰤱›
+            ↪ under_script(𝚡,𝘪)
+        ✗⨳‹󰤱›
+    ¿s≅␀: s=1
+    ¿s>0:
+        ƒ = 𝕏≡␛󷸓 ⭜subscript⭝ 𝕏≡␛󷸔 ⭜supscript⭝ nrmscript
+        ↪ ƒ⊚s∘𝚡
+CUSTOM_CORSP.extend([󷸓,󷸼,󷸔])
+
 𝗋 = 󷺻isclose(⟞󷸚,0)⭜⟞󷸛⭝⟞
 cos,sin,tan,exp,log,acos,asin,atan = 󰂼ₛ󰄎ₛᵢₙ󰄎ₜₐₙ󰄎ₑₓₚ󰄎ₗ󰂼󰄎ₐ󰂼ₛ󰄎ₐₛᵢₙ󰄎ₐₜₐₙᐵ○ᵜ𝗋
 

@@ -33,4 +33,4 @@ abcABC,abc123,ABC123,abcABC123 = abc+ABC,abc+num,ABC+num,abc+ABC+num
 TO_LOWERCASE = ᔐ.maketrans(UPPERCASE, LOWERCASE)                    ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝, ⟞)󷺿
 TO_UPPERCASE = ᔐ.maketrans(LOWERCASE, UPPERCASE)                    ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝, ⟞)󷺿
 REVERSE_CASE = ᔐ.maketrans(LOWERCASE+UPPERCASE, UPPERCASE+LOWERCASE)ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝, ⟞)󷺿
-GET_CASE = 󰲡(x≡TO_UPPERCASE(x))-(x≡TO_LOWERCASE(x))
+GET_CASE = 󰲡TO_UPPERCASE(x)≡x ⭢-⭠ x≡TO_LOWERCASE(x)
