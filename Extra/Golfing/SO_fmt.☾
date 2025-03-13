@@ -1,28 +1,36 @@
             │ ⟵ screenshot width ≥ that  🮦🮧
 EXPR = 󰦥󰦥󰦥󰦥󰦥
-󰲡⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
+󷺹⨝<´󷹎ᐖABC󰈲􋋎⬤∖⟞󰆩⨁ᐸ⨝𝗻
 󰦥󰦥󰦥󰦥󰦥
-SS1 = ‹https://ganer.xyz/s/1e8e030427be6550›
+SS1 = ‹https://ganer.xyz/s/5020c9cf556ebb1c›
 
 EXPO = 󰦥󰦥󰦥󰦥󰦥
-x!ʸ : rising factorial in ☾
-⅗􍨅  : (3/5)⌃¯1 ≡ 5/3
-▢   : round, so we get an integer result
-
-󷹇 order of operations are such that concat is higher
-    than multiplication and division.
-⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
-  󷹀 (⅚!ˣ ⋅ 16ˣ ⋅ ½!ˣ) ÷ (2!ˣ ⋅ (⅗􍨅)!ˣ) ▢
-
-Shoutout to Micheal for adding all the fancy math stuffs lol
+󷺹🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦  ƒ of 1 var, inserted here 
+ ⨝🮦🮦                 join by
+  <´                 less than (here in regards to unicode)
+ 🮧🮧🮧󷹎                split by falsy
+ 🮧🮧🮧🮧ᐖ🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦    map into function
+      ABC              capital alphabet
+      🮧🮧🮧󰈲􋋎🮦🮦🮦🮦        replace matches with space
+           ⬤           arg to curry
+           🮧∖🮦🮦        set minus
+             ⟞         the function's arg
+             🮧󰆩        deshape
+      🮧🮧🮧🮧🮧🮧🮧🮧🮧⨁       add together
+                ᐸ    close function
+ 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧⨝🮦  join
+                  𝗻  by newlines
 󰦥󰦥󰦥󰦥󰦥
-SS2 = ‹https://ganer.xyz/s/c7e71138163b5337›
+SS2 = ‹https://ganer.xyz/s/0d6f0606b152d8fb›
 
-EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥󰦥
+EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥
+For context, here is what the first two operations are actually doing:
+󰦥󰦥󰦥󰦥󰦥
+SS3 = ‹https://ganer.xyz/s/15ad3658fedff3e6›
 
 EXEC = 𝚲󰦥󰦥󰦥󰦥󰦥
 ƒ = %EXPR%
-ƒ(10)☾
+ƒ("ANTIDISESTABLISHMENTARIANISM")☾
 󰦥󰦥󰦥󰦥󰦥 ⥉ ‹%EXPR%› 󰛔 EXPR
 
  󰤱 auto-generate screenshots somehow
@@ -39,10 +47,11 @@ EXPR󷸊⬄𝗻𝘀 ; EXPO󷸊⬄𝗻𝘀 ; EXEC󷸊⬄𝗻𝘀
 ```
 Note: ☾ uses a custom font, but you can run this code in the [Web UI][2]
 
-[![Diagram][4]][4]⟦EXTRA_INFO⬄→ᣆ󷺹+ᵜ𝗻⟧
+[![Diagram][4]][4]⟦EXTRA_INFO⬄→ᣆ󷺹+ᵜ𝗻⟧⟦SS3⭜‹[![Extra][5]][5]›⭝ᐦ⟧
 
   [1]: https://github.com/ganercodes/moon
   [2]: https://ganer.xyz/moon?code=⟦quote∘EXEC⟧
   [3]: ⟦SS1⟧
   [4]: ⟦SS2⟧
+  ⟦SS3⭜‹[5]: ⟦SS3⟧›⭝ᐦ⟧
 ›⬄→☾⥉
