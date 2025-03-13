@@ -57,7 +57,7 @@
     `[1] 󷹲 [1,2] →≡ ✗`
     `[1,2] ⊊ [1,2] →≡ ✗`
     `[1,2] 󷹲 [1,2] →≡ ✓`
-󷰠 ᴍ󰁢 𝚡∧􊽨𝚢 ᴍcm𝕊 map
+󷰠 ᴍ 𝚡∧􊽨𝚢 ᴍcm𝕊 map
     𝗜 ᴍ 𝗙
         Maps an iterable with a function
         `[‹hi›, ‹there›] ᴍ 🃌 ≡ [2, 5]`
@@ -68,15 +68,15 @@
         n<0: Kinda weird, but generally backwards from ∞
             `["hi", [[["egg"]]]] ᴍ􍧱 🃌 ≡ [2, [[[3]]]]`
             󷹇 󷰾 would map the characters in those strings
-    ᴍᴷ,ᴍⱽ,ᴍᴰ
+    ᴍ⁻,ᴍ⁺,ᴍ
         Similar to above, but a dict:dict mapping
-        K: keys  , Modify keys only
-        V: values, Modify values only
-        D: dict  , Both keys and values
+        +: keys  , Modify keys only
+        -: values, Modify values only
+        *: dict  , Both keys and values
         󷹇 the function still expects one value which will be the [key, value] list
         󷹇 use ꟿ for a function with two args
     󷹇 Supports 󰮈
-󷰠 ꟿ󰁢 𝚡∧􊽨𝚢 ᴍcsm starmap
+󷰠 ꟿ 𝚡∧􊽨𝚢 ᴍcsm starmap
     𝗜 ꟿ 𝗙
     Map but instead of calling the function directly it unpacks the arg
     `[[1,2],[3,4]] ꟿ + ≡ [3,7]`
