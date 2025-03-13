@@ -651,8 +651,8 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
     ¿s≅󰮈: ↪ rᴍ²󰻾
     ↪ r
 
-⨁´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄✗⨳􎒢‹Binary use of ⨁, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſ􀳋+)
-⨀´ = OPWRAP_(⥌𝚡,𝚢=␀,s=␀↦(𝚢≅␀⭜s⭝(𝚢◄✗⨳􎒢‹Binary use of ⨀, use modifier as starting value instead! (vals were 𝚡=⟦𝚡⟧│𝚢=⟦𝚢⟧│s=⟦s⟧)›))≕𝚢≅␀∧¬𝚡 ⭜         1 ⭝ 𝚡ſ􀳋⋅)
+⨁´ = OPWRAP_(⥌𝚡,s=␀↦¬𝚡∧s≅␀ ⭜(𝚡ᐹᔐ ⭜ᐦ⭝ 0)⭝ 𝚡ſˢ+)
+⨀´ = OPWRAP_(⥌𝚡,s=␀↦¬𝚡∧s≅␀ ⭜         1 ⭝ 𝚡ſˢ⋅)
 ∅´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑠()⭝ s⭥ᐖ𝑠())
 ⍁´ = OPWRAP_(⥌s=␀↦s≅␀ ⭜𝑙()⭝ s>0 ⭜s⭥ᐖ[]ᐸ⭝ ⛶´⊚¯s∘[])
 󱖔´ = OPWRAP_(⥌x=␀,y=␀,s=␀↦s≅␀ ⭜ƒ↦ƒ(⠤𝕣(x⋄y))󰅂⭝ s(⠤𝕣(x⋄y)))
