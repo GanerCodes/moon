@@ -12,6 +12,7 @@
         100 items: shape ⬤⋄5 = 20⨯5
         124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
     󰤱  finish sup/sub 󷸓󷸔
+    󰤱   for getting time/date? self calls + mod is format
     󰤱  Better window, multidimentional
     󰤱  bootstrap everything
     󰤱  option for operator to ignore superscripts like →

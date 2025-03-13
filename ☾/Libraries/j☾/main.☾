@@ -1,5 +1,5 @@
 ⮌ util ⨡ SCRIPT, UPSIDEDOWNSYNDROME
-⨡ os, shutil
+⨡ shutil
 󰋺(‹cache›); 󰋺(‹peggle2›); 󰋺(‹𝐍›)
 󰋺(‹rgx_golfatron›, ‹rgx_golfatron›)
 HEADER = (__dir__ / ‹header.j☾›)

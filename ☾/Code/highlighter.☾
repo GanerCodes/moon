@@ -14,8 +14,9 @@ styd = styf ⥉  ⥉ loads ⥉ ℵ
 ⊢ __highlighter__(l, b=✗, clr=✓):
     s, ⠤e = (ᔐ∘l).split(␛ᐧ)
     
+    safechr = 󷺹󷹜16󷹝ᐸ 󰔶 󷺻‹?⟦⟞⟧⸮›
     e = e ᙧ¹ 0⋄1
-    e = e ꟿ 󰲣chr(𝑖(x,16))+y
+    e = e ꟿ 󷺻safechr(⟞)+󷺽
     r = (s+←e⨁􊾖) ᴍ 󰲡clr⭜sty(x, b ⭜"400"⭝ 0)⭝x󰅂 ⨁􊾖
     ↪ r
 

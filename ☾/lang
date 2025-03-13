@@ -351,7 +351,7 @@ def σ_06():
         t = gram(SCRIPT.nrm(n.as_txt()), "exprs")
         txt = t.as_txt()
         T = lang(txt.strip())
-        if not T.isidentifier() or T in escaped_var_specs:
+        if not T.isidentifier() or T in escaped_var_specs or T==py_escape_var('∾'):
             return [OP.TND('⌃'), mkgxp_(Node(c=lang(txt)))]
         return [OP.TND('.'), t]
     
