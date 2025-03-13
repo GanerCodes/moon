@@ -209,7 +209,7 @@ SWAP_TABLE = mdt("""
     ⋅   * ␉ ⌃    ** ␉ ≡     == ␉ ≤ <= ␉ ≔ := ␉ ¯ -
     ⠤   * ␉ ⠶    ** ␉ ≠     != ␉ ≥ >= ␉ ÷ / ␉ ⹏ //
     ␀CAT *␉
-    ∨  or ␉ ≅    is ␉ 󰆴    del ␉ Ω class ␉ 󱀘 class
+    ∨  or ␉ ≅    is ␉ 󰆴    del ␉ 󱀘 class
     ¬ not ␉ ¿    if ␉ ⊢    def ␉ ➰ while
     ∧ and ␉ ⸘  elif ␉ ⮂  yield ␉ ↪ return
     ∀ for ␉ ¡  else ␉ ⇥  break ␉ ↺ continue
