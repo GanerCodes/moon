@@ -14,7 +14,7 @@
          KeyError(‹⟦x⟧ ∉ ⟦𝕊⟧, and I have no default value!›)
     __init__ = 𝕊↦super().__init__(⠤𝔸,⠶𝕂)
     __repr__ = 𝕊↦‹⟦𝕊.__class__.𝐶𝑛⟧⟦0∈(h≔𝕊.__dict__) ⭜‹[⟦h₀⟧]›⭝ ᐦ⟧(⟦␛,𝘀→.join←𝕊.itemsꟿ󰲣‹⟦x⟧=⟦y⟧›⟧)›
-    __json__ = ⥌𝕊,cb,⠤𝓐,⠶𝓚↦ 𝑑(𝕊) ꟿⱽ 󰲣cb(y,⠤𝓐,⠶𝓚)
+    __json__ = ⥌𝕊,cb,⠤𝓐,⠶𝓚↦ 𝑑(𝕊) ꟿ⁺ 󰲣cb(y,⠤𝓐,⠶𝓚)
     __setattr__ = 𝑑.__setitem__
     __iter__ = 𝕊↦iter(𝕊.items())
     __call__ = 𝕊↦𝑑.update(𝕊,⠤𝔸,⠶𝕂)►𝕊

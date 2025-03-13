@@ -135,8 +135,8 @@ gen(␛u)←⥌x=1↦ℵ(textDecoration=‹underline ⟦x⟧px›)
         ¡:
              ¿k≡␛◌: ↺  make a quoted ◌ work
             𝔒.append((k, ns))
-    𝔒 = 𝔒 󰻾 ꟿⱽ󰲣y ꟿ󰲣y󰅂 ⥉ 𝑠
-    ↪ d ꟿⱽ 󰲣y(seqs=𝔒ₓ)
+    𝔒 = 𝔒 󰻾 ꟿ⁺󰲣y ꟿ󰲣y󰅂 ⥉ 𝑠
+    ↪ d ꟿ⁺ 󰲣y(seqs=𝔒ₓ)
 
 ⊢ collect_styles(d):
     stylez = {}
@@ -145,7 +145,7 @@ gen(␛u)←⥌x=1↦ℵ(textDecoration=‹underline ⟦x⟧px›)
         stylez.setdefault(hsh(v.style), (v.style, []))₁.append(k)
     ↪ stylez.valuesꟿ󰲣(x.pop("NO_SCALE", □)►x,y⨁􊾖)
 
-xcompose_from_seqs = 󰲡x.itemsꟿ󰲣y≔←y¿yᐹ𝑡¡y⛶ᵀ→►‹⟦␛ᴍ+xᴍ󰲡‹<⟦symmapₓ⟧>›󰅂⨁⟧:"⟦y₀.replace(⠤‹\ \\›⍭)⟧" # ⟦𝘀.join←y₀ᴍhex○ord⟧⟦‹ ; ⟦y₁⟧›¿y🃌>1¡ᐦ⟧𝗻›󰅂 󰒼󰲡x🃌⋄x󰅂 ⨁
+xcompose_from_seqs = 󰲡x.itemsꟿ󰲣y≔←y¿yᐹ𝑡¡y⛶􋇡→►‹⟦␛ᴍ+xᴍ󰲡‹<⟦symmapₓ⟧>›󰅂⨁⟧:"⟦y₀.replace(⠤‹\ \\›⍭)⟧" # ⟦𝘀.join←y₀ᴍhex○ord⟧⟦‹ ; ⟦y₁⟧›¿y🃌>1¡ᐦ⟧𝗻›󰅂 󰒼󰲡x🃌⋄x󰅂 ⨁
 
 ⊢ edit_vs_settings(dat, p):
     p = 𝐩∘p→.expanduser.resolve
@@ -236,11 +236,11 @@ gram = Parser(GRAM)
     root = root.ftrp("p_concat"⍭, 󰲡x.copy("concat"), ✓)
     mac, lets = supermcdoublerecursivecomposeoutputstyleparsemachine(root)
     res = lets ꟿ 󰲣x  󰲡xᐹ𝑡∧x₀∈(‹TAG STYLE›⍭)∧x₀󰅂 ␛
-                    ⥉ 󰲡(x.pop(✗), (x ꟿⱽ󰲣y ᴍ󰲣y))󰅂 ␛
-                    → +y⛶ᵀ󰅂 ␛
+                    ⥉ 󰲡(x.pop(✗), (x ꟿ⁺󰲣y ᴍ󰲣y))󰅂 ␛
+                    → +y⛶􋇡󰅂 ␛
                 󰲡x₋₁󰅂␛
-               ꟿⱽ󰲣yᴍ󰲡x﹕₋₁󰅂󰅂␛
-               ꟿⱽ󰲣ℵ(T     = "reg",
+               ꟿ⁺󰲣yᴍ󰲡x﹕₋₁󰅂󰅂␛
+               ꟿ⁺󰲣ℵ(T     = "reg",
                     out   = x,
                     seqs  = yꟿ󰲣x,
                     tags  = 𝑠 ← yꟿ󰲣ℵ󰁺󰁻(y).TAG  󰅂⨁􍸒,
@@ -342,7 +342,7 @@ gram = Parser(GRAM)
     styles = convert_styles∘styles  󰤱 again multichar output stuff
     xcomp = xcompose_from_seqs(cmp_seqs)
     ∀R∈ℜ:
-        (l,), s = R ᴮ 󰲡xᐹ𝑡∧x₀≡"STYLE"
+        (l,), s = R 􋇐 󰲡xᐹ𝑡∧x₀≡"STYLE"
         l = l¿lᐹᔐ¡l₁
         stylesₗ≔{"decorations": sᴍ󰲡x¿xᐹᔐ¡x₁}
     save_pua

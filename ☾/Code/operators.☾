@@ -108,19 +108,14 @@ LITERAL_OPS_􊯛₋ = _
     ↪ [𝕩 ⭜s(z)⭝ z ∀z∈x¿y(z)≕𝕩≇󰮈]
 
 @OPWRAP_(⠤‹⨝⟕⟖⟗›)
-⊢ _(𝕏, x=␀, y=␀, s=ᐦ, LR_def=□, bound_mode=␀):
+⊢ _(𝕏, x=␀, y=␀, s=␀, LR_def=□, bound_mode=␀):
     x≇␀∨␀≇y ⨳‹Join missing both values!›
-    ¿sᐹ𝑡:
-        ¿s₀ᐹ𝑖: bound_mode, 𝕏 = s
-        ¡    : 𝕏, bound_mode = s
-        𝕏ᐹᔐ ∧ bound_modeᐹ𝑖 ⨳ ‹Bad modifiers!›
-    ⸘sᐹ𝑖:
-        s, bound_mode = ᐦ, s
+    ¿s≇␀: bound_mode = s
     ¿bound_mode≅␀: bound_mode = 𝕏≡␛⟗∧1∨0
     ¿x≅␀: x,y = y,x
     ¿y≅␀:
         𝗜(x) ⨳ ‹Single-arg ⟦t⟧ needs an iterable›
-        ↪ 𝗻⋅(𝕏∈␛⟕␛⟗)+ᐦ.join(xᴍᔐ)+(␛⟗␛⟖∋𝕏)⋅𝗻 → ᣆ􋂝ᴸ􋁉ˢ 𝑙
+        ↪ 𝗻⋅(𝕏∈␛⟕␛⟗)+ᐦ.join(xᴍᔐ)+(␛⟗␛⟖∋𝕏)⋅𝗻
     
     Y = y
     ¿y󷹵𝗙: y=󰻾ʸ
@@ -137,7 +132,7 @@ LITERAL_OPS_􊯛₋ = _
         ¿  x🃌  :                     R.append(x􍨄)
         ¿𝕏∈␛⟖␛⟗ ∧ 󰮈≇𝕩≔y(x􍨄, LR_def): R.append(𝕩)
     
-    ↪ ␛L∉s∧Yᐹᔐ ⭜ᐦ.join(Rᴍᔐ)⭝ R
+    ↪ Yᐹᔐ ⭜ᐦ.join(Rᴍᔐ)⭝ R
 
 @OPWRAP_(⠤‹󷹌󷹍󷹎›)
 ⊢ _(𝕏, x=␀, y=␀, s=󷰾):  󰤱 ᔨ
@@ -321,6 +316,7 @@ OPWRAP_(⠤‹ᐴ󷹵󷹴›)(⥌𝕏,x=␀,y=␀,s=␀↦(󰲣yᐹˢx, 󰲣¬�
 @OPWRAP_(⠤‹ᴍꟿ›)
 ⊢ _(𝕏, x=␀, ƒ=␀, s=1):
     𝙼 = 𝕏≡␛ᴍ ⭜_map_d⭝ 󰲥_map_d(x,󰲡y(⠤xᐹ𝗜 ⭜x⭝ (x,)),z)
+    s󷹵ᔐ ⨳􎒢 ‹ᴍ/ꟿ ᴰ/ᴷ/ⱽ deprecated. Use ⁻⁺›
     s = {*:␛D,-:␛K,+:␛V}.get(s,s)
     ¿sᐹᔐ:
         ¿s≡␛D: ↪(xᐹ)(         𝙼(x.items(), ƒ, 1))
@@ -368,7 +364,10 @@ OPWRAP_(⠤‹ᐴ󷹵󷹴›)(⥌𝕏,x=␀,y=␀,s=␀↦(󰲣yᐹˢx, 󰲣¬�
     ⸘ƒ󷹵𝗙: ƒ󷸊ᑀ≡󷺽
     ∀i,x∈↨𝕏:
         ¿ƒ(x): ↪𝘪 ⭜i⭝ x
-󰑅´ = 𝑐𝑑(_wherest, I=𝚲(✗⨳􎒢‹Use 󰑅ᔨ instead›)►_wherest(⠤𝔸,𝘪=✓), 𝘪=𝚲_wherest(⠤𝔸,𝘪=✓))
+
+@OPWRAP_(‹󰑅›)
+⊢ _(𝚡,𝚢=𝑏,𝘪=✗):
+    ↪ _wherest(𝚡,𝚢,𝘪)
 @OPWRAP_(⠤‹󷹓󷹔󷹕󷹖›)
 ⊢ _(𝕏,x,ƒ=𝑏,s=␀,𝘪=✗):  󰤱 make "last" versions of these. also ᔐ?
     ¿xᐹᔐᐴƒ: ƒ=󰲡x≠ƒ
@@ -383,10 +382,16 @@ OPWRAP_(⠤‹ᐴ󷹵󷹴›)(⥌𝕏,x=␀,y=␀,s=␀↦(󰲣yᐹˢx, 󰲣¬�
     ⸘𝕏≡␛󷹖: ↪ x₁₊􀲪﹕
 
 OPWRAP_(␛↨)(⥌𝚡,s=␀↦s ≅␀ ⭜𝚡⭥ᴍ󰲡(x,𝚡ₓ)󰅂⭝ ␛
-                   s⫰≡1 ⭜𝚡⭥ᴍ⛶ᵀ→󱑼𝚡⭝    ␛
+                   s⫰≡1 ⭜𝚡⭥ᴍ⛶􋇡→󱑼𝚡⭝    ␛
                          𝚡↨ꟿ󰲣y↨ˢ⁻ˢ􋅒ᐖ(x,⠤⟞₀),⟞₁ᐸ󰅂→ᣆˢ󰂁⁰󰌷)
 OPWRAP_(␛⭥)(⥌𝚡,s=␀↦s≅␀ ⭜𝚡ᣆ􀳉􊾗􋊪🃌⭢󷸹⭝ ␛
                         𝚡ᣆ􀳉􀸳􋊪(⊞ˢ􋄽○⭥)⭢↨ˢᴍˢ󰂂⁰􀸩ˢ􋄽􀸧¹󷺹₀)
+@OPWRAP_(␛⛶)
+⊢ _(⠤𝔸, s=␀):
+    ¿s≅␀: ↪ [⠤𝔸]
+    ¿s≅𝑡: ↪ 𝑡(𝔸)
+    ↪ s≥0 ⭜􊱦􊵾⋅s⭝ ⛶´⊚s⫰∘􊱦􊵾
+
 ⩔´,⩓´, = ∨´,∧´
 󷺫´ = 󷺥´ = 󰲣x∨y→¬
 󷺬´ = 󷺒´ = 󰲣x⭜(y⭜✗⭝x)⭝y⭜y⭝✓
@@ -398,12 +403,10 @@ OPWRAP_(␛⭥)(⥌𝚡,s=␀↦s≅␀ ⭜𝚡ᣆ􀳉􊾗􋊪🃌⭢󷸹⭝ ␛
 󷹩´ = 󰲣x∪y →∖← x∩y
 ⨉´ = OPWRAP_(⥌x=␀,y=␀,s=␀↦product(⠤y≅␀∧s≇␀⭜[x]⋅s⭝(y≅␀⭜x⭝[x,y])⋅(s≅␀⭜1⭝s))ᴍ𝑙)
 ⊞´ = OPWRAP_(⥌⠤𝔸,s=1↦(ƒ≔⥌⠤𝔸,n=1,r=[]↦𝔸⋅nᑀ₀ᴍ󰲡⟞🃌>1 ⭜ƒ(⠤⟞₁﹕,r=r+[x])⭝ r+[x])(⠤𝔸, n=s))
-⛶´ = 𝑐𝑑(𝚲𝑙(𝔸), S=𝚲𝑠(𝔸), T=𝚲𝑡(𝔸), 𝑔=n↦𝚲n≥0 ⭜𝑙(𝔸)⋅n⭝ ⛶´⊚n⫰∘𝑙(𝔸))
-ᴙ´ = 𝑐𝑑(󰲡xᐹ𝑖     ⭜󷹜xᴙ󷹜⭝ ␛
-         xᐹᔐ|𝑙|𝑡 ⭜x﹕﹕􍨄⭝ ␛
-         hasattr(x,"__reversed__") ⭜x.__reversed__()⭝ ␛
-         [⠤x]﹕﹕􍨄󰅂,
-        L=󰲡[⠤x]﹕﹕􍨄)
+ᴙ´ = OPWRAP_(⥌𝚡↦𝚡ᐹ𝑖     ⭜󷹜𝚡ᴙ󷹜⭝ ␛
+                𝚡ᐹᔐ|𝑙|𝑡 ⭜𝚡﹕﹕􍨄⭝ ␛
+                hasattr(𝚡,"__reversed__") ⭜𝚡.__reversed__()⭝ ␛
+                [⠤𝚡]﹕﹕􍨄)
 
 ⍭´ = 󰲡␛ ∈x ⭜x.split(␛ )ᴍ⍭⭝ x.split(␛ )
 ▢´ = OPWRAP_(⥌x,s=␀↦xᐹ􋁜ℂ ⭜x󷸜ᴍ▢ˢ⭢󷸜⭝ s≅␀ ⭜𝑖(round(x))⭝ round(x,s))  󰤱 support quaternions
@@ -497,7 +500,7 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
 @OPWRAP_(⠤‹󱑼󷹅›)
 ⊢ _(𝕏, 𝚡=␀, 𝚢=␀, s=␀):
     𝙰 = 𝚢≅␀ ⭜𝚡⭝ (𝚡,𝚢)
-    N, I = 𝙰ᴮᔨ𝗜
+    N, I = 𝙰􋇐ᔨ𝗜
     l, h = 𝙰󷸻Iᴍ🃌→⟷
     ¿N: 𝙰 󷸊 ᖘᴺ 󷺺⛶ʰ
     
@@ -525,6 +528,7 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
 ⊢ ´(𝚡,ƒ=𝑏,s=␀,𝘪=✗):
     ¿ƒ󷹵𝗙: ƒ=󷺹≡ᑅƒ ֎ ƒ󷸊ᑀ≡󷺽 ֎
     ¿s≇␀:
+        s󷹵ᔐ ⨳􎒢 ‹󰀒/ᴮ deprecated. use ⁺/􋇐›
         ¿s≡*       : ↪(´(𝚡,ƒ,𝘪=𝘪)).items 󰒼
         ¿s≡+ ∨ s≡␛S: ↪(´(𝚡,ƒ,𝘪=𝘪)).items 󰒼 → ᴍ󰲡x₁
         ⸘s≡𝑏 ∨ s≡␛B: ↪{✗:[],✓:[],⠶´(𝚡,ƒ,𝘪=𝘪)}󷸻⭥2
@@ -585,7 +589,7 @@ CUSTOM_CORSP.extend([⫰,⫯,󷹒])
     ¿hasattr(x, "__inverse__"):
         ↪ s≅␀ ⭜ƒ()⭝ ƒ(s)
     ¿𝗜(s):
-        d = sᴍx→󱑼s→󰲡x₀󰅂ꟿⱽ󰲣yᴍ󰲡x₁
+        d = sᴍx→󱑼s→󰲡x₀󰅂ꟿ⁺󰲣yᴍ󰲡x₁
         ↪ 𝚲𝔸 ⭜d.get(𝔸₀,[])⭝ d
     ✗⨳‹No __inverse__ for ⟦x⟧ nor valid domain provided.›
 

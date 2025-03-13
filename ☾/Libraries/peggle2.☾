@@ -43,7 +43,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
         ↪ 󱁕
     ⊢ parse_elm(N):
         α, n, β = N₀.as_txt(), N₁, N₂.as_txt()
-        l1, l2 = α ᴮ ‹❗⠶ƨ›.__contains__
+        l1, l2 = α 􋇐 ‹❗⠶ƨ›.__contains__
         ∀o ∈ (⠤l1, ⠤β, ⠤l2):
             ¿o≡␛~: n = Ń(o, Ń(re.compile(n.as_txt()), e=Ə))
             ¡    : n = Ń(o, n)
@@ -150,8 +150,8 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
 ⊢ make_rules(r):
      󰤱 add option to skip jumping to declarations
     nmp = ℵ(r⁻󱑼r⭥)
-    r = r ꟿᴷ 󰲣␛_+x
-    𝐂 = ℵ(r⁻󱑼𝐑≔r⁻ ᴍ ⛶ᵀ)
+    r = r ꟿ⁻ 󰲣␛_+x
+    𝐂 = ℵ(r⁻󱑼𝐑≔r⁻ ᴍ ⛶􋇡)
     ⊢ 𝕊(r):
         ¿r🃌≡1 ∧ r₀ ₀≡␛_: ↪(r₀, )
         ¿r∈𝐂: ↪ 𝐂ᵣ
@@ -180,7 +180,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
             χ = 𝔠ᵣ ₁
         ↪ γ, ⠤o
     ¿γ≡␛ᔐ: ↪ γ, C₀
-    ¿γ≡␛?: ↪ γ, ⠤(𝐴 ∧ (𝐴₀ ∧ rec(χ, C₀)⛶ᵀ) ∨ ())
+    ¿γ≡␛?: ↪ γ, ⠤(𝐴 ∧ (𝐴₀ ∧ rec(χ, C₀)⛶􋇡) ∨ ())
     ¿¬𝐴 ∧ γ∈{⠤"∨*+~←"}: ↪ γ, ‹‼∅‼›
     ¿γ≡␛~: ↪ γ, 𝐴₀.group(0)
     ¿γ≡␛∨: ↪ γ, rec(χ, C􊳳􊬣)
@@ -273,7 +273,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
     ℒ ; set_arrows(󱁕) ; ℒ("Set arrows")
     ↪ 󱁕
 
- parse_to_node = 󱁕↦(ƒ ≔ 󰲡Ń(x, ⠤𝔸ᴍ󰲡ƒ(⠤xᐹ𝑡 ⭜x⭝ x⛶ᵀ)))(⠤󱁕)
+ parse_to_node = 󱁕↦(ƒ ≔ 󰲡Ń(x, ⠤𝔸ᴍ󰲡ƒ(⠤xᐹ𝑡 ⭜x⭝ x⛶􋇡)))(⠤󱁕)
 ⊢ parse_to_node(󱁕):
     ⊢ ƒ(x, ⠤𝔸):
         ↪ Ń(x, ⠤(ƒ(⠤isinstance(x,tuple) ⭜x⭝ (x,)) ∀x∈𝔸))
@@ -335,7 +335,7 @@ FROM_GRAM = 󰲡peggle2(gram_convert(BOOTSTRAP(x, "statements")))
             ¿xᵗ≡␛←: ↪ (xᵗ, x₀ᶜ, ƒ(x₁))
             ¿xᵗ≡"rname": ↪ (␛_⋅(xᶜ∉␛✓␛✗)+xᶜ, )
             ↪ xᵗ, ⠤((xᶜ ᴍ ƒ) ¿xᴸ¡ (xᶜ, ))
-        ↪ ℵ(rules) ꟿⱽ 󰲣ƒ(y)
+        ↪ ℵ(rules) ꟿ⁺ 󰲣ƒ(y)
     ⊢ peggle221(󱁕):
         ⮌ node ⨡ Node
         ⊢ ƒ(󱁕):

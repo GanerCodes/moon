@@ -13,7 +13,7 @@ ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ → ⨝␛.
             𝔯,𝔴 = 𝕊.rfile.readline, 𝕊.rfile.write
             𝚛,⠤𝙷 = 1󷸹⭠ᐳ𝔯≕𝚛→.strip→.decode(‹utf-8›)ᐸ⊛¬∘✓
             𝚖,𝚙,𝚟 = 𝚛󷹎𝘀
-            𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿᴷ󰲣x.lower
+            𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x.lower
             
             𝐴 = 𝚖,𝚙,𝙷
             𝚌,𝙷,𝚋 = 200, ℵ, 𝑦∘0

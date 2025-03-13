@@ -86,17 +86,17 @@
     Same as ᴍ but uses multiple threads.
     The number of threads defaults to the number of CPU threads.
     󰤱 make this have proper multithreading
-󷰠 󰁢 𝚡∨􊽨𝚡 ᴍcg𝕊 group-by
+󷰠  𝚡∨􊽨𝚡 ᴍcg𝕊 group-by
     𝗜 
         group into dictionary with keys by truthyness
         `[1,5,3,2]  󷺹%3ᐸ ≡ {0:[3],1:[1],2:[5,2]}`
     𝗜  𝗙
         group into dictionary with keys defined by right arg
-    󰀒: return list of values, dropping keys
-    ᴮ: like 󰀒, except groups are only false/true (& are included), so
-        `[1,0,5] ᴮ ≡ [[0],[1,5]]`
-        `[1,0,5] ᴮ 󷺹>1ᐸ ≡ [[1,0],[5]]`
-        `[1,0,5] ᴮ 󷺹<0ᐸ ≡ [[1,0,5],[]]`
+    ⁺: return list of values, dropping keys
+    􋇐: like ⁺, except groups are only false/true (& are included), so
+        `[1,0,5] 􋇐 ≡ [[0],[1,5]]`
+        `[1,0,5] 􋇐 󷺹>1ᐸ ≡ [[1,0],[5]]`
+        `[1,0,5] 􋇐 󷺹<0ᐸ ≡ [[1,0,5],[]]`
     󷹇 Supports 󰮈
     󰤱 make it work with ᔨ
 󷰠 ſϜ 𝚡∨􊽨𝚡 ᴍ⟦⁅fs⁆⁅FS⁆⟧ {fold,accumulate}
@@ -762,7 +762,9 @@
     `[5,2,3,0,0,1]󰈲ᔨ󷺹>1ᐸ ≡ [0, 1, 2]`
     `[5,2,4,6,1,1]𝌂ᔨ󷺹%2ᐸ ≡ [[0], [1, 2, 3], [4, 5]]`
     󰤱˜ docs
->¡ℭ ⦑c⦑f01⦒⦒ 󷰲≺≻⊀⊁≼≽⋠⋡≾≿⋨⋩⪱⪲⟥⟤´꜠ᵜ𐞑ᔨ
+󷰾 𐞑   ᴍccc 󰤱
+    󰤱
+>¡ℭ ⦑c⦑f01⦒⦒ 󷰲≺≻⊀⊁≼≽⋠⋡≾≿⋨⋩⪱⪲⟥⟤´꜠ᵜ≺ᔨ𐞑
 
 󷰾 ⟨⟩   ᴍ⟦⁅[[⁆⁅]]⁆⟧ {begin,close} ugex
 󷰾 ⍮   ᴍ;_ ugex sep
