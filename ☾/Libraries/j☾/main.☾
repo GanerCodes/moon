@@ -86,7 +86,7 @@ gram = peggle2(GRAM)
 𝔗 = 󷺻Ń(⟞, e=𝚃)
 𝔗𝔗 = 󷺻𝔗(⟞.as_txt)
 𝚜 = Ń(␛𝘄, 𝔗(𝘀))
-mp = 󷺹≕h󷹝ᑀ≤128∨h.isidentifier() ⭜h⭝ ⟞󷹜¹⁶5⭢+ᵜ␛þ
+mp = 󷺹≕h󷹝ᑀ≤128∨h.isidentifier() ⭜h⭝ ⟞󷹜¹⁶󰁱⁵⭢+ᵜ␛þ
 fmt_js_ᔐ = ␛\⋄␛$ →󰛔← ␛\␛\⋄␛\␛$
 
 mkexp = 𝚲Ń(‹󷺗expr›, ⠤𝔸)

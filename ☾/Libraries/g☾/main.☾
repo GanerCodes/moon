@@ -54,7 +54,7 @@ gram = peggle2(GRAM)
 w2cb = w2cb○⊜a2c
 
 𝚃, 𝔗, 𝔗𝔗 = ℵ(T=✓), 󷺻Ń(⟞, e=𝚃), 󷺻𝔗(⟞.as_txt)
-mp = 󷺹󷹝ᐵ≤128 ⭜⟞󷹝⭝ ⟞󷹜¹⁶3⭢+ᵜ‹_›ᐸ→⨝
+mp = 󷺹󷹝ᐵ≤128 ⭜⟞󷹝⭝ ⟞󷹜¹⁶󰁱³⭢+ᵜ‹_›ᐸ→⨝
 fmt_js_ᔐ = ␛\⋄␛$ →󰛔← ␛\␛\⋄␛\␛$
 mkexp, mkgrp = 𝚲Ń(‹󷺗expr›, ⠤𝔸), 󰲡Ń(‹󷺗󷺗grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
 mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))

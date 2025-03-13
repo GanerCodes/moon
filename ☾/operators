@@ -332,7 +332,8 @@
 󷰭 󷹝 𝚡󷺤􊽨𝚡 ᴍCS str⟷int involution
     Gets ascii/unicode value(s) of string and vise versa
     󰤱 docs
-󷰭 󷹜 𝚡∨􊽨𝚡 ᴍCI str to int / change base
+󷰭 󷹜 𝚡󷺤􊽨𝚡 ᴍCI str to int / change base
+    󷹇 mod is (target_base)+(zero_padding)î
     󰤱 docs
 󷰭 󰛔 𝚡∨􋅂𝚡 ᴍcma string replacement
     "find 󰛔ᵗᵃʳᵍᵉᵗ replace" or "(find 󰛔 replace)(target)"
