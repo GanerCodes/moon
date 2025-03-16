@@ -1,4 +1,4 @@
-󰋺("peggle2")
+󰋺(‹peggle2›)
 ⮌ util ⨡ SCRIPT
 sup, sub, nrm = SCRIPTˢᵘᵖ, SCRIPTˢᵘᵇ, SCRIPTⁿʳᵐ
 
@@ -6,8 +6,8 @@ ords = ‹0󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬�
 clrs = ‹0 e3b f77 c66 b56 6cf b9d c08 0f5 1e6 2d7 3c8 4b9 85f 67f eae d8d c6c b4d ff5 ce3 bd2 ad1 fa2 0›⍭
 dummy_ords = {0,ords🃌-1}
  α: include self in group (right asoc.)
- χ: uppercase letters are extra modifier type
  ν: calls self when sitting alone (i.e. )
+ ς: collapses chains (i.e. ⋄)
  λ: works as a chainable comparison function
 
 minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○␛
@@ -15,7 +15,7 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
 ⊢ parse_operator_file(contents):
     p = ⟨⟨󷺹󷹕󷺹≠𝘀ᐸ🃌≡0⍮(¬○⬄ 󷸴 󷺹󷹕󷺹≠𝘀ᐸ🃌→󷹗 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
     g_order  = ᐳords󰑅ᔨ󷺽
-    g_symbs  = 󷺹𝌂󷺹∈sup("αλνχ")ᐸ󰸷􊾖2 ⥉󷺺⋄󷺽
+    g_symbs  = 󷺹𝌂󷺹∈sup("αλςν")ᐸ󰸷􊾖2 ⥉󷺺⋄󷺽
     g_sig    = 󰻾
     g_combos = minigram
     g_desc   = 󰲡⟨⟨ 󷺹≡␛{⭜󰮈⍮ 󷺹≠␛}⍮ 󷺹≡␛}⭜󰮈 ⍈ 󷺹󷹌␛,󰈳␛,⟩ 󷸴 ⟨󷺹≠␛{ ⍈ ⛶○⨝⟩⟩(x)⨉ᴍ⨝
@@ -33,7 +33,7 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ops.style = 𝚂ᴍᕋ⁰
     ↪ ops
 
-⊢ get_operator_table(parsed_ops):
+⊢ get_operator_table(parsed_ops, do_join=✗):
     infer = 󷺹∋␛∧   ⭜‹ᴮ›            ⭝ ␛
             ⟞∋␛󷺤   ⭜‹ᴾ󰀒›           ⭝ ␛
             ⟞∋␛󷸏   ⭜‹ᴾᴮ›           ⭝ ␛
@@ -41,8 +41,8 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
             ⟞∩␛∨␛⩚ ⭜‹ᴾ󰀒ᴮ›          ⭝ ␛
             ⟞∋␛.   ⭜(⟞₀≠␛. ⭜␛󰀒⭝ ␛ᴾ)⭝ ␛
             ᐦ ➡+␛ᴺ
-    ↪ parsed_ops󰌷→󰈳󷺹₀∈dummy_ordsᐸᓕ⁰→ ⥉ℵ→ ꟿ󷺻
-        ⟝ᐵ₄⨝→+infer(⟞₁)ᐸ⨝𝘀󷺿→⨝𝗻
+    𝚛 = ℵ(parsed_ops󰌷→󰈳󷺹₀∈dummy_ordsᐸᓕ⁰)ꟿ󷺻⟝ᐵ₄⋄infer(⟞₁)ᐸ󷺿
+    ↪ do_join ⭜𝚛ᐵᐵ⨝ᐸ⨝𝘀ᐸ⨝𝗻⭝ 𝚛
 ⊢ generate_fontcompose_conf(parsed_ops):
     style = parsed_ops.style
     parsed_ops󷸊󰌷
@@ -54,9 +54,11 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛
                          ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
 
-ops = parse_operator_file((moon_dir / ‹☾/operators›))
+ops = parse_operator_file((__dir__ / ‹operators›))
  generate_fontcompose_conf(ops)☾
  get_operator_table(ops)☾
+
+__exports__ = ‹ops generate_fontcompose_conf get_operator_table›⍭
 
 ⊢ main():
      opsᐵᐵ☾ᐸ→►ᐦ☾

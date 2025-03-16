@@ -1,0 +1,21 @@
+⮌ util ⨡ FRAC_CONV, UPSIDEDOWNSYNDROME
+󰋺(__dir__ / ‹..› / ‹☾/Libraries/𝐍›)
+󰋺(__dir__ / ‹..› / ‹☾/generate_operators.☾›)
+󰋺(__dir__ / ‹..› / ‹☾/Libraries/peggle2›)
+󰋺(__dir__ / ‹..› / ‹☾/Libraries/j☾/rgx_golfatron›)
+
+𝔗 = 󰲡Ń(x,e=ℵ(T=✓))
+𝝀 = 𝔗(ᐦ)
+𝗏𝖺𝗋 = 󰲡Ń("var", 𝔗(x))
+𝗑𝗉𝗋 = 𝚲Ń("xpr", ⠤𝔸)
+𝗍𝗆𝗉 = 𝚲Ń("tmp", ⠤𝔸)
+𝗀𝗋𝗉 = 󰲡Ń("grp", 𝔗(x₀), 𝗑𝗉𝗋(⠤𝔸), 𝔗(x₁))
+𝗇𝗎𝗆 = 󰲡Ń("num", 𝔗(x))
+𝗈𝗉  = 󰲡Ń("op", Ń("op_⸓_l", 𝝀), Ń("op_lit", 𝔗(x)), Ń("op_⸓_r", 𝝀))
+𝗈𝗉𝖢 = 󰲡Ń("opC", x, ⠤𝔸)
+
+𝖼𝗎𝗋𝖫 = 𝚲Ń("curL", ⠤𝔸)
+𝖼𝗎𝗋𝖱 = 𝚲Ń("curR", ⠤𝔸)
+𝖼𝗎𝗋𝖬 = 𝚲Ń("curM", ⠤𝔸)
+
+𝖭𝖴𝖫𝖫 = 𝗏𝖺𝗋("NULL")

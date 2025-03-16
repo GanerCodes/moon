@@ -1,0 +1,127 @@
+󰋺(␛🌈), dbg_wrap≔ƒ↦𝚲☾´(‹⟦ƒ.__name__⟧: 𝔸=⟨⟦𝔸ᴍtermclr(⬤,"ff0")⭢⨝␛│⟧⟩, 𝕂=⟦𝕂⟧ ↓›) ► ƒ(⠤𝔸,⠶𝕂)☾
+󰋺(‹op›, *)
+
+𝚐 = ∘‹gram›
+𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
+gram = peggle2(𝚐)
+
+⊢ to_ast(𝚌, remove_comments=✓):
+    ¿remove_comments:
+        𝚌 = +gram(code, ‹parser_comment›, remove_trashes=✗).rm("comment")
+    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›):
+        󱁕 = gram(𝚌,𝘳)
+        ¿𝘯≤0:↪󱁕
+        
+        󱁕.ftrp(‹𝗪󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦Ń(␛𝗪, 𝔗(+󱁕⭢󷹍𝗻⭢􍧰﹕⨝)))
+        
+        󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
+        󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
+        󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
+        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›,
+            󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
+        󱁕.ftrp(‹subscript󷺗›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›,
+            𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
+        @(󱁕.ftrp(‹supscript›⍭, ⬤))
+        ⊢ _(󱁕):
+            𝚑 = gram(+󱁕⭢󷸼≕𝚝, ‹gen_expr_atom›)₀
+            ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
+                       ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
+        ¿𝘯≤3:↪󱁕
+        
+        󱁕.flat(󷺹ᵗ≡"tmp")
+        ¿𝘯≤5:↪󱁕
+        
+        󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
+        ¿𝘯≤6:↪󱁕
+        
+        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
+        @(󱁕.ftrp(‹xpr›⍭, ⬤))
+        ⊢ _(󱁕):  target_rhs
+            brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
+            dot = 󷺹ᵗ≡‹op›  ∧ +⟞₁≡␛.
+            R,C = ⍁²
+            𝚌 = 󱁕ᶜ
+            ⊢ adds(x):
+                ¿C:
+                    R.append(Ń("target_rhs", ⠤C))
+                    C.clear()
+                ¿x: R.append(x)
+            ➰𝚌⭜v≔𝚌.pop(0):
+                ¿brk(v): C.append(v)
+                ⸘dot(v): C.append(Ń("attr", 𝚌.pop(0)))
+                ¡      : adds(v)
+            adds(□)
+            󱁕ᶜ = R
+            ↪ 󱁕
+        ¿𝘯≤7:↪󱁕
+        
+         ᔐ
+        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts
+                str_escape›󷹎,
+            󱁕↦󱁕.copy(t=‹str_guts›), pre=✓)
+        
+         reform tacits to normal inside some weird op
+         lambdas
+        
+         ugx stuff
+        
+         for exprs/statments
+        
+         whitespace...?
+        
+         implicit multiplication
+        
+         insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
+        
+         figure out operator orders based on modifiers
+        
+         parse expressions 👁
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᶜᐵᵗ≡‹xpr›⭜⟞ᶜ⭝􍪴ᐸ󰌷))
+        @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
+        ⊢ _(󱁕):
+            𝚘 = 󱁕₀ᵉ ᴼ
+            ¿¬𝚘󰁝: ↪󱁕
+            𝕒 = 􋑺􊬣
+            ∀n∈󱁕₁﹕:
+                ¿(nᵗ≡‹xpr› ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ᵉ ᴼ ᵗ≡𝚘ᵗ):  󰤱 inner op modifiers
+                    𝕒.extend(n₀ ₁﹕)
+                    ↺
+                𝕒.append(n)
+            󱁕ᶜ = 𝕒
+            ↪ 󱁕
+            
+        ¿𝘯≤20:↪󱁕
+        
+        
+         make op_calls, including 𝚜 and layering modifiers
+        
+         cmp ops
+        
+         if statements
+        
+         short-circuits
+        
+        ↪ 󱁕
+    ↪ 𝔓(𝚌)
+
+⊢ to_py(󱁕):
+    ↪ +󱁕
+
+code = 󰦥󰦥󰦥󰦥󰦥
+1=1
+‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'f"{t𝗻󷺗est}""h\e𝗻󷺗llo"
+ ⊢ the(x,y):
+     ↪ ‹heh ⟦xʸ.y₂⟧ ⟦y⟧›☾
+ x₊􊪬xʸt⁺
+ 𝕏ʸ ˣ = 2⁹+y²+kʷ
+ A ₃ᵃ ²
+ [2³􊿙+⁵2]ᴍ²ƒ
+ t=2+⁵ᔨ􊿧ᴍ´
+ 2⋄4⋄22⋄4⋄5⋄4⋄7
+󰦥󰦥󰦥󰦥󰦥
+ 5+󷱂²⁺􍨋􊽰
+
+󱁕 = to_ast(code)
+󱁕ᴾ
+to_py(󱁕)☾

@@ -274,7 +274,7 @@
     󷹇 Requested by Michael for future advanced math things
 󷰨 ◄► 𝚡∧𝚢 ᴍca⟦lr⟧ {left,right} value
     `1►5 ≡ 5 ≡ 5◄1`
-󷰨 ⋄ 𝚡∧𝚢 ᴍ<>𝕊 join into list
+󷰨 ⋄󰁝 𝚡∧𝚢 ᴍ<>𝕊 join into list
     `1⋄2 ≡ [1,2]`
     `1⋄2⋄9 ≡ [1,2,9]`
     󰤱 make this less janky

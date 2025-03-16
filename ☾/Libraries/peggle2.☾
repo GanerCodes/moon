@@ -1,4 +1,5 @@
-󰋺(␛𝐍); 󰋺(‹cache›)
+󰋺(‹cache›); 󰋺(__dir__/␛𝐍)
+ fcache = 󰻾􋒍
 
 try             : ⨡ regex as re
 except Exception: ⨡ re

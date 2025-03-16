@@ -1,0 +1,82 @@
+supscript = ~‹%SUPSCRIPT%+›
+subscript = ~‹%SUBSCRIPT%+›
+op_lit    = ~‹%OP_LIT%›
+var_spec  = ~‹%VAR_SPEC%›
+cln_kwds  = ~‹%CLN_KWDS%›
+
+parser_main = exprs
+parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
+
+exprs = 𝗪? (⠶expr 𝗪?)*
+exprs_not_blank = 𝗪? (⠶expr 𝗪?)+
+expr = (
+    (cln_kwd_expr =  ⠶cln_kwds 󰆴𝗪? (expr_not_colon? 󰆴(𝗪? ':')) M:✓ 󰆴𝘄? expr?)
+     ∨ (norm_expr = (⠶norm_expr_atom)+))
+
+expr_not_colon = (¬':' ⠶norm_expr_atom)+
+expr_not_comma = (¬',' ⠶norm_expr_atom)+
+
+norm_expr_atom = (⠶lambs ∨ ⠶gen_expr_atom) 󰆴𝘄?
+gen_expr_atom = grp ∨ ugx_expr ∨ ⠶str ∨ var_spec ∨ number_exp ∨ number ∨ op ∨ ⠶script ∨ var
+
+pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
+neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
+number = pos_num ∨ neg_num
+number_exp = number supscript
+
+script = supscript ∨ subscript
+grp = ~‹[\[({⁅⟦]› (󰆴𝗪? ↷ expr) ~‹[\])}⁆⟧]›
+var = ƨ(¬𝗪 ¬op ¬var_spec ¬script ¬(~‹󰦥{5}›) ~‹[^⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀𝚲⥌↦󰲡󰲣󰲥󰲧󰲩󰲫󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]›)+
+
+op = (
+    (op_⸓_l = ~‹[⟥≺]*›)
+     op_lit
+    (op_⸓_r = ƨ((~‹[´꜠ᵜ𐞑⟤ᔨ]+› ∨ supscript)*)))
+
+lambs = (
+    (lamb_tacit=((⠶LTL exprs ⠶LTR)
+               ∨ (⠶LTL expr_not_comma ✓ ✓)))
+  ∨ (lamb = ((
+        (lamb_h_normal = (
+            󰆴('⥌' 𝗪?)
+            ((¬lamb_h_implicit lamb) ∨ ⠶gen_expr_atom 󰆴𝗪?)*
+            󰆴'↦' ))
+      ∨ (lamb_h_preset = ~"[𝚲󰲡󰲣󰲥󰲧󰲩󰲫]")
+      ∨ (lamb_h_implicit = var 󰆴(𝗪? '↦'))) 󰆴𝗪?
+    (lamb_b = ((exprs 󰆴'󰅂') ∨ expr_not_comma)))))
+
+LTL = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]› 󰆴𝗪?
+LTR = ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
+
+str = str_tsys ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 󰆴𝘄?)+
+str_t󰦥   = (󰆴(~‹󰦥{5}›)) ~‹((?!󰦥{5})(.|\n))*› 󰆴((~‹󰦥{5}›) ∨ ✓)
+str_tsys = 󰆴('$' 𝘄?) (ƨ(supscript) ∨ ✓) 󰆴𝘄? (
+                                (⠶str_sub_inner ∨ ( str_tsys_guts=~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+› ))* 󰆴(𝘄? '󷹹'))
+str_tsub = 󰆴'‹'                ((⠶str_sub_inner ∨ ( str_tsub_guts=~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+›))* 󰆴'›'     )
+str_nsub = ⠶(  (str_nsub1=(󰆴‹"› (⠶str_gen_inner ∨ (str_nsub1_guts=~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))* 󰆴‹"›))
+             ∨ (str_nsub2=(󰆴‹'› (⠶str_gen_inner ∨ (str_nsub2_guts=~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))* 󰆴‹'›)))
+
+str_sub_inner = ⠶str_gen_inner ∨ str_sub
+str_gen_inner = (str_escape ∨ 󰆴‹󷺗› ∨ str_spec_char)+
+str_sub = 󰆴'⟦' exprs 󰆴'⟧'
+str_spec_char = ~‹[𝗮-𝘇𝟬-𝟵󷺗]›
+str_escape = 󰆴"␛␛" ~‹.›
+str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
+
+ugx_expr  = ⮞ugx_brack ugx_brack
+ugx_mod   = ~‹[⁺􋅋􊽬]›
+ugx_and   = ⠶ugx_atom+
+ugx_or    = ugx_and 󰆴('󷸴' 𝗪?) (⠶ugx_or ∨ ugx_and)
+ugx_☾     = exprs_not_blank 󰆴'⍮'? (mod:ugx_mod)?
+ugx_seq   = ((ugx_or ∨ ⠶ugx_atom) 󰆴𝗪?)+ (apply:(󰆴('⍈' 𝗪?) exprs_not_blank))?
+ugx_atom  = (ugx_group ∨ ugx_☾) 󰆴𝗪?
+ugx_group = (ugx_paren ∨ ugx_brack)
+ugx_gtail = (mod:(󰆴𝗪? ∧ ugx_mod))? (󰆴𝘄? ∧ stk:subscript)?
+ugx_paren = 󰆴(‹(› 𝗪?) ⠶ugx_seq 󰆴(‹)›) ⠶ugx_gtail
+ugx_brack = 󰆴(‹⟨› 𝗪?) ⠶ugx_seq 󰆴(‹⟩›) ⠶ugx_gtail
+
+𝘄 = ~‹([ \t]*␛␛\n[ \t]*)+|[ \t]+›
+𝗪 = 𝘄 ∨ ~‹[ \t\n]+›
+text_breaker = ⮞(𝘄 ∨ var_spec ∨ ¬var)
+
+comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›

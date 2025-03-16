@@ -43,6 +43,7 @@
             r = []
             ∀k,v∈e:
                 ¿k≡␛T: r += ⛶clc(␛T, "GRE")
+                ⸘v󷹵 Ń: r += ⛶‹⟦k⟧=⟦v⟧›
                 ¡    : r += ⛶‹⟦k⟧⟦clc(␛→, "BL")⟧⟦vᵗ⟧›
             ↪ ‹⟦clc(␛󰅁,"YEL")⟧⟦␛,.join(r)⟧⟦clc(␛󰅂,"YEL")⟧›
         nam = (󱁕ᵗ ᴾ(✗) ¿󱁕ᵗᐹ𝐍¡ (‹⟦󱁕ᵗ⟧⟦format_e(󱁕ᵉ)⟧› ¿󱁕ᐹŃ¡ ᔐ∘󱁕ᵗ)) ∨ NA
@@ -70,9 +71,11 @@
  <Ń>.e.T is used as a flag to determine if it is a text node.
 󱀘 Ń(𝐍):
     __slots__ = ␛t, ␛c, ␛e
-    ⊢ __init__(󱁕, t, ⠤c, e=␀): 󱁕ᵗ, 󱁕ᶜ, 󱁕ᵉ = t, ¬c∧[]∨[⠤c], e≅␀ ⭜ℵ􋄅⭝ e
+    ⊢ __init__(󱁕, t, ⠤c, e=␀):
+        󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
+        󱁕ᴍ⬤ᐹŃ≕k⋀⨳‹⟦t⟧; ⟦k⟧, ⟦c⟧›
     __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
-    __repr__ = 󱁕↦‹Ń⟨⟦󱁕ᵗ∨␛∅⟧⟩⟨⟦󱁕ᵉ⟧⟩⟨⟦", ".join(󱁕ᴍᔐ)⟧⟩›
+    __repr__ = 󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
     __setitem__ = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
     ⊢ __getitem__(󱁕,i):
         ¿iᐹ𝑖|slice: ↪ 󱁕ᶜᵢ
@@ -86,16 +89,18 @@
         ↪ 󱁕, 󱁕ᵉ
     
     ⊢ frp(󱁕, ƒ, r, pre=✗):
-        𝓡 = 𝚲(󱁕ₓ≔y.frp(ƒ,r,pre) ∀x,y∈󱁕↨)
-        ¿ pre: 𝓡
-        ¿ ƒ∘󱁕: ↪ r(󱁕)
-        ¿¬pre: 𝓡
+        ⊢𝓡():
+            ∀i,y∈󱁕↨:
+                󱁕ᵢ = y.frp(ƒ,r,pre)
+        ¿ pre: 𝓡()
+        ¿ƒ(󱁕): ↪r(󱁕)
+        ¿¬pre: 𝓡()
         ↪ 󱁕
     ⊢ ftrp(󱁕, fs, ⠤𝔸, not_T=✓, ⠶𝕂):
-        ¿¬not_T ∨ ¬󱁕ᵉ ᵀ:
-            ƒ = 󰲡(¬not_T ∨ ¬xᵉ ᵀ) ∧ xᵗ∈𝑠(fs)
-            󱁕.frp(ƒ, ⠤𝔸, ⠶𝕂)
-        ↪ 󱁕
+        fs = 𝑠(fs)
+        ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(not_T ⭜󰲡¬xᵉ ᵀ∧xᵗ∈fs󰅂 ␛
+                                     ⭝󰲡      xᵗ∈fs󰅂,
+                               ⠤𝔸, ⠶𝕂)
     
     ⊢ find(󱁕, ƒ, pre=✓, not_T=✓, R=□):
         ¿R≅□: R=[]
@@ -130,6 +135,7 @@
             ¡    : (ƒ(c)∀c∈󱁕)
         ƒ(󱁕)
         ↪ l
+    __pos__ = as_txt
     
     ⊢ lchar(󱁕):
         ¿󱁕ᵉ ᵀ∧󱁕ᵗ: ↪󱁕ᵗ₀
@@ -147,5 +153,5 @@
 
 ⮌ sys ⨡ modules
 󱀘 _: 𝐍,Ń = 𝐍,Ń
-modules󰂢󰂗󰂨₍􊯛􊳌₎ = _
+modules.setdefault(PEV(␛𝐍), _)
 __exports__ = ␛𝐍, ␛Ń
