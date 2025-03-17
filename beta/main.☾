@@ -1,9 +1,17 @@
 󰋺(␛🌈), dbg_wrap≔ƒ↦𝚲☾´(‹⟦ƒ.__name__⟧: 𝔸=⟨⟦𝔸ᴍtermclr(⬤,"ff0")⭢⨝␛│⟧⟩, 𝕂=⟦𝕂⟧ ↓›) ► ƒ(⠤𝔸,⠶𝕂)☾
 󰋺(‹op›, *)
 
+part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
+
 𝚐 = ∘‹gram›
 𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
 gram = peggle2(𝚐)
+
+⊢ map_special(x):
+    T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
+    T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼"0123456789abcdef"))
+    ↪ Ń("str", x∈␛𝘀 ⭜ 𝔗(x⭜𝘀⭝ᐦ) ␛
+                    ⭝ Ń("str_byte", 𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶))))
 
 ⊢ to_ast(𝚌, remove_comments=✓):
     ¿remove_comments:
@@ -12,7 +20,38 @@ gram = peggle2(𝚐)
         󱁕 = gram(𝚌,𝘳)
         ¿𝘯≤0:↪󱁕
         
-        󱁕.ftrp(‹𝗪󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦Ń(␛𝗪, 𝔗(+󱁕⭢󷹍𝗻⭢􍧰﹕⨝)))
+        󱁕.ftrp(‹𝗪›⍭, 󱁕↦Ń(␛𝗪, 𝔗(+󱁕⭢󷹍𝗻⭢􍧰﹕⨝)))
+        
+        @(󱁕.ftrp(‹whiskers›⍭, ⬤))
+        ⊢ _(󱁕):
+            tl, tr = ‹ᑀᐵᐒᐖ 󷺹󷺺󷺻󷺼 ᑅᑈᐘᐛ 󷺽󷺾󷺿󷻀›⍭ᴍℵ○⍉
+            (lb,𝚕,𝙲,𝚛,rb) = 󱁕
+            𝚕, 𝚛 = (+𝚕 ᣆ⁺ˡᵇ 󷺻tl􍪴)∨␛ᐳ, (+𝚛 ᣆ⁺ʳᵇ 󷺻tr􍪴)∨␛ᐸ
+            𝚘 = 𝒪􊯛􊫟.copy()(t=𝚕+𝚛)
+            𝚘ᴸ = le(𝚕∈tl⁻⭜𝚘ᴸ⭝⍁)
+            𝚘ᴿ = le(𝚛∈tr⁻⭜𝚘ᴿ⭝⍁)
+            ¿𝚕≠␛ᐳ     : 𝚘󰀒=␛S
+            ¿     𝚛≠␛ᐸ: 𝚘ᴾ=␛P
+            ¿𝚕≠␛ᐳ∧𝚛≠␛ᐸ: 𝚘ᴮ=␛B
+            𝚘ᴺ=␛N
+            ℴ = 𝗈𝗉(𝚘ᵗ)
+            ℴᵗ, ℴᵉ ᴼ = ‹𝗈𝗉›, 𝚘
+            
+            𝕒 = ⍁
+            ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(𝗏𝖺𝗋(␛⟞)≕x)►x)
+            ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(𝗏𝖺𝗋(␛⟝)≕x)►x)
+            ℴ₁ = Ń("lamb",
+                    Ń("func_params", ⠤𝕒ᐖŃ("func_arg", ⟞)),
+                    𝙲)
+            ↪ ℴ
+        
+        󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦Ń("func_params",
+            ⠤(‹xyzwvutsr›󷸹⭠0⤉⭠‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ(+󱁕₀)-1)␛
+                ᐖŃ("func_arg", 𝗏𝖺𝗋(⟞))))
+        󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦Ń("func_params",
+            Ń("func_arg", 𝗏𝖺𝗋(+󱁕₀))))
+        
+        󱁕.ftrp(‹func_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
         
         󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
         󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
@@ -27,7 +66,6 @@ gram = peggle2(𝚐)
             ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
                        ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
         ¿𝘯≤3:↪󱁕
-        
         󱁕.flat(󷺹ᵗ≡"tmp")
         ¿𝘯≤5:↪󱁕
         
@@ -53,12 +91,19 @@ gram = peggle2(𝚐)
             adds(□)
             󱁕ᶜ = R
             ↪ 󱁕
-        ¿𝘯≤7:↪󱁕
+        ¿𝘯≤8:↪󱁕
         
          ᔐ
-        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts
-                str_escape›󷹎,
-            󱁕↦󱁕.copy(t=‹str_guts›), pre=✓)
+             󰤱 normalize newlines and stuff from literals so we get the same string output
+             󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
+        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕))
+        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t="str"))
+        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
+            󱁕↦󱁕.copy(t=‹str›))
+        󱁕.ftrp(‹str›⍭, 󱁕↦Ń(‹str›, ⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡Ń(‹str›, ⠤x󰌷))∘󱁕), pre=✓)
+        󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
+        ¿𝘯≤9:↪󱁕
         
          reform tacits to normal inside some weird op
          lambdas
@@ -73,11 +118,9 @@ gram = peggle2(𝚐)
         
          insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
         
-         figure out operator orders based on modifiers
-        
-         parse expressions 👁
+         expressions 👁
         󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᶜᐵᵗ≡‹xpr›⭜⟞ᶜ⭝􍪴ᐸ󰌷))
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
         @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
         ⊢ _(󱁕):
             𝚘 = 󱁕₀ᵉ ᴼ
@@ -92,7 +135,6 @@ gram = peggle2(𝚐)
             ↪ 󱁕
             
         ¿𝘯≤20:↪󱁕
-        
         
          make op_calls, including 𝚜 and layering modifiers
         
@@ -109,8 +151,34 @@ gram = peggle2(𝚐)
     ↪ +󱁕
 
 code = 󰦥󰦥󰦥󰦥󰦥
-1=1
-‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'f"{t𝗻󷺗est}""h\e𝗻󷺗llo"
+1+2→⋅2
+
+a+b⋅c+d
+ 1ᑀ+ᑅ2
+ x↦x+1
+ 󰲣x+y
+ ⥌x,y↦x+y
+
+ ⥌x,y,⠤𝔸,⠶𝕂,h=22,b=2222↦x²
+ 󰲡x²
+ x↦x²
+ 󷺹²
+ 5ᑀ²
+
+ "normal string"
+ 'normal string'
+ 'norma␛'l string'
+ ‹abc ⟦2²􊽮⟧›
+ ‹abc ⟦2²􊽮⟧ 𝗻𝘁𝟬𝟴›
+ 𝗻𝘀
+ 𝟬𝟴
+ x=‹asd
+     asd
+     2›
+ ␛␛
+ ␛l
+ 1=1
+ ‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"
  ⊢ the(x,y):
      ↪ ‹heh ⟦xʸ.y₂⟧ ⟦y⟧›☾
  x₊􊪬xʸt⁺

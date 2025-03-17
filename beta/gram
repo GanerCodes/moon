@@ -15,6 +15,8 @@ expr = (
 
 expr_not_colon = (¬':' ⠶norm_expr_atom)+
 expr_not_comma = (¬',' ⠶norm_expr_atom)+
+func_arg = (¬',' (¬lamb_h_implicit lamb ∨ whiskers ∨ ⠶gen_expr_atom))+
+func_params = ((func_arg 󰆴(',' 𝗪?))+ func_arg?) ∨ func_arg
 
 norm_expr_atom = (⠶lambs ∨ ⠶gen_expr_atom) 󰆴𝘄?
 gen_expr_atom = grp ∨ ugx_expr ∨ ⠶str ∨ var_spec ∨ number_exp ∨ number ∨ op ∨ ⠶script ∨ var
@@ -33,17 +35,12 @@ op = (
      op_lit
     (op_⸓_r = ƨ((~‹[´꜠ᵜ𐞑⟤ᔨ]+› ∨ supscript)*)))
 
-lambs = (
-    (lamb_tacit=((⠶LTL exprs ⠶LTR)
-               ∨ (⠶LTL expr_not_comma ✓ ✓)))
-  ∨ (lamb = ((
-        (lamb_h_normal = (
-            󰆴('⥌' 𝗪?)
-            ((¬lamb_h_implicit lamb) ∨ ⠶gen_expr_atom 󰆴𝗪?)*
-            󰆴'↦' ))
-      ∨ (lamb_h_preset = ~"[𝚲󰲡󰲣󰲥󰲧󰲩󰲫]")
-      ∨ (lamb_h_implicit = var 󰆴(𝗪? '↦'))) 󰆴𝗪?
-    (lamb_b = ((exprs 󰆴'󰅂') ∨ expr_not_comma)))))
+lambs = (  (whiskers=(    (⠶LTL (norm_expr      ∨ ✓) ⠶LTR)
+                        ∨ (⠶LTL (expr_not_comma ∨ ✓) ✓ ✓)))
+         ∨ (lamb    =((   (󰆴('⥌' 𝗪?) (func_params ∨ ✓) 󰆴'↦')
+                        ∨ (lamb_h_preset = ~"[𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱]")
+                        ∨ (lamb_h_implicit = var 󰆴(𝗪? '↦'))) 󰆴𝗪?
+                      (norm_expr 󰆴'󰅂' ∨ expr_not_comma))))
 
 LTL = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]› 󰆴𝗪?
 LTR = ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
@@ -58,8 +55,8 @@ str_nsub = ⠶(  (str_nsub1=(󰆴‹"› (⠶str_gen_inner ∨ (str_nsub1_guts=~
 
 str_sub_inner = ⠶str_gen_inner ∨ str_sub
 str_gen_inner = (str_escape ∨ 󰆴‹󷺗› ∨ str_spec_char)+
-str_sub = 󰆴'⟦' exprs 󰆴'⟧'
-str_spec_char = ~‹[𝗮-𝘇𝟬-𝟵󷺗]›
+str_sub = 󰆴'⟦' norm_expr 󰆴'⟧'
+str_spec_char = ~‹[𝟬-𝟵𝗮-𝗳]{2}› ∨ ~‹[𝗮-𝘇󷺗]›
 str_escape = 󰆴"␛␛" ~‹.›
 str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
 

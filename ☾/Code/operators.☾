@@ -408,7 +408,7 @@ OPWRAP_(␛⭥)(⥌𝚡,s=␀↦s≅␀ ⭜𝚡ᣆ􀳉􊾗􋊪🃌⭢󷸹⭝ ␛
                 hasattr(𝚡,"__reversed__") ⭜𝚡.__reversed__()⭝ ␛
                 [⠤𝚡]﹕﹕􍨄)
 
-⍭´ = 󰲡␛ ∈x ⭜x.split(␛ )ᴍ⍭⭝ x.split(␛ )
+⍭´ = OPWRAP_(⥌𝚡,s=␀↦s≅␀ ⭜(␛ ∈𝚡 ⭜𝚡⍭􋂝􊿖􋂝􊿉⭝ 𝚡⍭􋂝􊿉)⭝ 𝚡.split(s₀) ᣆˢ􋌵󰂁¹ 󷺺⍭ˢ􊿦􋅱)
 ▢´ = OPWRAP_(⥌x,s=␀↦xᐹ􋁜ℂ ⭜x󷸜ᴍ▢ˢ⭢󷸜⭝ s≅␀ ⭜𝑖(round(x))⭝ round(x,s))  󰤱 support quaternions
 ⬓´,⬒´ = floor, ceil  󰤱 make this support modifier
 …´ = 󰲣𝑙←range(x,y)

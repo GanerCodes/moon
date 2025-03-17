@@ -1,6 +1,7 @@
 § TODOs ------------------------------------
 
     󰤱  Documentation (oh gosh people are finding the project now)
+    󰤱  ± ∓ superscript ; also ⋅ and ÷
     󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
@@ -12,7 +13,7 @@
         100 items: shape ⬤⋄5 = 20⨯5
         124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
     󰤱  finish sup/sub 󷸓󷸔
-    󰤱  we want []⨝ᐦ ≡ ᐦ []⨝ ≡ []
+    󰤱  way to map over contingious truthy groups of 𝌂
     󰤱   for getting time/date? self calls + mod is format
     󰤱  Better window, multidimentional
     󰤱  bootstrap everything
