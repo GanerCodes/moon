@@ -92,3 +92,18 @@
         𝕒.append(n)
     󱁕ᶜ = 𝕒
     ↪ 󱁕
+
+⊢ add_cmp_op_chains(󱁕):  invalid for cmp ops: ≺≻꜠´⟥⟤
+     󱁕.ftrp(‹opC›⍭, ⬤, pre=✓)
+    ∀L∈𝙾𝚃ᴙ:
+        ¿¬𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈): ↺
+        relv = 󷺹ᵗ≡‹opC› ∧ (⨳IS_OP(⟞₀)) ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
+        charg = 󷺹🃌≡1 ∧ ⟞ᵗ☾≡"xpr" ∧ relv(⟞₀☾)☾
+         󰤱 make relv check for invalid modifiers
+        @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
+        ⊢ _(󱁕):
+            ¿relv(󱁕)≕𝚘¬: ↪󱁕
+            󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆᶜʰᵃʳᵍ􊱌󰄎􎗓􊬕ᐸ󰌷
+            ↪ 󱁕
+         󰤱 here, rename these cmp chains
+    ↪󱁕

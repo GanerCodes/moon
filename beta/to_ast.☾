@@ -76,6 +76,9 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
         
+        add_cmp_op_chains(󱁕)
+         󱁕.ftrp(‹xpr›⍭, , pre=✓)
+        
         rewrite_ternary(󱁕)
         
         ¿𝘯≤20:↪󱁕
