@@ -1,8 +1,8 @@
 ⮌ util ⨡ FRAC_CONV, UPSIDEDOWNSYNDROME
 ⮌ functools ⨡ cache
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/𝐍›)
-󰋺(__dir__ / ‹..› / ‹☾/generate_operators.☾›)
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/peggle2›)
+󰋺(__dir__ / ‹..› / ‹☾/generate_operators.☾›)
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/j☾/rgx_golfatron›)
 󰋺(␛🌈), dbg_wrap≔ƒ↦𝚲☾´(‹⟦ƒ.__name__⟧: 𝔸=⟨⟦𝔸ᴍtermclr(⬤,"ff0")⭢⨝␛│⟧⟩, 𝕂=⟦𝕂⟧ ↓›) ► ƒ(⠤𝔸,⠶𝕂)☾
 
@@ -37,6 +37,12 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖtermclr(⟞,‹ff3›)
 𝗇𝗎𝗆 = 󰲡Ń(‹num›, 𝔗(x))
 𝗈𝗉  = 󰲡Ń(‹op󷺗›, Ń("op_⸓_l", 𝝀), Ń("op_lit", 𝔗(x)), Ń("op_⸓_r", 𝝀))
 𝗈𝗉𝖢 = 󰲡Ń(‹opC›, x, ⠤𝔸)
+𝗌𝗍𝗋 = 𝚲Ń(‹str›, ⠤𝔸)
+𝗌𝗍𝗋𝖻 = 𝚲Ń(‹str_byte›, ⠤𝔸)
+𝖿𝖺𝗋𝗀 = 𝚲Ń(‹func_arg›, ⠤𝔸)
+𝗍𝖾𝗋𝗇 = 𝚲Ń(‹ternary›, ⠤𝔸)
+𝖺𝗍𝗍𝗋 = 𝚲Ń(‹attr›, ⠤𝔸)
+𝖿𝗉𝖺𝗋𝖺𝗆𝗌 = 𝚲Ń(‹func_params›, ⠤𝔸)
 
 𝖼𝗎𝗋𝖫 = 𝚲Ń("curL", ⠤𝔸)
 𝖼𝗎𝗋𝖱 = 𝚲Ń("curR", ⠤𝔸)

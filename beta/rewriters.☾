@@ -10,8 +10,8 @@
             ⸘v≡␛⠶: 𝒌=a₁
     ¿𝒂∧𝒌: ↪󱁕
     𝒃 = +b
-    ¿¬𝒂 ∧ +A∈𝒃: hᶜ.append(Ń("func_arg", 𝗈𝗉(␛⠤), A))
-    ¿¬𝒌 ∧ +K∈𝒃: hᶜ.append(Ń("func_arg", 𝗈𝗉(␛⠶), K))
+    ¿¬𝒂 ∧ +A∈𝒃: hᶜ.append(𝖿𝖺𝗋𝗀(𝗈𝗉(␛⠤), A))
+    ¿¬𝒌 ∧ +K∈𝒃: hᶜ.append(𝖿𝖺𝗋𝗀(𝗈𝗉(␛⠶), K))
     ↪󱁕
 
 ⊢ format_whiskers(󱁕):
@@ -33,9 +33,7 @@
     ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(𝗏𝖺𝗋(␛⟞)≕x)►x)
     ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(𝗏𝖺𝗋(␛⟝)≕x)►x)
     ℴ₁ = λ_add_vk(
-            Ń("lamb",
-                Ń("func_params", ⠤𝕒ᐖŃ("func_arg", ⟞)),
-                𝙲),
+            Ń("lamb", 𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᴍ𝖿𝖺𝗋𝗀), 𝙲),
             𝗏𝖺𝗋(␛𝓐), 𝗏𝖺𝗋(␛𝓚))
     ↪ ℴ
 
@@ -53,7 +51,7 @@
         ¿γᵗ≠‹opC›: ↪󱁕
         ¿γ₀ᵉ ᴼ ᵗ≠␛⭜: ↪󱁕
         ¿γ₀ ₂🃌: ↪󱁕
-        ↪ Ń("TERNARY", ⠤γ₁﹕, β)
+        ↪ 𝗍𝖾𝗋𝗇(⠤γ₁﹕, β)
     
     @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  𝅘𝅥𝅮 all the single conditionals 𝅘𝅥𝅮
     ⊢ _(󱁕):
@@ -63,7 +61,26 @@
         is_xpr_atom(β) ⨳
         𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
         𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ 𝗑𝗉𝗋(𝖭𝗈𝗇𝖾)
-        ↪ Ń("TERNARY", α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
+        ↪ 𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
+
+⊢ group_targets(󱁕):
+    brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
+    dot = 󷺹ᵗ≡‹𝗈𝗉›  ∧ +⟞₁≡␛.
+    R,C = ⍁²
+    𝚌 = 󱁕ᶜ
+    ⊢ adds(x):
+        ¿C:
+            R.append(Ń("target_rhs", ⠤C))
+            C.clear()
+        ¿x: R.append(x)
+    ➰𝚌⭜v≔𝚌.pop(0):
+         v☾
+        ¿brk(v): C.append(v)
+        ⸘dot(v): C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)))
+        ¡      : adds(v)
+    adds(□)
+    󱁕ᶜ = R
+    ↪ 󱁕
 
 ⊢ reduce_ς(󱁕):
     ¿¬(𝚘≔󱁕₀ᵉ ᴼ)󰁝: ↪󱁕
