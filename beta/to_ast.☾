@@ -1,0 +1,118 @@
+󰋺(‹rewriters›, *)
+
+part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
+
+𝚐 = ∘‹gram›
+𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
+gram = peggle2(𝚐)
+
+⊢ map_special(x):
+    T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
+    T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼"0123456789abcdef"))
+    ↪ Ń("str", x∈␛𝘀 ⭜ 𝔗(x⭜𝘀⭝ᐦ) ␛
+                    ⭝ Ń("str_byte", 𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶))))
+
+⊢ to_ast(𝚌, remove_comments=✓):
+    ¿remove_comments:
+        𝚌 = +gram(𝚌, ‹parser_comment›, remove_trashes=✗).rm("comment")
+    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›):
+        󱁕 = gram(𝚌,𝘳)
+        ¿𝘯≤0:↪󱁕
+        
+        󱁕.ftrp(‹𝗪›⍭, 󱁕↦Ń(␛𝗪, 𝔗(+󱁕⭢󷹍𝗻⭢􍧰﹕⨝)))
+        
+        󱁕.ftrp(‹whiskers›⍭, format_whiskers)
+        
+        󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦Ń("func_params",
+            ⠤(‹xyzwvutsr›󷸹⭠0⤉⭠‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ(+󱁕₀)-1)␛
+                ᐖŃ("func_arg", 𝗏𝖺𝗋(⟞))))
+        󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦Ń("func_params",
+            Ń("func_arg", 𝗏𝖺𝗋(+󱁕₀))))
+        
+        󱁕.ftrp(‹lamb›⍭, λ_add_vk)
+        
+        󱁕.ftrp(‹func_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
+        
+        󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
+        󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
+        󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
+        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›,
+            󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
+        󱁕.ftrp(‹subscript󷺗›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›,
+            𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
+        @(󱁕.ftrp(‹supscript›⍭, ⬤))
+        ⊢ _(󱁕):
+            𝚑 = gram(+󱁕⭢󷸼≕𝚝, ‹gen_expr_atom›)₀
+            ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
+                       ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
+        ¿𝘯≤3:↪󱁕
+        󱁕.flat(󷺹ᵗ≡"tmp")
+        ¿𝘯≤5:↪󱁕
+        
+        󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
+        ¿𝘯≤6:↪󱁕
+        
+        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma expr_not_colla›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
+        @(󱁕.ftrp(‹xpr›⍭, ⬤))
+        ⊢ _(󱁕):  target_rhs
+            brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
+            dot = 󷺹ᵗ≡‹op›  ∧ +⟞₁≡␛.
+            R,C = ⍁²
+            𝚌 = 󱁕ᶜ
+            ⊢ adds(x):
+                ¿C:
+                    R.append(Ń("target_rhs", ⠤C))
+                    C.clear()
+                ¿x: R.append(x)
+            ➰𝚌⭜v≔𝚌.pop(0):
+                ¿brk(v): C.append(v)
+                ⸘dot(v): C.append(Ń("attr", 𝚌.pop(0)))
+                ¡      : adds(v)
+            adds(□)
+            󱁕ᶜ = R
+            ↪ 󱁕
+        ¿𝘯≤8:↪󱁕
+        
+         ᔐ
+             󰤱 normalize newlines and stuff from literals so we get the same string output
+             󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
+        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕))
+        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t="str"))
+        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
+            󱁕↦󱁕.copy(t=‹str›))
+        󱁕.ftrp(‹str›⍭, 󱁕↦Ń(‹str›, ⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡Ń(‹str›, ⠤x󰌷))∘󱁕), pre=✓)
+        󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
+        ¿𝘯≤9:↪󱁕
+        
+         ugx stuff
+        
+         for exprs/statments
+        
+         whitespace...?
+        
+         implicit multiplication
+        
+         insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
+        
+         expressions 👁
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
+        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
+        󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
+        
+        rewrite_ternary(󱁕)
+        
+        ¿𝘯≤20:↪󱁕
+        
+         op modifiers
+        
+         cmp ops
+        
+         if statements
+        
+         short-circuits
+        
+        ↪ 󱁕
+    ↪ 𝔓(𝚌)
+
+__exports__ = ‹to_ast›⍭

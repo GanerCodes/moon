@@ -30,7 +30,7 @@
     `"hi" ≡ "ih"ᴙ`
 󷰟  󷷼󰁖 𝚡∧𝚢 ᴍdia= diamond equals
     󷹇 Requested by Michael for future advanced math things
-󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧  does{,'t} divide
+󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧  does{,n't} divide
     `4∣8 →≡ ✓`
     `4∣8∣16 →≡ ✓`
     `4∤8∣16 →≡ ✗`
@@ -129,7 +129,7 @@
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
     󷹇 Supports ᔨ and 󰮈
-󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,decending}
+󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,descending}
     𝗜 󰒼
         sorts data
     𝗜 󰒼 𝗙
@@ -176,7 +176,7 @@
     󰤱 docs
 󷰡 ⊜ 𝚡∨􊽨𝚡 ᴍcoeq loop until fixed point
     󰤱 docs
-󷰡 ⍟⊛ 𝚡∨􊽨𝚡 ᴍco⟦x*⟧ loop, keep {sucessfull,all} iterations
+󷰡 ⍟⊛ 𝚡∨􊽨𝚡 ᴍco⟦x*⟧ loop, keep {successful,all} iterations
     󰤱 docs
     ⊛ is the same as ⍟ but includes the final failing iteration
 󷰡 🟕🟖 𝚡∨􊽨𝚡 ᴍcoc⟦cᐦ⟧𝕊 find cycle with{,out} prefix
@@ -235,7 +235,7 @@
    
     󷹅: same as 󱑼 but elements are aligned towards the right
         `[1,2] 󷹅 [1,2,3] ≡ [[1,2],[2,3]]`
-󷰢 ᓕ 𝚡󷺤􋅂𝚡 ᴍcat𝕊 at indicies
+󷰢 ᓕ 𝚡󷺤􋅂𝚡 ᴍcat𝕊 at indices
     `[5,‹joe›,‹zek›]ᓕ²󰁱¹ ≡ "e"`
     `[1,2,[5,2,2,9]] ᓕ²󰁱³ ≡ 9`
     `[1,2,3,4]≕j↨ᓕ􊽧󰁱¹ ≡ j`
@@ -284,7 +284,7 @@
     󰤱˜ docs
 󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
     󰤱
-󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intesection
+󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intersection
     𝑠 ∩ 𝗜 = x∩𝑠(right)
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     󰤱˜ docs
@@ -362,7 +362,7 @@
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{,in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
@@ -403,7 +403,7 @@
     `[1,2,3,4]󰑅󷺹>2ᐸ ≡ 3`
     `[1,2,3,4]󰑅ᔨ󷺹>2ᐸ ≡ 2` 󷹇 index
     󰤱 docs
-󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
+󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦⁅a⟦/𝕊⟧⁆⁅d⟦𝕊/⟧⁆⟧ {left of and ex,left of and in,right of and in,right of and ex}cluding start
     `"abcdcba"󷹓󷺹≡␛cᐸ ≡ "abc"`
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`

@@ -1,169 +1,4 @@
-󰋺(␛🌈), dbg_wrap≔ƒ↦𝚲☾´(‹⟦ƒ.__name__⟧: 𝔸=⟨⟦𝔸ᴍtermclr(⬤,"ff0")⭢⨝␛│⟧⟩, 𝕂=⟦𝕂⟧ ↓›) ► ƒ(⠤𝔸,⠶𝕂)☾
-󰋺(‹op›, *)
-
-part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
-
-𝚐 = ∘‹gram›
-𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
-gram = peggle2(𝚐)
-
-⊢ map_special(x):
-    T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
-    T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼"0123456789abcdef"))
-    ↪ Ń("str", x∈␛𝘀 ⭜ 𝔗(x⭜𝘀⭝ᐦ) ␛
-                    ⭝ Ń("str_byte", 𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶))))
-
-⊢ to_ast(𝚌, remove_comments=✓):
-    ¿remove_comments:
-        𝚌 = +gram(code, ‹parser_comment›, remove_trashes=✗).rm("comment")
-    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›):
-        󱁕 = gram(𝚌,𝘳)
-        ¿𝘯≤0:↪󱁕
-        
-        󱁕.ftrp(‹𝗪›⍭, 󱁕↦Ń(␛𝗪, 𝔗(+󱁕⭢󷹍𝗻⭢􍧰﹕⨝)))
-        
-        @(󱁕.ftrp(‹whiskers›⍭, ⬤))
-        ⊢ _(󱁕):
-            tl, tr = ‹ᑀᐵᐒᐖ 󷺹󷺺󷺻󷺼 ᑅᑈᐘᐛ 󷺽󷺾󷺿󷻀›⍭ᴍℵ○⍉
-            (lb,𝚕,𝙲,𝚛,rb) = 󱁕
-            𝚕, 𝚛 = (+𝚕 ᣆ⁺ˡᵇ 󷺻tl􍪴)∨␛ᐳ, (+𝚛 ᣆ⁺ʳᵇ 󷺻tr􍪴)∨␛ᐸ
-            𝚘 = 𝒪􊯛􊫟.copy()(t=𝚕+𝚛)
-            𝚘ᴸ = le(𝚕∈tl⁻⭜𝚘ᴸ⭝⍁)
-            𝚘ᴿ = le(𝚛∈tr⁻⭜𝚘ᴿ⭝⍁)
-            ¿𝚕≠␛ᐳ     : 𝚘󰀒=␛S
-            ¿     𝚛≠␛ᐸ: 𝚘ᴾ=␛P
-            ¿𝚕≠␛ᐳ∧𝚛≠␛ᐸ: 𝚘ᴮ=␛B
-            𝚘ᴺ=␛N
-            ℴ = 𝗈𝗉(𝚘ᵗ)
-            ℴᵗ, ℴᵉ ᴼ = ‹𝗈𝗉›, 𝚘
-            
-            𝕒 = ⍁
-            ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(𝗏𝖺𝗋(␛⟞)≕x)►x)
-            ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(𝗏𝖺𝗋(␛⟝)≕x)►x)
-            ℴ₁ = Ń("lamb",
-                    Ń("func_params", ⠤𝕒ᐖŃ("func_arg", ⟞)),
-                    𝙲)
-            ↪ ℴ
-        
-        󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦Ń("func_params",
-            ⠤(‹xyzwvutsr›󷸹⭠0⤉⭠‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ(+󱁕₀)-1)␛
-                ᐖŃ("func_arg", 𝗏𝖺𝗋(⟞))))
-        󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦Ń("func_params",
-            Ń("func_arg", 𝗏𝖺𝗋(+󱁕₀))))
-        
-        󱁕.ftrp(‹func_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
-        
-        󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
-        󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
-        󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
-        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›,
-            󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
-        󱁕.ftrp(‹subscript󷺗›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›,
-            𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
-        @(󱁕.ftrp(‹supscript›⍭, ⬤))
-        ⊢ _(󱁕):
-            𝚑 = gram(+󱁕⭢󷸼≕𝚝, ‹gen_expr_atom›)₀
-            ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
-                       ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
-        ¿𝘯≤3:↪󱁕
-        󱁕.flat(󷺹ᵗ≡"tmp")
-        ¿𝘯≤5:↪󱁕
-        
-        󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
-        ¿𝘯≤6:↪󱁕
-        
-        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
-        @(󱁕.ftrp(‹xpr›⍭, ⬤))
-        ⊢ _(󱁕):  target_rhs
-            brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
-            dot = 󷺹ᵗ≡‹op›  ∧ +⟞₁≡␛.
-            R,C = ⍁²
-            𝚌 = 󱁕ᶜ
-            ⊢ adds(x):
-                ¿C:
-                    R.append(Ń("target_rhs", ⠤C))
-                    C.clear()
-                ¿x: R.append(x)
-            ➰𝚌⭜v≔𝚌.pop(0):
-                ¿brk(v): C.append(v)
-                ⸘dot(v): C.append(Ń("attr", 𝚌.pop(0)))
-                ¡      : adds(v)
-            adds(□)
-            󱁕ᶜ = R
-            ↪ 󱁕
-        ¿𝘯≤8:↪󱁕
-        
-         ᔐ
-             󰤱 normalize newlines and stuff from literals so we get the same string output
-             󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕))
-        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t="str"))
-        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
-            󱁕↦󱁕.copy(t=‹str›))
-        󱁕.ftrp(‹str›⍭, 󱁕↦Ń(‹str›, ⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡Ń(‹str›, ⠤x󰌷))∘󱁕), pre=✓)
-        󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
-        ¿𝘯≤9:↪󱁕
-        
-         reform tacits to normal inside some weird op
-         lambdas
-        
-         ugx stuff
-        
-         for exprs/statments
-        
-         whitespace...?
-        
-         implicit multiplication
-        
-         insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
-        
-         expressions 👁
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
-        @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
-        ⊢ _(󱁕):
-            𝚘 = 󱁕₀ᵉ ᴼ
-            ¿¬𝚘󰁝: ↪󱁕
-            𝕒 = 􋑺􊬣
-            ∀n∈󱁕₁﹕:
-                ¿(nᵗ≡‹xpr› ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ᵉ ᴼ ᵗ≡𝚘ᵗ):  󰤱 inner op modifiers
-                    𝕒.extend(n₀ ₁﹕)
-                    ↺
-                𝕒.append(n)
-            󱁕ᶜ = 𝕒
-            ↪ 󱁕
-            
-        ¿𝘯≤20:↪󱁕
-        
-         make op_calls, including 𝚜 and layering modifiers
-        
-         cmp ops
-        
-         if statements
-        
-         short-circuits
-        
-        ↪ 󱁕
-    ↪ 𝔓(𝚌)
-
-⊢ to_py(󱁕):
-    ↪ +󱁕
-
-code = 󰦥󰦥󰦥󰦥󰦥
-1+2→⋅2
-
-a+b⋅c+d
- 1ᑀ+ᑅ2
- x↦x+1
- 󰲣x+y
- ⥌x,y↦x+y
-
- ⥌x,y,⠤𝔸,⠶𝕂,h=22,b=2222↦x²
- 󰲡x²
- x↦x²
- 󷺹²
- 5ᑀ²
+‹to_ast ast_to_py›⍭ᴍ󰋺
 
  "normal string"
  'normal string'
@@ -187,9 +22,37 @@ a+b⋅c+d
  [2³􊿙+⁵2]ᴍ²ƒ
  t=2+⁵ᔨ􊿧ᴍ´
  2⋄4⋄22⋄4⋄5⋄4⋄7
-󰦥󰦥󰦥󰦥󰦥
  5+󷱂²⁺􍨋􊽰
+ a⭜b
+ a⭝c
+ a⭜ᶜb
+ a⭝ᶜb
+ a⭝b⭜c
+ a⭜b⭝c⭜d⭝e
+
+code = 󰦥󰦥󰦥󰦥󰦥
+3<2<1
+ ¿x>1:
+     1☾􊾖
+ ƒ(x)₂⁵
+🟑1ᑀ+𝓚+ᑅ2
+x↦x+1
+󰲣x+y
+󰲣x+y+𝕂
+⥌x,y↦x+y-𝕂
+⥌x,y↦x+y+𝔸
+⥌x,y,⠤A,⠶K,h=22,b=2222↦x²
+1+2→⋅2
+2⋅←1+2
+a+b⋅c+d
+󰲡x²
+x↦x²
+󷺹²
+5ᑀ²
+2:5,2:3:5:,2:2::::::🟑
+󰦥󰦥󰦥󰦥󰦥
 
 󱁕 = to_ast(code)
 󱁕ᴾ
-to_py(󱁕)☾
+␛─⋅125☾
+ast_to_py(󱁕)☾

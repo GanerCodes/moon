@@ -41,7 +41,7 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
             ⟞∩␛∨␛⩚ ⭜‹ᴾ󰀒ᴮ›          ⭝ ␛
             ⟞∋␛.   ⭜(⟞₀≠␛. ⭜␛󰀒⭝ ␛ᴾ)⭝ ␛
             ᐦ ➡+␛ᴺ
-    𝚛 = ℵ(parsed_ops󰌷→󰈳󷺹₀∈dummy_ordsᐸᓕ⁰)ꟿ󷺻⟝ᐵ₄⋄infer(⟞₁)ᐸ󷺿
+    𝚛 = ℵ(parsed_ops󰌷→󰈳󷺹₀∈dummy_ordsᐸᓕ⁰)ꟿ󷺻⟝ᐵ₄ᖘ􍨅󷺹+ᑅinfer(⟞₁)ᐸ󷺿
     ↪ do_join ⭜𝚛ᐵᐵ⨝ᐸ⨝𝘀ᐸ⨝𝗻⭝ 𝚛
 ⊢ generate_fontcompose_conf(parsed_ops):
     style = parsed_ops.style
