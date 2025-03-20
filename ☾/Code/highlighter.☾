@@ -54,7 +54,7 @@ styd = styf ⥉  ⥉ loads ⥉ ℵ
                           __highlighter__(C))]
         ¿ə.tb_next≕ə≅□: ⇥
     
-    CLR1, CLR2 = "faf", "f55"
+    CLR1, CLR2 = ‹faf f55›⍭
     
     asd = termclr(␛⮡, CLR1)
     maxl, prevf = TB ⤉⁰􌾕􋋎 󰲡x₁, □

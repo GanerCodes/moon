@@ -52,11 +52,13 @@
     `[4,2] ⊂ 10⭥ →≡ ✓`
     `[1,2] ⊂ [1,2] →≡ ✓`
     Works on non-set objects as well
+    ❗ susceptible to change when some args aren't sets ❗
 󷰟 ⊊⊋󷹲󷹳󰁖 𝚡∧𝚢 ᴍn⟦⁅⟦da⟧𝕊⁆⁅⟦da⟧/⁆⟧ {,,not ,not }subset of {but not,but not,but possibly,but possibly} equal to {right,left,right,left}
     `[1] ⊊ [1,2] →≡ ✓`
     `[1] 󷹲 [1,2] →≡ ✗`
     `[1,2] ⊊ [1,2] →≡ ✗`
     `[1,2] 󷹲 [1,2] →≡ ✓`
+    ❗ susceptible to change when some args aren't sets ❗
 󷰠 ᴍ 𝚡∧􊽨𝚢 ᴍcm𝕊 map
     𝗜 ᴍ 𝗙
         Maps an iterable with a function
@@ -142,12 +144,14 @@
     ᙧ: no sides, include middle
     ᙎ: include sides, no middle
     ᙡ: include sides, include middle
+    ❗ window operator's order & default window size may change ❗
     󰤱 docs
 󷰠 ᖘ 𝚡∧􋅂𝚡 ᴍcan "candycane", apply to select
     𝗜≕𝕏 ᖘ􊽺 ꬶ
     calls ƒ(𝕏) to get list of indicies
     ꬶ(ƒ(𝕏)) manipulates the index list
     ᖘ will then place ꬶ(ƒ(𝕏)) into the idxs found via ƒ(𝕏)
+    ❗ susceptible to major change (󰤱 make ᖘᕋᓕ consistant)! ❗
     󰤱˜ docs
 󷰠 󱖔 𝚡∨􊽨𝚡 ᴍcF𝕊 modifier as operator
     Binary/(indistinguishable)unary
@@ -228,6 +232,7 @@
         󷹇 if ⬤ is passed then it copies last val
             `[1,2,3]󱑼􋅂[4,5] ≡ [[1,4],[2,5],[3,5]]`
             `[1,2,3]󷹅􋅂[4,5] ≡ [[1,4],[2,4],[3,5]]`
+            ❗ susceptible to change symbol! ❗
         
     󷹇 if an arg isn't iterable, it's duplicated into
         a list with length of longest iterable arg
@@ -240,12 +245,14 @@
     `[1,2,[5,2,2,9]] ᓕ²󰁱³ ≡ 9`
     `[1,2,3,4]≕j↨ᓕ􊽧󰁱¹ ≡ j`
     `[‹hi›,‹there›,‹bob›]ᓕ¹􊽧󰁱􊽧􍧱 ≡ [‹the›,‹b›]`
+    ❗ susceptible to major change (󰤱 make ᖘᕋᓕ consistant)! ❗
     󰤱˜ docs
 󷰢 ᕋ󰁌 𝚡󷸐􋅂𝚡 ᴍcrp modify section
     `[1,2,3] ᕋ¹ 9 ≡ [1,9,3]`
     `[1,2,3] ᕋ¹ ≡ [1,3]`
     `[1,2,3] ᕋ¹􊽧 ≡ [1]`
     `[1,2,3] ᕋ􊽧¹ [5,2,7] ≡ [5,2,7,2,3]`
+    ❗ susceptible to major change (󰤱 make ᖘᕋᓕ consistant)! ❗
     󰤱˜ docs
 󷰣 | 𝚡∧𝚢 | bitwise or
 󷰤 ^ 𝚡∧𝚢 ^ bitwise xor
@@ -270,6 +277,7 @@
     𝑜±𝑜􊽨
     `±5 ≡ [5,¯5]`
     `1±5 ≡ [6,¯4]`
+    󰤱 mod
 󷰧 󷷶󷷻 𝚡∨􊽨𝚢 ᴍdia⟦+-⟧ diamond {add,subtract}
     󷹇 Requested by Michael for future advanced math things
 󷰨 ◄► 𝚡∧𝚢 ᴍca⟦lr⟧ {left,right} value
@@ -277,16 +285,18 @@
 󷰨 ⋄󰁝 𝚡∧𝚢 ᴍ<>𝕊 join into list
     `1⋄2 ≡ [1,2]`
     `1⋄2⋄9 ≡ [1,2,9]`
-    󰤱 make this less janky
 󷰪 ∪ 𝚡∨𝚢 ᴍuw𝕊 union
     𝑠 ∪ 𝗜 = x|𝑠(right)
     𝑙 ∪ 𝗜 = [⠤x,right∖x]
+    ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
 󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
-    󰤱
+    ❗ susceptible to change with non-set args! ❗
+    󰤱 docs
 󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intersection
     𝑠 ∩ 𝗜 = x∩𝑠(right)
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
+    ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
 󷰬 ⨉ 𝚡∨􊽨𝚡 ᴍXX cross product
     `‹ab›⨉‹de› ≡ [‹ab›,‹de›]⨉ ≡ [['a', 'd'], ['a', 'e'], ['b', 'd'], ['b', 'e']]`
@@ -299,6 +309,7 @@
 󷰬 ∖ 𝚡∧𝚢 ᴍc\ set minus
     𝑠 ∖ 𝗜 = x-𝑠(right)
     𝗜 ∖ 𝗜 = left󰈳󷺹∈right
+    ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
 󷰭 ☾ 𝚡󷺤􊽨𝚡 ᴍcp𝕊 print
     "‹hello›☾" ⟶ prints "hello" to stdout
@@ -324,6 +335,7 @@
 󷰭  𝚡∨􊽨𝚢 ᴍcsr reshape
     `[1,2,3,4]₄󰄎₁ ≡ [[[1],[2],[3],[4]]]`
     `[1,2,3,4]₁󰄎₄ ≡ [[[1,2,3,4]]]`
+    ❗ susceptible to change! ❗
     󰤱˜ docs
 󷰭 󰆩 𝚡󷺤􊽨𝚡 ᴍcsd deshape
     `[[1,2],[3,4]]󰆩 ≡ [1,2,3,4]`
@@ -331,12 +343,15 @@
     󰤱˜ docs
 󷰭 󷹝 𝚡󷺤􊽨𝚡 ᴍCS str⟷int involution
     Gets ascii/unicode value(s) of string and vise versa
+    󰤱 somehow make it not ugly to deal w/ ␛a󷹝ᐹ𝑖 ∧ ␛a␛aᐹ𝑙
     󰤱 docs
 󷰭 󷹜 𝚡󷺤􊽨𝚡 ᴍCI str to int / change base
     󷹇 mod is (target_base)+(zero_padding)î
+    󰤱 more general base2base/charsets
     󰤱 docs
 󷰭 󰛔 𝚡∨􋅂𝚡 ᴍcma string replacement
     "find 󰛔ᵗᵃʳᵍᵉᵗ replace" or "(find 󰛔 replace)(target)"
+    ❗ susceptible to change! ❗
     󰤱 docs
 󷰭 ⛶ 𝚡󷺤􊽨𝚡 ᴍcE𝕊 enlist arguments
     `2⛶ ≡ [2]`
@@ -345,10 +360,8 @@
     `2⛶􍨅 ≡ [[2]]`
     `␛x⛶􍧟 ≡ [[[[␛x]]]]`
 󷰭 ᴙ 𝚡󷺤􊽨𝚡 ᴍcR𝕊 reverse
-    󷹇 ᴙᴸ forces string as list
     `"hello"ᴙ ≡ "olleh"`
     `3⭥ᴙ ≡ [2,1,0]`
-    󰤱˜ docs
 󷰭 ⋀ 𝚡󷺤􊽨𝚡 ᴍVW all
     returns first falsy value or last value
     󷹇 ⋀􋇜 sets default for empty iterable (✓ if excluded)
@@ -360,6 +373,7 @@
 󷰭 ⍉ 𝚡󷺤􊽨𝚡 ᴍct𝕊 transpose
     Exactly the same as unary version of 󱑼
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
+    󰤱 mod
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
 󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
@@ -386,6 +400,7 @@
     󷹇 modᐹ𝗙 ⇒ acts like under, i.e.
         `"xYzAWw"󷹒􊾢 ≡ "wWaZYx"`
         [if under gets consistant support this may be changed]
+        ❗ susceptible to change! ❗
     󷹇 supports ᔨ
 󷰭 󷹒 𝚡󷺤􊽨𝚡 ᴍa= negate / swap case
     `󷱂󷹒 ≡ 5`
@@ -393,6 +408,7 @@
     `"aBc"󷹒 ≡ "AbC"`
     󷹇 mod∈{󷰾,0,1} ⇒ choose between ⫯󷹒⫰
     󷹇 modᐹ𝗙 under like in ⫰/⫯
+        ❗ susceptible to change! ❗
     `‹abCDe›⫯ᔨ ≡ [0,1,4]`
     `‹abCDe›⫰ᔨ ≡ [2,3]`
     󷹇 supports ᔨ
@@ -408,6 +424,7 @@
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`
     `"abcdcba"󷹔󷺹≡␛cᐸ ≡ "cdcba"`
+    󰤱 "abcdef"󷹕␛c
     󰤱˜ docs
 󷰭 󷸹󷸸󷸻󷸺 𝚡∨􊽨𝚡 ᴍcr⟦[-=]⟧ range excluding {right,both,none,left}
     `1󷸻4 ≡ [1,2,3,4]`
@@ -422,6 +439,7 @@
     `[1,2,3]󷸺 ≡ 3`
     `[1,2,3]󷸹 ≡ 1`
     `[1,2,3]󷸻 ≡ (1,3)`
+    󰤱 fractional steps and interpolation
     󰤱˜ docs
 󷰭 ⨝⟕⟖⟗ 𝚡∨􊽨𝚡 ᴍCJ⟦𝕊AD⁅J𝕊⁆⟧ join{ left, right, left and right,}
     turns into string if right arg is string
@@ -430,16 +448,20 @@
     `[1,2,3] ⨝ ⋅´ ≡ [1,2,2,6,3]`
     󰤱 docs
 󷰭 󷹎󷹍󷹌 𝚡∨􊽨𝚡 ᴍcs⟦01s⟧ split keeping {0,1,∞} consecutive seperators
+    ❗ susceptible to change! ❗
     󰤱 docs
 󷰭 ⬓▢⬒ 𝚡󷺤􊽨𝚡 ᴍcr⟦aod⟧ round{ low,, high}
     `2 ≡ 2.2▢ ≡ 2.2⬓ ≡ 2.9⬓`
     `3 ≡ 2.9▢ ≡ 2.2⬒ ≡ 2.9⬒`
     `2.91▢¹ ≡ 2.9`
     `133▢􍧱 ≡ 100`
+    󰤱 ⬓⬒ needs mod
 󷰭 󰸵󰸷 𝚡∧􊽨𝚢 ᴍcp⟦ad⟧ pad {left,right}
     𝗜 󰸵ᵖᵃᵈ n
     `[1,2]󰸵3  ≡ [✗,1,2]`
     `[1,2]󰸵⁹3 ≡  [9,1,2]`
+    󰤱􊽨 negative pad does opposite side
+    󰤱 way to specify if strings should ignore ansi stuffs
     󰤱˜ docs
 󷰭 ⤈⤉ 𝚡∨􊽨𝚡 ᴍca⟦sw⟧ {min,max}
     𝗜 ⤈/⤉ 𝗙?󰻾
@@ -480,6 +502,9 @@
         `[1,󷰾,2,2,9,9]𝌂󰻾   ≡ [[1],[-1],[2,2],[9,9]]`
         `[1,󷰾,2,2,9,9]𝌂󷺹²ᐸ ≡ [[1,-1],[2,2],[9,9]]`
     󷹇 Supports ᔨ and 󰮈
+    ❗ susceptible to change! ❗
+        Specifically 󰻾 will be the default
+    󰤱 add way to map truthy groups
     󰤱˜ docs
 󷰭 ᚤ 𝚡∨􊽨𝚡 ᴍcu𝕊 first unique
     Keep only first found under right arg (default 󰻾)
@@ -559,11 +584,13 @@
     `9.2ⴵ ≡ 1`
     `␛aⴵ  ≡ 󷰾`
     `␛Aⴵ ≡ ␛𝔸ⴵ ≡ ␛􋉀ⴵ ≡ 1`
+    󰤱 ᔨ
 󷰭 ~ .𝚡 ~ bitwise not
     `~6 ≡ ¯7 ≡ 󷱄`
-󷰭 󱅏󰁘 𝚡∨􊽨𝚢 ᴍcr⟦fi⟧ random {int,float}
+󷰭 󱅏󰁘 𝚡∨􊽨𝚢 ᴍcr⟦if⟧ random {int,float}
     low /󱅏ⁿ high
     󰤱 docs
+    ❗ susceptible to change! specifically no-arg 󱅏❗
 󷰭  𝚡∨􊽨𝚢 ᴍcrs shuffle
     󰤱 docs
 󷰭 ⍭ 𝚡󷺤􊽨𝚡 ᴍcsp magic string split
@@ -577,13 +604,17 @@
         `‹x y›⍭ ≡ [␛x,␛y]`
         `‹ y›⍭  ≡ [ᐦ,␛y]`
         `‹y›⍭   ≡ [␛y]`
+    󰤱 add third default layer
+    󰤱 add version that ignores newlines or something w/ whitespace
     󷹇 this makes use of two alternative space characters unless spcial highlighting is applied this is confusing
 󷰭 󷹗 𝚡󷺤􊽨𝚡 ᴍasw ugex push
     𝑜 󷹗: Pushes 𝑜 onto ugex stack
     𝑜 󷹗ⁿ: Pushes n copies of 𝑜 onto ugex stack
     𝗜 󷹗􋔛: Extends ugex stack by 𝗜
+    ❗ susceptible to change! ❗
 󷰭 ⬄ 𝚡∨􊽨𝚡 ᴍcst strip
     󰤱 Workings undetermined, may be removed
+    ❗ susceptible to change! ❗
 󷰭 @ 𝚡󷸐􊽨𝚡 @ custom operator
     󰤱 docs
 󷰮 ¬ 𝚡󷺤𝚡 ᴍn𝕊 not
@@ -595,8 +626,7 @@
     `5! ≡ 120`
     `0! ≡ 1`
     `3!5! ≡ 720`
-    󰤱 micheal
-    󰤱 generalize to gamma function
+    󰤱 micheal docs
 󷰯 …  𝚡∧𝚢 ᴍ..𝕊 indicies between
     Same as 󷸹
 󷰯 ⌃󰁌 𝚡∧􊽨𝚢 ᴍc^ exponential
@@ -605,9 +635,11 @@
     󷹇 Requested by Michael for future advanced math things
 󷰰 󰁌 .􊽨𝚡 ᴍST+ splat function
     ƒ ≈ 𝚲ƒ(⠤𝔸󰌷, ⠶𝕂)
+    󰤱􊽨 make prefix+suffix?
     󰤱˜ docs
 󷰰 ∾󰁌 .𝚡 ᴍCCR reverse function args
     ∾ƒ ≈ 𝚲ƒ(⠤𝔸ᴙ, ⠶𝕂)
+    󰤱􊽨 make prefix+suffix?
     󰤱˜ docs
 󷰰  𝚡. ᴍ() call func without args
     i.e. "f" is the same as "f()"
@@ -630,6 +662,7 @@
     `ℵ([1⋄4,2⋄6,6⋄󷰿])ᴍ󰻾 ≡ [(1,4),(2,6),(6,-2)]`
     ℶ: same as ℵ but iterates the values
     `ℶ([1⋄4,2⋄6,6⋄󷰿])ᴍ󰻾 ≡ [4,6,󷰿]`
+    ❗ susceptible to change regarding no-arg initalization ❗
 󷰱 ∅⍁󰁘 􊽨 ᴍ⟦⁅{}⁆⁅[/⁆⟧ empty {set,list}
     `∅ ≡ 𝑠()`
     `∅³ ≡ [𝑠(), 𝑠(), 𝑠()]`
@@ -640,6 +673,7 @@
     󷹘: Pops off last element from ugex stack
     󷹘ⁿ􋁉􋀉􋁗󰁸􋔛󰁹: Pops off last n elements from ugex stack
     ⍖: Same as 󷹘 but doesn't remove from ugex stack
+    ❗ susceptible to change! ❗
 󷰱 󰁘   ᴍslf self
     󰤱 docs, might be removed
 
