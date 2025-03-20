@@ -2,6 +2,7 @@
 
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
+    󰤱  Fold with multiple prev vals
     󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
@@ -394,3 +395,9 @@
                 
         󱀘 𝑖:
             __sup__ = 󰲣POW_INT_INT 
+    
+  x 󱖔􋁤􌿍􋄉􋄽 y
+  x ≡↷⫰ y
+  x ↑􋁑≡⦢ᶠ y
+  x f 
+  ⫰

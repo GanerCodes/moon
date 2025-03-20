@@ -1,0 +1,94 @@
+󰋺(‹op_table›, *)
+
+⊢ denode_op(󱁕, parse):  󰤱
+    l, 𝚝, r = 󱁕ᴍ+ᵜ
+    𝚘 = OP_TABLE􀳀
+    l⊂‹⟥≺› ⨳
+    
+    L=ℵ(lᴍ⬤⋄ᐦ)
+    R=ℵ(r󷹌⭠⬤∈‹ᵜ꜠´ᔨ⟤›⭢ᴍ⬤⨝ᐦ → ᐒ⠤⟞₀⭜(␛𝚜,⟞₀)⛶⭝⍁,⠤⟞₁﹕ᙧ¹ᐸ)
+    𝚕,𝚛 = L⋄Rꟿ²󰲣Ń(x,y ⭜parse(y󷸼)⭝ 𝝀)
+    
+    𝚘 = 𝚘.copy
+    ∀t∈L⁻:
+        ¿t≡␛⟥: 𝚘ᴸ    = ⍁
+        ⸘t≡␛≺: 𝚘ᴸ,𝚘ᴿ = 𝒪􊯛􊫟ᴸ,⍁
+    ∀t∈R⁻:
+        ¿t≡␛⟤: 𝚘ᴿ    = ⍁
+        ⸘t≡␛≻: 𝚘ᴸ,𝚘ᴿ = ⍁,𝒪􊯛􊫟ᴿ
+        ⸘t≡␛ᵜ: 𝚘ᴸ,𝚘ᴿ = 𝚘ᴿ,𝚘ᴸ
+        ⸘t≡␛꜠:
+            ¿𝚘ᴮ:
+                𝚘ᴮ=✗
+                ¿𝚘ᴾ󷺥𝚘󰀒:  if bin only make it not; keeps side
+                    𝚘ᴾ=𝚘󰀒=✓
+            ⸘𝚘ᴾ∨𝚘󰀒:  if we're already unary make it either side
+                𝚘ᴸ=𝚘ᴿ=𝚘ᴸ∪𝚘ᴿ
+                𝚘ᴾ=𝚘󰀒=✓
+            ¡:
+                ✗⨳
+    ext = ℵ􋄅(O=𝚘)
+    ¿␛´∈R: ext􌿍=␛´
+    ↪ Ń(‹𝗈𝗉›, Ń(‹op_⸓_l›, ⠤𝚕),
+              Ń(‹op_lit›, 𝔗(𝚝)),
+              Ń(‹op_⸓_r›, ⠤𝚛),
+              e=ext)
+
+⊢ part(𝚘, 𝙲, d):
+    Ƥ("𝙲:", 𝙲)
+    d∈∓1 ⨳
+    𝓞, i = 𝚘ᵉ ᴼ, 0
+    ¿d≡1:  󷹇 this code is scary!!1
+        𝚜𝚝𝚔 = 𝓞ᴿ⛶
+        ∀i,n∈𝙲↨:
+            ¿IS_OP(n)≕ℴ¬: ↺
+            ➰𝚜𝚝𝚔:          ↘ allows xᴍ⨁
+                ¿ℴᵗ∈𝚜𝚝𝚔􍨄 ∨ (𝓞ᴾ ∨ 𝓞ᴮ∧¬𝓞󰀒 →∧ ℴᵗ∈𝒪􊯛􊱵ᴿ ∧ ℴᴾ ∧ ¬i):
+                    𝚜𝚝𝚔.append(ℴᴿ)
+                    ⇥
+                𝚜𝚝𝚔.pop()
+            ¡: ⇥
+        ¡: i 󷸊+ 1
+    ⸘d≡󷰾:
+        ∀i,n∈𝙲↨﹕﹕􍨄:
+            ¿IS_OP(n)≕ℴ¬: ↺
+            ¿ℴᵗ∉𝓞ᴸ: ⇥
+    ↪ 𝙲𝌂i⭢∨⍁²
+
+⊢ create_call(𝚘, 𝚕, 𝚛):
+    ℴ = 𝚘ᵉ ᴼ
+    ¿ℴᵗ ∈ ‹⭢→➡›: ↪ 𝗀𝗋𝗉(‹()›, ⠤𝚕)
+    ¿ℴᵗ ∈ ‹⭠←⬅›: ↪ 𝗀𝗋𝗉(‹()›, ⠤𝚛)
+    ¿ℴᵗ ≡    ␛⥉: ↪ 𝗀𝗋𝗉(‹()›, 𝗀𝗋𝗉(⠤𝚛), 𝗀𝗋𝗉(⠤𝚕))
+    ↪ 𝗈𝗉𝖢(𝚘, 𝚕, 𝚛)
+
+⊢ apply_op(𝚘, 𝙻, 𝚁):
+    ll,lr = part(𝚘,𝙻,󷰾)
+    rl,rr = part(𝚘,𝚁,1)
+    
+    𝑩 = 𝚲box(stackr(⠤𝔸),✓)
+    𝑩𝒏 = box○󷺹ᴾ∘✗
+    𝑩(stackr(𝑩(⠤llᴍ𝑩𝒏), 𝑩(⠤llᴍ𝑩𝒏)),
+      𝑩𝒏(𝚘),
+      stackr(𝑩(⠤rlᴍ𝑩𝒏), 𝑩(⠤rlᴍ𝑩𝒏)))☾
+    
+    ¿rl: rl = parse_expr(rl)
+    
+    𝘪,𝕒 = 𝚘ᵉ ᴼ,⍁
+    ¿␛𝚜∈𝘪: 𝕒.append(𝘪.pop(␛𝚜))
+     󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
+    ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr), 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  B
+    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr),     𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   S
+    ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    , 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  P
+    ⸘𝘪ᴺ          : ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    ,     𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   N
+    
+    𝚘ᴾ
+    ✗ ⨳ ‹Unable to apply operator ⟦𝚘⟧: ⟦ll=⟧; ⟦lr=⟧; ⟦rl=⟧; ⟦rr=⟧›
+
+⊢ parse_expr(󱁕):
+    𝙻,𝚁 = [],[⠤󱁕]
+    ➰𝚁:
+        c = 𝚁.pop(0)
+        ¿IS_OP(c): 𝙻,𝚁 = apply_op(c,𝙻,𝚁)
+        ¡        : 𝙻.append(c)
+    ↪ 𝗑𝗉𝗋(⠤𝙻+𝚁)
