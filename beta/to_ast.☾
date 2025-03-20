@@ -32,6 +32,7 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
         󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›,
             󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
+         󰤱 here: prob 󷸊 and stuff (sep out mod & add var)
         󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, 𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
         ⊢ _(󱁕):
@@ -71,22 +72,16 @@ gram = peggle2(𝚐)
         
          insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
         
-        󱁕ᴾ
          expressions 👁
         󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
         󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
-        
         add_cmp_op_chains(󱁕)
-         󱁕.ftrp(‹xpr›⍭, , pre=✓)
-        
         rewrite_ternary(󱁕)
         
         ¿𝘯≤20:↪󱁕
         
          op modifiers
-        
-         cmp ops
         
          if statements
         

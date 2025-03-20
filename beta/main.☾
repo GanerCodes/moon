@@ -1,55 +1,55 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 
- "normal string"
- 'normal string'
- 'norma␛'l string'
- ‹abc ⟦2²􊽮⟧›
- ‹abc ⟦2²􊽮⟧ 𝗻𝘁𝟬𝟴›
- 𝗻𝘀
- 𝟬𝟴
- x=‹asd
-     asd
-     2›
- ␛␛
- ␛l
- 1=1
- ‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"
- ⊢ the(x,y):
-     ↪ ‹heh ⟦xʸ.y₂⟧ ⟦y⟧›☾
- 𝕏ʸ ˣ = 2⁹+y²+kʷ
- A ₃ᵃ ²
- [2³􊿙+⁵2]ᴍ²ƒ
- t=2+⁵ᔨ􊿧ᴍ´
- 5+󷱂²⁺􍨋􊽰
- a⭜b
- a⭝c
- a⭜ᶜb
- a⭝ᶜb
- a⭝b⭜c
- a⭜b⭝c⭜d⭝e
-
 code = 󰦥󰦥󰦥󰦥󰦥
- 5⭢󰈳⭢🃌
+¿x: y☾
+∀x∈y: z☾
+
+➰x: ☾1
+¡ : ☾2
+⊢ (thine=2) joe(x=2,⠤Y): h
+⊢ joe(): 1
+
+🟑
+⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
+⟥ꟿ􋅂ᔨ􋅂⟤
+"normal string"
+'normal string'
+'norma␛'l string'
+‹abc ⟦2²􊽮⟧›
+‹abc ⟦2²􊽮⟧ 𝗻𝘁𝟬𝟴›
+𝗻𝘀
+𝟬𝟴
+x=‹asd
+    asd
+    2›
+␛␛
+␛l
+1=1
+‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"
+⊢ the(x,y):
+    ↪ ‹heh ⟦xʸ.y₂⟧ ⟦y⟧›☾
+𝕏ʸ ˣ = 2⁹+y²+kʷ
+A ₃ᵃ ²
+[2³􊿙+⁵2]ᴍ²ƒ
+t=2+⁵ᔨ􊿧ᴍ´
+5+󷱂²⁺􍨋􊽰
+a⭜b
+a⭝c
+a⭜ᶜb
+a⭝ᶜb
+a⭝b⭜c
+a⭜b⭝c⭜d⭝e
 5⭢🃌⭢🃌
-
-
- xꟿ⁰y
- ⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
- ⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
-
- 3<2<1
-
- ‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"""
-
- 2⋄4⋄22⋄4⋄5⋄4⋄7
-
- x₊􊪬.zʸ􍈼ₜ²
-
- ¿x>1:
-     1☾􊾖ᵜ
-
- ƒ(x)₂⁵
-🟑1ᑀ+𝓚+ᑅ2
+5⭢󰈳⭢🃌
+xꟿ⁰y
+⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
+3<2<1
+‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"""
+2⋄4⋄22⋄4⋄5⋄4⋄7
+x₊􊪬.zʸ􍈼ₜ²
+¿x>1: 1☾􊾖ᵜ
+ƒ(x)₂⁵
+1ᑀ+𝓚+ᑅ2
 x↦x+1
 󰲣x+y
 󰲣x+y+𝕂

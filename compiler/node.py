@@ -92,7 +92,7 @@ class Node:
             return f"¿ {type(𝕊.c)}]{𝕊.c}"
         return f"‼ <{Т(𝕊).__name__}> {𝕊}"
     def print(𝕊,d=100,p=0,m=64,w=64,s=3,N=Z.lR+'∅'+Z.W,
-        F=lambda x,s=Z.P+'_'+Z.W   :ᖇ(x,Ņ,s),
+        F=lambda x,s=Z.P+'_'+Z.W   :ᖇ(x,'\n',s),
         D=lambda x,a=Z.G  ,b=Z.W   :a+x+b,
         X=lambda x,a=Z.bdB,b=Z.bBLA:a+x+b,
         J=lambda x,a=Z.G  ,b=Z.w   :a+x+b):
@@ -108,7 +108,7 @@ class Node:
                             for o,(a,d) in enum(v)]
                                 for i,v in enum(C)],[])]
             else:
-                print(*(x[1] for x in 𝕊.print(d,1)),sep=Ņ)
+                print(*(x[1] for x in 𝕊.print(d,1)),sep='\n')
                 return 𝕊
         else:
             return [(p,f"{𝕊.t}...")]
