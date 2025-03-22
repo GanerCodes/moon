@@ -35,16 +35,16 @@ gram = peggle2(𝚐)
                     Δ 󷸊+ δ≔𝒓-𝒍
                     󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
             ƒ(󱁕)
-        󱁕.rm(󷺹ᵗ≡␛󰆴∨⟞ᵗ≡␛𝗪)
-        
+        󱁕ᴾ
+        󱁕.rm(󷺹ᵗ≡␛󰆴)
         reform_positions(󱁕, 𝚌𝚘𝚍𝚎)
+        󱁕ᴾ
         add_blocks(󱁕)
+        󱁕ᴾ
+         exit
         󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
         
-        󱁕ᴾ
-         
         ¿𝘯≤0:↪󱁕
-         󱁕.rm(󱁕↦󱁕ᵗ≡␛𝗪 ⭜ ¬󱁕₀ᵗ≔+󱁕⭢󷹎𝗻ᣆᓕ􍨅⭢🃌ᣆᔐ)
         
         󱁕.ftrp(‹whiskers›⍭, format_whiskers)
         󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝖺𝗋𝗀○𝗏𝖺𝗋))
@@ -89,8 +89,6 @@ gram = peggle2(𝚐)
          ugx stuff
         
          for/if exprs/statments
-        
-         whitespace...?
         
          implicit multiplication
         

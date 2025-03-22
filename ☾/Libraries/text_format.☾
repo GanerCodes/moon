@@ -4,16 +4,16 @@
 
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
-H, TC = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
+H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
 find_esc_seqs = re.compile(‹⟦27󷹝⟧\[(\d+;2;\d+;\d+;\d+|0)m›)
 rm_esc = 𝼞cache(re.sub(find_esc_seqs, ᐦ))
 𝼞ꬷ = 🃌○rm_esc
-
-padr = 𝼞cache(󰲣x+𝘀⋅←y-𝼞ꬷ(x))
+padl = 𝼞cache(󰲣x+ᵜ𝘀⋅←y-𝼞ꬷ(x))
+padr = 𝼞cache(󰲣x+ 𝘀⋅←y-𝼞ꬷ(x))
 
 @𝼞cache
 ⊢ pads(𝚡,w=*,h=*):
-    ¿𝚡ᐹᔐ: 𝚡󷸊󷹎𝗻
+    ¿𝚡ᐹᔐ: 𝚡=𝚡.split(𝗻)
     ¿w≅*: w = 𝚡ᴍ𝼞ꬷ⭢⤉⁰
     ¿h≅*: h = 𝚡   ⭢🃌
     ¿h≇□: 𝚡.extend([𝘀⋅⭠w∨0]⋅⭠h-𝚡🃌)
@@ -26,10 +26,10 @@ padr = 𝼞cache(󰲣x+𝘀⋅←y-𝼞ꬷ(x))
     𝚡,⠤𝚈 = 𝚇
     ¿𝚈🃌≡0: ↪𝚡
     ¿𝚈🃌>1: ↪stackr(𝚡,stackr(⠤𝚈))
-    𝚢 = 𝚈₀󷹎𝗻
+    𝚢 = 𝚈₀.split(𝗻)
     ↪ pads(𝚡,*,𝚢🃌)󱑼􊾖𝚢ꟿ+⭢⨝𝗻
 
-(sl,sr),O,C,T,B = ‹[] ⎡⎢⎣ ⎤⎥⎦ ┌─┐ └─┘›⍭ᴍ²TC(⬤,‹00007f›)
+(sl,sr),O,C,T,B = ‹[] ⎡⎢⎣ ⎤⎥⎦ ┌─┐ └─┘›⍭ᴍ²ŧ𝼝(⬤,‹00007f›)
 @𝼞cache
 ⊢ box(𝚡, big=✗):
     𝚡 = pads(𝚡)
@@ -41,7 +41,7 @@ padr = 𝼞cache(󰲣x+𝘀⋅←y-𝼞ꬷ(x))
 fmp = 𝑑([ᐦ,␀,⬤,󰮈,✓,✗,□,ⴳ,ⴴ,½,⅓,¼,⅕,⅙,⅐,⅛,⅑,⅒,⅔,⅖,󷶲,󷶷,¾,⅗,󷶳,⅜,󷷆,⅘,󷶴,󷷂,⅚,󷶵,⅝,󷶹,󷶶,⅞,󷶺,󷷇,󷶻,󷷈,↉,󷷉,π,ℇ,∞,î,τ,󷺍,󷺎,󷺏,󷱩,󷱪,󷱬,󷱭,󷱮,󷱯,󷱰,󷱫,𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦]󱑼␛
         ‹ᐦ󷺗␀󷺗⬤󷺗󰮈󷺗✓󷺗✗󷺗□󷺗ⴳ󷺗ⴴ󷺗½󷺗⅓󷺗¼󷺗⅕󷺗⅙󷺗⅐󷺗⅛󷺗⅑󷺗⅒󷺗⅔󷺗⅖󷺗󷶲󷺗󷶷󷺗¾󷺗⅗󷺗󷶳󷺗⅜󷺗󷷆󷺗⅘󷺗󷶴󷺗󷷂󷺗⅚󷺗󷶵󷺗⅝󷺗󷶹󷺗󷶶󷺗⅞󷺗󷶺󷺗󷷇󷺗󷶻󷺗󷷈󷺗↉󷺗󷷉󷺗π󷺗ℇ󷺗∞󷺗î󷺗τ󷺗󷺍󷺗󷺎󷺗󷺏󷺗󷱩󷺗󷱪󷺗󷱬󷺗󷱭󷺗󷱮󷺗󷱯󷺗󷱰󷺗󷱫󷺗𝑒󷺗𝑜󷺗𝑑󷺗𝑏󷺗𝑙󷺗𝑡󷺗𝑠󷺗ᔐ󷺗𝑖󷺗𝑓󷺗𝑦›)
 fmp󷸊ꟿ⁺󰲣H(y)
-COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖtermclr(⟞,‹ff3›)
+COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 
 𝐷,𝐿 = (ℵᐹ)|(ℶᐹ)|𝑑, 𝑙|𝑡
 ⊢ 𝖿𝗆𝗍(x):
@@ -50,7 +50,7 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖtermclr(⟞,‹ff3›)
     except:□
     T = xᐹ
     ¿T≅type: ↪H(x.__name__)
-    ¿T≅ᔐ: ↪TC(ᔐ(x),bg="202")
+    ¿T≅ᔐ: ↪ŧ𝼝(ᔐ(x),bg="202")
     ¿T≅𝑖: ↪ᔐ(𝑖(x))
     ¿T≅𝑓: ↪ᔐ(x▢⁵)
     ¿xᐹ𝐷: ↪(xᐹ⭢≅𝑑⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+CL+(x.items()ꟿ󰲣‹⟦𝖿𝗆𝗍(x)⟧⟦ARW⟧⟦𝖿𝗆𝗍(y)⟧›󰅂⭢⨝𝘀)+CR
@@ -66,4 +66,4 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖtermclr(⟞,‹ff3›)
  d = box(‹5⭥ᐵ²›, ✓)☾
  stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
 
-__exports__ = ‹rm_esc 𝼞ꬷ padr pads box stackr 𝖿𝗆𝗍 Ƥ›⍭
+__exports__ = ‹rm_esc padr pads box stackr 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭

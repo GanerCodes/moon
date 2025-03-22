@@ -1,26 +1,29 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 code = 󰦥󰦥󰦥󰦥󰦥
 
-t = ‹1. I want multiline strings
-     2. I hate how im either forced to prefix
-        newlines / have a bunch of lines with spaces
-        𝘀𝗻𝟱𝟱⟦√2⟧
-     3. I make ☾ solve my problems›
+ t = ‹1. I want multiline strings
+      2. I hate how im either forced to prefix
+         newlines / have a bunch of lines with spaces
+         𝘀𝗻𝟱𝟱⟦√2⟧
+      3. I make ☾ solve my problems›
+ ¿A: ¿B: C
+     ¡D: E
+ ¡:
+  ¿✓:
+    A
+   B
+
+
+¿X:
+    ¿y: z
+    ¡: w
+    h
+
+λ🃌
 
 󰦥󰦥󰦥󰦥󰦥
 
  󰦥󰦥󰦥󰦥󰦥
- ¿A: ¿B: C
-     ¡D: E
- ¡:
-     abc
-     def
-     ¿✗:
-      123
-      456
-      ¿✓:
-          A
-         B
  󰦥󰦥󰦥󰦥󰦥
  ⊢ (∾) joe(x=2,⠤Y): abc
                     def

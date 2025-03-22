@@ -6,7 +6,7 @@ except Exception: ⨡ re
 ⮌ pickle ⨡ loads, dumps
 ⮌ time ⨡ time
 
-show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹⟦i⟧,⟦x⟧𝘁⟦𝑅ₓ⟧𝘁⟦y⟧›
+show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹⟦i⟧,⟦x⟧𝘁⟦𝑅ₓ⟧𝘁⟦y⟧›
 
 𝓽_ = □
 ⊢ 𝓣(s=ᐦ):
@@ -205,10 +205,11 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
         ¿󱁕ᵗ≡␛ᔐ ∨ 󱁕ᵗ≡␛~:
             󱁕ᵗ, 󱁕ᶜ, 󱁕ᵉ ᵀ = 󱁕ᶜ₀ᵗ, [], ✓
         ¡:
-            ∀c∈󱁕: reform_str(c)
+            ∀c∈󱁕:reform_str(c)
         ↪ 󱁕
     ℒ ; reform_str(󱁕) ; ℒ("Reform_str")
      󱁕.ftrp(␛ᔐ␛~, f)
+    
     
     ¿include_positions:
         (ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁)∘󱁕
@@ -268,7 +269,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
      󱁕.ftrp(␛ƨ, 󰲡Ń(get_txt(x), e=ℵ(T=✓)))
     ⊢ set_arrows(󱁕):
         ¿󱁕ᵉ ᵀ: ↪
-        ∀i,c ∈ enumerate(󱁕):
+        ∀i,c∈enumerate(󱁕):
             ¿cᵉ ᵀ: ↺
             ¿cᵗ≡␛←:
                 󱁕ᵉ􊬣􊫼 = 󱁕ᵢ = c₁
@@ -279,7 +280,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
  parse_to_node = 󱁕↦(ƒ ≔ 󰲡Ń(x, ⠤𝔸ᴍ󰲡ƒ(⠤xᐹ𝑡 ⭜x⭝ x⛶􋇡)))(⠤󱁕)
 ⊢ parse_to_node(󱁕):
     ⊢ ƒ(x, ⠤𝔸):
-        ↪ Ń(x, ⠤(ƒ(⠤isinstance(x,tuple) ⭜x⭝ (x,)) ∀x∈𝔸))
+        ↪ Ń(x, ⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,)) ∀x∈𝔸))
     ↪ ƒ(⠤󱁕)
 
 @fcache

@@ -7,8 +7,8 @@ cln_kwd   = ~‹%CLN_KWDS%›
 parser_main    = stmts?
 parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
 
-stmts      = 𝗪? ( stmt      𝗪?)+
-multi_expr = 𝗪? (⠶norm_expr 𝗪?)+
+stmts      = 󰆴𝗪? ( stmt      󰆴𝗪?)+
+multi_expr = 󰆴𝗪? (⠶norm_expr 󰆴𝗪?)+
 
 stmt  = func_dec ∨ kwd_pfx ∨ norm_expr
 func_dec   = 󰆴("⊢" 𝗪?) (grp 󰆴𝗪? ∨ ✓) var 󰆴(𝘄? "(" 𝗪?) (func_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
