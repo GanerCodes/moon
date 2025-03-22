@@ -6,10 +6,10 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
 𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
 gram = peggle2(𝚐)
 
-⊢ map_special(x):
+⊢ map_special(x,⠶𝕂):
     T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
     T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼"0123456789abcdef"))
-    ↪ 𝗌𝗍𝗋(x∈␛𝘀 ⭜𝔗(x⭜𝘀⭝ᐦ)⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶))))
+    ↪ 𝗌𝗍𝗋(x∈␛𝘀 ⭜𝔗(x⭜𝘀⭝ᐦ, ⠶𝕂)⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶), ⠶𝕂)))
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓):
     𝚌, coms = 𝚌𝚘𝚍𝚎, □
@@ -39,6 +39,7 @@ gram = peggle2(𝚐)
         
         reform_positions(󱁕, 𝚌𝚘𝚍𝚎)
         add_blocks(󱁕)
+        󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
         
         󱁕ᴾ
          
@@ -74,21 +75,20 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹xpr›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
         
-         ᔐ
-             󰤱 normalize newlines and stuff from literals so we get the same string output
+         ᔐ  󰤱 normalize newlines and stuff from literals so we get the same string output
              󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕))
-        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t="str"))
+        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,p=󱁕ᵉ ᵖ))
+        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t=‹str›))
         󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
             󱁕↦󱁕.copy(t=‹str›))
-        󱁕.ftrp(‹str›⍭, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
+        󱁕.ftrp(‹str›⍭, 󱁕↦𝒫(𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷)), pre=✓)
         󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
         󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
         ¿𝘯≤9:↪󱁕
         
          ugx stuff
         
-         for exprs/statments
+         for/if exprs/statments
         
          whitespace...?
         
@@ -106,8 +106,6 @@ gram = peggle2(𝚐)
         ¿𝘯≤20:↪󱁕
         
          op modifiers
-        
-         if statements
         
          short-circuits
         

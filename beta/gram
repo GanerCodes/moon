@@ -4,13 +4,13 @@ op_lit    = ~‹%OP_LIT%›
 var_spec  = ~‹%VAR_SPEC%›
 cln_kwd   = ~‹%CLN_KWDS%›
 
-parser_main    = statements?
+parser_main    = stmts?
 parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
 
-statements = 𝗪? ( statement 𝗪?)+
+stmts      = 𝗪? ( stmt      𝗪?)+
 multi_expr = 𝗪? (⠶norm_expr 𝗪?)+
 
-statement  = func_dec ∨ kwd_pfx ∨ norm_expr
+stmt  = func_dec ∨ kwd_pfx ∨ norm_expr
 func_dec   = 󰆴("⊢" 𝗪?) (grp 󰆴𝗪? ∨ ✓) var 󰆴(𝘄? "(" 𝗪?) (func_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
 kwd_pfx    = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                           󰆴(       𝗪? ":" 𝘄?)
 norm_expr  = (⠶norm_expr_atom)+

@@ -47,14 +47,14 @@
                 ⸘v󷹵Ń: r 󷸊+ ⛶‹⟦k⟧=⟦v⟧›
                 ¡   : r 󷸊+ ⛶‹⟦k⟧⟦clc(␛→,"BL")⟧⟦vᵗ⟧›
             m = ᐦ
-            ¿␛T∈e: m󷸊+clc(␛T,"GRE")
-            ¿␛p∈e: m󷸊+eᵖ⨝𝘀󷸓
-            ↪ ‹⟦yl⟧⟦m⟧⟦r⭜𝗻⭝ᐦ⟧⟦r⨝␛,⟧⟦yr⟧›
+            ¿␛T∈e: m󷸊+clc(␛󰊄󷸔,"GRE")
+            ¿␛p∈e: m󷸊+clc(eᵖᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛:󷸓, "YEL")
+            ↪ m+⬅r⭜yl+r⨝␛,+yr⭝ᐦ
         nam = (󱁕ᵗᐹ𝐍 ⭜󱁕ᵗ ᴾ(✗)⭝ 󱁕ᐹŃ ⭜‹⟦󱁕ᵗ⟧⟦format_e(󱁕ᵉ)⟧›⭝ ᔐ(󱁕ᵗ)) ∨ NA
         start = box(nam)
 
         (╴,╮), m0, m1, m2 = ‹─┬ ┬─ ├╰ │ ›⍭ᴍ²clc
-        ¿󱁕🃌¬: ↪ ‹⟦start⟧⟦╴⟧⟦NA⟧›
+        ¿󱁕🃌¬: ↪start
         
         slns = start.split(𝗻)
         res, ml = 𝗻.join(slns﹕􍨄), ML(lne≔slns􍨄)
@@ -83,7 +83,7 @@
     __setitem__ = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
     ⊢ __getitem__(󱁕,i): ↪ iᐹ𝑖|slice ⭜󱁕ᶜᵢ⭝ 󱁕ᵉ ⁱ
     ⊢ __delitem__(󱁕, i): 󰆴󱁕ᶜᵢ
-    cp =copy = ⥌󱁕,t=□,c=□,e=␀↦(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤c≅□ ⭜󱁕ᶜ⭝ c, e=e≅␀ ⭜󱁕ᵉ⭝ e)
+    cp =copy = ⥌󱁕,t=□,c=□,e=␀↦(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤c≅□ ⭜󱁕ᶜ⭝ c, e=e≅␀ ⭜󱁕ᵉ.copy⭝ e)
     cpr=rcopy= ⥌󱁕,t=□        ↦󱁕ᐹ𝐍 ⭜(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤󱁕ᶜᴍ(ᐹ󱁕).rcopy, e=󱁕ᵉ.copy())⭝ 󱁕
     
     ⊢ part(󱁕):

@@ -11,12 +11,18 @@
     ƒ(󱁕)
 
 ⊢ add_blocks(󱁕):
-    start = 󷺹ᵗ≡"statement" ∧ 󱁕₀ᑀᵗ≡"func_dec" ∨ ⟞ᵗ≡"kwd_pfx"∧⟞₀ᵗ≡"cln_kwd"
+    start = 󱁕↦󱁕ᵗ≡"stmt" ∧ 󱁕₀ᑀᵗ≡"func_dec" ∨ ⟞ᵗ≡"kwd_pfx"∧⟞₀ᵗ≡"cln_kwd"
     
-    ƒ = 󱁕↦󱁕◄󱁕ᶜ≔⟨(󷺻start(⟞) ⭜ ⟞ᵉ ᵖ∨✓⍮ 󷺹⟞ᵉ ᵖ󷹗∨✓⍮
-                 󷺹ᵉ ᵖ₀ ₁>⍖₀ ₁ ⍮ ⍈ 󷺻𝒫∘Ń("block", ⠤ƒ(⟞))
-                ) 󷸴 ⴳ⟩∘[⠤󱁕]
-    󱁕.ftrp(‹statements›⍭, ƒ, pre=✓)
+    ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮
+            ⍈ 󷺻𝒫(Ń("blk", ⟞₀, ⠤⟞₁﹕ᣆƒ))⟩ 󷸴 ⴳ⟩○𝑙
+    󱁕.ftrp(‹stmts›⍭, 󱁕↦󱁕.copy(c=ƒ(󱁕)), pre=✓)
+
+⊢ rewrite_str_indent(󱁕):
+    ¿␛p∉󱁕ᵉ: ↪󱁕
+    𝚜, 𝚍 = 󱁕₀ᵗ󷹌𝗻, 󱁕ᵉ ᵖ₁☾
+    
+    󱁕₀ᵗ=𝚜ᐵ[⟞󰑅ᔨ󷺹∉𝘀𝘁ᐸᣆ􋅂􋁜􋄅󰻾􍪵􋌵⭢⤈𝚍:]ᐸ⨝
+    ↪ 󱁕
 
 ⊢ λ_add_vk(󱁕, A=𝗏𝖺𝗋(␛𝔸), K=𝗏𝖺𝗋(␛𝕂)):
     h,b=󱁕
