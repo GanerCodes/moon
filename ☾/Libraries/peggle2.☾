@@ -1,5 +1,5 @@
-󰋺(‹cache›); 󰋺(__dir__/␛𝐍)
- fcache = 󰻾􋒍
+󰋺(‹cache›) ;fcache = 󰻾􋒍
+󰋺(__dir__/␛𝐍)
 
 try             : ⨡ regex as re
 except Exception: ⨡ re
@@ -163,7 +163,7 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
         ⸘r₀  ∉␛ᔐ␛~: r = (r₀, ⠤r₁﹕ ᴍ 𝕊)
         ↪ 𝐑􊳁􊬁􊮝􊵬≔r →► 𝔦
     𝕊((‹T_root›, ⠤nmp⁺󱑼r⁺ ᴍ 𝑡))
-    𝐑 = 𝐑 ᴍ 󰲡(x₀, ⠤x₁﹕ ᴍ󰲡 (r⁻󰑅ᔨ(≡(x₀)))¿xᐹ𝑡¡x)
+    𝐑 = 𝐑 ᴍ 󰲡(x₀, ⠤x₁﹕ ᴍ󰲡 xᐹ𝑡 ⭜r⁻󰑅ᔨy↦x₀≡y󰅂⭝ x)
     ↪ ℵ􋆒|nmp
 
 ⊢ parse_to_tree(𝑅, ℭ, χ, ι, show_table=✗, raise_failed=✓):
@@ -192,12 +192,13 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
     ↪ γ.removeprefix(␛_), rec(χ, C₀)
 
 ⊢ chop_tree(󱁕, 𝐷, remove_trashes=✓,
-             remove_failed_questions=✓,
-             remove_lookaheads=✓,
-             DEBUG=✗):
+                  remove_failed_questions=✓,
+                  remove_lookaheads=✓,
+                  include_positions=✓,
+                  DEBUG=✗):
     ℒ = DEBUG ⭜𝓣⭝ ⴴ
     
-    pops = ‹∧∨*+❗⠶?›
+    pops = "∧∨*+❗⠶?"
     removes = 𝑠(␛󰆴⋅remove_trashes+␛⮞␛¬⋅remove_lookaheads)
     
     ⊢ reform_str(󱁕):
@@ -209,16 +210,18 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
     ℒ ; reform_str(󱁕) ; ℒ("Reform_str")
      󱁕.ftrp(␛ᔐ␛~, f)
     
+    ¿include_positions:
+        (ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁)∘󱁕
     ⊢ ƒ(󱁕):
-        ¿󱁕ᵉ ᵀ: ↪ True
+        ¿󱁕ᵉ ᵀ: ↪True
         ¿󱁕ᵗ∈removes: ↪
         ¿remove_failed_questions ∧ 󱁕ᵗ≡␛?:
             ¿¬󱁕ᶜ: ↪
             󱁕ᶜ = [⠤filter(ƒ, 󱁕ᶜ)]
             ¿¬󱁕ᶜ: ↪
-            ↪ True
+            ↪True
         󱁕ᶜ = [⠤filter(ƒ, 󱁕ᶜ)]
-        ↪ True
+        ↪True
     ℒ ; ƒ(󱁕) ; ℒ("Removes")
      ¿removes:                 󱁕 = Ń.filter(󱁕, 󰲡xᵉ ᵀ ∨ xᵗ∉removes)
      ¿remove_failed_questions: 󱁕 = Ń.filter(󱁕, 󰲡xᵉ ᵀ ∨ xᵗ≠␛? ∨ xᶜ)
@@ -227,18 +230,16 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
         C = []
         ∀c∈󱁕:
             ¿cᵉ ᵀ:
-                C.append(c) ; ↺
+                C.append(c)
+                ↺
             v = splat(c)
-            ¿isinstance(v, list):
+            ¿isinstance(v, 𝑙):
                 C.extend(v)
             ⸘cᵗ∈pops:
                 ¿cᵗ≡␛⠶:
-                    ∀l∈c:
-                        C.extend(lᶜ)
-                ¡:
-                    C.extend(cᶜ)
-            ¡:
-                C.append(c)
+                    ∀l∈c: C.extend(lᶜ)
+                ¡: C.extend(cᶜ)
+            ¡: C.append(c)
         󱁕ᶜ = C
     ℒ ; splat(󱁕) ; ℒ("Splats")
     
@@ -253,17 +254,18 @@ show_cache_table = ⥌𝑅,ℭ↦↨ℭꟿ⥌i,v↦ℵ(v)󰒼→ꟿ󰲣☾‹
             l = ''
             ⊢ ƒ(󱁕):
                 nonlocal l
-                ¿󱁕ᵉ ᵀ:
-                    l 󷸊+ 󱁕ᵗ
-                ¡:
-                    ∀c∈󱁕: ƒ(c)
+                ¿󱁕ᵉ ᵀ: ↪ l 󷸊+ 󱁕ᵗ
+                ∀c∈󱁕: ƒ(c)
             ƒ(󱁕)
-            󱁕ᵗ, 󱁕ᶜ, 󱁕ᵉ = l, [], ℵ(T=✓)
+            e = ℵ(T=✓)
+            ¿include_positions:
+                α,β = 󱁕.farnodes
+                eᵖ = (αᵉ ᵖ₀,βᵉ ᵖ􍨄)
+            󱁕ᵗ, 󱁕ᶜ, 󱁕ᵉ = l, [], e
             ↪
         ∀c∈󱁕: get_txt(c)
     ℒ ; get_txt(󱁕) ; ℒ("Get_txt")
      󱁕.ftrp(␛ƨ, 󰲡Ń(get_txt(x), e=ℵ(T=✓)))
-    
     ⊢ set_arrows(󱁕):
         ¿󱁕ᵉ ᵀ: ↪
         ∀i,c ∈ enumerate(󱁕):

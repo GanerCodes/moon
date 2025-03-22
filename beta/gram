@@ -11,8 +11,8 @@ statements = 𝗪? ( statement 𝗪?)+
 multi_expr = 𝗪? (⠶norm_expr 𝗪?)+
 
 statement  = func_dec ∨ kwd_pfx ∨ norm_expr
-func_dec   = 󰆴("⊢" 𝗪?) (grp 󰆴𝗪? ∨ ✓) var 󰆴(𝘄? "(" 𝗪?) (func_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?) norm_expr?
-kwd_pfx    = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                           󰆴(       𝗪? ":" 𝘄?) norm_expr?
+func_dec   = 󰆴("⊢" 𝗪?) (grp 󰆴𝗪? ∨ ✓) var 󰆴(𝘄? "(" 𝗪?) (func_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
+kwd_pfx    = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                           󰆴(       𝗪? ":" 𝘄?)
 norm_expr  = (⠶norm_expr_atom)+
 
 expr_not_colla = (¬',' ¬':' ⠶bruh_expr_atom)+
@@ -81,5 +81,6 @@ ugx_brack = 󰆴(‹⟨› 𝗪?) ⠶ugx_seq 󰆴(‹⟩›) ⠶ugx_gtail
 𝘄 = ~‹([ \t]*␛␛\n[ \t]*)+|[ \t]+›
 𝗪 = 𝘄 ∨ ~‹[ \t\n]+›
 text_breaker = ⮞(𝘄 ∨ var_spec ∨ ¬var)
+INDENT_LOC = ✓
 
 comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›

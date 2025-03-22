@@ -2,7 +2,11 @@
 
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
-    󰤱  Fold with multiple prev vals
+    󰤱  x􍪵 should be exp
+    󰤱  5󰸵2 sould be "05" ≡ 5󷹜²􍢉
+    󰤱  heckin [1,2,34,󷱂]⫰ᔨ
+    󰤱  textwrap is cringe
+    󰤱  fold with multiple prev vals
     󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
@@ -125,6 +129,19 @@
     ⦢􊽺 undo shuffle…? (what if multiple?)
     ⍭⦢􊽺 join back with   then  
     ⌃⦢􊽺 take log
+    
+     ⍮ delim, 􊽬/􋅋: make sure does/doesn't match
+              /⁺: 0/1 or more
+     ⟨ stuff ⟩􊽬􋅋⁺: sub-ugex expression but groups in output
+     ( stuff )􊽬􋅋⁺: sub-ugex expression but spalts into output
+     A B C 󷸴 D E : try match A B C if fail try match D E
+     ⍈: apply function to a matched expression
+     󷹗/⍖: operators that push/pop ugex
+
+                        reverse this entire match
+                        ↓        ↓ join everything so its a string 
+     `⟨(⬤≡␛a⍮⁺ ⬤≡␛b⍮⁺ ⍈ ᴙ) 󷸴 ⴳ ⍈ ⨝⟩("joebbaaaaaabbab") ≡ "joebbbbaaaaaaba"`
+       1+ a's  1+ b's        ↑ keep in output
     
     ℂ󷸜󰤷 ≡ ℂ󰤷 ≡ x󰤷y → θ
     ρ⦡θ ≡ (ρ,θ)⦡ → ℂ
@@ -401,3 +418,10 @@
   x ↑􋁑≡⦢ᶠ y
   x f 
   ⫰
+
+y = x%10 󰷔|  2| ∀c∈󱁕:ƒ(c)
+          |     α,β = 󱁕.farnodes
+          |     ¿✓:
+          |         󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
+          |  ƒ: "the" 
+          |󷺹>2|

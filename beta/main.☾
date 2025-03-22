@@ -1,15 +1,47 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 
 code = 󰦥󰦥󰦥󰦥󰦥
-¿x: y☾
-∀x∈y: z☾
+⊢ (∾) joe(x=2,⠤Y): abc
+                   def
+                   ghi
 
-➰x: ☾1
-¡ : ☾2
-⊢ (thine=2) joe(x=2,⠤Y): h
-⊢ joe(): 1
+¿something: t = ‹abc
+                 xyz
+                 dasdasd›
 
+¿x>1: ¿y>2: 1☾
+      ¡z>4: 2☾
+¡:
+    abc
+    def
+    ¿✗:
+     123
+     456
+     ¿✓:
+         A
+        B
+󰦥󰦥󰦥󰦥󰦥
+ A🟑ZZZZZZZZZZZZZZ🟑B
 🟑
+󰲣x+y
+
+⊢ (∾) ƒ(x): 1
+            2
+0
+¿x:
+    y☾
+∀x∈y:
+    z☾
+
+➰x:
+    ☾1
+¡ :
+    ☾2
+⊢ (∾) joe(x=2,⠤Y): h
+    h
+⊢ joe():
+    1
+
 ⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
 ⟥ꟿ􋅂ᔨ􋅂⟤
 "normal string"
@@ -64,7 +96,6 @@ x↦x²
 󷺹²
 5ᑀ²
 2:5,2:3:5:,2:2::::::🟑
-󰦥󰦥󰦥󰦥󰦥
 
 󱁕 = to_ast(code)
 󱁕ᴾ

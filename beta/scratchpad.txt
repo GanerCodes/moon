@@ -1,0 +1,19 @@
+⊢ (∾) joe(x=2,⠤Y): abc
+                   def
+                   ghi
+
+¿something: t = ‹abc
+                 xyz
+                 dasdasd›
+
+¿x>1: ¿y>2: 1☾
+      ¡z>4: 2☾
+¡:
+    abc
+    def
+    ¿✗:
+     123
+     456
+     ¿✓:
+         A
+        B

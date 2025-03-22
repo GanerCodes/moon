@@ -38,14 +38,18 @@
         ¿¬←󱁕ᐹ𝐍: ↪ᔐ(󱁕)
         NA = clc(␛∅, "RED")
         
+        yl, yr = clc(␛󰅁,"YEL"), clc(␛󰅂,"YEL")
         ⊢ format_e(e):
             ¿¬e: ↪ᐦ
             r = []
             ∀k,v∈e:
-                ¿k≡␛T: r 󷸊+ ⛶clc(␛T, "GRE")
-                ⸘v󷹵 Ń: r 󷸊+ ⛶‹⟦k⟧=⟦v⟧›
-                ¡    : r 󷸊+ ⛶‹⟦k⟧⟦clc(␛→, "BL")⟧⟦vᵗ⟧›
-            ↪ ‹⟦clc(␛󰅁,"YEL")⟧⟦␛,.join(r)⟧⟦clc(␛󰅂,"YEL")⟧›
+                ¿k≡␛p∨k≡␛T: ↺
+                ⸘v󷹵Ń: r 󷸊+ ⛶‹⟦k⟧=⟦v⟧›
+                ¡   : r 󷸊+ ⛶‹⟦k⟧⟦clc(␛→,"BL")⟧⟦vᵗ⟧›
+            m = ᐦ
+            ¿␛T∈e: m󷸊+clc(␛T,"GRE")
+            ¿␛p∈e: m󷸊+eᵖ⨝𝘀󷸓
+            ↪ ‹⟦yl⟧⟦m⟧⟦r⭜𝗻⭝ᐦ⟧⟦r⨝␛,⟧⟦yr⟧›
         nam = (󱁕ᵗᐹ𝐍 ⭜󱁕ᵗ ᴾ(✗)⭝ 󱁕ᐹŃ ⭜‹⟦󱁕ᵗ⟧⟦format_e(󱁕ᵉ)⟧›⭝ ᔐ(󱁕ᵗ)) ∨ NA
         start = box(nam)
 
@@ -68,6 +72,7 @@
 
  Mutable and has attributes
  <Ń>.e.T is used as a flag to determine if it is a text node.
+ <Ń>.e.p is used as a (start_pos, end_pos) map to source-code when dealing ⓦ transpilers
 󱀘 Ń(𝐍):
     __slots__ = ␛t, ␛c, ␛e
     ⊢ __init__(󱁕, t, ⠤c, e=␀):
@@ -144,6 +149,12 @@
         ∀c∈󱁕ᶜᴙ:
             ¿c.rchar()≕x: ↪x
         ↪''
+    
+    ⊢ farnodes(󱁕):
+        α=β=󱁕
+        ➰¬αᵉ ᵀ∧α🃌: α=α₀
+        ➰¬βᵉ ᵀ∧β🃌: β=β􍨄
+        ↪ α,β
     
     rm = child_killer = kill_children
     filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.kill_children(¬○ƒ, ⠤𝔸, ⠶𝕂)
