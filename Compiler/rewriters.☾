@@ -49,18 +49,12 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
     󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
     󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
 
-⊢ λ_add_vk(󱁕, A=𝗏𝖺𝗋(␛𝔸), K=𝗏𝖺𝗋(␛𝕂)):
-    h,b=󱁕
-    𝒂=𝒌=□
-    ∀a∈h:
-        ¿IS_OP(a₀):
-            v = a₀ᵉ ᴼ ᵗ
-            ¿v≡␛⠤: 𝒂=a₁
-            ⸘v≡␛⠶: 𝒌=a₁
-    ¿𝒂∧𝒌: ↪󱁕
-    𝒃 = +b
-    ¿¬𝒂 ∧ +A∈𝒃: hᶜ.append(𝖿𝖺𝗋𝗀(𝗈𝗉(␛⠤), A))
-    ¿¬𝒌 ∧ +K∈𝒃: hᶜ.append(𝖿𝖺𝗋𝗀(𝗈𝗉(␛⠶), K))
+⊢ λ_add_vk(󱁕, 𝕒=␛𝔸, 𝕜=␛𝕂):
+    󰊄,𝙿 = +󱁕,󱁕₁
+    cur = 𝑠(𝙿ᐵᵗᑀ∈‹ƒ_dec_𝔸 ƒ_dec_𝕂›⍭⭜⟞􍨄⭝󰮈)
+     󰤱 check for weird case of ⥌𝔸=2↦...
+    ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_(𝕒))
+    ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_(𝕜))
     ↪󱁕
 
 ⊢ format_whiskers(󱁕):
@@ -81,10 +75,16 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
     𝕒 = ⍁
     ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(𝗏𝖺𝗋(␛⟞)≕x)►x)
     ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(𝗏𝖺𝗋(␛⟝)≕x)►x)
-    ℴ₁ = λ_add_vk(
-            Ń("lamb", 𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᴍ𝖿𝖺𝗋𝗀), 𝙲),
-            𝗏𝖺𝗋(␛𝓐), 𝗏𝖺𝗋(␛𝓚))
+    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᴍ𝖿𝗏𝖺𝗋), 𝙲),
+                  ␛𝓐, ␛𝓚)
     ↪ ℴ
+
+⊢ rewrite_lambs(󱁕):
+    󱁕.ftrp(‹whiskers›⍭, format_whiskers)
+    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝖺𝗋𝗀○𝗏𝖺𝗋))
+    󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝖺𝗋𝗀(𝗏𝖺𝗋(+󱁕₀))))
+    󱁕.ftrp(‹lamb›⍭, λ_add_vk)
+    󱁕.ftrp(‹ƒ_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
 
 ⊢ rewrite_ternary(󱁕):
     is_xpr_atom = 󱁕↦󱁕ᵗ≡"xpr" ∧ 󱁕🃌≡1

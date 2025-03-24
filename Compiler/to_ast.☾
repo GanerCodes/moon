@@ -24,12 +24,10 @@ gram = peggle2(𝚐)
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
         ¿𝘯≤0:↪󱁕
+        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
+        󱁕ᴾ
         
-        󱁕.ftrp(‹whiskers›⍭, format_whiskers)
-        󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝖺𝗋𝗀○𝗏𝖺𝗋))
-        󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝖺𝗋𝗀(𝗏𝖺𝗋(+󱁕₀))))
-        󱁕.ftrp(‹lamb›⍭, λ_add_vk)
-        󱁕.ftrp(‹func_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
+        rewrite_lambs(󱁕)
         
         󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
         󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
@@ -48,7 +46,6 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
         ¿𝘯≤6:↪󱁕
         
-        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
         󱁕.ftrp(‹xpr›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
         
