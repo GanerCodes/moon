@@ -10,12 +10,12 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
      󰤱 normalize newlines and stuff from literals so we get the same string output
      󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
     󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,󱁕))
-    󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t=‹str›))
+    󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.set(t=‹str›))
     󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
-        󱁕↦󱁕.copy(t=‹str›))
+        󱁕↦󱁕.set(t=‹str›))
     󱁕.ftrp(‹str›⍭, 󱁕↦𝒫(𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷)), pre=✓)
-    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
-    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝)󱖔􋔡x)(󱁕)), pre=✓)
+    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
+    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝)󱖔􋔡x)(󱁕)), pre=✓)
 
 ⊢ rewrite_numbers(󱁕,𝔓):
     󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯󱖔􋄤󱁕), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))󱖔􋔡󱁕))

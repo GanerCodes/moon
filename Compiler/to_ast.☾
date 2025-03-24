@@ -11,7 +11,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓, ⠶𝕂):
     𝚌, coms = 𝚌𝚘𝚍𝚎, □
-    ¿remove_comments:
+    ¿remove_comments: 🟑 󰤱􊽨 store info abt stuff so i can say have a symbol
+                             that gives me the current line or line number 🟑
         󱁕 = gram(𝚌, ‹parser_comment›, remove_trashes=✗)
         is_short(󱁕)¬ ⨳ ‹How›
         coms = 󱁕.find(󷺹ᵗ≡"comment")ᐵᵉ ᵖᑀ₀,⟞₁-1ᐸ
@@ -47,8 +48,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ⊢ _(󱁕):  󰤱 􀲵 prop gets lots lol
             𝚕,𝙾,𝚛 = 󱁕
             𝚟 = 𝗏𝖺𝗋(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
-            𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(+𝙾)ᶜ))
-            +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟)⭝ 𝒏ᶜ.insert(0, 𝚟)
+            𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(𝙾)ᶜ))
+            +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟󱖔􋄥𝙾)⭝ 𝒏ᶜ.insert(0, 𝚟󱖔􋄤𝙾)
             ¿+𝚕: 𝒏ᶜ.insert(0, 𝚕.copy(t=‹supscript›))
             ¿+𝚛: 𝒏ᶜ.append(   𝚛.copy(t=‹supscript›))
             ↪ 𝒏
@@ -68,7 +69,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
         ¿𝘯≤6:↪󱁕
         
-        󱁕.ftrp(‹xpr›⍭, group_targets, pre=✓)
+        󱁕.ftrp(‹xpr ƒ_val›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
         
         grp_stmts(󱁕)
@@ -90,9 +91,10 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
         ⊢ _(󱁕):
-            󱁕ᴾ
-            ¿󱁕₀ ₁ ₀ᵗ ≠ ␛≔: ↪󱁕
-            󱁕₁ = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕₁), 25, ‹asgn_left›, loc=󱁕₁)
+            ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
+            ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
+            ¡: ↪󱁕
+            󱁕􀲪 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
             ↪󱁕
         
          󰤱 op modifiers
