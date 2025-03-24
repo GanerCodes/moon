@@ -15,10 +15,10 @@ stmt  = ⊢_dec ∨ kwd_pfx ∨ asgn ∨ norm_expr
 kwd_pfx    = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                              󰆴(       𝗪? ":" 𝘄?)
 norm_expr  = (⠶norm_expr_atom)+
 
+asgn = ⠶asgn_left 󰆴(𝘄? ↷ '=') (asgn ∨ norm_expr)
 asgn_targ = (󰆴("(" 𝗪?) ⠶asgn_left 󰆴(𝗪? ")" 𝘄?)) ∨ ƒ_run_𝔸 ∨ ƒ_run_𝕂 ∨ ƒ_val
 asgn_targs = (⠶asgn_targ 󰆴(𝘄? ↷ ','))+ ⠶asgn_targ?
 asgn_left = asgn_targs ∨ asgn_targ
-asgn = ⠶asgn_left 󰆴(𝘄? ↷ '=') (asgn ∨ norm_expr)
 
 expr_not_colla = (¬',' ¬':' ⠶bruh_expr_atom)+
 expr_not_colon = (     ¬':' ⠶rard_expr_atom)+
@@ -100,7 +100,7 @@ ugx_paren = 󰆴(‹(› 𝗪?) ⠶ugx_seq 󰆴(‹)›) ⠶ugx_gtail
 ugx_brack = 󰆴(‹⟨› 𝗪?) ⠶ugx_seq 󰆴(‹⟩›) ⠶ugx_gtail
 
 𝘄 = ~‹([ \t]*␛␛\n[ \t]*)+|[ \t]+›
-𝗪 = 𝘄 ∨ ~‹[ \t\n]+›
+𝗪 = (𝘄 ∨ ~‹[ \t\n]+›)+
 text_breaker = ⮞(𝘄 ∨ var_spec ∨ ¬var)
 INDENT_LOC = ✓
 

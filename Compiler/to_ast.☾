@@ -23,6 +23,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             force_full_match=✗):
         
         ¿locᐹŃ: loc = locᵉ ᵖ﹕₂
+        (𝚌,𝘳)☾
         󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
