@@ -4,28 +4,40 @@
 𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
 gram = peggle2(𝚐)
 
-⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓):
+ 󰤱 string ␛ before newline should not add it
+
+is_short = 󱁕↦(󱁕ᵉ.parse_len≕α)≠(β≔󱁕ᵉ.input_len)
+warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
+
+⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓, ⠶𝕂):
     𝚌, coms = 𝚌𝚘𝚍𝚎, □
     ¿remove_comments:
         󱁕 = gram(𝚌, ‹parser_comment›, remove_trashes=✗)
+        is_short(󱁕)¬ ⨳ ‹How›
         coms = 󱁕.find(󷺹ᵗ≡"comment")ᐵᵉ ᵖᑀ₀,⟞₁-1ᐸ
         󱁕.ftrp(‹comment›⍭, 󰻾􋈠􋁐􋋎)
         𝚌 = +󱁕
-    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□):
+    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□,
+            warn_short=✓, trim_length_info=✓,
+            force_full_match=✗):
+        
         ¿locᐹŃ: loc = locᵉ ᵖ﹕₂
         󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
-        󱁕ᴾ
-        repair_comment_holes(󱁕, coms)
+        ¿warn_short: warn_if_short(󱁕)
+        ¿force_full_match ∧ is_short(󱁕): ↪□
+        ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
         󱁕.rm(󷺹ᵗ≡␛󰆴)
-        reform_positions(󱁕, 𝚌)
+        reform_positions(󱁕, 𝘳≡‹parser_main›⭜𝚌𝚘𝚍𝚎⭝𝚌)
         ¿loc≇□: offset_𝚕𝚌(󱁕, loc)
+        ¿trim_length_info:
+            󰆴 󱁕ᵉ["parse_len"], 󱁕ᵉ["input_len"]
+        
+        stackr(box(󱁕ᴾ∘✗,✓), box(linenum(𝚌,s=ŧ𝼝(fg="915")),✓))☾
+        
         ¿𝘯≤0:↪󱁕
         
-         box(𝚌,✓)☾
-         󱁕ᴾ
-        
         add_blocks(󱁕)
-        󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
+        󱁕.ftrp(‹str_tsub›⍭, rewrite_str_indent)
         󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
         rewrite_lambs(󱁕)
         rewrite_numbers(󱁕, 𝔓(⬤, 1, ‹norm_expr›))
@@ -46,11 +58,10 @@ gram = peggle2(𝚐)
         
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
         ⊢ _(󱁕):
-            𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝, 0, ‹gen_expr_atom›, loc=󱁕)
-            attr = 𝚑₀ᵗ≡‹var› ∧ 𝚑ᵉ.parse_len≡𝚑ᵉ.input_len
-             󰤱 this prob no work cuz 󰆴's? ↑
-            ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
-                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 5, ‹norm_expr›, loc=󱁕)))
+            𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝, 0, ‹gen_expr_atom›, loc=󱁕, warn_short=✗, force_full_match=✓)
+            attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹var›
+            ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕), 𝚑) ␛
+                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃󱖔􋄤󱁕), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 5, ‹norm_expr›, loc=󱁕)))
         󱁕.flat(󷺹ᵗ≡"tmp")
         ¿𝘯≤5:↪󱁕
         
@@ -63,6 +74,7 @@ gram = peggle2(𝚐)
         grp_stmts(󱁕)
         rewrite_for(󱁕)
         rewrite_strs(󱁕)
+        flatten_statments(󱁕)
         ¿𝘯≤9:↪󱁕
         
          󰤱 ugx stuff
@@ -76,14 +88,20 @@ gram = peggle2(𝚐)
         rewrite_ternary(󱁕)
         ¿𝘯≤20:↪󱁕
         
+        @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
+        ⊢ _(󱁕):
+            󱁕ᴾ
+            ¿󱁕₀ ₁ ₀ᵗ ≠ ␛≔: ↪󱁕
+            󱁕₁ = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕₁), 25, ‹asgn_left›, loc=󱁕₁)
+            ↪󱁕
+        
          󰤱 op modifiers
         
          󰤱 reformat ≔≕ etc?
         
          󰤱 short-circuits
         
-        
         ↪ 󱁕
-    ↪ 𝔓(𝚌, coms=coms)
+    ↪ 𝔓(𝚌, coms=coms, trim_length_info=✗, ⠶𝕂)
 
 __exports__ = ‹to_ast›⍭

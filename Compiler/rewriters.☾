@@ -1,33 +1,34 @@
-󰋺(‹tree_txt›, *)
+󰋺(‹expr›, *)
 
 part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
-⊢ map_special(x,⠶𝕂):
+⊢ map_special(x,󱁕=⍁):
     T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
     T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼"0123456789abcdef"))
-    ↪ 𝗌𝗍𝗋(x∈␛𝘀 ⭜𝔗(x⭜𝘀⭝ᐦ, ⠶𝕂)⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶), ⠶𝕂)))
+    ↪ 𝗌𝗍𝗋((x∈␛𝘀 ⭜     (𝔗(x⭜𝘀⭝ᐦ                      )󱖔􋔡󱁕) ␛
+                ⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶))󱖔􋔡󱁕)))
 ⊢ rewrite_strs(󱁕):
      󰤱 normalize newlines and stuff from literals so we get the same string output
      󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-    󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,p=󱁕ᵉ ᵖ))
+    󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,󱁕))
     󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t=‹str›))
     󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
         󱁕↦󱁕.copy(t=‹str›))
     󱁕.ftrp(‹str›⍭, 󱁕↦𝒫(𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷)), pre=✓)
-    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
-    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
+    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
+    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝)󱖔􋔡x)(󱁕)), pre=✓)
 
 ⊢ rewrite_numbers(󱁕,𝔓):
-    󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
-    󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
+    󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯󱖔􋄤󱁕), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))󱖔􋔡󱁕))
+    󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕)󱖔􋔡󱁕)
     󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
-    󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))))
+    󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃󱖔􋄥󱁕₀), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))))
 
 ⊢ λ_add_vk(󱁕, 𝕒=␛𝔸, 𝕜=␛𝕂):
     󰊄,𝙿 = +󱁕,󱁕₁
     cur = 𝑠(𝙿ᐵᵗᑀ∈‹ƒ_dec_𝔸 ƒ_dec_𝕂›⍭⭜⟞􍨄⭝󰮈)
      󰤱 check for weird case of ⥌𝔸=2↦...
-    ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝔸(𝕒))
-    ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝕂(𝕜))
+    ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝔸(𝕒)󱖔􋄥𝙿)
+    ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝕂(𝕜)󱖔􋄥𝙿)
     ↪󱁕
 
 ⊢ format_whiskers(󱁕):
@@ -46,15 +47,15 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
     ℴᵗ, ℴᵉ ᴼ = ‹𝗈𝗉›, 𝚘
     
     𝕒 = ⍁
-    ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(𝗏𝖺𝗋(␛⟞)≕x)►x)
-    ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(𝗏𝖺𝗋(␛⟝)≕x)►x)
-    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᴍ𝖿𝗏𝖺𝗋), 𝙲),
+    ¿𝚕∈"ᑀᐵ󷺹󷺺": 𝙲ᶜ.insert(0, 𝕒.append(␛⟞≕x󱖔􋄤𝙲)►x)
+    ¿𝚛∈"ᑅᑈ󷺽󷺾": 𝙲ᶜ.append(   𝕒.append(␛⟝≕x󱖔􋄥𝙲)►x)
+    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᐖ𝖿𝗏𝖺𝗋(⟞)󱖔􋄤󱁕), 𝙲),
                   ␛𝓐, ␛𝓚)
     ↪ ℴ
 
 ⊢ rewrite_lambs(󱁕):
     󱁕.ftrp(‹whiskers›⍭, format_whiskers)
-    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝗏𝖺𝗋))
+    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀ᐖ𝖿𝗏𝖺𝗋(⟞󱖔􋄤󱁕)))
     󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝗏𝖺𝗋(󱁕₀)))
     󱁕.ftrp(‹lamb›⍭, λ_add_vk)
 
@@ -81,7 +82,7 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
         β󷸊₀
         is_xpr_atom(β) ⨳
         𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
-        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ 𝗑𝗉𝗋(𝖭𝗈𝗇𝖾)
+        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑𝗉𝗋(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
         ↪ 𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 
 ⊢ group_targets(󱁕):
@@ -91,7 +92,7 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
     𝚌 = 󱁕ᶜ
     ⊢ adds(x):
         ¿C:
-            R.append(Ń("target_rhs", ⠤C))
+            R.append(𝒩(‹target_rhs›, ⠤C))
             C.clear()
         ¿x: R.append(x)
     ➰𝚌⭜v≔𝚌.pop(0):
@@ -142,7 +143,7 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
         𝟐,_,𝟑 = spl(𝟐, find_in)
         𝟒 = □
         ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
-        ↪ Ń(‹∀_xpr›, 𝖿𝗈𝗋(𝗑𝗉𝗋(⠤𝟏), 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))
+        ↪ Ń(‹∀_xpr›, 𝖿𝗈𝗋(𝗑𝗉𝗋(⠤𝟏), 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
     
     is_valid = 󷺹ᵗ≡‹kwd_pfx› ∧ ⟞₀ᵗ≡‹cln_kwd› ∧ +⟞₀≡␛∀
     @(󱁕.frp(is_valid, ⬤, pre=✓))
@@ -150,18 +151,5 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
         𝟐,_,𝟑 = spl(󱁕₁, find_in)
         𝟒 = □
         ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
-        ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))
+        ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
     _
-
-⊢ grp_stmts(󱁕):  ➰¿⸘¡
-    𝒎 = 󰲡󱁕_is_hot_stuff(⬤,⠤⍭‹blk stmt kwd_pfx cln_kwd›,󷺹ᵗ≡x)
-
-    @(󱁕.ftrp(‹stmts›⍭, ⬤, pre=✓))
-    ⊢ _(󱁕):
-        󱁕ᶜ = ⟨  ⟨𝒎∘␛¿⍮ 𝒎∘␛⸘⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹¿⸘¡›, ⠤⟞)⟩
-              󷸴 ⟨𝒎∘␛➰⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹➰¡›, ⠤⟞)⟩
-              󷸴 ⟨𝒎∘␛∀⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹∀¡›, ⠤⟞)⟩
-              󷸴 ⴳ⟩(󱁕ᶜ)
-        ↪ 󱁕
-     ∀𝚗∈date_󱁕(⠤⍭‹blk stmt kwd_pfx cln_kwd›, 󷺹ᵗ≡␛¿)(󱁕):
-         ‹THE ⟦𝚗⟧›☾
