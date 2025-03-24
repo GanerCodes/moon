@@ -3,14 +3,15 @@
 𝑩 = 𝚲box(stackr(⠤𝔸),✓)
 𝑩𝒏 = box○󷺹ᴾ∘✗
 
-⊢ denode_op(󱁕, parse):  󰤱
+⊢ denode_op(󱁕, 𝔓):  󰤱
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀
     l⊂‹⟥≺› ⨳
     
     L=ℵ(lᴍ⬤⋄ᐦ)
     R=ℵ(r󷹌⭠⬤∈‹ᵜ꜠´ᔨ⟤›⭢ᴍ⬤⨝ᐦ → ᐒ⠤⟞₀⭜(␛𝚜,⟞₀)⛶⭝⍁,⠤⟞₁﹕ᙧ¹ᐸ)
-    𝚕,𝚛 = L⋄Rꟿ²󰲣Ń(x,y ⭜parse(y󷸼)⭝ 𝝀)
+    𝚕,𝚛 = L⋄Rꟿ²󰲣Ń(x,y ⭜𝔓(y󷸼,loc=󱁕)⭝ 𝝀)
+     󰤱 loc=󱁕 is wrong and temp
     
     𝚘 = 𝚘.copy
     ∀t∈L⁻:

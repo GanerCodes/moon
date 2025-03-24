@@ -16,11 +16,14 @@ gram = peggle2(𝚐)
         coms = 󱁕.find(󷺹ᵗ≡"comment")ᐵᵉ ᵖᑀ₀,⟞₁-1ᐸ
         󱁕.ftrp(‹comment›⍭, 󰻾􋈠􋁐􋋎)
         𝚌 = +󱁕
-    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□):
+    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□):
+        ¿locᐹŃ: loc = locᵉ ᵖ﹕₂
         󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
-        ¿coms≇□: repair_comment_holes(󱁕, coms)
+        repair_comment_holes(󱁕, coms)
         󱁕.rm(󷺹ᵗ≡␛󰆴)
-        reform_positions(󱁕, 𝚌𝚘𝚍𝚎)
+        reform_positions(󱁕, 𝚌)
+        ¿loc≇□: offset_𝚕𝚌(󱁕, loc)
+        
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
         ¿𝘯≤0:↪󱁕
@@ -28,18 +31,32 @@ gram = peggle2(𝚐)
         󱁕ᴾ
         
         rewrite_lambs(󱁕)
+        rewrite_numbers(󱁕, 𝔓(⬤, 1, ‹norm_expr›))
+        ¿𝘯≤1:↪󱁕
         
-        󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
-        󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
-        󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
-        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
          󰤱 here: prob 󷸊 and stuff (sep out mod & add var)
-        󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, 𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
+        
+        @(󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›, ⬤))
+        ⊢ _(󱁕):
+            𝚕,𝙾,𝚛 = 󱁕
+            𝚟 = 𝗏𝖺𝗋(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
+            𝒏 = 𝗍𝗆𝗉(⠤𝚕🃌 ⭜𝚕.copy(t=‹subscript›)⛶⭝ ⍁,
+                     𝙾,
+                    ⠤𝚛🃌 ⭜𝚛.copy(t=‹supscript›)⛶⭝ ⍁)
+            +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟)⭝ 𝒏ᶜ.insert(0, 𝚟)
+            ↪ 𝒏
+        󱁕.flat(󷺹ᵗ≡"tmp")
+        
+        
+         󷸊󷸋≔󷸉
+        
+        󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, 𝔓(+󱁕⭢󷸼, 5, ‹norm_expr›, loc=󱁕)))
+        
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
         ⊢ _(󱁕):
             𝚑 = gram(+󱁕⭢󷸼≕𝚝, ‹gen_expr_atom›)₀
             ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
-                       ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
+                       ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›, loc=󱁕)))
         󱁕.flat(󷺹ᵗ≡"tmp")
         ¿𝘯≤5:↪󱁕
         
@@ -51,20 +68,13 @@ gram = peggle2(𝚐)
         
         grp_stmts(󱁕)
         rewrite_for(󱁕)
+        rewrite_strs(󱁕)
         ¿𝘯≤9:↪󱁕
         
-        rewrite_strs(󱁕)
-        ¿𝘯≤10:↪󱁕
+         󰤱 ugx stuff
         
-         ifelseeiadsj
+         󰤱 implicit multiplication
         
-         ugx stuff
-        
-         implicit multiplication
-        
-         insert dummy vars for 󷸊󷸌󷸋󷸍 and stuff...?
-        
-         expressions 👁
         󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
         󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
@@ -72,9 +82,9 @@ gram = peggle2(𝚐)
         rewrite_ternary(󱁕)
         ¿𝘯≤20:↪󱁕
         
-         op modifiers
+         󰤱 op modifiers
         
-         short-circuits
+         󰤱 short-circuits
         
         ↪ 󱁕
     ↪ 𝔓(𝚌, coms=coms)

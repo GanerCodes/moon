@@ -1,41 +1,4 @@
-󰋺(‹expr›, *)
-
-⊢ repair_comment_holes(󱁕, coms):
-    Δ = 0
-    ⊢ ƒ(󱁕):
-        nonlocal Δ
-        ¿¬󱁕ᵉ ᵀ:
-            ∀c∈󱁕:ƒ(c)
-            α,β = 󱁕.farnodes
-            󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
-            ↪
-        l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+Δ, 󱁕ᵉ ᵖ₁+Δ)
-        ➰coms ∧ coms₀ ₀≤l:
-            𝒍,𝒓 = coms.pop(0)
-            Δ 󷸊+ δ≔𝒓-𝒍
-            󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
-    ƒ(󱁕)
-
-⊢ reform_positions(󱁕, 𝚌):
-    𝙲 = 𝚌󷹌𝗻󰈳𝗻
-    𝙻 = 𝙲ᴍ🃌
-    𝙼 = 𝙻Ϝ⁰󷺹+1+󷺽⭢󱑼𝙻
-    to_pos = 󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ
-    ⊢ ƒ(󱁕):
-        󱁕ᵉ ᵖ󷸊ᴍto_pos⭢󰌷
-        ∀z∈󱁕:ƒ(z)
-    ƒ(󱁕)
-
-⊢ add_blocks(󱁕):  󰤱 fix
-    start = 󱁕↦󱁕ᵗ≡‹stmt› ∧ 󱁕₀ᑀᵗ≡‹func_dec› ∨ ⟞ᵗ≡‹kwd_pfx›∧⟞₀ᵗ≡‹cln_kwd›
-    ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ 󷺻𝒫(Ń("blk", ⟞₀, ⠤⟞₁﹕ᣆƒ))⟩ 󷸴 ⴳ⟩○𝑙
-    󱁕.ftrp(‹stmts›⍭, 󱁕↦󱁕.copy(c=ƒ(󱁕)), pre=✓)
-
-⊢ rewrite_str_indent(󱁕):
-    ¿␛p∉󱁕ᵉ: ↪󱁕
-    𝚜, 𝚍 = 󱁕₀ᵗ󷹌𝗻, 󱁕ᵉ ᵖ₁
-    󱁕₀ᵗ=𝚜ᐵ[⟞󰑅ᔨ󷺹∉𝘀𝘁ᐸᣆ􋅂􋁜􋄅󰻾􍪵􋌵⭢⤈𝚍:]ᐸ⨝
-    ↪ 󱁕
+󰋺(‹tree_txt›, *)
 
 part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
 ⊢ rewrite_strs(󱁕):
@@ -49,12 +12,18 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
     󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
     󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
 
+⊢ rewrite_numbers(󱁕,𝔓):
+    󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
+    󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
+    󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
+    󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))))
+
 ⊢ λ_add_vk(󱁕, 𝕒=␛𝔸, 𝕜=␛𝕂):
     󰊄,𝙿 = +󱁕,󱁕₁
     cur = 𝑠(𝙿ᐵᵗᑀ∈‹ƒ_dec_𝔸 ƒ_dec_𝕂›⍭⭜⟞􍨄⭝󰮈)
      󰤱 check for weird case of ⥌𝔸=2↦...
-    ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_(𝕒))
-    ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_(𝕜))
+    ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝔸(𝕒))
+    ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝕂(𝕜))
     ↪󱁕
 
 ⊢ format_whiskers(󱁕):
@@ -81,10 +50,9 @@ part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
 
 ⊢ rewrite_lambs(󱁕):
     󱁕.ftrp(‹whiskers›⍭, format_whiskers)
-    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝖺𝗋𝗀○𝗏𝖺𝗋))
-    󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝖺𝗋𝗀(𝗏𝖺𝗋(+󱁕₀))))
+    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᴍ𝖿𝗏𝖺𝗋))
+    󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝗏𝖺𝗋(󱁕₀)))
     󱁕.ftrp(‹lamb›⍭, λ_add_vk)
-    󱁕.ftrp(‹ƒ_arg›⍭, 󱁕↦󱁕.copy(t=‹norm_expr›))
 
 ⊢ rewrite_ternary(󱁕):
     is_xpr_atom = 󱁕↦󱁕ᵗ≡"xpr" ∧ 󱁕🃌≡1
