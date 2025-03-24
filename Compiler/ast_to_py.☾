@@ -1,0 +1,11 @@
+󰋺(‹rewriters›, *)
+HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉
+py_esc_str  = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ c
+py_ok_var   = 󰲡x∈num ∨ is_normalized("NFKC", x) ∧ x.isidentifier()
+py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
+py_esc_var  = ⨝○󷺺󷹜<127∧c∉‹!$› ∨ py_ok_var(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
+
+⊢ ast_to_py(󱁕):
+    ↪ +󱁕
+
+__exports__ = ‹ast_to_py›⍭

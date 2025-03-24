@@ -1,0 +1,14 @@
+FRAC_CONV = 𝑑(‹12 13 14 15 16 17 18 19 110 23 25 27 29 34 35 37 38 310 45 47 49 56 57 58 59 67 78 79 710 89 910 03 1100›⍭󱑼‹½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖󷶲󷶷¾⅗󷶳⅜󷷆⅘󷶴󷷂⅚󷶵⅝󷶹󷶶⅞󷶺󷷇󷶻󷷈↉󷷉›)
+TOFRAC = 󰲡FRAC_CONV.get(x,x)
+󱀘 UPSIDEDOWNSYNDROME:
+    NRM = "0123456789abcdefoxABCDEFOXîĵ󷺈ℇτπ󷺍󷺏∞"
+    USD = "󷰽󷰾󷰿󷱀󷱁󷱂󷱃󷱄󷱅󷱆󷱇󷱈󷱉󷱊󷱋󷱌󷱍󷱎󷱏󷱐󷱑󷱒󷱓󷱔󷱕󷱖󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱰󷱩"
+    MAP = 𝑑(NRM󱑼USD) | 𝑑(USD󱑼NRM)
+    flip = 󰲡xᐖMAP.get(⟞,⟞)ᐸ⨝ᐦ
+󱀘 SCRIPT:
+    SCRIPT_FILE_LOC = moon_dir / ‹FontCompose/.SCRIPT_MAP›
+    CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip󷹎𝗻
+    SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
+    SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)
+    NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2⋅CHAR_NRM)
+    sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟ᴍ𝚃↦󰲡x.translate(𝚃)

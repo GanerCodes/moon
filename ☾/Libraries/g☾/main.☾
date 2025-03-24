@@ -1,7 +1,6 @@
 󰋺(‹cache›); 󰋺(‹peggle2›); 󰋺(‹𝐍›)
 󰋺(cpy_dir / ‹☾/Libraries/j☾/rgx_golfatron›, ‹rgx_golfatron›)
 HEADER = (__dir__ / ‹header.g☾›)
-⮌ util ⨡ UPSIDEDOWNSYNDROME
 flip = UPSIDEDOWNSYNDROME.flip
 
 GRAM=󰦥󰦥󰦥󰦥󰦥
@@ -34,7 +33,6 @@ REPLACES = 󰦥󰦥󰦥󰦥󰦥
 ⤈ min ⤉ max ⸓ mod ⬓ floor ⬒ ceil 󷹄 clamp
 󰦥󰦥󰦥󰦥󰦥 󱖔􋋉􌿅􋂝􊿉→⍭󰈲→ᐵ󷹎¹𝘀ᐸ󱖔􋀙
 
-⮌ util ⨡ FRAC_CONV
 REPLACES 󷸊| (ℵ(FRAC_CONV)ꟿ⁻󰲣x₀⋄x₁﹕ᴍ󷹜≺÷⭢󷹜)􍮕
 
 bp = (⠤*´󷸼,REPLACES⁻) ᴍ rgx_golfatron

@@ -1,6 +1,0 @@
-󰋺(‹rewriters›, *)
-
-⊢ ast_to_py(󱁕):
-    ↪ +󱁕
-
-__exports__ = ‹ast_to_py›⍭

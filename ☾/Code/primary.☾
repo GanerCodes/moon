@@ -1,3 +1,8 @@
+
+ __OUT__: external buildins reference
+ __MOON_DIR__: path obj for moon dir
+cpy_dir = moon_dir = __MOON_DIR__
+
 exec("from math import *")
 exec("from cmath import *")
 󰆴 factorial, e, pi, tau, sqrt, cbrt, pow
@@ -7,8 +12,6 @@ exec("from cmath import *")
 ⮌ itertools ⨡ chain, filterfalse, product, accumulate, zip_longest
 ⮌ random ⨡ shuffle, choice, uniform, randint
 ⮌ types ⨡ UnionType
-⮌ util ⨡ moon_dir ; cpy_dir = moon_dir
-⮌ util ⨡ __builtins__ as __OUT__
 ⮌ sys ⨡ stdout, stderr, path, exit
 ⮌ site ⨡ getsitepackages ; path.extend(getsitepackages())
 

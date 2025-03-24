@@ -133,6 +133,7 @@ except Exception as e:
     󱫬 py.runPythonAsync(‹
         from refresher import run_moon, cpy_get_highlighter
         from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC
+        # fix
         𝑓, 𝑐 = run_moon(["--code_cache_dir=/tmp/cpy_wasm_cache/code",
                          "--gram_cache_dir=/tmp/cpy_wasm_cache/gram"],
                          extract_interactive=True)

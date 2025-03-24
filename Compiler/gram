@@ -67,7 +67,7 @@ str_escape = 󰆴"␛␛" ~‹.›
 str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
 
 ugx_expr  = ⮞ugx_brack ugx_brack
-ugx_mod   = ~‹[⁺􋅋􊽬]›
+ugx_mod   = ~‹[􊽨⁺􋅋􊽬]›
 ugx_and   = ⠶ugx_atom+
 ugx_or    = ugx_and 󰆴('󷸴' 𝗪?) (⠶ugx_or ∨ ugx_and)
 ugx_☾     = multi_expr 󰆴'⍮'? (mod:ugx_mod)?

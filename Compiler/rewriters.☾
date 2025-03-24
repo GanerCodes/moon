@@ -1,5 +1,21 @@
 󰋺(‹expr›, *)
 
+⊢ repair_comment_holes(󱁕, coms):
+    Δ = 0
+    ⊢ ƒ(󱁕):
+        nonlocal Δ
+        ¿¬󱁕ᵉ ᵀ:
+            ∀c∈󱁕:ƒ(c)
+            α,β = 󱁕.farnodes
+            󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
+            ↪
+        l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+Δ, 󱁕ᵉ ᵖ₁+Δ)
+        ➰coms ∧ coms₀ ₀≤l:
+            𝒍,𝒓 = coms.pop(0)
+            Δ 󷸊+ δ≔𝒓-𝒍
+            󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
+    ƒ(󱁕)
+
 ⊢ reform_positions(󱁕, 𝚌):
     𝙲 = 𝚌󷹌𝗻󰈳𝗻
     𝙻 = 𝙲ᴍ🃌
@@ -10,7 +26,7 @@
         ∀z∈󱁕:ƒ(z)
     ƒ(󱁕)
 
-⊢ add_blocks(󱁕):
+⊢ add_blocks(󱁕):  󰤱 fix
     start = 󱁕↦󱁕ᵗ≡‹stmt› ∧ 󱁕₀ᑀᵗ≡‹func_dec› ∨ ⟞ᵗ≡‹kwd_pfx›∧⟞₀ᵗ≡‹cln_kwd›
     ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ 󷺻𝒫(Ń("blk", ⟞₀, ⠤⟞₁﹕ᣆƒ))⟩ 󷸴 ⴳ⟩○𝑙
     󱁕.ftrp(‹stmts›⍭, 󱁕↦󱁕.copy(c=ƒ(󱁕)), pre=✓)
@@ -20,6 +36,18 @@
     𝚜, 𝚍 = 󱁕₀ᵗ󷹌𝗻, 󱁕ᵉ ᵖ₁
     󱁕₀ᵗ=𝚜ᐵ[⟞󰑅ᔨ󷺹∉𝘀𝘁ᐸᣆ􋅂􋁜􋄅󰻾􍪵􋌵⭢⤈𝚍:]ᐸ⨝
     ↪ 󱁕
+
+part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
+⊢ rewrite_strs(󱁕):
+     󰤱 normalize newlines and stuff from literals so we get the same string output
+     󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
+    󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,p=󱁕ᵉ ᵖ))
+    󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t=‹str›))
+    󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
+        󱁕↦󱁕.copy(t=‹str›))
+    󱁕.ftrp(‹str›⍭, 󱁕↦𝒫(𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷)), pre=✓)
+    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
+    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
 
 ⊢ λ_add_vk(󱁕, A=𝗏𝖺𝗋(␛𝔸), K=𝗏𝖺𝗋(␛𝕂)):
     h,b=󱁕
@@ -127,3 +155,41 @@
             ↪ 󱁕
         󱁕.ftrp(‹opC›⍭, 󱁕↦relv(󱁕) ⭜󱁕.copy(t=‹cmp›)⭝ 󱁕, pre=✓)
     ↪󱁕
+
+⊢ rewrite_for(󱁕):
+    spl = 󷺹󷹌¹⟝ᣆ􍯏􋌵󰂂³ⴴ󷺿
+    find_in = 󷺹ᵗ≡‹𝗈𝗉󷺗󷺗󷺗󷺗󷺗󷺗› ∧ +⟞≡ᑅ␛∈
+    find_qq = 󷺹ᵗ≡‹var_spec› ∧ +⟞≡ᑅ␛¿
+    
+    @(󱁕.ftrp(‹xpr›⍭, ⬤, pre=✓))
+    ⊢ _(󱁕):  [𝟏∀𝟐∈𝟑¿𝟒]
+        f1 = 󷺹ᵗ≡‹var_spec› ∧ +⟞≡ᑅ␛∀
+        
+        ¿spl(󱁕, f1)≕𝚡¬: ↪󱁕
+        𝟏,_,𝟐 = 𝚡
+        𝟐,_,𝟑 = spl(𝟐, find_in)
+        𝟒 = □
+        ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
+        ↪ Ń(‹∀_xpr›, 𝖿𝗈𝗋(𝗑𝗉𝗋(⠤𝟏), 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))
+    
+    is_valid = 󷺹ᵗ≡‹kwd_pfx› ∧ ⟞₀ᵗ≡‹cln_kwd› ∧ +⟞₀≡␛∀
+    @(󱁕.frp(is_valid, ⬤, pre=✓))
+    ⊢ _(󱁕):  ∀𝟑∈𝟑¿𝟒:
+        𝟐,_,𝟑 = spl(󱁕₁, find_in)
+        𝟒 = □
+        ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
+        ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))
+    _
+
+⊢ grp_stmts(󱁕):  ➰¿⸘¡
+    𝒎 = 󰲡󱁕_is_hot_stuff(⬤,⠤⍭‹blk stmt kwd_pfx cln_kwd›,󷺹ᵗ≡x)
+
+    @(󱁕.ftrp(‹stmts›⍭, ⬤, pre=✓))
+    ⊢ _(󱁕):
+        󱁕ᶜ = ⟨  ⟨𝒎∘␛¿⍮ 𝒎∘␛⸘⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹¿⸘¡›, ⠤⟞)⟩
+              󷸴 ⟨𝒎∘␛➰⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹➰¡›, ⠤⟞)⟩
+              󷸴 ⟨𝒎∘␛∀⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻Ń(‹∀¡›, ⠤⟞)⟩
+              󷸴 ⴳ⟩(󱁕ᶜ)
+        ↪ 󱁕
+     ∀𝚗∈date_󱁕(⠤⍭‹blk stmt kwd_pfx cln_kwd›, 󷺹ᵗ≡␛¿)(󱁕):
+         ‹THE ⟦𝚗⟧›☾

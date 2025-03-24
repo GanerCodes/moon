@@ -1,7 +1,5 @@
 󰋺(‹rewriters›, *)
 
-part_cont = ⥌𝼝,ƒ↦⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩
-
 𝚐 = ∘‹gram›
 𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
 gram = peggle2(𝚐)
@@ -20,30 +18,11 @@ gram = peggle2(𝚐)
         𝚌 = +󱁕
     ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□):
         󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
-        ¿coms≇□:
-            Δ = 0
-            ⊢ ƒ(󱁕):
-                nonlocal Δ
-                ¿¬󱁕ᵉ ᵀ:
-                    ∀c∈󱁕:ƒ(c)
-                    α,β = 󱁕.farnodes
-                    󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
-                    ↪
-                l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+Δ, 󱁕ᵉ ᵖ₁+Δ)
-                ➰coms ∧ coms₀ ₀≤l:
-                    𝒍,𝒓 = coms.pop(0)
-                    Δ 󷸊+ δ≔𝒓-𝒍
-                    󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
-            ƒ(󱁕)
-        󱁕ᴾ
+        ¿coms≇□: repair_comment_holes(󱁕, coms)
         󱁕.rm(󷺹ᵗ≡␛󰆴)
         reform_positions(󱁕, 𝚌𝚘𝚍𝚎)
-        󱁕ᴾ
         add_blocks(󱁕)
-        󱁕ᴾ
-         exit
         󱁕.ftrp(‹str_tsub_guts›⍭, rewrite_str_indent)
-        
         ¿𝘯≤0:↪󱁕
         
         󱁕.ftrp(‹whiskers›⍭, format_whiskers)
@@ -55,8 +34,7 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯), 𝗇𝗎𝗆(UPSIDEDOWNSYNDROME.flip(+󱁕))))
         󱁕.ftrp(‹pos_num›⍭, 󱁕↦𝗇𝗎𝗆(+󱁕))
         󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
-        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›,
-            󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
+        󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, 1, ‹norm_expr›))))
          󰤱 here: prob 󷸊 and stuff (sep out mod & add var)
         󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, 𝔓(+󱁕⭢󷸼, 1, ‹norm_expr›)))
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
@@ -64,31 +42,26 @@ gram = peggle2(𝚐)
             𝚑 = gram(+󱁕⭢󷸼≕𝚝, ‹gen_expr_atom›)₀
             ↪ 𝚑ᵗ≡‹var› ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.), 𝚑) ␛
                        ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 1, ‹norm_expr›)))
-        ¿𝘯≤3:↪󱁕
         󱁕.flat(󷺹ᵗ≡"tmp")
         ¿𝘯≤5:↪󱁕
         
         󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
         ¿𝘯≤6:↪󱁕
         
-        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma expr_not_colla›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
+        󱁕.ftrp(‹expr norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
         󱁕.ftrp(‹xpr›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
         
-         ᔐ  󰤱 normalize newlines and stuff from literals so we get the same string output
-             󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-        󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,p=󱁕ᵉ ᵖ))
-        󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub›⍭, 󱁕↦󱁕.copy(t=‹str›))
-        󱁕.ftrp(‹str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
-            󱁕↦󱁕.copy(t=‹str›))
-        󱁕.ftrp(‹str›⍭, 󱁕↦𝒫(𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷)), pre=✓)
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))∘󱁕), pre=✓)
-        󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.copy(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝))∘󱁕), pre=✓)
+        grp_stmts(󱁕)
+        rewrite_for(󱁕)
         ¿𝘯≤9:↪󱁕
         
-         ugx stuff
+        rewrite_strs(󱁕)
+        ¿𝘯≤10:↪󱁕
         
-         for/if exprs/statments
+         ifelseeiadsj
+        
+         ugx stuff
         
          implicit multiplication
         
@@ -100,7 +73,6 @@ gram = peggle2(𝚐)
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
-        
         ¿𝘯≤20:↪󱁕
         
          op modifiers

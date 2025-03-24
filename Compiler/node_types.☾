@@ -1,5 +1,5 @@
-⮌ util ⨡ FRAC_CONV, UPSIDEDOWNSYNDROME
 ⮌ functools ⨡ cache
+󰋺(__dir__ / ‹util_tmp›, *)
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/text_format›)
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/𝐍›)
 󰋺(__dir__ / ‹..› / ‹☾/Libraries/peggle2›)
@@ -17,6 +17,7 @@
 𝗈𝗉  = 󰲡Ń(‹op󷺗›, Ń("op_⸓_l", 𝝀), Ń("op_lit", 𝔗(x)), Ń("op_⸓_r", 𝝀))
 𝗈𝗉𝖢 = 󰲡Ń(‹opC›, x, ⠤𝔸)
 𝗌𝗍𝗋 = 𝚲Ń(‹str›, ⠤𝔸)
+𝖿𝗈𝗋 = 𝚲Ń(‹∀›, ⠤𝔸)
 𝗌𝗍𝗋𝖻 = 𝚲Ń(‹str_byte›, ⠤𝔸)
 𝖿𝖺𝗋𝗀 = 𝚲Ń(‹func_arg›, ⠤𝔸)
 𝗍𝖾𝗋𝗇 = 𝚲Ń(‹ternary›, ⠤𝔸)
@@ -36,3 +37,12 @@
     ¿␛p∈αᵉ∧βᵉ∋␛p:
         󱁕ᵉ ᵖ = αᵉ ᵖ﹕₂󰌷βᵉ ᵖ₂﹕
     ↪ 󱁕
+
+⊢ 󱁕_is_hot_stuff(󱁕, ƒ, ⠤𝔸):
+    ¿ƒᐹᔐ:
+        ¿󱁕ᵗ≠ƒ: ↪
+    ⸘ƒᐹ𝗙:
+        ¿¬ƒ(󱁕): ↪
+    ⸘󱁕ᵗ∉ƒ: ↪
+    ↪ 𝔸 ⭜󱁕ᐖ󱁕_is_hot_stuff(⟞,⠤𝔸)ᐸ⋁⭝ ✓
+date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
