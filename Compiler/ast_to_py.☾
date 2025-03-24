@@ -5,6 +5,8 @@ py_ok_var   = 󰲡x∈num ∨ is_normalized("NFKC", x) ∧ x.isidentifier()
 py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
 py_esc_var  = ⨝○󷺺󷹜<127∧c∉‹!$› ∨ py_ok_var(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
 
+var_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
+
 ⊢ ast_to_py(󱁕):
     ↪ +󱁕
 

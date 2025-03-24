@@ -1,6 +1,22 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 code = 󰦥󰦥󰦥󰦥󰦥
-x󷸊+2
+ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
+ x󷸊+2
+ [a,b,c]
+ ∀z,w,a,b,k∈y:
+     k☾
+ ∀a,(b,⠤c),⠤d∈𝕏: □
+ [A∀b,(c,⠤d),⠤e∈F¿G]
+
+ ∀z∈y:
+     1☾
+ t = ‹1. I want multiline strings
+      2. I hate how im either forced to prefix
+         newlines / have a bunch of lines with spaces
+         𝘀𝗻𝟱𝟱⟦√2⟧
+      3. I make ☾ solve my problems›
+ ¿A: ¿B: C
+     ¡D: λ🃌
 
  ⥌x=2,y=5,⠤𝔸,⠶𝕂↦1
  ⊢ (∾) ƒ(x=2,y=5,⠤𝔸,⠶𝕂): 1
@@ -55,7 +71,6 @@ x󷸊+2
     A
    B
 󰦥󰦥󰦥󰦥󰦥
-
  󰦥󰦥󰦥󰦥󰦥
  󰦥󰦥󰦥󰦥󰦥
  ⊢ (∾) joe(x=2,⠤Y): abc

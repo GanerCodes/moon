@@ -36,9 +36,9 @@ expr_not_comma = (¬','      ⠶norm_expr_atom)+
 
 slice = ((expr_not_colla? ↷ (':' 󰆴𝘄?)+) expr_not_colla?)+
 
-norm_expr_atom = (⠶rard_expr_atom ∨  slice) 󰆴𝘄?
+norm_expr_atom = (⠶rard_expr_atom ∨ slice) 󰆴𝘄?
 rard_expr_atom =  ⠶lambs ∨ ⠶bruh_expr_atom
- gen_expr_atom =  ⠶bruh_expr_atom ∨  slice
+ gen_expr_atom =  ⠶bruh_expr_atom ∨ slice
 bruh_expr_atom = grp ∨ ugx_expr ∨ ⠶str ∨ var_spec ∨ number_exp ∨ number ∨ op ∨ ⠶script ∨ var
 pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
 neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
