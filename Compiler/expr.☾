@@ -10,8 +10,9 @@
     
     L=ℵ(lᴍ⬤⋄ᐦ)
     R=ℵ(r󷹌⭠⬤∈‹ᵜ꜠´ᔨ⟤›⭢ᴍ⬤⨝ᐦ → ᐒ⠤⟞₀⭜(␛𝚜,⟞₀)⛶⭝⍁,⠤⟞₁﹕ᙧ¹ᐸ)
-    𝚕,𝚛 = L⋄Rꟿ²󰲣Ń(x,y ⭜𝔓(y󷸼,loc=󱁕)⭝ (𝝀.copy󱖔􋄥󱁕₂))
+    𝚕,𝚛 = L⋄Rꟿ²󰲣𝒩(x, y ⭜𝔓(y󷸼,loc=󱁕).set(t=‹xpr›)⭝ (𝝀.copy󱖔􋄥󱁕₂))
      󰤱 loc=󱁕 is wrong and temp
+     󰤱 the .set stuff is jank make option to wrap the gram(...) call into a dummy node
     
     𝚘 = 𝚘.copy
     ∀t∈L⁻:
