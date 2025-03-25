@@ -2,6 +2,7 @@
 
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
+    󰤱  UGEX EMPTY LIST INPUT THING
     󰤱  x􍪵 should be exp
     󰤱  5󰸵2 sould be "05" ≡ 5󷹜²􍢉
     󰤱  heckin [1,2,34,󷱂]⫰ᔨ

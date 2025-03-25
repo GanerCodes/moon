@@ -1,19 +1,18 @@
-⊢ (∾) joe(x=2,⠤Y): abc
-                   def
-                   ghi
+(opC ∨ var ∨ group) target_rhs
 
-¿something: t = ‹abc
-                 xyz
-                 dasdasd›
+⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
+⅚!ˣ ⋅ 16ˣ ⋅ ½!ˣ ÷ 2!ˣ ⋅ ⅗􍨅!ˣ ▢
 
-¿x>1: ¿y>2: 1☾
-      ¡z>4: 2☾
-¡:
-    abc
-    def
-    ¿✗:
-     123
-     456
-     ¿✓:
-         A
-        B
+
+⋅
+    number number
+    str number
+    number str
+    var number
+    number target_rhs
+call():
+    () (…)
+CAT():
+    var var
+    number var
+    

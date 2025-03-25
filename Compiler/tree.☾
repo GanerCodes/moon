@@ -17,14 +17,9 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
 
 ⊢ get_orig_section(𝚌, 󱁕):
     𝚜, 𝚙 = lines(𝚌), 󱁕ᵉ ᵖ
-    ‹get_orig_section›☾
-    box(󱁕ᴾ∘✗,✓)☾
-    𝚜☾
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
     ¿𝙻🃌≡1: 𝙻 = 𝙻₀ 􀲸􊬤﹕􀲸􊬦⛶
     ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
-    
-    ‹→→→→→→→→: ⟦𝙻⨝𝗻⟧›☾
     ↪ 𝙻⨝𝗻
 
 lines = 𝚌↦𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism

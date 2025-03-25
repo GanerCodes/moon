@@ -71,11 +71,17 @@
      𝑩(stackr(𝑩(⠤llᴍ𝑩𝒏), 𝑩(⠤llᴍ𝑩𝒏)), 𝑩𝒏(𝚘), stackr(𝑩(⠤rlᴍ𝑩𝒏), 𝑩(⠤rlᴍ𝑩𝒏)))☾
     
     𝘪,𝕒 = 𝚘ᵉ ᴼ,⍁
-    ¿␛𝚜∈𝘪: 𝕒.append(𝘪.pop(␛𝚜))
+    ¿␛𝚜∈𝘪: 𝕒.append(𝘪.pop(␛𝚜))  ??
+    ⊢ suffix(𝚁):  i need micheal or someone to tell me if this is stupid
+         cat: 5!√2 5!3!
+         ok : x⭥ᴙ  5!󰈲f
+        ¿𝚁∧(IS_OP(𝚁₀)≕𝒐¬ ∨ 𝒐ᴾ∧¬(𝒐ᴮ∨𝒐󰀒)):
+            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›),󰻾))
+        ↪𝚁
     
      󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
     ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr), 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  B
-    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr),     𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   S
+    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr),     𝖭𝖴𝖫𝖫), ⠤𝕒], suffix(𝚁)  S
     ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    , 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  P
     ⸘𝘪ᴺ          : ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    ,     𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   N
     

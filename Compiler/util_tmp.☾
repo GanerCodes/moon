@@ -4,7 +4,7 @@ TOFRAC = 󰲡FRAC_CONV.get(x,x)
     NRM = "0123456789abcdefoxABCDEFOXîĵ󷺈ℇτπ󷺍󷺏∞"
     USD = "󷰽󷰾󷰿󷱀󷱁󷱂󷱃󷱄󷱅󷱆󷱇󷱈󷱉󷱊󷱋󷱌󷱍󷱎󷱏󷱐󷱑󷱒󷱓󷱔󷱕󷱖󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱰󷱩"
     MAP = 𝑑(NRM󱑼USD) | 𝑑(USD󱑼NRM)
-    flip = 󰲡xᐖMAP.get(⟞,⟞)ᐸ⨝ᐦ
+    flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ⨝ᐦ
 󱀘 SCRIPT:
     SCRIPT_FILE_LOC = moon_dir / ‹FontCompose/.SCRIPT_MAP›
     CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip󷹎𝗻

@@ -17,22 +17,25 @@ MT = "NPSBαςνλ"
 
 𝙾𝚃 = [⠤‹↪ ᴾ␉= ᴮ󰁌␉, ᴮ󰀒󰁌󰁝␉⠤ ᴾ ⠶ ᴾ␉: ᴺᴾ󰀒ᴮ›⍭􋕩􋂜􊿖􊿉􋕩,
       ⠤get_operator_table(ops),
-      [‹. ᴺ›⍭]]
+      [‹. ᴺ›⍭],
+      [‹⬆ ᴮ›⍭],
+      ]
 
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 add_before(␛!   , [‹␀CAT󷺗󷺗󷺗 ᴮᴺ󷺗›⍭])
+ add_before(␛ᴍ   ,  ‹␀TAC ᴺ ␀TAC⟞⟝ ᴮᴾ󰀒ᴺ ␀TAC⟞ 󰀒ᴺ ␀TAC⟝ ᴾᴺ›⍭☾)
 add_before(␛ᴍ   , [‹␀TAC󷺗󷺗󷺗 ᴮ󷺗󷺗›⍭])
 add_before(␛⨳   , [‹␀A3󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
-add_before("␀A3", ‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›ᐖ‹⟦⟞⟧ ᴮ›⍭)
+add_before(‹␀A3›, ‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›ᐵ⋄␛ᴮ)  did i break it
 add_before(␛≔   , [‹␀A2󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
-add_before("␀A2", [‹⭜󷺗󷺗󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
+add_before(‹␀A2›, [‹⭜󷺗󷺗󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 add_before(␛⭜   , [‹⭝󷺗󷺗󷺗󷺗󷺗󷺗 ᴮᴺ󰁌›⍭])
 add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 
 𝚂𝚃=‹     ␀T   ᴺ 󰀒      
-    ␀TAC ␀TL  ᴺ 󰀒      
-         ␀TR  ᴺᴾ   ␀TAC
-    ␀TAC ␀TLR ᴺᴾ󰀒ᴮ ␀TAC
+    ␀TAC ␀T⟞  ᴺ 󰀒      
+         ␀T⟝  ᴺᴾ   ␀TAC
+    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ ␀TAC
             ⬅  ᴾ   ␀A1 
     ␀A1     ➡   󰀒      
             ←  ᴾ   ␀A2 

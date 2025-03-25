@@ -21,9 +21,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
     ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□,
             warn_short=✓, trim_length_info=✓,
             force_full_match=✗):
-        
         ¿locᐹŃ: loc = locᵉ ᵖ﹕₂
-        (𝚌,𝘳)☾
         󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
@@ -46,7 +44,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ¿𝘯≤1:↪󱁕
         
         @(󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›, ⬤))
-        ⊢ _(󱁕):  󰤱 􀲵 prop gets lots lol
+        ⊢ _(󱁕):  󰤱 􀲵 prop gets lost?
+                 󰤱 sup arrows
             𝚕,𝙾,𝚛 = 󱁕
             𝚟 = 𝗏𝖺𝗋(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
             𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(𝙾)ᶜ))
@@ -54,21 +53,22 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿+𝚕: 𝒏ᶜ.insert(0, 𝚕.copy(t=‹supscript›))
             ¿+𝚛: 𝒏ᶜ.append(   𝚛.copy(t=‹supscript›))
             ↪ 𝒏
-        󱁕.flat(󷺹ᵗ≡"tmp")
         
-        󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, 𝔓(+󱁕⭢󷸼, 5, ‹norm_expr›, loc=󱁕)))
+        󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, ⠤𝔓(+󱁕⭢󷸼, 5, ‹norm_expr›, loc=󱁕)))
         
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
         ⊢ _(󱁕):
             𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝, 0, ‹gen_expr_atom›, loc=󱁕, warn_short=✗, force_full_match=✓)
             attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹var›
             ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕), 𝚑) ␛
-                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⌃󱖔􋄤󱁕), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 5, ‹norm_expr›, loc=󱁕)))
+                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 5, ‹norm_expr›, loc=󱁕)))
         󱁕.flat(󷺹ᵗ≡"tmp")
         ¿𝘯≤5:↪󱁕
         
         󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›)))
         ¿𝘯≤6:↪󱁕
+        
+        ¿𝘳≡‹parser_main›:󱁕ᴾ
         
         󱁕.ftrp(‹xpr ƒ_val›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
@@ -79,9 +79,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         flatten_statments(󱁕)
         ¿𝘯≤9:↪󱁕
         
-         󰤱 ugx stuff
         
-         󰤱 implicit multiplication
+         󰤱 ugx stuff
         
         󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
         󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷))
@@ -95,16 +94,16 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡: ↪󱁕
-            󱁕􀲪 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
+            𝒏 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
+            
+            󱁕􀲪 = 𝒏₀
             ↪󱁕
         
          󰤱 op modifiers
         
-         󰤱 reformat ≔≕ etc?
-        
          󰤱 short-circuits
         
         ↪ 󱁕
-    ↪ 𝔓(𝚌, coms=coms, trim_length_info=✗, ⠶𝕂)
+    ↪ 𝔓(𝚌, coms=coms, trim_length_info=✗, ⠶𝕂).set(t=‹AST›)
 
 __exports__ = ‹to_ast›⍭
