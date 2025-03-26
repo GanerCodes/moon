@@ -3,7 +3,7 @@ IMPSIMPS = (
     (␛⫚, ‹⫚›),
     (␛¶, ‹¶✿›))
 DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
-IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾→󰌷)
+IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
 
 ⮌ types ⨡ FunctionType as _FT
 ⮌ sys ⨡ _getframe
