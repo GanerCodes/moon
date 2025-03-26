@@ -1,8 +1,33 @@
+https://ganer.xyz/s/924c92e7b743b4d4
+
 (opC ∨ var ∨ group) target_rhs
 
 ⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
 ⅚!ˣ ⋅ 16ˣ ⋅ ½!ˣ ÷ 2!ˣ ⋅ ⅗􍨅!ˣ ▢
 
+n RHS = mul
+
+5 2 ‹asd› ƒ 2 2x 2 x 9 j[].s joe() x 2 ()
+n n ᔐ v n n v n v n v RHS v () v n ()
+n ᔐ v n n v n v n v RHS v () v n ()
+ᔐ v n n v n v n v RHS v () v n ()
+ᔐ v n n v n v n v RHS v () v n ()
+v n n v n v n v RHS v () v n ()
+n n v n v n v RHS v () v n ()
+n v n v n v RHS v () v n ()
+v n v n v RHS v () v n ()
+n v n v RHS v () v n ()
+v n v RHS v () v n ()
+n v RHS v () v n ()
+v RHS v () v n ()
+
+
+()ƒ()
+
+
+5() 5 [5].x
+
+rhs
 
 ⋅
     number number

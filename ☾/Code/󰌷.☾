@@ -6,6 +6,7 @@
     𝚡,k = 𝚡,0
     ➰𝑰(𝚡)⭜k󷸊+1:
         ¿𝚡ᐹᔐ: ⇥
+        ¿𝚡ᐹᔐ ∨ 𝚡🃌¬: ⇥
         𝚡󷸊₀
     ↪ s+k-1⭢⤉0
 ⊢ flatten(𝚡,s=␀,𝙻=□,𝑰=𝗜):  flatten with depth s
@@ -33,7 +34,9 @@
         𝘪≅␀ ⨳ ‹󰤱›
         ↪ ‹⟦𝚡⫰󷹜⟧⟦𝚢⫰󷹜⟧›󷹜⋅←𝚡ⴵ⋅ⴵ𝚢∨1
     ¿𝚢≇␀: 𝚡=[𝚡,𝚢]
-    ¿𝘪≇␀: ↪flatten_under(𝚡,󰻾,s,[⠤𝘪])
+    ¿𝘪≇␀:
+        ¿𝑰(𝘪): ↪flatten_under(𝚡,󰻾,s,[⠤𝘪])
+        ↪       flatten_under(𝚡,𝘪,s)  󰤱 this should be under
     ↪ flatten(𝚡,s,𝑰=𝗜)
 CUSTOM_CORSP.append(󰌷)
 

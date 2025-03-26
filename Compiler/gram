@@ -1,5 +1,7 @@
 supscript = ~‹%SUPSCRIPT%+›
 subscript = ~‹%SUBSCRIPT%+›
+_op_⸓_l   = ~‹%OP_MOD_L%›
+_op_⸓_r   = ~‹%OP_MOD_R%›
 op_lit    = ~‹%OP_LIT%›
 var_spec  = ~‹%VAR_SPEC%›
 cln_kwd   = ~‹%CLN_KWDS%›
@@ -58,9 +60,9 @@ script = supscript ∨ subscript
 grp = ~‹[\[({⁅⟦]› (󰆴𝗪? ↷ (multi_expr ∨ ✓)) ~‹[\])}⁆⟧]›
 var = ƨ(¬𝗪 ¬op ¬var_spec ¬cln_kwd ¬script ¬(~‹󰦥{5}›) ~‹[^⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]›)+
 
-op = ((op_⸓_l = ~‹[⟥≺]*›)
+op = ((op_⸓_l = ƨ((_op_⸓_l (_op_⸓_l ∨ supscript)*)?))
        op_lit
-      (op_⸓_r = ƨ((~‹[´꜠ᵜ𐞑⟤ᔨ]+› ∨ supscript)*)))
+      (op_⸓_r = ƨ((        (_op_⸓_r ∨ supscript)*) )))
 
 lambs = (  (whiskers=(    (⠶LTL (norm_expr      ∨ ✓) ⠶LTR)
                         ∨ (⠶LTL (expr_not_comma ∨ ✓) ✓ ✓)))

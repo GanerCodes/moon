@@ -60,12 +60,14 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     󱁕.ftrp(‹lamb›⍭, λ_add_vk, pre=✓)
 
 ⊢ rewrite_ternary(󱁕):
-    is_xpr_atom = 󱁕↦󱁕ᵗ≡"xpr" ∧ 󱁕🃌≡1
+    is_xpr_atom = 󱁕↦󱁕ᵗ≡‹xpr›  ∧ 󱁕🃌≡1
+     why was this checking for atoms?
 
     @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  x⭜y⭝z
     ⊢ _(󱁕):
         𝚘,α,⠤β = 󱁕
         ¿𝚘ᵉ ᴼ ᵗ≠␛⭝: ↪󱁕
+         stackr(𝚘ᴾ∘(✗),αᴾ∘(✗),⠤βᐵᴾ∘(✗))☾
         β󷸊₀
         is_xpr_atom(β) ⨳
         ¿𝚘₂🃌: ↪󱁕
@@ -87,6 +89,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
 
 ⊢ group_targets(󱁕):
     brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
+    cal = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛(
     dot = 󷺹ᵗ≡‹𝗈𝗉󷺗› ∧ +⟞₁≡␛.
     R,C = ⍁²
     𝚌 = 󱁕ᶜ
@@ -97,6 +100,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         ¿x: R.append(x)
     ➰𝚌⭜v≔𝚌.pop(0):
         ¿brk(v): C.append(v)
+        ⸘cal(v)∧C: C.append(𝖼𝖺𝗅𝗅(v))
         ⸘dot(v): C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)))
         ¡      : adds(v)
     adds(□)

@@ -3,7 +3,7 @@
 𝑩 = 𝚲box(stackr(⠤𝔸),✓)
 𝑩𝒏 = box○󷺹ᴾ∘✗
 
-⊢ denode_op(󱁕, 𝔓):  󰤱
+⊢ denode_op(󱁕, 𝔓):  󰤱 this doesn't work if mod has newlines
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀
     
@@ -11,23 +11,16 @@
                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
                   󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
     mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
-    t = 󱁕󷸻₀󰄎₂󱑼modsꟿ󰲣flatten_under(y,󷺹󱑼⭠⟞Ϝˣ􊾸􋘳􊾽􊿦󷺹+🃌󷺽,2)
-    t☾
-    mods☾
-     ps = mods ᐵ󰌷Ϝ􍪹󷺹+🃌󷺽 ᐛ(ᐵᵉ ᵖ₁)
-     󰤱 this doesn't work if mod has newlines
-    
-    L=ℵ(lᴍ⬤⋄ᐦ)
-    R=ℵ(r󷹌⭠⬤∈‹ᵜ꜠´ᔨ⟤›⭢ᴍ⬤⨝ᐦ → ᐒ⠤⟞₀⭜(␛𝚜,⟞₀)⛶⭝⍁,⠤⟞₁﹕ᙧ¹ᐸ)
-    𝚕,𝚛 = L⋄Rꟿ²󰲣𝒩(x, y ⭜𝔓(y󷸼,loc=󱁕).set(t=‹xpr›)⭝ (𝝀.copy󱖔􋄥󱁕₂))
-     󰤱 loc=󱁕 is wrong and temp
-     󰤱 the .set stuff is jank make option to wrap the gram(...) call into a dummy node
+    𝙍 = 󰲡𝔓(+x⭢󷸼,loc=x).set(t=‹xpr›)
+    𝙉 = 󷺻𝒩(␛⸓,⠤⟞ꟿ󰲣𝔗(x󷸊∨␛𝚜, e=ℵ􋄅(p=y⟕󱁕ᵉ ᵖ₀))󰅂 ⭢ᣆ􍪵􋌵󰂁¹⭠ ⬤ᖘ¹𝙍)
+    𝚕,𝚛 = mods󱑼(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)ꟿ󷺹󰌷􍨅ᔨ􍯏􍬫􋀪􍪵􋔫􍫑􍯏⁺􋌵􍯋􍫟􍬫􍪵􍬵¹ᴍ𝙉󷺿
+    L,R = modsᐵᴍᓕ⁰⥉𝑠
     
     𝚘 = 𝚘.copy
-    ∀t∈L⁻:
+    ∀t∈L:
         ¿t≡␛⟥: 𝚘ᴸ    = ⍁
         ⸘t≡␛≺: 𝚘ᴸ,𝚘ᴿ = 𝒪􊯛􊫟ᴸ,⍁
-    ∀t∈R⁻:
+    ∀t∈R:
         ¿t≡␛⟤: 𝚘ᴿ    = ⍁
         ⸘t≡␛≻: 𝚘ᴸ,𝚘ᴿ = ⍁,𝒪􊯛􊫟ᴿ
         ⸘t≡␛ᵜ: 𝚘ᴸ,𝚘ᴿ = 𝚘ᴿ,𝚘ᴸ

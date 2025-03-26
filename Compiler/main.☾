@@ -270,13 +270,20 @@ code = 󰦥󰦥󰦥󰦥󰦥
  5ᑀ²
  2:5,2:3:5:,2:2::::::
 
+󰋺(__dir__ / ‹..› / ‹☾/Libraries/text_format›)
+󰋺(␛🌈)
+󰋺(‹tree›, *)
+
 ⮌ sys ⨡ argv as 𝔸
-¿𝔸🃌>1:
-    code = 𝔸₁
+¿𝔸🃌>1: code = 𝔸₁
 
 󱁕 = to_ast(code)
-"PARSED"☾
-󱁕ᴾ
-󱁕.cp.flat(󷺹ᵉ ᵀ󷺥(⟞ᵗ∈‹lamb opC 𝗈𝗉 xpr grp›⍭)).rm(¬○+).frp(ⴳ,󷺹.cp(t=⟞ᵗᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩𝚲⟞󷸻ᴍ+⭢⨝,c=⟞ᶜᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩󷺹₁﹕􍨄,e=⟞ᵉ ᵀ⭜ℵ􋄅(T=✓)⭝ℵ􋄅),pre=✓).P
-␛─⋅125☾
+‹⟦␛─⋅50⟧ TREE ⟦␛─⋅50⟧›☾
+box(󱁕ᴾ∘✗,✓)☾
+‹⟦␛─⋅50⟧ WEED ⟦␛─⋅50⟧›☾
+󱁕.cpr.flat(󷺹ᵉ ᵀ󷺥(⟞ᵗ∈‹target_rhs ⸓ tern lamb opC 𝗈𝗉 xpr grp asgn asgn_targs›⍭)).rm(¬○+).frp(ⴳ,󷺹.set(t=ℵ􍪵􊾾(‹asgn_targs 𝑇 opC 𝐶 lamb λ 𝗈𝗉 𝑜 xpr  asgn = target_rhs .›⍭)􍪴􊫼),pre=✓).frp(ⴳ,󷺹.cp(t=⟞ᵗᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩𝚲⟞󷸻ᴍ+⭢⨝,c=⟞ᶜᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩󷺹₁﹕􍨄,e=⟞ᵉ ᵀ⭜ℵ􋄅(T=✓)⭝ℵ􋄅),pre=✓).P
+‹⟦␛─⋅50⟧──────⟦␛─⋅50⟧›☾
+ date_󱁕(ⴳ,󷺹ᵗ≡‹grp›∧+⟞₀≡␛()(󱁕)ᐵᴾ
+ ‹⟦␛─⋅50⟧──────⟦␛─⋅50⟧›☾
+
 ast_to_py(󱁕)☾
