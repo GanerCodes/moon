@@ -17,11 +17,9 @@
     ↪ 𝙻
 ⊢ chain_structure(𝚡,s=␀,𝑰=𝗜):  replace all vals with □
     s = adjust_depth(𝚡,s)
-    ¿s≤0∨¬𝑰(𝚡): ↪□
-    ¿s≡1∨𝚡ᐹᔐ: ↪□⛶􀳉􋌵
+    ¿s≤0∨¬𝑰(𝚡)∨ᔐᐴ𝚡: ↪𝑰(𝚡)⭜□⛶􀳉􋌵⭝□
     ↪ 𝚡ᴍchain_structure(⬤,s-1,𝑰=𝑰)
 ⊢ deflatten(𝚡,𝙸,𝑰=𝗜):  deflatten(x, chain_structure(𝚡)) ≈ 󰻾
-     ‹𝚡=⟦𝚡⟧ 𝙸=⟦𝙸⟧›☾
     ¿𝙸≅□: ↪𝚡 ⭜𝚡.pop(0)⭝ 󰮈
     ↪ 𝙸ᴍdeflatten(𝚡,⬤,𝑰=𝑰)
 ⊢ flatten_under(𝚡,ƒ,s=␀,𝘪=␀,𝑰=𝗜):  flatten, change, reshape back

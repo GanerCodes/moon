@@ -9,12 +9,13 @@
     
     scan = 󰲣⬤∨⍁⭢○⟨ ⟨⬤∈y⍮ ⬤∉x+y⍮ ⍈ 󷺹₀≡␛𐞑⭜␛𝚜⭝⟞₀,⟞₁﹕⨝ᐸ⟩
                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
-                  󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳ␛𝚜,⨝󷺽⟩⟩
-    mods = ‹⟥≺ 󷺗 ᵜ꜠´⟤ ᔨ𐞑›⍭ ꟿscan ⭢󱑼l⋄r ꟿ∘
-     󰤱 this doesn't work if mod has newlines
-    ps = mods ᐵ󰌷Ϝ􍪹󷺹+🃌󷺽 ᐛ(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)
+                  󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
+    mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
+    t = 󱁕󷸻₀󰄎₂󱑼modsꟿ󰲣flatten_under(y,󷺹󱑼⭠⟞Ϝˣ􊾸􋘳􊾽􊿦󷺹+🃌󷺽,2)
+    t☾
     mods☾
-    ps☾
+     ps = mods ᐵ󰌷Ϝ􍪹󷺹+🃌󷺽 ᐛ(ᐵᵉ ᵖ₁)
+     󰤱 this doesn't work if mod has newlines
     
     L=ℵ(lᴍ⬤⋄ᐦ)
     R=ℵ(r󷹌⭠⬤∈‹ᵜ꜠´ᔨ⟤›⭢ᴍ⬤⨝ᐦ → ᐒ⠤⟞₀⭜(␛𝚜,⟞₀)⛶⭝⍁,⠤⟞₁﹕ᙧ¹ᐸ)
