@@ -1,13 +1,13 @@
+⮌ unicodedata ⨡ is_normalized
 󰋺(‹rewriters›, *)
+
 HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉
 py_esc_str  = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ c
 py_ok_var   = 󰲡x∈num ∨ is_normalized("NFKC", x) ∧ x.isidentifier()
 py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
-py_esc_var  = ⨝○󷺺󷹜<127∧c∉‹!$› ∨ py_ok_var(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
+py_esc_var  = ⨝○󷺺󷹝<127∧⟞∉‹!$› ∨ py_ok_var(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
 
 var_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
-
- 𝖢 = 󰲡xᐹŃ⭜
 
 ⊢ expand_ast_py(󱁕):
     ¿󱁕ᵉ ᵀ: ↪󱁕
@@ -16,10 +16,10 @@ var_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
     ⸘󱁕ᵗ≡␛𝑡: 󱁕.set(c=[𝔗(␛(),⠤󱁕ᶜ⨝𝔗(␛,),𝔗(␛))])
     ⸘󱁕ᵗ≡␛𝐴: 󱁕.set(c=[󱁕₀,𝔗(␛.),󱁕₁])
     ⸘󱁕ᵗ≡␛∘: 󱁕.set(c=[󱁕₀,𝔗(␛(),⠤󱁕ᶜ₁﹕⨝𝔗(␛,),𝔗(␛))])
+    ⸘󱁕ᵗ∈‹op_lit var›⍭: 󱁕.set(c=[𝔗(py_esc_var(+󱁕))󱖔􋔡󱁕])
     ⸘󱁕ᵗ≡‹opC›:
          󰤱 all py builtin ops lol
         󱁕.set(c=[󱁕₀,𝔗(␛(),⠤󱁕ᶜ₁﹕⨝𝔗(␛,),𝔗(␛))])
-    
     
     󱁕ᶜ=󱁕ᶜᴍexpand_ast_py
     ↪ 󱁕

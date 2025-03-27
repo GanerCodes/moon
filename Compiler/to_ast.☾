@@ -83,7 +83,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         󱁕.ftrp(‹x›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
         󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹var› ∧ +⟞₁≡+⟞₂≡‹NULL›)
-        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷), pre=✓)
+        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷), pre=✓)
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
@@ -101,7 +101,11 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         regroup_elements(󱁕)
         
          󰤱 op modifiers
+         󰤱 ⋄
         
+        󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘))
+        
+         󰤱 de-mangle ≔ and asgn stuffs
          󰤱 short-circuits
         
         ↪ 󱁕
