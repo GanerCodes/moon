@@ -14,7 +14,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
         󱁕↦󱁕.set(t=‹str›), pre=✓)
     󱁕.ftrp(‹str›⍭, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
-    󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
+    󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
     󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)), pre=✓)
 
 ⊢ rewrite_numbers(󱁕,𝔓):
@@ -46,11 +46,10 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     ℴ = 𝗈𝗉(𝚘ᵗ󱖔􋔡󱁕)
     ℴᵗ, ℴᵉ ᴼ = ‹𝗈𝗉›, 𝚘
     
-    𝕒 = (𝚕∈"ᑀᐵ󷺹󷺺")⋅␛⟞ + ␛⟝⋅(𝚛∈"ᑅᑈ󷺽󷺾")
-    𝚘ᵗ = ‹␀T⟦𝕒⟧›  THIS IS STUPID
-    ¿␛⟞∈𝕒: 𝙲ᶜ.insert(0, 𝗏𝖺𝗋(␛⟞󱖔􋄤𝙲))
-    ¿␛⟝∈𝕒: 𝙲ᶜ.append(   𝗏𝖺𝗋(␛⟝󱖔􋄥𝙲))
-    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤𝕒ᐖ𝖿𝗏𝖺𝗋(⟞󱖔􋄤𝙲))󱖔􋄤𝙲, 𝙲), ␛𝓐, ␛𝓚)
+    𝚘ᵗ = ‹␀T⟦(𝚕∈"ᑀᐵᐒᐖ")⋅␛⟞+␛⟝⋅(𝚛∈"ᑅᑈᐘᐛ")⟧›  THIS IS STUPID
+    ¿il≔𝚕∈‹ᑀᐵ󷺹󷺺›: 𝙲ᶜ.insert(0, 𝗏𝖺𝗋(␛⟞󱖔􋄤𝙲))
+    ¿ir≔𝚛∈‹ᑅᑈ󷺽󷺾›: 𝙲ᶜ.append(   𝗏𝖺𝗋(␛⟝󱖔􋄥𝙲))
+    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤il⋅␛⟞+␛⟝⋅irᐖ𝖿𝗏𝖺𝗋(⟞󱖔􋄤𝙲))󱖔􋄤𝙲, 𝙲), ␛𝓐, ␛𝓚)
     ↪ ℴ
 
 ⊢ rewrite_lambs(󱁕):
@@ -60,7 +59,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     󱁕.ftrp(‹lamb›⍭, λ_add_vk, pre=✓)
 
 ⊢ rewrite_ternary(󱁕):
-    is_xpr_atom = 󱁕↦󱁕ᵗ≡‹xpr›  ∧ 󱁕🃌≡1
+    is_xpr_atom = 󱁕↦󱁕ᵗ≡x  ∧ 󱁕🃌≡1
      why was this checking for atoms?
 
     @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  x⭜y⭝z
@@ -84,7 +83,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         β󷸊₀
         is_xpr_atom(β) ⨳
         𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
-        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑𝗉𝗋(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
+        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
         ↪ 𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 
 ⊢ group_targets(󱁕):
@@ -99,10 +98,10 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
             C.clear()
         ¿x: R.append(x)
     ➰𝚌⭜v≔𝚌.pop(0):
-        ¿brk(v): C.append(v)
-        ⸘cal(v)∧C: C.append(𝖼𝖺𝗅𝗅(v))
-        ⸘dot(v): C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)))
-        ¡      : adds(v)
+        ¿brk(v)  : C.append(v)
+        ⸘cal(v)∧C: C.append(𝗆𝖼𝖺𝗅(v))
+        ⸘dot(v)  : C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)))
+        ¡        : adds(v)
     adds(□)
     󱁕ᶜ = R
     ↪ 󱁕
@@ -111,7 +110,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     ¿¬(𝚘≔󱁕₀ᵉ ᴼ)󰁝: ↪󱁕
     𝕒 = 􋑺􊬣
     ∀n∈󱁕₁﹕:
-        ¿(nᵗ≡‹xpr› ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ᵉ ᴼ ᵗ≡𝚘ᵗ):  󰤱 inner op modifiers
+        ¿(nᵗ≡␛x ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ᵉ ᴼ ᵗ≡𝚘ᵗ):  󰤱 inner op modifiers
             𝕒.extend(n₀ ₁﹕)
             ↺
         𝕒.append(n)
@@ -123,7 +122,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     ∀L∈𝙾𝚃ᴙ:
         ¿¬𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈): ↺
         relv = 󷺹ᵗ≡‹opC› ∧ (⨳IS_OP(⟞₀)) ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
-        charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡"xpr" ∧ relv(⟞₀)
+        charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡"x" ∧ relv(⟞₀)
          󰤱 make relv check for invalid modifiers
         @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))
         ⊢ _(󱁕):
@@ -138,7 +137,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     find_in = 󷺹ᵗ≡‹𝗈𝗉󷺗󷺗󷺗󷺗󷺗󷺗› ∧ +⟞≡ᑅ␛∈
     find_qq = 󷺹ᵗ≡‹var_spec› ∧ +⟞≡ᑅ␛¿
     
-    @(󱁕.ftrp(‹xpr›⍭, ⬤, pre=✓))
+    @(󱁕.ftrp(‹x›⍭, ⬤, pre=✓))
     ⊢ _(󱁕):  [𝟏∀𝟐∈𝟑¿𝟒]
         f1 = 󷺹ᵗ≡‹var_spec› ∧ +⟞≡ᑅ␛∀
         
@@ -147,7 +146,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         𝟐,_,𝟑 = spl(𝟐, find_in)
         𝟒 = □
         ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
-        ↪ Ń(‹∀_xpr›, 𝖿𝗈𝗋(𝗑𝗉𝗋(⠤𝟏), 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
+        ↪ Ń(‹∀_x›, 𝖿𝗈𝗋(𝗑(⠤𝟏), 𝗑(⠤𝟐), 𝗑(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
     
     is_valid = 󷺹ᵗ≡‹kwd_pfx› ∧ ⟞₀ᵗ≡‹cln_kwd› ∧ +⟞₀≡␛∀
     @(󱁕.frp(is_valid, ⬤, pre=✓))
@@ -155,5 +154,33 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         𝟐,_,𝟑 = spl(󱁕₁, find_in)
         𝟒 = □
         ¿spl(𝟑, find_qq)≕𝚢: 𝟑,_,𝟒 = 𝚢
-        ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑𝗉𝗋(⠤𝟐), 𝗑𝗉𝗋(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
+        ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑(⠤𝟐), 𝗑(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
     _
+
+𝙇 = 󷺹ᵗ≡‹grp›∧+⟞₀≡␛[
+𝙏 = 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(
+𝘾 = 󱁕𝖦(⬤,0⋄0⋄1⋄0,‹x opC 𝗈𝗉 op_lit ,›⍭)
+⊢ regroup_elements(󱁕):  󰤱 treat (some) var_specs as num
+    
+    󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=⟨
+            ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(⍮ 
+             󷺹ᵗ≡‹target_rhs› ⍈ 󰲡𝒩(‹applier›, ⠤x﹕􍨄, ⠤x􍨄)⟩ 󷸴 ⴳ
+        ⟩∘󱁕ᶜ∨⍁), pre=✓)
+    
+    󱁕.ftrp(‹target_rhs›⍭, 󱁕↦𝒩(‹applier›,󱁕₀,⠤󱁕₁﹕))󱖔􋔡󱁕
+    
+    ⊢ 𝙁(𝚙,󱁕):
+        ¿󱁕ᵗ≡‹mcal›: ↪𝒩(␛∘,𝚙, ⠤󱁕₀ ₁ᐒ𝘾(⟞)⭜⟞₀ ₁﹕⭝􍪴)
+        ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,  󱁕₁  )
+        ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,𝔗(󱁕)  )
+        ✗⨳
+    󱁕.ftrp(‹applier›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]), pre=✓)
+    
+    󱁕.frp(  𝙇                    , 󱁕↦𝒩(‹𝑙›,󱁕₁)󱖔􋔡󱁕, pre=✓)
+    󱁕.frp(󱁕↦𝙏(󱁕) ∧ (󱁕₁ᵗ≡␛✓∨𝘾(󱁕₁)), 󱁕↦𝒩(‹𝑡›,󱁕₁)󱖔􋔡󱁕, pre=✓)
+    󱁕.ftrp(‹𝑙 𝑡›⍭,
+           󱁕↦󱁕.set(c=󱁕₀ᵗ≡␛✓ ⭜⍁⭝ 𝘾(󱁕₀) ⭜󱁕₀ ₀ ₁﹕⭝ 􋑺􊬣), pre=✓)
+    󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑡›, ⠤󱁕₁﹕))
+    
+    󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅, ⠤x))∘󱁕ᶜ), pre=✓)
+    󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜᴙſ󷺻𝒩(␛∘, ⟞, ⟝)󷺿]), pre=✓)

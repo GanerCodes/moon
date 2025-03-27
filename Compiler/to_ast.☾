@@ -40,7 +40,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub›⍭, rewrite_str_indent)
-        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑𝗉𝗋(⠤󱁕), pre=✓)
+        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), pre=✓)
         rewrite_lambs(󱁕)
         rewrite_numbers(󱁕, 𝔓(⬤, 1, ‹norm_expr›))
         ¿𝘯≤1:↪󱁕
@@ -70,7 +70,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤, 6, ‹norm_expr›, wrap=✓)))
         ¿𝘯≤6:↪󱁕
         
-        󱁕.ftrp(‹xpr ƒ_val›⍭, group_targets, pre=✓)
+        󱁕.ftrp(‹x ƒ_val›⍭, group_targets, pre=✓)
         ¿𝘯≤8:↪󱁕
         
         grp_stmts(󱁕)
@@ -81,8 +81,9 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
          󰤱 ugx stuff
         
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
-        󱁕.ftrp(‹xpr›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷), pre=✓)
+        󱁕.ftrp(‹x›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
+        󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹var› ∧ +⟞₁≡+⟞₂≡‹NULL›)
+        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˣᵖʳ􊿒 ⛶ᐸ󰌷), pre=✓)
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
@@ -94,9 +95,10 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡: ↪󱁕
             𝒏 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
-            
             󱁕􀲪 = 𝒏₀
             ↪󱁕
+        
+        regroup_elements(󱁕)
         
          󰤱 op modifiers
         

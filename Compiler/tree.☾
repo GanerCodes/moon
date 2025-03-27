@@ -15,6 +15,12 @@
     ↪ 𝔸 ⭜󱁕ᐖ󱁕_is_hot_stuff(⟞,⠤𝔸)ᐸ⋁⭝ ✓
 date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
 
+⊢ 󱁕𝖦(󱁕,x,y):
+    ¿󱁕ᵗ≠y₀:↪
+    ∀i,t∈x󱑼y₁﹕:
+        ¿󱁕🃌≤i∨(󱁕≔󱁕ᵢ)ᵗ≠t:↪
+    ↪✓
+
 ⊢ get_orig_section(𝚌, 󱁕):
     𝚜, 𝚙 = lines(𝚌), 󱁕ᵉ ᵖ
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁

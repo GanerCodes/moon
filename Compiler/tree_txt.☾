@@ -14,7 +14,7 @@
     󱁕.ftrp(‹stmts›⍭, 󱁕↦󱁕.copy(c=ƒ(󱁕)), pre=✓)
 
 ⊢ grp_stmts(󱁕):  ➰¿⸘¡
-    𝒎 = 󰲡󱁕_is_hot_stuff(⬤,⠤⍭‹blk stmt kwd_pfx cln_kwd›,󷺹ᵗ≡x)
+    𝒎 = 󰲡󱁕_is_hot_stuff(⬤,⠤‹blk stmt kwd_pfx cln_kwd›⍭,󷺹ᵗ≡x)
     @(󱁕.ftrp(‹stmts›⍭, ⬤, pre=✓))
     ⊢ _(󱁕):
         󱁕ᶜ = ⟨  ⟨𝒎∘␛¿⍮ 𝒎∘␛⸘⍮ 𝒎∘␛¡⍮􊽨 ⍈ 󷺻𝒩(‹¿⸘¡›, ⠤⟞)⟩
@@ -24,4 +24,4 @@
         ↪ 󱁕
 
 ⊢ flatten_statments(󱁕):
-    󱁕.flat(󷺹ᵗ∈‹stmt cln_kwd›)
+    󱁕.flat(󷺹ᵗ∈‹stmt cln_kwd›⍭)

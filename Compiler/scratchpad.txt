@@ -9,25 +9,19 @@ n RHS = mul
 
 5 2 ‹asd› ƒ 2 2x 2 x 9 j[].s joe() x 2 ()
 n n ᔐ v n n v n v n v RHS v () v n ()
-n ᔐ v n n v n v n v RHS v () v n ()
-ᔐ v n n v n v n v RHS v () v n ()
-ᔐ v n n v n v n v RHS v () v n ()
-v n n v n v n v RHS v () v n ()
-n n v n v n v RHS v () v n ()
-n v n v n v RHS v () v n ()
-v n v n v RHS v () v n ()
-n v n v RHS v () v n ()
-v n v RHS v () v n ()
-n v RHS v () v n ()
-v RHS v () v n ()
+𝐺 𝕩 𝐺 𝕩 𝐺 𝕩 𝐺 𝕩 𝗋𝗁𝗌 𝕩 𝗋𝗁𝗌 𝕩 𝐺 𝗋𝗁𝗌
 
+α aᶜ().d()()ᵉ 2 β
+[1,2] aᶜ().d()()ᵉ 2 β
+
+9 → [⠤γ]ᶜ().d()()ᵉ 2 βʸ()
 
 ()ƒ()
 
 
 5() 5 [5].x
 
-rhs
+rhsmko 
 
 ⋅
     number number

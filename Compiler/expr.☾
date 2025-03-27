@@ -11,7 +11,7 @@
                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
                   󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
     mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
-    𝙍 = 󰲡𝔓(+x⭢󷸼,loc=x).set(t=‹xpr›)
+    𝙍 = 󰲡𝔓(+x⭢󷸼,loc=x)₀
     𝙉 = 󷺻𝒩(␛⸓,⠤⟞ꟿ󰲣𝔗(x󷸊∨␛𝚜, e=ℵ􋄅(p=y⟕󱁕ᵉ ᵖ₀))󰅂 ⭢ᣆ􍪵􋌵󰂁¹⭠ ⬤ᖘ¹𝙍)
     𝚕,𝚛 = mods󱑼(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)ꟿ󷺹󰌷􍨅ᔨ􍯏􍬫􋀪􍪵􋔫􍫑􍯏⁺􋌵􍯋􍫟􍬫􍪵􍬵¹ᴍ𝙉󷺿
     L,R = modsᐵᴍᓕ⁰⥉𝑠
@@ -45,12 +45,16 @@
     𝓞, i = 𝚘ᵉ ᴼ, 0
     ¿d≡󷰾:
         ∀i,n∈𝙲↨﹕﹕􍨄:
-            ¿IS_OP(n)≕ℴ¬: ↺
+            ¿IS_OP(n)≕ℴ¬:
+                 ¿𝓞ᵗ∈‹!⌃¬›: ⇥  jank??
+                ↺
             ¿ℴᵗ∉𝓞ᴸ: ⇥
-    ⸘d≡1:  󷹇 this code is scary!!1
+    ⸘d≡1:
         𝚜𝚝𝚔 = 𝓞ᴿ⛶
         ∀i,n∈𝙲↨:
-            ¿IS_OP(n)≕ℴ¬: ↺
+            ¿IS_OP(n)≕ℴ¬:
+                 ¿𝓞ᵗ≡‹␀CAT›: ⇥  jank??
+                ↺
             ➰𝚜𝚝𝚔:          ↘ allows xᴍ⨁
                 ¿ℴᵗ∈𝚜𝚝𝚔􍨄 ∨ (𝓞ᴾ ∨ 𝓞ᴮ∧¬𝓞󰀒 →∧ ℴᵗ∈𝒪􊯛􊱵ᴿ ∧ ℴᴾ ∧ ¬i):
                     𝚜𝚝𝚔.append(ℴᴿ)
@@ -62,9 +66,9 @@
 
 ⊢ create_call(𝚘, 𝚕, 𝚛):
     ℴ = 𝚘ᵉ ᴼ
-    ¿ℴᵗ ∈ ‹⭢→➡›: ↪ 𝗀𝗋𝗉(‹()›, ⠤𝚕)
-    ¿ℴᵗ ∈ ‹⭠←⬅›: ↪ 𝗀𝗋𝗉(‹()›, ⠤𝚛)
-    ¿ℴᵗ ≡    ␛⥉: ↪ 𝗀𝗋𝗉(‹()›, 𝗀𝗋𝗉(⠤𝚛), 𝗀𝗋𝗉(⠤𝚕))
+    ¿ℴᵗ ∈ ‹⭢→➡›: ↪ 🟑𝗀𝗋𝗉(‹()›, 🟑𝗑(⠤𝚕)
+    ¿ℴᵗ ∈ ‹⭠←⬅›: ↪ 🟑𝗀𝗋𝗉(‹()›, 🟑𝗑(⠤𝚛)
+    ¿ℴᵗ ≡    ␛⥉: ↪ 🟑𝗀𝗋𝗉(‹()›, 🟑𝗑(𝗑(⠤𝚛), 𝗑(⠤𝚕))
     ↪ 𝗈𝗉𝖢(𝚘, 𝚕, 𝚛)
 
 ⊢ apply_op(𝚘, 𝙻, 𝚁):
@@ -78,15 +82,15 @@
     ⊢ suffix(𝚁):  i need micheal or someone to tell me if this is stupid
          cat: 5!√2 5!3!
          ok : x⭥ᴙ  5!󰈲f
-        ¿𝚁∧(IS_OP(𝚁₀)≕𝒐¬ ∨ 𝒐ᴾ∧¬(𝒐ᴮ∨𝒐󰀒)):
-            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›),󰻾))
+        ¿𝚁∧(IS_OP(𝚁₀)≕𝒐¬ ∨ 𝒐ᴾ∧(𝒐ᴮ󷺥𝒐󰀒)):
+            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥𝚁),󰻾))
         ↪𝚁
     
      󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
-    ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr), 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  B
-    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑𝗉𝗋(⠤lr),     𝖭𝖴𝖫𝖫), ⠤𝕒], suffix(𝚁)  S
-    ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    , 𝗑𝗉𝗋(⠤rl)), ⠤𝕒], rr  P
-    ⸘𝘪ᴺ          : ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫    ,     𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   N
+    ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl)), ⠤𝕒], rr  B
+    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫), ⠤𝕒], suffix(𝚁)  S
+    ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl)), ⠤𝕒], rr  P
+    ⸘𝘪ᴺ          : ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫  ,   𝖭𝖴𝖫𝖫), ⠤𝕒], 𝚁   N
     
     𝚘ᴾ
     ✗ ⨳ ‹Unable to apply operator ⟦𝚘⟧: ⟦ll=⟧; ⟦lr=⟧; ⟦rl=⟧; ⟦rr=⟧›
@@ -97,4 +101,4 @@
         c = 𝚁.pop(0)
         ¿IS_OP(c): 𝙻,𝚁 = apply_op(c,𝙻,𝚁)
         ¡        : 𝙻.append(c)
-    ↪ 𝗑𝗉𝗋(⠤𝙻+𝚁)
+    ↪ 𝗑(⠤𝙻+𝚁)
