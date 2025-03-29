@@ -1,5 +1,14 @@
-󰋺(‹cache›) ;fcache = 󰻾􋒍
+ 󰋺(‹cache›)
+ FC, bruh = fcache, 0
+ ⊢ fcache(⠤𝔸,⠶𝕂):
+     global bruh
+     ¿bruh󷸊+1 ≤ 3:
+         ↪ FC(⠤𝔸,⠶𝕂)
+     ↪ 󰻾
+fcache = 󰻾􋒍
+
 󰋺(__dir__/␛𝐍)
+󰋺(__dir__/‹text_format›)
 
 try             : ⨡ regex as re
 except Exception: ⨡ re
@@ -72,7 +81,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ↪ rules
 
  Hard to read ∵ optimized
-⊢ parse(𝐷, 𝑅, start_rule=□):
+⊢ parse(𝐷, 𝑅, start_rule=□, debug=✗):
     ℭ, χ = 𝐷🃌󷸻ᴍ󰲡{}, 0
     𝓢 = [(None, start_rule≅None ⭜𝑅🃌-1⭝ start_rule)]
     χ = 0
@@ -80,6 +89,11 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
         Χ, ι = 𝓢.pop(󷰾)
         ¿Χ≇None: χ=Χ
         γ, ⠤𝐶 = 𝑅󰃬
+        ¿debug:
+            L = frozenset(🟑‹~∧∨*+✓✗←⮞¬❗?󰆴⠶ƨ›🟑)
+            ¿γ∉L:
+                V = 𝓢ᐖ𝑅􍪴􊬤 ₀ᐸ󰈳󷺹∈Lᐸ⭢⨝𝘀
+                ‹⟦𝐷﹕󰃺⟧⟦ŧ𝼝(␛│,fg=‹0f0›)⟧⟦χ<𝐷🃌⭜𝐷󰃺⭝ᐦ⟧⟦𝐷󰃺₊₁﹕⟧ ⟦V⟧ ⟦ŧ𝼝(γ,"f5f")⟧ ⟦dotrim(𝖿𝗆𝗍(𝐶),75)⟧›☾
         𝔠 = ℭ󰃺
         ¿γ≡␛ᔐ:
             ¿𝐶₀≡𝐷󰃺﹕􊸴􊮝󰃺₊􊳵􊬣􊹳: 𝔠󰃬 = ✓, 𝝌
@@ -89,16 +103,16 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
                 𝔠󰃬 = ✓, m.span()₁, m
             ¡:  𝔠󰃬 = ✗, χ
         ⸘γ≡␛∧:
-            n, 𝝌 = ι∈𝔠 ⭜𝔠󰃬⭝ (0, χ)
+            n, 𝝌 = ι∈𝔠 ⭜𝔠󰃬⭝ (0,χ)
             ➰✓:
                 𝜾, 𝑐 = 𝐶ₙ, ℭ􊸴
                 ¿𝜾∉𝑐:
                     𝓢.extend([(χ, ι), (𝝌, 𝜾)])
                     𝔠󰃬 = n, 𝝌 ; ⇥
                 𝑔, 𝝌 = ℭ􊸴 􊸧 ﹕₂
-                n 󷸊+ 1
-                ¿    ¬𝑔: 𝔠󰃬 = ✗, χ ; ⇥
-                ¿n ≡ 𝐶🃌: 𝔠󰃬 = ✓, 𝝌 ; ⇥
+                n = n+1
+                ¿  ¬𝑔: 𝔠󰃬 = ✗, χ ; ⇥
+                ¿n≡𝐶🃌: 𝔠󰃬 = ✓, 𝝌 ; ⇥
         ⸘γ≡␛∨:
             n = ι∈𝔠 ⭜𝔠󰃬⭝ 0
             ➰✓:
@@ -107,9 +121,9 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
                     𝓢.extend([(χ, ι), (χ, 𝜾)])
                     𝔠󰃬 = n ; ⇥
                 𝑔, 𝝌 = ℭ󰃺 􊸧 ﹕₂
-                ¿𝑔: 𝔠󰃬 = ✓, 𝝌, n ; ⇥
-                n 󷸊+ 1
-                ¿n ≡ 𝐶🃌: 𝔠󰃬 = ✗, χ ; ⇥
+                ¿𝑔   : 𝔠󰃬 = ✓, 𝝌, n ; ⇥
+                n = n+1
+                ¿n≡𝐶🃌: 𝔠󰃬 = ✗, χ    ; ⇥
         ⸘γ≡␛* ∨ γ≡␛+:
             ¿ι∈𝔠: c = 𝔠󰃬
             ¡   : c = 𝔠󰃬 = [χ]
@@ -122,7 +136,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
                 𝑔, Χ = 𝑐􊸧 ﹕₂
                 ¿¬𝑔:
                     ¿γ≡␛* ∨ c🃌>1:
-                        𝔠󰃬 = ✓, 𝝌, c﹕₋₁
+                        𝔠󰃬 = ✓, 𝝌, c﹕􍨄
                     ¡:
                         𝔠󰃬 = ✗, χ
                     ⇥
@@ -293,9 +307,9 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     root, rule = Rᵀ􋕟ʳᵒᵒᵗ, Rᵣ
     
     ℒ = DEBUG ⭜𝓣⭝ ⴴ
-    ℒ ; ℭ = parse(c, root, rule)            ; ℒ(‹Parse󷺗󷺗›)
-    ℒ ; 󱁕 = parse_to_tree(root, ℭ, 0, rule) ; ℒ(‹Convert›)
-    ℒ ; 󱁕 = parse_to_node(󱁕)                ; ℒ(‹Nodeing›)
+    ℒ ; ℭ = parse(c, root, rule, debug=DEBUG); ℒ(‹Parse󷺗󷺗›)
+    ℒ ; 󱁕 = parse_to_tree(root, ℭ, 0, rule)  ; ℒ(‹Convert›)
+    ℒ ; 󱁕 = parse_to_node(󱁕)                 ; ℒ(‹Nodeing›)
     
     𝒸 = 𝚲chop_tree(󱁕, c, DEBUG=DEBUG, ⠶𝓚|𝕂)
     ↪ chop ⭜𝒸⭝ ℵ(table=ℭ, tree=󱁕, chop=𝒸)

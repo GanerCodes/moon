@@ -1,5 +1,7 @@
 § TODOs ------------------------------------
 
+    󰤱  bootstrap everything
+    󰤱  h􋕩ˣ􋕩 supscript object attr?
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
     󰤱  UGEX EMPTY LIST INPUT THING
@@ -23,7 +25,6 @@
     󰤱  way to map over contingious truthy groups of 𝌂
     󰤱   for getting time/date? self calls + mod is format
     󰤱  Better window, multidimentional
-    󰤱  bootstrap everything
     󰤱  option for operator to ignore superscripts like →
     󰤱  __setminus__, __crossprod__, __union__, __intersection__, __subset__ ; mutex
     󰤱  normalize binds/stuff for edits/cross-plat

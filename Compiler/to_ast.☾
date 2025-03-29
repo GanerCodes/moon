@@ -22,7 +22,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             warn_short=✓, trim_length_info=✓,
             force_full_match=✗, wrap=✗):
         ¿locᐹŃ: loc = locᵉ ᵖ﹕₂
-        󱁕 = gram(𝚌,𝘳,remove_trashes=✗)
+        󱁕 = gram(𝚌,𝘳,remove_trashes=✗🟑,DEBUG=𝘳≡‹parser_main›🟑)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
         ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
@@ -34,7 +34,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         ¿wrap: 󱁕=𝒩(‹wrap›, 󱁕)
         
-        ¿𝘳≡‹parser_main›: stackr(box(󱁕ᴾ∘✗,✓), box(linenum(𝚌,s=ŧ𝼝(fg="915")),✓))☾
+        ¿𝘳≡‹parser_main›: BOX(BOX(linenum(𝚌,s=ŧ𝼝(fg="915")))⋄(󱁕ᴾ∘✗))☾
         
         ¿𝘯≤0:↪󱁕
         
@@ -94,18 +94,26 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡: ↪󱁕
-            𝒏 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
+            𝒏 = 𝔓(☾get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
             󱁕􀲪 = 𝒏₀
             ↪󱁕
+        ¿𝘯≤25:↪󱁕
         
         regroup_elements(󱁕)
+        rewrite_asgns(󱁕) 
         
          󰤱 op modifiers
          󰤱 ⋄
         
-        󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘))
+        group_𝑙𝑡(󱁕)
         
-         󰤱 de-mangle ≔ and asgn stuffs
+         x layer muls and composes
+        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅, ⠤x))∘󱁕ᶜ), pre=✓)
+        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜᴙſ󷺻𝒩(␛∘, ⟞, ⟝)󷺿]), pre=✓)
+        󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘), pre=✓)
+        
+         󰤱 de-mangle 󷸊 stuffs here?
+        
          󰤱 short-circuits
         
         ↪ 󱁕

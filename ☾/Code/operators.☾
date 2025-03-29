@@ -127,9 +127,8 @@ LITERAL_OPS_􊯛₋ = _
         ¡                     : R = [v,v]
     ¡:
         ¿𝕏∈␛⟕␛⟗ ∧ 󰮈≇𝕩≔y(LR_def, x₀): R.append(𝕩)
-        ∀i∈x🃌󷸸 :
-            R.extend(y(xᵢ₋₁, xᵢ)≕𝕩≅󰮈 ⭜ [xᵢ₋₁] ⭝ [xᵢ₋₁, 𝕩])
-        ¿  x🃌  :                     R.append(x􍨄)
+        ∀i∈x🃌󷸸: R.extend(y(xᵢ₋₁, xᵢ)≕𝕩≅󰮈 ⭜ [xᵢ₋₁] ⭝ [xᵢ₋₁, 𝕩])
+        ¿  x🃌 : R.append(x􍨄)
         ¿𝕏∈␛⟖␛⟗ ∧ 󰮈≇𝕩≔y(x􍨄, LR_def): R.append(𝕩)
     
     ↪ Yᐹᔐ ⭜ᐦ.join(Rᴍᔐ)⭝ R

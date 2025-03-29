@@ -282,7 +282,7 @@ code = 󰦥󰦥󰦥󰦥󰦥
 
 󱁕 = to_ast(code)
 ‹⟦␛─⋅50⟧ TREE ⟦␛─⋅50⟧›☾
-box(󱁕ᴾ∘✗,✓)☾
+BOX(󱁕ᴾ∘✗)☾
 ‹⟦␛─⋅50⟧ WEED ⟦␛─⋅50⟧›☾
 󱁕.cpr.flat(󷺹ᵉ ᵀ󷺥(⟞ᵗ∈‹x ∘ 𝐴 𝐼 𝑙 𝑡 ⸓ target_rhs tern lamb opC 𝗈𝗉 grp asgn asgn_targs›⍭)).rm(¬○+).frp(ⴳ,󷺹.set(t=ℵ􍪵􊾾(‹asgn_targs 𝑇 opC 𝐶 lamb λ 𝗈𝗉 𝑜 asgn = target_rhs .›⍭)􍪴􊫼),pre=✓).frp(ⴳ,󷺹.cp(t=⟞ᵗᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩𝚲⟞󷸻ᴍ+⭢⨝,c=⟞ᶜᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩󷺹₁﹕􍨄,e=⟞ᵉ ᵀ⭜ℵ􋄅(T=✓)⭝ℵ􋄅),pre=✓).P
 ‹⟦␛─⋅50⟧──────⟦␛─⋅50⟧›☾

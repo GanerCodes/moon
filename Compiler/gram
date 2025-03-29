@@ -18,13 +18,14 @@ kwd_pfx    = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                         
 norm_expr  = (⠶norm_expr_atom)+
 
 asgn = ⠶asgn_left 󰆴(𝘄? ↷ '=') (asgn ∨ norm_expr)
-asgn_targ = (󰆴("(" 𝗪?) ⠶asgn_left 󰆴(𝗪? ")" 𝘄?)) ∨ ƒ_run_𝔸 ∨ ƒ_run_𝕂 ∨ ƒ_val
-asgn_targs = (⠶asgn_targ 󰆴(𝘄? ↷ ','))+ ⠶asgn_targ?
+asgn_targ = ⠶asgn_grp ∨ ƒ_run_𝔸 ∨ ƒ_run_𝕂 ∨ ƒ_val
+asgn_grp = 󰆴('(' 𝗪?) ⠶asgn_left 󰆴(𝗪? ')' 𝘄?) ⮞(~‹[,=)]|\Z›)
+asgn_targs = (⠶asgn_targ 󰆴(',' 𝘄?))+ ⠶asgn_targ?
 asgn_left = asgn_targs ∨ asgn_targ
 
-expr_not_colla = (¬',' ¬':' ⠶bruh_expr_atom)+
-expr_not_colon = (     ¬':' ⠶rard_expr_atom)+
-expr_not_comma = (¬','      ⠶norm_expr_atom)+
+expr_not_colla = (¬(',' ∨ ':') ⠶bruh_expr_atom)+
+expr_not_colon = (¬(      ':') ⠶rard_expr_atom)+
+expr_not_comma = (¬(','      ) ⠶norm_expr_atom)+
 
 ƒ_dec_params = ((⠶ƒ_dec_param 󰆴(',' 𝗪?))+ ⠶ƒ_dec_param?) ∨ ⠶ƒ_dec_param
 ƒ_run_params = ((⠶ƒ_run_param 󰆴(',' 𝗪?))+ ⠶ƒ_run_param?) ∨ ⠶ƒ_run_param
@@ -38,17 +39,15 @@ expr_not_comma = (¬','      ⠶norm_expr_atom)+
 ƒ_run_𝕂 = 󰆴(𝘄? ↷ '⠶') ⠶ƒ_val
 
 ƒ_kw  = ⠶ƒ_var 󰆴(𝘄? '=' 𝗪?) ƒ_val
-ƒ_val = (¬',' ¬'=' (¬lamb_h_implicit lamb ∨ whiskers ∨ ⠶gen_expr_atom ∨ 󰆴𝘄))+
+ƒ_val = (¬(',' ∨ '=' ∨ lamb_h_implicit) 󰆴𝘄? (lamb ∨ whiskers ∨ ⠶gen_expr_atom) 󰆴𝘄?)+
 ƒ_var = ⠶var
-
-slice = ((expr_not_colla? ↷ (':' 󰆴𝘄?)+) expr_not_colla?)+
 
 norm_expr_atom = ( slice ∨ ⠶rard_expr_atom) 󰆴𝘄?
 rard_expr_atom =  ⠶lambs ∨ ⠶bruh_expr_atom
  gen_expr_atom =   slice ∨ ⠶bruh_expr_atom
 bruh_expr_atom = grp ∨ ugx_expr ∨ ⠶stars ∨ ⠶str ∨ var_spec ∨ number_exp ∨ number ∨ op ∨ ⠶script ∨ var
  
- args_grp = 󰆴'(' (󰆴𝘄? ↷ ƒ_run_params ∨ ✓) 󰆴')'
+slice = ((expr_not_colla? ↷ (':' 󰆴𝘄?)+) expr_not_colla?)+
 stars = ƒ_run_𝔸 ∨ ƒ_run_𝕂
  
 pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
@@ -58,7 +57,9 @@ number_exp = number supscript
 
 script = supscript ∨ subscript
 grp = ~‹[\[({⁅⟦]› (󰆴𝗪? ↷ (multi_expr ∨ ✓)) ~‹[\])}⁆⟧]›
-var = ƨ(¬𝗪 ¬op ¬var_spec ¬cln_kwd ¬script ¬(~‹󰦥{5}›) ~‹[^⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]›)+
+var = ƨ((
+    (¬(𝗪 ∨ ~‹󰦥{5}|[⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]› ∨ op ∨ var_spec ∨ cln_kwd ∨ script))
+    ~‹.›)+)
 
 op = ((op_⸓_l = ƨ((_op_⸓_l (_op_⸓_l ∨ supscript)*)?))
        op_lit
