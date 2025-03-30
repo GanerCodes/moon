@@ -162,7 +162,7 @@ code = 󰦥󰦥󰦥󰦥󰦥
  ∀a,(b,⠤c),⠤d∈𝕏: □
  [A∀b,(c,⠤d),⠤e∈F¿G]
 
- var
+ 𝑉
  target  ∨ 
  target ≔ 
  ∀z∈y:

@@ -113,15 +113,13 @@
         ¿not_T ∧ 󱁕ᵉ ᵀ: ↪R
         ¿pre      : (c.find(ƒ, ✓, not_T, R) ∀c∈󱁕)
         ¿do≔ƒ(󱁕)  : R.append(󱁕)
-        ¿do ∧ ¬pre: (c.find(ƒ, ✓, not_T, R) ∀c∈󱁕)
+        ¿do ∧ ¬pre: (c.find(ƒ, ✗, not_T, R) ∀c∈󱁕)  ✗ was ✓ before?
         ↪ R
     
-    ⊢ flat(󱁕, ƒ):
+    ⊢ flat(󱁕, ƒ, 𝔯=✓):
         C = []
         ∀c∈󱁕:
-            ¿cᵉ ᵀ          : C.append(c)
-            ⸘ƒ(c≔c.flat(ƒ)): C.extend(cᶜ)
-            ¡              : C.append(c)
+            (cᵉ ᵀ ∨ ¬ƒ(c≔⬅𝔯⭜c.flat(ƒ)⭝c) ⭜C.append⭝ C.extend)(c)
         󱁕ᶜ = C
         ↪ 󱁕
     

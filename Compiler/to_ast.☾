@@ -49,7 +49,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ⊢ _(󱁕):  󰤱 􀲵 prop gets lost?
                  󰤱 sup arrows
             𝚕,𝙾,𝚛 = 󱁕
-            𝚟 = 𝗏𝖺𝗋(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
+            𝚟 = 𝗏(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
             𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(𝙾)ᶜ))
             +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟󱖔􋄥𝙾)⭝ 𝒏ᶜ.insert(0, 𝚟󱖔􋄤𝙾)
             ¿+𝚕: 𝒏ᶜ.insert(0, 𝚕.copy(t=‹supscript›))
@@ -61,7 +61,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
         ⊢ _(󱁕):
             𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝, 0, ‹gen_expr_atom›, loc=󱁕, warn_short=✗, force_full_match=✓)
-            attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹var›
+            attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹𝑉›
             ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕), 𝚑) ␛
                    ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕), 𝗀𝗋𝗉(‹()›, ⠤𝔓(𝚝, 5, ‹norm_expr›, loc=󱁕)))
         󱁕.flat(󷺹ᵗ≡"tmp")
@@ -82,7 +82,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
          󰤱 ugx stuff
         
         󱁕.ftrp(‹x›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
-        󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹var› ∧ +⟞₁≡+⟞₂≡‹NULL›)
+        󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑉› ∧ +⟞₁≡+⟞₂≡‹NULL›)
         󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷), pre=✓)
         󱁕.ftrp(‹opC›⍭, reduce_ς, pre=✓)
         add_cmp_op_chains(󱁕)
@@ -94,7 +94,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡: ↪󱁕
-            𝒏 = 𝔓(☾get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
+            𝒏 = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪), 25, ‹asgn_left›, loc=󱁕􀲪)
             󱁕􀲪 = 𝒏₀
             ↪󱁕
         ¿𝘯≤25:↪󱁕
