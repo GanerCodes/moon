@@ -5,6 +5,7 @@ _op_⸓_r   = ~‹%OP_MOD_R%›
 op_lit    = ~‹%OP_LIT%›
 𝑉_spec    = ~‹%VAR_SPEC%›
 cln_kwd   = ~‹%CLN_KWDS%›
+std_kwd   = ~‹%STD_KWDS%›
 
 parser_main    = stmts?
 parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
@@ -12,9 +13,10 @@ parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
 stmts      = 󰆴𝗪? ( stmt      󰆴𝗪?)+
 multi_expr = 󰆴𝗪? (⠶norm_expr 󰆴𝗪?)+
 
-stmt  = ⊢_dec ∨ kwd_pfx ∨ asgn ∨ norm_expr
+stmt  = ⊢_dec ∨ kwd_pfx ∨ kwd_std ∨ asgn ∨ norm_expr
 ⊢_dec = 󰆴("⊢" 𝗪?) (wrap=(grp 󰆴𝗪? ∨ ✓)) 𝑉 󰆴(𝘄? "(" 𝗪?) (ƒ_dec_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
 kwd_pfx   = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                             󰆴(       𝗪? ":" 𝘄?)
+kwd_std   = std_kwd 󰆴𝘄? (norm_expr ∨ ✓) 
 norm_expr = (⠶norm_expr_atom)+
 
 asgn = ⠶asgn_left 󰆴(𝘄? ↷ '=') (asgn ∨ norm_expr)

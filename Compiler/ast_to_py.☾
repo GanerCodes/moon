@@ -9,7 +9,8 @@ py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
 py_esc_𝑉 = 󷺹ᐵ󷹝<127ᐸ⋀ ∧ ¬(⟞∩‹!$›) ⭜⟞⭝ ␛þ+𝑖.from_bytes(𝑀(⟞))󷹜⁶²+␛þ
 
 𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
-kw_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for ⮂ yield›⍭)
+cln_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for›⍭)
+std_remap = ℵ(‹⮂ yield ↪ return›⍭)
 
 ⊢ expand_ast_py(󱁕):
     ¿󱁕ᵉ ᵀ: ↪󱁕
@@ -36,7 +37,7 @@ kw_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for �
          󰤱 all py builtin ops lol
         󱁕.set(c=[󱁕₀,𝔗(␛(),⠤󱁕ᶜ₁﹕⨝𝔗(␛,),𝔗(␛))])
     ⸘󱁕ᵗ≡‹kwd_pfx›:
-        󱁕₀.set(t=kw_remap.get(+󱁕₀,+󱁕₀))
+        󱁕₀.set(t=cln_remap.get(+󱁕₀,+󱁕₀))
         󱁕ᶜ.insert(1,𝔗(𝘀))
         󱁕ᶜ.append(𝔗(␛:))
     󱁕ᶜ=󱁕ᶜᴍexpand_ast_py
