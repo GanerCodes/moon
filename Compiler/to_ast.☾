@@ -103,16 +103,18 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         rewrite_asgns(󱁕) 
         
          󰤱 op modifiers
-         󰤱 ⋄
+        
+        󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝑙,c=󱁕ᶜ₁﹕))
         
         group_𝑙𝑡(󱁕)
         
-         x layer muls and composes
-        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅, ⠤x))∘󱁕ᶜ), pre=✓)
-        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜᴙſ󷺻𝒩(␛∘, ⟞, ⟝)󷺿]), pre=✓)
-        󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘), pre=✓)
+        squashcat = 󱁕↦󱁕🃌≡1⭜󱁕₀⭝󱁕ᶜᴙſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
+        squashmul = 󱁕↦󱁕🃌≡1⭜󱁕₀⭝󱁕ᶜᴙſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x),󰻾),x,y)
         
-         󰤱 de-mangle 󷸊 stuffs here?
+        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅, ⠤x))∘󱁕ᶜ), pre=✓)
+        󱁕.ftrp(‹x›⍭, squashcat, pre=✓)
+        󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘), pre=✓)
+        󱁕.ftrp(‹⋅›⍭, squashmul, pre=✓)
         
          󰤱 short-circuits
         

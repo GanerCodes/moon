@@ -5,7 +5,8 @@ HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉
 py_esc_str  = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ c
 py_ok_𝑉   = 󰲡x∈num ∨ is_normalized("NFKC", x) ∧ x.isidentifier()
 py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
-py_esc_𝑉  = ⨝○󷺺󷹝<127∧⟞∉‹!$› ∨ py_ok_𝑉(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
+ py_esc_𝑉  = ⨝○󷺺󷹝<127∧⟞∉‹!$› ∨ py_ok_𝑉(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
+py_esc_𝑉 = 󷺹ᐵ󷹝<127ᐸ⋀ ∧ ¬(⟞∩‹!$›) ⭜⟞⭝ ␛þ+𝑖.from_bytes(𝑀(⟞))󷹜⁶²+␛þ
 
 𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
 
@@ -23,19 +24,32 @@ py_esc_𝑉  = ⨝○󷺺󷹝<127∧⟞∉‹!$› ∨ py_ok_𝑉(⟞) ⭜⟞⭝
     ⸘󱁕ᵗ≡‹S𝐼›: 󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹setitem›),⠤󱁕)])
     ⸘󱁕ᵗ≡‹S𝑉›: 󱁕.set(c=󱁕⨝𝔗(‹:=›))
     ⸘󱁕ᵗ≡‹str›:󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹strfmt›),⠤󱁕ᐵᵉ ᵀ⭜𝒩(ᐦ,⠤􍪴⟗𝔗(␛"))⭝⟞ᐸ)])
+    ⸘󱁕ᵗ≡‹𝑉_spec›: 󱁕₀.set(t=𝑉_spec_remaps.get(+󱁕,+󱁕))
     ⸘󱁕ᵗ∈‹op_lit 𝑉›⍭: 󱁕.set(c=[𝔗(py_esc_𝑉(+󱁕))󱖔􋔡󱁕])
     ⸘󱁕ᵗ≡‹ƒ_run_𝔸›: 󱁕.set(c=[𝔗(‹*󷺗›),⠤󱁕])
     ⸘󱁕ᵗ≡‹ƒ_run_𝕂›: 󱁕.set(c=[𝔗(‹**›),⠤󱁕])
     ⸘󱁕ᵗ≡‹opC›:
          󰤱 all py builtin ops lol
         󱁕.set(c=[󱁕₀,𝔗(␛(),⠤󱁕ᶜ₁﹕⨝𝔗(␛,),𝔗(␛))])
-    
+    ⸘󱁕ᵗ≡‹kwd_pfx›:
+        ¿+󱁕₀≡␛¿: 󱁕₀.set(t=‹if›)
+        ⸘+󱁕₀≡␛⸘: 󱁕₀.set(t=‹elif›)
+        ⸘+󱁕₀≡␛¡: 󱁕₀.set(t=‹else›)
+        ⸘+󱁕₀≡␛➰: 󱁕₀.set(t=‹while›)
+        ⸘+󱁕₀≡␛∀: 󱁕₀.set(t=‹for›)
+        󱁕ᶜ.insert(1,𝔗(𝘀))
+        󱁕ᶜ.append(𝔗(␛:))
     󱁕ᶜ=󱁕ᶜᴍexpand_ast_py
     ↪ 󱁕
 
+𝖫 = ⥌x,y=4⋅𝘀↦x󷹎𝗻ᐵ+ᵜyᐸ⨝𝗻
 ⊢ ast_to_py(󱁕):
-    󱁕 = expand_ast_py(󱁕)
-    󱁕ᴾ
-    ↪ +󱁕
+    󱁕 = expand_ast_py(󱁕)ᴾ
+    ⊢ ƒ(󱁕):
+        ¿󱁕ᵉ ᵀ: ↪+󱁕
+        ¿󱁕ᵗ≡‹stmts›: ↪ 󱁕ᴍƒ⭢⨝𝗻
+        ¿󱁕ᵗ≡‹blk›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)
+        ↪ 󱁕ᴍƒ⭢⨝ᐦ
+    ↪ ƒ(󱁕)
 
 __exports__ = ‹ast_to_py›⍭
