@@ -58,7 +58,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     󱁕.ftrp(‹lamb›⍭, λ_add_vk, pre=✓)
 
 ⊢ rewrite_ternary(󱁕):
-    is_xpr_atom = 󱁕↦󱁕ᵗ≡x  ∧ 󱁕🃌≡1
+    is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  ∧ 󱁕🃌≡1
      why was this checking for atoms?
 
     @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  x⭜y⭝z
@@ -81,8 +81,9 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         ¿𝚘ᵉ ᴼ ᵗ≕t∉␛⭜␛⭝: ↪󱁕
         β󷸊₀
         is_xpr_atom(β) ⨳
-        𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
-        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
+        󱁕ᴾ
+        𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ ₀ᵗ≡␛𝚜 ⨳
+        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₁⭝ (𝗑(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
         ↪ 𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 
 ⊢ group_targets(󱁕):
