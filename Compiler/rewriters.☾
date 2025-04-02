@@ -158,7 +158,6 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     _
 
 ⊢ regroup_elements(󱁕):  󰤱 treat (some) 𝑉_specs as num
-    󱁕ᴾ
     󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=
             ⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(⍮ 󷺹ᵗ≡‹target_rhs›
                ⍈ 󰲡𝒩(‹applier›, ⠤x﹕􍨄ᐵᵗ≡‹grp›⭜𝗆𝖼𝖺𝗅(⟞)⭝⟞, ⠤x􍨄)⟩

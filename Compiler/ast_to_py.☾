@@ -6,7 +6,8 @@ py_esc_str  = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ 
 py_ok_𝑉   = 󰲡x∈num ∨ is_normalized("NFKC", x) ∧ x.isidentifier()
 py_esc_vchr = 󰲡󰂚󰂪󰂡₍ₓ₎⟗␛ᐧ
  py_esc_𝑉  = ⨝○󷺺󷹝<127∧⟞∉‹!$› ∨ py_ok_𝑉(⟞) ⭜⟞⭝ py_esc_vchr(⟞)
-py_esc_𝑉 = 󷺹ᐵ󷹝<127ᐸ⋀ ∧ ¬(⟞∩‹!$›) ⭜⟞⭝ ␛þ+𝑖.from_bytes(𝑀(⟞))󷹜⁶²+␛þ
+val = 󷺹󷹝<127 ∧ ⟞∉‹!$›
+py_esc_𝑉 = 󷺹ᐖval(⟞)⭜⟞⭝⟞󷹝󷹜⁶²⛶⟗␛þᐸ⨝
 
 𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
 cln_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for›⍭)
@@ -27,7 +28,10 @@ std_remap = ℵ(‹⮂ yield ↪ return›⍭)
     ⸘󱁕ᵗ≡‹S𝐴›: 󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹setattr›),⠤󱁕)])
     ⸘󱁕ᵗ≡‹S𝐼›: 󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹setitem›),⠤󱁕)])
     ⸘󱁕ᵗ≡‹S𝑉›: 󱁕.set(c=󱁕⨝𝔗(‹:=›))
-    ⸘󱁕ᵗ≡‹str›:󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹strfmt›),⠤󱁕ᐵᵉ ᵀ⭜𝒩(ᐦ,⠤􍪴⟗𝔗(␛"))⭝⟞ᐸ)])
+    ⸘󱁕ᵗ≡‹str_sub›: 󱁕.set(c=[𝔗(‹{(⟦+󱁕⟧)}›)])
+    ⸘󱁕ᵗ≡‹strb󷺗󷺗󷺗›: 󱁕.set(c=[𝔗(‹\x⟦+󱁕⭢󷹜󷹜¹⁶⁺²􍢉⟧›)])
+    ⸘󱁕ᵗ≡‹str󷺗󷺗󷺗󷺗›: 󱁕.set(c=[𝔗(‹f"›),⠤󱁕,𝔗(‹"›)])
+     ⸘󱁕ᵗ≡‹str›:󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹strfmt›),⠤󱁕ᐵᵉ ᵀ⭜𝒩(ᐦ,⠤􍪴⟗𝔗(␛"))⭝⟞ᐸ)])
     ⸘󱁕ᵗ≡‹𝑉_spec›: 󱁕₀.set(t=𝑉_spec_remaps.get(+󱁕,+󱁕))
     ⸘󱁕ᵗ∈‹op_lit 𝑉›⍭: 󱁕.set(c=[𝔗(py_esc_𝑉(+󱁕))󱖔􋔡󱁕])
     ⸘󱁕ᵗ∈‹ƒ_run_𝔸 ƒ_dec_𝔸›⍭: 󱁕.set(c=[𝔗(‹*󷺗›),𝗏(󱁕₀)])
@@ -54,7 +58,7 @@ std_remap = ℵ(‹⮂ yield ↪ return›⍭)
     ⊢ ƒ(󱁕):
         ¿󱁕ᵉ ᵀ: ↪+󱁕
         ¿󱁕ᵗ≡‹stmts›: ↪ 󱁕ᴍƒ⭢⨝𝗻
-        ¿󱁕ᵗ≡‹blk›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)
+        ¿󱁕ᵗ≡‹blk›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)+𝗻
         ↪ 󱁕ᴍƒ⭢⨝ᐦ
     ↪ ƒ(󱁕)
 
