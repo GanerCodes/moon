@@ -428,6 +428,7 @@ OPWRAP_(␛⭥)(⥌𝚡,s=␀↦s≅␀ ⭜𝚡ᣆ􀳉􊾗􋊪🃌⭢󷸹⭝ ␛
 
 @OPWRAP_
 ⊢ 󷹜´(𝚡=␀,s=␀,chars=␀):
+    nc = chars≅␀
     ¿chars≅␀: chars = num+ABC+abc
     ⸘    s≅␀: s     = chars🃌
     ¿s≅␀:  󰤱􊽨 is this bad?
@@ -444,6 +445,7 @@ OPWRAP_(␛⭥)(⥌𝚡,s=␀↦s≅␀ ⭜𝚡ᣆ􀳉􊾗􋊪🃌⭢󷸹⭝ ␛
     ⸘𝚡ᐹ ᔐ:
         ¿𝚡∧𝚡₀≡␛-: 𝚡,p=𝚡₁﹕,󷰾
         ¡       :   p=1
+        ¿nc∧𝚢≤36: 𝚡󷸊⫰
         𝚡 = 𝚡ᐖchars󰑅ᔨ⟞ᐸſ⁰󷺹⋅𝚢+󷺽⭢⋅p
         ¿s≅␀: ↪𝚡
     ¿s≅␀: s≔1
