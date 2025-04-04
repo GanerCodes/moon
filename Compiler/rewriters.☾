@@ -138,7 +138,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         o,v = 󱁕ᶜ𝌂󷺹ᵗ≡‹𝗈𝗉›
         C = ⛶𝗈𝗉𝖢(o.pop(0),v.pop(0),𝖽(v.pop(0))) ␛
             +←vᐖ𝗈𝗉𝖢(o.pop(0),𝗉,𝖽(⟞))
-        ↪ 󱁕.set(t=‹opC›,c=Cſ󷺻𝗈𝗉𝖢(denode_op(𝗈𝗉(␛∧󱖔􋄥󱁕)),⟞,⟝)󷺿)
+        ↪ 󱁕.set(t=‹opC›,c=Cſ󷺻𝗈𝗉𝖢(␛∧,⟞,⟝)󷺿)
 
 ⊢ rewrite_for(󱁕):
     spl = 󷺹󷹌¹⟝ᣆ􍯏􋌵󰂂³ⴴ󷺿
@@ -178,7 +178,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         ✗⨳
     󱁕.ftrp(‹applier›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]), pre=✓)
 
-⊢ rewrite_asgns(󱁕):  󰤱
+⊢ rewrite_asgns(󱁕):
     󱁕.ftrp(‹asgn›⍭, 󱁕↦𝗑(𝗈𝗉𝖢(denode_op(𝗈𝗉(␛≔󱖔􋁿󱁕),󰻾),⠤󱁕)), pre=✓)
     date_󱁕(󷺹ᵗ∈‹asgn_targs asgn_targ›⍭, ‹x›)(󱁕)ᐵ
         .flat(󷺹ᵗ≡␛x,✗).flat(󷺹ᵗ≡‹applier›,✗)

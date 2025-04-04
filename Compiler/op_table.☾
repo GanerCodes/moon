@@ -1,19 +1,5 @@
-󰋺(‹tree_txt›, *)
-
-MT = "NPSBαςνλ"
-󱀘 OP(ℵ⭢ᐹ):
-    __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›  ⟦𝕊ᴸ🃌󷸓⟧󰄎⟦𝕊ᴿ🃌󷸓⟧
-    ⊢ __init__(𝕊, ⠤𝔸, ⠶𝕂):
-        super().__init__(⠤𝔸, ⠶𝕂)
-        𝕊.setdef(ᐦ)
-    ⊢ __getitem__(𝕊, x):
-        ¿x⊂MT: ↪ x⊂𝕊ᴹ⭜x
-        ↪ super().__getitem__(x)
-    ⊢ __setitem__(𝕊, x, y):
-        ¿x⊂MT: ↪ 𝕊ᴹ 󷸊 󱖔ʸ􀸩􋁗􀸧􋁎 x
-        ↪ super().__setitem__(x,y)
-    __setattr__ = __setitem__
-    __getattr__ = __getitem__
+󰋺(__dir__ / ‹util_tmp›, *)
+󰋺(__dir__ / ‹generate_operators.☾›)
 
 𝙾𝚃 = [⠤‹↪ ᴾᴺ␉= ᴮ󰁌␉, ᴮ󰀒󰁌󰁝␉⠤ ᴾ ⠶ ᴾ␉: ᴺᴾ󰀒ᴮ›⍭􋕩􋂜􊿖􊿉􋕩,
       ⠤get_operator_table(ops),
@@ -40,6 +26,21 @@ add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
     ␀A2     →   󰀒      
             ⭠  ᴾ   ␀A3 
     ␀A3     ⭢   󰀒      ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
+
+MT = "NPSBαςνλ"
+󱀘 OP(ℵ⭢ᐹ):
+    __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›  ⟦𝕊ᴸ🃌󷸓⟧󰄎⟦𝕊ᴿ🃌󷸓⟧
+    ⊢ __init__(𝕊, ⠤𝔸, ⠶𝕂):
+        super().__init__(⠤𝔸, ⠶𝕂)
+        𝕊.setdef(ᐦ)
+    ⊢ __getitem__(𝕊, x):
+        ¿x⊂MT: ↪ x⊂𝕊ᴹ⭜x
+        ↪ super().__getitem__(x)
+    ⊢ __setitem__(𝕊, x, y):
+        ¿x⊂MT: ↪ 𝕊ᴹ 󷸊 󱖔ʸ􀸩􋁗􀸧􋁎 x
+        ↪ super().__setitem__(x,y)
+    __setattr__ = __setitem__
+    __getattr__ = __getitem__
 
 ⊢ cb(𝒪):
     ∀ℴ∈𝒪⁺    : ℴᴿ󷸊󰌷‹≔󷸉󷸊󷸋›
@@ -76,10 +77,8 @@ add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
     ↪ cb(𝒪)
     
 OP_TABLE = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
-IS_OP    = 󱁕↦󱁕ᵗ≡"𝗈𝗉" ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
-
+IS_OP    = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ 󷺗 ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
-
 𝘳 = ℵ(OP_LIT    = 𝒪⁻,
       VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
       CLN_KWDS  = ‹⊢󱀘¿⸘¡➰∀›,
