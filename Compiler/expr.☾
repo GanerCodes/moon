@@ -3,7 +3,7 @@
 𝑩 = 𝚲BOX(stackr(⠤𝔸))
 𝑩𝒏 = box○󷺹ᴾ∘✗
 
-⊢ denode_op(󱁕,𝔓):  󰤱 this doesn't work if mod has newlines
+⊢ denode_op(󱁕,𝔓=󰻾):  󰤱 this doesn't work if mod has newlines
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀
     

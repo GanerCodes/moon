@@ -100,6 +100,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         regroup_elements(󱁕)
         rewrite_asgns(󱁕) 
+        rewrite_cmp(󱁕)
         
          󰤱 op modifiers
         
