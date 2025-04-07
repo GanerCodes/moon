@@ -1,9 +1,12 @@
+󰋺(__dir__ / ‹..› / ‹☾/Libraries/text_format›)
 󰋺(__dir__ / ‹util_tmp›, *)
 󰋺(__dir__ / ‹generate_operators.☾›)
 
 𝙾𝚃 = [⠤‹↪ ᴾᴺ␉= ᴮ󰁌␉, ᴮ󰀒󰁌󰁝␉⠤ ᴾ ⠶ ᴾ␉: ᴺᴾ󰀒ᴮ›⍭􋕩􋂜􊿖􊿉􋕩,
       ⠤get_operator_table(ops),
       [‹. ᴺ›⍭], [‹⬆ ᴮ›⍭]]  󰤱 ⬆ is stupid and causes bugs w/ (a₉,⠤b,(c₁ᶻ₂³₂ᵃ󰃦󰁌,d),z) ≔ 𝕏
+
+Ƥ(𝙾𝚃)
 
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 add_before(␛!   , [‹␀CAT󷺗󷺗󷺗 ᴮᴺ󷺗›⍭])
@@ -76,8 +79,8 @@ MT = "NPSBαςνλ"
     
     ↪ cb(𝒪)
     
-OP_TABLE = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
-IS_OP    = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
+OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
+IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ 󷺗 ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 𝘳 = ℵ(OP_LIT    = 𝒪⁻,
       VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,

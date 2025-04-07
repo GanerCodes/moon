@@ -12,12 +12,12 @@
     `2󷺤✗ →≡ 2 ≡← 1󷺦2`
     `0󷺦2 →≡ 0`
     `0󷺦0 →≡ ✓`
-󷰝 ∨⩔󷺥󷺫  𝚡∧𝚡 ᴍ⟦⁅⟦⁅vs⁆⁅VVS⁆⟧𝕊⁆⁅⟦⁅vs⁆⁅VVS⁆⟧/⁆⟧ {OR,OR,NOR,NOR} (does{n't,,n't,} short circuit)
+󷰝 ∨⩔󷺥󷺫  𝚡∧𝚡 ᴍ⟦⁅⟦⁅vs⁆⁅VVS⁆⟧𝕊⁆⁅⟦⁅vs⁆⁅VVS⁆⟧/⁆⟧ {OR,OR,NOR,NOR} (does{,n't,,n't} short circuit)
     `✓∨✓ →≡ ✓ ≡← ✗󷺥✗`
     `✗󷺥✓ →≡ ✗ ≡← 0∨✗`
     `1∨2 →≡ 1 ≡← 1∨0`
     `0󷺥0 →≡ ✓`
-󷰞 ∧⩓󷺒󷺬  𝚡∧𝚡 ᴍ⟦⁅⟦⁅vw⁆⁅VVW⁆⟧𝕊⁆⁅⟦⁅vw⁆⁅VVW⁆⟧/⁆⟧ {AND,AND,NAND,NAND} (does{n't,,n't,} short circuit)
+󷰞 ∧⩓󷺒󷺬  𝚡∧𝚡 ᴍ⟦⁅⟦⁅vw⁆⁅VVW⁆⟧𝕊⁆⁅⟦⁅vw⁆⁅VVW⁆⟧/⁆⟧ {AND,AND,NAND,NAND} (does{,n't,,n't} short circuit)
     `✓∧✓ →≡ ✓`
     `✓󷺒✗ →≡ ✓`
     `1∧2 →≡ 2`

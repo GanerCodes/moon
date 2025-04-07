@@ -2,6 +2,7 @@
 
     󰤱  bootstrap everything
     󰤱  h􋕩ˣ􋕩 supscript object attr?
+    󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
     󰤱  UGEX EMPTY LIST INPUT THING
