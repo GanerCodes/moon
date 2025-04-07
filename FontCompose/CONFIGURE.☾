@@ -255,7 +255,7 @@ DAT󷸊+𝗻+generate_fontcompose_conf(ops)
 ¿ __name__ ≡ "__main__":
     op_gen.main
     ‹Running tests:›☾
-    󰋺(moon_dir / ‹☾/Tests/tests.☾›)
+    󰋺(moon_dir / ‹Tests/tests.☾›)
     
     DAT☾
     󰋺("generate")

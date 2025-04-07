@@ -1,5 +1,5 @@
 󰋺(‹cache›); 󰋺(‹peggle2›); 󰋺(‹𝐍›)
-󰋺(cpy_dir / ‹☾/Libraries/j☾/rgx_golfatron›, ‹rgx_golfatron›)
+󰋺(‹j☾/rgx_golfatron›, ‹rgx_golfatron›)
 HEADER = (__dir__ / ‹header.g☾›)
 flip = UPSIDEDOWNSYNDROME.flip
 

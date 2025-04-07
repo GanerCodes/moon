@@ -1,12 +1,10 @@
-󰋺(__dir__ / ‹..› / ‹☾/Libraries/text_format›)
+󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(__dir__ / ‹util_tmp›, *)
 󰋺(__dir__ / ‹generate_operators.☾›)
 
 𝙾𝚃 = [⠤‹↪ ᴾᴺ␉= ᴮ󰁌␉, ᴮ󰀒󰁌󰁝␉⠤ ᴾ ⠶ ᴾ␉: ᴺᴾ󰀒ᴮ›⍭􋕩􋂜􊿖􊿉􋕩,
       ⠤get_operator_table(ops),
       [‹. ᴺ›⍭], [‹⬆ ᴮ›⍭]]  󰤱 ⬆ is stupid and causes bugs w/ (a₉,⠤b,(c₁ᶻ₂³₂ᵃ󰃦󰁌,d),z) ≔ 𝕏
-
-Ƥ(𝙾𝚃)
 
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 add_before(␛!   , [‹␀CAT󷺗󷺗󷺗 ᴮᴺ󷺗›⍭])
@@ -30,7 +28,10 @@ add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
             ⭠  ᴾ   ␀A3 
     ␀A3     ⭢   󰀒      ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
 
-MT = "NPSBαςνλ"
+MT = "NPSBlrαςνλΔ"
+ Δ: unary cares about side
+ l: only left  unary valid
+ r: only right unary valid
 󱀘 OP(ℵ⭢ᐹ):
     __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›  ⟦𝕊ᴸ🃌󷸓⟧󰄎⟦𝕊ᴿ🃌󷸓⟧
     ⊢ __init__(𝕊, ⠤𝔸, ⠶𝕂):

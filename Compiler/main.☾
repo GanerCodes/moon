@@ -1,6 +1,7 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 code = 󰦥󰦥󰦥󰦥󰦥
- brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
+
+brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
 
  2 "joe" x ƒ
  5󰄗₁􌾔₃􌾔₂󰄎₅󰄎₂󰄘 ƒ
@@ -309,7 +310,7 @@ code = 󰦥󰦥󰦥󰦥󰦥
  5ᑀ²
  2:5,2:3:5:,2:2::::::
 
-󰋺(__dir__ / ‹..› / ‹☾/Libraries/text_format›)
+󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(␛🌈)
 󰋺(‹tree›, *)
 

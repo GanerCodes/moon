@@ -1,5 +1,5 @@
 󰋺(‹http›)
-󰋺(cpy_dir / ‹☾/generate_operators›, ⠤‹ops to_docs›⍭)
+󰋺(moon_dir / ‹Compiler/generate_operators›, ⠤‹ops to_docs›⍭)
 
 ucod = ℵ←(moon_dir / "FontCompose/UnicodeQuery/unicode.txt") ␛
         󷹎𝗻󰈲󷺹∧⟞∌␛#∧␛.∉⟞ᐸ ᐵ󷹎¹␛;ᐵ.lower⬄𝘀ᐸꟿ⁰󷺹󷹜¹⁶󷹝→⋄󷺽→ᴙ
@@ -7,7 +7,7 @@ real_files = ‹wasm_stuff.zip font.ttf index.j☾›⍭
 
 JS    = ‹⟦joon_header⟧𝗻⟦transpile(("index.j☾"))⟧›
 DOCS  = to_docs(ops)󱖔􋈗􋐃
-STYLE = ᵇ(cpy_dir / ‹FontCompose/Output/style_regex.json›)
+STYLE = ᵇ(moon_dir / ‹FontCompose/Output/style_regex.json›)
 FONTT = ᵇ("../../FontCompose/Output/99_JuliaMono-Regular.ttf")
 FONTW = ᵇ("../../FontCompose/Output/99_JuliaMono-Regular.woff2")
 LOGO  = ᵇ("../Assets/moon.svg")
