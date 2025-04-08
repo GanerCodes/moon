@@ -166,16 +166,21 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         ↪ Ń(‹∀_stmt›, 𝖿𝗈𝗋(𝖭𝖴𝖫𝖫, 𝗑(⠤𝟐), 𝗑(⠤𝟑), ⠤𝟒⭜𝟒⭝⍁))󱖔􋔡󱁕
     _
 
-⊢ regroup_elements(󱁕,𝚌𝚘𝚍𝚎,𝔓):  󰤱 treat (some) 𝑉_specs as num
+⊢ regroup_elements(󱁕,𝔓,𝚌𝚘𝚍𝚎):  󰤱 treat (some) 𝑉_specs as num
     󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=
             ⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(⍮ 󷺹ᵗ≡‹target_rhs›
                ⍈ 󰲡𝒩(‹applier›, ⠤x﹕􍨄ᐵᵗ≡‹grp›⭜𝗆𝖼𝖺𝗅(⟞)⭝⟞, ⠤x􍨄)⟩
              󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), pre=✓)
     󱁕.ftrp(‹target_rhs›⍭, 󱁕↦𝒩(‹applier›,󱁕₀,⠤󱁕₁﹕), pre=✓)󱖔􋔡󱁕
     ⊢ 𝙁(𝚙,󱁕):
-        ¿󱁕ᵗ≡‹mcal›:  jank?
-            s = get_orig_section(𝚌𝚘𝚍𝚎,󱁕)₁﹕􍨄
-            ↪𝒩(␛∘,𝚙, ⠤s⭜𝔓(s,loc=󱁕)⭝⍁ 🟑󱁕₀ ₁☾ᐒ𝘾(⟞)⭜⟞₀ ₁﹕⭝􍪴🟑)  󰤱
+        ¿󱁕ᵗ≡‹mcal›:
+            C = ⍁
+            ¿+󱁕₀ ₁:
+                p = 󱁕ᵉ ᵖꟿ⁰󰲧x,y+1,z,w-1󰅂
+                C = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,p),0,‹ƒ_run_params›,loc=p)
+                C = Cᐖ𝔓(𝗑(⟞)🟑⥉𝑩𝑩🟑,26)🟑⥉𝑩𝑩🟑
+            r = 𝒩(␛∘,𝚙,⠤C)
+            ↪ r
         ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,  󱁕₁)
         ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,𝔗(󱁕))
         ✗⨳

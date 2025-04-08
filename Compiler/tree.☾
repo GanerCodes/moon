@@ -21,14 +21,18 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
         ¿󱁕🃌≤i∨(󱁕≔󱁕ᵢ)ᵗ≠t:↪
     ↪✓
 
-⊢ get_orig_section(𝚌, 󱁕):
-    𝚜, 𝚙 = lines(𝚌), 󱁕ᵉ ᵖ
+lines = 𝚌↦𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+
+⊢ get_orig_section(𝚌,󱁕):
+    𝚜, 𝚙 = lines(𝚌), 󱁕ᐹŃ⭜󱁕ᵉ ᵖ⭝󱁕
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
     ¿𝙻🃌≡1: 𝙻 = 𝙻₀ 􀲸􊬤﹕􀲸􊬦⛶
     ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
     ↪ 𝙻⨝𝗻
 
-lines = 𝚌↦𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+ metareparse; rerun entire parser/grammar on node's region
+𝔐𝔓 = ⥌𝔓,𝚌𝚘𝚍𝚎,n,t,loc=□↦󷺻𝔓(get_orig_section(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),
+                          n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
 
 ⊢ offset_𝚕𝚌(󱁕,𝚙):  󰤱 shouldn't only the first lines col be shifted right?
     ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ󷸊₂ᐵ󱑼𝚙ꟿ+ᐸ󰆩

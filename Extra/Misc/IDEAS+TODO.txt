@@ -1,12 +1,12 @@
 § TODOs ------------------------------------
 
     󰤱  bootstrap everything
-    󰤱  h􋕩ˣ􋕩 supscript object attr?
+    󰤱  a?₂?.x?(x,y)
+    󰤱  x􍪵 should be exp
     󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
     󰤱  Documentation (oh gosh people are finding the project now)
     󰤱  ± ∓ superscript ; also ⋅ and ÷
     󰤱  UGEX EMPTY LIST INPUT THING
-    󰤱  x􍪵 should be exp
     󰤱  5󰸵2 sould be "05" ≡ 5󷹜²􍢉
     󰤱  heckin [1,2,34,󷱂]⫰ᔨ
     󰤱  textwrap is cringe
