@@ -27,7 +27,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ¿force_full_match ∧ is_short(󱁕): ↪□
         ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
         󱁕.rm(󷺹ᵗ≡␛󰆴)
-        reform_positions(󱁕, 𝘳≡‹parser_main›⭜𝚌𝚘𝚍𝚎⭝𝚌)
+        reform_positions(󱁕, 𝘳≡‹parser_main› ⭜𝚌𝚘𝚍𝚎⭝ 𝚌)
         ¿loc≇□: offset_𝚕𝚌(󱁕, loc)
         ¿trim_length_info:
             󰆴 󱁕ᵉ["parse_len"], 󱁕ᵉ["input_len"]
@@ -59,7 +59,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, ⠤𝔓(+󱁕⭢󷸼, 5, ‹norm_expr›, loc=󱁕)))
         
         @(󱁕.ftrp(‹supscript›⍭, ⬤))
-        ⊢ _(󱁕):
+        ⊢ _(󱁕):  󰤱 superscript exponents dont glue right
             𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝, 0, ‹gen_expr_atom›, loc=󱁕, warn_short=✗, force_full_match=✓)
             attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹𝑉›
             ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕), 𝚑) ␛
@@ -78,7 +78,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         rewrite_strs(󱁕)
         flatten_statments(󱁕)
         ¿𝘯≤9:↪󱁕
-         󰤱 ugx stuff
+        
+         󰤱 ugex
         
         󱁕.ftrp(‹x›⍭, 󱁕↦parse_expr(󱁕), pre=✓)
         󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑉› ∧ +⟞₁≡+⟞₂≡‹NULL›)
@@ -97,8 +98,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             󱁕􀲪 = 𝒏₀
             ↪󱁕
         ¿𝘯≤25:↪󱁕
-        
-        regroup_elements(󱁕)
+        regroup_elements(󱁕,𝚌𝚘𝚍𝚎,𝔓(⬤,26,‹ƒ_dec_params›))
+        ¿𝘯≤26:↪󱁕
         rewrite_asgns(󱁕) 
         rewrite_cmp(󱁕)
         
@@ -110,7 +111,6 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         squashcat = 󱁕↦󱁕🃌≡1⭜󱁕₀⭝󱁕ᶜᴙſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
         squashmul = 󱁕↦󱁕🃌≡1⭜󱁕₀⭝󱁕ᶜᴙſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x),󰻾),x,y)
-        
         󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), pre=✓)
         󱁕.ftrp(‹x›⍭, squashcat, pre=✓)
         󱁕.ftrp(‹opC›⍭, 󷺹.set(t=␛∘), pre=✓)
