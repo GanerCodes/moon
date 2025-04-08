@@ -1,11 +1,26 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
+󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
+
 code = 󰦥󰦥󰦥󰦥󰦥
-globals().__setitem__("þSTK",[])
- globals().__setitem__("þPSH",󰲡þSTK.append(x)∨x)
- globals().__setitem__("þPKE",󰲡þSTK₋ₓ)
- globals().__setitem__("þPOP",󰲡þSTK.pop(-x))
- globals().__setitem__("þDEL",󰲡þSTK.__delitem__(-x:))
- ´␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
+globals().update(þSTK=[])
+globals().update(þPSH=󰲡þSTK.append(x)∨x)
+globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
+globals().update(þPOP=󰲡þSTK.pop(-1-x))
+globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
+´␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
+
+25 print
+a,b = 5,2
+a⋄b → print
+[a,b] print
+ƒ = print
+a!ƒ
+
+‹to_ast ast_to_py›⍭ᴍ󰋺
+󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
+C = Cᐖ𝔓(𝗑(⟞),26)
+
+󰦥󰦥󰦥󰦥󰦥⬄
 
  brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
 
@@ -89,8 +104,6 @@ globals().__setitem__("þSTK",[])
  ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
  a≔b≔c
  ((cᵃ.x,k)) ≔ α
-
-󰦥󰦥󰦥󰦥󰦥⬄
 
  ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
 
@@ -324,13 +337,24 @@ globals().__setitem__("þSTK",[])
 ¿𝔸🃌>1: code = 𝔸₁
 
 󱁕 = to_ast(code)
-‹⟦␛─⋅50⟧ TREE ⟦␛─⋅50⟧›☾
-BOX(󱁕ᴾ∘✗)☾
-‹⟦␛─⋅50⟧──────⟦␛─⋅50⟧›☾
-ast_to_py(󱁕)☾
+‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
+𝑩𝑩(󱁕)
+‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
 
+show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
- ‹⟦␛─⋅50⟧ WEED ⟦␛─⋅50⟧›☾
+𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
+‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
+show(ast_to_py(󱁕.cpr, no_rename_vars=✓))
+show(ast_to_py(󱁕.cpr))
+pyc = ast_to_py(󱁕.cpr, reparse=✓)
+
+stackr(show(code,✗),show(pyc,✗))☾
+
+exec(pyc)
+
+ try             :eval(pyc)☾
+ except Exception:exec(pyc)
+
  󱁕.cpr.flat(󷺹ᵉ ᵀ󷺥(⟞ᵗ∈‹x ∘ 𝐴 𝐼 𝑙 𝑡 ⸓ target_rhs tern lamb opC 𝗈𝗉 grp asgn asgn_targs›⍭)).rm(¬○+).frp(ⴳ,󷺹.set(t=ℵ􍪵􊾾(‹asgn_targs 𝑇 opC 𝐶 lamb λ 𝗈𝗉 𝑜 asgn = target_rhs .›⍭)􍪴􊫼),pre=✓).frp(ⴳ,󷺹.cp(t=⟞ᵗᣆ􍯏􋁤􋕩ᵍʳᵖ􋕩𝚲⟞󷸻ᴍ+⭢⨝,c=⟞ᶜᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩󷺹₁﹕􍨄,e=⟞ᵉ ᵀ⭜ℵ􋄅(T=✓)⭝ℵ􋄅),pre=✓).P
  date_󱁕(ⴳ,󷺹ᵗ≡‹grp›∧+⟞₀≡␛()(󱁕)ᐵᴾ
- ‹⟦␛─⋅50⟧──────⟦␛─⋅50⟧›☾

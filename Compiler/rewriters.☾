@@ -65,16 +65,15 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     ⊢ _(󱁕):
         𝚘,⠤α = 󱁕
         ¿𝚘ᵉ ᴼ ᵗ≠␛⭝: ↪󱁕
-        α,⠤β = 󱁕
+        α,⠤β = α
+         𝑩𝑩(󱁕,"bruh")
          stackr(𝚘ᴾ∘(✗),αᴾ∘(✗),⠤βᐵᴾ∘(✗))☾
-        β󷸊₀
-        is_xpr_atom(β) ⨳
         ¿𝚘₂🃌: ↪󱁕
         γ = α₀
         ¿γᵗ≠‹opC›: ↪󱁕
         ¿γ₀ᵉ ᴼ ᵗ≠␛⭜: ↪󱁕
         ¿γ₀ ₂🃌: ↪󱁕
-        ↪ 𝗍𝖾𝗋𝗇(⠤γ₁﹕, β)
+        ↪ 𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
     
     @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  𝅘𝅥𝅮 all the single conditionals 𝅘𝅥𝅮
     ⊢ _(󱁕):
@@ -101,7 +100,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     ➰𝚌⭜v≔𝚌.pop(0):
         ¿brk(v)  : C.append(v)
         ⸘cal(v)🟑∧C🟑: C.append(𝗆𝖼𝖺𝗅(v))  󰤱 is this a regression?
-        ⸘dot(v)  : C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)))
+        ⸘dot(v)  : C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)ᑀᵗ≡␛𝑉 ⭜𝗌𝗍𝗋(⟞)⭝ ⟞))
         ¡        : adds(v)
     adds(□)
     󱁕ᶜ = R
@@ -177,12 +176,12 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
             C = ⍁
             ¿+󱁕₀ ₁:
                 p = 󱁕ᵉ ᵖꟿ⁰󰲧x,y+1,z,w-1󰅂
-                C = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,p),0,‹ƒ_run_params›,loc=p)
-                C = Cᐖ𝔓(𝗑(⟞)🟑⥉𝑩𝑩🟑,26)🟑⥉𝑩𝑩🟑
+                C = 𝔓(get_orig_section(𝚌𝚘𝚍𝚎,p),0,‹ƒ_run_params›,loc=p,wrap=✓)
+                C = Cᐖ𝔓(𝗑(⟞),26)
             r = 𝒩(␛∘,𝚙,⠤C)
             ↪ r
-        ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,  󱁕₁)
-        ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,𝔗(󱁕))
+        ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,󱁕₁)
+        ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,󱁕)
         ✗⨳
     󱁕.ftrp(‹applier›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]), pre=✓)
 
