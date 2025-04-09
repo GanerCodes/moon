@@ -33,7 +33,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿loc≇□: offset_𝚕𝚌(󱁕,locᐹŃ ⭜locᵉ ᵖ﹕₂⭝ loc﹕₂)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
             ¿wrap: 󱁕=𝒩(‹wrap›, 󱁕)
-            ¿𝘳≡‹parser_main›: BOX(BOX(linenum(𝚌,s=ŧ𝼝(fg=‹915›)))⋄(󱁕ᴾ∘✗))☾
+             ¿𝘳≡‹parser_main›: BOX(BOX(linenum(𝚌,s=ŧ𝼝(fg=‹915›)))⋄(󱁕ᴾ∘✗))☾
         
         ¿𝘯≤0:↪󱁕
         

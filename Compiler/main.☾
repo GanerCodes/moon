@@ -21,6 +21,7 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 
 ƒ = print
 [1,2,3] → 󷺺+1ᐸ → ƒ
+48273 ƒ
 󰦥󰦥󰦥󰦥󰦥⬄
 
 󰋺(__dir__ / ‹../Libraries/text_format›)
@@ -33,16 +34,16 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
 󱁕 = to_ast(code)
-‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
-𝑩𝑩(󱁕)
+ ‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
+ 𝑩𝑩(󱁕)
 
  ‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
  𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
 
-‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
-stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
+ ‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
+ stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
 
 pyc = ast_to_py(󱁕.cpr, reparse=✓)
-stackr(show(code,✗),show(pyc,✗))☾
+ stackr(show(code,✗),show(pyc,✗))☾
 
 exec(pyc)
