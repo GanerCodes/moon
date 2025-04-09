@@ -4,7 +4,7 @@
 𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
 cln_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for›⍭)
 std_remap = ℵ(‹⮂ yield ↪ return›⍭)
-op_remap = ℵ(‹~~%%^^&&||>><<++--⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ < ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in›)
+op_remap = ℵ(‹~~%%^^&&||>><<++¯---⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ < ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›)
 ENC = ‹ýüûúùøöõôóòñðïîíìëêéèçæåäãâáàßÝÜÛÚÙØÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀºµª›
 
 HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉

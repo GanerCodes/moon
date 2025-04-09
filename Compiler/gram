@@ -32,8 +32,8 @@ expr_not_comma = (¬(','      ) ⠶norm_expr_atom)+
 
 ƒ_dec_params = ((⠶ƒ_dec_param 󰆴(',' 𝗪?))+ ⠶ƒ_dec_param?) ∨ ⠶ƒ_dec_param
 ƒ_run_params = ((⠶ƒ_run_param 󰆴(',' 𝗪?))+ ⠶ƒ_run_param?) ∨ ⠶ƒ_run_param
-ƒ_dec_param = ƒ_kw ∨ ƒ_dec_𝔸 ∨ ƒ_dec_𝕂 ∨ ƒ_𝑉
-ƒ_run_param = ƒ_kw ∨ ƒ_run_𝔸 ∨ ƒ_run_𝕂 ∨ ƒ_val
+ƒ_dec_param = ƒ_kw ∨ (ƒ_dec_𝔸 ∨ ƒ_dec_𝕂 ∨ ƒ_𝑉  ) 󰆴𝘄?
+ƒ_run_param = ƒ_kw ∨ (ƒ_run_𝔸 ∨ ƒ_run_𝕂 ∨ ƒ_val) 󰆴𝘄?
 
 ƒ_dec_𝔸 = 󰆴(𝘄? ↷ '⠤') ⠶ƒ_𝑉
 ƒ_dec_𝕂 = 󰆴(𝘄? ↷ '⠶') ⠶ƒ_𝑉
@@ -59,9 +59,9 @@ number_exp = number supscript
 
 script = supscript ∨ subscript
 grp = ~‹[\[({⁅⟦]› (󰆴𝗪? ↷ (multi_expr ∨ ✓)) ~‹[\])}⁆⟧]›
-𝑉 = 󰆴"´" ~‹[^´]+› 󰆴"´" ∨ (
-         ƨ(¬(𝗪 ∨ ~‹󰦥{5}|[⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]› ∨ op ∨ 𝑉_spec ∨ cln_kwd ∨ script)
-           ~‹.›)+)
+𝑉 = ƨ(󰆴"´" ~‹[^´]+› 󰆴"´"
+      ∨ (¬(𝗪 ∨ ~‹󰦥{5}|[⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]› ∨ op ∨ 𝑉_spec ∨ cln_kwd ∨ script)
+         ~‹.›)+)
 
 op = ((op_⸓_l = ƨ((_op_⸓_l (_op_⸓_l ∨ supscript)*)?))
        op_lit

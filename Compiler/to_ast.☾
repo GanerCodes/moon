@@ -112,12 +112,22 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x),󰻾),x,y)
-        󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), pre=✓)
+        󱁕.ftrp(‹x󷺗󷺗›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), pre=✓)
         󱁕.ftrp(‹x󷺗󷺗›⍭,squashcat  ,pre=✓)
         󱁕.ftrp(‹opC›⍭,󷺹.set(t=␛∘),pre=✓)
         󱁕.ftrp(‹⋅󷺗󷺗›⍭,squashmul  ,pre=✓)
         
-         󰤱 whiskerz
+        @(󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,⬤,pre=✓))
+        ⊢ _(󱁕):  ignores modifiers, is this bad?
+                 󰤱 prob redo this for eval order, ughhhhhhh
+            𝚕,𝚛 = 󱁕₀ᵉ ᵏ
+            ¿  𝚕≡␛ᐳ∧␛ᐸ≡𝚛 ∨ 𝚕≡␛ᐳ∧␛ᑅ≡𝚛 ∨ 𝚕≡␛ᑀ∧␛ᐸ≡𝚛 ␛
+             ∨ 𝚕≡␛ᑀ∧␛ᑅ≡𝚛 ∧ 󱁕🃌≡3 ∧ 󱁕₁≠𝖭𝖴𝖫𝖫≠󱁕₂:
+                ↪ 󱁕.set(c=[󱁕₀ ₁,⠤󱁕₁﹕])
+             󰤱
+            󱁕ᴾ
+            ↪ 󱁕
+        
          󰤱 short-circuits
         
         ↪ 󱁕

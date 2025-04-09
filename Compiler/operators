@@ -723,6 +723,7 @@
 󷰾 𝓐𝓚   ᴍMS⟦AK⟧ whisker {vargs,kargs}
     `󷺻[⠤𝓐,⟞,𝓚􊯛ⱼ]ᐸ(5,2,j=15) ≡ [2,5,15]`
 󷰾 󰮈   ᴍcot signal delete element from iteration
+󷰾 󱣩   ᴍcot a variable modifier is present but value isn't set
 >   ¡ℭ ⦑c⦑fa2⦒⦒ 󰮈
     Many iteration operators disgard values if their operand function returns this.
     `[1,2,3,4,5]ᐵ>2⭜⟞⭝󰮈ᐸ ≡ [3,4,5]`

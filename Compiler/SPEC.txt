@@ -1,0 +1,8 @@
+þPSH = 󰲡 push x onto þSTK and return x
+þPKE = 󰲡 x'th item on þSTK
+þPOP = 󰲡 pop and returns xth item on þSTK
+þDEL = 󰲡 delete x items from top of þSTK
+␀CAT = 󰲣𝗙(y)⭜y(x)⭝x⋅y
+
+CUR   = ⥌ƒ  ,⠤𝙰↦⥌  ⠤𝙱,⠶𝙺↦ƒ(    ⠤𝙰,⠤𝙱,⠶𝙺)
+CUR_1 = ⥌ƒ,x,⠤𝙰↦⥌y,⠤𝙱,⠶𝙺↦ƒ(y,x,⠤𝙰,⠤𝙱,⠶𝙺)

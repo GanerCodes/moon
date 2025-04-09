@@ -8,6 +8,8 @@ globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
 globals().update(þPOP=󰲡þSTK.pop(-1-x))
 globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
 ´␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
+CUR   = ⥌ƒ  ,⠤𝙰↦⥌  ⠤𝙱,⠶𝙺↦ƒ(    ⠤𝙰,⠤𝙱,⠶𝙺)
+CUR_1 = ⥌ƒ,x,⠤𝙰↦⥌y,⠤𝙱,⠶𝙺↦ƒ(y,x,⠤𝙰,⠤𝙱,⠶𝙺)
 
 25 print
 a,b = 5,2
@@ -345,10 +347,9 @@ show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
 𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
 ‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
-show(ast_to_py(󱁕.cpr, no_rename_vars=✓))
-show(ast_to_py(󱁕.cpr))
-pyc = ast_to_py(󱁕.cpr, reparse=✓)
+stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
 
+pyc = ast_to_py(󱁕.cpr, reparse=✓)
 stackr(show(code,✗),show(pyc,✗))☾
 
 exec(pyc)

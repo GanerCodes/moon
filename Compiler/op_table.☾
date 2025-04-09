@@ -16,24 +16,24 @@ add_before(‹␀A2›, [‹⭜󷺗󷺗󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 add_before(␛⭜   , [‹⭝󷺗󷺗󷺗󷺗󷺗󷺗 ᴮᴺ󰁌›⍭])
 add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 
-𝚂𝚃=‹     ␀T   ᴺ 󰀒      
-    ␀TAC ␀T⟞  ᴺ 󰀒      
-         ␀T⟝  ᴺᴾ   ␀TAC
-    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ ␀TAC
-            ⬅  ᴾ   ␀A1 
-    ␀A1     ➡   󰀒      
-            ←  ᴾ   ␀A2 
-    ␀A2     ⥉    ᴮ ␀A2 
-    ␀A2     →   󰀒      
-            ⭠  ᴾ   ␀A3 
-    ␀A3     ⭢   󰀒      ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
+𝚂𝚃=‹     ␀T   ᴺ 󰀒       
+    ␀TAC ␀T⟞  ᴺ 󰀒       
+         ␀T⟝  ᴺᴾ    ␀TAC
+    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ󰀷 ␀TAC
+            ⬅  ᴾ    ␀A1 
+    ␀A1     ➡   󰀒       
+            ←  ᴾ    ␀A2 
+    ␀A2     ⥉    ᴮ  ␀A2 
+    ␀A2     →   󰀒       
+            ⭠  ᴾ    ␀A3 
+    ␀A3     ⭢   󰀒       ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
 
-MT = "NPSBlrαςνλΔ"
  Δ: unary cares about side
  l: only left  unary valid
  r: only right unary valid
+MT = ‹NPSBlrαςνλΔ›
 󱀘 OP(ℵ⭢ᐹ):
-    __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›  ⟦𝕊ᴸ🃌󷸓⟧󰄎⟦𝕊ᴿ🃌󷸓⟧
+    __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›
     ⊢ __init__(𝕊, ⠤𝔸, ⠶𝕂):
         super().__init__(⠤𝔸, ⠶𝕂)
         𝕊.setdef(ᐦ)
@@ -84,7 +84,7 @@ OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
 IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ 󷺗 ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 𝘳 = ℵ(OP_LIT    = 𝒪⁻,
-      VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
+      VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈󱣩⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
       CLN_KWDS  = ‹⊢󱀘¿⸘¡➰∀›,
       STD_KWDS  = ‹↪⮂󰆴›,
       OP_MOD_L  = MODIFIERS₀⨝,
