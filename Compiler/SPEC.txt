@@ -1,8 +1,10 @@
-þPSH = 󰲡 push x onto þSTK and return x
-þPKE = 󰲡 x'th item on þSTK
-þPOP = 󰲡 pop and returns xth item on þSTK
-þDEL = 󰲡 delete x items from top of þSTK
-␀CAT = 󰲣𝗙(y)⭜y(x)⭝x⋅y
+Special stuff that we need:
+    þSTK is a stack we need to be able to access
+        þPSH = 󰲡 push x onto þSTK and return x
+        þPKE = 󰲡 x'th item on þSTK
+        þPOP = 󰲡 pop and returns xth item on þSTK
+        þDEL = 󰲡 delete x items from top of þSTK
 
-CUR   = ⥌ƒ  ,⠤𝙰↦⥌  ⠤𝙱,⠶𝙺↦ƒ(    ⠤𝙰,⠤𝙱,⠶𝙺)
-CUR_1 = ⥌ƒ,x,⠤𝙰↦⥌y,⠤𝙱,⠶𝙺↦ƒ(y,x,⠤𝙰,⠤𝙱,⠶𝙺)
+For a transpiler:
+    Must provide PEV and VEP functions that convert encode/decode var names to the lang
+        (Ideally, easy to write a tool that find encoded names in a string and decodes them)

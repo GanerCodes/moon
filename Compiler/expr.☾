@@ -9,12 +9,14 @@
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀
     
+    ¿¬l∧r≡␛´: ↪𝗏(󱁕)  󰤱􊽨 hacky/weird way to do this? lol
+    
     scan = 󰲣⬤∨⍁⭢○⟨ ⟨⬤∈y⍮ ⬤∉x+y⍮ ⍈ 󷺹₀≡␛𐞑⭜␛𝚜⭝⟞₀,⟞₁﹕⨝ᐸ⟩
                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
                   󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
     mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
-    𝙍 = 󰲡𝔓(xᵗ☾󷸼,loc=x).set(t=␛x)
-    𝙉 = 󷺹ꟿ²󷺻𝔗(⟞,e=ℵ􋄅(p=⟝⟕󱁕ᵉ ᵖ₀))󷺿ꟿ⥌x,y=□↦+x∉𝑠(‹⟥⟤›) ⭜𝒩(xᵗ∨␛𝚜,⠤□≇y∧yᵗ⭜􍽙₍₎⭝⍁)⭝ 󰮈󰅂ᐸ
+    𝙍 = 󰲡𝔓(xᵗ󷸼,loc=x).set(t=␛x)
+    𝙉 = 󷺹ꟿ²󷺻𝔗(⟞,e=ℵ􋄅(p=⟝⟕󱁕ᵉ ᵖ₀))󷺿ꟿ⥌x,y=□↦+x∉𝑠(‹⟥⟤´›) ⭜𝒩(xᵗ∨␛𝚜,⠤□≇y∧yᵗ⭜􍽙₍₎⭝⍁)⭝ 󰮈󰅂ᐸ
     𝚕,𝚛 = mods󱑼(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)ꟿ󷺹󰌷􍨅ᔨ􍯏􍬫􋀪􍪵􋔫􍫑􍯏⁺􋌵􍯋􍫟􍬫􍪵􍬵¹⥉𝙉󷺿
     L,R = modsᐵᴍᓕ⁰⥉𝑠
     
@@ -41,7 +43,8 @@
                 𝒩(‹op_lit›, 󱁕₁ ₀),
                 𝒩(‹op_⸓_r›,   ⠤𝚛),
                 e=ℵ􋄅(⠶󱁕ᵉ, O=𝚘))
-    ¿␛´∈R: 𝙧ᵉ[␛´]=␛´
+    ¿␛´∈R:
+        𝙧ᵉ[␛´]=␛´
     ↪ 𝙧
 
 ⊢ part(𝚘,𝙲,d):
@@ -94,10 +97,10 @@
         ↪𝚁
     
      󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
-    ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl)), ⠤𝕒], rr  B
-    ⸘𝘪󰀒 ∧ lr     : ↪ll + [create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫), ⠤𝕒], suffix(𝚁)  S
-    ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl)), ⠤𝕒], rr  P
-    ⸘𝘪ᴺ          : ↪𝙻  + [𝚘🟑create_call(𝚘, 𝖭𝖴𝖫𝖫  ,   𝖭𝖴𝖫𝖫)🟑, ⠤𝕒], 𝚁   N
+    ¿𝘪ᴮ ∧ lr ∧ rl: ↪ll + [   create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl))  , ⠤𝕒], rr  B
+    ⸘𝘪󰀒 ∧ lr     : ↪ll + [   create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫)  , ⠤𝕒], suffix(𝚁)  S
+    ⸘𝘪ᴾ      ∧ rl: ↪𝙻  + [   create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl))  , ⠤𝕒], rr  P
+    ⸘𝘪ᴺ          : ↪𝙻  + [𝘪󰁘⭜create_call(𝚘, 𝖭𝖴𝖫𝖫  ,   𝖭𝖴𝖫𝖫)⭝𝚘, ⠤𝕒], 𝚁   N
     
     𝚘ᴾ
     ✗ ⨳ ‹Unable to apply operator ⟦𝚘⟧: ⟦ll=⟧; ⟦lr=⟧; ⟦rl=⟧; ⟦rr=⟧›

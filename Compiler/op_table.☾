@@ -16,17 +16,17 @@ add_before(‹␀A2›, [‹⭜󷺗󷺗󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 add_before(␛⭜   , [‹⭝󷺗󷺗󷺗󷺗󷺗󷺗 ᴮᴺ󰁌›⍭])
 add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
 
-𝚂𝚃=‹     ␀T   ᴺ 󰀒       
-    ␀TAC ␀T⟞  ᴺ 󰀒       
-         ␀T⟝  ᴺᴾ    ␀TAC
-    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ󰀷 ␀TAC
-            ⬅  ᴾ    ␀A1 
-    ␀A1     ➡   󰀒       
-            ←  ᴾ    ␀A2 
-    ␀A2     ⥉    ᴮ  ␀A2 
-    ␀A2     →   󰀒       
-            ⭠  ᴾ    ␀A3 
-    ␀A3     ⭢   󰀒       ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
+𝚂𝚃=‹     ␀T   ᴺ 󰀒      
+    ␀TAC ␀T⟞  ᴺ 󰀒      
+         ␀T⟝  ᴺᴾ   ␀TAC
+    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ ␀TAC
+            ⬅  ᴾ   ␀A1 
+    ␀A1     ➡   󰀒      
+            ←  ᴾ   ␀A2 
+    ␀A2     ⥉    ᴮ ␀A2 
+    ␀A2     →   󰀒      
+            ⭠  ᴾ   ␀A3 
+    ␀A3     ⭢   󰀒      ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
 
  Δ: unary cares about side
  l: only left  unary valid
@@ -79,9 +79,9 @@ MT = ‹NPSBlrαςνλΔ›
     𝒪 󷸊| 𝓞
     
     ↪ cb(𝒪)
-    
+
 OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
-IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ¬󱁕ᵉ 􌿍 ⭜ 󱁕ᵉ ᴼ
+IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ  ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ 󷺗 ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 𝘳 = ℵ(OP_LIT    = 𝒪⁻,
       VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈󱣩⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,

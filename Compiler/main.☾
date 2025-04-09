@@ -1,3 +1,5 @@
+ 󰤱 imports
+
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
 
@@ -8,328 +10,18 @@ globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
 globals().update(þPOP=󰲡þSTK.pop(-1-x))
 globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
 ´␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
-CUR   = ⥌ƒ  ,⠤𝙰↦⥌  ⠤𝙱,⠶𝙺↦ƒ(    ⠤𝙰,⠤𝙱,⠶𝙺)
-CUR_1 = ⥌ƒ,x,⠤𝙰↦⥌y,⠤𝙱,⠶𝙺↦ƒ(y,x,⠤𝙰,⠤𝙱,⠶𝙺)
 
-25 print
-a,b = 5,2
-a⋄b → print
-[a,b] print
+🃌´ = len
+CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
+
+𝑜 = object
+´󰮈´,´󱣩´ = 𝑜(),𝑜()
+
+´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
+
 ƒ = print
-a!ƒ
-
-‹to_ast ast_to_py›⍭ᴍ󰋺
-󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
-C = Cᐖ𝔓(𝗑(⟞),26)
-
+[1,2,3] → 󷺺+1ᐸ → ƒ
 󰦥󰦥󰦥󰦥󰦥⬄
-
- brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
-
- 2 "joe" x ƒ
- 5󰄗₁􌾔₃􌾔₂󰄎₅󰄎₂󰄘 ƒ
-
- 10⭥ᴍ²x
-
- ⊢ (g) ƒ(x,y=2,⠤z):
-     ↪ 5
-
- brk = 󷺹ᵗ≡‹grp› ∧ +⟞₀≡␛[
-
- t = ‹joe
-      egg
-      salad
-      ⟦2²⟧
-      weeeee›☾
-
- ‹joe⟦2+2⟧𝗻𝟷𝟸ads›
-
- ∀a∈b¿c: □
- ¡     : joe
- [d∀a∈b¿c]
-
- ∀z∈10⭥:
-     □
-
- 1⭜⁵2⭝3
-
- ➰1:
-     2☾
-
- ¿z: ¿y: □
-     ¡z: □
-     □
-
- 𝕏→ƒ
- ƒ←𝕏
- ƒ←𝕏→ƒ
- 𝕏→ƒ←𝕏
-
- (󷺹󰈲→⁺ⴵᴍ🃌→⤉)∘[-3,-2,-1,0,0,1,2] ≡ 3
- ⨳ (√○a≔󷺹⨁→÷🃌⟞ᐸ→○←󷺹ᐵ-ᑅa∘⟞→ᐵ²)(5󷸺)≡√2
- ⨳ ¬( (󰲥¯y±√(y²-4x⋅z)ᐵ÷2x)(2,2,¯4) ∖ {1,¯2} )
- ᑀ🃌%🃌ᑅ
- 󰲥y󷸊÷󷰿x→±√←y²-z÷x
- 󰲥y󷸊÷󷰿x±√⭠y²-z÷x
- 𝚲8􊬏ᵤₐₗ󰂼􊬐ᖘ⁰󰁱²󰁱⁶󷺺ᖘ⁰⫰ᐸ⭢⨝𝘀
-
- 󰲡⅚!ˣ16ˣ½!ˣ÷2!ˣ⅗􍨅!ˣ▢
- 9  [⠤γ]ᶜ().d()()ᵉ 2 βʸ()
- x  [⠤γ]ᶜ().d()()ᵉ 2 βʸ()
- () [⠤γ]ᶜ().d()()ᵉ 2 βʸ()
-
- 5!√2
- 5!3!
- 5⌃2 x
-
- the
-
- x⭥ᴙ
- 5!󰈲f 
-
- xᴙᚤ⭥
-
- ⨳ ⬅ (󷺹Ϝ⁰󰲣x+ⴵ←y≡␛(→-←y≡␛)󰅂→⤉)⋄(󷺹Ϝ⁰󷺹+ⴵ←⟝≡␛(→-←␛)≡󷺽→⤉)ᐵ(‹(1+2*3)+((8())/4))›)ᐸ→≡3⋄3
- 5⋅±2!√2
- √2x
-
- a()
- a.b₂³⭥ᴙ(x=2)
-
-
- (b₅﹕,c) ≔ X
- (b₅﹕,c) = Y 
-  b₅﹕,c  = Z
- ≔ ((cᵃ.x,k),f₅) ≔ α²
-
- (a,b₂﹕)≔(c,)≔(e,(f,g₂﹕.y,m₂))≔j²
- ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
- a≔b≔c
- ((cᵃ.x,k)) ≔ α
-
- ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
-
- (x,y)≔z
- ¿1: ¿2: 3
-     ⸘4: 5
-     ¡6: 7
- ∀A∈B¿C:
-     D
- ¡:  E
-
- xᵃ􊲣
-
-
- ֎ t = ‹1. I want multiline strings
-      2. I hate how im either forced to prefix
-         newlines / have a bunch of lines with spaces
-         𝘀𝗻𝟱𝟱⟦√2⟧
-      3. I make ☾ solve my problems
-       X
-       ⟦a⟧
-        Y⟦1⟧2
-         Z
-         ⟦2+2⟧joe
-   ⟦25⟧  Z
-          W
-          W
- ⟦2⟧H› ֎
-
-
- ⊢ (∾) ƒ(x=2,y=5,⠤𝔸,⠶𝕂): 1
-                         2
-
- a≔x
- a ≔ (b₅﹕,c)
- a ≔ (b₅﹕,c) ≔ ((cᵃ.x,k),f₅)
- a ≔ (b₅﹕,c) ≔ ((cᵃ.x,k),f₅) ≔ α²
-
- a = b₅﹕,c = ((cᵃ.x,k),f₅) = α²
-
-
- a,b = c,d = d,e
-
- a,⠤b = 𝕏
-
- a,(⠤b,c),⠤d,(e),(f,) = 𝕐
-
- f(a,⠤b,c=2)
-
- a,(b,a²₃,α₅﹕) = c,d = 2²
- a≔b
- (a,b,c)≔k
-
-
- l,k,⠤Z = 8,9
-
-
-
- ƒ()
- t = aᵇ[2]
- ζᵃ.b₂[5]≔xʸ􊿈􊿟􊽰ₓ()²₃
- x󷸊+2
- [a,b,c]
- ∀z,w,a,b,k∈y:
-     k☾
- ∀a,(b,⠤c),⠤d∈𝕏: □
- [A∀b,(c,⠤d),⠤e∈F¿G]
-
- ∀z∈y:
-     1☾
- t = ‹1. I want multiline strings
-      2. I hate how im either forced to prefix
-         newlines / have a bunch of lines with spaces
-         𝘀𝗻𝟱𝟱⟦√2⟧
-      3. I make ☾ solve my problems›
- ¿A: ¿B: C
-     ¡D: λ🃌
-
- ⥌x=2,y=5,⠤𝔸,⠶𝕂↦1
- ⊢ (∾) ƒ(x=2,y=5,⠤𝔸,⠶𝕂): 1
-                         2
-
- abc􊬳
-
- ⥌x=2↦1
-
- joe = 2²􊽮
- joe = xʸ􊿈􊿟􊽰
-
- ⊢ƒ():□
- ⥌C,ajsdi=2222222,⠤𝔸,⠶𝕂↦4
- ⥌B↦2
- 󰲡3
- A↦1
-
- aᑀ+ᑅb
- jᐵ2+𝓐
-
- ¿a: X
- ⸘b: Y
- ¡c: Z
-
- ➰c: 1
- ¡: 2
-
- ∀a∈b: 1
- ¡: 2
-
- [a,b,c]
- ∀z,w,a,b,k∈y:
-     k☾
- ∀a,(b,⠤c),⠤d∈𝕏: □
- [A∀b,(c,⠤d),⠤e∈F¿G]
-
- 𝑉
- target  ∨ 
- target ≔ 
- ∀z∈y:
-     1☾
- t = ‹1. I want multiline strings
-      2. I hate how im either forced to prefix
-         newlines / have a bunch of lines with spaces
-         𝘀𝗻𝟱𝟱⟦√2⟧
-      3. I make ☾ solve my problems›
- ¿A: ¿B: C
-     ¡D: λ🃌
- ¡:
-  ¿✓:
-    A
-   B
- ⊢ (∾) joe(x=2,⠤Y): abc
-                    def
-                    ghi
-
- ¿something: t = ‹abc
-                  xyz
-                  dasdasd›
-
- ¿x>1: ¿y>2: 1☾
-       ¡z>4: 2☾
- ¡:
-     abc
-     def
-     ¿✗:
-      123
-      456
-      ¿✓:
-          A
-         B
- 󰦥󰦥󰦥󰦥󰦥
- A🟑ZZZZZZZZZZZZZZ🟑B
- 󰲣x+y
-
- ⊢ (∾) ƒ(x): 1
-             2
- 0
- ¿x:
-     y☾
- ∀x∈y:
-     z☾
-
- ➰x:
-     ☾1
- ¡ :
-     ☾2
- ⊢ (∾) joe(x=2,⠤Y): h
-     h
- ⊢ joe():
-     1
-
- ⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
- ⟥ꟿ􋅂ᔨ􋅂⟤
- "normal string"
- 'normal string'
- 'norma␛'l string'
- ‹abc ⟦2²􊽮⟧›
- ‹abc ⟦2²􊽮⟧ 𝗻𝘁𝟬𝟴›
- 𝗻𝘀
- 𝟬𝟴
- x=‹asd
-     asd
-     2›
- ␛␛
- ␛l
- 1=1
- ‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"
- ⊢ the(x,y):
-     ↪ ‹heh ⟦xʸ.y₂⟧ ⟦y⟧›☾
- 𝕏ʸ ˣ = 2⁹+y²+kʷ
- A ₃ᵃ ²
- [2³􊿙+⁵2]ᴍ²ƒ
- t=2+⁵ᔨ􊿧ᴍ´
- 5+󷱂²⁺􍨋􊽰
- a⭜b
- a⭝c
- a⭜ᶜb
- a⭝ᶜb
- a⭝b⭜c
- a⭜b⭝c⭜d⭝e
- 5⭢🃌⭢🃌
- 5⭢󰈳⭢🃌
- xꟿ⁰y
- ⟞ᑀꟿ⁰ᑈ2₋+₊⭢󰈳⭢🃌
- 3<2<1
- ‹joe›‹hel𝗻󷺗lo␛h⟦joe⟧›␛h𝗻"h"'h\e𝗻󷺗llo'"{t𝗻󷺗es𝟬𝟬t𝗳𝟮}""h\e𝗻󷺗llo"""
- 2⋄4⋄22⋄4⋄5⋄4⋄7
- x₊􊪬.zʸ􍈼ₜ²
- ¿x>1: 1☾􊾖ᵜ
- ƒ(x)₂⁵
- 1ᑀ+𝓚+ᑅ2
- x↦x+1
- 󰲣x+y
- 󰲣x+y+𝕂
- ⥌x,y↦x+y-𝕂
- ⥌x,y↦x+y+𝔸
- ⥌x,y,⠤A,⠶K,h=22,b=2222↦x²
- 1+2→⋅2
- 2⋅←1+2
- a+b⋅c+d
- 󰲡x²
- x↦x²
- 󷺹²
- 5ᑀ²
- 2:5,2:3:5:,2:2::::::
 
 󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(␛🌈)
@@ -338,14 +30,15 @@ C = Cᐖ𝔓(𝗑(⟞),26)
 ⮌ sys ⨡ argv as 𝔸
 ¿𝔸🃌>1: code = 𝔸₁
 
+show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
+
 󱁕 = to_ast(code)
 ‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
 𝑩𝑩(󱁕)
-‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
 
-show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
+ ‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
+ 𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
 
-𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
 ‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
 stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
 
@@ -353,9 +46,3 @@ pyc = ast_to_py(󱁕.cpr, reparse=✓)
 stackr(show(code,✗),show(pyc,✗))☾
 
 exec(pyc)
-
- try             :eval(pyc)☾
- except Exception:exec(pyc)
-
- 󱁕.cpr.flat(󷺹ᵉ ᵀ󷺥(⟞ᵗ∈‹x ∘ 𝐴 𝐼 𝑙 𝑡 ⸓ target_rhs tern lamb opC 𝗈𝗉 grp asgn asgn_targs›⍭)).rm(¬○+).frp(ⴳ,󷺹.set(t=ℵ􍪵􊾾(‹asgn_targs 𝑇 opC 𝐶 lamb λ 𝗈𝗉 𝑜 asgn = target_rhs .›⍭)􍪴􊫼),pre=✓).frp(ⴳ,󷺹.cp(t=⟞ᵗᣆ􍯏􋁤􋕩ᵍʳᵖ􋕩𝚲⟞󷸻ᴍ+⭢⨝,c=⟞ᶜᣆ􍪵􊾾􋁤􋕩ᵍʳᵖ􋕩󷺹₁﹕􍨄,e=⟞ᵉ ᵀ⭜ℵ􋄅(T=✓)⭝ℵ􋄅),pre=✓).P
- date_󱁕(ⴳ,󷺹ᵗ≡‹grp›∧+⟞₀≡␛()(󱁕)ᐵᴾ
