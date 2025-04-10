@@ -1,4 +1,5 @@
  󰤱 imports
+ 󰤱 lightning (no-cln block starters)
 
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
@@ -16,12 +17,11 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 
 𝑜 = object
 ´󰮈´,´󱣩´ = 𝑜(),𝑜()
-
 ´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
 
-ƒ = print
-[1,2,3] → 󷺺+1ᐸ → ƒ
-48273 ƒ
+ ƒ = print
+ [1,2,3] → 󷺺+1ᐸ → ƒ
+ 48273 ƒ
 󰦥󰦥󰦥󰦥󰦥⬄
 
 󰋺(__dir__ / ‹../Libraries/text_format›)
@@ -29,21 +29,24 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 󰋺(‹tree›, *)
 
 ⮌ sys ⨡ argv as 𝔸
-¿𝔸🃌>1: code = 𝔸₁
+¿𝔸🃌≡2: code = 𝔸₁
+¿𝔸🃌≡3: code = code+𝗻+(__dir__ / 𝔸₂)
 
-show = ⥌x,y=✓↦BOX(linenum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
+show = ⥌x,y=✓↦BOX(linewnum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
 󱁕 = to_ast(code)
- ‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
- 𝑩𝑩(󱁕)
+‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
+𝑩𝑩(󱁕)
 
  ‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
  𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
 
- ‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
- stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
+‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
+stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
 
 pyc = ast_to_py(󱁕.cpr, reparse=✓)
- stackr(show(code,✗),show(pyc,✗))☾
+stackr(show(code,✗),show(pyc,✗))☾
 
 exec(pyc)
+
+ 

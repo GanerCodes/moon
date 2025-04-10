@@ -13,12 +13,18 @@ parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
 stmts      = 󰆴𝗪? ( stmt      󰆴𝗪?)+
 multi_expr = 󰆴𝗪? (⠶norm_expr 󰆴𝗪?)+
 
-stmt  = ⊢_dec ∨ kwd_pfx ∨ kwd_std ∨ asgn ∨ norm_expr
+stmt  = ⊢_dec ∨ native_imp ∨ kwd_pfx ∨ kwd_std ∨ asgn ∨ norm_expr
 ⊢_dec = 󰆴("⊢" 𝗪?) (wrap=(grp 󰆴𝗪? ∨ ✓)) 𝑉 󰆴(𝘄? "(" 𝗪?) (ƒ_dec_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
 kwd_pfx   = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                             󰆴(       𝗪? ":" 𝘄?)
-kwd_std   = std_kwd 󰆴𝘄? (norm_expr ∨ ✓) 
+kwd_std   = std_kwd 󰆴𝘄? (norm_expr      ∨ ✓)
 norm_expr = (⠶norm_expr_atom)+
 
+native_imp = (
+  (native_imp_from   = (󰆴('⮌' 𝘄?) ~‹[^ \t\n⨡]+› 󰆴𝘄?))?
+  (native_imp_fields = (
+      󰆴('⨡' 𝘄?) native_imp_targ (󰆴',' native_imp_targ)* )))
+native_imp_targ = ~‹[^ \t\n:]+› (󰆴(':' 𝘄?) ~‹[^ \t\n,]+›)? 󰆴𝘄?
+                 
 asgn = ⠶asgn_left 󰆴(𝘄? ↷ '=') (asgn ∨ norm_expr)
 asgn_targ = ⠶asgn_grp ∨ asgn_𝔸 ∨ ƒ_val
 asgn_grp = 󰆴('(' 𝗪?) ⠶asgn_left 󰆴(𝗪? ')' 𝘄?) ⮞(~‹[,=)]|\Z›)

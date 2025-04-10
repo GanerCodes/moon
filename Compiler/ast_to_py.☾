@@ -2,8 +2,8 @@
 󰋺(‹rewriters›, *)
 
 𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
-cln_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for›⍭)
-std_remap = ℵ(‹⮂ yield ↪ return›⍭)
+big_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for  try›⍭)
+std_remap = ℵ(‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭)
 op_remap = ℵ(‹~~%%^^&&||>><<++¯---⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ < ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›)
 ENC = ‹ýüûúùøöõôóòñðïîíìëêéèçæåäãâáàßÝÜÛÚÙØÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀºµª›
 
@@ -53,8 +53,8 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ⸘󱁕ᵗ∈‹ƒ_run_𝔸 ƒ_dec_𝔸›⍭: 󱁕.set(c=[𝔗(‹*󷺗›),⠤󱁕₀ᵉ ᵀ ⭜𝗏(󱁕₀)⛶⭝ 󱁕])
     ⸘󱁕ᵗ∈‹ƒ_run_𝕂 ƒ_dec_𝕂›⍭: 󱁕.set(c=[𝔗(‹**›),𝗏(󱁕₀)])
     ⸘󱁕ᵗ≡‹ƒ_run_params›: 󱁕.set(c=󱁕⨝𝔗(␛,))
-    ⸘󱁕ᵗ≡‹ƒ_kw󷺗󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(␛=))
-    ⸘󱁕ᵗ≡‹⊢_dec󷺗›: 󱁕.set(c=[⠤+󱁕₀⭜[𝔗(␛@),󱁕₀,𝔗(𝗻)]⭝⍁,𝔗(‹def ›),⠤󱁕₁﹕,𝔗(␛:)])
+    ⸘󱁕ᵗ≡‹ƒ_kw󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(␛=))
+    ⸘󱁕ᵗ≡‹⊢_dec󷺗›: 󱁕.set(c=[⠤+󱁕₀⭜[𝔗(␛@),󱁕₀,𝔗(𝗻)]⭝⍁,𝔗(‹def ›),󱁕₁,+󱁕₂⭜󱁕₂⭝𝔗(‹()›),𝔗(␛:)])
     ⸘󱁕ᵗ≡‹∀_stmt›: 󱁕.set(c=󱁕₀ᐒ[𝔗(‹for ›),⟞₁,𝔗(‹ in(›),⟞₂,𝔗(‹):›),
                              ⠤⟞₃≡𝖭𝖴𝖫𝖫 ⭜⍁⭝ [𝔗(𝗻),𝔗(𝖫(‹if not(›)),⟞₃,𝔗(‹):continue›)]])
     ⸘󱁕ᵗ≡‹∀_x›: 󱁕.set(c=󱁕₀ᐒ[𝔗(␛(),⟞₀,𝔗(‹)for ›),⟞₁,𝔗(‹ in(›),⟞₂,𝔗(␛)),
@@ -64,8 +64,18 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ⸘󱁕ᵗ≡‹slice›: 󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹slice›),⠤󱁕ᶜ𝌂(ƒ≔󷺹ᵗ≡␛:)␛
                                            ᐖƒ(⟞₀)⭜𝖭𝗈𝗇𝖾⛶􍪵􋌵⁻¹⭝⟞ᐸ⭢󰌷␛
                                            ᐒ𝑏(ƒ(󱁕₀))⋅􍾹􍾇􍾅􍽳+⟞+􍾹􍾇􍾅􍽳⋅ƒ(󱁕􍨄))])  󰤱
-    ⸘󱁕ᵗ≡‹kwd_pfx›:
-        󱁕₀.set(t=cln_remap.get(+󱁕₀,+󱁕₀))
+    ⸘󱁕ᵗ≡‹native_imp_from󷺗󷺗›: 󱁕.set(c=[𝔗(‹from󷺗󷺗 ›),⠤󱁕ᶜ,𝙨])
+    ⸘󱁕ᵗ≡‹native_imp_fields›: 󱁕.set(c=[𝔗(‹import ›),⠤󱁕ᶜ⨝𝔗(␛,)])
+    ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(‹ as ›))
+    ⸘󱁕ᵗ≡‹¡›:  󰤱 FIX
+        󱁕₀ ₀ ₀.set(t=‹kwd_pfx›)
+        ¿󱁕🃌>1:
+            󱁕₁ ₀ ₀.set(t=‹except›)
+    ⸘󱁕ᵗ≡‹std_kwd›:
+        󱁕₀.set(t=std_remap.get(+󱁕₀,+󱁕₀))
+        󱁕ᶜ.insert(1,𝙨)
+    ⸘󱁕ᵗ∈‹kwd_pfx›:
+        󱁕₀.set(t=big_remap.get(+󱁕₀,+󱁕₀))
         󱁕ᶜ.insert(1,𝙨)
         󱁕ᶜ.append(𝔗(␛:))
     ↪ 󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))

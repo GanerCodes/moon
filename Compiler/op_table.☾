@@ -86,7 +86,7 @@ MODIFIERS = ‹⟥≺ 󷺗 ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 𝘳 = ℵ(OP_LIT    = 𝒪⁻,
       VAR_SPEC  = ‹∀¿¡ⴳⴴ✓✗□ᐦ󰮈󱣩⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
       CLN_KWDS  = ‹⊢󱀘¿⸘¡➰∀›,
-      STD_KWDS  = ‹↪⮂󰆴›,
+      STD_KWDS  = ‹↪⮂󰆴›,
       OP_MOD_L  = MODIFIERS₀⨝,
       OP_MOD_R  = MODIFIERS₁⨝,
       SUPSCRIPT = *´󷸔,

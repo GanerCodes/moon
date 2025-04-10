@@ -9,8 +9,13 @@ H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
 find_esc_seqs = re.compile(‹⟦27󷹝⟧\[(\d+;2;\d+;\d+;\d+|0)m›)
 rm_esc = 𝼞cache(re.sub(find_esc_seqs, ᐦ))
 𝼞ꬷ = 🃌○rm_esc
-padl = 𝼞cache(󰲣x+ᵜ𝘀⋅←y-𝼞ꬷ(x))
-padr = 𝼞cache(󰲣x+ 𝘀⋅←y-𝼞ꬷ(x))
+lines    = 𝚌↦𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+padl     = 𝼞cache(󰲣x+ᵜ𝘀⋅←y-𝼞ꬷ(x))
+padr     = 𝼞cache(󰲣x+ 𝘀⋅←y-𝼞ꬷ(x))
+linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤x𝌂d)󰅂ᐸ⨝𝗻)
+linenum  = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡ󱖔ˢ⭢+𝘀+󷺽⭢⨝𝗻)
+linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
 
 @𝼞cache
 ⊢ pads(𝚡,w=*,h=*):
@@ -44,9 +49,6 @@ padr = 𝼞cache(󰲣x+ 𝘀⋅←y-𝼞ꬷ(x))
 
 box,BOX = 2⭥ᐖ󰲡box_(xᐹ𝑙|𝑡⭜x⨝𝗻⭝x,⠤𝔸,⠶𝕂,big=⟞)
 
-dotrim = 󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x
-linenum = ⥌𝚡,m=1,s=󰻾↦𝚡󷹌𝗻󰈳𝗻⭢↨ꟿ󷺹󷹜􀳉􋌵⁻¹􋀬􍴕􋌵􋄫ᵐ􋂇􍢉󱖔ˢ⭢+𝘀+󷺽⭢⨝𝗻
-
 fmp = 𝑑([ᐦ,␀,⬤,󰮈,✓,✗,□,ⴳ,ⴴ,½,⅓,¼,⅕,⅙,⅐,⅛,⅑,⅒,⅔,⅖,󷶲,󷶷,¾,⅗,󷶳,⅜,󷷆,⅘,󷶴,󷷂,⅚,󷶵,⅝,󷶹,󷶶,⅞,󷶺,󷷇,󷶻,󷷈,↉,󷷉,π,ℇ,∞,î,τ,󷺍,󷺎,󷺏,󷱩,󷱪,󷱬,󷱭,󷱮,󷱯,󷱰,󷱫,𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦]󱑼␛
         ‹ᐦ󷺗␀󷺗⬤󷺗󰮈󷺗✓󷺗✗󷺗□󷺗ⴳ󷺗ⴴ󷺗½󷺗⅓󷺗¼󷺗⅕󷺗⅙󷺗⅐󷺗⅛󷺗⅑󷺗⅒󷺗⅔󷺗⅖󷺗󷶲󷺗󷶷󷺗¾󷺗⅗󷺗󷶳󷺗⅜󷺗󷷆󷺗⅘󷺗󷶴󷺗󷷂󷺗⅚󷺗󷶵󷺗⅝󷺗󷶹󷺗󷶶󷺗⅞󷺗󷶺󷺗󷷇󷺗󷶻󷺗󷷈󷺗↉󷺗󷷉󷺗π󷺗ℇ󷺗∞󷺗î󷺗τ󷺗󷺍󷺗󷺎󷺗󷺏󷺗󷱩󷺗󷱪󷺗󷱬󷺗󷱭󷺗󷱮󷺗󷱯󷺗󷱰󷺗󷱫󷺗𝑒󷺗𝑜󷺗𝑑󷺗𝑏󷺗𝑙󷺗𝑡󷺗𝑠󷺗ᔐ󷺗𝑖󷺗𝑓󷺗𝑦›)
 fmp󷸊ꟿ⁺󰲣H(y)
@@ -71,10 +73,12 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
 ¿__name__≡‹__main__›:
+    linewrap(linenum(‹egg salad number twelve fortnite𝗻the last thing you'd want on your burg›),12,3⋅𝘀)☾
     a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
     b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
     c = box(‹5⭥ᐵ²›)☾
     d = BOX(‹5⭥ᐵ²›)☾
     stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
 
-__exports__ = ‹rm_esc padr pads box BOX stackr linenum dotrim 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+__exports__ = ‹rm_esc padr pads box BOX stackr lines linenum ›␛
+              ‹linewnum dotrim 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭

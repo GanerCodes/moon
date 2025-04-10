@@ -1,9 +1,10 @@
 ⮌ functools ⨡ cache
 
-󰋺(__dir__ / ‹..› / ‹Libraries/🌈›)
-󰋺(__dir__ / ‹..› / ‹Libraries/𝐍›)
-󰋺(__dir__ / ‹..› / ‹Libraries/peggle2›)
-󰋺(__dir__ / ‹..› / ‹Libraries/j☾/rgx_golfatron›)
+󰋺(__dir__ / ‹../Libraries/🌈›)
+󰋺(__dir__ / ‹../Libraries/𝐍›)
+󰋺(__dir__ / ‹../Libraries/peggle2›)
+󰋺(__dir__ / ‹../Libraries/j☾/rgx_golfatron›)
+󰋺(__dir__ / ‹../Libraries/text_format›)
 
 󰋺(‹op_table.☾›, *)
 
