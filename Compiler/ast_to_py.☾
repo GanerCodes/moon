@@ -1,15 +1,15 @@
 ⮌ unicodedata ⨡ is_normalized
 󰋺(‹rewriters›, *)
 
-𝑉_spec_remaps = ℵ(‹✓ True ✗ False □ None›⍭)
-big_remap = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for  try›⍭)
-std_remap = ℵ(‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭)
-op_remap = ℵ(‹~~%%^^&&||>><<++¯---⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ < ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›)
+𝐌 = ℵ(𝑉_spec      = ℵ(‹✓ True ✗ False □ None›⍭),
+      std_kwd     = ℵ(‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭),
+      blk_cln_kwd = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for›⍭),
+      blk_kwd     = ℵ(‹ try›⍭􋕩􊿖􊿉􋕩),
+      op          = ℵ(‹~~%%^^&&||>><<++¯---⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ < ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›),)
 ENC = ‹ýüûúùøöõôóòñðïîíìëêéèçæåäãâáàßÝÜÛÚÙØÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀºµª›
-
 HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉
-py_esc_str  = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ c
-py_ok_𝑉   = 󰲡x∈num ∨ is_normalized(‹NFKC›, x) ∧ x.isidentifier()
+py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(c)⟧›⭝ c
+py_ok_𝑉    = 󰲡x∈num ∨ is_normalized(‹NFKC›, x) ∧ x.isidentifier()
 val = 󷺹󷹝<127∧⟞∉‹~!@#$%^&*-=+\|,./› ∨ ⟞≡␛þ
 PEV = 󷺹𝌂valᐖval(⟞₀)⭜⟞⭝⟞ᐖ󷹜´(⟞󷹝,ENC🃌,chars=ENC)ᐸ⨝␛Þᐸ⨝
 VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,chars=ENC)󷹝ᐸ⨝ᐸ⨝
@@ -23,13 +23,12 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ¿󱁕ᵗ≡‹𝐼󷺗›: 󱁕.set(c=[󱁕₀,𝔗(␛[),⠤󱁕₁﹕⨝𝔗(␛,),𝔗(␛])])
     ⸘󱁕ᵗ≡‹∘󷺗›:
         𝚏=󱁕₀
-        ¿𝚏ᵗ≡‹𝗈𝗉› ∧ +𝚏₁∈op_remap ∧ (𝚏₀🃌󷺥🃌𝚏₂):
+        ¿𝚏ᵗ≡‹𝗈𝗉› ∧ +𝚏₁∈𝐌ᵒᵖ ∧ (𝚏₀🃌󷺥🃌𝚏₂):
             p=󱁕🃌<3 ∧ (ℴ≔𝚏ᵉ ᴼ)ʳ∨+𝚏∈␛¬
-            󱁕.set(c=[𝔗(␛(),⠤[󱁕₁,𝙨,𝚏₁ ₀.set(t=op_remap[+𝚏])]ᣆᵖᴙ,𝙨,⠤󱁕₂﹕,𝔗(␛))])
+            󱁕.set(c=[𝔗(␛(),⠤[󱁕₁,𝙨,𝚏₁ ₀.set(t=𝐌ᵒᵖ[+𝚏])]ᣆᵖᴙ,𝙨,⠤󱁕₂﹕,𝔗(␛))])
         ¡:
              MOD(op, 𝚜=…, ᔨ=…)
             ⊢ conv(𝚏):
-                 𝑩𝑩(𝚏)
                 m = 𝚏₀󰌷𝚏₂
                 ¿m🃌¬: ↪𝚏
                 t = ℵ󰁺󰁻(m󷺹ᵗ∈𝑠(‹≺≻ᵜ꜠›) ⭜1⭝ ⟞ᵗ∈𝑠(‹ᔨ›) ⭜2⭝ ⟞ᵗ∈‹𝚜› ⭜0⭝ 󰮈)
@@ -48,7 +47,7 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ⸘󱁕ᵗ≡‹str󷺗󷺗󷺗󷺗›: 󱁕.set(c=[𝔗(‹f"›),⠤󱁕,𝔗(‹"›)])
     ⸘󱁕ᵗ≡‹strb󷺗󷺗󷺗›: 󱁕.set(c=[𝔗(‹\x⟦+󱁕⭢󷹜󷹜¹⁶⁺²􍢉⟧›)])
     ⸘󱁕ᵗ≡‹str_sub›: 󱁕.set(c=[𝔗(‹{(⟦+󱁕⟧)}›)])
-    ⸘󱁕ᵗ≡‹𝑉_spec›: 󱁕.set(c=[𝗏(𝑉_spec_remaps.get(+󱁕,+󱁕))])
+    ⸘󱁕ᵗ≡‹𝑉_spec›: 󱁕.set(c=[𝗏(𝐌􋇊􋕟ˢᵖᵉᶜ.get(+󱁕,+󱁕))])
     ⸘󱁕ᵗ∈‹𝑉 op_lit ƒ_𝑉›⍭: 󱁕.set(c=[𝔗(PEV(+󱁕))󱖔􋔡󱁕])
     ⸘󱁕ᵗ∈‹ƒ_run_𝔸 ƒ_dec_𝔸›⍭: 󱁕.set(c=[𝔗(‹*󷺗›),⠤󱁕₀ᵉ ᵀ ⭜𝗏(󱁕₀)⛶⭝ 󱁕])
     ⸘󱁕ᵗ∈‹ƒ_run_𝕂 ƒ_dec_𝕂›⍭: 󱁕.set(c=[𝔗(‹**›),𝗏(󱁕₀)])
@@ -67,17 +66,17 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ⸘󱁕ᵗ≡‹native_imp_from󷺗󷺗›: 󱁕.set(c=[𝔗(‹from󷺗󷺗 ›),⠤󱁕ᶜ,𝙨])
     ⸘󱁕ᵗ≡‹native_imp_fields›: 󱁕.set(c=[𝔗(‹import ›),⠤󱁕ᶜ⨝𝔗(␛,)])
     ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(‹ as ›))
-    ⸘󱁕ᵗ≡‹¡›:  󰤱 FIX
-        󱁕₀ ₀ ₀.set(t=‹kwd_pfx›)
+    ⸘󱁕ᵗ≡‹¡›:
+        󱁕₀ ₀ᶜ.append(𝔗(␛:))
         ¿󱁕🃌>1:
-            󱁕₁ ₀ ₀.set(t=‹except›)
-    ⸘󱁕ᵗ≡‹std_kwd›:
-        󱁕₀.set(t=std_remap.get(+󱁕₀,+󱁕₀))
+            󱁕₁﹕ᐵ₀ ₀ ₀ ₀.set(t=‹except›)
+        ¡:
+            󱁕.append(𝔗(‹except: pass›))
+    ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭:
+        󱁕₀.set(t=𝐌􋑺􊫼.get(+󱁕,+󱁕))
         󱁕ᶜ.insert(1,𝙨)
-    ⸘󱁕ᵗ∈‹kwd_pfx›:
-        󱁕₀.set(t=big_remap.get(+󱁕₀,+󱁕₀))
-        󱁕ᶜ.insert(1,𝙨)
-        󱁕ᶜ.append(𝔗(␛:))
+    ⸘󱁕ᵗ≡‹cln_pfx›:
+        ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))
     ↪ 󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
 
 ⊢ ast_to_py(󱁕, get_tree=✗, no_rename_vars=✗, reparse=✗):

@@ -1,11 +1,12 @@
-supscript = ~‹%SUPSCRIPT%+›
-subscript = ~‹%SUBSCRIPT%+›
-_op_⸓_l   = ~‹%OP_MOD_L%›
-_op_⸓_r   = ~‹%OP_MOD_R%›
-op_lit    = ~‹%OP_LIT%›
-𝑉_spec    = ~‹%VAR_SPEC%›
-cln_kwd   = ~‹%CLN_KWDS%›
-std_kwd   = ~‹%STD_KWDS%›
+supscript   = ~‹%SUPSCRIPT%+›
+subscript   = ~‹%SUBSCRIPT%+›
+_op_⸓_l     = ~‹%OP_MOD_L%›
+_op_⸓_r     = ~‹%OP_MOD_R%›
+op_lit      = ~‹%OP_LIT%›
+𝑉_spec      = ~‹%VAR_SPEC%›
+    std_kwd = ~‹%STD_KWDS%›
+blk_cln_kwd = ~‹%BLK_CLN_KWDS%›
+    blk_kwd = ~‹%BLK_KWDS%›
 
 parser_main    = stmts?
 parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
@@ -13,10 +14,13 @@ parser_comment = (⠶str ∨ 󰆴comment ∨ ~‹.|\n›)*
 stmts      = 󰆴𝗪? ( stmt      󰆴𝗪?)+
 multi_expr = 󰆴𝗪? (⠶norm_expr 󰆴𝗪?)+
 
-stmt  = ⊢_dec ∨ native_imp ∨ kwd_pfx ∨ kwd_std ∨ asgn ∨ norm_expr
-⊢_dec = 󰆴("⊢" 𝗪?) (wrap=(grp 󰆴𝗪? ∨ ✓)) 𝑉 󰆴(𝘄? "(" 𝗪?) (ƒ_dec_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
-kwd_pfx   = cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓)                             󰆴(       𝗪? ":" 𝘄?)
-kwd_std   = std_kwd 󰆴𝘄? (norm_expr      ∨ ✓)
+stmt  = blk_head ∨ native_imp ∨ kwd_std ∨ asgn ∨ norm_expr
+blk_head = ⊢_dec ∨ cln_pfx ∨ std_pfx
+⊢_dec   = 󰆴("⊢" 𝗪?) (wrap=(grp 󰆴𝗪? ∨ ✓)) 𝑉 󰆴(𝘄? "(" 𝗪?) (ƒ_dec_params ∨ ✓) 󰆴(𝗪? ")" 𝗪? ":" 𝘄?)
+kwd_std =     std_kwd 󰆴𝘄? (norm_expr      ∨ ✓)
+cln_pfx = blk_cln_kwd 󰆴𝗪? (expr_not_colon ∨ ✓) 󰆴(𝗪? ":" 𝘄?)
+std_pfx =     blk_kwd 󰆴𝘄?
+
 norm_expr = (⠶norm_expr_atom)+
 
 native_imp = (
@@ -66,7 +70,7 @@ number_exp = number supscript
 script = supscript ∨ subscript
 grp = ~‹[\[({⁅⟦]› (󰆴𝗪? ↷ (multi_expr ∨ ✓)) ~‹[\])}⁆⟧]›
 
-𝑉_bad = 𝗪 ∨ ~‹󰦥{5}|[⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]› ∨ op ∨ 𝑉_spec ∨ cln_kwd ∨ script
+𝑉_bad = 𝗪 ∨ ~‹󰦥{5}|[⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩‹ ␛␛␛›]› ∨ op ∨ 𝑉_spec ∨ blk_cln_kwd ∨ script
 𝑉 = 󰆴'´' ~‹[^´]+› 󰆴'´' ∨ ƨ((¬𝑉_bad ~‹.›)+)
 
 op = ((op_⸓_l = ƨ((_op_⸓_l (_op_⸓_l ∨ supscript)*)?))

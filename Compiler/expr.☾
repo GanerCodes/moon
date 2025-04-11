@@ -1,10 +1,6 @@
  󰋺(‹op_table›, *)
 󰋺(‹tree_txt›, *)
 
-𝑩 = 𝚲BOX(stackr(⠤𝔸))
-𝑩𝒏 = box○󷺹ᴾ∘✗
-𝑩𝑩 = ⥌󱁕↦BOX(𝔸󰌷[󱁕ᴾ∘✗])☾►󱁕
-
 ⊢ denode_op(󱁕,𝔓=󰻾):  󰤱 this doesn't work if mod has newlines
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀

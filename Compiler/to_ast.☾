@@ -37,9 +37,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         ¿𝘯≤0:↪󱁕
         
-        󱁕ᴾ
         add_blocks(󱁕)
-        󱁕ᴾ
         󱁕.ftrp(‹str_tsub›⍭, rewrite_str_indent, pre=✓)
         󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), pre=✓)
         󱁕.ftrp(‹ƒ_run_𝔸 ƒ_run_𝕂›⍭, 󱁕↦󱁕.set(c=[𝗑(⠤󱁕)]))
