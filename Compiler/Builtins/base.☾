@@ -1,0 +1,11 @@
+globals().update(þSTK=[])
+globals().update(þPSH=󰲡þSTK.append(x)∨x)
+globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
+globals().update(þPOP=󰲡þSTK.pop(-1-x))
+globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
+␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
+🃌´ = len
+𝑜 = object
+´󰮈´,´󱣩´ = 𝑜(),𝑜()
+CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
+´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]

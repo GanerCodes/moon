@@ -1,34 +1,15 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
 
-SYSTEM = 󰦥󰦥󰦥󰦥󰦥
-globals().update(þSTK=[])
-globals().update(þPSH=󰲡þSTK.append(x)∨x)
-globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
-globals().update(þPOP=󰲡þSTK.pop(-1-x))
-globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
-´␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
-🃌´ = len
-CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
-𝑜 = object
-´󰮈´,´󱣩´ = 𝑜(),𝑜()
-´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
-
-󰦥󰦥󰦥󰦥󰦥⬄
+HEAD = ‹base.☾ system.☾›⍭ᐖ(‹Builtins/⟦⟞⟧›)ᐸ⨝𝗻
 
 CODE = 󰦥󰦥󰦥󰦥󰦥
- ƒ = print
- [1,2,3] → 󷺺+1ᐸ → ƒ
- 48273 ƒ
+  ƒ = print
+  [1,2,3] → 󷺺+1ᐸ → ƒ
+  48273 ƒ
 
-⊢ ƒ(): 1
-       2
-
-
-    a
-¡joe:
-    dasd
-
+ ⊢ ƒ(): 1
+        2
 󰦥󰦥󰦥󰦥󰦥⬄
 
 󰋺(__dir__ / ‹../Libraries/text_format›)
@@ -36,11 +17,10 @@ CODE = 󰦥󰦥󰦥󰦥󰦥
 󰋺(‹tree›, *)
 
 ⮌ sys ⨡ argv as 𝔸
-code = CODE
-¿𝔸🃌≡2: code = 𝔸₁
-¿𝔸🃌≡3: code = code+𝗻+(__dir__ / 𝔸₂)
+¿𝔸🃌≡2: CODE = 𝔸₁
+⸘𝔸🃌≡3: CODE = (__dir__ / 𝔸₂)
 
-code = SYSTEM+𝗻+code
+code = HEAD+𝗻+CODE
 
 show = ⥌x,y=✓↦BOX(linewnum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
