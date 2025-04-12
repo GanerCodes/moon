@@ -10,7 +10,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
      󰤱 normalize newlines and stuff from literals so we get the same string output
      󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
     󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,󱁕))
-    󱁕.ftrp(‹str_t󰦥 str_tsub str_nsub str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
+    󱁕.ftrp(‹empty_str str_t󰦥 str_tsub str_nsub str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
         󱁕↦󱁕.set(t=‹str›), pre=✓)
     󱁕.ftrp(‹str›⍭, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
     󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)

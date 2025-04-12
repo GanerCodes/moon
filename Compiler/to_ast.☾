@@ -18,9 +18,9 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         coms = 󱁕.find(󷺹ᵗ≡"comment")ᐵᵉ ᵖᑀ₀,⟞₁-1ᐸ
         󱁕.ftrp(‹comment›⍭, 󰻾􋈠􋁐􋋎)
         𝚌 = +󱁕
-    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□,
-            warn_short=✓, trim_length_info=✓,
-            force_full_match=✗, wrap=✗):
+    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□, warn_short=✓,
+            trim_length_info=✓, force_full_match=✗, wrap=✗,
+            dbg_show_gram_tree=✗):
         ¿𝚌ᐹŃ:
             󱁕 = 𝚌
         ¡:
@@ -33,10 +33,10 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿loc≇□: offset_𝚕𝚌(󱁕,locᐹŃ ⭜locᵉ ᵖ﹕₂⭝ loc﹕₂)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
             ¿wrap: 󱁕=𝒩(‹wrap›, 󱁕)
-             ¿𝘳≡‹parser_main›: BOX(BOX(linenum(𝚌,s=ŧ𝼝(fg=‹915›)))⋄(󱁕ᴾ∘✗))☾
+            ¿dbg_show_gram_tree ∧ 𝘳≡‹parser_main›:
+                𝑩𝑩(󱁕,‹Initial parse›)
         
         ¿𝘯≤0:↪󱁕
-        
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub›⍭, rewrite_str_indent, pre=✓)
         󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), pre=✓)
@@ -102,8 +102,6 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ¿𝘯≤26:↪󱁕
         rewrite_asgns(󱁕) 
         rewrite_cmp(󱁕)
-        
-         󰤱 op modifiers
         
         󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝑙,c=󱁕ᶜ₁﹕),pre=✓)
         

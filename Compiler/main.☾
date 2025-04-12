@@ -1,35 +1,34 @@
 ‹to_ast ast_to_py›⍭ᴍ󰋺
-󰋺(‹expr›,⠤‹𝑩𝑩 linenum ŧ𝼝›⍭)
-
-HEAD = ‹base.☾ system.☾›⍭ᐖ(‹Builtins/⟦⟞⟧›)ᐸ⨝𝗻
-
-CODE = 󰦥󰦥󰦥󰦥󰦥
-  ƒ = print
-  [1,2,3] → 󷺺+1ᐸ → ƒ
-  48273 ƒ
-
- ⊢ ƒ(): 1
-        2
-󰦥󰦥󰦥󰦥󰦥⬄
-
 󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(␛🌈)
 󰋺(‹tree›, *)
 
-⮌ sys ⨡ argv as 𝔸
-¿𝔸🃌≡2: CODE = 𝔸₁
-⸘𝔸🃌≡3: CODE = (__dir__ / 𝔸₂)
+HEAD = ‹base.☾ system.☾›⍭ᐖ(‹Builtins/⟦⟞⟧›)ᐸ⨝𝗻
 
-code = HEAD+𝗻+CODE
+CODE = 󰦥󰦥󰦥󰦥󰦥
+ ƒ = print
+ [1,2,3] → 󷺺+1ᐸ → ƒ
+ 48273 ƒ
+ ⊢ ƒ(): 1
+        2
+󰦥󰦥󰦥󰦥󰦥⬄
+
+⮌ sys ⨡ argv as 𝔸
+¿𝔸🃌≥3∧𝔸₁≡␛r:
+    code = 𝔸₂﹕⨝𝘀
+    󰋺(‹highlighter›,‹sty›)
+    ‹Using code ⟦sty(code,‹003›)⟧›☾
+¡:
+    ¿𝔸🃌≡2: CODE = 𝔸₁
+    ⸘𝔸🃌≡3: CODE = (__dir__ / 𝔸₂)
+    code = HEAD+𝗻+CODE
 
 show = ⥌x,y=✓↦BOX(linewnum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
-󱁕 = to_ast(code)
-‹⟦␛─⋅50⟧  TREE  ⟦␛─⋅50⟧›☾
-𝑩𝑩(󱁕)
+󱁕 = to_ast(code,dbg_show_gram_tree=✓)
+𝑩𝑩(󱁕,‹AST›)
 
- ‹⟦␛─⋅50⟧   PY   ⟦␛─⋅50⟧›☾
- 𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓))
+ 𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓),‹PY AST›)
 
 ‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
 stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾

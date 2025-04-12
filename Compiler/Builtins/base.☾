@@ -1,3 +1,5 @@
+⮌ operator ⨡ __ge__,__le__,rshift,lshift,getitem,delitem
+
 globals().update(þSTK=[])
 globals().update(þPSH=󰲡þSTK.append(x)∨x)
 globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
@@ -5,7 +7,39 @@ globals().update(þPOP=󰲡þSTK.pop(-1-x))
 globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
 ␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
 🃌´ = len
-𝑜 = object
-´󰮈´,´󱣩´ = 𝑜(),𝑜()
+𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦 = Exception, object, dict, bool, list, tuple, set, str, int, float, bytes
+´␀´=NULL=𝑜()
+´󰮈´,´󱣩´,´⬤´ = 𝑜(),𝑜(),𝑜()
+ ´ᐦ´ = 󷺗
+ ´½´,´⅓´,´¼´,´⅕´,´⅙´,´⅐´,´⅛´,´⅑´,´⅒´,´⅔´,´⅖´,´󷶲´,´󷶷´,´¾´,´⅗´,´󷶳´,´⅜´,´󷷆´,´⅘´,´󷶴´,´󷷂´,´⅚´,´󷶵´,´⅝´,´󷶹´,´󷶶´,´⅞´,´󷶺´,´󷷇´,´󷶻´,´󷷈´,´↉´,´󷷉´ = 1÷2,1÷3,1÷4,1÷5,1÷6,1÷7,1÷8,1÷9,1÷10,2÷3,2÷5,2÷7,2÷9,3÷4,3÷5,3÷7,3÷8,3÷10,4÷5,4÷7,4÷9,5÷6,5÷7,5÷8,5÷9,6÷7,7÷8,7÷9,7÷10,8÷9,9÷10,0,1÷100
+ ´π´, ´ℇ´ = 3.14159265358979323, 2.71828182845904523
+ ´∞´, ´î´, ´τ´,      ´󷺍´, ´󷺎´, ´󷺏´ = inf, complex(0,1), 2π, ½π, ¼π, ⅛π
+ ´󷱩´, ´󷱪´, ´󷱬´, ´󷱭´, ´󷱮´, ´󷱯´, ´󷱰´, ´󷱫´ = ¯∞, ¯î, ¯τ, ¯π, ¯󷺍, ¯󷺎, ¯󷺏, ¯ℇ
+ ´ↀ´ = 2³􊿙
+
 CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
 ´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
+
+≡´,≠´       = 󰲣x≡y,󰲣x≠y
+<´,>´,≤´,≥´ = 󰲣x<y,󰲣x>y,__le__,__ge__
+∧´,∨´       = 󰲣x∧y,󰲣x∨y
+∈´,∉´       = 󰲣x∈y,󰲣x∉y
+⋅´,÷´       = 󰲣x⋅y,󰲣x÷y
+%´,⹏´       = 󰲣x%y,󰲣x⹏y
+~´          = 󰲡~x
+|´,&´,^´    = 󰲣x|y,󰲣x&y,󰲣x^y
+⪡´,⪢´       = lshift,rshift
+⌃´          = 󰲣x⌃y
+¬´          = 󰲡¬x
+≅´,≇´       = 󰲣x≅y,󰲣x≇y
+
+⮌ math ⨡ *
+⮌ cmath ⨡ *
+󰆴 factorial, e, pi, tau, sqrt, cbrt, pow
+ ⮌ py_naming_tools ⨡ py_escape_var as PEV
+⮌ functools ⨡ reduce
+⮌ itertools ⨡ chain, filterfalse, product, accumulate, zip_longest
+⮌ random ⨡ shuffle, choice, uniform, randint
+⮌ types ⨡ UnionType
+⮌ sys ⨡ stdout, stderr, path, exit
+⮌ site ⨡ getsitepackages ; path.extend(getsitepackages())

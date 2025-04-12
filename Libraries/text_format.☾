@@ -8,11 +8,24 @@
 H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
 find_esc_seqs = re.compile(‹⟦27󷹝⟧\[(\d+;2;\d+;\d+;\d+|0)m›)
 rm_esc = 𝼞cache(re.sub(find_esc_seqs, ᐦ))
-𝼞ꬷ = 🃌○rm_esc
-lines    = 𝚌↦𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+lines    = 𝚌↦𝚌.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+𝼞ꬷ       = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
+𝼞𝼞       = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
 dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
-padl     = 𝼞cache(󰲣x+ᵜ𝘀⋅←y-𝼞ꬷ(x))
-padr     = 𝼞cache(󰲣x+ 𝘀⋅←y-𝼞ꬷ(x))
+
+@𝼞cache
+⊢ pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
+    l,𝚢 = 𝼞ꬷ(𝚡),𝼞ꬷ(𝚢)
+    ¿l≥𝚢: ↪𝚡
+    Δ = 𝚢-l
+    ¿𝚘≡󷰾: ↪𝚡+Δ⋅𝚣
+    ¿𝚘≡0: ↪[Δ%2⋅𝚣+𝚡]⟗⭠Δ⹏2⋅𝚣
+    ¿𝚘≡1: ↪Δ⋅𝚣+𝚡
+    ✗⨳‹⟦𝚘⟧∉󷰾󷸻1›
+    
+padl     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padc     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padr     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤x𝌂d)󰅂ᐸ⨝𝗻)
 linenum  = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡ󱖔ˢ⭢+𝘀+󷺽⭢⨝𝗻)
 linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
@@ -79,6 +92,16 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     c = box(‹5⭥ᐵ²›)☾
     d = BOX(‹5⭥ᐵ²›)☾
     stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
+    padl(‹egg›,11,␛─)☾
+    padl(‹egg›,␛X⋅11,𝘀)☾
+    padc(‹egg›,11,𝘀)☾
+    padc(‹egg›,11,␛─)☾
+    padc(‹lul›,10,␛─)☾
+    padc(‹lads𝗻x›,10,␛─)☾
+    padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
+    padc(‹egg›,11,𝘀)☾
+    padr(‹egg›,11,𝘀)☾
+    padr(‹egg›,11,␛─)☾
 
-__exports__ = ‹rm_esc padr pads box BOX stackr lines linenum ›␛
-              ‹linewnum dotrim 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+__exports__ = ‹rm_esc lines padl padc padr pads stackr ›␛
+              ‹box BOX linenum linewnum dotrim 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
