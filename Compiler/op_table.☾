@@ -80,7 +80,7 @@ MT = ‹NPSBlrαςνλΔ›
     
     ↪ cb(𝒪)
 
-OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃, 𝚂𝚃, cb)
+OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃,𝚂𝚃,cb)
 IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ  ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ 󷺗 ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 𝘳 = ℵ(OP_LIT       = 𝒪⁻,
@@ -88,7 +88,7 @@ MODIFIERS = ‹⟥≺ 󷺗 ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
       OP_MOD_R     = MODIFIERS₁⨝,
       VAR_SPEC     = ‹∀¿ⴳⴴ✓✗□ᐦ󰮈󱣩⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
           BLK_KWDS = ‹›,
-          STD_KWDS = ‹↪⮂󰆴›,
+          STD_KWDS = ‹↪⮂↺⇥󰆴›,
       BLK_CLN_KWDS = ‹⊢󱀘¿⸘¡➰∀›,
       SUPSCRIPT    = *´󷸔,
       SUBSCRIPT    = *´󷸓)

@@ -32,8 +32,9 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
 𝔐𝔓 = ⥌𝔓,𝚌𝚘𝚍𝚎,n,t,loc=□↦󷺻𝔓(get_orig_section(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),
                           n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
 
-⊢ offset_𝚕𝚌(󱁕,𝚙):  󰤱 shouldn't only the first lines col be shifted right?
-    ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ󷸊₂ᐵ󱑼𝚙ꟿ+ᐸ󰆩
+⊢ offset_𝚕𝚌(󱁕,𝚙):
+    𝚋 = 󱁕ᵉ ᵖ
+    ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ=(𝚋₀+𝚙₀, 𝚋₀⭜𝚋₁⭝𝚋₁+𝚙₁, 𝚋₂+𝚙₀, 𝚋₂⭜𝚋₃⭝𝚋₃+𝚙₁)
     ∀h∈󱁕:offset_𝚕𝚌(h,𝚙)
 
 ⊢ repair_comment_holes(󱁕, coms=□, Δ=0):

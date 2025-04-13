@@ -1,41 +1,53 @@
-‹to_ast ast_to_py›⍭ᴍ󰋺
-󰋺(__dir__ / ‹../Libraries/text_format›)
-󰋺(␛🌈)
-󰋺(‹tree›, *)
-
-HEAD = ‹base.☾ system.☾›⍭ᐖ(‹Builtins/⟦⟞⟧›)ᐸ⨝𝗻
-
-CODE = 󰦥󰦥󰦥󰦥󰦥
- ƒ = print
- [1,2,3] → 󷺺+1ᐸ → ƒ
- 48273 ƒ
- ⊢ ƒ(): 1
-        2
-󰦥󰦥󰦥󰦥󰦥⬄
+ 󰤱  lb𝕊⟶ cun⟶⦢
+ 󰤱  dicts
+ 󰤱  x²⌃2
+ 󰤱  →.x
+ 󰤱  named exceptions
+ 󰤱  with statements
+ 󰤱􊽨 raising
+ 󰤱􊽨 deque for þSTK
 
 ⮌ sys ⨡ argv as 𝔸
-¿𝔸🃌≥3∧𝔸₁≡␛r:
+‹to_ast ast_to_py›⍭ᴍ󰋺
+󰋺(__dir__ / ‹../Libraries/text_format›)
+󰋺(‹tree›, *)
+󰋺(␛🌈)
+
+show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
+
+moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶𝓚)
+⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
+    󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
+    ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
+    ¿show_py_ast:
+        𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓),‹PY AST›)
+    p = stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗))
+    padc(‹ CODE ›,p,␛─)+𝗻+p⭢☾
+    pyc = ast_to_py(󱁕.cpr, reparse=✓)
+    stackr(show(𝚌,✗),show(pyc,✗))☾
+    ↪ pyc
+
+CODE = (‹Builtins/tests.☾›)
+𝕜 = ℵ(show_preast=✗,
+      show_ast   =✗,
+      show_py_ast=✗,
+      dbg_parser =0)
+¿𝔸🃌≥3:
+    ¿𝔸₁≡␛e: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
+    ¿𝔸₁≡␛d: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
+    pre = ᐦ
     code = 𝔸₂﹕⨝𝘀
-    󰋺(‹highlighter›,‹sty›)
-    ‹Using code ⟦sty(code,‹003›)⟧›☾
+    𝕜.show_preast = 𝕜.show_ast = ✓
+    ‹Using code ⟦ŧ𝼝(code,bg=‹003›)⟧›☾
 ¡:
-    ¿𝔸🃌≡2: CODE = 𝔸₁
-    ⸘𝔸🃌≡3: CODE = (__dir__ / 𝔸₂)
-    code = HEAD+𝗻+CODE
+    pre = ‹base system ops_A ops_B ops_C›⍭ᐖmoon_to_py((‹Builtins/⟦⟞☾􋂝􊿍⟧.☾›))◄␛✓☾ᐸ⨝𝗻
+    code = CODE
 
-show = ⥌x,y=✓↦BOX(linewnum(x,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
-
-󱁕 = to_ast(code,dbg_show_gram_tree=✓)
-𝑩𝑩(󱁕,‹AST›)
-
- 𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓),‹PY AST›)
-
-‹⟦␛─⋅50⟧  CODE  ⟦␛─⋅50⟧›☾
-stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗)ᐸ)☾
-
-pyc = ast_to_py(󱁕.cpr, reparse=✓)
-stackr(show(code,✗),show(pyc,✗))☾
-
-exec(pyc)
-
- 
+pyc = pre+𝗻+moon_to_py_debug(code, ⠶𝕜)
+try:
+    (f≔𝐩∘‹/tmp/pyc.py›,pyc)
+    $ᵒᵉᴰpython -u ⟦f⟧󷹹 ¬ ⨳
+except Exception as ε:
+    p = show(pyc,✗,d=175)
+    padc(ŧ𝼝(‹ ERROR! ›,‹f33›),p,␛─)+𝗻+p⭢☾
+    raise ε

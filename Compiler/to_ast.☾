@@ -9,7 +9,7 @@ gram = peggle2(𝚐)
 is_short = 󱁕↦(󱁕ᵉ.parse_len≕α)≠(β≔󱁕ᵉ.input_len)
 warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
 
-⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓, ⠶𝕂):
+⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓, dbg_parser=✗, ⠶𝕂):
     𝚌,coms = 𝚌𝚘𝚍𝚎,□
     ¿remove_comments: 🟑 󰤱􊽨 store info abt stuff so i can say have a symbol
                              that gives me the current line or line number 🟑
@@ -20,15 +20,16 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         𝚌 = +󱁕
     ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□, warn_short=✓,
             trim_length_info=✓, force_full_match=✗, wrap=✗,
-            dbg_show_gram_tree=✗):
+            dbg_show_gram_tree=✗, dbg_parser=dbg_parser):
         ¿𝚌ᐹŃ:
             󱁕 = 𝚌
         ¡:
-            󱁕 = gram(𝚌,𝘳,remove_trashes=✗🟑,DEBUG=𝘳≡‹parser_main›🟑)
+            󱁕 = gram(𝚌,𝘳,remove_trashes=✗,
+                     DEBUG=dbg_parser≡1⭜𝘳≡‹parser_main›⭝dbg_parser>1⭜✓⭝0)
             ¿warn_short: warn_if_short(󱁕)
             ¿force_full_match ∧ is_short(󱁕): ↪□
             ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
-            󱁕.rm(󷺹ᵗ≡␛󰆴)
+            󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
             reform_positions(󱁕, 𝘳≡‹parser_main› ⭜𝚌𝚘𝚍𝚎⭝ 𝚌)
             ¿loc≇□: offset_𝚕𝚌(󱁕,locᐹŃ ⭜locᵉ ᵖ﹕₂⭝ loc﹕₂)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
@@ -93,6 +94,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡              : ↪󱁕
+            get_orig_section(𝚌𝚘𝚍𝚎,󱁕􀲪)
             𝒏 = 𝔐𝔓(𝔓,𝚌𝚘𝚍𝚎,25,‹asgn_left›)(󱁕􀲪)
             󱁕􀲪 = 𝒏₀
             ↪󱁕
@@ -100,11 +102,10 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         regroup_elements(󱁕,𝔓,𝚌𝚘𝚍𝚎)
         ¿𝘯≤26:↪󱁕
+        
         rewrite_asgns(󱁕) 
         rewrite_cmp(󱁕)
-        
         󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝑙,c=󱁕ᶜ₁﹕),pre=✓)
-        
         group_𝑙𝑡(󱁕)
         
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
@@ -117,23 +118,26 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         @(󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,⬤,pre=✓))
         ⊢ _(󱁕):  ignores modifiers, is this bad?
                  󰤱 prob redo this for eval order, ughhhhhhh
+                 󰤱 frick
             ƒ,𝚊,𝚋 = 󱁕
             α,β = 𝚊≠𝖭𝖴𝖫𝖫, 𝚋≠𝖭𝖴𝖫𝖫
             𝚕,𝚛 = ƒᵉ ᵏ
             (𝚕¬󷺒α) ∧ (𝚛¬󷺒β) ⨳
+             (𝚕,𝚛,α,β,𝚊,𝚋)☾
             
             ¿𝚕  󷺥  𝚛: ↪ƒ
             ¿𝚕¬ ∧1≡𝚛: ↪β ⭜󱁕.set(c=[ƒ,𝚋])⭝ ƒ
             ¿𝚕≡1∧ ¬𝚛: ↪α ⭜󱁕.set(c=[ƒ,𝚊])⭝ ƒ
-            ¿𝚕≡1≡  𝚛∧α∧β: ↪󱁕
-            ƒ = 𝒩(␛∘,𝗏((ᐦ,␛ᑀ,␛ᐵ)􀲰 + (ᐦ,␛ᑅ,␛ᑈ)􀲼),ƒ)
-            ¿𝚕≡0∨α ⭢∧⭠ 0≡𝚛∨β: ↪󱁕.set(c=[ƒ,⠤𝚊⛶􋇐􋁐󰁌,⠤𝚋⛶􋇐􋁐󰁍])
+            ¿𝚕≡ 1 ≡𝚛∧α∧β: ↪󱁕
+            ¿𝚕≡2∨𝚛≡2:
+                ƒ = 𝒩(␛∘,𝗏((ᐦ,␛ᑀ,␛ᐵ)􀲰 + (ᐦ,␛ᑅ,␛ᑈ)􀲼),ƒ)
+            ¿𝚕¬∨α ⭢∧⭠ 𝚛¬∨β: ↪󱁕.set(c=[ƒ,⠤𝚊⛶􋇐􋁐󰁌,⠤𝚋⛶􋇐􋁐󰁍])
             
-            ¿𝚕󷺥𝚛⭢∧ α󷺥β : ↪𝒩(␛∘,𝗏(‹CUR󷺗›),ƒ)
+            ¿𝚕󷺥𝚛⭢∧⭠α󷺥β : ↪𝒩(␛∘,𝗏(‹CUR󷺗›),ƒ)
             ¿𝚕∧𝚛:
                 ¿  α󷺥β : ↪𝒩(␛∘,𝗏(‹CUR󷺗›),ƒ)
-                ¿  α󷺥β¬: ↪𝒩(␛∘,𝗏(‹CUR󷺗›),ƒ,𝚊)
-                ¿ ¬α󷺥β : ↪𝒩(␛∘,𝗏(‹CURR›),ƒ,𝚋)
+                ¿  α󷺥β¬: ↪𝒩(␛∘,𝗏(‹CURR›),ƒ,𝚋)
+                ¿ ¬α󷺥β : ↪𝒩(␛∘,𝗏(‹CUR󷺗›),ƒ,𝚊)
             
             ✗ ⨳
         

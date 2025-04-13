@@ -6,12 +6,14 @@
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
 H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
-find_esc_seqs = re.compile(‹⟦27󷹝⟧\[(\d+;2;\d+;\d+;\d+|0)m›)
+find_esc_seqs  = re.compile(S≔‹⟦27󷹝⟧\[(?:\d+;2;\d+;\d+;\d+|0)m›)
+find_next_char = re.compile(‹((?:(?:⟦S⟧)|\\033\[0m)*.?)›)
 rm_esc = 𝼞cache(re.sub(find_esc_seqs, ᐦ))
 lines    = 𝚌↦𝚌.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
 𝼞ꬷ       = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
 𝼞𝼞       = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
 dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+tspl     = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
 
 @𝼞cache
 ⊢ pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
@@ -26,7 +28,7 @@ dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
 padl     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 padc     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 padr     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
-linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤x𝌂d)󰅂ᐸ⨝𝗻)
+linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
 linenum  = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡ󱖔ˢ⭢+𝘀+󷺽⭢⨝𝗻)
 linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
 
@@ -86,6 +88,7 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
 ¿__name__≡‹__main__›:
+    tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
     linewrap(linenum(‹egg salad number twelve fortnite𝗻the last thing you'd want on your burg›),12,3⋅𝘀)☾
     a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
     b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾

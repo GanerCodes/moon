@@ -1,11 +1,10 @@
- 󰋺(‹op_table›, *)
 󰋺(‹tree_txt›, *)
 
 ⊢ denode_op(󱁕,𝔓=󰻾):  󰤱 this doesn't work if mod has newlines
     l, 𝚝, r = 󱁕ᴍ+ᵜ
     𝚘 = OP_TABLE􀳀
     
-    ¿¬l∧r≡␛´: ↪𝗏(󱁕)  󰤱􊽨 hacky/weird way to do this? lol
+    ¿¬l∧r≡␛´: ↪𝗏(󱁕₁)󱖔􋔡󱁕  󰤱􊽨 hacky/weird way to do this? lol
     
     scan = 󰲣⬤∨⍁⭢○⟨ ⟨⬤∈y⍮ ⬤∉x+y⍮ ⍈ 󷺹₀≡␛𐞑⭜␛𝚜⭝⟞₀,⟞₁﹕⨝ᐸ⟩
                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
