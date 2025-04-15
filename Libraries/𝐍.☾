@@ -1,5 +1,6 @@
 󰋺(␛🌈)
 󰋺(‹text_format›)
+⮌ collections ⨡ deque as 𝔡𝔮
 
 󱀘 𝐍:
     __slots__ = ␛t, ␛c
@@ -53,9 +54,9 @@
     __slots__ = ␛t, ␛c, ␛e
     ⊢ __init__(󱁕, t, ⠤c, e=␀):
         󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
-        ∀z∈󱁕ᶜ:
-            ¿z󷹵Ń:
-                ✗⨳‹⟦t⟧; ⟦z⟧, ⟦c⟧›
+         ∀z∈󱁕ᶜ:
+             ¿z󷹵Ń:
+                 ✗⨳‹⟦t⟧; ⟦z⟧, ⟦c⟧›
     __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
     __repr__ = 󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
     __setitem__ = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
@@ -76,36 +77,52 @@
     ⊢ frp(󱁕, ƒ, r, pre=✗, not_T=✓):
         ¿not_T:
             ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
-        🟑
-        ⊢𝓡():
-            ∀i,y∈󱁕↨:
-                󱁕ᵢ = y.frp(ƒ,r,pre)
-        ¿ pre: 𝓡
-        ¿ƒ(󱁕): ↪r(󱁕)
-        ¿¬pre: 𝓡
-        ↪ 󱁕
-        🟑
+        
+          ⊢𝓡():
+              ∀i,y∈󱁕↨:
+                  󱁕ᵢ = y.frp(ƒ,r,pre)
+          ¿ pre: 𝓡
+          ¿ƒ(󱁕): ↪r(󱁕)
+          ¿¬pre: 𝓡
+          ↪ 󱁕
+        
+         ¿pre:
+             ⊢𝓡(󱁕):
+                 ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                 ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+         ¡:
+             ⊢𝓡(󱁕):
+                 ¿ƒ(󱁕): ↪r(󱁕)
+                 ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                 ↪ 󱁕
+         ↪ 𝓡(󱁕)
+        
         ¿pre:
+            ¿󱁕🃌¬: ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+            𝚂,𝚃 = 𝔡𝔮(􋑺),𝔡𝔮()
+            pl,ex,al = 𝚂.popleft,𝚂.extend,𝚃.appendleft
+            ➰𝚂:
+                C = pl()
+                ex(c∀c∈C¿cᶜ)
+                al(C)
+            ∀C∈𝚃:
+                ∀i,c∈enumerate(C):
+                    ¿ƒ(c): Cᵢ=r(c)
+            ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+        ¡:  󰤱 rewrite this to be fast
             ⊢𝓡(󱁕):
-                ∀i,y∈enumerate(󱁕):
-                    󱁕ᵢ = 𝓡(y)
                 ¿ƒ(󱁕): ↪r(󱁕)
+                ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
                 ↪ 󱁕
-        ¡:
-            ⊢𝓡(󱁕):
-                ¿ƒ(󱁕): ↪r(󱁕)
-                ∀i,y∈enumerate(󱁕):
-                    󱁕ᵢ = 𝓡(y)
-                ↪ 󱁕
-        ↪ 𝓡(󱁕)
+            ↪ 𝓡(󱁕)
         
     ⊢ ftrp(󱁕, fs, ⠤𝔸, not_T=✓, ⠶𝕂):
-        fs = 𝑠(fs)
+        fs = frozenset(fs)
         ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(not_T ⭜󰲡¬xᵉ ᵀ∧xᵗ∈fs󰅂 ␛
                                      ⭝󰲡      xᵗ∈fs󰅂,
                                ⠤𝔸, not_T=✗, ⠶𝕂)
     ⊢ gets(󱁕, ƒ, not_T=✓):
-        ¿ƒ󷹵𝗙:
+        ¿𝗙(ƒ)¬:
             ¿ƒᐹᔐ: ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ≡t
             ¡   : ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ∈t
         ↪ [c∀c∈󱁕¿(not_T󷺒cᵉ ᵀ)∧ƒ(c)]
@@ -134,13 +151,22 @@
         ↪ 󱁕
     
     ⊢ as_txt(󱁕):
-        l = 󷺗
-        ⊢ ƒ(󱁕):
-            nonlocal l
-            ¿󱁕ᵉ ᵀ: l 󷸊+ 󱁕ᵗ
-            ¡    : (ƒ(c)∀c∈󱁕)
-        ƒ(󱁕)
-        ↪ l
+        𝚛 = 󷺗
+        
+        ¿󱁕ᵉ ᵀ: ↪󱁕ᵗ
+        𝚀 = 𝔡𝔮(󱁕ᶜ)
+        ➰𝚀:
+            v = 𝚀.popleft()
+            ¿vᵉ ᵀ¬: 𝚀.extendleft(reversed(vᶜ))
+            ¡     : 𝚛=𝚛+vᵗ
+        ↪ 𝚛
+        
+         ⊢ ƒ(󱁕):
+             nonlocal 𝚛
+             ¿󱁕ᵉ ᵀ: r 󷸊+ 󱁕ᵗ
+             ¡    : (ƒ(c)∀c∈󱁕)
+         ƒ(󱁕)
+         ↪ 𝚛
     __pos__ = as_txt
     
     ⊢ lchar(󱁕):
