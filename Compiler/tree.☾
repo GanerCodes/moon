@@ -52,7 +52,8 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
             󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
     ƒ(󱁕)
 
-⊢ reform_positions(󱁕, 𝚌):
+⊢ reform_positions(󱁕, 𝚌):  󰤱 performance is terrible 😭 one day ☾ will
+                             be fast but for now rewrite
     𝙼 = lines(𝚌)ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
     to_pos = 󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ
     ⊢ ƒ(󱁕):

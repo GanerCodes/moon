@@ -38,7 +38,7 @@
     setdef = ⥌𝕊,x↦𝕊.__dict__₀≔x →► 𝕊
     ⊢ getdef(𝕊,k=␀):
         d = 𝕊.__dict__₀
-        ¿dᐹaleph_wrapper:
+        ¿dᐹ􋁜aleph_wrapper:
             d󷸊
              󰤱 way to make setting self an option
             𝕊ₖ=d

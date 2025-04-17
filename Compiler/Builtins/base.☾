@@ -168,7 +168,7 @@ tmp = 𝑑([␛⭥⋄‹ûÃñ󷺗›,␛↨⋄‹ûîμ󷺗›,␛󷹝⋄‹ù�
     ƒ.flush()
     ¿𝔸:↪𝔸₀
 
-⊢ ᐹ´(𝚡=␀,𝚢=␀,𝚜=␀,TYPELIKE={𝗙,𝗛,𝗜},TYPETYPE=type|UnionType):
+⊢ ᐹ´(𝚡=␀,𝚢=␀,𝚜=␀,TYPELIKE={𝗙,𝗛,𝗜},TYPEE=type|UnionType):
     ¿𝚢≅␀       : ↪𝚢 type
     ⸘𝚢∈TYPELIKE: ↪𝚡 𝚢
     ¿𝚜≅␀:
@@ -178,5 +178,5 @@ tmp = 𝑑([␛⭥⋄‹ûÃñ󷺗›,␛↨⋄‹ûîμ󷺗›,␛󷹝⋄‹ù�
         ⸘𝚢≅ℂ        : ↪𝚡ᐹℝ|complex
          ⸘␛ℍ∈imports ∧ 𝚢≅imports[␛ℍ]􋀃:
                        ↪𝚡ᐹℂ|ℍ
-    ↪isinstance(𝚡, isinstance(𝚢,TYPETYPE) ⭜𝚢⭝ type(𝚢))
+    ↪isinstance(𝚡, isinstance(𝚢,TYPEE) ⭜𝚢⭝ type(𝚢))
 ᐴ´,󷹵´,󷹴´ = 󰲣yᐹ􋉀􀸩􋉀􊿥􀸧􍍝x, 󰲣xᐹ􋉀􀸩􋉀􊿥􀸧􍍝y→¬, 󰲣yᐹ􋉀􀸩􋉀􊿥􀸧􍍝x→¬

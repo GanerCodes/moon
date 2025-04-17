@@ -122,8 +122,8 @@ TI = T1􍮕
 ⊢ add_cmp_op_chains(󱁕):  invalid for cmp ops: ≺≻꜠´⟥⟤
     ∀L∈𝙾𝚃ᴙ:
         ¿¬𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈): ↺
-        relv = 󷺹ᵗ≡‹opC› ∧ (⨳IS_OP(⟞₀)) ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
-        charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡"x" ∧ relv(⟞₀)
+        relv = 󷺹ᵗ≡‹opC› ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
+        charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡␛x ∧ relv(⟞₀)
          󰤱 make relv check for invalid modifiers
         @(󱁕.ftrp(‹opC›⍭,⬤,pre=✓))
         ⊢ _(󱁕):
@@ -217,7 +217,7 @@ TI = T1􍮕
         𝑮 = p(𝑽,𝑺≔⍁)
          𝑩𝑩(𝑮,␛𝑮)☾
         
-         index 𝑬 􋑎 𝑬's stack pos
+         index 𝑬 􋑎 𝑬's stack pos  󰤱 PERFORMANCE
         𝘍 = ⥌󱁕,𝚒↦󱁕.ftrp(‹󰨈›⍭, 󱁕↦󱁕ᵉ ᴵſ􍾄⁽􋈠⁽􀲫⁾⁾󷺻𝒩(␛𝐼,⟞,𝖺𝗎𝗍𝗈(⟝))󷺿)
          offset stack
         𝘎 = ⥌󱁕,Δ↦󱁕.ftrp(‹߷›⍭, 󱁕↦𝗆(𝔗(Δ+~󱁕ᵉ ᴵ)))
