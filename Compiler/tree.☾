@@ -52,12 +52,18 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
             󱁕ᵉ ᵖ = l,r = l⋄rᐵ+δ
     ƒ(󱁕)
 
-⊢ reform_positions(󱁕, 𝚌):  󰤱 performance is terrible 😭 one day ☾ will
-                             be fast but for now rewrite
+⊢ reform_positions(󱁕,𝚌):  one day ☾ will be fast but for now
+                          this code is big and ugly 😭
     𝙼 = lines(𝚌)ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
-    to_pos = 󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ
+    s=0  to_pos = 󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ
     ⊢ ƒ(󱁕):
-        󱁕ᵉ ᵖ󷸊ᴍto_pos⭢󰆩
+         󱁕ᵉ ᵖ󷸊ᴍto_pos⭢󰆩
+        nonlocal s
+        ➰𝙼ₛ ₀+𝙼ₛ ₁<󱁕ᵉ ᵖ₀: s󷸊+1
+        ∀i,x∈enumerate(𝙼ₛ﹕):
+            ¿x₀+x₁≥󱁕ᵉ ᵖ₁:
+                󱁕ᵉ ᵖ = (s,󱁕ᵉ ᵖ₀-𝙼ₛ ₀,i+s,󱁕ᵉ ᵖ₁-x₀)
+                ⇥
         ∀z∈󱁕:ƒ(z)
     ƒ(󱁕)
 

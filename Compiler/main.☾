@@ -8,7 +8,15 @@
  󰤱􊽨 raising
  󰤱􊽨 deque for þSTK
 
+BINARY = ‹python3›  ‹pypy3.11›
+CODE = (‹Builtins/tests.☾›)
+𝕜 = ℵ(show_preast=✗,
+      show_ast   =✗,
+      show_py_ast=✗,
+      dbg_parser =0)
+
 ⮌ sys ⨡ argv as 𝔸
+⮌ time ⨡ time as 𝓉
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(‹tree›, *)
@@ -16,7 +24,7 @@
 
 show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
-moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶𝓚)
+moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓}|𝓚)
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
@@ -28,11 +36,6 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶𝓚)
     stackr(show(𝚌,✗),show(pyc,✗))☾
     ↪ pyc
 
-CODE = (‹Builtins/tests.☾›)
-𝕜 = ℵ(show_preast=✗,
-      show_ast   =✗,
-      show_py_ast=✗,
-      dbg_parser =0)
 ¿𝔸🃌≥3:
     ¿𝔸₁≡␛e: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
     ¿𝔸₁≡␛d: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
@@ -41,16 +44,20 @@ CODE = (‹Builtins/tests.☾›)
     𝕜.show_preast = 𝕜.show_ast = ✓
     ‹Using code ⟦ŧ𝼝(code,bg=‹003›)⟧›☾
 ¡:
-    ⮌ time ⨡ time as 𝓉
     𝚝=𝓉
     pre = ‹base system ops_A ops_B ops_C›⍭ᐖmoon_to_py((‹Builtins/⟦⟞☾􋂝􊿍⟧.☾›))◄␛✓☾ᐸ⨝𝗻
-    𝓉-𝚝⭢☾
+    ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     code = CODE
 
+𝚝=𝓉
 pyc = pre+𝗻+moon_to_py_debug(code, ⠶𝕜)
+‹Provided compile took: ⟦𝓉-𝚝⟧›☾
+
 try:
     (f≔𝐩∘‹/tmp/pyc.py›,pyc)
-    $ᵒᵉᴰpython -u ⟦f⟧󷹹 ¬ ⨳
+    𝚝=𝓉
+    $ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹 ¬ ⨳
+    ‹Execution took: ⟦𝓉-𝚝⟧›☾
 except Exception as ε:
     p = show(pyc,✗,d=175)
     padc(ŧ𝼝(‹ ERROR! ›,‹f33›),p,␛─)+𝗻+p⭢☾
