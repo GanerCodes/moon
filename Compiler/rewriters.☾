@@ -10,17 +10,17 @@ TI = T1􍮕
 ⊢ rewrite_strs(󱁕):
      󰤱 normalize newlines and stuff from literals so we get the same string output
      󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-    󱁕.ftrp(‹str_spec_char›⍭, 󱁕↦map_special(+󱁕,󱁕))
+    󱁕.ftrp(‹str_spec_char›, 󱁕↦map_special(+󱁕,󱁕))
     󱁕.ftrp(‹empty_str str_t󰦥 str_tsub str_nsub str_tsys_guts str_tsub_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
-        󱁕↦󱁕.set(t=‹str›), pre=✓)
-    󱁕.ftrp(‹str›⍭, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷), pre=✓)
-    󱁕.ftrp(‹x󷺗󷺗›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)), pre=✓)
-    󱁕.ftrp(‹str›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)), pre=✓)
+        󱁕↦󱁕.set(t=‹str›),✓)
+    󱁕.ftrp(‹str›, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)
+    󱁕.ftrp(‹x󷺗󷺗›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)
+    󱁕.ftrp(‹str›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
 ⊢ rewrite_numbers(󱁕,𝔓):
-    󱁕.ftrp(‹neg_num›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯󱖔􋄤󱁕), 𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))
-    󱁕.ftrp(‹pos_num›⍭, 𝗇)
-    󱁕.ftrp(‹number󷺗›⍭, ᓕ⁰)
-    󱁕.ftrp(‹number_exp›⍭, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃󱖔􋄥󱁕₀), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))), pre=✓)
+    󱁕.ftrp(‹neg_num󷺗󷺗󷺗›, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯󱖔􋄤󱁕), 𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))
+    󱁕.ftrp(‹pos_num󷺗󷺗󷺗›, 𝗇)
+    󱁕.ftrp(‹number󷺗󷺗󷺗󷺗›, ᓕ⁰)
+    󱁕.ftrp(‹number_exp›, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃󱖔􋄥󱁕₀), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))), ✓)
 
 ⊢ λ_add_vk(󱁕, 𝕒=␛𝔸, 𝕜=␛𝕂):
     𝙿,󰊄 = 󱁕₀,+󱁕₁⭢󷸼²
@@ -42,28 +42,27 @@ TI = T1􍮕
     𝚘ᴺ=𝚘󰁘=𝚘󰀷=✓
     ¿𝚕≠␛ᐳ     : 𝚘󰀒=✓
     ¿     𝚛≠␛ᐸ: 𝚘ᴾ=✓
-    ¿𝚕≠␛ᐳ∧𝚛≠␛ᐸ: 𝚘ᴮ=✓
+    ¿𝚕≠␛ᐳ∧𝚛≠␛ᐸ: 𝚘ᴮ=✓  isn't this already set?
     ℴ = 𝗈𝗉(𝚘ᵗ󱖔􋔡󱁕)
     ℴᵗ, ℴᵉ ᴼ = ‹𝗈𝗉›, 𝚘
     ℴᵉ ᵏ = (𝚕≡␛ᐳ⭜0⭝𝚕∈‹ᑀᐒ󷺹󷺻›⭜1⭝2,𝚛≡␛ᐸ⭜0⭝𝚛∈‹ᑅᐘ󷺽󷺿›⭜1⭝2)  dumb?
-    
     𝚘ᵗ = ‹␀T⟦(𝚕∈‹ᑀᐵᐒᐖ›)⋅␛⟞+␛⟝⋅(𝚛∈‹ᑅᑈᐘᐛ›)⟧›  THIS IS STUPID
     ¿il≔𝚕∈‹ᑀᐵ󷺹󷺺›: 𝙲ᶜ.insert(0, 𝗏(␛⟞󱖔􋄤𝙲))
     ¿ir≔𝚛∈‹ᑅᑈ󷺽󷺾›: 𝙲ᶜ.append(   𝗏(␛⟝󱖔􋄥𝙲))
-    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤il⋅␛⟞+␛⟝⋅irᐖ𝖿𝗏(⟞󱖔􋄤𝙲))󱖔􋄤𝙲, 𝙲.set(t=␛x)), ␛𝓐, ␛𝓚)
+    ℴ₁ = λ_add_vk(𝗅𝖺𝗆𝖻(𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤(𝚕≠␛ᐳ)⋅␛⟞+␛⟝⋅(␛ᐸ≠𝚛)ᐖ𝖿𝗏(⟞󱖔􋄤𝙲))󱖔􋄤𝙲, 𝙲.set(t=␛x)), ␛𝓐, ␛𝓚)
     ↪ ℴ
 
 ⊢ rewrite_lambs(󱁕):
-    󱁕.ftrp(‹whiskers›⍭, format_whiskers, pre=✓)
-    󱁕.ftrp(‹lamb_h_preset›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᐖ𝖿𝗏(⟞󱖔􋄥󱁕₀))󱖔􋄥󱁕₀, pre=✓)
-    󱁕.ftrp(‹lamb_h_implicit›⍭, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝗏(󱁕₀)), pre=✓)
-    󱁕.ftrp(‹lamb›⍭, λ_add_vk, pre=✓)
+    󱁕.ftrp(‹whiskers󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, format_whiskers, ✓)
+    󱁕.ftrp(‹lamb_h_preset󷺗󷺗›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᐖ𝖿𝗏(⟞󱖔􋄥󱁕₀))󱖔􋄥󱁕₀, ✓)
+    󱁕.ftrp(‹lamb_h_implicit›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝖿𝗏(󱁕₀)), ✓)
+    󱁕.ftrp(‹lamb󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, λ_add_vk, ✓)
 
 ⊢ rewrite_ternary(󱁕):
     is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  ∧ 󱁕🃌≡1
      why was this checking for atoms?
 
-    @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  x⭜y⭝z
+    @󱁕.ftrp(‹opC›,□,✓)  x⭜y⭝z
     ⊢ _(󱁕):
         𝚘,⠤α = 󱁕
         ¿𝚘ᵉ ᴼ ᵗ≠␛⭝: ↪󱁕
@@ -77,7 +76,7 @@ TI = T1􍮕
         ¿γ₀ ₂🃌: ↪󱁕
         ↪ 𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
     
-    @(󱁕.ftrp(‹opC›⍭, ⬤, pre=✓))  𝅘𝅥𝅮 all the single conditionals 𝅘𝅥𝅮
+    @󱁕.ftrp(‹opC›,□,✓)  𝅘𝅥𝅮 all the single conditionals 𝅘𝅥𝅮
     ⊢ _(󱁕):
         𝚘,⠤α = 󱁕
         ¿𝚘ᵉ ᴼ ᵗ≕t∉␛⭜␛⭝: ↪󱁕
@@ -125,16 +124,16 @@ TI = T1􍮕
         relv = 󷺹ᵗ≡‹opC› ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
         charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡␛x ∧ relv(⟞₀)
          󰤱 make relv check for invalid modifiers
-        @(󱁕.ftrp(‹opC›⍭,⬤,pre=✓))
+        @󱁕.ftrp(‹opC›,□,✓)
         ⊢ _(󱁕):
             ¿relv(󱁕)≕𝚘¬: ↪󱁕
             󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆᶜʰᵃʳᵍ􊱌󰄎􎗓􊬕ᐸ󰌷
             ↪ 󱁕
-        󱁕.ftrp(‹opC›⍭, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, pre=✓)
+        󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)
     ↪󱁕
 
 ⊢ rewrite_cmp(󱁕):
-    @(󱁕.ftrp(‹cmp›⍭,⬤,pre=✓))
+    @󱁕.ftrp(‹cmp›,□,✓)
     ⊢ _(󱁕):  >>>abcd ⟶ a>b󷹗 ∧ 󷹘>c󷹗 ∧ 󷹘>d󷹗
         ¿󱁕🃌≤3: ↪󱁕.set(t=‹opC›)
         o,v = 󱁕ᶜ𝌂󷺹ᵗ≡‹𝗈𝗉›
@@ -147,7 +146,7 @@ TI = T1􍮕
     find_in = 󷺹ᵗ≡‹𝗈𝗉󷺗󷺗󷺗󷺗› ∧ +⟞≡ᑅ␛∈
     find_qq = 󷺹ᵗ≡‹𝑉_spec› ∧ +⟞≡ᑅ␛¿
     
-    @(󱁕.ftrp(‹x›⍭,⬤,pre=✓))
+    @󱁕.ftrp(‹x›,□,✓)
     ⊢ _(󱁕):  [𝟏∀𝟐∈𝟑¿𝟒]
         f1 = 󷺹ᵗ≡‹𝑉_spec› ∧ +⟞≡ᑅ␛∀
         
@@ -159,7 +158,7 @@ TI = T1􍮕
         
         ↪ Ń(‹∀_x›, 𝖿𝗈𝗋(𝗑(⠤𝟏),𝗑(⠤𝟐),𝗑(⠤𝟑),⠤𝟒⭜􍾙₍􊱦􊹣₎⭝􍾹􍿅􍾵􍾵))󱖔􋔡󱁕
     
-    @(󱁕.frp(󷺹ᵗ≡‹cln_pfx› ∧ ⟞₀ᵗ≡‹blk_cln_kwd› ∧ +⟞₀≡␛∀, ⬤, pre=✓))
+    @󱁕.frp(󷺹ᵗ≡‹cln_pfx› ∧ ⟞₀ᵗ≡‹blk_cln_kwd› ∧ +⟞₀≡␛∀, □, ✓)
     ⊢ _(󱁕):  ∀𝟑∈𝟑¿𝟒:
         𝟐,_,𝟑 = spl(󱁕₁,find_in)
         𝟒 = □
@@ -168,11 +167,11 @@ TI = T1􍮕
     _
 
 ⊢ regroup_elements(󱁕,𝔓,𝚌𝚘𝚍𝚎):  󰤱 treat (some) 𝑉_specs as num
-    󱁕.ftrp(‹x›⍭, 󱁕↦󱁕.set(c=
+    󱁕.ftrp(‹x›, 󱁕↦󱁕.set(c=
             ⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(⍮ 󷺹ᵗ≡‹target_rhs›
                ⍈ 󰲡𝒩(‹applier›, ⠤x﹕􍨄ᐵᵗ≡‹grp›⭜𝗆𝖼𝖺𝗅(⟞)⭝⟞, ⠤x􍨄)⟩
-             󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), pre=✓)
-    󱁕.ftrp(‹target_rhs›⍭, 󱁕↦𝒩(‹applier›,󱁕₀,⠤󱁕₁﹕), pre=✓)󱖔􋔡󱁕
+             󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), ✓)
+    󱁕.ftrp(‹target_rhs›, 󱁕↦𝒩(‹applier›,󱁕₀,⠤󱁕₁﹕), ✓)󱖔􋔡󱁕
     ⊢ 𝙁(𝚙,󱁕):
         ¿󱁕ᵗ≡‹mcal›:
             C = ⍁
@@ -184,12 +183,11 @@ TI = T1􍮕
         ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,󱁕₁)
         ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,󱁕)
         ✗⨳
-    󱁕.ftrp(‹applier›⍭, 󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]), pre=✓)
+    󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
 
 ⊢ rewrite_asgns(󱁕):
-    󱁕.ftrp(‹asgn›⍭, 󱁕↦𝗑(𝗈𝗉𝖢(denode_op(𝗈𝗉(␛≔󱖔􋁿󱁕),󰻾),⠤󱁕)), pre=✓)
-    date_󱁕(󷺹ᵗ∈‹asgn_targs asgn_targ›⍭, ‹x›)(󱁕)ᐵ
-        .flat(󷺹ᵗ≡␛x,✗).flat(󷺹ᵗ≡‹applier›,✗)
+    󱁕.ftrp(‹asgn›,󱁕↦𝗑(𝗈𝗉𝖢(denode_op(𝗈𝗉(␛≔󱖔􋁿󱁕),󰻾),⠤󱁕)),✓)
+    date_󱁕(󷺹ᵗ∈‹asgn_targs asgn_targ›⍭, ‹x›)(󱁕)ᐵ.flat(󷺹ᵗ≡␛x,✗).flat(󷺹ᵗ≡‹applier›,✗)
     
     󰨈 = 󰲡Ń(‹󰨈›,e=ℵ􋄅(I=x,⠶𝕂))
     ߷ = 󰲡Ń(‹߷›,e=ℵ􋄅(I=x,⠶𝕂))
@@ -206,7 +204,7 @@ TI = T1􍮕
             ↪𝒩(␛S+󱁕ᵗ,߷(𝑺🃌-2),߷(𝑺🃌-1),󰨈(𝙸))
         ✗ ⨳
     
-    @(󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀∈‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›, ⬤, pre=✓))
+    @󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀∈‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›, □, ✓)
     ⊢ _(󱁕):
         𝒐 = 󱁕₀
         𝚝 = 𝒐₁ ₀ᵗ
@@ -250,7 +248,7 @@ TI = T1􍮕
 𝙏 = 󷺹ᵗ≡‹grp›∧+⟞₀≡␛(
 𝘾 = 󱁕𝖦(⬤,0⋄0⋄1⋄0,‹x opC 𝗈𝗉 op_lit ,›⍭)
 ⊢ group_𝑙𝑡(󱁕):
-    󱁕.frp(  𝙇                    , 󱁕↦𝒩(‹𝑙›,󱁕₁)󱖔􋔡󱁕, pre=✓)
-    󱁕.frp(󱁕↦𝙏(󱁕) ∧ (󱁕₁ᵗ≡␛✓∨𝘾(󱁕₁)), 󱁕↦𝒩(‹𝑡›,󱁕₁)󱖔􋔡󱁕, pre=✓)
-    󱁕.frp(󷺹ᵗ∈‹𝑙𝑡›∧⟞🃌≡1, 󱁕↦󱁕.cp(c=󱁕₀ᵗ≡␛✓ ⭜⍁⭝ 𝘾(󱁕₀) ⭜󱁕₀ ₀ ₁﹕⭝ 􋑺􊬣), pre=✓)
+    󱁕.frp(  𝙇                    , 󱁕↦𝒩(‹𝑙›,󱁕₁)󱖔􋔡󱁕, ✓)
+    󱁕.frp(󱁕↦𝙏(󱁕) ∧ (󱁕₁ᵗ≡␛✓∨𝘾(󱁕₁)), 󱁕↦𝒩(‹𝑡›,󱁕₁)󱖔􋔡󱁕, ✓)
+    󱁕.frp(󷺹ᵗ∈‹𝑙𝑡›∧⟞🃌≡1, 󱁕↦󱁕.cp(c=󱁕₀ᵗ≡␛✓ ⭜⍁⭝ 𝘾(󱁕₀) ⭜󱁕₀ ₀ ₁﹕⭝ 􋑺􊬣), ✓)
     󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑡›, ⠤󱁕₁﹕))

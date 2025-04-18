@@ -74,27 +74,22 @@
         󱁕ᶜ = 󱁕ᶜ ∖ 󱁕ᵉ ⁺
         ↪ 󱁕, 󱁕ᵉ
     
-    ⊢ frp(󱁕, ƒ, r, pre=✗, not_T=✓):
-        ¿not_T:
-            ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
+    ⊢ frp(󱁕,ƒ,r,pre=✗,not_T=✓):
+        ¿r≅□: ↪r↦󱁕.frp(ƒ,r,pre,not_T)
         
-          ⊢𝓡():
-              ∀i,y∈󱁕↨:
-                  󱁕ᵢ = y.frp(ƒ,r,pre)
+        ¿not_T: ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
+        
+          ⊢𝓡(): ∀i,y∈󱁕↨: 󱁕ᵢ = y.frp(ƒ,r,pre)
           ¿ pre: 𝓡
           ¿ƒ(󱁕): ↪r(󱁕)
           ¿¬pre: 𝓡
           ↪ 󱁕
         
-         ¿pre:
-             ⊢𝓡(󱁕):
-                 ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
-                 ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
-         ¡:
-             ⊢𝓡(󱁕):
-                 ¿ƒ(󱁕): ↪r(󱁕)
-                 ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
-                 ↪ 󱁕
+         ¿pre: ⊢𝓡(󱁕): ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                      ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+         ¡   : ⊢𝓡(󱁕): ¿ƒ(󱁕): ↪r(󱁕)
+                      ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                      ↪󱁕
          ↪ 𝓡(󱁕)
         
         ¿pre:
@@ -115,12 +110,11 @@
                 ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
                 ↪ 󱁕
             ↪ 𝓡(󱁕)
-        
-    ⊢ ftrp(󱁕, fs, ⠤𝔸, not_T=✓, ⠶𝕂):
-        fs = frozenset(fs)
-        ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(not_T ⭜󰲡¬xᵉ ᵀ∧xᵗ∈fs󰅂 ␛
-                                     ⭝󰲡      xᵗ∈fs󰅂,
-                               ⠤𝔸, not_T=✗, ⠶𝕂)
+    ⊢ ftrp(󱁕,fs,ƒ,pre=✗,not_T=✓,⠶𝓚):
+        ¿ƒ≅□: ↪ƒ↦󱁕.ftrp(fs,ƒ,pre,not_T,⠶𝓚)
+        ¿fs󷹵ᔐ: fs = frozenset(fs)
+        ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(fsᐹᔐ ⭜󰲡xᵗ≡fs󰅂⭝ 󰲡xᵗ∈fs󰅂,ƒ,pre,not_T,⠶𝓚)
+    
     ⊢ gets(󱁕, ƒ, not_T=✓):
         ¿𝗙(ƒ)¬:
             ¿ƒᐹᔐ: ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ≡t
@@ -130,9 +124,9 @@
     ⊢ find(󱁕, ƒ, pre=✓, not_T=✓, R=□):
         ¿R≅□: R=[]
         ¿not_T ∧ 󱁕ᵉ ᵀ: ↪R
-        ¿pre      : (c.find(ƒ, ✓, not_T, R) ∀c∈󱁕)
+        ¿pre      : (c.find(ƒ,✓,not_T,R) ∀c∈󱁕)
         ¿do≔ƒ(󱁕)  : R.append(󱁕)
-        ¿do ∧ ¬pre: (c.find(ƒ, ✗, not_T, R) ∀c∈󱁕)  ✗ was ✓ before?
+        ¿do ∧ ¬pre: (c.find(ƒ,✗,not_T,R) ∀c∈󱁕)
         ↪ R
     
     ⊢ flat(󱁕, ƒ, 𝔯=✓):

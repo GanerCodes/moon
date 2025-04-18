@@ -33,20 +33,20 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             reform_positions(󱁕, 𝘳≡‹parser_main› ⭜𝚌𝚘𝚍𝚎⭝ 𝚌)
             ¿loc≇□: offset_𝚕𝚌(󱁕,locᐹŃ ⭜locᵉ ᵖ﹕₂⭝ loc﹕₂)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
-            ¿wrap: 󱁕=𝒩(‹wrap›, 󱁕)
+            ¿wrap: 󱁕=𝒩(‹wrap›,󱁕)
             ¿dbg_show_gram_tree ∧ 𝘳≡‹parser_main›:
                 𝑩𝑩(󱁕,‹Initial parse›)
         
         ¿𝘯≤0:↪󱁕
         add_blocks(󱁕)
-        󱁕.ftrp(‹str_tsub›⍭, rewrite_str_indent, pre=✓)
-        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), pre=✓)
+        󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
+        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), ✓)
         󱁕.ftrp(‹ƒ_run_𝔸 ƒ_run_𝕂›⍭, 󱁕↦󱁕.set(c=[𝗑(⠤󱁕)]))
         rewrite_lambs(󱁕)
         rewrite_numbers(󱁕, 𝔓(⬤,1,‹norm_expr›))
         ¿𝘯≤1:↪󱁕
         
-        @(󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›,⬤,pre=✓))
+        @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›,□,✓)
         ⊢ _(󱁕):  󰤱 􀲵 prop gets lost?
                  󰤱 sup arrows
             𝚕,𝙾,𝚛 = 󱁕
@@ -57,9 +57,9 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿+𝚛: 𝒏ᶜ.append(  𝚛.copy(t=‹supscript›))
             ↪ 𝒏
         
-        󱁕.ftrp(‹subscript›⍭, 󱁕↦𝗀𝗋𝗉(‹[]›, ⠤𝔓(+󱁕⭢󷸼,5,‹norm_expr›,loc=󱁕)))
+        󱁕.ftrp(‹subscript›, 󱁕↦𝗀𝗋𝗉(‹[]›,⠤𝔓(+󱁕⭢󷸼,5,‹norm_expr›,loc=󱁕)))
         
-        @(󱁕.ftrp(‹supscript›⍭, ⬤))
+        @󱁕.ftrp(‹supscript›,□)
         ⊢ _(󱁕):  󰤱 superscript exponents dont glue right
             𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝,0,‹gen_expr_atom›,loc=󱁕,warn_short=✗,force_full_match=✓)
             attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹𝑉›
@@ -68,9 +68,9 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.flat(󷺹ᵗ≡‹tmp›)
         ¿𝘯≤5:↪󱁕
         
-        󱁕.ftrp(‹op›⍭, denode_op(⬤, 𝔓(⬤,6,‹norm_expr›,wrap=✓)), pre=✓)
+        󱁕.ftrp(‹op›,denode_op(⬤, 𝔓(⬤,6,‹norm_expr›,wrap=✓)),✓)
         ¿𝘯≤6:↪󱁕
-        󱁕.ftrp(‹x ƒ_val›⍭, group_targets, pre=✓)
+        󱁕.ftrp(‹x ƒ_val›⍭,group_targets,✓)
         ¿𝘯≤8:↪󱁕
         
         grp_stmts(󱁕)
@@ -81,15 +81,15 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
          󰤱 ugex
         
-        󱁕.ftrp(‹x›⍭,󱁕↦parse_expr(󱁕),pre=✓)
+        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
         󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑉› ∧ +⟞₁≡+⟞₂≡‹NULL›)
-        󱁕.ftrp(‹x›⍭,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),pre=✓)
-        󱁕.ftrp(‹opC›⍭,reduce_ς,pre=✓)
+        󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)
+        󱁕.ftrp(‹opC›,reduce_ς,✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
         ¿𝘯≤20:↪󱁕
         
-        @(󱁕.ftrp(‹opC›⍭,⬤,pre=✓))
+        @󱁕.ftrp(‹opC›,□,pre=✓)
         ⊢ _(󱁕):
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
@@ -110,12 +110,12 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x),󰻾),x,y)
-        󱁕.ftrp(‹x󷺗󷺗›⍭, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), pre=✓)
-        󱁕.ftrp(‹x󷺗󷺗›⍭,squashcat  ,pre=✓)
-        󱁕.ftrp(‹opC›⍭,󷺹.set(t=␛∘),pre=✓)
-        󱁕.ftrp(‹⋅󷺗󷺗›⍭,squashmul  ,pre=✓)
+        󱁕.ftrp(‹x󷺗󷺗›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓)
+        󱁕.ftrp(‹x󷺗󷺗›,squashcat  ,✓)
+        󱁕.ftrp(‹opC›,󷺹.set(t=␛∘),✓)
+        󱁕.ftrp(‹⋅󷺗󷺗›,squashmul  ,✓)
         
-        @(󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,⬤,pre=✓))
+        @󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,□,✓)
         ⊢ _(󱁕):  ignores modifiers, is this bad?
                  󰤱 prob redo this for eval order, ughhhhhhh
                  󰤱 frick

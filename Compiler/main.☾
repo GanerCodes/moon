@@ -1,12 +1,13 @@
  󰤱  lb𝕊⟶ cun⟶⦢
- 󰤱  throw out extra args in lambdas
- 󰤱  dicts
- 󰤱  x²⌃2
  󰤱  →.x
+ 󰤱  x²⌃2
+ 󰤱  dicts
  󰤱  named exceptions
+ 󰤱  throw out extra args in lambdas
+ 󰤱  empty program fails
  󰤱  with statements
- 󰤱􊽨 raising
  󰤱􊽨 deque for þSTK
+ 󰤱􊽨 raising
 
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (‹Builtins/tests.☾›)

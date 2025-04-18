@@ -31,7 +31,7 @@ symmap = {
         ␛#: "numbersign" , ␛$: "dollar"      ,
         ␛': "apostrophe" , ␛": "quotedbl"    ,
         ␛𝕊: "space"      , ␛ᴍ: "Multi_key"   , ␛◌: ␛◌,
-        ⠶𝑑(𝐒.ascii_letters+𝐒.digits ᴍ󰲡x⋄꜠) }
+        ⠶𝑑(𝐒.ascii_letters+𝐒.digits ᴍ󰲡x⛶²) }
 
 fargs = ƒ↦ƒ.__code__.co_varnames[:ƒ.__code__.co_argcount]
 ⊢ hsh(s):
