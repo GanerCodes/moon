@@ -1,0 +1,47 @@
+𝑰 = 𝗜
+
+⊢ adjust_depth(𝚡,𝚜,𝑰=𝗜):  negative depth
+    ¿𝚜≅␀: ↪1
+    ¿𝚜≥0: ↪𝚜
+    𝚡,k = 𝚡,0
+    ➰𝑰(𝚡)⭜k󷸊+1: ¿𝚡ᐹᔐ      : ⇥
+                ¿𝚡ᐹᔐ ∨ 𝚡🃌¬: ⇥
+                𝚡󷸊₀
+    ↪𝚜+k-1⭢⤉0
+⊢ flatten(𝚡,𝚜=␀,𝙻=□,𝑰=𝗜):  flatten with depth 𝚜
+    𝚜 = adjust_depth(𝚡,𝚜)
+    ¿𝙻≅□: 𝙻=⍁
+    ¿𝚜≤0∨𝑰(𝚡)¬∨ᔐᐴ𝚡:
+        ↪(𝑰(𝚡)⭜𝙻.extend⭝𝙻.append)(𝚡)►𝙻
+    ∀x∈𝚡:flatten(x,𝚜-1,𝙻,𝑰=𝑰)
+    ↪𝙻
+⊢ chain_structure(𝚡,𝚜=␀,𝑰=𝗜):  replace all vals with □
+    𝚜 = adjust_depth(𝚡,𝚜)
+    ¿𝚜≤0∨𝑰(𝚡)¬∨ᔐᐴ𝚡: ↪𝑰(𝚡) ⭜□⛶􀳉􋌵⭝ □
+    ↪𝚡ᐖchain_structure(⟞,𝚜-1,𝑰=𝑰)
+⊢ deflatten(𝚡,𝙸,𝑰=𝗜):  deflatten(x, chain_structure(𝚡)) ≈ 󰻾
+    ¿𝙸≅□: ↪𝚡 ⭜𝚡.pop(0)⭝ 󰮈
+    ↪𝙸ᐖdeflatten(𝚡,⟞,𝑰=𝑰)
+⊢ flatten_under(𝚡,ƒ,𝚜=␀,ᔨ=␀,𝑰=𝗜):  flatten, change, reshape back
+    𝚜 = adjust_depth(𝚡,𝚜)
+    ¿ᔨ≅␀: ᔨ=flatten(𝚡,𝚜,𝑰=𝑰)
+    ↪deflatten(ƒ(ᔨ), chain_structure(𝚡,𝚜,𝑰=𝑰))
+
+⊢ 󰌷´(𝚡=␀,𝚢=␀,𝚜=␀,ᔨ=␀):
+    ¿𝚡≇␀≇𝚢 ∧ 𝚡ᐹ𝑖ᐴ𝚢: ᔨ≅␀ ⨳ ‹󰤱›
+                    ↪‹⟦𝚡⫰󷹜⟧⟦𝚢⫰󷹜⟧›󷹜⋅⭠𝚡ⴵ⋅ⴵ𝚢∨1
+    ¿𝚢≇␀: 𝚡=𝚡⋄𝚢
+    ¿ᔨ≇␀: ¿𝑰(ᔨ): ↪flatten_under(𝚡, 󰻾,𝚜,[⠤ ᔨ])
+          ↪       flatten_under(𝚡, ᔨ,𝚜)  󰤱 this should be under
+    ↪flatten(𝚡,𝚜,𝑰=𝗜)
+
+󷸑´ = ⥌𝚡,  𝚜=∞↦𝚡󷹵𝗜 ⭜⍁⭝ 󷺹🃌 ⭜⟞₀⭝ 0ᐸ⭢⊛􍈽􀲿󷺹󷹵𝗜∨⟞ᐹᔐᐸ∘𝚡ᐵᐹ𝗜 ⭜⟞🃌⭝ 󰮈
+󷸒´ = ⥌𝚡,  𝚜=∞↦𝚡󷸑􀲿🃌
+´ = ⥌𝚡,𝚢,𝚜=␀↦𝚢ᴙſ􀳉󰲣xᙧʸ⁻¹
+󰆩´ = ⥌𝚡,  𝚜=∞↦𝚡󰌷􀳉􎘈􀵣⁻¹
+
+⊢ (OPWRAP_(⠤‹⪡⪢›)) (𝕏,𝚡=␀,𝚢=1,𝚜=␀):
+    ¿𝚡ᐹℤ: ↪ 𝕏≡␛⪢ ⭜𝚡>>𝚢⭝ 𝚡<<𝚢
+    ¿𝕏≡␛⪡: 𝚢󷸊󷹒
+    ¿𝚜≅␀ : ↪ 𝚡∧⭠𝚡􍈼􀳊﹪􊹳􀳈􍪪ᵢ﹕+𝚡﹕ᵢ
+    ↪ 𝚡󰆩􀲿⭠𝚡󷸑􀲿⪢𝚢

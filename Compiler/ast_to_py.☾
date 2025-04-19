@@ -75,10 +75,8 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
     ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(‹ as ›))
     ⸘󱁕ᵗ≡‹¡›:
         󱁕₀ ₀ᶜ.append(𝔗(␛:))
-        ¿󱁕🃌>1:
-            󱁕₁﹕ᐵ₀ ₀ ₀ ₀.set(t=‹except›)
-        ¡:
-            󱁕ᶜ.append(𝔗(‹except:pass›))
+        ¿󱁕🃌>1: 󱁕₁﹕ᐵ₀ ₀ ₀ ₀.set(t=‹except›)
+        ¡    : 󱁕ᶜ.append(𝔗(‹except:pass›))
     ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭:
         󱁕₀.set(t=𝐌􋑺􊫼.get(+󱁕,+󱁕))
         󱁕ᶜ.insert(1,𝙨)
@@ -92,7 +90,7 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
     ⊢ ƒ(󱁕):
         ¿󱁕ᵉ ᵀ: ↪+󱁕
         ¿󱁕ᵗ≡‹stmts›: ↪ 󱁕ᴍƒ⭢⨝𝗻
-        ¿󱁕ᵗ≡‹blk›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)+𝗻
+        ¿󱁕ᵗ≡‹blk󷺗󷺗›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)+𝗻
         ↪ 󱁕ᴍƒ⭢⨝ᐦ
     𝚌 = ƒ(󱁕)
     ¿reparse:

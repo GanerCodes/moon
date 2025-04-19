@@ -46,7 +46,7 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     ‹Using code ⟦ŧ𝼝(code,bg=‹003›)⟧›☾
 ¡:
     𝚝=𝓉
-    pre = ‹base system ops_A ops_B ops_C›⍭ᐖmoon_to_py((‹Builtins/⟦⟞☾􋂝􊿍⟧.☾›))◄␛✓☾ᐸ⨝𝗻
+    pre = ‹base system ops_A ops_B ops_C ops_›⍭ᐖmoon_to_py((‹Builtins/⟦⟞☾􋂝􊿍⟧.☾›))◄␛✓☾ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     code = CODE
 
