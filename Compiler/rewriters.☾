@@ -176,15 +176,14 @@ TI = T1􍮕
         ¿󱁕ᵗ≡‹mcal›:
             C = ⍁
             ¿+󱁕₀ ₁:
-                𝑩𝑩(󱁕,‹RESWOOCE›)
-                 p = 󱁕ᵉ ᵖꟿ⁰󰲧x,y+1,z,w-1󰅂
-                p = (⠤󱁕₀ ₁ᵉ ᵖ﹕₂,⠤󱁕₀ 􍧰ᵉ ᵖ₂﹕)
+                 𝑩𝑩(󱁕,‹RESWOOCE›)
+                p = 󱁕ᵉ ᵖꟿ⁰󰲧x,y+1,z,w-1󰅂
+                 p = (⠤󱁕₀ ₁ᵉ ᵖ﹕₂,⠤󱁕₀ 􍧰ᵉ ᵖ₂﹕)
                 s = get_orig_section(𝚌𝚘𝚍𝚎,p)
                 C = 𝔓(s,0,‹ƒ_run_params›,wrap=✓)
-                𝑩𝑩(C,s,‹bruh›)
+                 𝑩𝑩(C,s,‹bruh›)
                 C = Cᐖ𝔓(get_orig_section(s,⟞),26,fake_tree=𝗑(⟞),loc=⟞)
                 C 󷸊ᐖ offset_𝚕𝚌(⟞,p)
-                Cᴍ𝑩𝑩
             ↪ 𝒩(␛∘,𝚙,⠤C)
         ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,󱁕₁)
         ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,󱁕)

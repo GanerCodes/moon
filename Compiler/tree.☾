@@ -2,8 +2,7 @@
 
 ⊢ 𝒫(󱁕):  󰤱 figure out if 󱖔􋔡 be used everything this dude is
     α,β = 󱁕.farnodes
-    ¿␛p∈αᵉ∧βᵉ∋␛p:
-        󱁕ᵉ ᵖ = αᵉ ᵖ﹕₂󰌷βᵉ ᵖ₂﹕
+    ¿αᵉ∋␛p∈βᵉ: 󱁕ᵉ ᵖ = (⠤αᵉ ᵖ﹕₂,⠤βᵉ ᵖ₂﹕)
     ↪ 󱁕
 
 ⊢ 󱁕_is_hot_stuff(󱁕, ƒ, ⠤𝔸):  󰤱􊽨 proper css like selectors for Ń?

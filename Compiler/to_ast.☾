@@ -23,20 +23,23 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
     ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□, warn_short=✓,
             trim_length_info=✓, force_full_match=✗, wrap=✗, fake_tree=□,
             dbg_show_gram_tree=dbg_show_gram_tree, dbg_parser=dbg_parser):
-        ‹parsing 𝚌=⟦𝚌⟧›☾
+         ‹Parsing 𝚌=⟦𝚌⟧›☾
         ¿fake_tree≇□:
             󱁕 = fake_tree
         ¡:
             󱁕 = gram(𝚌,𝘳,remove_trashes=✗,
                      DEBUG=dbg_parser≡1⭜𝘳≡‹parser_main›⭝dbg_parser>1⭜✓⭝0)
+             𝑩𝑩(󱁕,‹_1_›𝚌,𝚌🃌,1)
             ¿warn_short: warn_if_short(󱁕)
             ¿force_full_match ∧ is_short(󱁕): ↪□
             ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
             󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
+             𝑩𝑩(󱁕,‹_2_›)
             reform_positions(󱁕, 𝘳≡‹parser_main› ⭜𝚌𝚘𝚍𝚎⭝ 𝚌)
+             𝑩𝑩(󱁕,‹_3_›)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
             ¿wrap: 󱁕=𝒩(‹wrap›,󱁕)
-            ¿dbg_show_gram_tree 🟑∧ 𝘳≡‹parser_main›🟑:
+            ¿dbg_show_gram_tree ∧ 𝘳≡‹parser_main›:
                 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
         
         ¿𝘯≤0:↪󱁕
@@ -149,8 +152,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ✗ ⨳
         
          󰤱 short-circuits
-        
-        󱁕.ftrp(‹subscript›, 󱁕↦󱁕.set(c=𝔓(get_orig_section(𝚌,󱁕)󷸼,∞,‹norm_expr›,loc=󱁕,wrap=✓)ᶜ))
+        󱁕.ftrp(‹subscript›, 󱁕↦󱁕.set(c=𝔓(󱁕₀ᵗ󷸼,∞,‹norm_expr›,loc=󱁕,wrap=✓)ᶜ))
         
         ↪ 󱁕
     ↪ 𝔓(𝚌,coms=coms,trim_length_info=✗,⠶𝕂).set(t=‹AST›)
