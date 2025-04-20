@@ -182,11 +182,11 @@ TI = T1􍮕
                 s = get_orig_section(𝚌𝚘𝚍𝚎,p)
                 C = 𝔓(s,0,‹ƒ_run_params›,wrap=✓)
                  𝑩𝑩(C,s,‹bruh›)
-                C = Cᐖ𝔓(get_orig_section(s,⟞),26,fake_tree=𝗑(⟞),loc=⟞)
+                C = Cᐖ𝔓(get_orig_section(s,⟞ᵉ ᵖ),26,fake_tree=𝗑(⟞),loc=⟞)
                 C 󷸊ᐖ offset_𝚕𝚌(⟞,p)
             ↪ 𝒩(␛∘,𝚙,⠤C)
         ¿󱁕ᵗ≡‹grp󷺗›: ↪𝒩(␛𝐼,𝚙,󱁕₁)
-        ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,󱁕)
+        ¿󱁕ᵗ≡‹attr›: ↪𝒩(␛𝐴,𝚙,󱁕 )
         ✗⨳
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
 
@@ -211,7 +211,7 @@ TI = T1􍮕
     
     @󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀∈‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›, □, ✓)
     ⊢ _(󱁕):
-         𝑩𝑩(󱁕)
+        𝑩𝑩(󱁕)
         𝒐 = 󱁕₀
         𝚝 = 𝒐₁ ₀ᵗ
         𝑽,𝑬 = 𝚝∈‹≔󷸉󷸊󷸋› ⭜(󱁕₁,󱁕₂)⭝ (󱁕₂,󱁕₁)

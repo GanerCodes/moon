@@ -1,42 +1,36 @@
+ 󰤱 string ␛ before newline should not add it
+
 󰋺(‹rewriters›, *)
 
-𝚐 = ∘‹gram›
-𝚐 = 𝘳 ꟿ⁺rgx_golfatron○► ſ􀲧󰲣‹%⟦y₀⟧%› 󰛔ˣ y₁
-gram = peggle2(𝚐)
-
- 󰤱 string ␛ before newline should not add it
+gram = gram_rp(∘‹gram›, 𝘳)
 
 is_short = 󱁕↦(󱁕ᵉ.parse_len≕α)≠(β≔󱁕ᵉ.input_len)
 warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
 
-⊢ to_ast(𝚌𝚘𝚍𝚎, remove_comments=✓, dbg_parser=✗, dbg_show_gram_tree=✗, ⠶𝕂):
+⊢ to_ast(𝚌𝚘𝚍𝚎,remove_comments=✓,dbg_parser=✗,dbg_show_gram_tree=✗,⠶𝕂):
     𝚌,coms = 𝚌𝚘𝚍𝚎,□
     ¿remove_comments: 🟑 󰤱􊽨 store info abt stuff so i can say have a symbol
                              that gives me the current line or line number 🟑
-        󱁕 = gram(𝚌, ‹parser_comment›, remove_trashes=✗)
+        󱁕 = gram(𝚌,‹parser_comment›,remove_trashes=✗)
         is_short(󱁕)¬ ⨳ ‹How›
         coms = 󱁕.find(󷺹ᵗ≡"comment")ᐵᵉ ᵖᑀ₀,⟞₁-1ᐸ
         󱁕.ftrp(‹comment›, 󰻾􋈠􋁐􋋎)
         𝚌 = +󱁕
     
     @(ƒ↦⥌⠤𝔸,loc=□,⠶𝕂↦ƒ(⠤𝔸,⠶𝕂)ᐒloc≅□∨□≅⟞⭜⟞⭝offset_𝚕𝚌(⟞,locᐹŃ ⭜locᵉ ᵖ﹕₂⭝ loc﹕₂))
-    ⊢ 𝔓(𝚌, 𝘯=∞, 𝘳=‹parser_main›, coms=□, loc=□, warn_short=✓,
-            trim_length_info=✓, force_full_match=✗, wrap=✗, fake_tree=□,
-            dbg_show_gram_tree=dbg_show_gram_tree, dbg_parser=dbg_parser):
+    ⊢ 𝔓(𝚌,𝘯=∞,𝘳=‹parser_main›,coms=□,loc=□,warn_short=✓,
+            trim_length_info=✓,force_full_match=✗,wrap=✗,fake_tree=□,
+            dbg_show_gram_tree=dbg_show_gram_tree,dbg_parser=dbg_parser):
          ‹Parsing 𝚌=⟦𝚌⟧›☾
         ¿fake_tree≇□:
             󱁕 = fake_tree
         ¡:
-            󱁕 = gram(𝚌,𝘳,remove_trashes=✗,
-                     DEBUG=dbg_parser≡1⭜𝘳≡‹parser_main›⭝dbg_parser>1⭜✓⭝0)
-             𝑩𝑩(󱁕,‹_1_›𝚌,𝚌🃌,1)
+            󱁕 = gram(𝚌,𝘳,remove_trashes=✗,DEBUG=dbg_parser≡1⭜𝘳≡‹parser_main›⭝dbg_parser>1⭜✓⭝0)
             ¿warn_short: warn_if_short(󱁕)
             ¿force_full_match ∧ is_short(󱁕): ↪□
-            ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕, coms)
+            ¿𝘳≡‹parser_main›: repair_comment_holes(󱁕,coms)
             󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
-             𝑩𝑩(󱁕,‹_2_›)
-            reform_positions(󱁕, 𝘳≡‹parser_main› ⭜𝚌𝚘𝚍𝚎⭝ 𝚌)
-             𝑩𝑩(󱁕,‹_3_›)
+            reform_positions(󱁕,𝚌)
             ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
             ¿wrap: 󱁕=𝒩(‹wrap›,󱁕)
             ¿dbg_show_gram_tree ∧ 𝘳≡‹parser_main›:
@@ -45,10 +39,10 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         ¿𝘯≤0:↪󱁕
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
-        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭, 󱁕↦𝗑(⠤󱁕), ✓)
+        󱁕.ftrp(‹ƒ_val norm_expr expr_not_colon expr_not_comma expr_not_colla multi_expr›⍭,𝗑,✓)
         󱁕.ftrp(‹ƒ_run_𝔸 ƒ_run_𝕂›⍭, 󱁕↦󱁕.set(c=[𝗑(⠤󱁕)]))
         rewrite_lambs(󱁕)
-        rewrite_numbers(󱁕, 𝔓(⬤,1,‹norm_expr›))
+        rewrite_numbers(󱁕,𝔓(⬤,1,‹norm_expr›))
         ¿𝘯≤1:↪󱁕
         
         @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›,□,✓)
@@ -101,8 +95,9 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡              : ↪󱁕
-             󷺻𝔓(get_orig_section(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
-             get_orig_section(𝚌,)
+             𝑩𝑩(󱁕,󱁕ᵗ,‹⟦𝚒⟧›)
+             󷺻𝔓(slice_𝚕𝚌(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
+             slice_𝚕𝚌(𝚌,)
             𝒏 = 𝔐𝔓(𝔓,𝚌🟑𝚘𝚍𝚎🟑,25,‹asgn_left›,󱁕􀲪)(󱁕􀲪)
             󱁕􀲪 = 𝒏₀
             ↪󱁕

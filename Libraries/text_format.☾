@@ -15,6 +15,12 @@ lines    = 𝚌↦𝚌.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has aut
 dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
 tspl     = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
 
+⊢ slice_𝚕𝚌(𝚌,𝚙):
+    𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
+    ¿𝙻🃌≡1: 𝙻 = 𝙻₀ 􀲸􊬤﹕􀲸􊬦⛶
+    ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
+    ↪ 𝙻⨝𝗻
+
 @𝼞cache
 ⊢ pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
     l,𝚢 = 𝼞ꬷ(𝚡),𝼞ꬷ(𝚢)
@@ -87,6 +93,10 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ↪ ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
+__exports__ = ‹rm_esc lines padl padc padr pads stackr ›␛
+              ‹box BOX linenum linewnum dotrim slice_𝚕𝚌 ›␛
+              ‹𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+
 ¿__name__≡‹__main__›:
     tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
     linewrap(linenum(‹egg salad number twelve fortnite𝗻the last thing you'd want on your burg›),12,3⋅𝘀)☾
@@ -105,6 +115,3 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     padc(‹egg›,11,𝘀)☾
     padr(‹egg›,11,𝘀)☾
     padr(‹egg›,11,␛─)☾
-
-__exports__ = ‹rm_esc lines padl padc padr pads stackr ›␛
-              ‹box BOX linenum linewnum dotrim 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭

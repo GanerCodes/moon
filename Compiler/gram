@@ -1,5 +1,3 @@
-supscript   = ~‹%SUPSCRIPT%+›
-subscript   = ~‹%SUBSCRIPT%+›
 _op_⸓_l     = ~‹%OP_MOD_L%›
 _op_⸓_r     = ~‹%OP_MOD_R%›
 op_lit      = ~‹%OP_LIT%›
@@ -20,6 +18,17 @@ blk_head = ⊢_dec ∨ cln_pfx ∨ std_pfx
 kwd_std =     std_kwd 𝘄? (norm_expr      ∨ ✓)
 cln_pfx = blk_cln_kwd 𝗪? (expr_not_colon ∨ ✓) 𝗪? 󰆴":" 𝘄?
 std_pfx =     blk_kwd 𝘄?
+
+ 𝑡 = 󰆴'(' 𝗪? 𝑡_vals_𝗪 𝗪? 󰆴')'
+ 𝑡_vals_𝘄 = (⠶𝑡_val 󰆴',' 𝘄?)+ ⠶𝑡_val?
+ 𝑡_vals_𝗪 = (⠶𝑡_val 󰆴',' 𝗪?)+ ⠶𝑡_val?
+ 𝑡_val = 𝑡_𝔸 ∨ 𝑡_𝕂 ∨ 𝑡_named_val ∨ χ
+ 𝑡_named_val = 𝑉 𝗪? 󰆴'=' 𝗪? χ
+ 𝑡_𝔸 = 󰆴'⠤' 𝘄? ⠶χ
+ 𝑡_𝕂 = 󰆴'⠶' 𝘄? ⠶χ
+
+ χ   = (¬(',' ∨ '=') (whiskers ∨ ⠶gen_expr_atom) 𝘄?)+
+ χ_λ = (¬(',' ∨ '=') (¬lamb_h_implicit lamb ∨ whiskers ∨ ⠶gen_expr_atom) 𝘄?)+
 
 norm_expr = (⠶norm_expr_atom)+
 

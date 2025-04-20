@@ -1,0 +1,117 @@
+󰋺(__dir__ / ‹../𝐍›)
+󰋺(__dir__ / ‹../peggle2›)
+󰋺(__dir__ / ‹../j☾/rgx_golfatron›)
+
+𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
+
+nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
+⊢ ⟵(󱁕,𝒑):  0 width, left of node
+    󱁕 = nrm(󱁕)
+    ¿𝒑ᐹᔐ: ↪󱁕
+    ¿𝒑󷹵Ń: 𝒑=𝒑₀
+    ¿␛p∉𝒑ᵉ: ↪󱁕
+    󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ﹕₂⋅2
+    ↪󱁕
+⊢ ⟶(󱁕,𝒑):  0 width, right of node
+    󱁕 = nrm(󱁕)
+    ¿𝒑ᐹᔐ: ↪󱁕
+    ¿𝒑󷹵Ń: 𝒑=𝒑􍨄
+    ¿␛p∉𝒑ᵉ: ↪󱁕
+    󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ₂﹕⋅2
+    ↪󱁕
+⊢ ⊥(󱁕,𝒑):  between and including nodes as range
+    󱁕 = nrm(󱁕)
+    ¿𝒑ᐹᔐ∨𝒑󷹵𝗜: ↪󱁕
+    ¿𝒑󷹵Ń: 𝒑 = Ń(ᐦ,⠤𝒑)
+    l,r = 𝒑.first_sides(󷺹ᵉ∋␛p)
+    ¿l≅□: ↪󱁕
+    󱁕ᵉ ᵖ = (⠤lᵉ ᵖ﹕₂,⠤rᵉ ᵖ₂﹕)
+    ↪󱁕
+⊢ ⊤(󱁕,𝒑):  between nodes
+    󱁕 = nrm(󱁕)
+    󱁕ᵉ ᵖ = (⠤𝒑₀ᵉ ᵖ₂﹕,⠤𝒑􍨄ᵉ ᵖ﹕₂)
+    ↪󱁕
+⊢ 𝑬(󱁕,𝒑):  copy e
+    󱁕 = nrm(󱁕)
+    ¿𝒑ᐹᔐ: ↪󱁕
+    󱁕ᵉ = 𝒑ᵉ.copy
+    ↪󱁕
+
+⊢ offset_𝚌(󱁕,𝚙):  e.p format: (is,ie)
+    ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝚙, 󱁕ᵉ ᵖ₁+𝚙)
+    ∀c∈󱁕:offset_𝚌(c,𝚙)
+    ↪󱁕
+⊢ offset_𝚕𝚌(󱁕,𝚙):  e.p format: (ls,cs,le,ce)
+    ¿␛p∈󱁕ᵉ:
+        𝚋 = 󱁕ᵉ ᵖ
+        󱁕ᵉ ᵖ=(𝚋₀+𝚙₀, 𝚋₀⭜𝚋₁⭝𝚋₁+𝚙₁, 𝚋₂+𝚙₀, 𝚋₂⭜𝚋₃⭝𝚋₃+𝚙₁)
+    ∀c∈󱁕:offset_𝚕𝚌(c,𝚙)
+    ↪󱁕
+⊢ reform_positions(󱁕,𝚌):  (is,ie)⟶(ls,cs,le,ce)
+                          one day ☾ will be fast but for now this code is big and ugly 😭
+    𝙼 = lines(𝚌)ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
+    🟑 ↪ 󱁕.frp(ⴳ,󱁕↦󱁕ᵉ ᵖ󷸊ᴍ󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ󰅂⭢󰆩 →► 󱁕,✓) 🟑
+    s=0
+    ⊢ ƒ(󱁕):
+        nonlocal s
+        ➰𝙼ₛ ₀+𝙼ₛ ₁<󱁕ᵉ ᵖ₀: s󷸊+1
+        ∀i,x∈enumerate(𝙼ₛ﹕):
+            ¿x₀+x₁≥󱁕ᵉ ᵖ₁:
+                󱁕ᵉ ᵖ = (s,󱁕ᵉ ᵖ₀-𝙼ₛ ₀,i+s,󱁕ᵉ ᵖ₁-x₀)
+                ⇥
+        ∀z∈󱁕:ƒ(z)
+    ƒ(󱁕)
+    ↪󱁕
+
+⊢ gram_surgery(󱁕, holes=□, 𝙥=0):  holes: [(pos,size)]
+    ⊢ ƒ(󱁕):
+        nonlocal 𝙥
+        ¿¬󱁕ᵉ ᵀ:
+            ∀c∈󱁕:ƒ(c)
+            α,β = 󱁕.farnodes
+            󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
+            ↪
+        l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝙥, 󱁕ᵉ ᵖ₁+𝙥)
+        ➰holes ∧ holes₀ ₀≤l:
+            𝙥󷸊+Δ≔holes.pop(0)₁
+            󱁕ᵉ ᵖ = l,r = l⋄rᐵ+Δ
+    ƒ(󱁕)
+    ↪󱁕
+
+ basic gram const replacements
+gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁)
+
+⊢ under_gram(󱁕,ƒ):  I:insert [add stuff to make not ctx-sens]
+                    R:remove [remove comments n stuff]
+    δ = ⍁
+    ∀r∈󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₁,rᵗ🃌 ))
+    ∀r∈󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,rᵗ🃌󷹒))
+    ↪ gram_surgery(ƒ(+󱁕),δ)
+
+⊢ gram_subsup(x,ƒ,𝘎=gram_rp(
+        󰦥󰦥󰦥󰦥󰦥
+            sup  = ~‹%SUP%+›
+            sub  = ~‹%SUB%+›
+            main = ((script = sup∨sub)∨~‹.›)*
+            comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
+        󰦥󰦥󰦥󰦥󰦥,
+        ℵ(SUP=*´󷸔,SUB=*´󷸓))):
+    ꬶ=󰲡𝘎(x).ftrp(‹script›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
+        𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,)⋅2)),
+           ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
+        𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,)⋅2))]))
+    ↪ under_gram(ꬶ(x),ƒ)
+
+__exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions gram_rp gram_subsup›⍭
+
+¿__name__≡‹__main__›:
+    g = peggle2(󰦥󰦥󰦥󰦥󰦥
+        sub = 󰆴'󰜞' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+        sup = 󰆴'󰜚' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+        main = (sup ∨ sub ∨ (the=~‹.›))*
+    󰦥󰦥󰦥󰦥󰦥)
+
+    gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›, ⥌𝚡↦g(𝚡))ᴾ
+
+     󰜚󰜙󰜝󰜙 󰜞󰜚󰜛
