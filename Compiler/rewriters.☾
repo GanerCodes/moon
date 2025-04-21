@@ -16,13 +16,14 @@ TI = T1􍮕
     󱁕.ftrp(‹str›, 󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)
     󱁕.ftrp(‹x󷺗󷺗›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)
     󱁕.ftrp(‹str›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
-⊢ rewrite_numbers(󱁕,𝔓):
-    󱁕.ftrp(‹neg_num󷺗󷺗󷺗›, 󱁕↦𝗀𝗋𝗉(‹()›, 𝗈𝗉(␛¯󱖔􋄤󱁕), 𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))
+⊢ rewrite_numbers(󱁕):
+    󱁕.ftrp(‹neg_num󷺗󷺗󷺗›, 󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))
     󱁕.ftrp(‹pos_num󷺗󷺗󷺗›, 𝗇)
     󱁕.ftrp(‹number󷺗󷺗󷺗󷺗›, ᓕ⁰)
-    󱁕.ftrp(‹number_exp›, 󱁕↦𝗀𝗋𝗉(‹()›, 󱁕₀, 𝗈𝗉(␛⌃󱖔􋄥󱁕₀), 𝗀𝗋𝗉(‹()›, ⠤𝔓(+󱁕₁⭢󷸼, loc=󱁕₁))), ✓)
+    󱁕.ftrp(‹number_exp›, 󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
+    𝑩𝑩(󱁕)
 
-⊢ λ_add_vk(󱁕, 𝕒=␛𝔸, 𝕜=␛𝕂):
+⊢ λ_add_vk(󱁕,𝕒=␛𝔸,𝕜=␛𝕂):
     𝙿,󰊄 = 󱁕₀,+󱁕₁⭢󷸼²
     cur = 𝑠(𝙿ᐵᵗᑀ∈‹ƒ_dec_𝔸 ƒ_dec_𝕂›⍭⭜⟞􍨄⭝󰮈)
      󰤱 check for weird case of ⥌𝔸=2↦...

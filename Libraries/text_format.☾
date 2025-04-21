@@ -1,7 +1,7 @@
 ⮌ functools ⨡ cache
 ⨡ re
 󰋺(␛🌈)
-󰋺(__dir__ / ‹𝐍›)
+󰋺(__dir__ / ‹𝐍›⭢.resolve)
 
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 

@@ -1,9 +1,7 @@
-󰋺(__dir__ / ‹../𝐍›)
-󰋺(__dir__ / ‹../peggle2›)
-󰋺(__dir__ / ‹../j☾/rgx_golfatron›)
-
-𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
-𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
+󰋺(__dir__ / ‹../𝐍›               ⭢.resolve)
+󰋺(__dir__ / ‹../peggle2›         ⭢.resolve)
+󰋺(__dir__ / ‹../j☾/rgx_golfatron›⭢.resolve)
+󰋺(__dir__ / ‹../text_format›     ⭢.resolve, ‹lines›)
 
 nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
 ⊢ ⟵(󱁕,𝒑):  0 width, left of node
@@ -38,6 +36,9 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
     󱁕ᵉ = 𝒑ᵉ.copy
     ↪󱁕
 
+𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
+
 ⊢ offset_𝚌(󱁕,𝚙):  e.p format: (is,ie)
     ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝚙, 󱁕ᵉ ᵖ₁+𝚙)
     ∀c∈󱁕:offset_𝚌(c,𝚙)
@@ -67,7 +68,7 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
 ⊢ gram_surgery(󱁕, holes=□, 𝙥=0):  holes: [(pos,size)]
     ⊢ ƒ(󱁕):
         nonlocal 𝙥
-        ¿¬󱁕ᵉ ᵀ:
+        ¿󱁕∧¬󱁕ᵉ ᵀ:
             ∀c∈󱁕:ƒ(c)
             α,β = 󱁕.farnodes
             󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
@@ -85,8 +86,9 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
 ⊢ under_gram(󱁕,ƒ):  I:insert [add stuff to make not ctx-sens]
                     R:remove [remove comments n stuff]
     δ = ⍁
-    ∀r∈󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₁,rᵗ🃌 ))
-    ∀r∈󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,rᵗ🃌󷹒))
+    ∀r∈󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₀,+r⭢🃌 ))
+    ∀r∈󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,+r⭢🃌󷹒))
+    󱁕.rm(󷺹ᵉ ⁻∩␛R␛Iᐸ)
     ↪ gram_surgery(ƒ(+󱁕),δ)
 
 ⊢ gram_subsup(x,ƒ,𝘎=gram_rp(
@@ -103,7 +105,8 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
         𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,)⋅2))]))
     ↪ under_gram(ꬶ(x),ƒ)
 
-__exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions gram_rp gram_subsup›⍭
+__exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions ›␛
+              ‹gram_rp under_gram gram_subsup›⍭
 
 ¿__name__≡‹__main__›:
     g = peggle2(󰦥󰦥󰦥󰦥󰦥
@@ -112,6 +115,6 @@ __exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 off
         main = (sup ∨ sub ∨ (the=~‹.›))*
     󰦥󰦥󰦥󰦥󰦥)
 
-    gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›, ⥌𝚡↦g(𝚡))ᴾ
+    gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾, ⥌𝚡↦g(𝚡))ᴾ
 
      󰜚󰜙󰜝󰜙 󰜞󰜚󰜛

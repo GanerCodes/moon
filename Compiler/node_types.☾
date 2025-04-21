@@ -1,8 +1,8 @@
 ⮌ functools ⨡ cache
 
 󰋺(__dir__ / ‹../Libraries/🌈›)
-󰋺(__dir__ / ‹../Libraries/peggle2/gram_tools›)
-󰋺(__dir__ / ‹../Libraries/text_format›)
+󰋺(__dir__ / ‹../Libraries/peggle2/gram_tools›⭢.resolve)
+󰋺(__dir__ / ‹../Libraries/text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⭢.resolve)
 
 󰋺(‹op_table.☾›, *)
 
@@ -18,7 +18,7 @@ fix = ␛﹕󰛔␛ː
 
 𝝀,𝙨 = 𝔗(ᐦ),𝔗(𝘀)
 
-𝗑,𝗏   = 𝚲𝒩(‹x›, ⠤𝔸), 󰲡𝒩(‹𝑉›, 𝔗(x))
+𝗑,𝗏   = 𝚲𝒩(‹x›,⠤𝔸), 󰲡𝒩(‹𝑉›,𝔗(x))
 𝗉,𝗆,𝖽 = 𝚲𝒩(‹󷹘›,⠤𝔸), 𝚲𝒩(‹⍖›,⠤𝔸), 𝚲𝒩(‹󷹗›,⠤𝔸)
 𝖿𝗏    = 󰲡𝒩(‹ƒ_𝑉󷺗›, 𝔗(x))
 𝗇=𝗇𝗎𝗆 = 󰲡𝒩(‹num󷺗›, 𝔗(x))  󰤱 make this work for x<0

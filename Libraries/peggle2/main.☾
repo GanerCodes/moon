@@ -7,8 +7,8 @@
      ↪ 󰻾
 fcache = 󰻾􋒍
 
-󰋺(__dir__ / ‹../𝐍›)
-󰋺(__dir__ / ‹../text_format›)
+󰋺(__dir__ / ‹../𝐍󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⭢.resolve)
+󰋺(__dir__ / ‹../text_format›⭢.resolve)
 
 try             : ⨡ regex as re
 except Exception: ⨡ re

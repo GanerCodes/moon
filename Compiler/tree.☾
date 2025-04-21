@@ -20,10 +20,6 @@ date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
         ¿󱁕🃌≤i∨(󱁕≔󱁕ᵢ)ᵗ≠t:↪
     ↪✓
 
-  metareparse; rerun entire parser/grammar on node's region
- 𝔐𝔓 = ⥌𝔓,𝚌𝚘𝚍𝚎,n,t,loc=□↦󷺻𝔓(slice_𝚕𝚌(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),
-                           n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
-
 ⊢ try_pop_pos(󱁕, proxy=□, rec=✗):
     ƒ=󷺹ᵉ∋␛p
     l,r = (proxy≅□ ⭜󱁕⭝ proxy).first_sides(ƒ)
