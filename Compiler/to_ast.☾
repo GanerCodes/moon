@@ -11,52 +11,45 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
 ⊢ to_ast(𝚌𝚘𝚍𝚎,remove_comments=✓,dbg_parser=✗,dbg_show_gram_tree=✗,⠶𝕂):
     ⊢ 𝔓(𝚌,𝘯=∞,𝘳=‹parse_main›,warn_short=✓,trim_length_info=✓,force_full_match=✗,
               dbg_show_gram_tree=dbg_show_gram_tree,dbg_parser=dbg_parser):
-        𝘯 = 1
-         ‹Parsing 𝚌=⟦𝚌⟧›☾
+        ‹Parsing 𝚌=⟦𝚌⟧›☾
         󱁕 = gram(𝚌,𝘳,DEBUG=dbg_parser≡1⭜𝘳≡‹parse_main›⭝dbg_parser>1⭜✓⭝0)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
         󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
         reform_positions(󱁕,𝚌)
         ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
-        ¿dbg_show_gram_tree ∧ 𝘳≡‹parse_main›:
-            𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
-        
+        ¿dbg_show_gram_tree ∧ 𝘳≡‹parse_main›: 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
         ¿𝘯≤0:↪󱁕
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
         󱁕.ftrp(‹norm_x x_not_cln x_not_com x_not_colla multi_x›⍭,𝗑,✓)
+        󱁕.ftrp(‹𝑡 𝑙›⍭, 󷺹.set(c=⟞ᴍ𝗑), ✓)
         rewrite_lambs(󱁕)
         rewrite_numbers(󱁕)
         ¿𝘯≤1:↪󱁕
         
-        @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍›,□,✓)
-        ⊢ _(󱁕):  󰤱 􀲵 prop gets lost?
-                 󰤱 sup arrows
+        @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)
+        ⊢ _(󱁕):
             𝚕,𝙾,𝚛 = 󱁕
-            𝚟 = 𝗏(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
             𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(𝙾)ᶜ))
-            +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟󱖔􋄥𝙾)⭝ 𝒏ᶜ.insert(0,𝚟󱖔􋄤𝙾)
-            ¿+𝚕: 𝒏ᶜ.insert(0,𝚕.copy(t=‹supscript›))
-            ¿+𝚛: 𝒏ᶜ.append(  𝚛.copy(t=‹supscript›))
-            ↪ 𝒏
-        
-        󱁕.ftrp(‹sub›, 󱁕↦𝗀𝗋𝗉(‹[]›,󱁕))
-        
+            ¿+𝙾∈‹󷸊󷸋󷸌󷸍›:
+                𝚟 = 𝗏(󱁕ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
+                +𝙾∈‹󷸊󷸋› ⭜𝒏ᶜ.append(𝚟󱖔􋄥𝙾)⭝ 𝒏ᶜ.insert(0,𝚟󱖔􋄤𝙾)
+            ¿+𝚕: 𝒏ᶜ.insert(0,𝒩(‹sup›,𝚕₀ ₀))
+            ¿+𝚛: 𝒏ᶜ.append(  𝒩(‹sup›,𝚛₀ ₀))
+            ↪𝒏
         @󱁕.ftrp(‹sup›,□)
         ⊢ _(󱁕):  󰤱 superscript exponents dont glue right
-            ¿󱁕
-            𝚑 = 𝔓(+󱁕⭢󷸼≕𝚝,0,‹gen_x_atom›,loc=󱁕,warn_short=✗,force_full_match=✓)
-            attr = 𝚑≇□ ∧ 𝚑₀ᵗ≡‹𝑉›
-            ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),𝗏(𝚑)) ␛
-                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗀𝗋𝗉(‹()›,⠤𝔓(𝚝,5,‹norm_x›,loc=󱁕)))
+            attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀ ₀ᵗ≡␛𝑉
+            ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
+                   ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗀𝗋𝗉(‹()›,⠤󱁕))
         󱁕.flat(󷺹ᵗ≡‹tmp›)
-         𝑩𝑩(󱁕,‹𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧›)
         ¿𝘯≤5:↪󱁕
         
-        󱁕.ftrp(‹op›,denode_op(⬤, 𝔓(⬤,6,‹norm_x›,wrap=✓)),✓)
+        󱁕.ftrp(‹op›,denode_op,✓)
         ¿𝘯≤6:↪󱁕
-        󱁕.ftrp(‹x ƒ_val›⍭,group_targets,✓)
+        
+        󱁕.ftrp(‹x›,group_targets,✓)
         ¿𝘯≤8:↪󱁕
         
         grp_stmts(󱁕)
@@ -67,7 +60,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         
          󰤱 ugex
         
-        󱁕.ftrp(‹x›,󱁕↦parse_x(󱁕),✓)
+        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
+        
         󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑉› ∧ +⟞₁≡+⟞₂≡‹NULL›)
         󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)
         󱁕.ftrp(‹opC›,reduce_ς,✓)
@@ -81,23 +75,20 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
             ¡              : ↪󱁕
              𝑩𝑩(󱁕,󱁕ᵗ,‹⟦𝚒⟧›)
-             󷺻𝔓(slice_𝚕𝚌(𝚌𝚘𝚍𝚎,loc≅□⭜⟞⭝loc),n,t,loc=loc≅□⭜⟞⭝loc,⠶𝕂)
-             slice_𝚕𝚌(𝚌,)
-            𝒏 = 𝔐𝔓(𝔓,𝚌🟑𝚘𝚍𝚎🟑,25,‹asgn_left›,󱁕􀲪)(󱁕􀲪)
-            󱁕􀲪 = 𝒏₀
+             󱁕􀲪 = 𝒏₀
             ↪󱁕
         ¿𝘯≤25:↪󱁕
         
-        regroup_elements(󱁕,𝔓,𝚌🟑𝚘𝚍𝚎🟑)
+        regroup_elements(󱁕)
         ¿𝘯≤26:↪󱁕
         
-        rewrite_asgns(󱁕) 
+        rewrite_asgns(󱁕) ; 𝑩𝑩(󱁕)►exit
         rewrite_cmp(󱁕)
         󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝑙,c=󱁕ᶜ₁﹕),pre=✓)
         group_𝑙𝑡(󱁕)
         
-        squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x),󰻾),x,y)
-        squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x),󰻾),x,y)
+        squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
+        squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
         󱁕.ftrp(‹x󷺗󷺗›, 󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝑙 𝑡 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓)
         󱁕.ftrp(‹x󷺗󷺗›,squashcat  ,✓)
         󱁕.ftrp(‹opC›,󷺹.set(t=␛∘),✓)

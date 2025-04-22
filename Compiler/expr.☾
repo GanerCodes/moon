@@ -1,19 +1,25 @@
 󰋺(‹tree_txt›, *)
 
-⊢ denode_op(󱁕,𝔓=󰻾):  󰤱 this doesn't work if mod has newlines
-    l, 𝚝, r = 󱁕ᴍ+ᵜ
-    𝚘 = OP_TABLE􀳀
+⊢ denode_op(󱁕):  󰤱 this doesn't work if mod has newlines
+     𝑩𝑩(󱁕)
+    l,o,r = 󱁕
+    𝚘 = OP_TABLE󰂼􊬣􊫼
     
-    ¿¬l∧r≡␛´: ↪𝗏(󱁕₁)󱖔􋔡󱁕  󰤱􊽨 hacky/weird way to do this? lol
+     ¿¬l∧r≡␛´: ↪𝗏(󱁕₁)󱖔􋔡󱁕  󰤱􊽨 hacky/weird way to do this? lol
     
-    scan = 󰲣⬤∨⍁⭢○⟨ ⟨⬤∈y⍮ ⬤∉x+y⍮ ⍈ 󷺹₀≡␛𐞑⭜␛𝚜⭝⟞₀,⟞₁﹕⨝ᐸ⟩
-                  󷸴⟨⬤∈x          ⍈ 𝑡⟩
-                  󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
-    mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
-    𝙍 = 󰲡𝔓(xᵗ󷸼,loc=x).set(t=␛x)
-    𝙉 = 󷺹ꟿ²󷺻𝔗(⟞,e=ℵ􋄅(p=⟝⟕󱁕ᵉ ᵖ₀))󷺿ꟿ⥌x,y=□↦+x∉𝑠(‹⟥⟤´›) ⭜𝒩(xᵗ∨␛𝚜,⠤□≇y∧yᵗ⭜􍽙₍₎⭝⍁)⭝ 󰮈󰅂ᐸ
-    𝚕,𝚛 = mods󱑼(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)ꟿ󷺹󰌷􍨅ᔨ􍯏􍬫􋀪􍪵􋔫􍫑􍯏⁺􋌵􍯋􍫟􍬫􍪵􍬵¹⥉𝙉󷺿
-    L,R = modsᐵᴍᓕ⁰⥉𝑠
+     scan = 󰲣⬤∨⍁⭢○⟨ ⟨⬤∈y⍮ ⬤∉x+y⍮ ⍈ 󷺹₀≡␛𐞑⭜␛𝚜⭝⟞₀,⟞₁﹕⨝ᐸ⟩
+                   󷸴⟨⬤∈x          ⍈ 𝑡⟩
+                   󷸴⟨⬤∉x+y⍮⁺      ⍈ ᐳᐦ,⨝󷺽⟩⟩
+     mods = MODIFIERS ꟿscan⭢󱑼l⋄r ꟿ∘
+     𝙍 = 󰲡𝔓(xᵗ󷸼,loc=x).set(t=␛x)
+     𝙉 = 󷺹ꟿ²󷺻𝔗(⟞,e=ℵ􋄅(p=⟝⟕󱁕ᵉ ᵖ₀))󷺿ꟿ⥌x,y=□↦+x∉𝑠(‹⟥⟤´›) ⭜𝒩(xᵗ∨␛𝚜,⠤□≇y∧yᵗ⭜􍽙₍₎⭝⍁)⭝ 󰮈󰅂ᐸ
+     𝚕,𝚛 = mods󱑼(󱁕󷸻₀󰄎₂ᐵᵉ ᵖ₁)ꟿ󷺹󰌷􍨅ᔨ􍯏􍬫􋀪􍪵􋔫􍫑􍯏⁺􋌵􍯋􍫟􍬫􍪵􍬵¹⥉𝙉󷺿
+     L,R = modsᐵᴍᓕ⁰⥉𝑠
+    
+    𝚕,𝚛 = l⋄rᐵᐵᵗ≡‹𝚜›⭜⟞⭝𝒩(⟞₀ᵗ,⠤⟞₁﹕)
+    L,R = l⋄rᐵᐵᵗ≡‹𝚜›⭜󰮈⭝⟞₀ᵗᐸ⥉𝑠
+    
+     󰤱 ´ ∵ neutral op needs apply specials like ꜠
     
     𝚘 = 𝚘.copy
      󰤱 following seems jank
@@ -88,7 +94,7 @@
          cat: 5!√2 5!3!
          ok : x⭥ᴙ  5!󰈲f
         ¿𝚁∧(IS_OP(𝚁₀)≕𝒐¬ ∨ 𝒐ᴾ∧(𝒐ᴮ󷺥𝒐󰀒)):
-            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥𝚁),󰻾))
+            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥𝚁)))
         ↪𝚁
     
      󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
