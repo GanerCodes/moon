@@ -8,6 +8,10 @@ op_lit      = ~‹%OP_LIT%›
 blk_cln_kwd = ~‹%BLK_CLN_KWDS%›
     blk_kwd = ~‹%BLK_KWDS%›
 
+SB='󰜞'
+SP='󰜚'
+SE='󰜛'
+
 parse_main = stmts?
 parse_comm = (⠶(str ∨ native_code) ∨ 󰆴comment ∨ ~‹.|\n›)*
 
@@ -26,7 +30,7 @@ cln_pfx  = blk_cln_kwd 𝗪? (x_not_cln ∨ ✓) 𝗪? 󰆴':' 𝘄?
 std_pfx  =     blk_kwd 𝘄?
 
 𝑡 = 󰆴'(' ⠶_𝑒? 󰆴')'
-𝑙 = 󰆴'[' ⠶_𝑒? 󰆴']' ∨ 󰆴'󰜞' ⠶_𝑒 󰆴'󰜛'
+𝑙 = 󰆴'[' ⠶_𝑒? 󰆴']' ∨ 󰆴SB ⠶_𝑒 󰆴SE
 _𝑒 = 𝗪? (⠶𝑡_vals_𝗪 ∨ ⠶𝑡_val) 𝗪?
 
 𝑡_vals_𝘄    = (⠶𝑡_val 󰆴',' 𝘄?)+ ⠶𝑡_val?
@@ -56,8 +60,8 @@ pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-
 neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
 number     = pos_num ∨ neg_num
 number_exp = number sup
-script = ( (sub = 󰆴'󰜞' 𝗪? norm_x 𝗪? 󰆴'󰜛')
-          ∨(sup = 󰆴'󰜚' 𝗪? norm_x 𝗪? 󰆴'󰜛'))
+script = ( (sub = 󰆴SB 𝗪? norm_x 𝗪? 󰆴SE)
+          ∨(sup = 󰆴SP 𝗪? norm_x 𝗪? 󰆴SE))
 grp = ~‹[{⁅⟦]› 𝗪? (multi_x ∨ ✓) 𝗪? ~‹[}⁆⟧]›
 
 𝑉_bad = (𝗪 ∨ ~‹󰦥{5}|[;=⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
@@ -100,7 +104,7 @@ str_escape = 󰆴"␛␛" ~‹.›
 str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
 
 ugx_x  = ⮞ugx_brack ugx_brack
-ugx_mod   = 󰆴'󰜚' ~‹[􊽨⁺􋅋􊽬]› 󰆴'󰜛'
+ugx_mod   = 󰆴SP ~‹[􊽨⁺􋅋􊽬]› 󰆴SE
 ugx_and   = ⠶ugx_atom+
 ugx_or    = ugx_and 󰆴'󷸴' 𝗪? (⠶ugx_or ∨ ugx_and)
 ugx_☾     = multi_x 󰆴'⍮'? (mod:ugx_mod)?

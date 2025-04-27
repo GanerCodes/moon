@@ -76,7 +76,7 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
         l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝙥, 󱁕ᵉ ᵖ₁+𝙥)
         ➰holes ∧ holes₀ ₀≤l:
             𝙥󷸊+Δ≔holes.pop(0)₁
-            󱁕ᵉ ᵖ = l,r = l⋄rᐵ+Δ
+            󱁕ᵉ ᵖ = l,r = l+Δ,r+Δ
     ƒ(󱁕)
     ↪󱁕
 
@@ -95,8 +95,7 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
         󰦥󰦥󰦥󰦥󰦥
             sup  = ~‹%SUP%+›
             sub  = ~‹%SUB%+›
-            main = ((script = sup∨sub)∨~‹.›)*
-            comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
+            main = ((script = sup∨sub)∨~‹.|\n›)*
         󰦥󰦥󰦥󰦥󰦥,
         ℵ(SUP=*´󷸔,SUB=*´󷸓))):
     ꬶ=󰲡𝘎(x).ftrp(‹script›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[

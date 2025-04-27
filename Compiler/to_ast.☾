@@ -8,20 +8,32 @@ gram = gram_rp(∘‹gram›, 𝘳)
 is_short = 󱁕↦(󱁕ᵉ.parse_len≕α)≠(β≔󱁕ᵉ.input_len)
 warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
 
-⊢ to_ast(𝚌𝚘𝚍𝚎,remove_comments=✓,dbg_parser=✗,dbg_show_gram_tree=✗,⠶𝕂):
-    ⊢ 𝔓(𝚌,𝘯=∞,𝘳=‹parse_main›,warn_short=✓,trim_length_info=✓,force_full_match=✗,
-              dbg_show_gram_tree=dbg_show_gram_tree,dbg_parser=dbg_parser):
-        ‹Parsing 𝚌=⟦𝚌⟧›☾
-        󱁕 = gram(𝚌,𝘳,DEBUG=dbg_parser≡1⭜𝘳≡‹parse_main›⭝dbg_parser>1⭜✓⭝0)
+⊢ to_ast(𝚌𝚘𝚍𝚎,𝘳=‹parse_main›,𝘯=∞,warn_short=✓,trim_length_info=✓,
+              force_full_match=✗,dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
+    
+    ⊢ 𝔓(𝚌):
+        ‹Parsing "⟦𝚌⟧"›☾
+        󱁕 = gram(𝚌,𝘳,DEBUG=dbg_parser,remove_trashes=✗)
+        ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
+        
+        ⊢ ƒ(󱁕,Δ=0):
+            ¿󱁕ᵉ ᵀ          : 󱁕ᵉ ᵖ=(Δ,Δ󷸊-⭠󱁕ᵉ ᵖ≺-)
+            ⸘󱁕ᵗ∈‹SB SP SE›⍭: 󱁕ᵉ ᵖ=(Δ,Δ         )
+            ¡              : 󱁕ᵉ ᵖ=(Δ,Δ≔󱁕ſ󰀷∾ƒ   )
+            ↪Δ
+        ƒ(󱁕)
+        󱁕.rm(󷺹ᵗ∈‹SB SP SE›⍭)
+        𝚌 = +󱁕
         󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
         reform_positions(󱁕,𝚌)
         ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
-        ¿dbg_show_gram_tree ∧ 𝘳≡‹parse_main›: 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
         ¿𝘯≤0:↪󱁕
+        
         add_blocks(󱁕)
         󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
+        ↪𝑩𝑩(󱁕)
         󱁕.ftrp(‹norm_x x_not_cln x_not_com x_not_colla multi_x›⍭,𝗑,✓)
         󱁕.ftrp(‹𝑡 𝑙›⍭, 󷺹.set(c=⟞ᴍ𝗑), ✓)
         rewrite_lambs(󱁕)
@@ -123,18 +135,15 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ✗ ⨳
         
          󰤱 short-circuits
-         󱁕.ftrp(‹subscript›, 󱁕↦󱁕.set(c=𝔓(󱁕₀ᵗ󷸼,∞,‹norm_x›,loc=󱁕,wrap=✓)ᶜ))
         
         ↪ 󱁕
-    𝚌𝚘𝚍𝚎☾
-    DEBUG = dbg_parser≡1⭜𝘳≡‹parse_main›⭝dbg_parser>1⭜✓⭝0
     
-    𝖥𝖭𝗌 = ⍁
-    ¿remove_comments: 𝖥𝖭𝗌.append(⥌𝚌,ƒ↦under_gram(
-                            gram(𝚌,‹parse_comm›,remove_trashes=✗)␛
-                              .ftrp(‹comment›,󷺹ᵉ ᴿ≔✓⭢►⟞), ƒ))
-    𝖥𝖭𝗌.append(gram_subsup)
+    𝚌𝚘𝚍𝚎 = +gram(𝚌𝚘𝚍𝚎,‹parse_comm›,remove_trashes=✗)␛
+            .ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
+     ↑ is weird ∵ we cannot change length ∵ reasons
     
-    ↪ 𝖥𝖭𝗌₀(𝚌𝚘𝚍𝚎,󰲡𝖥𝖭𝗌₁(x,󰲡𝔓(x,trim_length_info=✗,⠶𝕂).set(t=‹AST›)))
+    r = ℵ()
+    gram_subsup(𝚌𝚘𝚍𝚎, 󰲡(rˣ≔𝔓(x,⠶𝓚).set(t=‹AST›)).cpr)
+    ↪ rˣ  this is stupid
 
 __exports__ = ‹to_ast›⍭

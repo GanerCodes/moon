@@ -43,9 +43,9 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     ¿𝔸₁≡␛e: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
     ¿𝔸₁≡␛d: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
     pre = ᐦ
-    code = 𝔸₂﹕⨝𝘀
+    code = 𝔸₁≡␛f ⭜(𝔸₂)⭝ 𝔸₂﹕⨝𝘀
     𝕜.show_preast = 𝕜.show_ast = ✓
-    ‹Using code ⟦ŧ𝼝(code,bg=‹003›)⟧›☾
+    ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
 ¡:
     𝚝=𝓉
     pre = ‹base system ops_A ops_B ops_C ops_›⍭ᐖmoon_to_py((‹Builtins/⟦⟞☾􋂝􊿍⟧.☾›))◄␛✓☾ᐸ⨝𝗻
