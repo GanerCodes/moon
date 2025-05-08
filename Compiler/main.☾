@@ -1,4 +1,5 @@
  󰤱  redid how gram works a bunch of stuff needs to happen now xd
+ 󰤱  whitespace involution lol
  󰤱  https://ganer.xyz/s/b34e011833d68154
  󰤱  lb𝕊⟶ cun⟶⦢
  󰤱  →.x
@@ -13,10 +14,7 @@
 
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (‹Builtins/tests.☾›)
-𝕜 = ℵ(show_preast=✗,
-      show_ast   =✗,
-      show_py_ast=✗,
-      dbg_parser =0)
+𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
 
 ⮌ sys ⨡ argv as 𝔸
 ⮌ time ⨡ time as 𝓉
@@ -39,11 +37,12 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     stackr(show(𝚌,✗),show(pyc,✗))☾
     ↪ pyc
 
-¿𝔸🃌≥3:
-    ¿𝔸₁≡␛e: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
-    ¿𝔸₁≡␛d: 𝔸₂﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
+𝖠 = 𝔸₁﹕
+¿𝖠🃌≥2:
+    ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
+    ¿𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
     pre = ᐦ
-    code = 𝔸₁≡␛f ⭜(𝔸₂)⭝ 𝔸₂﹕⨝𝘀
+    code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
     𝕜.show_preast = 𝕜.show_ast = ✓
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
 ¡:
@@ -55,7 +54,6 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
 𝚝=𝓉
 pyc = pre+𝗻+moon_to_py_debug(code, ⠶𝕜)
 ‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-
 try:
     (f≔𝐩∘‹/tmp/pyc.py›,pyc)
     𝚝=𝓉

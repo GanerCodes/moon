@@ -1,20 +1,22 @@
  󰤱 string ␛ before newline should not add it
  󰤱 store info abt stuff so i can say have a symbol that gives me the current line or line number
 
+ 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓
+ 𝑇↑ 𝑇↓ 
+
 󰋺(‹rewriters›, *)
 
-gram = gram_rp(∘‹gram›, 𝘳)
+gram = gram_rp(∘‹gram›⥉‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›, 𝘳)
 
 is_short = 󱁕↦(󱁕ᵉ.parse_len≕α)≠(β≔󱁕ᵉ.input_len)
 warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
 
-⊢ to_ast(𝚌𝚘𝚍𝚎,𝘳=‹parse_main›,𝘯=∞,warn_short=✓,trim_length_info=✓,
+⊢ to_ast(𝚌𝚘𝚍𝚎,𝘳=‹parse_main›,warn_short=✓,trim_length_info=✓,
               force_full_match=✗,dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
-    
     ⊢ 𝔓(𝚌):
         ‹Parsing "⟦𝚌⟧"›☾
         󱁕 = gram(𝚌,𝘳,DEBUG=dbg_parser,remove_trashes=✗)
-        ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧ 𝘯=⟦𝘯⟧)›)
+        ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Initial parse (𝘳=⟦𝘳⟧)›)
         ¿warn_short: warn_if_short(󱁕)
         ¿force_full_match ∧ is_short(󱁕): ↪□
         
@@ -29,16 +31,16 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
         reform_positions(󱁕,𝚌)
         ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
-        ¿𝘯≤0:↪󱁕
+        
+         𝑩𝑩(󱁕,‹nocom›)
         
         add_blocks(󱁕)
+        ↪󱁕
         󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
-        ↪𝑩𝑩(󱁕)
-        󱁕.ftrp(‹norm_x x_not_cln x_not_com x_not_colla multi_x›⍭,𝗑,✓)
-        󱁕.ftrp(‹𝑡 𝑙›⍭, 󷺹.set(c=⟞ᴍ𝗑), ✓)
+        󱁕.ftrp(‹𝑡_val norm_x x_not_cln x_not_com x_nolla multi_x›⍭,𝗑,✓)
+        󱁕.frp(󷺹ᵗ≡‹𝑡›∧⟞🃌≡1,󷺻𝗍𝗆𝗉(⠤⟞₀),✓)
         rewrite_lambs(󱁕)
         rewrite_numbers(󱁕)
-        ¿𝘯≤1:↪󱁕
         
         @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)
         ⊢ _(󱁕):
@@ -56,19 +58,14 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
             ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
                    ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗀𝗋𝗉(‹()›,⠤󱁕))
         󱁕.flat(󷺹ᵗ≡‹tmp›)
-        ¿𝘯≤5:↪󱁕
         
         󱁕.ftrp(‹op›,denode_op,✓)
-        ¿𝘯≤6:↪󱁕
-        
         󱁕.ftrp(‹x›,group_targets,✓)
-        ¿𝘯≤8:↪󱁕
         
         grp_stmts(󱁕)
         rewrite_for(󱁕)
         rewrite_strs(󱁕)
         flatten_statments(󱁕)
-        ¿𝘯≤9:↪󱁕
         
          󰤱 ugex
         
@@ -79,25 +76,17 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
         󱁕.ftrp(‹opC›,reduce_ς,✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
-        ¿𝘯≤20:↪󱁕
         
-        @󱁕.ftrp(‹opC›,□,pre=✓)
-        ⊢ _(󱁕):
-            ¿󱁕₀ ₁ ₀ᵗ∈‹≔󷸉󷸊󷸋›: 𝚒=1
-            ⸘󱁕₀ ₁ ₀ᵗ∈‹≕󷸎󷸌󷸍›: 𝚒=2
-            ¡              : ↪󱁕
-             𝑩𝑩(󱁕,󱁕ᵗ,‹⟦𝚒⟧›)
-             󱁕􀲪 = 𝒏₀
-            ↪󱁕
-        ¿𝘯≤25:↪󱁕
+         convert = to ≔ here?
         
+        𝑩𝑩(󱁕,‹→ regroup_elements›)
         regroup_elements(󱁕)
-        ¿𝘯≤26:↪󱁕
+        𝑩𝑩(󱁕,‹← regroup_elements›)
         
-        rewrite_asgns(󱁕) ; 𝑩𝑩(󱁕)►exit
+        rewrite_asgns(󱁕)
         rewrite_cmp(󱁕)
         󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝑙,c=󱁕ᶜ₁﹕),pre=✓)
-        group_𝑙𝑡(󱁕)
+        󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑡›, ⠤󱁕₁﹕))
         
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
@@ -143,7 +132,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
      ↑ is weird ∵ we cannot change length ∵ reasons
     
     r = ℵ()
-    gram_subsup(𝚌𝚘𝚍𝚎, 󰲡(rˣ≔𝔓(x,⠶𝓚).set(t=‹AST›)).cpr)
+    gram_subsup(𝚌𝚘𝚍𝚎, 󰲡(rˣ≔𝔓(x,⠶𝓚).set(t=‹AST›))ᴾ.cpr)
     ↪ rˣ  this is stupid
 
 __exports__ = ‹to_ast›⍭

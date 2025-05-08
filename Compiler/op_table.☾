@@ -2,8 +2,7 @@
 󰋺(__dir__ / ‹util_tmp›, *)
 󰋺(__dir__ / ‹generate_operators.☾›)
 
-𝙾𝚃 = [⠤‹, ᴮ󰁌␉⠤ ᴾ ⠶ ᴾ␉: ᴺᴾ󰀒ᴮ›⍭􋕩􋂜􊿖􊿉􋕩,
-      ⠤get_operator_table(ops),
+𝙾𝚃 = [⠤get_operator_table(ops),
       [‹. ᴺ›⍭], [‹⬆ ᴮ›⍭]]  󰤱 ⬆ is stupid and causes bugs w/ (a₉,⠤b,(c₁ᶻ₂³₂ᵃ󰃦󰁌,d),z) ≔ 𝕏
 
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)

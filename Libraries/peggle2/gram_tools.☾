@@ -65,13 +65,17 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
     ƒ(󱁕)
     ↪󱁕
 
-⊢ gram_surgery(󱁕, holes=□, 𝙥=0):  holes: [(pos,size)]
+ basic gram const replacements
+gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁)
+
+⊢ gram_surgery(󱁕,holes=□,𝙥=0):  holes: [(pos,size)]
     ⊢ ƒ(󱁕):
         nonlocal 𝙥
+        ¿␛p∉󱁕ᵉ: ↪
         ¿󱁕∧¬󱁕ᵉ ᵀ:
             ∀c∈󱁕:ƒ(c)
             α,β = 󱁕.farnodes
-            󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
+            ¿␛p∈αᵉ∧βᵉ∋␛p: 󱁕ᵉ ᵖ = (αᵉ ᵖ₀,βᵉ ᵖ₁)
             ↪
         l,r = 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝙥, 󱁕ᵉ ᵖ₁+𝙥)
         ➰holes ∧ holes₀ ₀≤l:
@@ -79,9 +83,6 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
             󱁕ᵉ ᵖ = l,r = l+Δ,r+Δ
     ƒ(󱁕)
     ↪󱁕
-
- basic gram const replacements
-gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁)
 
 ⊢ under_gram(󱁕,ƒ):  I:insert [add stuff to make not ctx-sens]
                     R:remove [remove comments n stuff]
@@ -99,9 +100,9 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
         󰦥󰦥󰦥󰦥󰦥,
         ℵ(SUP=*´󷸔,SUB=*´󷸓))):
     ꬶ=󰲡𝘎(x).ftrp(‹script›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
-        𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,)⋅2)),
+        𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
            ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
-        𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,)⋅2))]))
+        𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
     ↪ under_gram(ꬶ(x),ƒ)
 
 __exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions ›␛
