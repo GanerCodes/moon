@@ -37,11 +37,10 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     stackr(show(𝚌,✗),show(pyc,✗))☾
     ↪ pyc
 
-𝖠 = 𝔸₁﹕
+𝖠,pre = 𝔸₁﹕,ᐦ
 ¿𝖠🃌≥2:
     ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
     ¿𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
-    pre = ᐦ
     code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
     𝕜.show_preast = 𝕜.show_ast = ✓
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾

@@ -14,9 +14,10 @@ SE='󰜛'
 
 parse_main = stmts?
 parse_comm = (⠶(str ∨ native_code) ∨ 󰆴comment ∨ ~‹.|\n›)*
+parse_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
 
-stmts   = (stmt ∨ 𝗪 ∨ 󰆴';')+
-stmt = native_imp ∨ blk_head ∨ kwd_std ∨ asgn ∨ 𝑋↑↑
+stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
+stmt  = native_imp ∨ blk_head ∨ kwd_std ∨ asgn ∨ 𝑋↑↑
 
 blk_head = ⊢_dec ∨ cln_pfx ∨ std_pfx
 ⊢_dec    = 󰆴'⊢' 𝖶 (wrap = 𝑃 𝖶 ∨ ✓) (𝑣𝕒 ∨ ✓) 𝖶 (𝑃 ∨ ✓) 𝖶 󰆴':' 𝖶
@@ -35,7 +36,7 @@ lambs = (  (whiskers=(    (⠶W_L 𝖶 (𝑋↑↑ ∨ ✓) ⠶W_R)
 grp = ~‹[{⁅⟦]› ⠶𝑝𝑐 ~‹[}⁆⟧]›
 𝐿 = 󰆴'[' ⠶𝑝𝑐 󰆴']' ∨ 󰆴SB ⠶𝑝𝑐 󰆴SE
 𝑃 = 󰆴'(' ⠶𝑝𝑐 󰆴')'
-𝑝𝑐 = 𝗐 ⠶𝑎𝑝𝑐 𝗐 (󰆴',' 𝗐 ⠶𝑎𝑝𝑐 𝗐)*
+𝑝𝑐 = 𝗐 ⠶𝑎𝑝𝑐 𝗐 (󰆴',' 𝗐 (⠶𝑎𝑝𝑐 ∨ ᗜ) 𝗐)*
 𝑎𝑝𝑐 = (kw_𝕒 = 𝑣𝕒 𝖶 󰆴'=' 𝖶 𝑋↓↑) ∨ 𝑋↓↑
 𝑋↑↑ = 𝑇↑ ∨ (⠶𝑋↓↑ 𝗐)+
 𝑋↑↓ = 𝑇↓ ∨ (⠶𝑋↓↓ 𝗐)+

@@ -91,5 +91,5 @@ MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
           BLK_KWDS = ‹›,
           STD_KWDS = ‹↪⮂↺⇥󰆴›,
       BLK_CLN_KWDS = ‹⊢󱀘¿⸘¡➰∀›,
-      SUPSCRIPT    = *´󷸔,
-      SUBSCRIPT    = *´󷸓)
+      SUP          = *´󷸔,
+      SUB          = *´󷸓)

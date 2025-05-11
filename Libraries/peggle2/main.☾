@@ -317,7 +317,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 
 󱀘 peggle2:
     __slots__ = ‹rules R›⍭
-    ⊢ __init__(𝕊, g):
+    ⊢ __init__(𝕊,g):
         ¿gᐹᔐ: g = FROM_GRAM(g)
         𝕊ʳᵘˡᵉˢ, 𝕊ᴿ = gᐹpeggle2 ⭜gʳᵘˡᵉˢ⋄gᴿ⭝ g⋄make_rules(g)
     ⊢ __repr__(𝕊): ↪ ‹⟦ᐹ𝕊→.__name__⟧[⟦𝕊ʳᵘˡᵉˢ🃌⟧ Rules, ⟦𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ🃌⟧ Normalized]›

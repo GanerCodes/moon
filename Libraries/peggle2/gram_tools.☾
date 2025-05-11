@@ -84,37 +84,45 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
     ƒ(󱁕)
     ↪󱁕
 
-⊢ under_gram(󱁕,ƒ):  I:insert [add stuff to make not ctx-sens]
-                    R:remove [remove comments n stuff]
+⊢ under_gram(󱁕):  I:insert [add stuff to make not ctx-sens]
+                  R:remove [remove comments n stuff]
     δ = ⍁
     ∀r∈󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₀,+r⭢🃌 ))
     ∀r∈󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,+r⭢🃌󷹒))
     󱁕.rm(󷺹ᵉ ⁻∩␛R␛Iᐸ)
-    ↪ gram_surgery(ƒ(+󱁕),δ)
+    ↪ +󱁕,gram_surgery(⬤,δ)
 
-⊢ gram_subsup(x,ƒ,𝘎=gram_rp(
+⊢ gram_subsup(x,𝘎=gram_rp(
         󰦥󰦥󰦥󰦥󰦥
             sup  = ~‹%SUP%+›
             sub  = ~‹%SUB%+›
-            main = ((script = sup∨sub)∨~‹.|\n›)*
+            main = ((σscript = sup∨sub)∨~‹.|\n›)*
         󰦥󰦥󰦥󰦥󰦥,
-        ℵ(SUP=*´󷸔,SUB=*´󷸓))):
-    ꬶ=󰲡𝘎(x).ftrp(‹script›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
-        𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
-           ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
-        𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
-    ↪ under_gram(ꬶ(x),ƒ)
+        ℵ(SUP=*´󷸔,SUB=*´󷸓)),r=‹main›):
+    ꬶ=󰲡𝘎(x,r,remove_trashes=✗).ftrp(
+        ‹σscript›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
+            𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
+               ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
+            𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
+    ↪ under_gram(ꬶ(x))
+
+⊢ peggrampeg(𝚌,ns={},𝘎 = peggle2(󰦥󰦥󰦥󰦥󰦥
+           main = (brak∨~‹.|\n›)*
+           brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›󰦥󰦥󰦥󰦥󰦥)):
+    ↪ peggle2(+𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(+⟞,ns=ns))])))
 
 __exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions ›␛
-              ‹gram_rp under_gram gram_subsup›⍭
+              ‹gram_rp under_gram gram_subsup peggrampeg›⍭
 
 ¿__name__≡‹__main__›:
-    g = peggle2(󰦥󰦥󰦥󰦥󰦥
+    g = peggrampeg(󰦥󰦥󰦥󰦥󰦥
         sub = 󰆴'󰜞' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
         sup = 󰆴'󰜚' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
-        main = (sup ∨ sub ∨ (the=~‹.›))*
+        main = (sup ∨ sub ∨ (%⦃␛t+‹he›⦄%=~‹.›))*
     󰦥󰦥󰦥󰦥󰦥)
 
-    gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾, ⥌𝚡↦g(𝚡))ᴾ
+    s,Ι = gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾)
+    󱁕 = g(s☾)ᴾ
+    Ι(󱁕)ᴾ
 
      󰜚󰜙󰜝󰜙 󰜞󰜚󰜛
