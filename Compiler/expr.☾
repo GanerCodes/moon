@@ -1,7 +1,7 @@
 󰋺(‹tree_txt›, *)
 
 ⊢ denode_op(󱁕):  󰤱 this doesn't work if mod has newlines
-     𝑩𝑩(󱁕)
+    𝑩𝑩(󱁕)
     l,o,r = 󱁕
     𝚘 = OP_TABLE󰂼􊬣􊫼
     

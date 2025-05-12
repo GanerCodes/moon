@@ -65,8 +65,12 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
     ƒ(󱁕)
     ↪󱁕
 
+
+is_short = 󱁕↦󱁕ᵉ.parse_len≠󱁕ᵉ.input_len
+warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
+
  basic gram const replacements
-gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁)
+gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle2
 
 ⊢ gram_surgery(󱁕,holes=□,𝙥=0):  holes: [(pos,size)]
     ⊢ ƒ(󱁕):
@@ -106,13 +110,15 @@ gram_rp = ⥌𝚐,r↦peggle2(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%
             𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
     ↪ under_gram(ꬶ(x))
 
-⊢ peggrampeg(𝚌,ns={},𝘎 = peggle2(󰦥󰦥󰦥󰦥󰦥
+⊢ peggrampeg(𝚌,ns={},𝘎=peggle2(
+        󰦥󰦥󰦥󰦥󰦥
            main = (brak∨~‹.|\n›)*
-           brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›󰦥󰦥󰦥󰦥󰦥)):
-    ↪ peggle2(+𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(+⟞,ns=ns))])))
+           brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›
+       󰦥󰦥󰦥󰦥󰦥), m=✓):
+    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(+⟞,ns=ns))])) ⭢ ᣆᵐ peggle2
 
 __exports__ = ‹peggle2 Ń 𝒩 𝔗 ⟵ ⟶ ⊥ ⊤ 𝑬 offset_𝚕𝚌 offset_𝚌 reform_positions ›␛
-              ‹gram_rp under_gram gram_subsup peggrampeg›⍭
+              ‹gram_rp under_gram gram_subsup peggrampeg is_short warn_if_short›⍭
 
 ¿__name__≡‹__main__›:
     g = peggrampeg(󰦥󰦥󰦥󰦥󰦥

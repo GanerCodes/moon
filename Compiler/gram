@@ -12,9 +12,11 @@ SB='󰜞'
 SP='󰜚'
 SE='󰜛'
 
-parse_main = stmts?
-parse_comm = (⠶(str ∨ native_code) ∨ 󰆴comment ∨ ~‹.|\n›)*
-parse_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
+main = gram_%⦃𝔪⦄%
+
+gram_main = stmts?
+gram_comm = (⠶(str ∨ native_code) ∨ 󰆴comment ∨ ~‹.|\n›)*
+gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
 
 stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
 stmt  = native_imp ∨ blk_head ∨ kwd_std ∨ asgn ∨ 𝑋↑↑
@@ -47,9 +49,9 @@ grp = ~‹[{⁅⟦]› ⠶𝑝𝑐 ~‹[}⁆⟧]›
 𝑎↑↑ = 𝑇↑    ∨ ⠶𝑎↓↑
 𝑎↑↓ = 𝑇↓    ∨ ⠶𝑎↓↓
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (grp ∨ 𝑃 ∨ 𝐿 ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code ∨ ugx_x
-           ∨ ¬lamb_h_implicit lamb ∨ 𝑣_spec ∨ op
-           ∨ number_exp ∨ number ∨ ⠶script ∨ 𝑣)
+𝑎↓↓ = (%⦃𝔪≡‹scrp›⭜‹σscript∨›⭝𝔪≡‹comm›⭜‹comment∨›⭝ᐦ⦄% grp ∨ 𝑃 ∨ 𝐿 ∨ ⠶𝔸𝕂
+           ∨ ⠶str ∨ native_code ∨ ugx_x ∨ ¬lamb_h_implicit lamb ∨ 𝑣_spec
+           ∨ op ∨ number_exp ∨ number ∨ ⠶script ∨ 𝑣)
 
 𝔸𝕂 = (𝔸 = 󰆴'⠤' 𝖶 𝑋↓↑) ∨ (𝕂 = 󰆴'⠶' 𝖶 𝑋↓↑)
 slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
@@ -77,7 +79,7 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝑣𝕒 = 𝑣 ∨ op_lit 󰆴'´'?
 𝑣 = (󰆴'´' ↷ ~‹[^´]+›) ∨ ƨ((¬𝑣_bad ~‹.›)+)
 𝑣_bad = (𝗪 ∨ ~‹󰦥{5}|[;:,=⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
-           ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
+           ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
 W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
 W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
