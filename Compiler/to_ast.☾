@@ -1,6 +1,3 @@
- 󰤱 string ␛ before newline should not add it
- 󰤱 store info abt stuff so i can say have a symbol that gives me the current line or line number
-
 󰋺(‹rewriters›, *)
 
 gram = gram_rp(∘‹gram›⥉‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
@@ -14,15 +11,12 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     𝚌𝚘𝚍𝚎 = +gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗)␛
             .ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
      ↑ is weird ∵ we cannot change length ∵ reasons
-    
     𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
     󱁕 = gram_main(𝚌,DEBUG=dbg_parser,remove_trashes=✗)
-    
-    ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Initial parse›)
-    ¿warn_short: warn_if_short(󱁕)
+    ¿dbg_show_gram_tree            : 𝑩𝑩(󱁕,‹Initial parse›)
+    ¿warn_short                    : warn_if_short(󱁕)
     ¿force_full_match ∧ is_short(󱁕): ↪□
     Ι(󱁕)
-    
     ⊢ ƒ(󱁕,Δ=0):
         ¿󱁕ᵉ ᵀ          : 󱁕ᵉ ᵖ=(Δ,Δ󷸊-⭠󱁕ᵉ ᵖ≺-)
         ⸘󱁕ᵗ∈‹SB SP SE›⍭: 󱁕ᵉ ᵖ=(Δ,Δ         )
@@ -37,12 +31,17 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     
     add_blocks(󱁕)
     󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
-    󱁕.ftrp(‹𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓›⍭,𝗑,✓)
-    󱁕.ftrp(‹𝑃 𝑇↑ 𝑇↓›⍭,󱁕↦Ń(␛𝑇,⠤󱁕),✓)
-    󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹🃌≡1 ⭜𝗍𝗆𝗉(⠤⟞₀)⭝ ⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
-    󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
+    󱁕.ftrp(‹⊢_dec›,󷺹ᶜ􍨄.set(t=‹ƒ_dec_params›)►⟞,✓)
+    󱁕.ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓›⍭,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)
+    󱁕.ftrp(‹𝑃 𝑇↑ 𝑇↓›           ⍭,󱁕↦Ń(␛𝑇,⠤󱁕)󱖔􋔡󱁕,✓)
+    󱁕.ftrp(‹𝝀𝔸›,󱁕↦󱁕.set(t=␛𝔸))
+    󱁕.ftrp(‹𝝀𝕂›,󱁕↦󱁕.set(t=␛𝕂))
+    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›, 󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕, ✓)
+     󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
+     󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
     rewrite_lambs(󱁕)
     rewrite_numbers(󱁕)
+     𝑩𝑩(󱁕)
     
     @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)
     ⊢ _(󱁕):
@@ -58,7 +57,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     ⊢ _(󱁕):  󰤱 superscript exponents dont glue right
         attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀ ₀ᵗ≡␛𝑣
         ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
-               ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗀𝗋𝗉(‹()›,⠤󱁕))
+               ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗑(⠤󱁕))
     󱁕.flat(󷺹ᵗ≡‹tmp›)
     
     󱁕.ftrp(‹op›,denode_op,✓)
@@ -68,25 +67,17 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     rewrite_for(󱁕)
     rewrite_strs(󱁕)
     flatten_statments(󱁕)
-    
      󰤱 ugex
     
     󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
-    
     󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)
     󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)
     󱁕.ftrp(‹opC›,reduce_ς,✓)
     add_cmp_op_chains(󱁕)
     rewrite_ternary(󱁕)
-    
-     convert = to ≔ here?
-    
-    𝑩𝑩(󱁕,‹→ regroup_elements›)
     regroup_elements(󱁕)
-    𝑩𝑩(󱁕,‹← regroup_elements›)
-    
     rewrite_asgns(󱁕)
-    rewrite_cmp(󱁕)
+    rewrite_cmp(󱁕)  󰤱 inspect
     󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)
     󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
     
@@ -100,7 +91,6 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     @󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,□,✓)
     ⊢ _(󱁕):  ignores modifiers, is this bad?
              󰤱 prob redo this for eval order, ughhhhhhh
-             󰤱 frick
         ƒ,𝚊,𝚋 = 󱁕
         α,β = 𝚊≠𝖭𝖴𝖫𝖫, 𝚋≠𝖭𝖴𝖫𝖫
         𝚕,𝚛 = ƒᵉ ᵏ
@@ -126,7 +116,12 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ✗ ⨳
     
      󰤱 short-circuits
-        
+    
+    󱁕.frp(󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕)
+    󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
+    󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
+    
+     𝑩𝑩(󱁕,␛󱁕)
     ↪ 󱁕
 
 __exports__ = ‹to_ast›⍭

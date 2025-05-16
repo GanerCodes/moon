@@ -1,10 +1,10 @@
 ⮌ operator ⨡ __ge__,__le__,rshift,lshift,getitem,setitem,delitem
 
-globals().update(þSTK=[])
-globals().update(þPSH=󰲡þSTK.append(x)∨x)
-globals().update(þPKE=󰲡þSTK₋₁₋ₓ)
-globals().update(þPOP=󰲡þSTK.pop(-1-x))
-globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
+þSTK=[]
+þPSH=⥌x  ↦þSTK.append(x)∨x
+þPKE=⥌x  ↦þSTK₋₁₋ₓ
+þPOP=⥌x=0↦þSTK.pop(-1-x)
+þDEL=⥌x  ↦þSTK.__delitem__(-x:)
 ␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
 
 ⮌ math ⨡ *
@@ -33,7 +33,7 @@ globals().update(þDEL=󰲡þSTK.__delitem__(-x:))
 󰻾´ = 𝚲𝔸₀  󰤱
 ◄´,►´ = 𝚲𝔸₀,𝚲𝔸􍨄
 CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
-´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y∈𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
+´ᐵ´ = ´ᑈ´ = ƒ↦⥌𝚡,⠤𝙰,⠶𝙺↦[𝕩∀y⬠𝚡¿ƒ(y,⠤𝙰,⠶𝙺)≕𝕩≇󰮈]
 ´ᑀᑅ´ = ƒ↦ƒ
 
  󰤱 generalize ⊂∖∩∪ to multiset subset for left being list, with 􋇠 disabling that for
@@ -63,9 +63,9 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 ⌃´,¬´       = 󰲣x⌃y, 󰲡¬x
 ⬆´ = ⌃´
 
-∖´ = 󰲣xᐹ𝑠 ⭜  x -𝑠(y)⭝ [     z∀z∈x¿z∉y ]
-∪´ = 󰲣xᐹ𝑠 ⭜𝑠(x)|𝑠(y)⭝ [⠤x,⠤(z∀z∈y¿z∉x)]
-∩´ = 󰲣xᐹ𝑠 ⭜𝑠(x)&𝑠(y)⭝ [     z∀z∈x¿z∈y ]
+∖´ = 󰲣xᐹ𝑠 ⭜  x -𝑠(y)⭝ [     z∀z⬠x¿z∉y ]
+∪´ = 󰲣xᐹ𝑠 ⭜𝑠(x)|𝑠(y)⭝ [⠤x,⠤(z∀z⬠y¿z∉x)]
+∩´ = 󰲣xᐹ𝑠 ⭜𝑠(x)&𝑠(y)⭝ [     z∀z⬠x¿z∈y ]
 󷹩´ = 󰲣x∪y →∖← x∩y
 ⨉´ = ⥌𝚡=␀,𝚢=␀,𝚜=␀↦product(⠤𝚢≅␀∧𝚜≇␀⭜􀳈⋅𝚜⭝(𝚢≅␀⭜𝚡⭝[𝚡,𝚢])⋅(𝚜≅␀⭜1⭝𝚜))ᴍ𝑙
 ⊞´ = ⥌⠤𝔸,𝚜=1↦(ƒ≔⥌⠤𝔸,n=1,r=[]↦𝔸⋅nᑀ₀ᴍ󰲡⟞🃌>1 ⭜ƒ(⠤⟞₁﹕,r=r+[𝚡])⭝ r+[𝚡])(⠤𝔸,n=𝚜)
@@ -80,14 +80,13 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 ⬓´,⬒´ = floor, ceil  󰤱 make this support modifier
 󷸛´,󷸚´ = ⥌𝚡↦𝚡.real, ⥌𝚡↦𝚡.imag
 󷸜´ = ⥌𝚡↦𝚡ᐹ𝑙|𝑡 ⭜ℂ(⠤𝚡)⭝ (𝚡󷸛,𝚡󷸚)  󰤱 weird globals thing w/ ℍ
- …´ = 󰲣𝑙←range(x,y)
+…´ = ⥌𝚡,𝚢↦[⠤range(𝚡,𝚢)]
  ∓´,±´ = 𝚲-´⋄+´ᐵ(⠤𝕣(𝔸)), 𝚲+´⋄-´ᐵ(⠤𝕣(𝔸))
- 󷹄´ = OPWRAP_←⥌x,y,s=␀↦(R≔s↦x⤉s⤈y)►(s≅␀⭜R⭝R(s))
  ⍉´ = 𝑐𝑑(󰲡x󱑼, 𝑔=󰲡y↦y󱑼ˣ)
 
 ⊢ ´(ƒ,⠤𝔸,⠶𝕂):
     ¿𝗙(ƒ): ↪ƒ(⠤𝔸,⠶𝕂)
-    ¿𝗜(ƒ): ∀x∈ƒ: □
+    ¿𝗜(ƒ): ∀x⬠ƒ: □
            ↪ƒ
     ✗⨳‹⟦ƒ⟧ is not iterable or callable.›
 
@@ -100,9 +99,9 @@ CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
     ¿ℤᐴ𝚜∨𝚜ᐹ𝗜: ¿𝚜ᐹ𝗜: 𝚜󷸊🃌
               ↪ 𝚢≅␀ ⭜-𝚡⭝ 𝚡-𝚢 ➡%𝚜
 
-⊢ ⋀´(𝑋,𝚜=✓): ∀𝚜∈𝑋: ¿𝚜¬:⇥
+⊢ ⋀´(𝑋,𝚜=✓): ∀𝚜⬠𝑋: ¿𝚜¬:⇥
              ↪𝚜
-⊢ ⋁´(𝑋,𝚜=✗): ∀𝚜∈𝑋: ¿𝚜 :⇥
+⊢ ⋁´(𝑋,𝚜=✗): ∀𝚜⬠𝑋: ¿𝚜 :⇥
              ↪𝚜
 
 󱀘 Ticker:
@@ -136,7 +135,7 @@ val = 󷺹󷹝<127∧⟞∉‹~!@#$%^&*-=+\|,./<>?› ∨ ⟞≡␛þ
 PEV = 󷺹𝌂valᐖval(⟞₀)⭜⟞⭝⟞ᐖ󷹜´(⟞󷹝,ENC🃌,chars=ENC)ᐸ⨝␛Þᐸ⨝
 VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,chars=ENC)󷹝ᐸ⨝ᐸ⨝
 ⊢ OPWRAP_(⠤𝚇):
-    ⊢ R(ƒ): ∀x∈𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
+    ⊢ R(ƒ): ∀x⬠𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
     ↪ R
 
 𝗙,𝗜 = callable,󰲡hasattr(x,‹__iter__›)
@@ -149,7 +148,7 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
 ℂ = complex
 
 ⊢ ⨳´(𝚡=␀,𝚢=␀,𝚜=␀):
-    ¿𝚡: ↪𝚡
+    ¿𝚡:↪𝚡
     ⮌ os ⨡ environ
     𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›∈environ
     𝚍 = 𝚠∨‹MOON_DEPRECATION_IS_ERR›∈environ
@@ -160,7 +159,7 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
      𝗆 = 󰋺(␛🌈).termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)
     ¡:□
     𝗆☾
-    ¿𝖻: ⦃raise ⦃ε⦄⦄
+    ¿𝖻: ⦃raise AssertionError⦄
     ↪𝚡
 
 ⊢ (OPWRAP_(⠤‹󰔶›)) (t,ƒ=␀,𝑔=␀,𝚜=𝑒):
@@ -182,8 +181,8 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
     ¿𝔸:↪𝔸₀
 
 ⊢ ᐹ´(𝚡=␀,𝚢=␀,𝚜=␀,TYPELIKE={𝗙,𝗛,𝗜},TYPEE=type|UnionType):
-    ¿𝚢≅␀       : ↪𝚢 type
-    ⸘𝚢∈TYPELIKE: ↪𝚡 𝚢
+    ¿𝚢≅␀       : ↪type(𝚢)
+    ⸘𝚢∈TYPELIKE: ↪   𝚢(𝚡)
     ¿𝚜≅␀:
         ¿𝚢≅ℕ        : ↪𝚡ᐹ𝑏|𝑖 ∧ 𝚡≥0
         ⸘𝚢≅ℤ        : ↪𝚡ᐹℕ|𝑖
@@ -192,4 +191,6 @@ VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,c
          ⸘␛ℍ∈imports ∧ 𝚢≅imports[␛ℍ]􋀃:
                        ↪𝚡ᐹℂ|ℍ
     ↪isinstance(𝚡, isinstance(𝚢,TYPEE) ⭜𝚢⭝ type(𝚢))
-ᐴ´,󷹵´,󷹴´ = 󰲣yᐹ􋉀􀸩􋉀􊿥􀸧􍍝x, 󰲣xᐹ􋉀􀸩􋉀􊿥􀸧􍍝y→¬, 󰲣yᐹ􋉀􀸩􋉀􊿥􀸧􍍝x→¬
+ᐴ´,󷹵´,󷹴´ = ⥌𝚡,𝚢=␀,𝚜=␀↦𝚢ᐹ􀲿𝚡, ⥌𝚡,𝚢=␀,𝚜=␀↦𝚡ᐹ􀲿𝚢⭢¬, ⥌𝚡,𝚢=␀,𝚜=␀↦𝚢ᐹ􀲿𝚡⭢¬
+
+󰔛 = 𝑜()  󰤱 tmp

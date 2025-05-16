@@ -13,7 +13,7 @@
     ¿𝙻≅□: 𝙻=⍁
     ¿𝚜≤0∨𝑰(𝚡)¬∨ᔐᐴ𝚡:
         ↪(𝑰(𝚡)⭜𝙻.extend⭝𝙻.append)(𝚡)►𝙻
-    ∀x∈𝚡:flatten(x,𝚜-1,𝙻,𝑰=𝑰)
+    ∀x⬠𝚡:flatten(x,𝚜-1,𝙻,𝑰=𝑰)
     ↪𝙻
 ⊢ chain_structure(𝚡,𝚜=␀,𝑰=𝗜):  replace all vals with □
     𝚜 = adjust_depth(𝚡,𝚜)
