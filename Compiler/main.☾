@@ -1,10 +1,5 @@
- 󰤱  short-circuits
  󰤱  whitespace involution lol
- 󰤱  https://ganer.xyz/s/b34e011833d68154
  󰤱  string ␛ before newline should not add it
- 󰤱  lb𝕊⟶ cun⟶⦢
- 󰤱  x²⌃2
- 󰤱  dicts
  󰤱  named exceptions
  󰤱  with statements
  󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
@@ -28,11 +23,10 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
-    ¿show_py_ast:
-        𝑩𝑩(ast_to_py(󱁕.cpr, get_tree=✓, no_rename_vars=✓),‹PY AST›)
-    p = stackr(⠤ast_to_py(󱁕.cpr, no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗))
+    ¿show_py_ast: 𝑩𝑩(ast_to_py(󱁕.cpr,get_tree=✓,no_rename_vars=✓),‹PY AST›)
+    p = stackr(⠤ast_to_py(󱁕.cpr,no_rename_vars=✓)⋄ast_to_py(󱁕.cpr)ᐖshow(⟞,✗))
     padc(‹ CODE ›,p,␛─)+𝗻+p⭢☾
-    pyc = ast_to_py(󱁕.cpr, reparse=✓)
+    pyc = ast_to_py(󱁕.cpr,reparse=✓)
     stackr(show(𝚌,✗),show(pyc,✗))☾
     ↪ pyc
 
@@ -42,7 +36,7 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     ¿𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
     code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
     ¿𝖠₀≡␛r: 𝕜.show_preast = 𝕜.show_ast = ✓
-    ¿𝖠₀≡‹o›:
+    ¿𝖠₀≡␛o:
         ‹Compiling ⟦𝖠₁⟧…›☾
         (𝖠₂,moon_to_py((𝖠₁)))
         ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
@@ -51,7 +45,7 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
 ¡:
     𝚝=𝓉
     compile = 󰲣$ᵒᵉᴾbash -c ☾ "⟦__file__⟧" o "⟦x⟧" "⟦y⟧"󷹹
-    files = ‹base system ops_A ops_B ops_C ops_›⍭
+    files = ‹base system ops_A ops_B ops_C ops_ ℵ !›⍭
     pre = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦⟞⟧.py›≕x),xᐸ
     pre = preᐵ₀¬⨳➡►(⟞₁)ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾

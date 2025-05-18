@@ -578,7 +578,7 @@
     `2²⋅5 ¶ ≡ [2,2,5]`
     `2²⋅5 ¶􋁼 ≡ ℵ⁰({2:2, 5:1})`
     `2²⋅5 ¶􋄴 ≡ ℵ⁰({2:[2,2], 5:[5]})`
-    `3³ ¶􊽥 ≡ 󷰾`  idk what this does lol
+    `3³ ¶􊽥 ≡ 0`  mobius function
      ¶􀰫 󰤱
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
@@ -687,6 +687,7 @@
 0 ⨡   ᴍcim Python "import"
 0 ↪   ᴍcr𝕊 Python "return"
 0 󰆴   ᴍcT𝕊 Python "del"
+0    ᴍlb𝕊 Python except
 0 ⮂⮌   ᴍc⟦yf⟧𝕊 Python "{yield,from}"
 0 ↺⇥   ᴍc⟦cb⟧𝕊 Python "{continue,break}"
 0 ∀➰   ᴍ⟦⁅AA⁆⁅cl𝕊⁆⟧ Python "{for,while}"

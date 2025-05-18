@@ -26,7 +26,7 @@
     ⊢__contains__(𝕊,n):
         ¿n≤1: ↪✗
         ¿2∣n: ↪n≡2
-        ¿n<10000:  normal test
+        ¿n<10000:  small factor test
             ∀k∈3󷸻²⬒(√n):
                 ¿k∣n: ↪✗
             ↪✓
@@ -92,24 +92,65 @@
             x󷸊⫰
             ¿x≡1: ↪⍁
             t=⍁
-            ➰x>1:
-                t.append(s≔smolfactor(x,t🃌⭜t􍨄-1⭝1))
-                x󷸊⹏s
-            ↪t
+            ➰2∣x:
+                t󷸊+₂
+                x󷸊⹏2
+            ∀k∈3󷸻²100:
+                ➰k∣x:
+                    t󷸊+ₖ
+                    x󷸊⹏k
+            ¿x≡1: ↪t
+            ¿x∈¶: ↪t+ₓ
+            ¿firstℕbool(󷺹²≥x)≕r²≡x: ↪t+2⋅¶r→󰒼
+             Dixon's factorization algorithm
+             p=⬓􋐼(√(􋑯(x)⋅􋑯(􋑯(x))))¶󰂂
+            p=25¶󰂂
+            ass=[]
+            bs=[]
+            vs=[]
+            a=r
+            ➰a≤x⹏2:
+                b=a²%x
+                v=pᐖb¶􍪵
+                B=p󱑼vꟿ⌃⨀
+                xx=b⹏B
+                ¿firstℕbool(󷺹²≥xx)≕pp²≠xx:
+                 ¿xx≠1:
+                    a󷸊+1
+                    ↺
+                 ☾(‹a=›,a)
+                 ☾(‹b=a²%x=›,b)
+                 ☾(‹pp=›,pp)
+                 ☾(‹v=›,v)
+                 ☾ᐦ
+                ass󷸊+ₐ
+                bs󷸊+
+                vs󷸊+ᵥ
+                 󰤱 after matrices and finite fields, make fasst with 𝔽₂
+                g=2⭥⨉ᵛˢ􋌵→󰈳⋁○󷺻vs⍉ᴍ󰲡x󱑼⟞ꟿ⋅⨁→%2
+                ¿🃌g>1:
+                    y=ass󱑼g₁ꟿ⌃⨀
+                    z=firstℕbool(󷺹²≥bs󱑼g₁ꟿ⌃⨀)
+                    ¿􋑂(y-z,x)≕f∈[1,x]: vs=vs﹕􍨄
+                    ¡:
+                         ☾a
+                        ↪t+f¶+x⹏f¶→󰒼
+                a󷸊+1
+            ✗⨳‹Dixon's alg failed and I don't feel like doing the 󰤱 big boi next step yet.›
         ¿s≅⊞´: ↪ℵ⁰(x¶󰻾ꟿ⁺󷺻🃌󷺽)  󰤱 speedup
         ¿s≅⨉´: ↪x¶􋁼ꟿ⁺󷺹⛶􍪹󷺿
         ¿s≅􋑂: x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
         ¿s≅%´:  󰤱 speedup
             t=󷰾²􋁒ˣ
-            ¿t>0: x󷸊⹏2
+            ¿t<0: x󷸊⹏2
             ¿2∣x: ↪0
             p=3
             ➰p≤x:
                 ¿p∣x:
                     ¿p²∣x: ↪0
-                x󷸊⹏p
+                    x󷸊⹏p
+                    t=-t
                 p󷸊+2
-                t=-t
             ↪t
         ¿s≅􋑯:  󰤱 speedup
             ¿2∣x:

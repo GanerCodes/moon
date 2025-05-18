@@ -1,8 +1,8 @@
 ⊢ _map_d(x,y,n=1):
     mapwd = 󰲣[𝕩 ∀z⬠x ¿y(z)≕𝕩≇󰮈]
     ⊢ _get_depths(x):
-        ¿𝗜(x)¬: ↪{0}
-        ¿xᐹᔐ  : ↪{1}
+        ¿𝗜(x)¬: ↪⦉0⦊
+        ¿xᐹᔐ  : ↪⦉1⦊
         ↪𝑠(_get_depths(z)󰌷ᐵ+1)
     ⊢ _map_neg_d(x,y,n):  kinda weird ngl
         ¿xᐹᔐ: ↪n≡1 ⭜y(x)⭝ n ⭜x⭝ mapwd(x,y)

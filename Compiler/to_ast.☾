@@ -10,7 +10,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     
     𝚌𝚘𝚍𝚎 = +gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗)␛
             .ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
-     ↑ is weird ∵ we cannot change length ∵ reasons
+     ↑ is weird ∵ we cannot change lengths here
     𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
     󱁕 = gram_main(𝚌,DEBUG=dbg_parser,remove_trashes=✗)
     ¿dbg_show_gram_tree            : 𝑩𝑩(󱁕,‹Initial parse›)
@@ -30,6 +30,10 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
     
     add_blocks(󱁕)
+    @󱁕.ftrp(␛𝐷,□,✓)
+    ⊢ _(󱁕):
+        ↪ 󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝒩(‹item›,⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛
+                   ⟞ᵗ≡‹𝐷_kv_nrm› ⭜𝒩(‹item›,⠤⟞)                           ⭝⟞)
     󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
     󱁕.ftrp(‹⊢_dec›,󷺹ᶜ􍨄.set(t=‹ƒ_dec_params›)►⟞,✓)
     󱁕.ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓›⍭,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)
@@ -37,11 +41,8 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     󱁕.ftrp(‹𝝀𝔸›,󱁕↦󱁕.set(t=␛𝔸))
     󱁕.ftrp(‹𝝀𝕂›,󱁕↦󱁕.set(t=␛𝕂))
     󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›, 󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕, ✓)
-     󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
-     󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
     rewrite_lambs(󱁕)
     rewrite_numbers(󱁕)
-     𝑩𝑩(󱁕)
     
     @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)
     ⊢ _(󱁕):
@@ -53,16 +54,14 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ¿+𝚕: 𝒏ᶜ.insert(0,𝒩(‹sup›,𝚕₀ ₀))
         ¿+𝚛: 𝒏ᶜ.append(  𝒩(‹sup›,𝚛₀ ₀))
         ↪𝒏
-    @󱁕.ftrp(‹sup›,□)
-    ⊢ _(󱁕):  󰤱 superscript exponents dont glue right
-        attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀ ₀ᵗ≡␛𝑣
+    @󱁕.ftrp(‹sup›,□,✓)
+    ⊢ _(󱁕):
+        attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀🃌≡1 ∧ 󱁕₀ ₀ᵗ≡␛𝑣
         ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
-               ⭝ 𝗍𝗆𝗉(𝗈𝗉(␛⬆󱖔􋄤󱁕),𝗑(⠤󱁕))
+               ⭝ 𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕))
     󱁕.flat(󷺹ᵗ≡‹tmp›)
-    
     󱁕.ftrp(‹op›,denode_op,✓)
     󱁕.ftrp(‹x›,group_targets,✓)
-    
     grp_stmts(󱁕)
     rewrite_for(󱁕)
     rewrite_strs(󱁕)
@@ -115,13 +114,17 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ¿𝚕󷺤𝚛⭢∧⭠α󷺥β : ↪𝒩(␛∘,𝗏(‹MOD󷺗›),ƒ)  󰤱 temp
         ✗ ⨳
     
-     󰤱 short-circuits
-    
-    󱁕.frp(󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕)
+    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕)
     󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
     󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
     
-     𝑩𝑩(󱁕,␛󱁕)
+    @󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ ₁ ₀ᵗ∈‹󷺥󷺒›, □, ✓)
+    ⊢ _(󱁕):  short-circuits
+        a,b = 󱁕₁,󱁕₂
+        ¿󱁕₀ ₁ ₀ᵗ≡␛󷺥: ↪ 𝗍𝖾𝗋𝗇(𝖽(a),𝖱(𝗋(1),𝒩(‹𝑣_spec›,𝔗(␛✗))),𝗍𝖾𝗋𝗇(b,𝗉,𝖱(𝗋(1),𝒩(‹𝑣_spec›,𝔗(␛✓)))))
+        ¡          : ↪ 𝗍𝖾𝗋𝗇(𝖽(a),𝗍𝖾𝗋𝗇(b,𝖱(𝗋(1),𝒩(‹𝑣_spec›,𝔗(␛✗))),𝗉),𝖱(𝗋(1),𝒩(‹𝑣_spec›,𝔗(␛✓))))
+        ↪ 󱁕
+    
     ↪ 󱁕
 
 __exports__ = ‹to_ast›⍭
