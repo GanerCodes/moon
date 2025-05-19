@@ -1,4 +1,5 @@
  󰤱  whitespace involution lol
+ 󰤱  ⬤>1>2
  󰤱  string ␛ before newline should not add it
  󰤱  named exceptions
  󰤱  with statements
@@ -30,26 +31,30 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     stackr(show(𝚌,✗),show(pyc,✗))☾
     ↪ pyc
 
+⊢ make_header():
+    𝚝=𝓉
+    compile = 󰲣$ᵒᵉᴾbash -c ☾ "⟦__file__⟧" o "⟦x⟧" "⟦y⟧"󷹹
+    files = ‹base system ops_A ops_B ops_C ops_ ugex ℵ !›⍭
+    h = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦⟞⟧.py›≕x),xᐸ
+    h󷸊ᐵ₀¬⨳➡►(⟞₁)ᐸ⨝𝗻
+    ‹Head compile took: ⟦𝓉-𝚝⟧›☾
+    ↪h
+
 𝖠,pre = 𝔸₁﹕,ᐦ
 ¿𝖠🃌≥2:
-    ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
-    ¿𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
-    code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
-    ¿𝖠₀≡␛r: 𝕜.show_preast = 𝕜.show_ast = ✓
     ¿𝖠₀≡␛o:
         ‹Compiling ⟦𝖠₁⟧…›☾
         (𝖠₂,moon_to_py((𝖠₁)))
         ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
         exit
+    ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
+    ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
+    code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
+    ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
+    ¿𝖠₀≡␛x: pre = make_header
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
 ¡:
-    𝚝=𝓉
-    compile = 󰲣$ᵒᵉᴾbash -c ☾ "⟦__file__⟧" o "⟦x⟧" "⟦y⟧"󷹹
-    files = ‹base system ops_A ops_B ops_C ops_ ℵ !›⍭
-    pre = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦⟞⟧.py›≕x),xᐸ
-    pre = preᐵ₀¬⨳➡►(⟞₁)ᐸ⨝𝗻
-    ‹Head compile took: ⟦𝓉-𝚝⟧›☾
-    code = CODE
+    pre, code = make_header, CODE
 
 𝚝=𝓉
 pyc = pre+𝗻+moon_to_py_debug(code, ⠶𝕜)

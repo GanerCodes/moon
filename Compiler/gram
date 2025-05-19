@@ -48,8 +48,8 @@ grp      = ~‹[⁅⟦]› (⠶𝑝𝑐 ∨ 𝖶) ~‹[⁆⟧]›
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
 𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨›⭝ ᐦ⦄% grp
-           ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code ∨ ugx_x ∨ ⠶lambs
-           ∨ 𝑣_spec ∨ op ∨ number_exp ∨ number ∨ ⠶script ∨ 𝑣)
+           ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
+           ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp ∨ number ∨ 𝑣_spec ∨ 𝑣)
 
 𝝀𝑃 = ⠶𝝀𝕒 𝖶 (󰆴',' 𝖶 ⠶𝝀𝕒 𝖶)*
 𝝀𝕒 = 𝝀eq ∨ ⠶𝝀𝑎
@@ -112,11 +112,11 @@ str_spec_char = ~‹[𝟬-𝟵𝗮-𝗳]{2}|[𝗮-𝘇󷺗]›
 str_escape = 󰆴"␛␛" ~‹.›
 str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
 
-ugx_x     = ⮞ugx_brack ugx_brack
-ugx_mod   = 󰆴SP ~‹[􊽨⁺􋅋􊽬]› 󰆴SE
+ugx_x     = ugx_brack
+ugx_mod   = 󰆴SP ~‹[?*+⮞¬]› 󰆴SE
 ugx_and   = ⠶ugx_atom+
 ugx_or    = ugx_and 󰆴'󷸴' 𝖶 (⠶ugx_or ∨ ugx_and)
-ugx_☾     = 𝑋𝐶 󰆴'⍮'? (mod:ugx_mod)?
+ugx_☾     = 𝑋𝐶 𝖶 󰆴'⍮'? (mod:ugx_mod)?
 ugx_seq   = ((ugx_or ∨ ⠶ugx_atom) 𝖶)+ (apply:(󰆴'⍈' 𝖶 𝑋𝐶))?
 ugx_atom  = (ugx_group ∨ ugx_☾    ) 𝖶
 ugx_group = (ugx_paren ∨ ugx_brack)

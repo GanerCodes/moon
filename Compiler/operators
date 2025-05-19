@@ -658,7 +658,7 @@
         `󰻾⁵(22) ≡ 5`
     `󰻾(3) ≡ 3`
     `󰻾(5,3) ≡ 5`
-󷰱 ℵℶ 􊽨 ᴍwh⟦Nn⟧ magic namespace: iterates by {pairs,values}
+󷰱 ℵℶ󰁘 􊽨 ᴍwh⟦Nn⟧ magic namespace: iterates by {pairs,values}
     `ℵ(hi=22, joe=10)ʰⁱ ≡ 22`
     `ℵ²(x=22)ʰ ≡ 2`
     `ℵ([1⋄4,2⋄6,6⋄󷰿])ᴍ󰻾 ≡ [(1,4),(2,6),(6,-2)]`
