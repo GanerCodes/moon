@@ -239,7 +239,7 @@ TI = T1􍮕
 
 ⊢ rewrite_ugex(󱁕):
     󱁕.flat(󷺹ᵗ∈‹ugx_and ugx_or›⍭∧⟞🃌≡1)
-    󱁕.ftrp(‹ugx_☾›,󷺹🃌≡1⭜⟞₀⭝⟞.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(+⟞₁)]),✓)
+    󱁕.ftrp(‹ugx_☾›,󷺹.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(⟞🃌≤1⭜ᐦ⭝+⟞₁)]),✓)
     @󱁕.ftrp(‹ugx_paren ugx_brack›⍭,□,✓)
     ⊢ _(󱁕):
         ¿󱁕🃌>1: 󱁕=󱁕.set(t=‹ugx_and›)

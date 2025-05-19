@@ -12,7 +12,7 @@
             ∀k,v⬠zip(𝑃,𝐴): isinstance(k,int)⭜􀳣𝙰➡ₖ=v
             ↪𝙰₀(⠤𝙰₁﹕,⠤𝐴ₗₑₙ₍􊴂₎﹕,⠶𝙺)
     ↪ꬶ()
-    
+
 ⮌ math ⨡ *
 ⮌ cmath ⨡ *
 󰆴 factorial, e, pi, tau, sqrt, cbrt, pow
@@ -24,6 +24,9 @@
 ⮌ sys ⨡ stdout, stderr, path, exit
 ⮌ site ⨡ getsitepackages ; path.extend(getsitepackages())
 ⮌ functools ⨡ partial:MOD
+⮌ builtins ⨡ setattr:setattr_
+
+setattr = 󰲥setattr_(x,y,z) ∨ z
 
 𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦 = Exception,object,dict,bool,list,tuple,set,str,int,float,bytes
 ´␀´=NULL=𝑜()
