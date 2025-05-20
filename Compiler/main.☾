@@ -1,4 +1,4 @@
- 󰤱  extra_globals, highlighter
+ 󰤱  extra_globals, highlighter, 𝐍
  󰤱  whitespace involution lol
  󰤱  rewrite_strs λ_add_vk regroup_elements add_cmp_op_chains
  󰤱  ⬤>1>2
@@ -8,7 +8,7 @@
  󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
  󰤱􊽨 deque for þSTK
  󰤱􊽨 raising
- ⵗ⦙⫶ⵂ⁞ⵘ⣿󱋱󰇙
+ ⵗ󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
 
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (‹Builtins/tests.☾›)
