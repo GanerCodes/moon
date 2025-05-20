@@ -76,7 +76,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     rewrite_ternary(󱁕)
     regroup_elements(󱁕)
     rewrite_asgns(󱁕)
-    rewrite_cmp(󱁕)  󰤱 inspect
+    rewrite_cmp(󱁕)
     󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)
     󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
     
@@ -116,7 +116,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     
     󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕)
     󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
-    󱁕.ftrp(‹ᗜ›,󰲡𝖭𝗈𝗇𝖾.cp󱖔􋔡x)
+    󱁕.ftrp(‹ᗜ›,󰲡𝗏𝗌(␛□)󱖔􋔡x)
     add_short_circuits(󱁕)
     curry_ops(󱁕)
     rewrite_ugex(󱁕)

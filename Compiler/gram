@@ -117,10 +117,10 @@ ugx_mod   = 󰆴SP ~‹[?*+⮞¬]› 󰆴SE
 ugx_and   = ⠶ugx_atom+
 ugx_or    = ugx_and 󰆴'󷸴' 𝖶 (⠶ugx_or ∨ ugx_and)
 ugx_☾     = 𝑋𝐶 𝖶 󰆴'⍮'? (mod:ugx_mod)?
-ugx_seq   = ((ugx_or ∨ ⠶ugx_atom) 𝖶)+ (apply:(󰆴'⍈' 𝖶 𝑋𝐶))?
+ugx_seq   = ((ugx_or ∨ ⠶ugx_atom) 𝖶)+ (󰆴'⍈' 𝖶 apply@=𝑋𝐶)?
 ugx_atom  = (ugx_group ∨ ugx_☾    ) 𝖶
 ugx_group = (ugx_paren ∨ ugx_brack)
-ugx_gtail = (mod:(𝖶 ∧ ugx_mod))? (𝗐 ∧ stk:sub)?
+ugx_gtail = (mod@=(𝖶 ∧ ugx_mod))? (𝗐 ∧ stk@=sub)?
 ugx_paren = 󰆴'(' 𝖶 ⠶ugx_seq 󰆴')' ⠶ugx_gtail
 ugx_brack = 󰆴'⟨' 𝖶 ⠶ugx_seq 󰆴'⟩' ⠶ugx_gtail
 

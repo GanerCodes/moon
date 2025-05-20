@@ -78,7 +78,7 @@ TI = T1􍮕
         α,β,⠤_ = α
         is_xpr_atom(β) ⨳
         𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
-        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝖭𝗈𝗇𝖾)󱖔􋄥󱁕)
+        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝗏𝗌(␛□))󱖔􋄥󱁕)
         ↪ 𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 
 ⊢ group_targets(󱁕):
@@ -131,7 +131,7 @@ TI = T1􍮕
     󱁕ᶜ = 𝕒
     ↪ 󱁕
 
-⊢ add_cmp_op_chains(󱁕):  invalid for cmp ops: ≺≻꜠´⟥⟤
+⊢ add_cmp_op_chains(󱁕):  󰤱 invalid for cmp ops: ≺≻꜠´⟥⟤
     ∀L∈𝙾𝚃ᴙ:
         ¿¬𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈): ↺
         relv = 󷺹ᵗ≡‹opC› ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘
@@ -237,18 +237,22 @@ TI = T1􍮕
         ¡          : ↪ 𝗍𝖾𝗋𝗇(𝖽(a),𝗍𝖾𝗋𝗇(b,𝖱(𝗋(1),𝗏𝗌(␛✗)),𝗉),𝖱(𝗋(1),𝗏𝗌(␛✓)))
         ↪ 󱁕
 
+part1 = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ.copy(t=⟞ᵗ﹕􍨄)ᑀᵗ,⟞ᐸ)ᐸ
+
 ⊢ rewrite_ugex(󱁕):
     󱁕.flat(󷺹ᵗ∈‹ugx_and ugx_or›⍭∧⟞🃌≡1)
     󱁕.ftrp(‹ugx_☾›,󷺹.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(⟞🃌≤1⭜ᐦ⭝+⟞₁)]),✓)
     @󱁕.ftrp(‹ugx_paren ugx_brack›⍭,□,✓)
     ⊢ _(󱁕):
-        ¿󱁕🃌>1: 󱁕=󱁕.set(t=‹ugx_and›)
-        n,e = 󱁕.part()
-        b = e.get(‹stk󷺗󷺗›, 𝒩(␛𝐿))
-        c = e.get(‹apply›,𝗏𝗌(␛□))
-        ↪ 𝒩(␛𝑇,𝖺𝗎𝗍𝗈(‹BP›ₙ􊫼􊮢􊬏ᵤₓ􋕞ₚₐᵣₑₙ􊬐),
+         𝑩𝑩(󱁕,‹XXXXXXXXX›)
+        n,e = part1(󱁕)
+        ¿n🃌>1: n=n.copy(c=[𝒩(‹ugx_and›,⠤n)])
+        b,c = e.get(‹stk›,𝒩(␛𝐿)), e.get(‹apply›,𝗏𝗌(␛□))
+        r=𝒩(␛𝑇,𝖺𝗎𝗍𝗈(‹BP›ₙ􊫼􊮢􊬏ᵤₓ􋕞ₚₐᵣₑₙ􊬐),
                𝒩   (‹S𝑣›,𝗏(␛𜳨),b),
                𝖺𝗎𝗍𝗈(e.get(‹mod›,ᐦ)ᑀ∧+⟞),
                c,n)
+         𝑩𝑩(r,‹ZZZZZZZZZ›)
+        ↪ r
     󱁕.ftrp(‹ugx_and ugx_or›⍭, 󱁕↦𝒩(␛𝑇,𝖺𝗎𝗍𝗈(‹∧∨›􋑺􊫼􊮢􊬏ᵤₓ􋕞󰂼ᵣ􊬐),⠤󱁕), ✓)
     󱁕.ftrp(‹ugx_x›,󱁕↦𝖼𝖺𝗅𝗅(𝗏(‹UGX_CREATE›),⠤󱁕))

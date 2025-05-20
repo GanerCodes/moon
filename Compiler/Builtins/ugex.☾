@@ -16,15 +16,15 @@ ARROW_TARG = ⍁
 ⊢ 󷹘´(s=␀): 𝚊 = ARROW_TARG􍨄
            ¿s≅␀: ↪𝚊.pop(󷰾)
            ¿s≡∞: r=𝚊﹕; 󰆴𝚊﹕; ↪r
-           ¿s󷸊⋅󷰾⭢≡0: ↪⍁
+           ¿s󷸊⋅󷰾⭢≡0: ↪⍁  is this bugged?
            r=𝚊ₛ﹕; 󰆴𝚊ₛ﹕; ↪r
 ⊢ ⍖´(s=␀): 𝚊 = ARROW_TARG􍨄
            ¿s≅␀: ↪𝚊􍨄
            ¿s≡∞: ↪𝚊﹕
-           ¿s󷸊⋅󷰾⭢≡0: ↪⍁
+           ¿s󷸊⋅󷰾⭢≡0: ↪⍁  is this bugged?
            ↪𝚊ₛ﹕
 󷹗´,󷹘´,⍖´ = 󷹗´⋄󷹘´⋄⍖´ᴍOPWRAP_
-UGX_CREATE = ⥌x,d=✗↦󷺻UGX_RUN(winder(𝑙(⟞)),x)≕y≅␀ ⭜d⭝ y₀
+UGX_CREATE = ⥌x,d=✗↦󷺻UGX_RUN(winder([⠤⟞]),x)≕y≅␀ ⭜d⭝ y₀
 
 ⊢ UGX_SCAN(𝚚,ƒ,𝗆): ¿𝚚¬: ↪ ␛*≡𝗆∨𝗆≡␛?⭜⍁⭝␀
                    𝑥 = ƒ(p≔𝚚.peek)
@@ -63,11 +63,11 @@ UGX_CREATE = ⥌x,d=✗↦󷺻UGX_RUN(winder(𝑙(⟞)),x)≕y≅␀ ⭜d⭝ y�
     ⸘𝗍∈␛∧␛∨: ¿𝗍≡␛∧: 𝚚.note ► V≔⍁
                     ∀U⬠𝖠: ¿UGX_RUN(𝚚,U)≕r≅␀: ↪𝚚.wind►␀
                           V.extend(r)
-                    ↪ 𝚚.eton ► V
+                    ↪𝚚.eton ► V
              ⸘𝗍≡␛∨: ∀U⬠𝖠: 𝚚.note
                           ¿UGX_RUN(𝚚,U)≕r≇␀: ↪𝚚.eton►r
                           𝚚.wind
-                    ↪ ␀
+                    ↪␀
 
  ⟨󷺹≡␛a⭜󰮈⍮ 󷺹≡␛b⟩∘"ab" → ☾
  ⟨⟨󷺹󷹗>2⍮ 󷺹<⍖⍮⟩ 󷸴 ⴳ⟩∘[3,2,1,2,2,7] → ☾
