@@ -1,0 +1,66 @@
+⨡ inspect, os
+⮌ os ⨡ environ:env
+⮌ pathlib ⨡ Path:𝐩
+⮌ tempfile ⨡ gettempdir
+
+TMPDIR = 𝐩(gettempdir)
+mkd  = ⥌f,e=✓,p=✓↦    𝐩(f)≕p         →.mkdir(exist_ok=e,parents=p) ► p
+mkf  = ⥌f,e=✓    ↦mkd(𝐩(f)≕p→.parent)→.touch(exist_ok=e          ) ► p
+tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIR/b/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
+tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIR/b/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
+
+󱀘 suppar2: __init__ = ⥌𝕊,ƒ↦ƒ≕𝕊􊽺 ► □
+           __call__ = ⥌𝕊,⠤𝔸,⠶𝕂↦𝕊􊽺(⠤𝔸,⠶𝕂)
+           __getitem__ = __getattr__ = ⥌𝕊,x↦𝚲𝕊􊽺(⠤𝔸,x,⠶𝕂)
+
+ = ⥌x=␀↦x≅␀ ⭜PL_TEXT_PASTE⭝ x ᔐ PL_TEXT_COPY ► x
+ = suppar2(⥌f  ,o=ᐦ↦𝐩(f).open(o))
+ = suppar2(⥌f  ,o=ᐦ↦ⓦ(y≔􊯛ᵣ₊󰂼(f), 󰲡x.read       ))
+ = suppar2(⥌f,𝓬,o=ᐦ↦ⓦ(y≔􊯛₊󰂼(f), 󰲡x.write(𝓬) ► y))
+
+pwd = 𝚲𝐩(os.getcwd)
+󱀘 cd:
+    s,c = ⍁²
+    ⊢ __init__(𝕊, d=□): 𝕊ᵈ = d
+    ⊢ __enter__(𝕊): x = 𝕊ᵈ
+                    cdˢ.append((cdᶜ🃌,x≔pwd))
+                    ¿x≇□: os.chdir(𝐩(x))
+                    ↪pwd
+    ⊢ __exit__(𝕊,⠤𝔸): i,d = cdˢ.pop(󷰾)
+                      cdᶜ = cdᶜ﹕ᵢ
+                      os.chdir(d)
+                      ↪pwd
+    ⊢ __call__(𝕊,d=□): ¿d≅@´: ↪cd(𝐩(inspect.stack()₁.filename).parent)
+                       ¿d≅□ : os.chdir(cdᶜ.pop(󷰾))
+                              ↪pwd
+                       cdᶜ.append(pwd)
+                       os.chdir(d)
+                       ↪pwd
+    ⊢ __getitem__(𝕊,d): ↪𝕊􋕟􋕟ᶜˡᵃˢˢ􋕟􋕟(d)
+cd = cd
+
+⊢ sha(⠤𝔸,⠶𝕂): ⮌ hashlib ⨡ sha256:_sha256
+              ⮌ base64 ⨡ urlsafe_b64encode, urlsafe_b64decode
+              ↪ 𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
+
+¿ __name__≡‹__main__›:
+    mkd(‹/tmp/eggs›)
+    pwd☾
+    cd∘‹/tmp›
+    pwd☾
+    cd∘‹eggs›
+    pwd☾
+    ⊢ (󰲡ⓦ(cd,x)) ():
+        pwd☾
+        cd
+        pwd☾
+        ⊢ (󰲡ⓦ(cd[‹cpy_temp›],x)) ():
+            pwd☾
+        pwd
+        cd
+        pwd☾
+    pwd☾
+    
+    ∘‹joexd›
+    (‹/tmp/eggasdasd›, )
+    (‹/tmp/eggasdasd›)☾

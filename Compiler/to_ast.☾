@@ -30,16 +30,13 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
     
     add_blocks(󱁕)
-    @󱁕.ftrp(␛𝐷,□,✓)
-    ⊢ _(󱁕):
-        ↪ 󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝗂𝗍𝖾𝗆(⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛
-                   ⟞ᵗ≡‹𝐷_kv_nrm› ⭜𝗂𝗍𝖾𝗆(⠤⟞)                           ⭝⟞)
+    󱁕.ftrp(␛𝐷,󱁕↦󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝗂𝗍𝖾𝗆(⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛
+                         ⟞ᵗ≡‹𝐷_kv_nrm› ⭜𝗂𝗍𝖾𝗆(⠤⟞)                           ⭝⟞),✓)
     󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
     󱁕.ftrp(‹⊢_dec›,󷺹ᶜ􍨄.set(t=‹ƒ_dec_params›)►⟞,✓)
     󱁕.ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓›⍭,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)
     󱁕.ftrp(‹𝑃 𝑇↑ 𝑇↓›           ⍭,󱁕↦Ń(␛𝑇,⠤󱁕)󱖔􋔡󱁕,✓)
-    󱁕.ftrp(‹𝝀𝔸›,󱁕↦󱁕.set(t=␛𝔸))
-    󱁕.ftrp(‹𝝀𝕂›,󱁕↦󱁕.set(t=␛𝕂))
+    󱁕.ftrp(‹𝝀𝔸 𝝀𝕂›⍭,󱁕↦󱁕.set(t=󱁕ᵗ􍨄))
     󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›, 󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕, ✓)
     rewrite_lambs(󱁕)
     rewrite_numbers(󱁕)

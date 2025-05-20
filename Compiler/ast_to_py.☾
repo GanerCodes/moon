@@ -77,7 +77,7 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
                                            ᐒ𝑏(ƒ(󱁕₀))⋅􍾕􍾏₍􊯛􊱃₎+⟞+􍾕􍾏₍􊯛􊱃₎⋅ƒ(󱁕􍨄))])  󰤱
     ⸘󱁕ᵗ≡‹native_imp_from󷺗󷺗›: 󱁕.set(c=[𝔗(‹from󷺗󷺗 ›),⠤󱁕ᶜ,𝙨])
     ⸘󱁕ᵗ≡‹native_imp_fields›: 󱁕.set(c=[𝔗(‹import ›),⠤󱁕ᶜ⨝𝔗(␛,)])
-    ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=󱁕ᶜ⨝𝔗(‹ as ›))
+    ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=(󱁕ᶜᑀ🃌≡2⭜(⟞₀,𝗏(+⟞₁))⭝⟞)⨝𝔗(‹ as ›))
     ⸘󱁕ᵗ≡‹¡›:
         󱁕₀ ₀ᶜ.append(𝔗(␛:))
         ¿󱁕🃌>1: 󱁕₁﹕ᐵ₀ ₀ ₀ ₀.set(t=‹except›)
