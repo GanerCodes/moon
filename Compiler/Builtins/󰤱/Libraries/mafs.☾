@@ -1,0 +1,78 @@
+from functools import cache
+
+ 100 ⬤⋄⬤⋄⬤ ⇒ 10⨯10⨯1
+ 200 ⬤⋄⬤⋄⬤ ⇒ 10⨯10⨯2
+ 600 ⬤⋄⬤⋄⬤ ⇒ 30⨯10⨯2
+ 600 ⬤⋄5⋄⬤ ⇒ 60⨯5⨯2
+ 3000 ⬤⋄5⋄⬤ ⇒ 60⨯5⨯10
+
+p=10¹⁷
+➰¬isprime(p): p󷸊+1
+☾(p,isprime(p))
+p󷸊+1
+➰¬isprime(p): p󷸊+1
+☾(p,isprime(p))
+☾‹ASMR~~›
+
+🟑
+󰤱TODO
+sets ¶,ℤ,ℚ,ℝ,ℂ,𝔻,ℍ
+
+ n∈¶  is prime?
+ n ¶  first n primes
+ ∞ ¶  set of primes
+ n ¶󰂂 primes less than
+ n ¶⁺ all divisors
+ n ¶􋁒 prime divs
+ n ¶ prime divs w/ duplicates
+ n ¶􋁼 factorization as a ℵ⁰(p↦exp)
+ n ¶⁷ ord₇(n)
+ n ¶􋠕 euler totient
+ n ¶􊽥 morbius
+ n ¶􀰫 manbrogolffish
+
+number theory functions:
+------------------------
+𝔅ⁿ Bernoulli polynomials
+(✿) reciprocity
+  ℭ Carmichael function
+n∈ℭ is n a Carmichael num
+𝔇 Dirichlet functions
+󱇙 partition function
+factorials (rising/falling !ⁿ and count-by-n !ⁿ􍢉)
+
+integral functions:
+-------------------
+Γ(z)   gamma function
+ψ(n,z) polygamma
+
+Si/Ci/Li/Ei functions
+􋑀 Erf
+ℜ󰁑 Riemann/Hurwitz ζ function
+
+Elliptic Integrals:
+-------------------
+quarter period
+Weierstrass ℘ 𝔚􋀊
+ʝ-invariant function
+
+Other functions:
+----------------
+Bessel 𝔅ᴶ 𝔅󰀘
+Lambert 𝔏ᵂ
+Average functions (AM, GM, AGM, HM)
+
+constants:
+----------
+bernoulli numbers 𝔅ₙ
+Harmonic numbers ℌₙ
+ℭᴳ Catalan's constant
+ϕ golden ratio
+γ Euler-Mascheroni
+
+ℇ󰁛≡󷰾􍨍
+
+
+
+
+

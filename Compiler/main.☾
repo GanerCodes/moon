@@ -69,6 +69,6 @@ try:
     $ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹 ¬ ⨳
     ‹Execution took: ⟦𝓉-𝚝⟧›☾
 except Exception as ε:
-    p = show(pyc,✗,d=175)
-    padc(ŧ𝼝(‹ ERROR! ›,‹f33›),p,␛─)+𝗻+p⭢☾
+     p = show(pyc,✗,d=175)
+     padc(ŧ𝼝(‹ ERROR! ›,‹f33›),p,␛─)+𝗻+p⭢☾
     raise ε

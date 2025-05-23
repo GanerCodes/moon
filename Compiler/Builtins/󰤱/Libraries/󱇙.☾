@@ -1,0 +1,36 @@
+⊢󱇙nro(n):
+    ↪2ⁿ⁻¹
+@cache
+⊢󱇙nru(n):
+    ¿n<0: ↪0
+    ¿n≤1: ↪1
+    t,k=0,1
+    ↪0󷸺▢(√←⅔n+6􍧱)ᐖ-󷰾⌃⟞⋅(󱇙nru(n-⟞⋅(3⟞-1)⹏2)+󱇙nru(n-⟞⋅(3⟞+1)⹏2))ᐸ⨁
+@cache
+⊢󱇙nso(n,b=[]):
+    ¿n<0: ↪0
+    ¿n≡0: ↪1
+    ↪0󷸺n∖bᐖ󱇙nso(n-⟞,b+[⟞])ᐸ⨁⁰
+@cache
+⊢󱇙nsu(n,m=1):
+    ¿¬n : ↪1
+    ¿n<m: ↪0
+    ¿n≡m: ↪1
+    ↪m󷸻nᐖ󱇙nsu(n-⟞,⟞+1)ᐸ⨁⁰
+
+
+
+ 󱇙sro
+ 󱇙sru
+ 󱇙sso
+ 󱇙ssu
+
+ amount
+ sets
+ 
+ repeated values
+ not repeated values
+ 
+ ordered
+ unordered
+

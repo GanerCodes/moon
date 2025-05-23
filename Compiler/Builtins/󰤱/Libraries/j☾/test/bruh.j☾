@@ -1,0 +1,14 @@
+document.body.append(
+    󱀝:α div [
+        󱀝 h4 {𝑆 color:#f00;}
+            ‹This is coolll›
+        󱀝 button {onclick ⟦⥌x↦alert("hi")⟧ ⍮ 𝑆 color:green;}
+            ‹hehe›
+        󱀝 [‹eg⟦2+2⟧gos›]
+        󱀝 script ‹print(1);›
+        󱀝 {𝑆 display:flex;width:300px;height:300px} [
+            󱀝 ⟦"h"+"5"⟧ ⟦"joe".repeat(4)⟧
+        ]
+    ]
+);
+α􊾡(󰲡x􋒷="joe")

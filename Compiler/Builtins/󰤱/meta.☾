@@ -1,0 +1,128 @@
+IMPSIMPS = (
+    (␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›),
+    (␛⫚, ‹⫚›),
+    (␛¶, ‹¶✿›))
+DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
+IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
+
+⮌ types ⨡ FunctionType as _FT
+⮌ sys ⨡ _getframe
+⊢ ´(n=0):
+    frame = _getframe(n+1)
+    ↪ _FT(frame.f_code, frame.f_globals)
+ 󰲡1 ¿x≤1¡ 𝓢()(x-1)+𝓢()(x-2)󰅂(5)☾
+
+⊢ outer_globals(i=0):
+    ➰i󷸊+1:
+        𝘎 = _getframe(i).f_globals
+        ¿𝘎[‹__file__›]≠__file__: ⇥
+    ↪ 𝘎
+
+⊢ 𝔦𝔪𝔭(x):
+    ✗⨳􎒢‹𝔦𝔪𝔭 is deprecated and will be removed soon!›
+    ⨡ os, sys, shutil, subprocess
+    ⮌ pathlib ⨡ Path as 𝐩
+    ⮌ subprocess ⨡ Popen as 𝐫
+    ⮌ time ⨡ time, sleep
+    G = outer_globals()
+    G[␛𝐩⥉PEV] = 𝐩
+    G[␛𝐫⥉PEV] = 𝐫
+    G[h≔PEV("𝐩𝐝")] = 𝚲G[‹__file__›] ⥉𝐩→.parent
+    G["subprocess"] = subprocess
+    G["os"], G["sys"], G["shutil"] = os, sys, shutil
+    G["time"], G["sleep"] = time, sleep
+    G["ldir"] = 𝚲os.chdir←Gₕ
+
+⊢ 󱠨(c, ⠤𝔸, get_ns=✗, ns=□, fname=□,
+    interactive_𝕂=□, no_isolate=✗,
+    no_isolate_ƒ=󰲡exec(x,globals()), ⠶𝕂):  󱠨(x, return_code=✓)
+    
+    𝓘𝓚 = {"code_post_process": __code_post_process__}|(interactive_𝕂 ∨ {})
+    ⮌ refresher ⨡ basic_cpy_interactive_session
+    cpy = basic_cpy_interactive_session(
+        print_output=✓, ns=ns, fname=fname≅□ ⭜"cpy_󱠨"⭝ fname,
+        code_cache_dir=__code_cache_dir__, gram_cache_dir=__gram_cache_dir__,
+        header_carry=__header_namespace__, ⠶𝓘𝓚)
+    ¿no_isolate:  absolutely beaned
+        ‹This feature doesn't work!›☾
+        ¬get_ns ∧ ns≅□ ∧ fname≅□ ⨳
+        c = cpy(c, ⠤𝔸, return_code=✓, ⠶𝕂)☾
+        ↪ no_isolate_ƒ(c)
+    r = cpy(c, ⠤𝔸, ⠶𝕂)
+    ↪ get_ns ⭜cpyⁿˢ⭝ r
+
+⊢ get_implict_imports(code):  so what if you import stuff by accident this wont need fixing in a month
+    ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
+        ↪ ‹(‹⟦auto_imports⨝␛ ⟧␛›⍭ᴍ󰋺)›
+
+ 𝔸∋* ⟶ merge all (public) module contents with globals
+ 𝔸∋- ⟶ don't set module itself as global (automatic w/ !)
+ 𝔸∋! ⟶ store the object with module name into globals instead of module
+ g ⟶ store anything into globals
+ store_code ⟶ m.__cpy_code__ is the source code
+ 󷹇 var name __exports__ determines the default stuff to dump into namespace
+ 󰤱 bug that store_code doesn't work if found in cache
+⊢ 󰋺(𝔣, ⠤𝔸, g=✓, store_code=✓, just_get_path=✗):
+    ⮌ sys ⨡ path as 𝘗
+    ⮌ pathlib ⨡ Path as 𝐩
+    
+    𝘎 = outer_globals()
+    𝙳 = [␛., ⠤𝘗]
+    ¿𝘎.get(‹__file__›)≕fp:
+        𝙳.append(𝐩(fp).parent)
+    𝙳 󷸊 ᴍ𝐩ᐵ.resolve()ᐸ 󰈲󷺹.is_dir()ᐸ ⭢ ᚤ
+    𝚏, 𝙲𝙷𝙺 = □, ⍁
+    ∀p,e ∈ 𝙳⨉‹ .☾›⍭:
+        f = p/‹⟦𝔣⟧⟦e⟧›
+        ¿f.is_dir():
+            ¿ 𝙲𝙷𝙺.append(h≔f/‹main.☾›)►h.is_file()␛
+             ∨𝙲𝙷𝙺.append(h≔f/‹⟦𝔣⟧󷺗.☾›)►h.is_file():
+                𝚏,𝚗 = h,PEV(𝚗𝚊≔f.stem)
+                ⇥
+            ↺
+        𝙲𝙷𝙺.append(f)
+        ¿f.is_file():
+            𝚏,𝚗 = f,PEV(𝚗𝚊≔f.stem)
+            ⇥
+    𝚏 ⨳ ‹Can't find "⟦𝔣⟧", files checked:⟦𝙲𝙷𝙺⟕𝗻𝘁⟧›
+    ¿just_get_path: ↪𝚏
+    ¿𝚏∈IMPORTED_:
+        ¿IMPORTED_􀲤≕𝘔≅□: ↪
+    ¡:
+        𝚌𝚘𝚍𝚎 = ⓦ(𝚏.open(), 󷺹.read())
+        󱀘 Module(ℵ´ 􋇑): __repr__ = 𝚲‹Module "⟦𝚗𝚊⟧"›
+        ns = {‹__name__›:𝚗, ‹__file__›:𝚏, ‹__dir__›:𝚏.parent}
+        IMPORTED_􀲤 = □
+        𝘔 = Module(⠶󱠨(␛+𝚌𝚘𝚍𝚎, get_ns=✓, cap_stdout=✗, ns=ns, fname=ᔐ(𝚏)))
+        IMPORTED_􀲤 = imports􀲴􀲚 = 𝘔
+        ¿store_code: 𝘔[‹__cpy_code__›] = 𝚌𝚘𝚍𝚎
+    𝑘 = *∈𝔸 ⭜𝘔⁻󰈳󰲡x₀≡␛_󰅂⭝ [⠤𝔸 ∖ {!}]
+    𝑘󷸊󰌷("__exports__"∈𝘔⁻ ⭜[⠤𝘔[‹__exports__›]]⭝ ⍁)
+    ¿g:
+        ∀k∈𝑘:
+            K = PEV(k)
+             ☾‹⟦‹✗✓›󰂝􊮇􍻧⟧: Adding "⟦k⟧"(⟦K⟧) from "⟦𝔣⟧"(⟦𝚗⟧) to ⟦𝘎[‹__file__›]⟧›
+            ¿K∈𝘔: 𝘎󰂝 = 𝘔󰂝
+            ¡   : ‹Warning, ⟦k⟧∉⟦𝘔⟧›☾
+        ¿-∉𝔸∌! ∧ 𝚗𝚊∉𝑘:
+            𝘎􀲴 = 𝘔
+    !∉𝔸 ∨ 𝚗∈𝘔 ⨳ ‹Can't find "⟦𝚗⟧" inside module "⟦𝚗𝚊⟧"!›
+    ↪ 𝘔
+
+ℳℱ_cache = {}
+⊢ ℳℱ(load):
+    ⊢ ƒ(⠤𝔸,⠶𝕂):
+        ¿ℳℱ_cache∋𝓲≔id(load): 𝑓 = ℳℱ_cache􋜆
+        ¡                   : 𝑓 = ℳℱ_cache􋜆 = load
+        ↪ 𝑓(⠤𝔸,⠶𝕂)
+    ↪ ƒ
+SUBPROCA = ℳℱ(𝚲󰋺(‹subproca›).SUBPROCA)
+
+kots = 󰋺("kots")
+∀n∈kots[‹__exports__›]:
+    𝚗 = PEV(n)
+    globals()􀲴 = __builtins__􀲴 = kots􀲴
+highlighter = 󰋺("highlighter")
+
+__builtins__["__error_printer__"] ≔ __error_printer__ ≔ highlighter.__error_printer__
+__builtins__["__highlighter__"  ] ≔ __highlighter__   ≔ highlighter.__highlighter__

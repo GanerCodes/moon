@@ -66,6 +66,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
     󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)
     󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)
+    󱁕.ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)
     󱁕.ftrp(‹opC›,reduce_ς,✓)
     add_cmp_op_chains(󱁕)
     rewrite_ternary(󱁕)
@@ -107,7 +108,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ¿𝚕󷺤𝚛⭢∧⭠α󷺥β : ↪𝒩(␛∘,𝗏(‹MOD󷺗›),ƒ)  󰤱 temp
         ✗⨳
     
-    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕)
+    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)
     󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
     󱁕.ftrp(‹ᗜ›,󰲡𝗏𝗌(␛□)󱖔􋔡x)
     add_short_circuits(󱁕)

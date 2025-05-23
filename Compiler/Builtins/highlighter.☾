@@ -1,17 +1,16 @@
 styf = moon_dir / ‹FontCompose/Output/style.json›
-styd = styf 𝔍󰂂 ℵ
+styd = styf  𝔍󰄟 ℵ
 
 ⊢ sty(s,bg=0,de=‹bec›):
     ∀k,v⬠styd: ¿s∉k ∨ ‹color›∉v: ↺
-               ↪termclr(s,v‹color›,bg)
+               ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
     ↪termclr(s,de,bg)
 
 ⊢ __highlighter__(l,b=✗,clr=✓):
-    s, ⠤e = (ᔐ∘l).split(␛ᐧ)
+    s,⠤e = l ᔐ ⭢.split(␛ᐧ)
     safechr = 󷺹󷹜¹⁶󷹝ᐸ 󰔶 󷺻‹?⟦⟞⟧⸮›
-    e = e ᙧ¹ 0⋄1
-    e = e ꟿ 󷺻safechr(⟞)+󷺽
-    r = (s+←e⨁􊾖) ᴍ 󰲡clr ⭜ˣ sty(x,b⭜⁰‹400›)󰅂 ⨁􊾖
+    e = eᙧ¹2⭥ꟿ󷺻safechr(⟞)+󷺽
+    r = (e⨁􊾖+ᵜs) ᴍ 󰲡clr⭜ˣsty(x,b⭜⁰‹400›)󰅂 ⨁􊾖
     ↪r
 
 🟑

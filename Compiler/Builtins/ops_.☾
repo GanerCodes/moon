@@ -17,7 +17,7 @@
     ↪𝙻
 ⊢ chain_structure(𝚡,𝚜=␀,𝑰=𝗜):  replace all vals with □
     𝚜 = adjust_depth(𝚡,𝚜)
-    ¿𝚜≤0∨𝑰(𝚡)¬∨ᔐᐴ𝚡: ↪𝑰(𝚡) ⭜□⛶􀳉􋌵⭝ □
+    ¿𝚜≤0∨𝑰(𝚡)¬∨𝚡ᐹᔐ: ↪𝑰(𝚡) ⭜□⛶􀳉􋌵⭝ □
     ↪𝚡ᐖchain_structure(⟞,𝚜-1,𝑰=𝑰)
 ⊢ deflatten(𝚡,𝙸,𝑰=𝗜):  deflatten(x, chain_structure(𝚡)) ≈ 󰻾
     ¿𝙸≅□: ↪𝚡 ⭜𝚡.pop(0)⭝ 󰮈
@@ -31,8 +31,8 @@
     ¿𝚡≇␀≇𝚢 ∧ 𝚡ᐹ𝑖ᐴ𝚢: ᔨ≅␀ ⨳ ‹󰤱›
                     ↪‹⟦𝚡⫰󷹜⟧⟦𝚢⫰󷹜⟧›󷹜⋅⭠𝚡ⴵ⋅ⴵ𝚢∨1
     ¿𝚢≇␀: 𝚡=𝚡⋄𝚢
-    ¿ᔨ≇␀: ¿𝑰(ᔨ): ↪flatten_under(𝚡, 󰻾,𝚜,[⠤ ᔨ])
-          ↪       flatten_under(𝚡, ᔨ,𝚜)  󰤱 this should be under
+    ¿ᔨ≇␀: ¿𝑰(ᔨ): ↪flatten_under(𝚡,󰻾,𝚜,[⠤ᔨ])
+          ↪       flatten_under(𝚡,ᔨ,𝚜)  󰤱 this should be under
     ↪flatten(𝚡,𝚜,𝑰=𝗜)
 
 󷸑´ = ⥌𝚡,  𝚜=∞↦𝚡󷹵𝗜 ⭜⍁⭝ 󷺹🃌 ⭜⟞₀⭝ 0ᐸ⭢⊛􍈽􀲿󷺹󷹵𝗜∨⟞ᐹᔐᐸ∘𝚡ᐵᐹ𝗜 ⭜⟞🃌⭝ 󰮈

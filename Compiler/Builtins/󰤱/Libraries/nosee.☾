@@ -1,0 +1,6 @@
+󱀘 nosee(𝑠):
+    __init__ = 𝕊↦super().__init__() ► 𝔸∧(𝔸₀ᴍ𝕊.add) →►□
+    __call__ = ⥌𝕊,x↦𝕊.add(x) ► x
+    add = ⥌𝕊,x↦(x∉𝕊 ⨳ ‹⟦𝕊.__class__.__name__⟧: Already seen "⟦x⟧"!›) ► super().add(x) ► 𝕊
+
+__exports__ = ‹nosee›⍭

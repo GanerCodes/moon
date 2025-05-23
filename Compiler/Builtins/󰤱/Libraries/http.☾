@@ -1,0 +1,52 @@
+⮌ socketserver ⨡  TCPServer, StreamRequestHandler ; TCPServer.allow_reuse_address = ✓
+󰋺(␛𝔍) ; 󰋺(‹j☾›)
+
+ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ → ⨝␛.
+
+⊢ HTTP_Server(ƒ):
+    ⮌ http.client ⨡ responses as 𝚌msgs
+    ⮌ mimetypes ⨡ guess_type
+    ext_to_mime = 󰲡guess_type(x)₀∨"text-plain"
+    
+    󱀘 𝔖(StreamRequestHandler):
+        ⊢ handle(𝕊):
+            𝔯,𝔴 = 𝕊.rfile.readline, 𝕊.rfile.write
+            𝚛,⠤𝙷 = 1󷸹⭠ᐳ𝔯≕𝚛→.strip→.decode(‹utf-8›)ᐸ⊛¬∘✓
+            𝚖,𝚙,𝚟 = 𝚛󷹎𝘀
+            𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x.lower
+            
+            𝐴 = 𝚖,𝚙,𝙷
+            𝚌,𝙷,𝚋 = 200, ℵ, 𝑦∘0
+            try:
+                V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯=𝔯))
+            except Exception as ε:
+                ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
+                __error_printer__(ε)
+                ␛-⋅🃌t☾
+                V = 500
+            ∀r ∈ V ᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅 ⛶:
+                ¿rᐹ𝑑  : 𝙷=r.copy
+                ⸘rᐹ𝑖  : 𝚌=r
+                ⸘rᐹᔐ|𝑦: 𝚋=r
+            ¿PEV("𝙲𝚃")≕a∈𝙷: 𝙷􋕨󰂼ₙₜₑₙₜ₋ₜₚₑ􋕨 = 𝙷.pop(a)≕v→󷸹≡␛. ⭜ext_to_mime(␛_+v)⭝ v
+            ¿𝚋ᐹᔐ:
+                ¿"content-type"≕k∉𝙷: 𝙷ₖ≔"text/plain"
+                𝚋 = 𝑀∘𝚋
+            ¿𝚋∧𝙷∌k≔"content-length": 𝙷ₖ≔𝚋🃌
+            𝕊.wfile.write(𝑀(‹HTTP/1.1 ⟦𝚌⟧ ⟦𝚌msgs.get(𝚌,␛?)⟧›+(𝙷ᐵ⨝␛:ᐸ⟗𝗿𝗻)+𝗿𝗻)+𝚋)
+            
+            𝕊.wfile.flush
+    ↪ ⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port), 𝔖), 󷺹.serve_forever)
+
+__exports__ = ‹𝔍 ipv4 HTTP_Server transpile transpile_dir joon_header›⍭
+
+ ⊢ server(𝚖,𝚙,𝙷,𝚎):
+     ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾
+     ¿␛a∈𝚙: ↪ "joe"
+     ¿␛b∈𝚙: ↪ "joe", 201
+     ¿␛c∈𝚙: ↪ ℵ(hand=22), "joe", 201
+     ¿␛d∈𝚙: ↪ ℵ(hand=22), b"joe", 201
+     ¿␛e∈𝚙: ↪ ℵ(hand=22)
+     ¿␛f∈𝚙: ↪ 201
+     ↪ 200
+ HTTP_Server(server)
