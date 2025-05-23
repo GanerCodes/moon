@@ -1,8 +1,3 @@
-⨡ inspect, os
-⮌ os ⨡ environ:env
-⮌ pathlib ⨡ Path:𝐩
-⮌ tempfile ⨡ gettempdir
-
 TMPDIR = 𝐩(gettempdir)
 mkd  = ⥌f,e=✓,p=✓↦    𝐩(f)≕p         →.mkdir(exist_ok=e,parents=p) ► p
 mkf  = ⥌f,e=✓    ↦mkd(𝐩(f)≕p→.parent)→.touch(exist_ok=e          ) ► p
@@ -43,24 +38,24 @@ cd = cd
               ⮌ base64 ⨡ urlsafe_b64encode, urlsafe_b64decode
               ↪ 𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
 
-¿ __name__≡‹__main__›:
-    mkd(‹/tmp/eggs›)
+🟑
+mkd(‹/tmp/eggs›)
+pwd☾
+cd∘‹/tmp›
+pwd☾
+cd∘‹eggs›
+pwd☾
+⊢ (󰲡ⓦ(cd,x)) ():
     pwd☾
-    cd∘‹/tmp›
+    cd
     pwd☾
-    cd∘‹eggs›
-    pwd☾
-    ⊢ (󰲡ⓦ(cd,x)) ():
+    ⊢ (󰲡ⓦ(cd[‹cpy_temp›],x)) ():
         pwd☾
-        cd
-        pwd☾
-        ⊢ (󰲡ⓦ(cd[‹cpy_temp›],x)) ():
-            pwd☾
-        pwd
-        cd
-        pwd☾
+    pwd
+    cd
     pwd☾
-    
-    ∘‹joexd›
-    (‹/tmp/eggasdasd›, )
-    (‹/tmp/eggasdasd›)☾
+pwd☾
+
+∘‹joexd›
+(‹/tmp/eggasdasd›, )
+(‹/tmp/eggasdasd›)☾

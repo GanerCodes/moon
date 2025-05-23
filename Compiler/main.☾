@@ -8,13 +8,13 @@
  󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
  󰤱􊽨 deque for þSTK
  󰤱􊽨 raising
- ⵗ󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
+ ∀x: replaces ➰; ⵗ󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
 
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (‹Builtins/tests.☾›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
-⮌ sys ⨡ argv as 𝔸
+⮌ sys ⨡ argv as 𝔸, stdin as ℑ𝔑
 ⮌ time ⨡ time as 𝓉
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(__dir__ / ‹../Libraries/text_format›)
@@ -32,12 +32,12 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     padc(‹ CODE ›,p,␛─)+𝗻+p⭢☾
     pyc = ast_to_py(󱁕.cpr,reparse=✓)
     stackr(show(𝚌,✗),show(pyc,✗))☾
-    ↪ pyc
+    ↪pyc
 
 ⊢ make_header():
     𝚝=𝓉
     compile = 󰲣$ᵒᵉᴾbash -c ☾ "⟦__file__⟧" o "⟦x⟧" "⟦y⟧"󷹹
-    files = ‹base system ops_A ops_B ops_C ops_ ugex ℵ !›⍭
+    files = (‹Builtins/builtins›)󷹎
     h = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦⟞⟧.py›≕x),xᐸ
     h󷸊ᐵ₀¬⨳➡►(⟞₁)ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
@@ -57,6 +57,7 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
     ¿𝖠₀≡␛x: pre = make_header
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
 ¡:
+    ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
     pre, code = make_header, 𝖠⭜󰀂ᴼᴰᴱ(𝖠₀)
 
 𝚝=𝓉

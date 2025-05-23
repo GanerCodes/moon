@@ -14,8 +14,8 @@ SE='󰜛'
 
 main = gram_%⦃𝔪⦄%
 
-gram_main = stmts?
-gram_comm = (⠶(str ∨ native_code) ∨ 󰆴comment ∨ ~‹.|\n›)*
+gram_main = stmts ∨ 𝖶
+gram_comm = (⠶(str ∨ native_code) ∨ comment ∨ ~‹.|\n›)*
 gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
 
 stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
@@ -47,7 +47,7 @@ grp      = ~‹[⁅⟦]› (⠶𝑝𝑐 ∨ 𝖶) ~‹[⁆⟧]›
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨›⭝ ᐦ⦄% grp
+𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨σscript∨›⭝ ᐦ⦄% grp
            ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
            ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp ∨ number ∨ 𝑣_spec ∨ 𝑣)
 

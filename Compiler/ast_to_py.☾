@@ -9,10 +9,9 @@
 ENC = ‹ýüûúùøöõôóòñðïîíìëêéèçæåäãâáàßÝÜÛÚÙØÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀºµª›
 val = 󷺹󷹝<127∧⟞∉‹~!@#$%^&*-=+\|,./<>?› ∨ ⟞≡␛þ
 PEV = 󷺹𝌂valᐖval(⟞₀)⭜⟞⭝⟞ᐖ󷹜´(⟞󷹝,ENC🃌,chars=ENC)ᐸ⨝␛Þᐸ⨝
-VEP = 󷺹𝌂󷺹∈ENCᐸ⭢ᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐖ󷹜´(⟞,chars=ENC)󷹝ᐸ⨝ᐸ⨝
-HXO = 󷺹󷹝󷹜¹⁶⁺⁴􍢉
-py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝ ⟞
-
+VEP_= 󷺹𝌂󷺹∈ENCᐸᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐵ⊂ENC⭜󷹜´(⟞,chars=ENC)󷹝⭝⟞ᐸ⨝ᐸ⨝
+VEP = 󷺹𝌂󷺹∈⟝ᐸᐵ⊂⟝⭜VEP_(⟞)⭝⟞ᐸ⨝ᐘabcABC123+ENC+␛þ
+py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›⭝ ⟞
 𝖫 = ⥌x,y=4⋅𝘀↦x󷹎𝗻ᐵ+ᵜyᐸ⨝𝗻
 
 ⊢ expand_ast_py(󱁕, PEV=PEV):
@@ -87,7 +86,7 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
         󱁕ᶜ.insert(1,𝙨)
     ⸘󱁕ᵗ≡‹cln_pfx›:
         ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))
-    ↪ 󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
+    ↪󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
 
 ⊢ ast_to_py(󱁕, get_tree=✗, no_rename_vars=✗, reparse=✗):
     󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁)
@@ -96,7 +95,7 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
         ¿󱁕ᵉ ᵀ: ↪+󱁕
         ¿󱁕ᵗ≡‹stmts›: ↪ 󱁕ᴍƒ⭢⨝𝗻
         ¿󱁕ᵗ≡‹blk󷺗󷺗›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)+𝗻
-        ↪ 󱁕ᴍƒ⭢⨝ᐦ
+        ↪󱁕ᴍƒ⭢⨝ᐦ
     𝚌 = ƒ(󱁕)
     ¿reparse:
         ⨡ ast
@@ -105,6 +104,6 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦HXO(⟞)⟧›⭝
         except Exception as ε:
             ‹Code:𝗻⟦linewnum(𝚌,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
             ✗⨳‹Error in python reparsing! ⟦ε⟧›
-    ↪ 𝚌
+    ↪𝚌
 
 __exports__ = ‹ast_to_py PEV VEP›⍭

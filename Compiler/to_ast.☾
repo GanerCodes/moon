@@ -7,9 +7,8 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,trim_length_info=✓,force_full_match=✗,
               dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
-    
     𝚌𝚘𝚍𝚎 = +gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗)␛
-            .ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
+           .ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
      ↑ is weird ∵ we cannot change lengths here
     𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
     󱁕 = gram_main(𝚌,DEBUG=dbg_parser,remove_trashes=✗)
@@ -54,8 +53,8 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     @󱁕.ftrp(‹sup›,□,✓)
     ⊢ _(󱁕):
         attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀🃌≡1 ∧ 󱁕₀ ₀ᵗ≡␛𝑣
-        ↪ attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
-               ⭝ 𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕))
+        ↪attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
+              ⭝ 𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕))
     󱁕.flat(󷺹ᵗ≡‹tmp›)
     󱁕.ftrp(‹op›,denode_op,✓)
     󱁕.ftrp(‹x›,group_targets,✓)
@@ -63,7 +62,6 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     rewrite_for(󱁕)
     rewrite_strs(󱁕)
     flatten_statments(󱁕)
-     󰤱 ugex
     
     󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
     󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)
@@ -90,9 +88,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ƒ,𝚊,𝚋 = 󱁕
         α,β = 𝚊≠𝖭𝖴𝖫𝖫, 𝚋≠𝖭𝖴𝖫𝖫
         𝚕,𝚛 = ƒᵉ ᵏ
-        (𝚕¬󷺒α) ∧ (𝚛¬󷺒β) ⨳
-        
-         𝑩𝑩(󱁕,𝚕,𝚛,α,β,𝚊,𝚋)
+        ⨳ 𝚕¬󷺒α ⭢∧⭠ 𝚛¬󷺒β
         
         ¿𝚕  󷺥  𝚛: ↪ƒ
         ¿𝚕¬ ∧1≡𝚛: ↪β ⭜󱁕.set(c=[ƒ,𝚋])⭝ ƒ
