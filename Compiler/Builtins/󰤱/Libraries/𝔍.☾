@@ -1,4 +1,0 @@
-⮌ json ⨡ dumps, loads
-𝔍 = {>:dumps(⬤, ensure_ascii=✗, indent=□, separators=",:"), <:loads}
-
-__exports__ = ‹𝔍›⍭

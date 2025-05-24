@@ -1,11 +1,11 @@
- 󰋺(‹cache›)
+󰋺(‹cache›)
  FC, bruh = fcache, 0
  ⊢ fcache(⠤𝔸,⠶𝕂):
      global bruh
      ¿bruh󷸊+1 ≤ 3:
          ↪ FC(⠤𝔸,⠶𝕂)
      ↪ 󰻾
-fcache = 󰻾􋒍
+ fcache = 󰻾􋒍
 
 󰋺(__dir__ / ‹../𝐍󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⭢.resolve)
 󰋺(__dir__ / ‹../text_format›⭢.resolve)

@@ -13,14 +13,12 @@
     T(target=ᐳatom.append←ƒ(⠤𝔸, ⠶𝕂))≕t→.start
     ↪ 𝚲t.join →► atom₀
 ⊢ PL_TEXT_COPY(x):
-    
-        ⮌ clipboard ⨡ copy
+       ⮌ clipboard ⨡ copy
         ↪ copy(x)
     ¡Exception:
         print("WARNING: Failed to copy.")
 ⊢ PL_TEXT_PASTE():
-    
-        ⮌ clipboard ⨡ paste
+       ⮌ clipboard ⨡ paste
         ↪ paste()
     ¡Exception:
         print("WARNING: Failed to paste.")

@@ -1,4 +1,4 @@
-⮌ pickle ⨡ loads as pl, dumps as pd
+⮌ pickle ⨡ loads:pl, dumps:pd
 
 󱀘 Cacher:
     ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥):
@@ -25,7 +25,7 @@
 mkmk_cache = Ƈ↦⥌𝘩=sha,𝘦=pd,𝘥=pl,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
 cache, fcache = Cacher⋄FileCacher ᴍ mkmk_cache
 
-__exports__ = ‹Cacher FileCacher cache fcache›⍭
+__exports__ = ‹Cacher FileCacher cache fcache mkmk_cache›⍭
 
  sqc = mk_fcache(fp="/tmp/weed")(☾○√)
  sqc(5)

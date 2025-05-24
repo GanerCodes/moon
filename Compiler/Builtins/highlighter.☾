@@ -1,17 +1,13 @@
 styf = moon_dir / ‹FontCompose/Output/style.json›
 styd = styf  𝔍󰄟 ℵ
 
-⊢ sty(s,bg=0,de=‹bec›):
+⊢ (cache) sty(s,bg=0,def=‹bec›):
     ∀k,v⬠styd: ¿s∉k ∨ ‹color›∉v: ↺
                ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
-    ↪termclr(s,de,bg)
+    ↪termclr(s,def,bg)
+__highlighter__ = ⥌l,b=✗,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
 
-⊢ __highlighter__(l,b=✗,clr=✓):
-    s,⠤e = l ᔐ ⭢.split(␛ᐧ)
-    safechr = 󷺹󷹜¹⁶󷹝ᐸ 󰔶 󷺻‹?⟦⟞⟧⸮›
-    e = eᙧ¹2⭥ꟿ󷺻safechr(⟞)+󷺽
-    r = (e⨁􊾖+ᵜs) ᴍ 󰲡clr⭜ˣsty(x,b⭜⁰‹400›)󰅂 ⨁􊾖
-    ↪r
+⊢ highlight_tester(): ➰stdin.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
 
 🟑
 ⊢ __error_printer__(ε):
@@ -52,6 +48,3 @@ styd = styf  𝔍󰄟 ℵ
 sys.excepthook = 󰲥__error_printer__(y)
 threading.excepthook = sys.excepthook
 🟑
-
-¿__name__≡‹__main__›:
-➰sys.stdin.readline≕l: ☾´(l __highlighter__, end=ᐦ)
