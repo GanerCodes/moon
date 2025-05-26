@@ -1,4 +1,4 @@
- 󰤱  error handling, 𝐍
+ 󰤱  error handling, ⮎, 𝐍
  󰤱  whitespace involution lol
  󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
  󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
@@ -9,6 +9,12 @@
  󰤱􊽨 deque for þSTK
  󰤱􊽨 raising
  ∀x: replaces ➰; (ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
+ All orders for all operators
+ Colors and number-labels of ⬤
+   number for which slot in order so like (󰲣⌃󰲡)(2,3)≡3²
+   color how far up it goes so if ⬤⫢purple, ⬤⋅3⋅~⬤+2 is 󰲣x⋅3+~y󰅂+2
+   Wat if we dd the same thing for whickers and the balls?
+   so like purple 󰲣 matches until something more patient than purple
 
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (‹Builtins/tests.☾›)
@@ -35,9 +41,9 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹rep
 
 ⊢ make_header():
     𝚝=𝓉
-    compile = 󰲣$ᵒᵉᴾbash -c ☾ "⟦__file__⟧" o "⟦x⟧" "⟦y⟧"󷹹
+    compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
     files = (‹Builtins/builtins›)󷹎
-    h = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦⟞⟧.py›≕x),xᐸ
+    h = filesᐖcompile(‹Builtins/⟦⟞⟧.☾›,‹/tmp/compiled_⟦␛/󰛔􍪵‹$$›⟧.py›≕x),xᐸ
     h󷸊ᐵ₀¬⨳➡►(⟞₁)ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     ↪h

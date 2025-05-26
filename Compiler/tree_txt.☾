@@ -3,7 +3,7 @@
 ⊢ rewrite_str_indent(󱁕):
     ¿␛p∉󱁕ᵉ: ↪󱁕
     𝚍 = 󱁕ᵉ ᵖ₁+1
-    pl = 󷰾
+    pl = 󱁕ᵉ ᵖ₀  might be weird if u do like ‹␛<newline>
     ∀𝒏∈󱁕.gets(‹str_tsub_guts›):
         𝚜,h = lines(𝒏₀ᵗ),[]
         ∀i,⟞∈𝚜↨:

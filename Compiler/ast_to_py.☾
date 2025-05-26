@@ -19,7 +19,7 @@ bruh = 󰲡󷹜´(x,chars=ENC)
 PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍⁽􍴕⁾⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱ᶜʰᵃʳˢ⁼ᴱᴺ󰀂⁾󷺹₀∘ᵜRCDᐸ⭢⨝␛Þ
 VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌍹􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉ᵇʳᵘʰ⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀∘ᵜSPEᐸ⭢⨝
 py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›⭝ ⟞
-𝖫 = ⥌x,y=4⋅𝘀↦x󷹎𝗻ᐵ+ᵜyᐸ⨝𝗻
+𝖫 = ⥌x=ᐦ,y=4⋅𝘀↦lines(x)ᴍy+⬤⭢⨝𝗻
 
 ⊢ expand_ast_py(󱁕, PEV=PEV):
     ¿󱁕ᵉ ᵀ: ↪󱁕
@@ -93,17 +93,20 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶�
         󱁕ᶜ.insert(1,𝙨)
     ⸘󱁕ᵗ≡‹cln_pfx›:
         ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))
+    ⸘󱁕ᵗ≡‹stmts›: 󱁕.set(c=󱁕ᶜ⟖󰻾􋈠⁽􋋉⁾)
+    ⸘󱁕ᵗ≡‹blk›:
+        P,d = 󰲡expand_ast_py(x,PEV),𝗻+𝖫()
+        ↪󱁕.set(c=[P(󱁕₀),⠤󱁕₁﹕⟕󰻾􋈠⁽􋋉⁾ᴍPᐵ.frp(󷺹ᵉ ᵀ,󷺹.cp(t=𝗻󰛔􍪵􊾾d),✗,✗)ᐸ,𝔗(𝗻)])
     ↪󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
 
-⊢ ast_to_py(󱁕, get_tree=✗, no_rename_vars=✗, reparse=✗):
+⊢ ast_to_py(󱁕,get_tree=✗,no_rename_vars=✗,reparse=✗):
+    (ƒ≔󱁕↦(␛p∈󱁕ᵉ⭜󱁕ᵉ 󰁜≔󱁕ᵉ ᵖ)►󱁕ᴍƒ)∘󱁕
     󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁)
+     (ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁)∘󱁕
+     t = 󱁕.cpr.flat(󷺹ᵉ∌␛ρ).rm(󷺹ᵉ ᵀ∧⟞ᵉ∌␛ρ,✗).flat(󷺹ᵉ ᵀ¬)
+     𝑩𝑩(t)
     ¿get_tree: ↪󱁕
-    ⊢ ƒ(󱁕):
-        ¿󱁕ᵉ ᵀ: ↪+󱁕
-        ¿󱁕ᵗ≡‹stmts›: ↪ 󱁕ᴍƒ⭢⨝𝗻
-        ¿󱁕ᵗ≡‹blk󷺗󷺗›: ↪ ƒ(󱁕₀)+𝗻+𝖫(󱁕₁﹕ᴍƒ⭢⨝𝗻)+𝗻
-        ↪󱁕ᴍƒ⭢⨝ᐦ
-    𝚌 = ƒ(󱁕)
+    𝚌 = +󱁕
     ¿reparse:
         ⨡ ast
         try:

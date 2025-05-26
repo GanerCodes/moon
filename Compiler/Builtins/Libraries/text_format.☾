@@ -4,13 +4,13 @@
 
 H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
 find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0)m›)
-find_next_char = re.compile(‹((?:(?:⟦S⟧)|\\033\[0m)*.?)›)
-rm_esc = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
-lines    = 𝚌↦𝚌.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
-𝼞ꬷ       = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
-𝼞𝼞       = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
-dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
-tspl     = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
+find_next_char = re.compile(‹((?:(?:⟦S⟧)|𝟭𝗯\[0m)*.?)›)
+rm_esc         = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
+dotrim         = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+lines          = 󷺹.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
+𝼞ꬷ             = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
+𝼞𝼞             = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
 
 ⊢ slice_𝚕𝚌(𝚌,𝚙):
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
@@ -84,26 +84,24 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ↪ ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
-__exports__ = ‹rm_esc lines padl padc padr pads stackr ›␛
-              ‹box BOX linenum linewnum dotrim slice_𝚕𝚌 ›␛
-              ‹𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+__exports__ = ‹rm_esc lines padl padc padr pads stackr box BOX›␛
+              ‹ linenum linewnum dotrim slice_𝚕𝚌 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
 
-¿__name__≡‹__main__›:
-    tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
-    linewrap(linenum(‹egg salad number twelve fortnite
-                      the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
-    a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-    b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-    c = box(‹5⭥ᐵ²›)☾
-    d = BOX(‹5⭥ᐵ²›)☾
-    stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
-    padl(‹egg›,11,␛─)☾
-    padl(‹egg›,11,𝘀)☾
-    padc(‹egg›,11,𝘀)☾
-    padc(‹egg›,11,␛─)☾
-    padc(‹lul›,10,␛─)☾
-    padc(‹lads𝗻x›,10,␛─)☾
-    padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
-    padc(‹egg›,11,𝘀)☾
-    padr(‹egg›,11,𝘀)☾
-    padr(‹egg›,11,␛─)☾
+⊢ test_text_format(): tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
+                      linewrap(linenum(‹egg salad number twelve fortnite
+                                        the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
+                      a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                      b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                      c = box(‹5⭥ᐵ²›)☾
+                      d = BOX(‹5⭥ᐵ²›)☾
+                      stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
+                      padl(‹egg›,11,␛─)☾
+                      padl(‹egg›,11,𝘀)☾
+                      padc(‹egg›,11,𝘀)☾
+                      padc(‹egg›,11,␛─)☾
+                      padc(‹lul›,10,␛─)☾
+                      padc(‹lads𝗻x›,10,␛─)☾
+                      padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
+                      padc(‹egg›,11,𝘀)☾
+                      padr(‹egg›,11,𝘀)☾
+                      padr(‹egg›,11,␛─)☾

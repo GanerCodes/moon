@@ -18,29 +18,13 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
         ¿𝘎[‹__file__›]≠__file__: ⇥
     ↪ 𝘎
 
-⊢ 𝔦𝔪𝔭(x):
-    ✗⨳􎒢‹𝔦𝔪𝔭 is deprecated and will be removed soon!›
-    ⨡ os, sys, shutil, subprocess
-    ⮌ pathlib ⨡ Path as 𝐩
-    ⮌ subprocess ⨡ Popen as 𝐫
-    ⮌ time ⨡ time, sleep
-    G = outer_globals()
-    G[␛𝐩⥉PEV] = 𝐩
-    G[␛𝐫⥉PEV] = 𝐫
-    G[h≔PEV("𝐩𝐝")] = 𝚲G[‹__file__›] ⥉𝐩→.parent
-    G["subprocess"] = subprocess
-    G["os"], G["sys"], G["shutil"] = os, sys, shutil
-    G["time"], G["sleep"] = time, sleep
-    G["ldir"] = 𝚲os.chdir←Gₕ
-
-⊢ 󱠨(c, ⠤𝔸, get_ns=✗, ns=□, fname=□,
-    interactive_𝕂=□, no_isolate=✗,
-    no_isolate_ƒ=󰲡exec(x,globals()), ⠶𝕂):  󱠨(x, return_code=✓)
+⊢ 󱠨(c,⠤𝔸,get_ns=✗,ns=□,fname=□,interactive_𝕂=□,
+    no_isolate=✗,no_isolate_ƒ=󰲡exec(x,globals()),⠶𝕂):  󱠨(x, return_code=✓)
     
-    𝓘𝓚 = {"code_post_process": __code_post_process__}|(interactive_𝕂 ∨ {})
+    𝓘𝓚 = {‹code_post_process›: __code_post_process__}|(interactive_𝕂 ∨ {})
     ⮌ refresher ⨡ basic_cpy_interactive_session
     cpy = basic_cpy_interactive_session(
-        print_output=✓, ns=ns, fname=fname≅□ ⭜"cpy_󱠨"⭝ fname,
+        print_output=✓, ns=ns, fname=fname≅□ ⭜‹cpy_󱠨›⭝ fname,
         code_cache_dir=__code_cache_dir__, gram_cache_dir=__gram_cache_dir__,
         header_carry=__header_namespace__, ⠶𝓘𝓚)
     ¿no_isolate:  absolutely beaned
@@ -118,11 +102,3 @@ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
     ↪ ƒ
 SUBPROCA = ℳℱ(𝚲󰋺(‹subproca›).SUBPROCA)
 
-kots = 󰋺("kots")
-∀n∈kots[‹__exports__›]:
-    𝚗 = PEV(n)
-    globals()􀲴 = __builtins__􀲴 = kots􀲴
-highlighter = 󰋺("highlighter")
-
-__builtins__["__error_printer__"] ≔ __error_printer__ ≔ highlighter.__error_printer__
-__builtins__["__highlighter__"  ] ≔ __highlighter__   ≔ highlighter.__highlighter__
