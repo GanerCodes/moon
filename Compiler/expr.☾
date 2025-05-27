@@ -118,6 +118,6 @@
             ¿cᵗ≡‹item›: 𝕜.append(c)
             ⸘k ≡0     : 𝕒.append(c)
             ⸘k ≡1     : 𝕡.append(𝗇(𝕒🃌)), 𝕒.append(𝗏𝗌(␛⬤))
-            ⸘cᵗ≡‹qvar›: 𝕡.append(k)
+            ⸘cᵗ≡‹qvar›: 𝕡.append(c)
         ¿󱁕₀ᵗ≡‹𝗈𝗉›: 󱁕₀ ₂.set(c=⍁)
         ↪𝖼𝖺𝗅𝗅(𝗏(‹þCUR›), 𝒩(␛𝑇,⠤𝕡), 𝒩(␛𝐷,⠤𝕜), ⠤𝕒)
