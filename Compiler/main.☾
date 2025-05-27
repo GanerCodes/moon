@@ -1,3 +1,4 @@
+ 󰤱   ⦃"⦃󱅏⦄,⦃⦄"⦄
  󰤱  error handling, ⮎, peggle
  󰤱  whitespace involution lol
  󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
@@ -29,14 +30,16 @@ CODE = (‹Builtins/tests.☾›)
 
 show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
-moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦ast_to_py(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓}|𝓚)
+to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
+
+moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓}|𝓚)
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
-    ¿show_py_ast: 𝑩𝑩(ast_to_py(󱁕.cpr,get_tree=✓,no_rename_vars=✓),‹PY AST›)
-    p = show(ast_to_py(󱁕.cpr,no_rename_vars=✓),✗)
+    ¿show_py_ast: 𝑩𝑩(to_py(𝚌)(󱁕.cpr,get_tree=✓,no_rename_vars=✓),‹PY AST›)
+    p = show(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓),✗)
     padc(‹ CODE ›,p,␛─)+𝗻+p⭢☾
-    show(pyc≔ast_to_py(󱁕.cpr,reparse=✓),✗)☾
+    show(pyc≔to_py(𝚌)(󱁕.cpr,reparse=✓),✗)☾
     ↪pyc
 
 ⊢ make_header():

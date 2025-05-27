@@ -21,12 +21,12 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌍹􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉
 py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›⭝ ⟞
 𝖫 = ⥌x=ᐦ,y=4⋅𝘀↦lines(x)ᴍy+⬤⭢⨝𝗻
 
-⊢ expand_ast_py(󱁕, PEV=PEV):
+⊢ expand_ast_py(󱁕,PEV=PEV):
     ¿󱁕ᵉ ᵀ: ↪󱁕
     ¿󱁕ᵗ≡‹𝗈𝗉›:  MOD(op, 𝚜=…, ᔨ=…)
         ¿m≔󱁕₀󰌷󱁕₂:
             t = ℵ󰁺󰁻(m󷺹ᵗ∈𝑠(‹≺≻ᵜ꜠›) ⭜1⭝ ⟞ᵗ∈𝑠(‹ᔨ›) ⭜2⭝ ⟞ᵗ∈‹𝚜› ⭜0⭝ 󰮈)
-            a = t₀🃌≡0 ⭜⍁⭝ t₀🃌≡1 ⭜t₀⭝ [𝔗(␛(),⠤t₀⨝𝔗(␛,),𝔗(␛))]
+            a = t₀🃌≡1 ⭜t₀⭝ t₀🃌 ⭜[𝔗(␛(),⠤t₀⨝𝔗(␛,),𝔗(␛))]⭝ ⍁
             𝕒 = (a ⭜[𝒩(␛𝚜,𝗑(⠤a))]⭝ ⍁)+t₂ᐖ𝗑(𝗏(⟞ᵗ),𝔗(␛=),⟞🃌 ⭜⟞₀⭝ 𝗏(␛󱣩))
             󱁕₁ = t₁ſ􋑻􊿦󷺻𝖼𝖺𝗅𝗅(𝗏(⟝ᵗ),⟞)󷺿
             󱁕 = 𝕒 ⭜𝖼𝖺𝗅𝗅(𝔗(‹MOD›),󱁕₁,⠤𝕒)⭝ 󱁕₁
@@ -61,7 +61,7 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶�
                           ⟞,
                  𝔗(‹")›),⠤β⭜[𝔗(‹%(›),⠤β⟖𝔗(␛,),𝔗(␛))]⭝⍁])
     ⸘󱁕ᵗ≡‹strb󷺗󷺗›: 󱁕.set(c=[𝔗(‹\x⟦+󱁕⭢󷹜󷹜¹⁶⁺²􍢉⟧›)])
-    ⸘󱁕ᵗ≡‹𝑣_spec›: 󱁕.set(c=[𝗏(𝐌􋇣􋕟ˢᵖᵉᶜ.get(+󱁕,+󱁕))󱖔􋔡󱁕])  (1󱖔􋅂2)(+)
+    ⸘󱁕ᵗ≡‹𝑣_spec›: 󱁕.set(c=[𝗏(𝐌􋇣􋕟ˢᵖᵉᶜ.get(+󱁕,+󱁕))󱖔􋔡󱁕])
     ⸘󱁕ᵗ≡‹𝔸›: 󱁕.set(c=[𝔗(‹*󷺗›),⠤󱁕₀ᵉ ᵀ ⭜𝗏(󱁕₀)⛶⭝ 󱁕])
     ⸘󱁕ᵗ≡‹𝕂›: 󱁕.set(c=[𝔗(‹**›),⠤󱁕₀ᵉ ᵀ ⭜𝗏(󱁕₀)⛶⭝ 󱁕])
     ⸘󱁕ᵗ∈‹𝑣 op_lit ƒ_𝑣›⍭: 󱁕.set(c=[𝔗(PEV(+󱁕)ᣆ􍯏􋁉ᵏʷˡⁱˢᵗ􋁎􋂙􊿑󰀅ᵃˡˢᵉ􊿉ᴺᵒⁿᵉ􊿉ᵀʳᵘᵉ􊿒⬤+␛_)󱖔􋔡󱁕])
@@ -99,28 +99,54 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶�
         ↪󱁕.set(c=[P(󱁕₀),⠤󱁕₁﹕⟕󰻾􋈠⁽􋋉⁾ᴍPᐵ.frp(󷺹ᵉ ᵀ,󷺹.cp(t=𝗻󰛔􍪵􊾾d),✗,✗)ᐸ,𝔗(𝗻)])
     ↪󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
 
-⊢ ast_to_py(󱁕,get_tree=✗,no_rename_vars=✗,reparse=✗):
-    (ƒ≔󱁕↦(␛p∈󱁕ᵉ⭜󱁕ᵉ 󰁜≔󱁕ᵉ ᵖ)►󱁕ᴍƒ)∘󱁕
-    󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁)
-     ⊢ fill_holes(󱁕):
-         ¿␛ρ∉󱁕ᵉ:
-             α,β = 󱁕.first_sides(󷺹ᵉ∋␛ρ)
-             ¿□≇α∧β≇□: 󱁕ᵉ 󰁜=(⠤αᵉ 󰁜﹕₂, ⠤βᵉ 󰁜₂﹕)
-         ∀c∈󱁕:fill_holes(c)
-         ↪󱁕
-     (ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁)∘fill_holes(󱁕)
-     t = 󱁕.cpr.flat(󷺹ᵉ∌␛ρ).rm(󷺹ᵉ ᵀ∧⟞ᵉ∌␛ρ,✗).flat(󷺹ᵉ ᵀ¬)
-     𝑩𝑩(t)
+ast_clean_e = 󱁕↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈‹Tpρ›)),✓,✗)  󰤱 put into gram_tools
+ast_add_pos = ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁  󰤱 put this func in peggle
+
+⊢ get_region(L,p):
+    ¿Lᐹᔐ: L = lines(L)
+    ¿p₀≡p₂: ↪[Lₚ􊬣 ₚ􊬤﹕ₚ􊬦]
+    ↪[Lₚ􊬣 ₚ􊬤﹕,⠤Lₚ􊬣₊₁﹕ₚ􊬥,Lₚ􊬥 ﹕ₚ􊬦]
+
+⊢ map_region(SM,p): ↪get_region(SM,p)󰌷ᐵ𝌂2ᐸ󰌷⭢⟷⭢󰆩
+
+⊢ into_srcmap(󱁕,𝚌):  eᵖ: pos in result, e󰁜: pos in input
+    󱁕.rm(󰲡xᵉ ᵖ﹕₂≡xᵉ ᵖ₂﹕ ∧ xᵉ 󰁜﹕₂≡xᵉ 󰁜₂﹕)
+    L = lines(𝚌)ᐵ🃌⋅􊱃
+    ⊢ R(p,Δ):
+        ¿p₀≡p₂: Lₚ􊬣 ₚ􊬤﹕ₚ􊬦 = 󰃏⋅⭠p₃-p₁
+        ¡:
+            Lₚ􊬣 ₚ􊬤﹕ = 󰃏⋅⭠Lₚ􊬣🃌-p₁
+            ∀r∈p₀󷸸p₂: Lᵣ = 󰃏⋅Lᵣ🃌
+            Lₚ􊬥 ﹕ₚ􊬦 = 󰃏⋅⭠Lₚ􊬥🃌-p₃
+    ⊢ ƒ(󱁕,n=0):
+        R(󱁕ᵉ ᵖ,󱁕ᵉ 󰁜)
+        ∀c∈󱁕:ƒ(c,n+1)
+    ƒ(󱁕)
+    ↪L
+
+⊢ out_to_in_mapper(󱁕,α,ω):
+    SM,𝙲 = into_srcmap(󱁕,ω),lines(α)
+    ↪ p↦get_region(𝙲,map_region(SM,p)☾)⨝𝗻
+
+⊢ ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
+    󱁕 = fill_󱁕_holes_basic(
+            ast_clean_e(
+                expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁)))
+    pyc = +󱁕
+    (ƒ≔⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕ᵉ 󰁜≔󱁕ᵉ.pop(␛p))►󱁕ᴍƒ)∘󱁕
+    ast_add_pos(󱁕)
+     t = 󱁕.cpr.flat(󷺹ᵉ∌␛ρ).rm(󷺹ᵉ ᵀ∧⟞ᵉ∌␛ρ,✗)
+     pyc☾
+     h = out_to_in_mapper(t,𝚌,pyc)
+     ➰✓: h(𝑡(input()󷹎ᴍ𝑖))☾
     
     ¿get_tree: ↪󱁕
-    𝚌 = +󱁕
-    ¿reparse:
-        ⨡ ast
-        try:
-            𝚌 = ast.unparse(ast.parse(𝚌))
-        except Exception as ε:
-            ‹Code:𝗻⟦linewnum(𝚌,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
-            ✗⨳‹Error in python reparsing! ⟦ε⟧›
-    ↪𝚌
+    ¿reparse¬: ↪pyc
+    ⨡ ast
+    try:
+        ↪ast.unparse(ast.parse(pyc))
+    except Exception as ε:
+        ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
+        ✗⨳‹Error in python reparsing! ⟦ε⟧›
 
 __exports__ = ‹ast_to_py PEV VEP›⍭
