@@ -19,7 +19,7 @@ gram_comm = (⠶(str ∨ native_code) ∨ comment ∨ ~‹.|\n›)*
 gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
 
 stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
-stmt  = native_imp ∨ blk_head ∨ kwd_std ∨ asgn ∨ 𝑋𝐶
+stmt  = blk_head ∨ kwd_std ∨ asgn ∨ 𝑋𝐶
 
 𝑋𝐶 = comp_∀ ∨ ⠶𝑋↑↑
 
@@ -49,7 +49,8 @@ grp      = ~‹[⁅⟦]› (⠶𝑝𝑐 ∨ 𝖶) ~‹[⁆⟧]›
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
 𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨σscript∨›⭝ ᐦ⦄% grp
            ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
-           ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp ∨ number ∨ 𝑣_spec ∨ 𝑣)
+           ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp
+           ∨ number ∨ 𝑣_spec ∨ 𝑣)
 
 𝝀𝑃 = ⠶𝝀𝕒 𝖶 (󰆴',' 𝖶 ⠶𝝀𝕒 𝖶)*
 𝝀𝕒 = 𝝀eq ∨ ⠶𝝀𝑎
@@ -66,9 +67,16 @@ lambs = (  (whiskers=(    (⠶W_L 𝖶 (𝑋𝐶  ∨ ✓) ⠶W_R)
 𝔸𝕂 = (𝔸 = 󰆴'⠤' 𝖶 𝑋↓↑) ∨ (𝕂 = 󰆴'⠶' 𝖶 𝑋↓↑)
 slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
 
+ptarg    = '*' ∨ '@' ∨ 𝑣
+pargs_i  = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
+pargs_e  = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
+import   = 󰆴'⨡' 𝖶 str_timp 𝗐 (󰆴'⭸' 𝖶 pargs_i)?
+export   = 󰆴'⭷' 𝖶 pargs_e
+str_timp = str_sub_inner ∨ str_timp_guts
+
 native_code = 󰆴'⦃' (~‹[^⦃⦄␛␛]+› ∨ 󰆴"␛␛" ~‹.› ∨ 󰆴'⦃' 𝖶 𝑋𝐶? 𝖶 󰆴'⦄' )* 󰆴'⦄'
-native_imp = ((native_imp_from   = (󰆴'⮌' 𝖶 ~‹[^ \t\n⨡]+› 𝖶))?
-              (native_imp_fields = (󰆴'⨡' 𝖶 native_imp_targ (󰆴',' 𝗐 native_imp_targ)* )))
+ native_imp = ((native_imp_from   = (󰆴'⮌' 𝖶 ~‹[^ \t\n⨡]+› 𝖶))?
+               (native_imp_fields = (󰆴'⨡' 𝖶 native_imp_targ (󰆴',' 𝗐 native_imp_targ)* )))
 native_imp_targ = ~‹[^ \t\n:,]+› (𝗐 󰆴':' 𝗐 ~‹[^ \t\n,]+›)? 𝗐
 
 pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
@@ -87,7 +95,7 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝚜 = ⠶sup
 
 𝑣 = ((󰆴'´' ~‹[^´]+› ∨ ƨ(op_lit)) 󰆴'´') ∨ ƨ((¬𝑣_bad ~‹.›)+)
-𝑣_bad = (𝗪 ∨ ~‹󰦥{5}|[;:,⬠=∀¿⍈󷸴⍮⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
+𝑣_bad = (𝗪 ∨ ~‹󰦥{5}|[;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
            ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
 W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
@@ -97,8 +105,9 @@ str = empty_str ∨ str_tsys ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶st
 str_t󰦥   = 󰆴(~‹󰦥{5}›) ~‹((?!󰦥{5})(.|\n))*› 󰆴(~‹󰦥{5}› ∨ ✓)
 str_tsys = 󰆴'$' 𝗐 (ƨ(sup) ∨ ✓) 𝗐 (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
 str_tsub = 󰆴'‹'                  (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
-str_tsys_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+› 
+str_tsys_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+›
 str_tsub_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+›
+str_timp_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦⭸\n]+›
 str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*

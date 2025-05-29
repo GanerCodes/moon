@@ -7,6 +7,7 @@
  󰤱  named exceptions
  󰤱  with statements
  󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
+ 󰤱􊽨 replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
  󰤱􊽨 deque for þSTK
  󰤱􊽨 raising
  ∀x: replaces ➰; (ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱

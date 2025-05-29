@@ -1,26 +1,26 @@
-⨡ os,sys,inspect,traceback,threading
-⮌ os ⨡ environ:env
-⮌ sys ⨡ stdin,stdout,stderr,path:syspath,exit,argv:𝔸
-⮌ math ⨡ *
-⮌ site ⨡ getsitepackages
-⮌ json ⨡ dumps:jdumps__,loads:jloads__
-⮌ time ⨡ time, sleep
-⮌ cmath ⨡ *
-⮌ types ⨡ UnionType
-⮌ random ⨡ shuffle,choice,uniform,randint
-⮌ pathlib ⨡ Path:𝐩
-⮌ tempfile ⨡ gettempdir
-⮌ builtins ⨡ setattr:setattr_
-⮌ operator ⨡ __gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,setitem,delitem
-⮌ itertools ⨡ chain,filterfalse,product,accumulate,zip_longest
-⮌ functools ⨡ partial:MOD, reduce, cache
+⦃import os,sys,inspect,traceback,threading⦄
+⦃from os import environ as ⦃env⦄⦄
+⦃from sys import stdin,stdout,stderr,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
+⦃from math import *⦄
+⦃from site import getsitepackages⦄
+⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
+⦃from time import time,sleep⦄
+⦃from cmath import *⦄
+⦃from types import UnionType⦄
+⦃from random import shuffle,choice,uniform,randint⦄
+⦃from pathlib import Path as ⦃𝐩⦄⦄
+⦃from tempfile import gettempdir⦄
+⦃from builtins import setattr as ⦃setattr_⦄⦄
+⦃from operator import __gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,setitem,delitem⦄
+⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
+⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 syspath.extend(getsitepackages())
 moon_dir = 𝐩(‹..›)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
 þSTK=[]
 þPSH=⥌x  ↦þSTK.append(x)∨x
-þPKE=⥌x  ↦þSTK₋₁₋ₓ
+þPKE=⥌x=0↦þSTK₋₁₋ₓ
 þPOP=⥌x=0↦þSTK.pop(-1-x)
 þDEL=⥌x  ↦þSTK.__delitem__(-x:)
 ␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
@@ -161,9 +161,8 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗
 
 ⊢ ⨳´(𝚡=␀,𝚢=␀,𝚜=␀):
     ¿𝚡:↪𝚡
-    ⮌ os ⨡ environ
-    𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›∈environ
-    𝚍 = 𝚠∨‹MOON_DEPRECATION_IS_ERR›∈environ
+    𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›∈env
+    𝚍 = 𝚠∨‹MOON_DEPRECATION_IS_ERR›∈env
     ¿𝚜≅󰔛´: 𝖻,𝗆 = 𝚍,‹Deprecation ⟦𝚍⭜"Error"⭝"Warning"⟧›
     ⸘𝚜≅~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠⭜" [as Error]"⭝ᐦ⟧›
     ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›

@@ -34,8 +34,8 @@ pwd = 𝚲𝐩(os.getcwd)
     ⊢ __getitem__(𝕊,d): ↪𝕊􋕟􋕟ᶜˡᵃˢˢ􋕟􋕟(d)
 cd = cd
 
-⊢ sha(⠤𝔸,⠶𝕂): ⮌ hashlib ⨡ sha256:_sha256
-              ⮌ base64 ⨡ urlsafe_b64encode, urlsafe_b64decode
+⊢ sha(⠤𝔸,⠶𝕂): ⦃from hashlib import sha256 as ⦃_sha256⦄⦄
+              ⦃from base64 import urlsafe_b64encode,urlsafe_b64decode⦄
               ↪ 𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
 
 🟑

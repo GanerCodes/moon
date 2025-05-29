@@ -1,4 +1,4 @@
-⨡ re
+⦃import re⦄
 
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
@@ -81,11 +81,11 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ¿xᐹ   𝑠: ↪(xᐹ⭢≅𝑠⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+CL+(xᴍ𝖿𝗆𝗍)⨝𝘀+CR
     ¿xᐹ   𝐿: ↪(xᐹ⭢≅𝑙⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+BL+(xᴍ𝖿𝗆𝗍)⨝𝘀+BR
     ¿xᐹ   𝗙: ↪‹⟦H(x.__name__)⟧›
-    ↪ ᔐ(x)
+    ↪ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
-__exports__ = ‹rm_esc lines padl padc padr pads stackr box BOX›␛
-              ‹ linenum linewnum dotrim slice_𝚕𝚌 𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+⭷ rm_esc,lines,padl,padc,padr,pads,stackr,box,BOX,␛
+  linenum,linewnum,dotrim,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢ test_text_format(): tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                       linewrap(linenum(‹egg salad number twelve fortnite

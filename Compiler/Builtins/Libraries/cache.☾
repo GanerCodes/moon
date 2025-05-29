@@ -1,4 +1,4 @@
-⮌ pickle ⨡ loads:pl, dumps:pd
+⦃from pickle import loads as ⦃pl⦄,dumps as ⦃pd⦄⦄
 
 󱀘 Cacher:
     ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥): 𝕊􊽺,𝕊􍺪,𝕊􍺤,𝕊􍺢,𝕊􎀞 = ƒ,𝘩,𝘦,𝘥,{}

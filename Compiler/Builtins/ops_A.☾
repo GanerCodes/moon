@@ -72,16 +72,16 @@
              ¡   : r􊶨=
     ↪r
 
-⊢ ᖘ´(𝚡=␀,𝚢=␀,𝚜=␀):  󰤱 dicts and such
-    ¿𝚢≅␀: 𝚡,𝚢 = 𝚢,𝚡
-    𝚢≇␀ ⨳ ‹ᖘ needs right side›
-    ⊢ ƒ(𝚡): 𝚡 = (𝚡ᐹᔐ ≕ is_str) ⭜𝚡󰌷⭝ 𝚡ᐹ𝑑 ⭜𝚡.copy⭝ [⠤𝚡]
-            ids,TD = 𝚜ᣆ􋊧󷺹(𝚡),[]
-            ¿ᔐ󷹴idsᐹ𝗜: idsᐖ⟝≅󰮈 ⭜TD.append(⟞)⭝ 𝚡􍪴≔ᑈV≔𝚢(𝚡󷸻ids)
-            ¡       : idsᐒ⟝≅󰮈 ⭜TD.append(⟞)⭝ 𝚡􍪴≔ᑈV≔𝚢(𝚡 ᵢₛ)⛶
-            ∀x⬠TD󰒽: 󰆴𝚡ₓ
-            ↪ is_str ⭜𝚡⨝ᐦ⭝ 𝚡
-    ↪ 𝚡≅␀ ⭜ƒ⭝ ƒ(𝚡)
+ 󰤱 dicts and such
+⊢ ᖘ´(𝚡=␀,𝚢=␀,𝚜=␀): ¿𝚢≅␀: 𝚡,𝚢 = 𝚢,𝚡
+                   𝚢≇␀ ⨳ ‹ᖘ needs right side›
+                   ⊢ ƒ(𝚡): 𝚡 = (𝚡ᐹᔐ ≕ is_str) ⭜𝚡󰌷⭝ 𝚡ᐹ𝑑 ⭜𝚡.copy⭝ [⠤𝚡]
+                           ids,TD = 𝚜ᣆ􋊧󷺹(𝚡),[]
+                           ¿ᔐ󷹴idsᐹ𝗜: idsᐖ⟝≅󰮈 ⭜TD.append(⟞)⭝ 𝚡􍪴≔ᑈV≔𝚢(𝚡󷸻ids)
+                           ¡       : idsᐒ⟝≅󰮈 ⭜TD.append(⟞)⭝ 𝚡􍪴≔ᑈV≔𝚢(𝚡 ᵢₛ)⛶
+                           ∀x⬠TD󰒽: 󰆴𝚡ₓ
+                           ↪ is_str ⭜𝚡⨝ᐦ⭝ 𝚡
+                   ↪ 𝚡≅␀ ⭜ƒ⭝ ƒ(𝚡)
 
 ſ´ = ⥌𝚡,𝚢,𝚜=␀↦  reduce    (𝚢,𝚡,⠤𝚜≅␀⭜()⭝(𝚜,))
 Ϝ´ = ⥌𝚡,𝚢,𝚜=␀↦[⠤accumulate(𝚡,𝚢,initial=𝚜≅␀⭜□⭝𝚜)]

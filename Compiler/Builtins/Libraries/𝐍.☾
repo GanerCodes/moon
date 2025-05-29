@@ -1,5 +1,5 @@
- 󰋺(‹text_format›)
-⮌ collections ⨡ deque:𝔡𝔮
+⨡ text_format
+⦃from collections import deque as ⦃𝔡𝔮⦄⦄
 
 󱀘 𝐍: __slots__ = ␛t,␛c
      ⊢ __init__(󱁕,t,⠤c): 󱁕ᵗ,󱁕ᶜ = t,c∨[]
@@ -118,5 +118,5 @@
         filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.rm(¬○ƒ,⠤𝔸,⠶𝕂)
         as_txt = __pos__
 
-⊢ test_Ń(): Ń(‹the›, Ń(‹joe›, e={T=✓,p=2⋄4,swag=‹loog›}ℵ􋄅),
-                     Ń(‹egg›, Ń(‹egg2›), Ń(‹egg3›,e={T=✓,p=1⋄2⋄3⋄4}ℵ􋄅)))ᴾ
+⊢ test_Ń(): Ń(‹the›,Ń(‹joe›,e={T=✓,p=2⋄4,swag=‹loog›}ℵ􋄅),
+                    Ń(‹egg›,Ń(‹egg2›),Ń(‹egg3›,e={T=✓,p=1⋄2⋄3⋄4}ℵ􋄅)))ᴾ

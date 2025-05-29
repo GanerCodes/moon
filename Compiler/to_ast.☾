@@ -28,6 +28,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
     
     add_blocks(󱁕)
+    rewrite_ports(󱁕)
     󱁕.ftrp(␛𝐷,󱁕↦󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝗂𝗍𝖾𝗆(⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛
                          ⟞ᵗ≡‹𝐷_kv_nrm› ⭜𝗂𝗍𝖾𝗆(⠤⟞)                           ⭝⟞),✓)
     󱁕.ftrp(‹str_tsub›,rewrite_str_indent,✓)
