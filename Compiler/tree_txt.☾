@@ -2,8 +2,7 @@
 
 ⊢ rewrite_str_indent(󱁕):
     ¿␛p∉󱁕ᵉ: ↪󱁕
-    𝚍 = 󱁕ᵉ ᵖ₁+1
-    pl = 󱁕ᵉ ᵖ₀  might be weird if u do like ‹␛<newline>
+    pl,𝚍 = 󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₁+1  might be weird if u do like ‹␛<newline>
     ∀𝒏∈󱁕.gets(‹str_tsub_guts›):
         𝚜,h = lines(𝒏₀ᵗ),[]
         ∀i,⟞∈𝚜↨:
@@ -11,23 +10,11 @@
             h.append(pl≡I ⭜⟞⭝ ⟞[⟞󰑅ᔨ󷺹∉𝘀𝘁ᐸᣆ􋅂􋁜􋄅󰻾􍪵􋌵⭢⤈𝚍:])
             pl = I
         𝒏₀ᵗ=h⨝𝗻
-    ↪ 󱁕
+    ↪󱁕
 
 ⊢ add_blocks(󱁕):
     start = 󱁕↦󱁕ᵗ≡‹stmt› ∧ 󱁕₀ᵗ≡‹blk_head›
-    ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ 󱁕↦𝒫(Ń(‹blk›, 󱁕₀, ⠤󱁕₁﹕ᣆƒ))⟩ 󷸴 ⴳ⟩○𝑙
-    󱁕.ftrp(‹stmts›,󱁕↦󱁕.copy(c=ƒ(󱁕)),✓)
+    ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(‹blk›,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
+    󱁕.ftrp(‹stmts›,󱁕↦󱁕.set(c=ƒ(󱁕)),✓)
 
-⊢ grp_stmts(󱁕):  ¿⸘¡➰∀
-    𝒎 = 󰲡󱁕↦󱁕ᵗ≡‹blk›∧󱁕₀ᵗ≡‹stmt›∧󱁕₀ ₀ᵗ≡‹blk_head›∧󱁕₀ ₀ ₀ ₀ ₀ᵗ≡x
-    @󱁕.ftrp(‹blk›,□,✓)
-    ⊢ _(󱁕):
-        ↪ 󱁕.set(c=⟨  ⟨𝒎(␛¿)⍮ 𝒎∘␛⸘⍮ 𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹¿⸘¡›, ⠤⟞)⟩
-                   󷸴 ⟨𝒎(␛)⍮        𝒎(␛¡)⍮ ⍈ 󷺻𝒩(‹¡›, ⠤⟞)⟩
-                   󷸴 ⟨𝒎(␛➰)⍮        𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹➰¡󷺗›, ⠤⟞)⟩
-                   󷸴 ⟨𝒎(␛∀)⍮        𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹∀¡󷺗›, ⠤⟞)⟩
-                   󷸴 ⴳ⟩(󱁕ᶜ))
-
-⊢ flatten_statments(󱁕):
-     󱁕.flat(󷺹ᵗ∈‹stmt cln_kwd›⍭)
-    󱁕.flat(󷺹ᵗ∈‹stmt›⍭)
+flatten_statments = 󱁕↦󱁕.flat(󷺹ᵗ∈‹stmt›⍭)

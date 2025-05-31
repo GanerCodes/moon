@@ -11,12 +11,15 @@
 ⦃from pathlib import Path as ⦃𝐩⦄⦄
 ⦃from tempfile import gettempdir⦄
 ⦃from builtins import setattr as ⦃setattr_⦄⦄
-⦃from operator import __gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,setitem,delitem⦄
+⦃from operator import setitem as ⦃setitem_⦄,__gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,delitem⦄
 ⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 syspath.extend(getsitepackages())
 moon_dir = 𝐩(‹..›)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
+
+setattr = 󰲥setattr_(x,y,z) ∨ z
+setitem = 󰲥setitem_(x,y,z) ∨ z
 
 þSTK=[]
 þPSH=⥌x  ↦þSTK.append(x)∨x
@@ -30,8 +33,6 @@ moon_dir = 𝐩(‹..›)
             ∀k,v⬠zip(𝑃,𝐴): isinstance(k,int)⭜􀳣𝙰➡ₖ=v
             ↪𝙰₀(⠤𝙰₁﹕,⠤𝐴ₗₑₙ₍􊴂₎﹕,⠶𝙺)
     ↪ꬶ()
-
-setattr = 󰲥setattr_(x,y,z) ∨ z
 
 𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦 = Exception,object,dict,bool,list,tuple,set,str,int,float,bytes
 ´ᐦ´ = 󷺗
@@ -52,7 +53,7 @@ setattr = 󰲥setattr_(x,y,z) ∨ z
 
 🃌´ = len
 ᵜ = ƒ↦𝚲𝔸🃌≥2⭜ƒ(𝔸₁,𝔸₀,⠤𝔸₂﹕,⠶𝕂)⭝ƒ(⠤𝔸,⠶𝕂)
-󰻾´ = ⥌⠤𝔸,𝚜=␀↦𝔸 ⭜(𝚜≅␀⭜𝔸₀⭝𝚜)⭝ 𝚜≅␀ ⭜𝚲𝔸⭜𝔸₀⭝󰻾󰅂⭝ 𝚲𝚜  󰤱
+󰻾´ = ⥌⠤𝔸,𝚜=␀↦𝔸 ⭜(𝚜≅␀⭜𝔸₀⭝𝚜)⭝ 𝚜≅␀ ⭜𝚲𝔸⭜𝔸₀⭝󰻾󰅂⭝ ⥌⠤𝔸↦𝚜  󰤱
 CUR = ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,⠤𝙰,⠤𝙱,⠶𝙺|𝙻)
 CURR= ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,⠶𝙻↦CUR(ƒ,𝙱₀,⠤𝙰,⠤𝙱₁﹕,⠶𝙺|𝙻)
  󰻾´ = 𝑐𝑑(𝚲𝔸⭜𝔸₀⭝□, __repr__=𝚲␛󰻾, 𝑔=󰲡𝑐𝑑(𝚲x     , __repr__=𝚲‹󰻾∘⟦x⟧›))

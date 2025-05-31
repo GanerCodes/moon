@@ -1,20 +1,21 @@
-󰋺(‹cache›)
+fcache = 𝚲ƒ↦ƒ  󰻾􋒍  ⨡ cache
  FC, bruh = fcache, 0
  ⊢ fcache(⠤𝔸,⠶𝕂):
      global bruh
      ¿bruh󷸊+1 ≤ 3:
          ↪ FC(⠤𝔸,⠶𝕂)
-     ↪ 󰻾
- fcache = 󰻾􋒍
+     ↪󰻾
 
-󰋺(__dir__ / ‹../𝐍󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⭢.resolve)
-󰋺(__dir__ / ‹../text_format›⭢.resolve)
+⨡ 𝐍
+⨡ text_format
 
-           ⨡ regex as re
-¡Exception: ⨡ re
-⮌ pickle ⨡ loads,dumps
+           ⦃import regex as ⦃re⦄⦄
+¡Exception: ⦃import re⦄
+ ⮌ pickle ⨡ loads,dumps
 
 show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹⟦i⟧,⟦x⟧𝘁⟦𝑅ₓ⟧𝘁⟦y⟧›
+
+𝔗 = 󰲡Ń(x,e=ℵ􋄅(T=✓))
 
 𝓽_ = □
 ⊢ 𝓣(s=ᐦ): ⦃global ⦃𝓽_⦄⦄
@@ -26,98 +27,88 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 
 ⊢ (fcache) gram_convert(󱁕):
     name_remaps = ℵ(‹elm_o elm_a assign_cln group_inner group›⍭󱑼‹∨∧←∧∧›)
-    Ə = ℵ(T=✓)
     TT = 󱁕↦(󱁕ᵗ, ⠤(󱁕ᵗ∈␛ᔐ␛~ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᵗ≡␛← ⭜(󱁕₀ᵗ,⠤󱁕₁﹕ᴍTT)⭝ 󱁕ᴍTT))
-    escape = ⥌x,t=␛ݺ↦x.replace(␛␛␛␛, t).replace(␛␛,ᐦ).replace(t,␛␛)
-    txt = 󰲡Ń(x,e=Ə)
-    ⊢ reduce_j(󱁕):
-        α, o, β, ⠤C = 󱁕
-        ¿C: ✗⨳  β = reduce_j(󱁕.cp(c=[β,⠤C]))  ????????
-        ¿oᵗ≡␛↷: ↪Ń(␛∧,α,β,α)
-        ⸘oᵗ≡␛⯆: ↪Ń(␛∨,Ń(␛∧,β,Ń(␛+,Ń(␛∧,α,β))),β)
-        ⸘oᵗ≡␛△: ↪Ń(␛∨,Ń(␛∧,Ń(␛*,Ń(␛∧,α,β)),α),α)
-        ⸘oᵗ≡␛▽: ↪Ń(␛∨,Ń(␛∧,Ń(␛∧,β,Ń(␛*,Ń(␛∧,α,β)))),Ń(␛✓))
-        ⸘oᵗ≡␛⯅: ↪Ń(␛∧,Ń(␛+,Ń(␛∧,α,β)),α)
-        ✗⨳
-    ⊢ bad(󱁕):
-        ¿󱁕ᵗ∈"comment w W"⍭: ↪✓
-        ¿¬󱁕ᵗ ∧ 󱁕🃌≡1 ∧ 󱁕ᶜ₀ᵉ ᵀ ∧ 󱁕ᶜ₀ᵗ∈‹()∧∨:=›: ↪✓
-    ⊢ collapse_ao(󱁕):
-        ¿󱁕ᵉ ᵀ: ↪󱁕
-        󱁕ᶜ 󷸊 ᴍ󰲡(x≔collapse_ao(x))ᵗ≡󱁕ᵗ∈␛∧␛∨ ⭜xᶜ⭝ [x]󰅂 ⨁􍸒
-        ↪󱁕
-    ⊢ parse_elm(N):
-        α,n,β = +N₀,N₁,+N₂
-        l1, l2 = α 􋇐 ⭠∈‹❗⠶ƨ›
-        ∀o⬠(⠤l1,⠤β,⠤l2): ¿o≡␛~: n = Ń(o,Ń(re.compile(+n),e=Ə))
-                         ¡    : n = Ń(o,n)
-        ↪n
-    
-    rules = 󱁕.rm  (bad) ␛
-             .ftrp(‹prefix suffix›⍭, 󰲡Ń(xᵗ,txt(x.as_txt())))             ␛
-             .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗› , 󰲡Ń(␛ᔐ,txt(escape(x.as_txt()₁﹕􍨄))))  ␛
-             .ftrp(name_remaps⁻    , 󰲡Ń(name_remapsₓ􊫼,⠤(y∀y⬠x¿¬yᵉ ᵀ)),✓) ␛
-             .flat(󰲡xᵗ≡‹_elm_j›) ␛
+    escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)
+    ⊢ reduce_j(󱁕): α,o,β,⠤C = 󱁕
+                   ¿C: ✗⨳  β = reduce_j(󱁕.cp(c=[β,⠤C]))  ????????
+                   ¿oᵗ≡␛↷: ↪Ń(␛∧,α,β,α)
+                   ⸘oᵗ≡␛⯆: ↪Ń(␛∨,Ń(␛∧,β,Ń(␛+,Ń(␛∧,α,β))),β)
+                   ⸘oᵗ≡␛△: ↪Ń(␛∨,Ń(␛∧,Ń(␛*,Ń(␛∧,α,β)),α),α)
+                   ⸘oᵗ≡␛▽: ↪Ń(␛∨,Ń(␛∧,Ń(␛∧,β,Ń(␛*,Ń(␛∧,α,β)))),Ń(␛✓))
+                   ⸘oᵗ≡␛⯅: ↪Ń(␛∧,Ń(␛+,Ń(␛∧,α,β)),α)
+                   ✗⨳
+    ⊢ bad(󱁕): ¿󱁕ᵗ∈‹comment w W›⍭: ↪✓
+              ¿󱁕ᵗ¬ ∧ 󱁕🃌≡1 ∧ 󱁕ᶜ₀ᵉ ᵀ ∧ 󱁕ᶜ₀ᵗ∈‹()∧∨:=›: ↪✓
+    ⊢ collapse_ao(󱁕): ¿󱁕ᵉ ᵀ: ↪󱁕
+                      󱁕ᶜ 󷸊 ᴍ󰲡(x≔collapse_ao(x))ᵗ≡󱁕ᵗ∈␛∧␛∨ ⭜xᶜ⭝ [x]󰅂 ⨁􍸒
+                      ↪󱁕
+    ⊢ parse_elm(N): α,n,β = +N₀,N₁,+N₂
+                    l1,l2 = α 􋇐 ⭠∈‹❗⠶ƨ›
+                    ∀o⬠(⠤l1,⠤β,⠤l2): ¿o≡␛~: n = Ń(o,𝔗(re.compile(+n)))
+                                     ¡    : n = Ń(o,n)
+                    ↪n
+    rules = 󱁕.rm  (bad)                                                  ␛
+             .ftrp(‹prefix suffix›⍭, 󰲡Ń(xᵗ,𝔗(+x)))                       ␛
+             .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗› , 󰲡Ń(␛ᔐ,𝔗(escape((+x)₁﹕􍨄))))          ␛
+             .ftrp(name_remaps⁻    , 󰲡Ń(name_remapsₓ􊫼,⠤(y∀y⬠x¿yᵉ ᵀ¬)),✓) ␛
+             .flat(󰲡xᵗ≡‹_elm_j›)                                         ␛
              .find(󰲡xᵗ≡‹assign_eql›)
     rules = ℵ(rules ᴍ 󰲡+x₀,x₂󰅂)
     
-    ∀k,󱁕⬠rules:
-        󱁕 = collapse_ao(
-                󱁕.ftrp(‹assign_eql›⍭, 󰲡x₀, ✓)           ␛
-                 .flat(󰲡xᵗ∈‹∧ ∨ elm_j›⍭∧x🃌≡1))          ␛
-            .ftrp(‹elm_j›, reduce_j , ✓)                ␛
-            .ftrp(‹elm󷺗󷺗›, parse_elm, ✓)                ␛
-            .ftrp(‹←󷺗󷺗󷺗󷺗›, 󰲡Ń(xᵗ, txt(x₀ ₀ᵗ), ⠤x₁﹕), ✓) ␛
-            .ftrp(‹rname›, 󰲡Ń(␛_⋅(x₀ᵗ∉␛✓␛✗)+x₀ᵗ, e=Ə))
-        ¿󱁕ᵗ∈␛∧␛∨ ∧ 󱁕🃌≡1: 󱁕=󱁕₀
-        rulesₖ = TT(󱁕)
+    ∀k,󱁕⬠rules: 󱁕 = collapse_ao(
+                        󱁕.ftrp(‹assign_eql›⍭,󰲡x₀,✓)       ␛
+                         .flat(󰲡xᵗ∈‹∧ ∨ elm_j›⍭∧x🃌≡1))    ␛
+                    .ftrp(‹elm_j›,reduce_j , ✓)           ␛
+                    .ftrp(‹elm󷺗󷺗›,parse_elm, ✓)           ␛
+                    .ftrp(‹←󷺗󷺗󷺗󷺗›,󰲡Ń(xᵗ,𝔗(x₀ ₀ᵗ),⠤x₁﹕),✓) ␛
+                    .ftrp(‹rname›,󰲡𝔗(␛_⋅(x₀ᵗ∉␛✓␛✗)+x₀ᵗ))
+                ¿󱁕ᵗ∈␛∧␛∨ ∧ 󱁕🃌≡1: 󱁕=󱁕₀
+                rulesₖ = TT(󱁕)
     
     ↪rules
 
  Hard to read ∵ optimized
-⊢ parse(𝐷, 𝑅, start_rule=□, debug=✗):
-    ℭ, χ = 𝐷🃌󷸻ᴍ󰲡{}, 0
+⊢ parse(𝐷,𝑅,start_rule=□,debug=✗):
+    ℭ,χ = 𝐷🃌󷸻ᴍ󰲡{},0
     𝓢 = [(□, start_rule≅□ ⭜𝑅🃌-1⭝ start_rule)]
-    χ = 0
-    ➰𝓢:
-        Χ,ι = 𝓢.pop(󷰾)
+    ∀𝓢: Χ,ι = 𝓢.pop(󷰾)
         ¿Χ≇□: χ=Χ
-        γ, ⠤𝐶 = 𝑅󰃬
-        ¿debug: L = frozenset(🟑‹~∧∨*+✓✗←⮞¬❗?󰆴⠶ƨ›🟑)
-                ¿γ∉L: V = 𝓢ᐖ𝑅􍪴􊬤 ₀ᐸ󰈳󷺹∈Lᐸ⭢⨝𝘀
-                      ‹⟦𝐷﹕󰃺⟧⟦ŧ𝼝(␛│,fg=‹0f0›)⟧⟦χ<𝐷🃌⭜𝐷󰃺⭝ᐦ⟧⟦𝐷󰃺₊₁﹕⟧ ⟦V⟧ ⟦ŧ𝼝(γ,‹f5f›)⟧ ⟦dotrim(𝖿𝗆𝗍(𝐶),75)⟧›☾
+        γ,⠤𝐶 = 𝑅󰃬
+         𝓢☾ ; 𝑅󰃬☾ ; debug=✓
+        ¿debug: V = 𝓢ᐖ𝑅􍪴􊬤 ₀ᐸ⨝𝘀
+                ‹⟦𝐷﹕󰃺⟧⟦ŧ𝼝(␛│,fg=‹0f0›)⟧⟦χ<𝐷🃌⭜𝐷󰃺⭝ᐦ⟧⟦𝐷󰃺₊₁﹕⟧ ⟦V⟧ ⟦ŧ𝼝(γ,‹f5f›)⟧ ⟦dotrim(𝖿𝗆𝗍(𝐶),75)⟧›☾
         𝔠 = ℭ󰃺
         ¿γ≡␛ᔐ: ¿𝐶₀≡𝐷󰃺﹕􊸴􊮝󰃺₊􊳵􊬣􊹳: 𝔠󰃬 = ✓,𝝌
                ¡             : 𝔠󰃬 = ✗,χ
         ⸘γ≡␛~: ¿m≔𝐶₀.match(𝐷,χ): 𝔠󰃬 = ✓,m.span()₁,m
                ¡               : 𝔠󰃬 = ✗,χ
         ⸘γ≡␛∧: n, 𝝌 = ι∈𝔠 ⭜𝔠󰃬⭝ (0,χ)
-               ➰✓: 𝜾,𝑐 = 𝐶ₙ,ℭ􊸴
-                   ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(𝝌,𝜾))
-                         𝔠󰃬 = n,𝝌 ; ⇥
-                   𝑔,𝝌 = ℭ􊸴 􊸧 ﹕₂
-                   n = n+1
-                   ¿  ¬𝑔: 𝔠󰃬 = ✗,χ ; ⇥
-                   ¿n≡𝐶🃌: 𝔠󰃬 = ✓,𝝌 ; ⇥
+               ∀: 𝜾,𝑐 = 𝐶ₙ,ℭ􊸴
+                  ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(𝝌,𝜾))
+                        𝔠󰃬 = n,𝝌 ; ⇥
+                  𝑔,𝝌 = ℭ􊸴 􊸧 ﹕₂
+                  n󷸊+1
+                  ¿  ¬𝑔: 𝔠󰃬 = ✗,χ ; ⇥
+                  ¿n≡𝐶🃌: 𝔠󰃬 = ✓,𝝌 ; ⇥
         ⸘γ≡␛∨: n = ι∈𝔠 ⭜𝔠󰃬⭝ 0
-               ➰✓: 𝜾,𝑐 = 𝐶ₙ,ℭ󰃺
-                   ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(χ,𝜾))
-                         𝔠󰃬 = n ; ⇥
-                   𝑔,𝝌 = ℭ󰃺 􊸧 ﹕₂
-                   ¿𝑔   : 𝔠󰃬 = ✓,𝝌,n ; ⇥
-                   n󷸊+1
-                   ¿n≡𝐶🃌: 𝔠󰃬 = ✗,χ   ; ⇥
+               ∀: 𝜾,𝑐 = 𝐶ₙ,ℭ󰃺
+                  ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(χ,𝜾))
+                        𝔠󰃬 = n ; ⇥
+                  𝑔,𝝌 = ℭ󰃺 􊸧 ﹕₂
+                  ¿𝑔   : 𝔠󰃬 = ✓,𝝌,n ; ⇥
+                  n󷸊+1
+                  ¿n≡𝐶🃌: 𝔠󰃬 = ✗,χ   ; ⇥
         ⸘γ≡␛*∨␛+≡γ: ¿ι∈𝔠: c = 𝔠󰃬
                     ¡   : c = 𝔠󰃬 = [χ]
                     𝜾,𝝌 = 𝐶₀,c􍨄
-                    ➰✓: 𝑐 = ℭ􊸴
-                        ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(𝝌,𝜾))
-                              ⇥
-                        𝑔,Χ = 𝑐􊸧 ﹕₂
-                        ¿¬𝑔: ¿γ≡␛* ∨ c🃌>1: 𝔠󰃬 = ✓,𝝌,c﹕􍨄
-                             ¡           : 𝔠󰃬 = ✗,χ
+                    ∀: 𝑐 = ℭ􊸴
+                       ¿𝜾∉𝑐: 𝓢.extend((χ,ι)⋄(𝝌,𝜾))
                              ⇥
-                        c.append(𝝌≔Χ)
+                       𝑔,Χ = 𝑐􊸧 ﹕₂
+                       ¿¬𝑔: ¿γ≡␛* ∨ c🃌>1: 𝔠󰃬 = ✓,𝝌,c﹕􍨄
+                            ¡           : 𝔠󰃬 = ✗,χ
+                            ⇥
+                       c.append(𝝌≔Χ)
         ⸘γ≡␛✓: 𝔠󰃬 = ✓,χ
         ⸘γ≡␛←: ¿𝐶₁∉𝔠: 𝓢.extend((χ,ι)⋄(χ,𝐶₁))
                ¡    : 𝑔,𝝌 = 𝔠􊳵􊬤 ﹕₂
@@ -127,7 +118,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
                ¿γ≡␛?: 𝔠󰃬 = ✓,𝝌,𝑔
                ⸘γ≡␛¬: 𝔠󰃬 = ¬𝑔,χ
                ⸘γ≡␛⮞: 𝔠󰃬 =  𝑔,χ
-               ⸘γ≡␛❗: ⦃assert ⦃𝑔⦄⦄
+               ⸘γ≡␛❗: 𝑔⨳
                       𝔠󰃬 = 𝑔,𝝌
                ⸘γ≡␛✗: ✗⨳‹Hit an ✗›
                ¡    : 𝔠󰃬 = 𝑔,𝝌
@@ -135,21 +126,22 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 
 ⊢ make_rules(r):
      󰤱 add option to skip jumping to declarations
+    ƒ = 󷺹ᐹ𝑙|𝑡⭜𝑡(⟞ᴍƒ)⭝⟞
     nmp = r⁻󱑼r⭥⭢ℵ
-    r = r ꟿ⁻ 󰲣␛_+x
-    𝐂 = ℵ(r⁻󱑼𝐑≔r⁻ ᴍ ⛶􋇡)
+    r󷸊ꟿ󷺻␛_+⟞,ƒ(⟝)󷺿
+    𝐂 = ℵ(r⁻󱑼𝐑≔r⁻ᴍ⛶􋇡)
     ⊢ 𝕊(r): ¿r🃌≡1∧r₀ ₀≡␛_: ↪r₀,
-            ¿r∈𝐂 : ↪𝐂ᵣ
-            ¿r₀ᐹ𝑖: r = (𝐑􊵬􊮝ᵣ􊬣 ₀, ⠤r₁﹕)
+            ¿r∈𝐂: ↪𝐂ᵣ
+            ¿r₀ᐹ𝑖: r = 𝐑􊵬􊮝ᵣ􊬣 ₀,⠤r₁﹕
             ¡    : 𝐑.append(𝔦≔𝐑🃌)
-            ¿r₀  ≡␛←  : r = (r₀, r₁, 𝕊(r₂))
-            ⸘r₀  ∈␛✓␛✗: r = (r₀, 𝔦)
-            ⸘r₀  ∉␛ᔐ␛~: r = (r₀, ⠤r₁﹕ ᴍ 𝕊)
-            ↪ 𝐑􊳁􊬁􊮝􊵬≔r →► 𝔦
+            ¿r₀≡␛←  : r = r₀,r₁,𝕊(r₂)
+            ⸘r₀∈␛✓␛✗: r = r₀,𝔦
+            ⸘r₀∉␛ᔐ␛~: r = r₀,⠤r₁﹕ᴍ𝕊
+            ↪𝐑􊳁􊬁􊮝􊵬≔r →► 𝔦
+     (nmp⁺󱑼r⁺ ᴍ 𝑡)☾􋋉􋋉 ; r☾􋋉􋋉 ; 𝐂☾􋋉􋋉 ; nmp☾􋋉􋋉 ; exit
     𝕊((‹T_root›, ⠤nmp⁺󱑼r⁺ ᴍ 𝑡))
-    𝐑 = 𝐑 ᴍ 󰲡(x₀, ⠤x₁﹕ ᴍ󰲡 xᐹ𝑡 ⭜r⁻󰑅ᔨy↦x₀≡y󰅂⭝ x)
-     𝐑↨ᴍ⬤⨝𝘀ᴍ☾
-    ↪ ℵ􋆒|nmp
+    𝐑󷸊ᴍ󰲡x₀,⠤x₁﹕ᴍ󷺹󷹵𝑡 ⭜⟞⭝ r⁻󰑅ᔨ(≡⟞₀)󰅂
+    ↪ℵ􋆒|nmp
 
 ⊢ parse_to_tree(𝑅,ℭ,χ,ι,show_table=✗,raise_failed=✓):
     rec = 𝚲parse_to_tree(𝑅,ℭ,⠤𝔸,raise_failed=raise_failed)
@@ -169,7 +161,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ¿γ≡␛~: ↪γ,𝐴₀.group(0)
     ¿γ≡␛∨: ↪γ,rec(χ,C􊳳􊬣)
     ¿γ≡␛←: ↪γ,C₀,rec(χ,𝐴₀)
-     ¿γ∈⦉⠤"*+"⦊: ↪γ, ⠤𝐴₀ ᴍ rec(⬤, C₀)
+     ¿γ∈⦉⠤"*+"⦊: ↪γ, ⠤𝐴₀ ᴍ rec(⬤,C₀)
     ¿γ∈⦉⠤‹*+›⦊: ↪γ, ⠤(rec(x,C₀)∀x⬠𝐴₀)
     ¿γ∈⦉⠤‹✓✗⮞¬›⦊: ↪γ, 
     ↪γ.removeprefix(␛_),rec(χ,C₀)
@@ -248,7 +240,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ↪󱁕
 
  parse_to_node = 󱁕↦(ƒ ≔ 󰲡Ń(x, ⠤𝔸ᴍ󰲡ƒ(⠤xᐹ𝑡 ⭜x⭝ x⛶􋇡)))(⠤󱁕)
-⊢ parse_to_node(󱁕): ⊢ƒ(x,⠤𝔸): ↪Ń(x, ⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,)) ∀x⬠𝔸))
+⊢ parse_to_node(󱁕): ⊢ƒ(x,⠤𝔸): ↪Ń(x, ⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,))∀x⬠𝔸))
                     ↪ƒ(⠤󱁕)
 
 ⊢ (fcache) peggle2_call(R,content,rule=‹main›,DEBUG=✗,chop=✓,⠶𝓚):
@@ -268,93 +260,79 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ⊢ __init__(𝕊,g):
         ¿gᐹᔐ: g = FROM_GRAM(g)
         𝕊ʳᵘˡᵉˢ, 𝕊ᴿ = gᐹpeggle2 ⭜gʳᵘˡᵉˢ⋄gᴿ⭝ g⋄make_rules(g)
-    ⊢ __repr__(𝕊): ↪ ‹⟦ᐹ𝕊→.__name__⟧[⟦𝕊ʳᵘˡᵉˢ🃌⟧ Rules, ⟦𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ🃌⟧ Normalized]›
-    ⊢ __contains__(𝕊,x): ↪ x∈𝕊ʳᵘˡᵉˢ
+    ⊢ __repr__(𝕊): ↪‹⟦ᐹ𝕊→.__name__⟧[⟦𝕊ʳᵘˡᵉˢ🃌⟧ Rules, ⟦𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ🃌⟧ Normalized]›
+    ⊢ __contains__(𝕊,x): ↪x∈𝕊ʳᵘˡᵉˢ
     ⊢ __or__(𝕊,h,allow_conflict=✗):
         ¿hᐹ𝕊: h = hʳᵘˡᵉˢ
         conflict = (𝕊ʳᵘˡᵉˢ.keys)∩(h.keys)
         ¬(allow_conflict ∧ conflict) ⨳ ‹Conflicting rules! ⟦conflict⟧›
-        ↪ (ᐹ𝕊)(peggle2(𝕊ʳᵘˡᵉˢ | h))
+        ↪(ᐹ𝕊)(peggle2(𝕊ʳᵘˡᵉˢ | h))
     ⊢ __call__(𝕊,⠤𝔸,⠶𝕂): ↪peggle2_call(𝕊ᴿ,⠤𝔸,⠶𝕂)
     ⊢ print_rules(𝕊): 𝕊ʳᵘˡᵉˢ.itemsꟿ󰲣(‹⟦x⟧:›☾,y☾)
     ⊢ print_normalized(𝕊): 𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ↨ ꟿ󰲣 ☾‹⟦x⟧𝘁⟦yᴍᔐ⭢⨝𝘀⟧›
 
-🟑⊢ dump_peg(𝕊): ↪dumps((𝑑∘𝕊ʳᵘˡᵉˢ,𝑑∘𝕊ᴿ,𝕊ᴿ.getdef))
+ 𝗲𝗯𝟮𝟲
+𝐑=[‹[#][^𝗻]*›, ‹[⯅⯆△▽↷]›, ‹"([^"]|␛␛.)*"›, ‹'([^']|␛␛.)*'›, ‹‹([^␛›]|␛␛.)*␛››,
+   ‹[^⯅⯆△▽↷󰆴()?❗⮞.:⠶ƨ✗+*=¬∨∧~#‹'"𝘀𝘁𝗻␛␛]+|✗›, ‹[󰆴❗⮞⠶ƨ~¬]›, ‹[*+?]›, ‹([𝘀𝘁]|[\\␛␛]𝗻)+›,
+   ‹([𝘀𝘁𝗻]|[\\␛␛]𝗻)+›]ᴍre.compile
+GRANDMA_RULES = ℵ({
+    statements =␛∧⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛*,␛∧⋄(␛∨,􊬏􋕞󰂼ₘₘₑₙₜ􊬐,􊬏􋕞ₑₗₘ􋕞󰂼􊬐)⋄(␛?,􊬏􋕞󰂩􊬐)),
+    comment    =␛~⋄𝐑₀,
+    elm_o      =␛∧⋄􊬏􋕞ₑₗₘ􋕞ₐ􊬐⋄(␛*,␛∧⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛ᔐ,␛∨)⋄(␛?,􊬏􋕞󰂩􊬐)⋄􊬏􋕞ₑₗₘ􋕞ₐ􊬐),
+    elm_a      =␛∧⋄􊬏􋕞ₑₗₘ􋕞ⱼ􊬐⋄(␛*,␛∧⋄(␛∨,␛∧⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛ᔐ,␛∧)⋄(␛?,􊬏􋕞󰂩􊬐),␛?⋄􊬏􋕞􊬐)⋄􊬏􋕞ₑₗₘ􋕞ⱼ􊬐),
+    elm_j      =␛∨⋄􊬏􋕞􋕞ₑₗₘ􋕞ⱼ􊬐⋄􊬏􋕞ₑₗₘ􊬐,
+    _elm_j     =␛∧⋄􊬏􋕞ₑₗₘ􊬐⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛~,𝐑₁)⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛∨,􊬏􋕞􋕞ₑₗₘ􋕞ⱼ􊬐,􊬏􋕞ₑₗₘ􊬐),
+    elm        =␛∧⋄􊬏􋕞ₚᵣₑᵢₓ􊬐⋄(␛∨,􊬏􋕞ₐₛₛᵢₙ􋕞ₑₗ􊬐,􊬏􋕞ₐₛₛᵢₙ􋕞ₗₙ􊬐,􊬏􋕞ᵣ󰂼ᵤₚ􊬐,􊬏􋕞ₛₜᵣ􊬐,􊬏􋕞ᵣₙₐₘₑ􊬐)⋄􊬏􋕞ₛᵤᵢₓ􊬐,
+    assign_eql =␛∧⋄􊬏􋕞ᵣₙₐₘₑ􊬐⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛ᔐ,‹=›)⋄(␛?,􊬏􋕞󰂩􊬐)⋄􊬏􋕞ₑₗₘ􋕞󰂼􊬐,
+    assign_cln =␛∧⋄􊬏􋕞ᵣₙₐₘₑ􊬐⋄(␛?,􊬏􋕞󰂩􊬐)⋄(␛ᔐ,‹:›)⋄(␛?,􊬏􋕞󰂩􊬐)⋄􊬏􋕞ₑₗₘ􋕞ⱼ􊬐,
+    group      =␛∧⋄(␛ᔐ,‹(›)⋄(␛?,􊬏􋕞󰂩􊬐)⋄􊬏􋕞ᵣ󰂼ᵤₚ􋕞ᵢₙₙₑᵣ􊬐⋄(␛ᔐ,‹)›),
+    group_inner=␛*⋄(␛∧,􊬏􋕞ₑₗₘ􋕞󰂼􊬐,␛?⋄􊬏􋕞󰂩􊬐),
+    str1       =␛~⋄𝐑₂,
+    str2       =␛~⋄𝐑₃,
+    str3       =␛~⋄𝐑₄,
+    str        =␛∨⋄􊬏􋕞ₛₜᵣ₁􊬐⋄􊬏􋕞ₛₜᵣ₂􊬐⋄􊬏􋕞ₛₜᵣ₃􊬐,
+    rname      =␛~⋄𝐑₅,
+    prefix     =␛∨⋄(␛∧,␛?⋄􊬏􋕞􊬐,␛+⋄(␛∧,␛~⋄𝐑₆,␛?⋄􊬏􋕞󰂩􊬐))⋄(␛?,􊬏􋕞􊬐),
+    suffix     =␛∨⋄(␛∧,␛+⋄(␛∧,␛?⋄􊬏􋕞󰂩􊬐,␛~⋄𝐑₇),␛?⋄􊬏􋕞􊬐)⋄(␛?,􊬏􋕞􊬐),
+    w          =␛~⋄𝐑₈,
+    W          =␛~⋄𝐑₉
+})
+BOOTSTRAP = peggle2(GRANDMA_RULES)
+FROM_GRAM = 󰲡peggle2(gram_convert(BOOTSTRAP(x,‹statements›)))
+
+⭷ peggle2
+
+⊢ test_peggle2(): GRAM = 󰦥󰦥󰦥󰦥󰦥
+                  main    = 󰆴W? (entry 󰆴W?)*
+                  entry   = (
+                      ƨ(section=󰆴'[' wrd 󰆴']') 󰆴W?
+                      (pair = (
+                          (bruh:key = ⠶wrd) 󰆴(w? ↷ '=')
+                          (value = (wrd ∨ str)+) 󰆴W? ) )* )
+                  str     = ~‹"[^"]+"›
+                  wrd     = ~‹[-\w]+›
+                  w       = ~‹[ \t]+›
+                  W       = ~‹[ \t\n]+›
+                  󰦥󰦥󰦥󰦥󰦥
+                  CONTENT = 󰦥󰦥󰦥󰦥󰦥
+                  [section1]
+                  somekey = somevalue
+                  someotherkey=someothervalue
+                  [duawhdiawi]x=y
+                  somekey =                 somevalue
+                  someotherkey=✓□awhdapi
+                  󰦥󰦥󰦥󰦥󰦥
+                  
+                  RULE = ‹main›
+                  gram = peggle2(GRAM)☾
+                  󱁕 = gram(CONTENT,RULE)
+                  󱁕ᴾ
+
+🟑
+⊢ dump_peg(𝕊): ↪dumps((𝑑∘𝕊ʳᵘˡᵉˢ,𝑑∘𝕊ᴿ,𝕊ᴿ.getdef))
 ⊢ load_peg(𝚢):
     𝕊 = peggle2.__new__(peggle2)
     rules, R, d = loads(𝚢)
     𝕊ʳᵘˡᵉˢ, 𝕊ᴿ = ℵ(rules), ℵᵈ(R)
     ↪𝕊
-pcache = fcache(𝘦=dump_peg, 𝘥=load_peg)🟑
-
-__exports__ = ‹peggle2›⍭
-
-GRANDMA_RULES = ŕ≔(⠤map(re.compile, (('[\ueb26#][^\\n]*'), ('[⯅⯆△▽↷]'), ('"(␛.|[^"])*"'), ("'(␛.|[^'])*'"), ('‹(␛.|[^›])*›'), ('[^⯅⯆△▽↷󰆴()?❗⮞.:⠶ƨ✗+*=¬∨∧~‹#\'" \\t\\n]+|✗'), ('[󰆴❗⮞⠶ƨ~¬]'), ('[*+?]'), ('([ \\t]|␛\\n)+'), ('([ \\t\\n]|␛\\n)+'))),) →►← ℵ∘{'statements':('∧',('?',('_W',)),('*',('∧',('∨',('_comment',),('_elm_o',)),('?',('_W',))))),'comment':('~',ŕ[0]),'elm_o':('∧',('_elm_a',),('*',('∧',('?',('_W',)),('ᔐ','∨'),('?',('_W',)),('_elm_a',)))),'elm_a':('∧',('_elm_j',),('*',('∧',('∨',('∧',('?',('_W',)),('ᔐ','∧'),('?',('_W',))),('?',('_w',))),('_elm_j',)))),'elm_j':('∨',('__elm_j',),('_elm',)),'_elm_j':('∧',('_elm',),('?',('_W',)),('~',ŕ[1]),('?',('_W',)),('∨',('__elm_j',),('_elm',))),'elm':('∧',('_prefix',),('∨',('_assign_eql',),('_assign_cln',),('_group',),('_str',),('_rname',)),('_suffix',)),'assign_eql':('∧',('_rname',),('?',('_W',)),('ᔐ','='),('?',('_W',)),('_elm_o',)),'assign_cln':('∧',('_rname',),('?',('_W',)),('ᔐ',':'),('?',('_W',)),('_elm_j',)),'group':('∧',('ᔐ','('),('?',('_W',)),('_group_inner',),('ᔐ',')')),'group_inner':('*',('∧',('_elm_o',),('?',('_W',)))),'str1':('~',ŕ[2]),'str2':('~',ŕ[3]),'str3':('~',ŕ[4]),'str':('∨',('_str1',),('_str2',),('_str3',)),'rname':('~',ŕ[5]),'prefix':('∨',('∧',('?',('_w',)),('+',('∧',('~',ŕ[6]),('?',('_W',))))),('?',('_w',))),'suffix':('∨',('∧',('+',('∧',('?',('_W',)),('~',ŕ[7]))),('?',('_w',))),('?',('_w',))),'w':('~',ŕ[8]),'W':('~',ŕ[9])}
-BOOTSTRAP = peggle2(GRANDMA_RULES)
-FROM_GRAM = 󰲡peggle2(gram_convert(BOOTSTRAP(x,‹statements›)))
-
-⊢ Peggle1Bootstrap(c=ℵ()):
-    ¿‹BOOTSTRAP_PEGGLE1›∈c: ↪c.ForcefeedPeggle1peggle2, c.BOOTSTRAP_PEGGLE1
-    
-    ⊢ peggle122(rules):
-        ⊢ ƒ(x): ¿xᵗ≡‹←›    : ↪ xᵗ,x₀ᶜ,ƒ(x₁)
-                ¿xᵗ≡‹rname›: ↪ ␛_⋅(xᶜ∉␛✓␛✗)+xᶜ,
-                ↪ xᵗ, ⠤(xᴸ ⭜xᶜᴍƒ⭝ (xᶜ,))
-        ↪ ℵ(rules) ꟿ⁺ 󰲣ƒ(y)
-    ⊢ peggle221(󱁕):
-        ⮌ node ⨡ Node  ??
-        ⊢ ƒ(󱁕): s = ℵ()
-                ∀k,v⬠󱁕ᵉ: ¿k≡␛T: ↪Node(c=󱁕ᵗ)
-                         s􋑺􊬄􋕜ᵢₙₑₓ₍ᵥ₎ = k
-                c = 󱁕ᴍƒ
-                ∀i,v⬠s: cᵢᵉ = v
-                ↪Node(󱁕ᵗ,c)
-        ↪ ƒ(󱁕).find_replace(󰲡x🃌≡1 ∧ xᶜ₀ᐹNode ∧ ¬xᶜ₀ᵗ, 󰲡x.copy(c=xᵗˣᵗ))
-
-    󱀘 ForcefeedPeggle1Peggle2(peggle2):
-        ⊢ __init__(𝕊, x):
-            ¿xᐹpeggle2: super().__init__(x)
-            ¡         : super().__init__(peggle122(x))
-        ⊢ __call__(𝕊, ⠤𝔸, ⠶𝕂):
-            ↪peggle221(super().__call__(⠤𝔸, ⠶𝕂))
-        ⊢ __or__(𝕊, x):
-            ↪super().__or__(peggle122(x))
-        ⊢ dump_gram(𝕊):
-            ↪dumps((𝕊ʳᵘˡᵉˢ 𝑑, 𝕊ᴿ 𝑑, 𝕊ᴿ.getdef))
-        ⊢ (staticmethod) load_gram(ℂ, gram):
-            𝕊 = ℂ.__new__(ℂ)
-            rules,R,d = loads(gram)
-            𝕊ʳᵘˡᵉˢ 𝕊ᴿ = rules ℵ, R ℵ
-            ↪𝕊
-
-    c.ForcefeedPeggle1Peggle2 = ForcefeedPeggle1Peggle2
-    c.BOOTSTRAP_PEGGLE1 = ForcefeedPeggle1Peggle2(BOOTSTRAP)
-    c.Parser = 󰲡ForcefeedPeggle1Peggle2(FROM_GRAM(x))
-    ↪ c.ForcefeedPeggle1Peggle2, c.BOOTSTRAP_PEGGLE1, c.Parser
-
-¿ __name__≡‹__main__›:
-    GRAM = 󰦥󰦥󰦥󰦥󰦥
-    main    = 󰆴W? (entry 󰆴W?)*
-    entry   = (
-        ƨ(section=󰆴'[' wrd 󰆴']') 󰆴W?
-        (pair = (
-            (bruh:key = ⠶wrd) 󰆴(w? ↷ '=')
-            (value = (wrd ∨ str)+) 󰆴W? ) )* )
-    str     = ~‹"[^"]+"›
-    wrd     = ~‹[-\w]+›
-    w       = ~‹[ \t]+›
-    W       = ~‹[ \t\n]+›
-    󰦥󰦥󰦥󰦥󰦥
-    CONTENT = 󰦥󰦥󰦥󰦥󰦥
-    [section1]
-    somekey = somevalue
-    someotherkey=someothervalue
-    [duawhdiawi]
-    somekey =                 somevalue
-    someotherkey=✓□awhdapi
-    󰦥󰦥󰦥󰦥󰦥
-    RULE = ‹main›
-
-    gram = peggle2(GRAM)☾
-    󱁕 = gram(CONTENT,RULE)
-    󱁕ᴾ
+pcache = fcache(𝘦=dump_peg, 𝘥=load_peg)

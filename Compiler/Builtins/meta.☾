@@ -34,7 +34,7 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
   󰲡1 ¿x≤1¡ 𝓢()(x-1)+𝓢()(x-2)󰅂(5)☾
 
  ⊢ outer_globals(i=0):
-     ➰i󷸊+1:
+     ∀i󷸊+1:
          𝘎 = _getframe(i).f_globals
          ¿𝘎[‹__file__›]≠__file__: ⇥
      ↪ 𝘎

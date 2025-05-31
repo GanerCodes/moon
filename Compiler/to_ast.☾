@@ -37,10 +37,9 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     󱁕.ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓ 𝝀𝑎›⍭,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)
     󱁕.ftrp(‹𝑃 𝑇↑ 𝑇↓›              ⍭,󱁕↦Ń(␛𝑇,⠤󱁕)󱖔􋔡󱁕,✓)
     󱁕.ftrp(‹𝝀𝔸 𝝀𝕂›⍭,󱁕↦󱁕.set(t=󱁕ᵗ􍨄),✓)
-    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›, 󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕, ✓)
+    󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›,󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕,✓)
     rewrite_lambs(󱁕)
     rewrite_numbers(󱁕)
-    
     @󱁕.frp(󷺹ᵗ≡‹op›∧+⟞₁∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)
     ⊢ _(󱁕):
         𝚕,𝙾,𝚛 = 󱁕
@@ -51,16 +50,13 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
         ¿+𝚕: 𝒏ᶜ.insert(0,𝒩(‹sup›,𝚕₀ ₀))
         ¿+𝚛: 𝒏ᶜ.append(  𝒩(‹sup›,𝚛₀ ₀))
         ↪𝒏
-    @󱁕.ftrp(‹sup›,□,✓)
-    ⊢ _(󱁕):
-        attr = 󱁕₀ᵗ≡␛x ∧ 󱁕₀🃌≡1 ∧ 󱁕₀ ₀ᵗ≡␛𝑣
-        ↪attr ⭜ 𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀) ␛
-              ⭝ 𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕))
+    󱁕.ftrp(‹sup›,󱁕↦󱁕₀ᵗ≡␛x∧󱁕₀🃌≡1∧󱁕₀ ₀ᵗ≡␛𝑣 ⭜𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀)⭝ ␛
+                                          𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕)),✓)
     󱁕.flat(󷺹ᵗ≡‹tmp›)
     󱁕.ftrp(‹op›,denode_op,✓)
     󱁕.ftrp(‹x›,group_targets,✓)
-    grp_stmts(󱁕)
     rewrite_for(󱁕)
+    grp_blks(󱁕)
     rewrite_strs(󱁕)
     flatten_statments(󱁕)
     

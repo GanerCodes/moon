@@ -7,14 +7,14 @@ styd = styf  𝔍󰄟 ℵ
     ↪termclr(s,def,bg)
 __highlighter__ = ⥌l,b=✗,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
 
-⊢ highlight_tester(): ➰stdin.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
+⊢ highlight_tester(): ∀stdin.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
 
 🟑
 ⊢ __error_printer__(ε):
     ℭ = traceback.linecache.CPY_CACHE
     ə = ε.__traceback__
     TB,i = [],0
-    ➰i󷸊+1:
+    ∀i󷸊+1:
         ¿i≥500: ‹Too long a traceback, stopping at ⟦i⟧ frames!›☾
                 ⇥
         g = ə.tb_frame.f_globals

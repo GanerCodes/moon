@@ -51,7 +51,7 @@
  <Ń>.e.T is used as a flag to determine if it is a text node.
  <Ń>.e.p is used as a (start_pos, end_pos) map to source-code when dealing ⓦ transpilers
 󱀘 Ń(𝐍):
-    __slots__ = ␛t, ␛c, ␛e
+    __slots__ = ␛t,␛c,␛e
     ⊢ __init__(󱁕, t, ⠤c, e=␀):
         󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
          ∀z∈󱁕ᶜ:
@@ -60,8 +60,9 @@
     __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
     __repr__ = 󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
     __setitem__ = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
+    __and__ = 󰲣xᵗ≡yᵗ
     ⊢ __getitem__(󱁕,i): ↪󱁕ᶜᵢ
-    ⊢ __delitem__(󱁕, i): 󰆴󱁕ᶜᵢ
+    ⊢ __delitem__(󱁕,i): 󰆴󱁕ᶜᵢ
     ⊢ set(󱁕,t=□,c=□,e=□):
         ¿t≇□: 󱁕ᵗ=t
         ¿c≇□: 󱁕ᶜ=c
@@ -192,7 +193,6 @@
             ¿𝒏.first_r(ƒ)≕r≇□: ↪r
     ⊢ first_sides(󱁕,ƒ):
         ↪ 󱁕.first_l(ƒ), 󱁕.first_r(ƒ)
-    
     rm = child_killer = kill_children
     filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.kill_children(¬○ƒ, ⠤𝔸, ⠶𝕂)
 

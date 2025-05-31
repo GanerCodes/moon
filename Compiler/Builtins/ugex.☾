@@ -32,7 +32,7 @@ UGX_CREATE = ⥌x,d=✗↦󷺻UGX_RUN(winder([⠤⟞]),x)≕y≅␀ ⭜d⭝ y₀
                    ¿𝑥¬     : ↪ 𝗆∈␛+⭜␀⭝⍁
                    V = 𝚚.next≅󰮈∨󰮈≅𝑥 ⭜⍁⭝ p⛶
                    ¿𝗆∈␛?: ↪V
-                   ➰𝚚: ¿ƒ(p≔𝚚.peek)≕v¬: ⇥
+                   ∀𝚚: ¿ƒ(p≔𝚚.peek)≕v¬: ⇥
                        ¿v≅󰮈∨󰮈≅𝚚.next: ↺
                        V.append(p)
                    ↪ V
@@ -48,7 +48,7 @@ UGX_CREATE = ⥌x,d=✗↦󷺻UGX_RUN(winder([⠤⟞]),x)≕y≅␀ ⭜d⭝ y₀
         ⸘𝗆≡␛¬: 𝚚.wind ► V≔(r≅␀  ⭜⍁⭝ ␀)
         ⸘𝗆≡␛?: 𝚚.wind ► V≔(r≅␀  ⭜⍁⭝ ␀)
         ⸘r≅␀ : 𝚚.wind ► V≔(𝗆≡␛∗ ⭜⍁⭝ ␀)
-        ⸘𝗆∉␛?: ➰𝚚: 𝚚.note ► r≔UGX_RUN(𝚚,𝖼)
+        ⸘𝗆∉␛?: ∀𝚚: 𝚚.note ► r≔UGX_RUN(𝚚,𝖼)
                    ¿r≅␀: 𝚚.wind; ⇥
                    𝚚.eton ► V.extend(r)
                𝚚.eton

@@ -77,17 +77,17 @@
          n,g = 𝚜,𝑔(ƒ(⠤𝔸,⠶𝕂)≕f)
         n,f,g = 𝚜⫰,𝔸⭜𝔸₀⭝□,𝑔(⠤𝔸,⠶𝕂)  󰤱 '□' sensable?
         ¿𝕏≡␛⊚  : ¿g     : ↪f
-                 ➰0<n󷸊-1: ¿   𝑔(ƒ(f)≕ f)   : ↪f
-        ⸘𝕏≡␛⊜  : ➰0<n󷸊-1: ¿g≡(𝑔(ƒ(f)≕nf)≕g): ↪f
+                 ∀0<n󷸊-1: ¿   𝑔(ƒ(f)≕ f)   : ↪f
+        ⸘𝕏≡␛⊜  : ∀0<n󷸊-1: ¿g≡(𝑔(ƒ(f)≕nf)≕g): ↪f
                           f = nf
         ⸘𝕏∈‹⊛⍟›: rf = [f]
                  ¿g: ↪ 𝕏≡␛⊛ ⭜rf⭝ []
-                 ➰0<n󷸊-1: 𝑔(ƒ(f)≕f)≕g
+                 ∀0<n󷸊-1: 𝑔(ƒ(f)≕f)≕g
                           ¿g¬∨𝕏≡␛⊛: rf.append(f)
                           ¿g      : ↪rf
                  ¿𝚜<0: ↪rf  indicates hitting limit should return current results
         ⸘𝕏∈‹🟕🟖›: rf,rg = [f],[g]
-                 ➰0<n󷸊-1: ¿𝑔(ƒ(f)≕f)≕g∈rg:
+                 ∀0<n󷸊-1: ¿𝑔(ƒ(f)≕f)≕g∈rg:
                               ¿𝕏≡␛🟖: ↪rf
                               ↪(rg 󰑅ᔨ 󰲡x≡g)󷸻rf
                           rf.append(f)

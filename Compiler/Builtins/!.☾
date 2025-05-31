@@ -1,4 +1,4 @@
- supposedly precision 2⋅⅒¹⁰ according to https://www.rskey.org/CMS/the-library/?view=article&id=11
+ supposedly precision ⅒¹⁰2 according to https://www.rskey.org/CMS/the-library/?view=article&id=11
 ⊢Γ(z):
     ¿󷸛z<½: ↪τî÷←(ℇ􍢉󰁛ᶻ-ℇ􍨍󰁛ᶻ)⋅Γ(1-z)
     p=[1.0000000001900148240,76.180091729471463483,-86.505320329416767652,24.014098240830910490,-1.2317395724501553875,0.0012086509738661785061,-5.3952393849531283785e-6]
@@ -14,7 +14,7 @@
         ¿⬓󷸚𝚜≕d≥0∧𝚡>0: ↪∞
         ¿d≤0∧𝚡<0: ↪nan
         t,c=1,𝚡
-        ➰cⴵ≡𝚡ⴵ:
+        ∀cⴵ≡𝚡ⴵ:
             t󷸊⋅c
             c󷸊+d
         ↪t
