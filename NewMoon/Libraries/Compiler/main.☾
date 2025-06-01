@@ -25,19 +25,12 @@ BINARY = ‹python3›  ‹pypy3.11›
 CODE = (BASE / ‹tests.☾›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
-base_head,ext = (BASE / ‹builtins›)󷹎,[
-   ‹Libraries/text_format›,
-   ‹Libraries/𝐍›,
-   ‹Libraries/peggle2/main›,
-   ‹Libraries/peggle2/rgx_golfatron›,
-   ‹Libraries/peggle2/gram_tools›,
-   ‹Libraries/Compiler/generate_operators›,
-   ‹Libraries/Compiler/op_table›,
-   ‹Libraries/Compiler/node_types›,
-   ‹Libraries/Compiler/tree›,
-   ‹Libraries/Compiler/tree_txt›,
-   
-]
+base_head = (BASE / ‹builtins›)󷹎
+ext = [‹Libraries/text_format›,
+       ‹Libraries/𝐍›,
+       ‹Libraries/peggle2/main›,
+       ‹Libraries/peggle2/rgx_golfatron›,
+       ‹Libraries/peggle2/gram_tools›]
 
 base_head,ext = (base_head,ext)ᴍ󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
 cache_ok = base_head + ext

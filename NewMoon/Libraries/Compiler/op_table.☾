@@ -1,0 +1,92 @@
+⨡ text_format
+⨡ generate_operators
+
+𝙾𝚃 = [⠤get_operator_table(ops), [‹. ᴺ›⍭]]
+
+add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
+add_before(␛!   , [‹␀CAT󷺗󷺗󷺗 ᴮᴺ󷺗›⍭])
+add_before(␛ᴍ   , [‹␀TAC󷺗󷺗󷺗 ᴮ󷺗󷺗›⍭])
+add_before(␛⨳   , [‹␀A3󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
+add_before(‹␀A3›,  ‹≔󷸉󷸊󷸋≕󷸎󷸌󷸍›ᐵ⋄␛ᴮ)
+add_before(␛≔   , [‹␀A2󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
+add_before(‹␀A2›, [‹⭜󷺗󷺗󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
+add_before(␛⭜   , [‹⭝󷺗󷺗󷺗󷺗󷺗󷺗 ᴮᴺ󰁌›⍭])
+add_before(␛⭝   , [‹␀A1󷺗󷺗󷺗󷺗 ᴮ󷺗󰁌›⍭])
+
+𝚂𝚃=‹     ␀T   ᴺ 󰀒      
+    ␀TAC ␀T⟞  ᴺ 󰀒      
+         ␀T⟝  ᴺᴾ   ␀TAC
+    ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ ␀TAC
+            ⬅  ᴾ   ␀A1 
+    ␀A1     ➡   󰀒      
+            ←  ᴾ   ␀A2 
+    ␀A2     ⥉    ᴮ ␀A2 
+    ␀A2     →   󰀒      
+            ⭠  ᴾ   ␀A3 
+    ␀A3     ⭢   󰀒      ›∘ᵜ􊸌󰛔ᐦ⭢󷹎𝗻ᴍ⍭
+
+ Δ: unary cares about side
+ l: only left  unary valid
+ r: only right unary valid
+MT = ‹NPSBlrαςνλΔ›
+󱀘 OP(ℵ⭢ᐹ):
+    __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›
+    ⊢ __init__(𝕊,⠤𝔸,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
+                         𝕊.setdef(ᐦ)
+    ⊢ __getitem__(𝕊,x): ¿x⊂MT: ↪x⊂𝕊ᴹ⭜x
+                        ↪super().__getitem__(x)
+    ⊢ __setitem__(𝕊,x,y): ¿x⊂MT: ↪𝕊ᴹ 󷸊 󱖔ʸ􀸩􋁗􀸧􋁎 x
+                          ↪super().__setitem__(x,y)
+    __setattr__ = __setitem__
+    __getattr__ = __getitem__
+
+⊢ cb(𝒪):
+    ∀ℴ⬠𝒪⁺    : ℴᴿ󷸊󰌷‹≔󷸉󷸊󷸋›
+    ∀k⬠‹≔󷸉󷸊󷸋›: 𝒪ₖᴸ = ⍁
+    ∀k⬠‹≕󷸎󷸌󷸍›: 𝒪ₖᴿ = ⍁
+    𝒪􊯛􊱼ᴿ 󷸊󰌷 ‹→⭢›
+    𝒪􊯛􊭨ᴿ 󷸊󰌷 ‹⭢›
+    ↪ 𝒪
+⊢ make_op_table(𝙾𝚃,𝚂𝚃,cb):
+    𝒪 = ℵ
+    ∀𝙻⬠𝙾𝚃ᴙ:
+        𝙻󷸊ᐵ₀,⟞₁﹕⨝⭢󷸼ᐸ
+        𝚝,𝙾 = 𝙻ᓕ􊽧󰁱⁰,ℵ
+        ∀t,m⬠𝙻:
+            food = 𝒪⁻ + (␛α∈m)⋅𝚝
+            𝙾ₜ=OP(t=t, M=m,
+                  L=𝑠(m∩‹BS›) ⭜food.copy⭝ ∅,
+                  R=𝑠(m∩‹BP›) ⭜food.copy⭝ ∅)
+        𝒪 󷸊| 𝙾
+    
+    𝓞 = ℵ
+    ∀L,t,m,R⬠𝚂𝚃:
+        m󷸊󷸼
+        Lc = L ⭜𝒪󰂞ᴸ ∪ 𝒪󰂞ᴿ⭝ ∅
+        Rc = R ⭜𝒪󰂤ᴸ ∪ 𝒪󰂤ᴿ⭝ ∅
+        ∀𝓉,ℴ⬠𝒪:
+            ¿𝓉∉Lc ∧ "PB"∩ℴᴹ: ℴᴿ.append(t)
+            ¿𝓉∉Rc ∧ "SB"∩ℴᴹ: ℴᴸ.append(t)
+        𝓞ₜ = OP(t=t, M=m,
+                L=L ⭜𝒪⁻∖𝒪󰂞ᴸ ⭢+ 󰂞              ⭝ ∅,
+                R=R ⭜   𝒪󰂤ᴿ  + (␛α∈m)⋅(𝚂𝚃ᓕ􊽧󰁱¹)⭝ ∅)
+    𝒪 󷸊| 𝓞
+    
+    ↪ cb(𝒪)
+
+OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃,𝚂𝚃,cb)
+IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
+MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
+𝘳 = ℵ(OP_LIT       = 𝒪⁻,
+      OP_MOD_L_N   = MODIFIERS₀ ₀,
+      OP_MOD_L_Y   = MODIFIERS₀ ₁,
+      OP_MOD_R_N   = MODIFIERS₁ ₀,
+      OP_MOD_R_Y   = MODIFIERS₁ ₁,
+      VAR_SPEC     = ‹ⴳⴴ✓✗□ᐦ󰮈󱣩⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩›+FRAC_CONV.values⨝,
+          BLK_KWDS = ‹›,
+          STD_KWDS = ‹↪⮂↺⇥󰆴›,
+      BLK_CLN_KWDS = ‹󱀘¿⸘¡›,
+      SUP          = *´󷸔,
+      SUB          = *´󷸓)
+
+𝘳☾

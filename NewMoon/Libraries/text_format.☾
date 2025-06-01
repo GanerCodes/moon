@@ -2,7 +2,7 @@
 
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
-H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
+H,ŧ𝼝 = 𝼞cache(__highlighter__),𝼞cache(termclr)  
 find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0)m›)
 find_next_char = re.compile(‹((?:(?:⟦S⟧)|𝟭𝗯\[0m)*.?)›)
 rm_esc         = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))

@@ -1,0 +1,21 @@
+⨡ node_types
+
+  󰤱􊽨 proper css like selectors for Ń?
+⊢ 󱁕_is_hot_stuff(󱁕,ƒ,⠤𝔸): ¿ƒᐹᔐ: ¿ƒ≠󱁕ᵗ : ↪
+                          ⸘ƒᐹ𝗙: ¿ƒ(󱁕)¬: ↪
+                          ⸘󱁕ᵗ∉ƒ: ↪
+                          ↪ 𝔸 ⭜󱁕ᐖ󱁕_is_hot_stuff(⟞,⠤𝔸)ᐸ⋁⭝ ✓
+date_󱁕 = ᐳ󱁕↦󱁕.find(󰲡󱁕_is_hot_stuff(x,⠤𝓐))
+
+⊢ 󱁕𝖦(󱁕,x,y): ¿󱁕ᵗ≠y₀:↪
+             ∀i,t⬠x󱑼y₁﹕:
+                 ¿󱁕🃌≤i∨(󱁕≔󱁕ᵢ)ᵗ≠t:↪
+             ↪✓
+
+⊢ try_pop_pos(󱁕,proxy=□,rec=✗): ƒ=󷺹ᵉ∋␛p
+                                l,r = (proxy≅□ ⭜󱁕⭝ proxy).first_sides(ƒ)
+                                ¿l≅□: ↪󱁕
+                                󱁕ᵉ ᵖ = (⠤lᵉ ᵖ﹕₂, ⠤rᵉ ᵖ₂﹕)
+                                ¿rec¬: ↪
+                                ∀𝒏⬠󱁕: try_pop_pos(𝒏)
+                                ↪󱁕

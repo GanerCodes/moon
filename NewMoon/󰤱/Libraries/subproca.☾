@@ -9,7 +9,7 @@
     ¬(␛M∈𝒶 ∧ 𝒶∩"OEoe") ⨳ ‹Cannot use stdout/err and MERGE at once›
     ¬(␛o∈𝒶∋␛O ∨ ␛e∈𝒶∋␛E) ⨳ ‹Cannot suppress and ignore stdout/err›
     K = ℵ
-    𝓽,𝓸,𝓮,𝓑,𝓟,𝓢,𝓓 = (vs≔"toeBPSD") ᴍ󰲡x∈𝒶
+    𝓽,𝓸,𝓮,𝓑,𝓟,𝓢,𝓓 = (vs≔‹toeBPSD›) ᴍ󰲡x∈𝒶
     𝒶 = 𝒶∖vs ∨ {␛R}
     
     ¿𝓢: Kˢʰᵉˡˡ = ✓

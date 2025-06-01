@@ -9,9 +9,10 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
 ⊢ __þADDGLOBALS_CLEAN__(M,𝖦):  󰤱
     𝖦.update(M)
 ⊢ __þIMPORT__(p,𝖦):  󰤱
-    p = 𝐩(‹/tmp/compiled_Libraries$$⟦p⟧.py›)
-    name = p.name
-    𝚌𝚘𝚍𝚎 = (p)
+    ‹󰤱 __þIMPORT__ "⟦p⟧"›☾
+    ↪
+    p = 𝐩(‹/tmp/compiled_Libraries$$⟦␛/󰛔ᵖ2␛$⟧.py›)
+    name,𝚌𝚘𝚍𝚎 = p.name,(p)
     ns = 𝖦.copy()
     ns.pop(‹__EXPORTS__›,□)
     ns[‹__file__›],ns[‹__dir__›] = p,p.parent
@@ -122,4 +123,3 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
          ↪ 𝑓(⠤𝔸,⠶𝕂)
      ↪ ƒ
  SUBPROCA = ℳℱ(𝚲󰋺(‹subproca›).SUBPROCA)
-

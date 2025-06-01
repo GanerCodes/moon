@@ -1,0 +1,19 @@
+⨡ tree
+
+⊢ rewrite_str_indent(󱁕):
+    ¿␛p∉󱁕ᵉ: ↪󱁕
+    pl,𝚍 = 󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₁+1  might be weird if u do like ‹␛<newline>
+    ∀𝒏∈󱁕.gets(‹str_tsub_guts›):
+        𝚜,h = lines(𝒏₀ᵗ),[]
+        ∀i,⟞⬠𝚜↨: I = 𝒏ᵉ ᵖ₀+i
+                 h.append(pl≡I ⭜⟞⭝ ⟞[⟞󰑅ᔨ󷺹∉𝘀𝘁ᐸᣆ􋅂􋁜􋄅󰻾􍪵􋌵⭢⤈𝚍:])
+                 pl = I
+        𝒏₀ᵗ=h⨝𝗻
+    ↪󱁕
+
+⊢ add_blocks(󱁕):
+    start = 󱁕↦󱁕ᵗ≡‹stmt› ∧ 󱁕₀ᵗ≡‹blk_head›
+    ƒ = ⟨⟨start⍮ 󷺹ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(‹blk›,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
+    󱁕.ftrp(‹stmts›,󱁕↦󱁕.set(c=ƒ(󱁕)),✓)
+
+flatten_statments = 󱁕↦󱁕.flat(󷺹ᵗ∈‹stmt›⍭)
