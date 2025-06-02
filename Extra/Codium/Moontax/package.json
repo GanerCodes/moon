@@ -1,0 +1,28 @@
+{
+  "name": "moon",
+  "displayName": "☾",
+  "version": "0.0.1",
+  "publisher": "☾",
+  "icon": "☾.png",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "moon",
+        "icon": "☾.png",
+        "aliases": ["☾"],
+        "extensions": [".☾"],
+        "configuration": "./☾.conf.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "moon",
+        "scopeName": "source.☾",
+        "path": "./☾.tmLanguage.json"
+      }
+    ]
+  }
+}

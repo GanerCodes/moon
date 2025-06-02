@@ -20,33 +20,49 @@
    so like purple 󰲣 matches until something more patient than purple
  ⨡⭸⭷
 
-BASE = 𝐩(‹../NewMoon›).resolve
+⦃from sys import stdin as ⦃ℑ𝔑⦄, argv as ⦃𝔸⦄⦄
+⦃from time import time as ⦃𝓉⦄⦄
+⨡ text_format
+⨡ to_ast
+⨡ ast_to_py
+⨡ 🌈
+ ⨡ tree *
+
+𝔸 = ‹□ r print(1)›⍭
+BASE = __file__ 𝐩 ⭢ / 3‹../› ⭢.resolve
+BASE☾
 BINARY = ‹python3›  ‹pypy3.11›
 CODE = (BASE / ‹tests.☾›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
-base_head = (BASE / ‹builtins›)󷹎
-ext = [‹Libraries/text_format›,
-       ‹Libraries/𝐍›,
-       ‹Libraries/peggle2/main›,
-       ‹Libraries/peggle2/rgx_golfatron›,
-       ‹Libraries/peggle2/gram_tools›]
+mod_files = ⍁
+𝐦 = 󰲡mod_files.append(x)►x
+tof = 󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
 
-base_head,ext = (base_head,ext)ᴍ󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
-cache_ok = base_head + ext
+code_files = [
+    ⠤(BASE / ‹builtins›)󷹎,
+    ‹Libraries/text_format›󱖔􋆧,
+    ‹Libraries/𝐍›󱖔􋆧,
+    ‹Libraries/peggle2/main›󱖔􋆧,
+    ‹Libraries/peggle2/rgx_golfatron›󱖔􋆧,
+    ‹Libraries/peggle2/gram_tools›󱖔􋆧,
+    ‹Libraries/Compiler/generate_operators›,
+    ‹Libraries/Compiler/op_table›,
+    ‹Libraries/Compiler/node_types›,
+    ‹Libraries/Compiler/tree›,
+    ‹Libraries/Compiler/tree_txt›,
+    ‹Libraries/Compiler/expr›,
+    ‹Libraries/Compiler/lambdas›,
+    ‹Libraries/Compiler/rewriters›,
+    ‹Libraries/Compiler/to_ast›,
+    ‹Libraries/Compiler/ast_to_py›,
+]
+code_files,mod_files = code_files⋄mod_filesᴍtof
 
-⮌ sys ⨡ argv as 𝔸, stdin as ℑ𝔑
-⮌ time ⨡ time as 𝓉
-‹to_ast ast_to_py›⍭ᴍ󰋺
-󰋺(__dir__ / ‹../Libraries/text_format›)
-󰋺(‹tree›, *)
-󰋺(␛🌈)
-
-show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
+show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))ᣆʸ󷺹☾►x
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
-
-moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓}|𝓚)
+moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
@@ -56,49 +72,38 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
     show(pyc≔to_py(𝚌)(󱁕.cpr,reparse=✓),✗)☾
     ↪pyc
 
-⊢ wrap_as_module_dumb(𝚌,name=□):
-    ↪‹𝗻# ⟦name⟧𝗻exec(⟦repr(𝚌)⟧,__TMP__:=globals().copy())
-for k,v in __TMP__.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
-
+⊢ wrap_as_module_dumb(𝚌,name=□): ↪‹𝗻# ⟦name⟧𝗻exec(⟦repr(𝚌)⟧,__TMP:=globals().copy())𝗻for k,v in __TMP.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
 reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
-
 ⊢ make_header():
     𝚝=𝓉
-    compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
-    pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈cache_ok ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
-    h = base_head+extᴍpileᐵ₀¬⨳➡►(
-        ᐳ⟞₂∈ext⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
+     compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
+    pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈code_files ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
+    h = code_filesᴍpileᐵ₀¬⨳➡►(ᐳ⟞₂∈mod_files⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     ↪h
 
 𝖠,pre = 𝔸₁﹕,ᐦ
-¿𝖠🃌≥2:
-    ¿𝖠₀≡␛o:
-        ‹Compiling ⟦𝖠₁⟧…›☾
-        (𝖠₂,moon_to_py((𝖠₁)))
-        ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
-         ¿𝐩(𝖠₁)∉cache_ok ∨ 𝐩(𝖠₂).is_file¬:
-         ¡: ‹Skipping, ⟦𝖠₂⟧ already found!›☾
-        exit
-    ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
-    ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
-    code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
-    ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
-    ¿𝖠₀≡␛x: pre = make_header
-    ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
-¡:
-    ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
-    pre, code = make_header, 𝖠⭜reewrap(𝖠₀,∘𝖠₀)⭝CODE
+¿𝖠🃌≥2: ¿𝖠₀≡␛o: ‹Compiling ⟦𝖠₁⟧…›☾
+               (𝖠₂,moon_to_py((𝖠₁)))
+               ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
+               exit
+       ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
+       ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
+       code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
+       ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
+       ¿𝖠₀≡␛x: pre = make_header
+       ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
+¡    : ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
+       pre, code = make_header, 𝖠⭜reewrap(𝖠₀,∘𝖠₀)⭝CODE
 
 𝚝=𝓉
-try:
-    pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
-except Exception:
-    moon_to_py_debug(code,show_preast=✓)
+   pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
+¡:  moon_to_py_debug(code,show_preast=✓)
     exit
 ‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-(f≔𝐩∘‹/tmp/pyc.py›,pyc)
+(f≔𝐩∘‹/tmp/pyc².py›,pyc)
 𝚝=𝓉
-r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
+ r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
+r = (p≔subprocess.Popen([BINARY,‹-u›,f])).wait►p.returncode
 ‹Execution took: ⟦𝓉-𝚝⟧›☾
 ¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾

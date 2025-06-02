@@ -25,22 +25,29 @@ BINARY = ‹python3›  ‹pypy3.11›
 CODE = (BASE / ‹tests.☾›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
-base_head,ext = (BASE / ‹builtins›)󷹎,[
-   ‹Libraries/text_format›,
-   ‹Libraries/𝐍›,
-   ‹Libraries/peggle2/main›,
-   ‹Libraries/peggle2/rgx_golfatron›,
-   ‹Libraries/peggle2/gram_tools›,
-   ‹Libraries/Compiler/generate_operators›,
-   ‹Libraries/Compiler/op_table›,
-   ‹Libraries/Compiler/node_types›,
-   ‹Libraries/Compiler/tree›,
-   ‹Libraries/Compiler/tree_txt›,
-   
-]
+mod_files = ⍁
+𝐦 = 󰲡mod_files.append(x)►x
+tof = 󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
 
-base_head,ext = (base_head,ext)ᴍ󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
-cache_ok = base_head + ext
+code_files = [
+    ⠤(BASE / ‹builtins›)󷹎,
+    ‹Libraries/text_format›󱖔􋆧,
+    ‹Libraries/𝐍›󱖔􋆧,
+    ‹Libraries/peggle2/main›󱖔􋆧,
+    ‹Libraries/peggle2/rgx_golfatron›󱖔􋆧,
+    ‹Libraries/peggle2/gram_tools›󱖔􋆧,
+    ‹Libraries/Compiler/generate_operators›,
+    ‹Libraries/Compiler/op_table›,
+    ‹Libraries/Compiler/node_types›,
+    ‹Libraries/Compiler/tree›,
+    ‹Libraries/Compiler/tree_txt›,
+    ‹Libraries/Compiler/expr›,
+    ‹Libraries/Compiler/lambdas›,
+    ‹Libraries/Compiler/rewriters›,
+    ‹Libraries/Compiler/to_ast›,
+    ‹Libraries/Compiler/ast_to_py›,
+]
+code_files,mod_files = code_files⋄mod_filesᴍtof
 
 ⮌ sys ⨡ argv as 𝔸, stdin as ℑ𝔑
 ⮌ time ⨡ time as 𝓉
@@ -72,9 +79,9 @@ reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
 ⊢ make_header():
     𝚝=𝓉
     compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
-    pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈cache_ok ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
-    h = base_head+extᴍpileᐵ₀¬⨳➡►(
-        ᐳ⟞₂∈ext⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
+    pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈code_files ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
+    h = code_filesᴍpileᐵ₀¬⨳➡►(
+        ᐳ⟞₂∈mod_files⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     ↪h
 

@@ -24,6 +24,15 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
     E.update({⠤𝔸})
     ↪E
 
+⦃import subprocess⦄
+⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
+    𝐩(‹/tmp/󱠨.☾›) ≕ pi⭢.parent/‹󱠨.py› ≕ po
+    (pi,𝚌)
+    subprocess.Popen(‹bash -c ☾ '/home/ganer/Projects/Moon_BETA/Compiler/main.☾' o '⟦pi⟧' '⟦po⟧'›⍭).wait()
+    code = (po)
+    ¿get_code: ↪code
+    ↪eval(code,⠤ns≅□⭜⍁⭝ₙₛ)
+
  DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
  IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
 
@@ -40,22 +49,6 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
          ¿𝘎[‹__file__›]≠__file__: ⇥
      ↪ 𝘎
 
- ⊢ 󱠨(c,⠤𝔸,get_ns=✗,ns=□,fname=□,interactive_𝕂=□,
-     no_isolate=✗,no_isolate_ƒ=󰲡exec(x,globals()),⠶𝕂):  󱠨(x, return_code=✓)
-    
-     𝓘𝓚 = {‹code_post_process›: __code_post_process__}|(interactive_𝕂 ∨ {})
-     ⮌ refresher ⨡ basic_cpy_interactive_session
-     cpy = basic_cpy_interactive_session(
-         print_output=✓, ns=ns, fname=fname≅□ ⭜‹cpy_󱠨›⭝ fname,
-         code_cache_dir=__code_cache_dir__, gram_cache_dir=__gram_cache_dir__,
-         header_carry=__header_namespace__, ⠶𝓘𝓚)
-     ¿no_isolate:  absolutely beaned
-         ‹This feature doesn't work!›☾
-         ¬get_ns ∧ ns≅□ ∧ fname≅□ ⨳
-         c = cpy(c, ⠤𝔸, return_code=✓, ⠶𝕂)☾
-         ↪ no_isolate_ƒ(c)
-     r = cpy(c, ⠤𝔸, ⠶𝕂)
-     ↪ get_ns ⭜cpyⁿˢ⭝ r
 
  ⊢ get_implict_imports(code):  so what if you import stuff by accident this wont need fixing in a month
      ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
@@ -68,10 +61,9 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
   store_code ⟶ m.__cpy_code__ is the source code
   󷹇 var name __exports__ determines the default stuff to dump into namespace
   󰤱 bug that store_code doesn't work if found in cache
- ⊢ 󰋺(𝔣, ⠤𝔸, g=✓, store_code=✓, just_get_path=✗):
+ ⊢ 󰋺(𝔣,⠤𝔸,g=✓,store_code=✓,just_get_path=✗):
      ⮌ sys ⨡ path as 𝘗
      ⮌ pathlib ⨡ Path as 𝐩
-    
      𝘎 = outer_globals()
      𝙳 = [␛., ⠤𝘗]
      ¿𝘎.get(‹__file__›)≕fp:

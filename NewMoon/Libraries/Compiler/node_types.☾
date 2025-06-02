@@ -4,7 +4,7 @@
  ⨡ op_table ⭸ *
 
 fix = ␛﹕󰛔␛ː
-⊢ (OPWRAP_) ☾´(⠤𝔸,s=𝗻,sep=𝘀,❗=✗,⠶𝕂):
+⊢ ☾´(⠤𝔸,s=𝗻,sep=𝘀,❗=✗,⠶𝕂):
     ❗ ⭜stderr⭝ stdout ➡≕ƒ → .write(fix(𝔸⨝ᔐ(sep) + ᔐ(s)))
     ƒ.flush
     ¿𝔸: ↪𝔸₀

@@ -113,15 +113,14 @@ gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%�
            main = (brak∨~‹.|\n›)*
            brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›
         󰦥󰦥󰦥󰦥󰦥), m=✓):
-    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(eval🟑󱠨🟑(+⟞🟑,ns=ns🟑))])) ⭢ ᣆᵐ peggle2
-
+    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(+⟞,ns=ns))])) ⭢ ᣆᵐ peggle2
 ⭷ peggle2,Ń,𝒩,𝔗,⟵,⟶,⊥,⊤,𝑬,offset_𝚕𝚌,offset_𝚌,reform_positions,gram_rp,under_gram,␛
   gram_subsup,peggrampeg,is_short,warn_if_short,fill_󱁕_holes_basic
 
 ⊢ test_gram_tools(): g = peggrampeg(󰦥󰦥󰦥󰦥󰦥
                         sub = 󰆴'󰜞' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
                         sup = 󰆴'󰜚' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
-                        main = (sup ∨ sub ∨ (%⦃'t'+"he"⦄%=~‹.›))*
+                        main = (sup ∨ sub ∨ (%⦃␛t+‹he›⦄%=~‹.›))*
                      󰦥󰦥󰦥󰦥󰦥)
                      s,Ι = gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾)
                      󱁕 = g(s☾)ᴾ

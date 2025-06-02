@@ -47,7 +47,7 @@ grp      = ~‹[⁅⟦]› (⠶𝑝𝑐 ∨ 𝖶) ~‹[⁆⟧]›
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨σscript∨›⭝ ᐦ⦄% grp
+𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨σscript∨›⭝ ''⦄% grp
            ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
            ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp
            ∨ number ∨ 𝑣_spec ∨ 𝑣)
@@ -112,7 +112,6 @@ str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*
 
-str_nodelim = str_escape ∨ str_spec_char
 empty_str = 󰆴'󷺗' ""
 str_sub_inner = ⠶str_gen_inner ∨ str_sub
 str_gen_inner = (str_escape ∨ 󰆴'󷺗' ∨ str_spec_char)+

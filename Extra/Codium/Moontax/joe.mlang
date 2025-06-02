@@ -1,0 +1,10 @@
+("(")  works fine
+('(')  works fine
+(‹(›)  works fine
+(␛()  sneed
+
+()[]
+"hi"
+asodak
+a ‹x⟦y‹h⟦z⟧i›⟧z›
+111
