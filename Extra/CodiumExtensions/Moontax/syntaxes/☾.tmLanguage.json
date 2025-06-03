@@ -1,6 +1,6 @@
 {
-  "name": "☾",
-  "scopeName": "source.☾",
+  "name": "moon",
+  "scopeName": "source.moon",
   "patterns": [
     {
       "include": "#str"
@@ -14,7 +14,7 @@
         },
         {
           "match": "[^⟧]",
-          "name": "constant.character.special.☾"
+          "name": "constant.character.special.moon"
         }
       ]
     },
@@ -48,18 +48,18 @@
       ]
     },
     "str_tblock": {
-      "name": "string.block.t󰦥.☾",
+      "name": "string.block.t󰦥.moon",
       "begin": "󰦥{5}",
       "end": "󰦥{5}?",
       "patterns": [
         {
           "match": "(?!󰦥{5})(.|\\n)*",
-          "name": "string.block.content.☾"
+          "name": "string.block.content.moon"
         }
       ]
     },
     "str_tsys": {
-      "name": "string.template.sys.☾",
+      "name": "string.template.sys.moon",
       "begin": "\\$",
       "end": "󷹹",
       "patterns": [
@@ -68,12 +68,12 @@
         },
         {
           "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛⟦󷹹]+",
-          "name": "string.template.sys.guts.☾"
+          "name": "string.template.sys.guts.moon"
         }
       ]
     },
     "str_tsub": {
-      "name": "string.template.sub.☾",
+      "name": "string.template.sub.moon",
       "begin": "‹",
       "end": "›",
       "patterns": [
@@ -82,7 +82,7 @@
         },
         {
           "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛⟦␛›]+",
-          "name": "string.template.sub.guts.☾"
+          "name": "string.template.sub.guts.moon"
         }
       ]
     },
@@ -97,7 +97,7 @@
       ]
     },
     "str_nsub1": {
-      "name": "string.quoted.double.☾",
+      "name": "string.quoted.double.moon",
       "begin": "\"",
       "end": "\"",
       "patterns": [
@@ -106,12 +106,12 @@
         },
         {
           "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛\"]+",
-          "name": "string.guts.double.☾"
+          "name": "string.guts.double.moon"
         }
       ]
     },
     "str_nsub2": {
-      "name": "string.quoted.single.☾",
+      "name": "string.quoted.single.moon",
       "begin": "'",
       "end": "'",
       "patterns": [
@@ -120,13 +120,13 @@
         },
         {
           "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛']+",
-          "name": "string.guts.single.☾"
+          "name": "string.guts.single.moon"
         }
       ]
     },
     "str_empty_marker": {
       "match": "󷺗",
-      "name": "constant.language.empty-str.☾"
+      "name": "constant.language.empty-str.moon"
     },
     "str_sub_inner": {
       "patterns": [
@@ -152,17 +152,17 @@
       ]
     },
     "str_sub": {
-      "name": "meta.bracket.sub.☾",
+      "name": "meta.bracket.sub.moon",
       "begin": "⟦",
       "beginCaptures": {
         "0": {
-          "name": "punctuation.section.brackets.begin.☾"
+          "name": "punctuation.section.brackets.begin.moon"
         }
       },
       "end": "⟧",
       "endCaptures": {
         "0": {
-          "name": "punctuation.section.brackets.end.☾"
+          "name": "punctuation.section.brackets.end.moon"
         }
       },
       "patterns": [
@@ -173,11 +173,11 @@
     },
     "str_spec_char": {
       "match": "‹[𝟬-𝟵𝗮-𝗳]{2}|[𝗮-𝘇󷺗]›",
-      "name": "constant.character.special.☾"
+      "name": "constant.character.special.moon"
     },
     "str_escape": {
       "match": "␛.",
-      "name": "string.other.single-char.☾"
+      "name": "string.other.single-char.moon"
     }
   }
 }

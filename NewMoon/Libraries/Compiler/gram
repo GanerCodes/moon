@@ -31,7 +31,7 @@ kwd_std  =     std_kwd 𝗐 (𝑋↑↑ ∨ ✓)
 cln_pfx  = blk_cln_kwd 𝖶 (𝑋↑↓ ∨ ✓) 𝖶 󰆴':'
 std_pfx  =     blk_kwd 𝖶
 asgn     = 𝑋↑↑ 𝖶 󰆴'='𝗐 (asgn ∨ 𝑋↑↑)
-grp      = ~‹[⁅⟦]› (⠶𝑝𝑐 ∨ 𝖶) ~‹[⁆⟧]›
+grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝐿 = 󰆴'[' (⠶𝑝𝑐 ∨ 𝖶) 󰆴']' ∨ 󰆴SB (⠶𝑝𝑐 ∨ 𝖶) 󰆴SE
 𝑃 = 󰆴'(' (⠶𝑝𝑐 ∨ 𝖶) 󰆴')'
 𝑆 = 󰆴'⦉' (⠶𝑝𝑐 ∨ 𝖶) 󰆴'⦊'
@@ -85,7 +85,7 @@ number     = pos_num ∨ neg_num
 number_exp = number sup
 script = ( (sub = 󰆴SB 𝖶 𝑋𝐶 𝖶 󰆴SE)
           ∨(sup = 󰆴SP 𝖶 𝑋𝐶 𝖶 󰆴SE))
-grp = ~‹[⁅⟦]› 𝖶 (𝑋𝐶 ∨ ✓) 𝖶 ~‹[⁆⟧]›
+grp = ~"[⁅⟦]" 𝖶 (𝑋𝐶 ∨ ✓) 𝖶 ~"[⁆⟧]"
 
 op = op_⸓_l op_lit op_⸓_r
 op⸓l_g = ⠶op_⸓_ly ⠶sup?
@@ -105,9 +105,9 @@ str = empty_str ∨ str_tsys ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶st
 str_t󰦥   = 󰆴(~‹󰦥{5}›) ~‹((?!󰦥{5})(.|\n))*› 󰆴(~‹󰦥{5}› ∨ ✓)
 str_tsys = 󰆴'$' 𝗐 (ƨ(sup) ∨ ✓) 𝗐 (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
 str_tsub = 󰆴'‹'                  (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
-str_tsys_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+›
-str_tsub_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+›
-str_timp_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦⭸\n]+›
+str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
+str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
+str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦⭸\n]+"
 str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*
@@ -118,7 +118,7 @@ str_gen_inner = (str_escape ∨ 󰆴'󷺗' ∨ str_spec_char)+
 str_sub = 󰆴'⟦' 𝖶 𝑋𝐶? 󰆴'⟧'
 str_spec_char = ~‹[𝟬-𝟵𝗮-𝗳]{2}|[𝗮-𝘇󷺗]›
 str_escape = 󰆴"␛␛" ~‹.›
-str_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛␛›'"󷹹]+›
+str_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛›'␛"󷹹]+"
 
 ugx_x     = ugx_brack
 ugx_mod   = 󰆴SP ~‹[?*+⮞¬]› 󰆴SE

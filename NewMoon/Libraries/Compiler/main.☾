@@ -28,7 +28,7 @@
 ⨡ 🌈
  ⨡ tree *
 
-𝔸 = ‹□ r print(1)›⍭
+𝔸 = ‹□ r "joe"☾›⍭
 BASE = __file__ 𝐩 ⭢ / 3‹../› ⭢.resolve
 BASE☾
 BINARY = ‹python3›  ‹pypy3.11›
