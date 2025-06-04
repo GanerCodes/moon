@@ -61,7 +61,7 @@
     ℴ = 𝚘ᵉ ᴼ
     ¿ℴᵗ ∈ ‹⭢→➡›: ↪𝖷(⠤𝚕)
     ¿ℴᵗ ∈ ‹⭠←⬅›: ↪𝖷(⠤𝚛)
-    ¿ℴᵗ ≡ ␛⥉   : ↪𝖷(𝖷(⠤𝚛), 𝖷(⠤𝚕))󱖔􋔡(𝚕,𝚛)
+    ¿ℴᵗ ≡ ␛⥉   : ↪𝖷(𝖷(⠤𝚛),𝖷(⠤𝚕))󱖔􋔡(𝚕,𝚛)
     ¿¬ℴ󰀷:
         α,β = 𝚕≇𝖭𝖴𝖫𝖫,𝚛≇𝖭𝖴𝖫𝖫
         U = α∧β ⭜􀲰󰄎􀲼⭝ α ⭜􀲰⭝ β ⭜􀲼⭝ ⍁
@@ -84,7 +84,7 @@
         ↪𝚁
     suf2 = 𝚁↦𝚁∧𝚁₀ᵗ≡‹target_rhs› ⭜𝚁.pop(0)⛶⭝ ⍁
     
-     󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
+     󰤱 make this not include the nulls and stuff when it shouldnt/doesnt need to
     ¿𝘪ᴮ ∧        lr ∧ rl: ↪ll + [   create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl))  , ⠤𝕒          ], rr  B
     ⸘𝘪󰀒 ∧        lr     : ↪ll + [   create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫)  , ⠤𝕒, ⠤suf2(𝚁)], suffix(𝚁)  S
     ⸘𝘪ᴾ             ∧ rl: ↪𝙻  + [   create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl))  , ⠤𝕒          ], rr  P
@@ -101,6 +101,7 @@
         c = 𝚁.pop(0)
         ¿IS_OP(c): 𝙻,𝚁 = apply_op(c,𝙻,𝚁)
         ¡        : 𝙻.append(c)
+         𝑩(𝑩(⠤𝙻↨ꟿ󰲣𝒃𝒃(y,‹𝙻⟦x󷸓⟧›)),𝑩(⠤𝚁↨ꟿ󰲣𝒃𝒃(y,‹𝚁⟦x󷸓⟧›)))☾
     ↪𝗑(⠤𝙻+𝚁)
 
 ⊢ curry_ops(󱁕):

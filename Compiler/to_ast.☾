@@ -12,7 +12,7 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
     󱁕 = gram_main(𝚌,DEBUG=dbg_parser,remove_trashes=✗)
     ¿dbg_show_gram_tree            : 𝑩𝑩(󱁕,‹Initial parse›)
-    ¿warn_short                    : warn_if_short(󱁕)
+    ¿warn_short                    : warn_if_short(󱁕) ; is_short(󱁕) ⭜ (𝑩𝑩(󱁕)►⬅✗⨳𝚌𝚘𝚍𝚎)
     ¿force_full_match ∧ is_short(󱁕): ↪□
     Ι(󱁕)
     ⊢ ƒ(󱁕,Δ=0):

@@ -15,8 +15,8 @@
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
 RCD = 󷺹∉ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_›
 SPE = 󷺹∈ENC+␛þ
-bruh = 󰲡󷹜´(x,chars=ENC)
-PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍⁽􍴕⁾⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱ᶜʰᵃʳˢ⁼ᴱᴺ󰀂⁾󷺹₀∘ᵜRCDᐸ⭢⨝␛Þ
+bruh = 󰲡󷹜´(x,C=ENC)
+PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍⁽􍴕⁾⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱󰀂⁼ᴱᴺ󰀂⁾󷺹₀∘ᵜRCDᐸ⭢⨝␛Þ
 VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌍹􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉ᵇʳᵘʰ⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀∘ᵜSPEᐸ⭢⨝
 py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›⭝ ⟞
 𝖫 = ⥌x=ᐦ,y=4⋅𝘀↦lines(x)ᴍy+⬤⭢⨝𝗻

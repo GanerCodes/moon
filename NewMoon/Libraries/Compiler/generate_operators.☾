@@ -24,12 +24,11 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ƒs = g_order⋄g_symbs⋄g_sig⋄g_combos⋄g_desc
     
     𝚌 = contents󷹎𝗻
-    𝚌, 𝚂 = 𝚌􋇐󷺹₀≡␛>
+    𝚌,𝚂 = 𝚌􋇐󷺹₀≡␛>
     𝚌 = p(𝚌)
-     𝚌ᴍ☾
-    ops = 𝚌ᐵ₀󷹎³␛ ᴍ⬄ᖘ􊽧¹󷺹₀󷹎ᐸ  ᖘ􊽧⁴󷺼𝘀󰛔􍪵ᐦᐸ    ␛
-                   →󱑼ƒs ꟿ󰲣y(x)󰅂 →󷸻₀󰄎₂󰄎₃󰄎₁󰄎₄  ␛
-                   →𝌂2ꟿ⁰󰲣x󰌷⛶(1󷸻⟞⨝𝗻)ᑀ󰌷ᑈy󱑼ᐸ␛
+    ops = 𝚌ᐵ₀󷹎³␛ ᴍ⬄ᖘ􊽧¹󷺹₀󷹎ᐸ  ᖘ􊽧⁴󷺼𝘀󰛔􍪵ᐦᐸ       ␛
+                   →󱑼ƒs ꟿ󰲣y(x)󰅂 →󷸻₀󰄎₂󰄎₃󰄎₁󰄎₄ ␛
+                   →𝌂2ꟿ⁰󰲣x󰌷⛶(1󷸻⟞⨝𝗻)ᑀ󰌷ᑈy󱑼ᐸ   ␛
                    →󰒼ᓕ⁰󰁱⁰
     ops = 𝑙𝑙(ops)
     ops.style = 𝚂ᴍᕋ⁰
@@ -47,15 +46,15 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ↪ do_join ⭜𝚛ᐵᐵ⨝ᐸ⨝𝘀ᐸ⨝𝗻⭝ 𝚛
 ⊢ generate_fontcompose_conf(parsed_ops):
     style = parsed_ops.style
-    parsed_ops󷸊󰌷
-    ↪ℵ(parsed_opsᓕ⁰) ␛
-      ꟿ󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⦑c⦑⟦clrs􍪴⟧⦒⦒›⟧␛⟦⁅BLK⟦⟞⟧𝕊⟶"⟦ords􍪴⟧"⁆⟦␛
-          ⟝ᐖ‹⁅⟦␛ᴍ∈⟞₃ ⭜␛"󰛔􍪵􊿨␛␛␛"→₁﹕⭝ ‹;;⟦⟞₃⟧ᴍ›⟧⟶"⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2⟧"⁆›ᐸ⨝⟧␛⟧›󷺿→⨝𝗻→+style⟕𝗻
+    ↪ℵ(parsed_ops󰌷⭢ᓕ⁰)ꟿ␛
+        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⦑c⦑⟦clrs􍪴⟧⦒⦒›⟧␛⟦⁅BLK⟦⟞⟧𝕊⟶"⟦ords􍪴⟧"⁆⟦⟝ᐖ‹⁅⟦␛ᴍ∈⟞₃ ⭜␛"󰛔􍪵􊿨␛␛␛"⭢₁﹕⭝ ‹;;⟦⟞₃⟧ᴍ›⟧⟶"⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2⟧"⁆›ᐸ⨝⟧␛⟧›󷺿␛
+        →⨝𝗻→+style⟕𝗻
 ⊢ to_docs(parsed_ops):
     ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛
                          ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
 
 ops = parse_operator_file((OP_FILE))
+ opsꟿ☾
  generate_fontcompose_conf(ops)☾
  get_operator_table(ops)☾
 
