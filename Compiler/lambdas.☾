@@ -1,12 +1,14 @@
 󰋺(‹expr›, *)
 
 ⊢ λ_add_vk(󱁕,𝕒=␛𝔸,𝕜=␛𝕂):
+    ¿‹VK›∈󱁕ᵉ: ↪󱁕
     𝙿,󰊄 = 󱁕₀,+󱁕₁⭢󷸼²
     cur = 𝑠(𝙿ᐵᵗᑀ∈‹𝔸 𝕂›⍭⭜⟞􍨄⭝󰮈)
      󰤱 check for weird case of ⥌𝔸=2↦...
     ¿␛𝔸∉cur ∧ 𝕒∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝔸(𝕒󱖔􋄥𝙿))
     ¿␛𝕂∉cur ∧ 𝕜∈󰊄: 𝙿ᶜ.append(ƒ_dec_𝕂(𝕜󱖔􋄥𝙿))
      𝑩𝑩(󱁕,󰊄,cur,‹yee›,␛𝔸∉cur ∧ 𝕒∈󰊄,␛𝕂∉cur ∧ 𝕜∈󰊄)
+    󱁕ᵉ ⱽᴷ=✓
     ↪󱁕
 
 ⊢ preformat_whiskers(󱁕):  󷺹,2ᐸ, 󷺹:5,2+󷺽, etc…

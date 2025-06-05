@@ -1,5 +1,5 @@
 󰋺(‹rewriters›, *)
-gram = gram_rp(∘‹gram›⥉‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
+gram = gram_rp(∘(𝐩(__file__).parent/‹gram›)⥉‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
 gram_comm = peggrampeg(gram,ℵ(𝔪=‹comm›))
 gram_scrp = peggrampeg(gram,ℵ(𝔪=‹scrp›))
 gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))

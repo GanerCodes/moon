@@ -1,28 +1,7 @@
- 󰤱   ⦃"⦃󱅏⦄,⦃⦄"⦄
- 󰤱  error handling, bootstrap, ⨡ a,b,c
- 󰤱  "󷺹󷺽" causes error it should cat
- 󰤱  whitespace involution lol
- 󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
- 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
- 󰤱  string ␛ before newline should not add it
- 󰤱  named exceptions
- 󰤱  with statements
- 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
- 󰤱􊽨 replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
- 󰤱􊽨 deque for þSTK
- 󰤱􊽨 raising
- (ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
- All orders for all operators
- Colors and number-labels of ⬤
-   number for which slot in order so like (󰲣⌃󰲡)(2,3)≡3²
-   color how far up it goes so if ⬤⫢purple, ⬤⋅3⋅~⬤+2 is 󰲣x⋅3+~y󰅂+2
-   Wat if we dd the same thing for whickers and the balls?
-   so like purple 󰲣 matches until something more patient than purple
- ⨡⭸⭷
-
+ BOOTSTRAP α
 BASE = 𝐩(‹../NewMoon›).resolve
 BINARY = ‹python3›  ‹pypy3.11›
-CODE = (BASE / ‹tests.☾›)
+CODE = (BASE / ‹Libraries/Compiler/main.☾›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
 mod_files = ⍁
@@ -54,7 +33,6 @@ code_files,mod_files = code_files⋄mod_filesᴍtof
 ‹to_ast ast_to_py›⍭ᴍ󰋺
 󰋺(__dir__ / ‹../Libraries/text_format›)
 󰋺(‹tree›, *)
-󰋺(␛🌈)
 
 show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
@@ -111,8 +89,9 @@ except Exception:
     moon_to_py_debug(code,show_preast=✓)
     exit
 ‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-(f≔𝐩∘‹/tmp/pyc.py›,pyc)
-𝚝=𝓉
-r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
-‹Execution took: ⟦𝓉-𝚝⟧›☾
-¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾
+(f≔𝐩∘‹/tmp/BOOTSTRAP_α.py›,pyc)
+¿CODE∨𝖠:
+    𝚝=𝓉
+    r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
+    ‹Execution took: ⟦𝓉-𝚝⟧›☾
+    ¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾

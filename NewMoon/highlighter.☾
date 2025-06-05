@@ -1,4 +1,4 @@
-styf = moon_dir / ‹FontCompose/Output/style.json›
+styf = 𝐩(‹/home/ganer/Projects/Moon_BETA/STAGES/style.json›)
 styd = styf  𝔍󰄟 ℵ
 
 ⊢ (cache) sty(s,bg=0,def=‹bec›):

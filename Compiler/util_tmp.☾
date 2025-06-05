@@ -6,7 +6,7 @@ TOFRAC = 󰲡FRAC_CONV.get(x,x)
     MAP = 𝑑(NRM󱑼USD) | 𝑑(USD󱑼NRM)
     flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ⨝ᐦ
 󱀘 SCRIPT:
-    SCRIPT_FILE_LOC = moon_dir / ‹FontCompose/.SCRIPT_MAP›
+    SCRIPT_FILE_LOC = ‹/home/ganer/Projects/Moon_BETA/STAGES/.SCRIPT_MAP›
     CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip󷹎𝗻
     SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
     SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)

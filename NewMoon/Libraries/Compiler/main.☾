@@ -28,11 +28,9 @@
 ⨡ 🌈
  ⨡ tree *
 
-𝔸 = ‹□ r BASE = __file__ 𝐩 ⭢ / 3‹../␛› ⭢.resolve›⍭
 BASE = __file__ 𝐩 ⭢ / 3‹../› ⭢.resolve
-BASE☾
 BINARY = ‹python3›  ‹pypy3.11›
-CODE = (BASE / ‹tests.☾›)
+CODE = ᐦ
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
 mod_files = ⍁
@@ -56,6 +54,7 @@ code_files = [
     ‹Libraries/Compiler/rewriters›,
     ‹Libraries/Compiler/to_ast›,
     ‹Libraries/Compiler/ast_to_py›,
+    ‹Libraries/Compiler/main›,
 ]
 code_files,mod_files = code_files⋄mod_filesᴍtof
 
@@ -76,7 +75,7 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
 reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
 ⊢ make_header():
     𝚝=𝓉
-     compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
+    compile = 󰲣(subprocess.Popen(‹bash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'›⍭)≕p).wait►p.returncode  compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
     pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈code_files ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
     h = code_filesᴍpileᐵ₀¬⨳➡►(ᐳ⟞₂∈mod_files⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
@@ -84,7 +83,7 @@ reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
 
 𝖠,pre = 𝔸₁﹕,ᐦ
 ¿𝖠🃌≥2: ¿𝖠₀≡␛o: ‹Compiling ⟦𝖠₁⟧…›☾
-               (𝖠₂,moon_to_py((𝖠₁)))
+               (𝖠₂,𝖠₁  moon_to_py)
                ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
                exit
        ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
@@ -94,16 +93,16 @@ reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
        ¿𝖠₀≡␛x: pre = make_header
        ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
 ¡    : ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
-       pre, code = make_header, 𝖠⭜reewrap(𝖠₀,∘𝖠₀)⭝CODE
+       pre, code = make_header, 𝖠⭜reewrap(𝖠₀,𝖠₀ )⭝CODE
 
 𝚝=𝓉
    pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
 ¡:  moon_to_py_debug(code,show_preast=✓)
     exit
 ‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-(f≔𝐩∘‹/tmp/pyc².py›,pyc)
-𝚝=𝓉
- r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
-r = (p≔subprocess.Popen([BINARY,‹-u›,f])).wait►p.returncode
-‹Execution took: ⟦𝓉-𝚝⟧›☾
-¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾
+(‹/tmp/BOOTSTRAP_β.py›𝐩≕f,pyc)
+¿CODE∨𝖠:
+    𝚝=𝓉
+    r=(p≔subprocess.Popen(‹⟦BINARY⟧ -u ⟦f⟧›⍭)).wait►p.returncode  $ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
+    ‹Execution took: ⟦𝓉-𝚝⟧›☾
+    ¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾
