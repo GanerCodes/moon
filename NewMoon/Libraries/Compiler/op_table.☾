@@ -29,12 +29,15 @@ add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
  l: only left  unary valid
  r: only right unary valid
 MT = ‹NPSBlrαςνλΔ›
+ 󰤱 THE VEP STUFF IS PROB WRONG FIGURE THIS OUT
 󱀘 OP(ℵ⭢ᐹ): __repr__ = 𝕊↦‹⟦𝕊ᵗ⟧⟦𝕊ᴹ⨝⭢󷸔⟧›
             ⊢ __init__(𝕊,⠤𝔸,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
                                  𝕊.setdef(ᐦ)
-            ⊢ __getitem__(𝕊,x): ¿x⊂MT: ↪x⊂𝕊ᴹ⭜x
+            ⊢ __getitem__(𝕊,x): x=VEP(x)
+                                ¿x⊂MT: ↪x⊂𝕊ᴹ⭜x
                                 ↪super().__getitem__(x)
-            ⊢ __setitem__(𝕊,x,y): ¿x⊂MT: ↪𝕊ᴹ 󷸊 󱖔ʸ􀸩􋁗􀸧􋁎 x
+            ⊢ __setitem__(𝕊,x,y): x=VEP(x)
+                                  ¿x⊂MT: ↪𝕊ᴹ 󷸊 󱖔ʸ􀸩􋁗􀸧􋁎 x
                                   ↪super().__setitem__(x,y)
             __setattr__ = __setitem__
             __getattr__ = __getitem__

@@ -66,7 +66,7 @@
         ↪𝚁
     suf2 = 𝚁↦𝚁∧𝚁₀ᵗ≡‹target_rhs› ⭜𝚁.pop(0)⛶⭝ ⍁
     
-     󰤱 make this not include the nulls and stuff when it shouldn't/doesn't need to
+     󰤱 make this not include the nulls and stuff when it shouldnt/doesnt need to
     ¿𝘪ᴮ ∧        lr ∧ rl: ↪ll + [   create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl))  , ⠤𝕒          ], rr  B
     ⸘𝘪󰀒 ∧        lr     : ↪ll + [   create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫)  , ⠤𝕒, ⠤suf2(𝚁)], suffix(𝚁)  S
     ⸘𝘪ᴾ             ∧ rl: ↪𝙻  + [   create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl))  , ⠤𝕒          ], rr  P

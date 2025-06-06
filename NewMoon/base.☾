@@ -1,6 +1,6 @@
 ⦃import os,sys,inspect,traceback,threading⦄
 ⦃from os import environ as ⦃env⦄⦄
-⦃from sys import stdin,stdout,stderr,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
+⦃from sys import stdin,stdout,stderr,setrecursionlimit,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
 ⦃from math import *⦄
 ⦃from site import getsitepackages⦄
 ⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
@@ -15,6 +15,7 @@
 ⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 syspath.extend(getsitepackages())
+setrecursionlimit(100000)
 moon_dir = 𝐩(‹..›)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
@@ -70,7 +71,7 @@ CURR= ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 󷺥´ = 󷺫´     = 󰲣x∨y⭢¬
 ∧´ = ⩓´     = 󰲣x∧y
 󷺒´ = 󷺬´     = 󰲣x⭜(y⭜✗⭝x)⭝y⭜y⭝✓  󰤱 make sure this is right
-<´,>´,≤´,≥´ = 󰲣__lt__,__gt__,__le__,__ge__
+<´,>´,≤´,≥´ = __lt__,__gt__,__le__,__ge__
 ≡´,≠´       = 󰲣x≡y,󰲣x≠y
 ∣´,∤´       = 󰲣gcd(x,y)≡x, 󰲣gcd(x,y)≠x
 ∈´,∉´       = 󰲣x∈y,󰲣x∉y
@@ -169,7 +170,7 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗
     ⸘𝚜≅~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠⭜" [as Error]"⭝ᐦ⟧›
     ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›
     𝗆 = ‹⟦𝗆⟧! ⟨𝓿=⟦𝚡 repr⟧⟩⟦𝚢≇␀⭜𝘀+𝚢⭝ᐦ⟧›
-     𝗆 = 󰋺(␛🌈).termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)
+     𝗆 = termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)
     ¡:□
     𝗆☾
     ¿𝖻: ⦃raise AssertionError⦄

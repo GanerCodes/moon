@@ -26,7 +26,8 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
 
 ⦃import subprocess⦄
 ⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
-    𝐩(‹/tmp/󱠨.☾›) ≕ pi⭢.parent/‹󱠨.py› ≕ po
+    fn = sha(𝚌)
+    𝐩(‹/tmp/⟦fn⟧.☾›) ≕ pi⭢.parent/‹⟦fn⟧.py› ≕ po
     (pi,𝚌)
     subprocess.Popen(‹bash -c ☾ '/home/ganer/Projects/Moon_BETA/Compiler/main.☾' o '⟦pi⟧' '⟦po⟧'›⍭).wait()
     code = (po)

@@ -1,7 +1,18 @@
  BOOTSTRAP α
-BASE = 𝐩(‹../NewMoon›).resolve
+
+⮌ sys ⨡ stdin as ℑ𝔑, argv as 𝔸
+⮌ time ⨡ time as 𝓉
+󰋺(‹/home/ganer/Projects/Moon_BETA/Libraries/text_format.☾›)
+󰋺(‹to_ast›)
+󰋺(‹ast_to_py›)
+󰋺(‹tree›,*)
+
+COMPILER = ‹python3 /home/ganer/Projects/moon/refresher.py /home/ganer/Projects/Moon_BETA/Compiler/main.☾›
 BINARY = ‹python3›  ‹pypy3.11›
+BASE = 𝐩(‹/home/ganer/Projects/Moon_BETA/NewMoon›)
 CODE = (BASE / ‹Libraries/Compiler/main.☾›)
+DEST = 𝐩(BASE / ‹../STAGES/BOOTSTRAP_α.py›).resolve
+TMP  = mkd(𝐩(‹/tmp/α›))
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
 
 mod_files = ⍁
@@ -24,20 +35,12 @@ code_files = [
     ‹Libraries/Compiler/lambdas›,
     ‹Libraries/Compiler/rewriters›,
     ‹Libraries/Compiler/to_ast›,
-    ‹Libraries/Compiler/ast_to_py›,
-]
+    ‹Libraries/Compiler/ast_to_py›]
 code_files,mod_files = code_files⋄mod_filesᴍtof
-
-⮌ sys ⨡ argv as 𝔸, stdin as ℑ𝔑
-⮌ time ⨡ time as 𝓉
-‹to_ast ast_to_py›⍭ᴍ󰋺
-󰋺(__dir__ / ‹../Libraries/text_format›)
-󰋺(‹tree›, *)
 
 show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(fg=‹915›)))ᣆʸ󷺹☾►x
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
-
 moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓}|𝓚)
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
@@ -48,18 +51,13 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
     show(pyc≔to_py(𝚌)(󱁕.cpr,reparse=✓),✗)☾
     ↪pyc
 
-⊢ wrap_as_module_dumb(𝚌,name=□):
-    ↪‹𝗻# ⟦name⟧𝗻exec(⟦repr(𝚌)⟧,__TMP__:=globals().copy())
-for k,v in __TMP__.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
-
+⊢ wrap_as_module_dumb(𝚌,name=□): ↪‹𝗻# ⟦name⟧𝗻exec(⟦repr(𝚌)⟧,__TMP__:=globals().copy())𝗻for k,v in __TMP__.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
 reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
-
 ⊢ make_header():
     𝚝=𝓉
-    compile = 󰲣$ᵒᵉᴾbash -c ☾ '⟦__file__⟧' o '⟦x⟧' '⟦y⟧'󷹹
-    pile = 󰲡𝐩(‹/tmp/compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈code_files ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
-    h = code_filesᴍpileᐵ₀¬⨳➡►(
-        ᐳ⟞₂∈mod_files⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
+    compile = 󰲣$ᵒᵉᴾbash -c ⟦COMPILER⟧ o '⟦x⟧' '⟦y⟧'󷹹
+    pile = 󰲡𝐩(TMP / ‹compiled_⟦␛/󰛔􊾚􋁐ˣ⭠2⋅␛$⟧.py›).resolve≕y⭢ .is_file ∧ x∈code_files ⭜󰻾⁰⭝ compile(x,y),y,x󰅂
+    h = code_filesᴍpileᐵ₀¬⨳➡►(ᐳ⟞₂∈mod_files⭜wrap_as_module_dumb(⟝,‹⟦⟞₂⟧⟶⟦⟞₁⟧›)⭝ᑅreewrap(⟞₂,∘⟞₁))ᐸ⨝𝗻
     ‹Head compile took: ⟦𝓉-𝚝⟧›☾
     ↪h
 
@@ -69,12 +67,13 @@ reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
         ‹Compiling ⟦𝖠₁⟧…›☾
         (𝖠₂,moon_to_py((𝖠₁)))
         ‹Done - wrote ⟦𝖠₁⟧ to ⟦𝖠₂⟧›☾
-         ¿𝐩(𝖠₁)∉cache_ok ∨ 𝐩(𝖠₂).is_file¬:
-         ¡: ‹Skipping, ⟦𝖠₂⟧ already found!›☾
         exit
     ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
     ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
-    code = 𝖠₀≡␛f ⭜(𝖠₁)⭝ 𝖠₁﹕⨝𝘀
+    ⸘𝖠₀≡␛f: code=(𝖠₁)
+    ⸘𝖠₀≡␛F: code=(𝖠₁) ; pre=make_header
+    ¡     : code=𝖠₁﹕⨝𝘀
+    
     ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
     ¿𝖠₀≡␛x: pre = make_header
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(fg=‹915›))⟧›☾
@@ -86,12 +85,15 @@ reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
 try:
     pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
 except Exception:
+    ‹⟦__file__⟧: Failed to compile!›☾
     moon_to_py_debug(code,show_preast=✓)
     exit
 ‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-(f≔𝐩∘‹/tmp/BOOTSTRAP_α.py›,pyc)
-¿CODE∨𝖠:
+(DEST,pyc)
+‹⟦__file__⟧: Wrote code to ⟦DEST⟧›☾
+¿𝖠:
+    ‹Executing ⟦DEST⟧›☾
     𝚝=𝓉
-    r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦f⟧󷹹
+    r=$ᵒᵉᴰ⟦BINARY⟧ -u ⟦DEST⟧󷹹
     ‹Execution took: ⟦𝓉-𝚝⟧›☾
-    ¿r: ŧ𝼝(‹ ERROR ⟦r⟧! ›,‹f33›)☾
+    ¿r: ŧ𝼝(‹⟦__file__⟧: ERROR ⟦r⟧! ›,‹f33›)☾
