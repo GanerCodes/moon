@@ -2,14 +2,22 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
             (␛⫚, ‹⫚›),
             (␛¶, ‹¶✿›))
 
-IMPORTS = ℵ  path → Module
+⦃from subprocess import Popen⦄
+⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
+    (pi≔𝐩(‹/tmp/⟦fn≔sha(__file__,𝚌)⟧.☾›),𝚌)
+    po=pi.parent/‹⟦fn⟧.py›
+    Popen(‹bash -c ⟦env[‹PREVILER›]⟧ o '⟦pi⟧' '⟦po⟧'›⍭).wait
+    code = (po)
+    ¿get_code: ↪code
+    ↪eval(code,globals()|(ns≅□⭜ⁿˢ{}))
+
+__þIMPORTS__ = ℵ  path → Module
 󱀘 Module(ℵ⭢ᐹ):
     ⊢ __init__(𝕊,name,ns): 𝕊.name=name ; super(ns)
     __repr__ = 𝕊↦‹Module "⟦𝕊.name⟧"›
 
 ⊢ __þIMPORT__(p,𝖦):
-    ␛.☾􊾖
-    ↪
+    p󷸊𝐩
     failed=⍁
     ∀D⬠(𝖦.__dir__, pwd, moon_dir/‹Libraries›):
         ∀F⬠(⠤p.is_absolute⭜ₚ⭝⍁, ⠤Dᑀ/ᑈ(p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name)):
@@ -17,9 +25,11 @@ IMPORTS = ℵ  path → Module
             ¿F.is_file: found = F ; ⇥
             ¡          : failed.append(F)
     ¡: ✗⨳‹Unable to find module! Paths checked:⟦failed⟕𝗻⟧›
+    ¿F∈__þIMPORTS__: ↪__þIMPORTS__󰂘
+    __þIMPORTS__󰂘 = □
     ns = {__file__=F, __dir__=F.parent}
      󰤱 exec (F) here
-    ↪ IMPORTS󰂘 ≔ Module(p.name)
+    ↪ __þIMPORTS__󰂘 ≔ Module(p.name)
 ⊢ __þADD_EXPORTS__(𝖦,⠤𝔸):  󰤱
     E = 𝖦.setdefault(‹__EXPORTS__›,{})
     E.update({⠤𝔸})
@@ -29,16 +39,6 @@ IMPORTS = ℵ  path → Module
  ⊢ __þGET_GLOB_MODNAME__()
  ⊢ __þSET_GLOB_MODNAME__()
  PEV(␛@)
-
-
-⦃from subprocess import Popen⦄
-⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
-    (pi≔𝐩(‹/tmp/⟦fn≔sha(__file__,𝚌)⟧.☾›),𝚌)
-    po=pi.parent/‹⟦fn⟧.py›
-    Popen(‹bash -c ⟦env[‹PREVILER›]⟧ o '⟦pi⟧' '⟦po⟧'›⍭).wait
-    code = (po)
-    ¿get_code: ↪code
-    ↪eval(code,⠤ns≅□⭜⍁⭝ₙₛ)
 
  DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
  IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)

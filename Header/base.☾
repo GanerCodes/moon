@@ -16,7 +16,7 @@
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
-moon_dir = 𝐩(‹..›)
+moon_dir = 𝐩(__file__).parent.parent.resolve
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
 setattr = 󰲥setattr_(x,y,z) ∨ z
