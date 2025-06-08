@@ -1,3 +1,11 @@
+IMPORTS = ℵ  path → Module
+
+
+Import:
+  [File dir, PWD, Libraries dir]
+    <name>.☾
+    <name>/main.☾
+
 󰤱   ⦃"⦃󱅏⦄,⦃⦄"⦄
 󰤱  error handling, bootstrap, ⨡ a,b,c
 󰤱  "󷺹󷺽" causes error it should cat

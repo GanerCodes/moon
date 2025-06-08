@@ -6,10 +6,11 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
  PEV(␛@)
  ⊢ __þGET_GLOB_MODNAME__()
  ⊢ __þSET_GLOB_MODNAME__()
+
 ⊢ __þADDGLOBALS_CLEAN__(M,𝖦):  󰤱
     𝖦.update(M)
 ⊢ __þIMPORT__(p,𝖦):  󰤱
-    ‹󰤱 __þIMPORT__ "⟦p⟧"›☾
+    ␛.☾􊾖
     ↪
     p = 𝐩(‹/tmp/compiled_Libraries$$⟦␛/󰛔ᵖ2␛$⟧.py›)
     name,𝚌𝚘𝚍𝚎 = p.name,(p)
@@ -24,12 +25,11 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
     E.update({⠤𝔸})
     ↪E
 
-⦃import subprocess⦄
+⦃from subprocess import Popen⦄
 ⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
-    fn = sha(𝚌)
-    𝐩(‹/tmp/⟦fn⟧.☾›) ≕ pi⭢.parent/‹⟦fn⟧.py› ≕ po
-    (pi,𝚌)
-    subprocess.Popen(‹bash -c ☾ '/home/ganer/Projects/Moon_BETA/Compiler/main.☾' o '⟦pi⟧' '⟦po⟧'›⍭).wait()
+    (pi≔𝐩(‹/tmp/⟦fn≔sha(__file__,𝚌)⟧.☾›),𝚌)
+    po=pi.parent/‹⟦fn⟧.py›
+    Popen(‹bash -c ⟦env[‹PREVILER›]⟧ o '⟦pi⟧' '⟦po⟧'›⍭).wait
     code = (po)
     ¿get_code: ↪code
     ↪eval(code,⠤ns≅□⭜⍁⭝ₙₛ)

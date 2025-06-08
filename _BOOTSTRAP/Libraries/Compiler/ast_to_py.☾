@@ -7,20 +7,15 @@
       blk_cln_kwd = ℵ(‹¿ if ⸘ elif ¡ else ➰ while ∀ for 󱀘 class›⍭),
       blk_kwd     = ℵ(‹ try›⍭􋕩􊿖􊿉􋕩),
       op          = ℵ(‹~~%%^^&&||>><<++¯---⋅*÷/›₂+⍭‹⹏ // ⌃ ** ≥ >= ≤ <= ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›),)
- ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
- val = 󷺹󷹝<127∧⟞∉‹~!@#$%^&*-=+\|,./<>?› ∨ ⟞≡␛þ
- PEV = 󷺹𝌂valᐖval(⟞₀)⭜⟞⭝⟞ᐖ󷹜´(⟞󷹝,ENC🃌,chars=ENC)ᐸ⨝␛Þᐸ⨝
- VEP_= 󷺹𝌂󷺹∈ENCᐸᐖval(⟞₀)⭜⟞⭝⟞󷹎␛Þᐵ⊂ENC⭜󷹜´(⟞,chars=ENC)󷹝⭝⟞ᐸ⨝ᐸ⨝
- VEP = 󷺹𝌂󷺹∈⟝ᐸᐵ⊂⟝⭜VEP_(⟞)⭝⟞ᐸ⨝ᐘabcABC123+ENC+␛þ
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
-RCD = 󷺹∉ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_›
-SPE = 󷺹∈ENC+␛þ
-bruh = 󰲡󷹜´(x,chars=ENC)
-PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍⁽􍴕⁾⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱ᶜʰᵃʳˢ⁼ᴱᴺ󰀂⁾󷺹₀∘ᵜRCDᐸ⭢⨝␛Þ
-VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌍹􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉ᵇʳᵘʰ⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀∘ᵜSPEᐸ⭢⨝
+RCD = 󷺹⊄ᑅabcABC123+␛_
+SPE = 󷺹⊂ᑅENC+␛þ
+enc = 󷺹ᐖ󷹜´(⟞󷹝,ENC🃌,chars=ENC)ᐸ⨝␛þ
+dec = ⨝○󷺹󷹎␛þᐖ󷹜´(⟞,ENC🃌,chars=ENC)󷹝
+PEV = ⨝○󷺹𝌂RCD󰈲ᵉⁿᶜRCD
+VEP = ⨝○󷺹𝌂SPE󰈲􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒SPE
 py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›⭝ ⟞
 𝖫 = ⥌x=ᐦ,y=4⋅𝘀↦lines(x)ᴍy+⬤⭢⨝𝗻
-
 ⊢ expand_ast_py(󱁕,PEV=PEV):
     ¿󱁕ᵉ ᵀ: ↪󱁕
     ¿󱁕ᵗ≡‹𝗈𝗉›:  MOD(op, 𝚜=…, ᔨ=…)

@@ -1,10 +1,10 @@
  ⨡ rewriters *
 
-gram = __file__ 𝐩 ⭢.parent / ‹gram› ⭢ 
-gram = gram_rp(‹𝗐 𝖶›⍭󰛔ᵍʳᵃᵐ⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
-gram_comm = peggrampeg(gram,ℵ(𝔪=‹comm›))
-gram_scrp = peggrampeg(gram,ℵ(𝔪=‹scrp›))
-gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
+GRAM_PATH = ‹/home/ganer/Projects/Moon_BETA/Libraries/Compiler/gram›
+gram = gram_rp((‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›)((GRAM_PATH)),𝘳,✗)
+gram_comm = peggrampeg(gram,ℵ(M=‹comm›))
+gram_scrp = peggrampeg(gram,ℵ(M=‹scrp›))
+gram_main = peggrampeg(gram,ℵ(M=‹main›))
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,trim_length_info=✓,force_full_match=✗,
               dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
@@ -27,7 +27,6 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
     reform_positions(󱁕,𝚌)
     ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
-    
     add_blocks(󱁕)
     rewrite_ports(󱁕)
     󱁕.ftrp(␛𝐷,󱁕↦󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝗂𝗍𝖾𝗆(⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛
@@ -58,7 +57,6 @@ gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
     grp_blks(󱁕)
     rewrite_strs(󱁕)
     flatten_statments(󱁕)
-    
     󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
     󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)
     󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)

@@ -1,0 +1,115 @@
+⮌ functools ⨡ cache
+⨡ re
+󰋺(__dir__ / ␛🌈)
+
+𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
+
+H, ŧ𝼝 = 𝼞cache(__highlighter__), 𝼞cache(termclr)  
+find_esc_seqs  = re.compile(S≔‹⟦27󷹝⟧\[(?:\d+;2;\d+;\d+;\d+|0)m›)
+find_next_char = re.compile(‹((?:(?:⟦S⟧)|\\033\[0m)*.?)›)
+rm_esc = 𝼞cache(re.sub(find_esc_seqs, ᐦ))
+lines    = 𝚌↦𝚌.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+𝼞ꬷ       = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
+𝼞𝼞       = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
+dotrim   = 𝼞cache(󰲣𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+tspl     = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
+
+⊢ slice_𝚕𝚌(𝚌,𝚙):
+    𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
+    ¿𝙻🃌≡1: 𝙻 = 𝙻₀ 􀲸􊬤﹕􀲸􊬦⛶
+    ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
+    ↪ 𝙻⨝𝗻
+
+@𝼞cache
+⊢ pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
+    l,𝚢 = 𝼞ꬷ(𝚡),𝼞ꬷ(𝚢)
+    ¿l≥𝚢: ↪𝚡
+    Δ = 𝚢-l
+    ¿𝚘≡󷰾: ↪𝚡+Δ⋅𝚣
+    ¿𝚘≡0: ↪[Δ%2⋅𝚣+𝚡]⟗⭠Δ⹏2⋅𝚣
+    ¿𝚘≡1: ↪Δ⋅𝚣+𝚡
+    ✗⨳‹⟦𝚘⟧∉󷰾󷸻1›
+    
+padl     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padc     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padr     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
+linenum  = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡ󱖔ˢ⭢+𝘀+󷺽⭢⨝𝗻)
+linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
+
+@𝼞cache
+⊢ pads(𝚡,w=*,h=*):
+    ¿𝚡ᐹᔐ: 𝚡=𝚡.split(𝗻)
+    ¿w≅*: w = 𝚡ᴍ𝼞ꬷ⭢⤉⁰
+    ¿h≅*: h = 𝚡   ⭢🃌
+    ¿h≇□: 𝚡.extend([𝘀⋅⭠w∨0]⋅⭠h-𝚡🃌)
+    ¿w≇□: 𝚡󷸊ᐵ+𝘀⋅⭠w-𝼞ꬷ(⟞)
+    ↪ 𝚡
+
+@𝼞cache
+⊢ stackr(⠤𝚇):
+    ¿¬𝚇: ↪ᐦ
+    𝚡,⠤𝚈 = 𝚇
+    ¿𝚈🃌≡0: ↪𝚡
+    ¿𝚈🃌>1: ↪stackr(𝚡,stackr(⠤𝚈))
+    𝚢 = 𝚈₀.split(𝗻)
+    ¿🃌𝚡≡1≡𝚢🃌: ↪ 𝚡₀+𝚢₀  optimization
+    ↪ pads(𝚡,*,𝚢🃌)󱑼􊾖𝚢ꟿ+⭢⨝𝗻
+
+@𝼞cache
+⊢ box_(𝚡, fg=‹05059f›, big=✗):
+    𝚡 = pads(𝚡)
+    𝚠 = 𝚡⭜𝼞ꬷ(𝚡₀)⭝0
+    ¿🃌𝚡≡1∧¬big: ↪ŧ𝼝(␛[,fg)+𝚡₀+ŧ𝼝(␛],fg)
+    O,C = ‹⎡⎢⎣ ⎤⎥⎦›⍭ᴍ²ŧ𝼝(⬤,fg)
+    ¿big: ↪ [ŧ𝼝(␛┌+ ␛─⋅𝚠+␛┐,fg),
+             ⠤𝚡ᐖO₁+  ⟞  +C₁    ,
+             ŧ𝼝(␛└+ ␛─⋅𝚠+␛┘,fg)]⨝𝗻
+    ↪ 𝚡 ᙡ ꟿ󰲥Oₙ􊮝₁₋ₓ􊮚􊱃₊􊮚􊱃+y+Cₙ󰅂⭢⨝𝗻
+
+box,BOX = 2⭥ᐖ󰲡box_(xᐹ𝑙|𝑡⭜x⨝𝗻⭝x,⠤𝔸,⠶𝕂,big=⟞)
+
+fmp = 𝑑([ᐦ,␀,⬤,󰮈,✓,✗,□,ⴳ,ⴴ,½,⅓,¼,⅕,⅙,⅐,⅛,⅑,⅒,⅔,⅖,󷶲,󷶷,¾,⅗,󷶳,⅜,󷷆,⅘,󷶴,󷷂,⅚,󷶵,⅝,󷶹,󷶶,⅞,󷶺,󷷇,󷶻,󷷈,↉,󷷉,π,ℇ,∞,î,τ,󷺍,󷺎,󷺏,󷱩,󷱪,󷱬,󷱭,󷱮,󷱯,󷱰,󷱫,𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦]󱑼␛
+        ‹ᐦ󷺗␀󷺗⬤󷺗󰮈󷺗✓󷺗✗󷺗□󷺗ⴳ󷺗ⴴ󷺗½󷺗⅓󷺗¼󷺗⅕󷺗⅙󷺗⅐󷺗⅛󷺗⅑󷺗⅒󷺗⅔󷺗⅖󷺗󷶲󷺗󷶷󷺗¾󷺗⅗󷺗󷶳󷺗⅜󷺗󷷆󷺗⅘󷺗󷶴󷺗󷷂󷺗⅚󷺗󷶵󷺗⅝󷺗󷶹󷺗󷶶󷺗⅞󷺗󷶺󷺗󷷇󷺗󷶻󷺗󷷈󷺗↉󷺗󷷉󷺗π󷺗ℇ󷺗∞󷺗î󷺗τ󷺗󷺍󷺗󷺎󷺗󷺏󷺗󷱩󷺗󷱪󷺗󷱬󷺗󷱭󷺗󷱮󷺗󷱯󷺗󷱰󷺗󷱫󷺗𝑒󷺗𝑜󷺗𝑑󷺗𝑏󷺗𝑙󷺗𝑡󷺗𝑠󷺗ᔐ󷺗𝑖󷺗𝑓󷺗𝑦›)
+fmp󷸊ꟿ⁺󰲣H(y)
+COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
+
+𝐷,𝐿 = (ℵᐹ)|(ℶᐹ)|𝑑, 𝑙|𝑡
+⊢ 𝖿𝗆𝗍(x):
+    try:
+        ¿x∈fmp: ↪fmpₓ
+    except:□
+    T = xᐹ
+    ¿T≅type: ↪H(x.__name__)
+    ¿T≅ᔐ: ↪ŧ𝼝(ᔐ(x),bg="202")
+    ¿T≅𝑖: ↪ᔐ(𝑖(x))
+    ¿T≅𝑓: ↪ᔐ(x▢⁵)
+    ¿xᐹ𝐷: ↪(xᐹ⭢≅𝑑⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+CL+(x.items()ꟿ󰲣‹⟦𝖿𝗆𝗍(x)⟧⟦ARW⟧⟦𝖿𝗆𝗍(y)⟧›󰅂⭢⨝𝘀)+CR
+    ¿xᐹ𝑠: ↪(xᐹ⭢≅𝑠⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+CL+(xᴍ𝖿𝗆𝗍)⨝𝘀+CR
+    ¿xᐹ𝐿: ↪(xᐹ⭢≅𝑙⭜ᐦ⭝𝖿𝗆𝗍(xᐹ))+BL+(xᴍ𝖿𝗆𝗍)⨝𝘀+BR
+    ¿xᐹ𝗙: ↪‹⟦H(x.__name__)⟧›
+    ↪ ᔐ(x)
+Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
+
+__exports__ = ‹rm_esc lines padl padc padr pads stackr ›␛
+              ‹box BOX linenum linewnum dotrim slice_𝚕𝚌 ›␛
+              ‹𝼞ꬷ ŧ𝼝 𝖿𝗆𝗍 Ƥ›⍭
+
+¿__name__≡‹__main__›:
+    tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
+    linewrap(linenum(‹egg salad number twelve fortnite𝗻the last thing you'd want on your burg›),12,3⋅𝘀)☾
+    a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+    b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+    c = box(‹5⭥ᐵ²›)☾
+    d = BOX(‹5⭥ᐵ²›)☾
+    stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
+    padl(‹egg›,11,␛─)☾
+    padl(‹egg›,␛X⋅11,𝘀)☾
+    padc(‹egg›,11,𝘀)☾
+    padc(‹egg›,11,␛─)☾
+    padc(‹lul›,10,␛─)☾
+    padc(‹lads𝗻x›,10,␛─)☾
+    padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
+    padc(‹egg›,11,𝘀)☾
+    padr(‹egg›,11,𝘀)☾
+    padr(‹egg›,11,␛─)☾

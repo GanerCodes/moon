@@ -1,0 +1,4 @@
+⮌ sys ⨡ argv as 𝔸
+i,o = 𝔸₂﹕ᴍ𝐩
+‹⟦𝐩(__file__).name⟧: ⟦i.name⟧ ⟶ ⟦o.name⟧›☾
+(o,󱠨((i),return_code=✓))

@@ -1,0 +1,202 @@
+󰋺(__dir__ / ‹🌈›)
+󰋺(__dir__ / ‹text_format›)
+⮌ collections ⨡ deque as 𝔡𝔮
+
+󱀘 𝐍:
+    __slots__ = ␛t, ␛c
+
+    ⊢ __init__(󱁕, t, ⠤c): 󱁕ᵗ, 󱁕ᶜ = t, c∨[]
+    __iter__ = 󱁕↦iter(󱁕ᶜ)
+    __repr__ = 󱁕↦‹𝐍⟨⟦󱁕ᵗ∨␛∅⟧⟩⟨⟦󱁕⨝␛,𝘀⟧⟩›
+    __getitem__ = ⥌󱁕,i↦󱁕ᶜᵢ
+    __len__  = 󱁕↦󱁕ᶜ🃌
+    ft = 𝒮ℳ←󰲡𝐍(x₀,⠤x₁ᐹ𝑙|𝑡∧x₁🃌≡2 ⭜x₁ᴍ𝐍ᶠᵗ⭝ ₓ􊬤)  from (name, ((…), …))
+    tt = 󱁕↦(󱁕ᵗ,󱁕ᶜᴍ󰲡xᐹ𝐍 ⭜xᵗᵗ⭝ x)  to (name, ((…), …))
+    copy  = ⥌󱁕,t=□,c=□↦(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤c≅□ ⭜󱁕ᶜ⭝ c)
+    rcopy = ⥌󱁕,t=□    ↦(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤󱁕ᐹ𝐍 ⭜󱁕ᶜᴍ(ᐹ󱁕).rcopy⭝ 󱁕)
+    ⊢ frp(󱁕, ƒ, r, pre=✗):
+        𝓡 = 󰲡x.copy(c=xᴍ󰲡x.frp(ƒ,r,pre))
+        󱁕 = 󱁕 ᣆᵖʳᵉ  𝓡
+        ¿ƒ(󱁕): ↪ r(󱁕)
+        ↪   󱁕 ᣆᵖʳᵉ􊽬 𝓡
+    ftrp = ⥌󱁕,fs↦󱁕.frp(󰲡xᵗ∈fs, ⠤𝔸, ⠶𝕂)
+    ⊢ extract(󱁕, 𝑓, E=□, β=✓, Δ=✗, pre=✗):
+        L = r, E = [], E≅□≕γ ⭜[]⭝ E
+        𝝀 = (ℂ≔ᐹ󱁕).extract(⬤,𝑓,E,pre=pre)
+        󱁕ᴍ󰲡L􊴎􊭨􊴒􊭨ₓ􊮝ₓ􋔲􊫻􊪾􊫶􊸩.append(x)
+        n = 󱁕.copy(c= pre ⭜r⭝ rᴍ𝝀)
+        ↪ β∧γ ⭜(Δ ⭜(n,E)⭝ E)⭝ n
+    filter = ⥌󱁕,ƒ↦󱁕.extract(¬○f,⠤𝔸,⠶𝕂,β=✗,Δ=✗)
+    
+    ⊢ P(󱁕, fs=✓):
+        NA, AR, yl, yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
+        ¿󱁕󷹵𝐍: ↪ŧ𝼝(ᔐ(󱁕), ‹f00›)
+        ⊢ format_e(e):
+            ¿¬e: ↪ᐦ
+            r = eꟿ󰲣x∈{␛T,␛p} ⭜󰮈⭝ yᐹŃ ⭜‹⟦x⟧⟦AR⟧⟦yᵗ⟧›⭝ ‹⟦x⟧=⟦y⟧›
+            ↪ (␛p∉e⭜ᐦ⭝ ŧ𝼝(eᵖᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛…󷸓, ‹ff0›)) ␛
+                ᣆʳ 󷺻stackr(⟞,r⨝𝗻)
+        𝚛 = box((󱁕ᵗᐹ𝐍 ⭜󱁕ᵗ ᴾ(✗)⭝ 󱁕ᐹŃ ⭜stackr(ŧ𝼝(󱁕ᵗ,‹f55›),format_e(󱁕ᵉ))⭝ ᔐ(󱁕ᵗ)) ∨ NA,
+                fg=󱁕ᐹŃ∧󱁕ᵉ ᵀ ⭜‹0f0›⭝ ‹00007f›)
+        ¿󱁕🃌:
+            ─,╰,├,┬,│ = ‹─╰├┬│›ᴍŧ𝼝(fg=‹11a›)
+            𝚛 = stackr(𝚛, 󱁕↨ꟿ󰲣yᴾ(✗).split(𝗻)↨␛
+                    ꟿ⥌𝚡,𝚢↦𝚢+ᵜ(
+                        𝚡󷺥󱁕🃌≠1 ⭜  ─  ⭝  ␛
+                        x≡󱁕🃌-1 ⭜𝚡∧𝘀∨╰⭝  ␛
+                        𝚡󷺥󱁕🃌≡0 ⭜x∧├∨┬⭝│ )󰅂⭢⨝𝗻󰅂⭢⨝𝗻)
+        ↪ fs ⭜𝚛☾►󱁕⭝ 𝚛
+
+ Mutable and has attributes
+ <Ń>.e.T is used as a flag to determine if it is a text node.
+ <Ń>.e.p is used as a (start_pos, end_pos) map to source-code when dealing ⓦ transpilers
+󱀘 Ń(𝐍):
+    __slots__ = ␛t,␛c,␛e
+    ⊢ __init__(󱁕, t, ⠤c, e=␀):
+        󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
+         ∀z∈󱁕ᶜ:
+             ¿z󷹵Ń:
+                 ✗⨳‹⟦t⟧; ⟦z⟧, ⟦c⟧›
+    __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
+    __repr__ = 󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
+    __setitem__ = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
+    __and__ = 󰲣xᵗ≡yᵗ
+    ⊢ __getitem__(󱁕,i): ↪󱁕ᶜᵢ
+    ⊢ __delitem__(󱁕,i): 󰆴󱁕ᶜᵢ
+    ⊢ set(󱁕,t=□,c=□,e=□):
+        ¿t≇□: 󱁕ᵗ=t
+        ¿c≇□: 󱁕ᶜ=c
+        ¿e≇□: 󱁕ᵉ=e
+        ↪ 󱁕
+    cp =copy = ⥌󱁕,t=□,c=□,e=␀↦(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤c≅□ ⭜󱁕ᶜ⭝ c, e=e≅␀ ⭜󱁕ᵉ.copy⭝ e)
+    cpr=rcopy= ⥌󱁕,t=□        ↦󱁕ᐹ𝐍 ⭜(ᐹ󱁕)(t≅□ ⭜󱁕ᵗ⭝ t, ⠤󱁕ᶜᴍ(ᐹ󱁕).rcopy, e=󱁕ᵉ.copy())⭝ 󱁕
+    
+    ⊢ part(󱁕):
+        󱁕ᶜ = 󱁕ᶜ ∖ 󱁕ᵉ ⁺
+        ↪ 󱁕, 󱁕ᵉ
+    
+    ⊢ frp(󱁕,ƒ,r,pre=✗,not_T=✓):
+        ¿r≅□: ↪r↦󱁕.frp(ƒ,r,pre,not_T)
+        
+        ¿not_T: ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
+        
+          ⊢𝓡(): ∀i,y∈󱁕↨: 󱁕ᵢ = y.frp(ƒ,r,pre)
+          ¿ pre: 𝓡
+          ¿ƒ(󱁕): ↪r(󱁕)
+          ¿¬pre: 𝓡
+          ↪ 󱁕
+        
+         ¿pre: ⊢𝓡(󱁕): ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                      ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+         ¡   : ⊢𝓡(󱁕): ¿ƒ(󱁕): ↪r(󱁕)
+                      ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                      ↪󱁕
+         ↪ 𝓡(󱁕)
+        
+        ¿pre:
+            ¿󱁕🃌¬: ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+            𝚂,𝚃 = 𝔡𝔮(􋑺),𝔡𝔮()
+            pl,ex,al = 𝚂.popleft,𝚂.extend,𝚃.appendleft
+            ➰𝚂:
+                C = pl()
+                ex(c∀c∈C¿cᶜ)
+                al(C)
+            ∀C∈𝚃:
+                ∀i,c∈enumerate(C):
+                    ¿ƒ(c): Cᵢ=r(c)
+            ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+        ¡:  󰤱 rewrite this to be fast
+            ⊢𝓡(󱁕):
+                ¿ƒ(󱁕): ↪r(󱁕)
+                ∀i,y∈enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                ↪ 󱁕
+            ↪ 𝓡(󱁕)
+    ⊢ ftrp(󱁕,fs,ƒ,pre=✗,not_T=✓,⠶𝓚):
+        ¿ƒ≅□: ↪ƒ↦󱁕.ftrp(fs,ƒ,pre,not_T,⠶𝓚)
+        ¿fs󷹵ᔐ: fs = frozenset(fs)
+        ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(fsᐹᔐ ⭜󰲡xᵗ≡fs󰅂⭝ 󰲡xᵗ∈fs󰅂,ƒ,pre,not_T,⠶𝓚)
+    
+    ⊢ gets(󱁕, ƒ, not_T=✓):
+        ¿𝗙(ƒ)¬:
+            ¿ƒᐹᔐ: ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ≡t
+            ¡   : ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ∈t
+        ↪ [c∀c∈󱁕¿(not_T󷺒cᵉ ᵀ)∧ƒ(c)]
+    
+    ⊢ find(󱁕, ƒ, pre=✓, not_T=✓, R=□):
+        ¿R≅□: R=[]
+        ¿not_T ∧ 󱁕ᵉ ᵀ: ↪R
+        ¿pre         :
+                       ∀c∈󱁕: c.find(ƒ,✓,not_T,R)
+        ¿do≔ƒ(󱁕)     : R.append(󱁕)
+        ¿do ∧ ¬pre   :
+                       ∀c∈󱁕: c.find(ƒ,✗,not_T,R)
+        ↪ R
+    
+    ⊢ flat(󱁕, ƒ, 𝔯=✓):
+        C = []
+        ∀c∈󱁕:
+            (cᵉ ᵀ ∨ ¬ƒ(c≔⬅𝔯⭜c.flat(ƒ)⭝c) ⭜C.append⭝ C.extend)(c)
+        󱁕ᶜ = C
+        ↪ 󱁕
+    
+    ⊢ kill_children(󱁕, ƒ, not_T=✓):
+        ¿ƒᐹᔐ: ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ≡t
+        ∀i,x∈󱁕↨ᴙ:
+            ¿not_T ∧ xᵉ ᵀ: ↺
+            ¿ƒ(x): 󰆴 󱁕ᵢ
+            ¡    : 󱁕ᵢ.kill_children(ƒ, not_T)
+        ↪ 󱁕
+    
+    ⊢ as_txt(󱁕):
+        𝚛 = 󷺗
+        
+        ¿󱁕ᵉ ᵀ: ↪󱁕ᵗ
+        𝚀 = 𝔡𝔮(󱁕ᶜ)
+        ➰𝚀:
+            v = 𝚀.popleft()
+            ¿vᵉ ᵀ¬: 𝚀.extendleft(reversed(vᶜ))
+            ¡     : 𝚛=𝚛+vᵗ
+        ↪ 𝚛
+        
+         ⊢ ƒ(󱁕):
+             nonlocal 𝚛
+             ¿󱁕ᵉ ᵀ: r 󷸊+ 󱁕ᵗ
+             ¡    : (ƒ(c)∀c∈󱁕)
+         ƒ(󱁕)
+         ↪ 𝚛
+    __pos__ = as_txt
+    
+    ⊢ lchar(󱁕):
+        ¿󱁕ᵉ ᵀ∧󱁕ᵗ: ↪󱁕ᵗ₀
+        ∀c∈󱁕ᶜ:
+            ¿c.lchar()≕x: ↪x
+        ↪󷺗
+    ⊢ rchar(󱁕):
+        ¿󱁕ᵉ ᵀ∧󱁕ᵗ: ↪󱁕ᵗ􍨄
+        ∀c∈󱁕ᶜᴙ:
+            ¿c.rchar()≕x: ↪x
+        ↪󷺗
+    
+    ⊢ farnodes(󱁕,ƒ=󷺹ᵉ ᵀ¬):
+        α=β=󱁕
+        ➰ƒ(α)∧🃌α: α=α₀
+        ➰ƒ(β)∧🃌β: β=β􍨄
+        ↪ α,β
+    
+    ⊢ first_l(󱁕,ƒ):  sort t⟶b, l⟶r
+        ¿ƒ(󱁕): ↪󱁕
+        ∀𝒏∈󱁕:
+            ¿𝒏.first_l(ƒ)≕l≇□: ↪l
+    ⊢ first_r(󱁕,ƒ):  sort t⟶b, r⟶l
+        ¿ƒ(󱁕): ↪󱁕
+        ∀𝒏∈󱁕﹕﹕􍨄:
+            ¿𝒏.first_r(ƒ)≕r≇□: ↪r
+    ⊢ first_sides(󱁕,ƒ):
+        ↪ 󱁕.first_l(ƒ), 󱁕.first_r(ƒ)
+    rm = child_killer = kill_children
+    filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.kill_children(¬○ƒ, ⠤𝔸, ⠶𝕂)
+
+⮌ sys ⨡ modules
+󱀘 _: 𝐍,Ń = 𝐍,Ń
+modules.setdefault(PEV(␛𝐍), _)
+__exports__ = ␛𝐍, ␛Ń

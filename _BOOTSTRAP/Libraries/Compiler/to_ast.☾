@@ -1,8 +1,9 @@
 󰋺(‹rewriters›, *)
-gram = gram_rp(∘(𝐩(__file__).parent/‹gram›)⥉‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
-gram_comm = peggrampeg(gram,ℵ(𝔪=‹comm›))
-gram_scrp = peggrampeg(gram,ℵ(𝔪=‹scrp›))
-gram_main = peggrampeg(gram,ℵ(𝔪=‹main›))
+GRAM_PATH = ‹/home/ganer/Projects/Moon_BETA/Libraries/Compiler/gram›
+gram = gram_rp((‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›)((GRAM_PATH)),𝘳,✗)
+gram_comm = peggrampeg(gram,ℵ(M=‹comm›))
+gram_scrp = peggrampeg(gram,ℵ(M=‹scrp›))
+gram_main = peggrampeg(gram,ℵ(M=‹main›))
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,trim_length_info=✓,force_full_match=✗,
               dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):

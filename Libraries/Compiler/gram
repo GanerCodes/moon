@@ -12,7 +12,7 @@ SB='󰜞'
 SP='󰜚'
 SE='󰜛'
 
-main = gram_%⦃𝔪⦄%
+main = gram_%⦃M⦄%
 
 gram_main = stmts ∨ 𝖶
 gram_comm = (⠶(str ∨ native_code) ∨ comment ∨ ~‹.|\n›)*
@@ -47,7 +47,7 @@ grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%⦃𝔪≡‹scrp› ⭜‹σscript∨›⭝ 𝔪≡‹comm› ⭜‹comment∨σscript∨›⭝ ''⦄% grp
+𝑎↓↓ = (%⦃M≡‹scrp› ⭜‹σscript∨›⭝ M≡‹comm› ⭜‹comment∨σscript∨›⭝ ''⦄% grp
            ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
            ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp
            ∨ number ∨ 𝑣_spec ∨ 𝑣)

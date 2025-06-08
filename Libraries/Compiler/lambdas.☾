@@ -49,7 +49,7 @@
 ⊢ reformat_whiskers(󱁕):
     ⊢ (󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ᵉ ᴼ ᵗ∈‹␀T ␀T⟞ ␀T⟝ ␀T⟞⟝›⍭,□,✓)) (󱁕):
          ignores modifiers, is this bad?
-         󰤱 prob redo this for eval order, ughhhhhhh
+         󰤱 prob redo this for eval order, reeeeeeeeeeeee
         ƒ,𝚊,𝚋 = 󱁕
         α,β = 𝚊≠𝖭𝖴𝖫𝖫, 𝚋≠𝖭𝖴𝖫𝖫
         𝚕,𝚛 = ƒᵉ ᵏ

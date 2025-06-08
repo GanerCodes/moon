@@ -1,6 +1,6 @@
 󰋺(‹tree_txt›, *)
 
-⊢ denode_op(󱁕):  󰤱 this doesn't work if mod has newlines
+⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
     l,o,r = 󱁕
     𝚘 = OP_TABLE󰂼􊬣􊫼
     𝚕,𝚛 = l⋄rᐵᐵᵗ≡‹𝚜›⭜⟞⭝𝒩(⟞₀ᵗ,⠤⟞₁﹕)
@@ -12,17 +12,17 @@
      󰤱 following seems jank
     ∀t∈L:
         ¿t≡␛⟥: 𝚘ᴸ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,✗,✓,✗
-        ⸘t≡␛≺: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = 𝒪􊯛􊫟ᴸ,⍁,✗,✓,✗
+        ⸘t≡␛≺: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = 𝒪􊯛􊫟ᴸ.copy,⍁,✗,✓,✗
     ∀t∈R:
         ¿t≡␛⟤: 𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,✓,✗,✗
-        ⸘t≡␛≻: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,𝒪􊯛􊫟ᴿ,✓,✗,✗
+        ⸘t≡␛≻: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,𝒪􊯛􊫟ᴿ.copy,✓,✗,✗
         ⸘t≡␛ᵜ: □  𝚘ᴸ☾,𝚘ᴿ☾ 𝚘ᴸ,𝚘ᴿ = 𝚘ᴿ.copy,𝚘ᴸ.copy
         ⸘t≡␛꜠:
             ¿𝚘ᴮ:
                 𝚘ᴮ=✗
                 ¿𝚘ᴾ󷺥𝚘󰀒:  if bin only make it not; keeps side
                     𝚘ᴾ=𝚘󰀒=✓
-            ⸘𝚘ᴾ∨𝚘󰀒:  if we're already unary make it either side
+            ⸘𝚘ᴾ∨𝚘󰀒:  if were already unary make it either side
                 𝚘ᴸ=𝚘ᴿ=𝚘ᴸ∪𝚘ᴿ
                 𝚘ᴾ=𝚘󰀒=✓
             ¡:
