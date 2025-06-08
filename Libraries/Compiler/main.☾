@@ -1,5 +1,3 @@
- BOOTSTRAP β
-
 ⦃from sys import stdin as ⦃ℑ𝔑⦄, argv as ⦃𝔸⦄⦄
 ⦃from time import time as ⦃𝓉⦄⦄
 ⦃from subprocess import Popen⦄
@@ -8,42 +6,23 @@
 ⨡ ast_to_py
  ⨡ tree *
 
-BASE     = 𝐩(‹/home/ganer/Projects/Moon_BETA›)
-COMPILER = ‹python3 ⟦BASE⟧/STAGES/BOOTSTRAP_β.py›
-BINARY   = ‹python3›  ‹pypy3.11›
-CODE     = ᐦ
-DEST     = (BASE / ‹STAGES/Δ.py›).resolve
-TMP      = mkd(‹/tmp/γ›)
-𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0🟑2🟑)
+IDENT     = ␛Δ
+BASE      = ‹/home/ganer/Projects/Moon_BETA›𝐩
+COMPILER  = ‹python3 ⟦BASE⟧/STAGES/BOOTSTRAP_⟦IDENT⟧.py›
+BINARY    = ‹python3›  ‹pypy3.11›
+DEST      = ‹/tmp/⟦IDENT⟧_bootstrap.py›𝐩
+TMP       = mkd(‹/tmp/⟦IDENT⟧›)
+𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
 
-mod_files = ⍁
-𝐦 = 󰲡mod_files.append(x)►x
-tof = 󷺼BASE/‹⟦⟞⟧.☾›⭢.resolve
-
-code_files=[⠤𝐩(‹Header›)ᑀ/ᑈ(BASE/‹Header/builtins›)󷹎,
-            ‹Libraries/text_format›󱖔􋆧,
-            ‹Libraries/𝐍›󱖔􋆧,
-            ‹Libraries/peggle2/main›󱖔􋆧,
-            ‹Libraries/peggle2/rgx_golfatron›󱖔􋆧,
-            ‹Libraries/peggle2/gram_tools›󱖔􋆧,
-            ‹Libraries/Compiler/generate_operators›,
-            ‹Libraries/Compiler/op_table›,
-            ‹Libraries/Compiler/node_types›,
-            ‹Libraries/Compiler/tree›,
-            ‹Libraries/Compiler/tree_txt›,
-            ‹Libraries/Compiler/expr›,
-            ‹Libraries/Compiler/lambdas›,
-            ‹Libraries/Compiler/rewriters›,
-            ‹Libraries/Compiler/to_ast›,
-            ‹Libraries/Compiler/ast_to_py›,
-            ‹Libraries/Compiler/main›]
-code_files,mod_files = code_files⋄mod_filesᴍtof
-
-show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))ᣆʸ󷺹☾►x
+   header_com = BASE/‹Header󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Header/builtins›)󷹎
+bootstrap_com = BASE/‹Libraries/Compiler›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹generate_operators op_table node_types tree tree_txt expr lambdas rewriters to_ast ast_to_py main›
+bootstrap_lib = BASE/‹Libraries󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹𝐍 text_format peggle2/main peggle2/rgx_golfatron peggle2/gram_tools›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+compile_f2f = 󰲣x  moon_to_py ᐒy⭜􍪵(y,⟞)
 ⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
+    show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))ᣆʸ󷺹☾►x
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
     ¿show_py_ast: 𝑩𝑩(to_py(𝚌)(󱁕.cpr,get_tree=✓,no_rename_vars=✓),‹PY AST›)
@@ -52,46 +31,50 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
     show(pyc≔to_py(𝚌)(󱁕.cpr,reparse=✓),✗)☾
     ↪pyc
 
-reewrap = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
-⊢ cached_transpile(𝚙,instant=✗):
-    𝚘 = TMP/‹⟦sha(TMP,𝚙󷸊.resolve,(𝚙))⟧.py›
-    ‹⟦padl(𝚙.name,25)⟧ ⭢ ⟦𝚘.name⟧›☾
-    ⊢ rd(): 𝚌 = reewrap(𝚙,(𝚘))
-            ¿𝚙∈mod_files: 𝚌 = ‹𝗻# ⟦𝚙⟧⟶⟦𝚘⟧𝗻exec(⟦repr(𝚌)⟧,__:=globals().copy())𝗻for k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
+inform_fp = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
+⊢ compile_f_cache(𝚙,lib_file=✗,instant=✗):
+    𝚘 = TMP/‹⟦sha(TMP,𝚙󷸊.resolve,𝚙 )⟧.py›
+    ‹⟦IDENT⟧: ⟦padl(𝚙.name,25)⟧ ⭢ ⟦𝚘.name⟧›☾
+    ⊢ rd(): 𝚌 = inform_fp(𝚙,𝚘 )
+            ¿lib_file: 𝚌 = ‹𝗻# ⟦𝚙⟧⟶⟦𝚘⟧𝗻exec(⟦repr(𝚌)⟧,__:=globals().copy())𝗻for k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
             ↪𝚌
     v = rd
-    ¿𝚘.is_file¬: p = Popen(‹bash -c ⟦COMPILER⟧ o '⟦𝚙⟧' '⟦𝚘⟧'›⍭)
-                  v = 𝚲p.wait►p.returncode¬⨳‹❗ ⟦𝚙⟧⟶⟦𝚘⟧ failed!›➡►rd
+    ¿𝚘.is_file¬: ¿instant: v = 𝚲compile_f2f(𝚙,𝚘)►rd
+                  ¡       : p = Popen(‹bash -c ⟦COMPILER⟧ o '⟦𝚙⟧' '⟦𝚘⟧'›⍭)
+                            v = 𝚲p.wait►rd
     ¿instant: v = 󰻾ᵛ􋅯
     ↪v,𝚙,𝚘
-⊢ make_header(): 𝚝=𝓉
-                 h = code_filesᴍcached_transpileᐵ₀ᐸ⨝𝗻
-                 ‹Head compile took: ⟦𝓉-𝚝⟧›☾
-                 ↪h
 
-𝖠,pre = 𝔸₁﹕,ᐦ
-¿𝖠🃌≥2: ¿𝖠₀≡␛o: (𝖠₂,𝖠₁  moon_to_py) ⭢►⭠exit
-       ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ⭢►⭠exit
-       ¿𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ⭢►⭠exit
-       ⸘𝖠₀≡␛f: code=(𝖠₁)
-       ⸘𝖠₀≡␛F: code=(𝖠₁) ; pre=make_header
-       ¡     : code=𝖠₁﹕⨝𝘀
-       ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
-       ¿𝖠₀≡␛x: pre = make_header
-       ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
-¡    : ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
-       pre, code = make_header, 𝖠⭜reewrap(𝖠₀,𝖠₀ )⭝CODE
+⊢ compile_files(F,lib_idx=⍁,instant=✗):
+    files = F↨ꟿ󰲣compile_f_cache(y,x∈lib_idx,instant)
+    ↪filesᐵ₀ᐸ⨝𝗻
 
-𝚝=𝓉
-   pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
-¡:  ‹⟦__file__⟧: Failed to compile!›☾
-    moon_to_py_debug(code,show_preast=✓)
-    exit
-‹Provided compile took: ⟦𝓉-𝚝⟧›☾
-(DEST,pyc)
-‹⟦__file__⟧: Wrote code to ⟦DEST⟧›☾
-¿𝖠: ‹Executing ⟦DEST⟧›☾
-    𝚝=𝓉
-    r=(p≔Popen(‹⟦BINARY⟧ -u ⟦DEST⟧›⍭)).wait►p.returncode
-    ‹Execution took: ⟦𝓉-𝚝⟧›☾
-    ¿r: ŧ𝼝(‹⟦__file__⟧: ERROR ⟦r⟧! ›,‹f33›)☾
+⊢ generate_bootstrap(dest=‹/tmp/bootstrap.py›𝐩):
+    idx = header_com🃌ᑀ+ᑈbootstrap_lib⭥
+    pyc = compile_files(header_com+bootstrap_lib+bootstrap_com,idx)
+    ¿dest: (dest,pyc)
+    ↪pyc
+
+¿__name__≡‹__main__›:
+𝖠 = 𝔸₁﹕
+¿𝖠🃌: ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ──→ ⟦PEV(⟞)⟧›☾ᐸ
+     ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ──→ ⟦VEP(⟞)⟧›☾ᐸ
+     ⸘𝖠₀≡␛b: generate_bootstrap(𝖠🃌>1⭜𝖠₁𝐩⭝DEST)
+     ⸘𝖠₀≡␛o: compile_f2f(𝖠₁,𝖠🃌>2⭜􋄅𝖠₂)
+     ⸘𝖠₀≡␛r: exec(                            moon_to_py(𝖠₁﹕⨝𝘀))
+     ⸘𝖠₀≡␛R: exec(compile_files(header_com)+𝗻+moon_to_py(𝖠₁﹕⨝𝘀))
+¡  : ‹Usage: e <str_to_encode>
+             d <str_to_decode>
+             b <boostrap_dest>?      - ⟦DEST⟧ default
+             o <file_in> <file_out>? - stdout default
+             r <code_to_run>         - no header
+             R <code_to_run>         - includes header›☾
+
+    ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
+    ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
+ ¡    : ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
+
+    pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
+ ¡:  ‹⟦__file__⟧: Failed to compile!›☾
+     moon_to_py_debug(code,show_preast=✓) ► exit
+     ¿r: ŧ𝼝(‹⟦__file__⟧: ERROR ⟦r⟧! ›,‹f33›)☾

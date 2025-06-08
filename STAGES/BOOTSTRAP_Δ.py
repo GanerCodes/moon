@@ -1404,26 +1404,39 @@ def highlight_tester():
 
 __file__='/home/ganer/Projects/Moon_BETA/Header/meta.☾'
 (IMPSIMPS := (('ℍ', 'ℍ\U000f7e19\U000f7e18\U000f7e1b\U000f7e1a\U000f7e17\U000f7e16\U000f7e1c\U000f7e3d\U000f7e15ĵ\U000f7e88\U000f7c7d\U000f7c7e'), ('⫚', '⫚'), ('¶', '¶✿')))
+(IMPORTS := ÐÌü(ÂÑÖ()))
 
-def __ÄÊADDGLOBALS_CLEAN__(M, áÒÿ):
-    getattr(áÒÿ, 'update')(M)
+class Module(ÁØö(ÐÌü(ÂÑÖ()))):
+
+    def __init__(áÑÞ, name, ns):
+        (ÄÊPSH(áÑÞ), ÄÊPSH('name'), ÄÊPSH(name), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        super(ns)
+    (__repr__ := (lambda áÑÞ: 'Module "%s"' % (getattr(áÑÞ, 'name'),)))
 
 def __ÄÊIMPORT__(p, áÒÿ):
     MOD(Âçß, áØÁ=ÁØã)('.')
     return
-    (p := áÌî('/tmp/compiled_Libraries$$%s.py' % (MOD(ÄÔéÄ, áØÁ=p)('/', 2 * '$'),)))
-    (ÄÊPSH((getattr(p, 'name'), ÐØó(p))), ((name := ÄÊPKE(0)[0]), (áÖïþáÖüþáÖðþáÖñ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
-    (ns := getattr(áÒÿ, 'copy')())
-    getattr(ns, 'pop')('__EXPORTS__', None)
-    (ÄÊPSH(ns), ÄÊPSH('__file__'), ÄÊPSH(ns), ÄÊPSH('__dir__'), ÄÊPSH((p, getattr(p, 'parent'))), (setitem(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[0]), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[1])), ÄÊDEL(5))[5]
-    exec(áÖïþáÖüþáÖðþáÖñ, ns, ns)
-    getattr(áÒÿ, 'update')(getattr(ns, 'get')('__EXPORTS__', {}))
-    return ns
+    (failed := ÂÚü())
+    for D in (getattr(áÒÿ, '__dir__'), ÐÌü(pwd), ð(moon_dir, 'Libraries')):
+        for F in (*([p] if ÐÌü(getattr(p, 'is_absolute')) else ÂÚü()), *ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ð(ÂîÓ, ÂîÒ))(D, (p, '%s.☾' % (p,), ð(p, 'main.☾'), ð(p, getattr(p, 'name'))))):
+            (ÄÊPSH(F), ÄÊPSH(ÐÌü(getattr(ÄÊPKE(0), 'resolve'))), (F := ÄÊPKE(0)), ÄÊDEL(2))[2]
+            if ÐÌü(getattr(F, 'is_file')):
+                (found := F)
+                break
+            else:
+                getattr(failed, 'append')(F)
+    else:
+        ÂùÆ(False, 'Unable to find module! Paths checked:%s' % (ÂîÊ(failed, '\n'),))
+    (ns := {'__file__': F, '__dir__': getattr(F, 'parent')})
+    return (ÄÊPSH(IMPORTS), ÄÊPSH(F), ÄÊPSH(Module(getattr(p, 'name'))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
 
 def __ÄÊADD_EXPORTS__(áÒÿ, *áÑË):
     (E := getattr(áÒÿ, 'setdefault')('__EXPORTS__', {}))
     getattr(E, 'update')({**dict(áÑË)})
     return E
+
+def __ÄÊADDGLOBALS_CLEAN__(M, áÒÿ):
+    getattr(áÒÿ, 'update')(M)
 from subprocess import Popen
 
 def ÄÕôñ(áÖï, ns=None, get_code=False):
@@ -2450,23 +2463,22 @@ from subprocess import Popen
 __ÄÊIMPORT__('text_format', globals())
 __ÄÊIMPORT__('to_ast', globals())
 __ÄÊIMPORT__('ast_to_py', globals())
-(BASE := áÌî('/home/ganer/Projects/Moon_BETA'))
-(COMPILER := ('python3 %s/STAGES/BOOTSTRAP_β.py' % (BASE,)))
+(IDENT := 'Δ')
+(BASE := ÂÞÅCAT('/home/ganer/Projects/Moon_BETA', áÌî))
+(COMPILER := ('python3 %s/STAGES/BOOTSTRAP_%s.py' % (BASE, IDENT)))
 (BINARY := 'python3')
-(CODE := ÁØã)
-(DEST := ÐÌü(getattr(ð(BASE, 'STAGES/BOOTSTRAP_Δ.py'), 'resolve')))
-(TMP := mkd('/tmp/γ'))
+(DEST := ÂÞÅCAT('/tmp/%s_bootstrap.py' % (IDENT,), áÌî))
+(TMP := mkd('/tmp/%s' % (IDENT,)))
 (áÑð := ÂÑÖ()(show_preast=False, show_ast=False, show_py_ast=False, dbg_parser=0))
-(mod_files := ÂÚü())
-(áÌë := (lambda x: ÂåÔ(getattr(mod_files, 'append')(x), x)))
-(tof := MOD(ÁØò(lambda ÂîÓ: ÐÌü(getattr(ð(BASE, '%s.☾' % (ÂîÓ,)), 'resolve')))))
-(code_files := [*ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ð(ÂîÓ, ÂîÒ))(áÌî('Header'), ÄÝöÞ(ÐØó(ð(BASE, 'Header/builtins')))), MOD(ÄÕéý, áØÁ=áÌë)('Libraries/text_format'), MOD(ÄÕéý, áØÁ=áÌë)('Libraries/𝐍'), MOD(ÄÕéý, áØÁ=áÌë)('Libraries/peggle2/main'), MOD(ÄÕéý, áØÁ=áÌë)('Libraries/peggle2/rgx_golfatron'), MOD(ÄÕéý, áØÁ=áÌë)('Libraries/peggle2/gram_tools'), 'Libraries/Compiler/generate_operators', 'Libraries/Compiler/op_table', 'Libraries/Compiler/node_types', 'Libraries/Compiler/tree', 'Libraries/Compiler/tree_txt', 'Libraries/Compiler/expr', 'Libraries/Compiler/lambdas', 'Libraries/Compiler/rewriters', 'Libraries/Compiler/to_ast', 'Libraries/Compiler/ast_to_py', 'Libraries/Compiler/main'])
-(ÄÊPSH(Áÿú([code_files, mod_files], tof)), ((code_files := ÄÊPKE(0)[0]), (mod_files := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
-(show := (lambda x, y=True, d=100: MOD(Áëý, áØÁ=y)(BOX(linewnum(x, d=d, s=ÄÊCUR((1,), {'fg': '915'}, Åøþáüì, ÂýÃ))), lambda ÂîÓ: ÂåÔ(Âçß(ÂîÓ), x))))
+(header_com := ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ÐÌü(getattr(ð(ÂîÓ, '%s.☾' % (ÂîÒ,)), 'resolve')))(ð(BASE, 'Header'), ÄÝöÞ(ÐØó(ð(BASE, 'Header/builtins')))))
+(bootstrap_com := ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ÐÌü(getattr(ð(ÂîÓ, '%s.☾' % (ÂîÒ,)), 'resolve')))(ð(BASE, 'Libraries/Compiler'), ÂÛê('generate_operators\u2009op_table\u2009node_types\u2009tree\u2009tree_txt\u2009expr\u2009lambdas\u2009rewriters\u2009to_ast\u2009ast_to_py\u2009main')))
+(bootstrap_lib := ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ÐÌü(getattr(ð(ÂîÓ, '%s.☾' % (ÂîÒ,)), 'resolve')))(ð(BASE, 'Libraries'), ÂÛê('𝐍\u2009text_format\u2009peggle2/main\u2009peggle2/rgx_golfatron\u2009peggle2/gram_tools')))
 (to_py := (lambda áÖï, *áÑË, **áÑÕ: lambda *áÑË, **áÑÕ: ast_to_py(*áÑË, áÖï=áÖï, **áÑÕ)))
 (moon_to_py := (lambda áÖï, áÖÝ={}, áÏè={}: to_py(áÖï)(to_ast(áÖï, **áÖÝ), **{'reparse': True, **áÏè})))
+(compile_f2f := (lambda x, y: (lambda ÂîÓ: ÐØì(y, ÂîÓ) if y else ÂîÓ)(ÂÞÅCAT(ÂÞÅCAT(x, ÐØó), moon_to_py))))
 
 def moon_to_py_debug(áÖï, show_preast=True, show_ast=True, show_py_ast=False, **áÑÕ):
+    (show := (lambda x, y=True, d=100: MOD(Áëý, áØÁ=y)(BOX(linewnum(x, d=d, s=ÄÊCUR((1,), {'fg': '915'}, Åøþáüì, ÂýÃ))), lambda ÂîÓ: ÂåÔ(Âçß(ÂîÓ), x))))
     (ÄÕÒü := to_ast(áÖï, dbg_show_gram_tree=show_preast, **áÑÕ))
     if show_ast:
         áÍñþáÍñ(ÄÕÒü, 'AST')
@@ -2476,69 +2488,52 @@ def moon_to_py_debug(áÖï, show_preast=True, show_ast=True, show_py_ast=False,
     Âçß(padc(' CODE ', p, '─') + '\n' + p)
     Âçß(show((pyc := to_py(áÖï)(ÐÌü(getattr(ÄÕÒü, 'cpr')), reparse=True)), False))
     return pyc
-(reewrap := (lambda x, y: '\n__file__=%s\n%s' % (repr(ÂÕÅ(ÁÜÙ, x)), y)))
+(inform_fp := (lambda x, y: '\n__file__=%s\n%s' % (repr(ÂÕÅ(ÁÜÙ, x)), y)))
 
-def cached_transpile(áÖý, instant=False):
-    (áÖü := ð(TMP, '%s.py' % (sha(TMP, (ÄÊPSH(áÖý), ÄÊPSH(ÐÌü(getattr(ÄÊPKE(0), 'resolve'))), (áÖý := ÄÊPKE(0)), ÄÊDEL(2))[2], ÐØó(áÖý)),)))
-    Âçß('%s ⭢ %s' % (padl(getattr(áÖý, 'name'), 25), getattr(áÖü, 'name')))
+def compile_f_cache(áÖý, lib_file=False, instant=False):
+    (áÖü := ð(TMP, '%s.py' % (sha(TMP, (ÄÊPSH(áÖý), ÄÊPSH(ÐÌü(getattr(ÄÊPKE(0), 'resolve'))), (áÖý := ÄÊPKE(0)), ÄÊDEL(2))[2], ÂÞÅCAT(áÖý, ÐØó)),)))
+    Âçß('%s: %s ⭢ %s' % (IDENT, padl(getattr(áÖý, 'name'), 25), getattr(áÖü, 'name')))
 
     def rd():
-        (áÖï := reewrap(áÖý, ÐØó(áÖü)))
-        if áÖý in mod_files:
+        (áÖï := inform_fp(áÖý, ÂÞÅCAT(áÖü, ÐØó)))
+        if lib_file:
             (áÖï := ('\n# %s⟶%s\nexec(%s,__:=globals().copy())\nfor k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v\n' % (áÖý, áÖü, repr(áÖï))))
         return áÖï
     (v := rd)
     if not ÐÌü(getattr(áÖü, 'is_file')):
-        (p := Popen(ÂÛê("bash\u2009-c\u2009%s o '%s' '%s'" % (COMPILER, áÖý, áÖü))))
-        (v := (lambda: ÂåÔ(ÂùÆ(ÂåÔ(ÐÌü(getattr(p, 'wait')), not getattr(p, 'returncode')), '❗ %s⟶%s failed!' % (áÖý, áÖü)), ÐÌü(rd))))
+        if instant:
+            (v := (lambda: ÂåÔ(compile_f2f(áÖý, áÖü), ÐÌü(rd))))
+        else:
+            (p := Popen(ÂÛê("bash\u2009-c\u2009%s o '%s' '%s'" % (COMPILER, áÖý, áÖü))))
+            (v := (lambda: ÂåÔ(ÐÌü(getattr(p, 'wait')), ÐÌü(rd))))
     if instant:
         (v := MOD(ÄÕÍÔ, áØÁ=ÐÌü(v)))
     return (v, áÖý, áÖü)
 
-def make_header():
-    (áØÂ := ÐÌü(áÏÖ))
-    (h := Âøî(ÁØò(lambda ÂîÓ: ÐÌü(ÂîÓ[0]))(Áÿú(code_files, cached_transpile)), '\n'))
-    Âçß('Head compile took: %s' % (ÐÌü(áÏÖ) - áØÂ,))
-    return h
-(ÄÊPSH((áÑË[slice(1, None)], ÁØã)), ((áÒø := ÄÊPKE(0)[0]), (pre := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
-if ãÊú(áÒø) >= 2:
-    if áÒø[0] == 'o':
-        ÂåÔ(ÐØì(áÒø[2], ÂÞÅCAT(ÂÞÅCAT(áÒø[1], ÐØó), moon_to_py)), ÐÌü(exit))
-    if áÒø[0] == 'e':
-        ÂåÔ(ÁØò(lambda ÂîÓ: Âçß('%s ⟶ %s' % (ÂîÓ, PEV(ÂîÓ))))(áÒø[slice(1, None)]), ÐÌü(exit))
-    if áÒø[0] == 'd':
-        ÂåÔ(ÁØò(lambda ÂîÓ: Âçß('%s ⟶ %s' % (ÂîÓ, VEP(ÂîÓ))))(áÒø[slice(1, None)]), ÐÌü(exit))
-    elif áÒø[0] == 'f':
-        (code := ÐØó(áÒø[1]))
-    elif áÒø[0] == 'F':
-        (code := ÐØó(áÒø[1]))
-        (pre := ÐÌü(make_header))
+def compile_files(F, lib_idx=ÂÚü(), instant=False):
+    (files := ËãÂ(ÂÓÏ(F), lambda x, y: compile_f_cache(y, x in lib_idx, instant)))
+    return Âøî(ÁØò(lambda ÂîÓ: ÐÌü(ÂîÓ[0]))(files), '\n')
+
+def generate_bootstrap(dest=ÂÞÅCAT('/tmp/bootstrap.py', áÌî)):
+    (idx := ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: ÂîÓ + ÂîÒ)(ãÊú(header_com), ÂÿÇ(bootstrap_lib)))
+    (pyc := compile_files(header_com + bootstrap_lib + bootstrap_com, idx))
+    if dest:
+        ÐØì(dest, pyc)
+    return pyc
+if __name__ == '__main__':
+    (áÒø := áÑË[slice(1, None)])
+    if ãÊú(áÒø):
+        if áÒø[0] == 'e':
+            ÁØò(lambda ÂîÓ: Âçß('%s ──→ %s' % (ÂîÓ, PEV(ÂîÓ))))(áÒø[slice(1, None)])
+        elif áÒø[0] == 'd':
+            ÁØò(lambda ÂîÓ: Âçß('%s ──→ %s' % (ÂîÓ, VEP(ÂîÓ))))(áÒø[slice(1, None)])
+        elif áÒø[0] == 'b':
+            generate_bootstrap(ÂÞÅCAT(áÒø[1], áÌî) if ãÊú(áÒø) > 1 else DEST)
+        elif áÒø[0] == 'o':
+            compile_f2f(áÒø[1], áÒø[2] if ãÊú(áÒø) > 2 else None)
+        elif áÒø[0] == 'r':
+            exec(moon_to_py(Âøî(áÒø[slice(1, None)], ' ')))
+        elif áÒø[0] == 'R':
+            exec(compile_files(header_com) + '\n' + moon_to_py(Âøî(áÒø[slice(1, None)], ' ')))
     else:
-        (code := Âøî(áÒø[slice(1, None)], ' '))
-    if áÒø[0] in 'rx':
-        (ÄÊPSH(áÑð), ÄÊPSH('show_preast'), ÄÊPSH((ÄÊPSH(áÑð), ÄÊPSH('show_ast'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
-    if áÒø[0] == 'x':
-        (pre := ÐÌü(make_header))
-    Âçß('Using code:\n%s' % (linewnum(code, d=175, s=ÄÊCUR((1,), {'fg': '915'}, Åøþáüì, ÂýÃ)),))
-else:
-    if ãÊú(áÒø) == 1 and áÒø[0] == 'D':
-        ÂåÔ(Âçß(VEP(ÐÌü(getattr(ÂÐðþáÐâ, 'read')))), ÐÌü(exit))
-    (ÄÊPSH((ÐÌü(make_header), reewrap(áÒø[0], ÂÞÅCAT(áÒø[0], ÐØó)) if áÒø else CODE)), ((pre := ÄÊPKE(0)[0]), (code := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
-(áØÂ := ÐÌü(áÏÖ))
-try:
-    (pyc := (pre + '\n' + moon_to_py_debug(code, **áÑð)))
-except:
-    Âçß('%s: Failed to compile!' % (__file__,))
-    moon_to_py_debug(code, show_preast=True)
-    ÐÌü(exit)
-Âçß('Provided compile took: %s' % (ÐÌü(áÏÖ) - áØÂ,))
-ÐØì(DEST, pyc)
-Âçß('%s: Wrote code to %s' % (__file__, DEST))
-if áÒø:
-    Âçß('Executing %s' % (DEST,))
-    (áØÂ := ÐÌü(áÏÖ))
-    (r := ÂåÔ(ÐÌü(getattr((p := Popen(ÂÛê('%s\u2009-u\u2009%s' % (BINARY, DEST)))), 'wait')), getattr(p, 'returncode')))
-    Âçß('Execution took: %s' % (ÐÌü(áÏÖ) - áØÂ,))
-    if r:
-        Âçß(Åøþáüì('%s: ERROR %s! ' % (__file__, r), 'f33'))
-Âçß(1)
+        Âçß('Usage: e <str_to_encode>\n       d <str_to_decode>\n       b <boostrap_dest>?      - %s default\n       o <file_in> <file_out>? - stdout default\n       r <code_to_run>         - no header\n       R <code_to_run>         - includes header' % (DEST,))
