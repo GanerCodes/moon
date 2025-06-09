@@ -4,15 +4,12 @@ Error handling:
   2. Thing that takes errors and uses sourcemap to get relevent ranges
   3. Thing that concats trees so you can generate sourcemaps for multi-files
 
-
-󰤱   ⦃"⦃󱅏⦄,⦃⦄"⦄
-󰤱  error handling, bootstrap, ⨡ a,b,c
-󰤱  "󷺹󷺽" causes error it should cat
+󰤱  named exceptions
+󰤱  error handling, ⨡ a,b,c
 󰤱  whitespace involution lol
 󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  string ␛ before newline should not add it
-󰤱  named exceptions
 󰤱  with statements (prob ⓦ under or something)
 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
 󰤱􊽨 replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
