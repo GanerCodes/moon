@@ -4,7 +4,9 @@
 ⨡ text_format
 ⨡ to_ast
 ⨡ ast_to_py
- ⨡ tree *
+⨡ tree *
+show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
+title     = ⥌x,c=␛─↦𝔸⨝𝗻ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
 
 IDENT     = ␛Δ
 BASE      = ‹/home/ganer/Projects/Moon_BETA›𝐩
@@ -16,66 +18,70 @@ TMP       = mkd(‹/tmp/⟦IDENT⟧›)
 
    header_com = BASE/‹Header󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Header/builtins›)󷹎
 bootstrap_com = BASE/‹Libraries/Compiler›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹generate_operators op_table node_types tree tree_txt expr lambdas rewriters to_ast ast_to_py main›
-bootstrap_lib = BASE/‹Libraries󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹𝐍 text_format peggle2/main peggle2/rgx_golfatron peggle2/gram_tools›
+bootstrap_lib = BASE/‹Libraries󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹text_format 𝐍 peggle2/main peggle2/rgx_golfatron peggle2/gram_tools›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
-compile_f2f = 󰲣x  moon_to_py ᐒy⭜􍪵(y,⟞)
-⊢ moon_to_py_debug(𝚌,show_preast=✓,show_ast=✓,show_py_ast=✗,⠶𝕂):
-    show = ⥌x,y=✓,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))ᣆʸ󷺹☾►x
+compile_f2f = 󰲣x  moon_to_py ᐒy⭜􍪵y󱖔􍡩⟞
+⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
+    ¿show_in           : title(‹IN›,show_code(𝚌))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
-    ¿show_ast: 𝑩𝑩(󱁕,‹AST›)
-    ¿show_py_ast: 𝑩𝑩(to_py(𝚌)(󱁕.cpr,get_tree=✓,no_rename_vars=✓),‹PY AST›)
-    p = show(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓),✗)
-    padc(‹ CODE ›,p,␛─)+𝗻+p⭢☾
-    show(pyc≔to_py(𝚌)(󱁕.cpr,reparse=✓),✗)☾
-    ↪pyc
+    ¿show_ast          : 𝑩𝑩(󱁕,‹AST›)
+    𝘤 = to_py(𝚌)(󱁕.cpr, reparse=✓)
+    ¿show_out_no_rename: title(‹OUT›,show_code(𝘤                                ))☾
+    ¿show_out          : title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓)))☾
+    ↪𝘤
 
-inform_fp = 󰲣‹𝗻__file__=⟦repr(ᔐ∘x)⟧𝗻⟦y⟧›
-⊢ compile_f_cache(𝚙,lib_file=✗,instant=✗):
+inform_fp = 󰲣‹𝗻__dir__=(__file__:=⟦PEV(␛𝐩)⟧(⟦repr(x ᔐ)⟧)).parent𝗻⟦y⟧›
+⊢ compile_f(𝚙,lib_file=✗,instant=✗,cache=✓,wrap=✓):
     𝚘 = TMP/‹⟦sha(TMP,𝚙󷸊.resolve,𝚙 )⟧.py›
-    ‹⟦IDENT⟧: ⟦padl(𝚙.name,25)⟧ ⭢ ⟦𝚘.name⟧›☾
-    ⊢ rd(): 𝚌 = inform_fp(𝚙,𝚘 )
-            ¿lib_file: 𝚌 = ‹𝗻# ⟦𝚙⟧⟶⟦𝚘⟧𝗻exec(⟦repr(𝚌)⟧,__:=globals().copy())𝗻for k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
+    ‹⟦IDENT⟧ ⟦padl(𝚙.name,25)⟧ ⭢ ⟦𝚘.name⟧›☾
+    ⊢ rd(): 𝚌 = 𝚘 
+            ¿wrap¬: ↪𝚌
+            𝚌 = inform_fp(𝚙,𝚌)
+            ¿lib_file: 𝚌 = ‹𝗻# Compiled from ⟦𝚙⟧𝗻exec(⟦repr(𝚌)⟧,__:=globals().copy())𝗻for k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v𝗻›
             ↪𝚌
     v = rd
-    ¿𝚘.is_file¬: ¿instant: v = 𝚲compile_f2f(𝚙,𝚘)►rd
-                  ¡       : p = Popen(‹bash -c ⟦COMPILER⟧ o '⟦𝚙⟧' '⟦𝚘⟧'›⍭)
-                            v = 𝚲p.wait►rd
+    ¿cache󷺒𝚘.is_file: ¿instant: v = 𝚲compile_f2f(𝚙,𝚘)►rd
+                       ¡       : p = Popen(‹bash -c ⟦COMPILER⟧ o '⟦𝚙⟧' '⟦𝚘⟧'›⍭)
+                                 v = 𝚲p.wait►rd
     ¿instant: v = 󰻾ᵛ􋅯
     ↪v,𝚙,𝚘
 
 ⊢ compile_files(F,lib_idx=⍁,instant=✗):
-    files = F↨ꟿ󰲣compile_f_cache(y,x∈lib_idx,instant)
+    files = F↨ꟿ󰲣compile_f(y,x∈lib_idx,instant)
     ↪filesᐵ₀ᐸ⨝𝗻
 
 ⊢ generate_bootstrap(dest=‹/tmp/bootstrap.py›𝐩):
     idx = header_com🃌ᑀ+ᑈbootstrap_lib⭥
     pyc = compile_files(header_com+bootstrap_lib+bootstrap_com,idx)
+    pyc = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧𝗻›+pyc  
     ¿dest: (dest,pyc)
     ↪pyc
 
-⭷ moon_to_py, compile_f2f, moon_to_py_debug, compile_f_cache, compile_files, generate_bootstrap
+⭷ moon_to_py, compile_f2f, moon_to_py_debug, compile_f, compile_files, generate_bootstrap
 
 ¿__name__≡‹__main__›:
+show_docs = 𝚲‹Usage: e <str_to_encode>
+                     d <str_to_decode>
+                     b <boostrap_dest>?      - ⟦DEST⟧ default
+                     o <file_in> <file_out>? - stdout default
+                     r <code_to_run>         - no header
+                     R <code_to_run>         - includes header›☾
 𝖠 = 𝔸₁﹕
-¿𝖠🃌: ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ──→ ⟦PEV(⟞)⟧›☾ᐸ
+¿𝖠🃌: ast = ␛a∈𝖠₀⭜􍾠􊿥𝖠₀󷸊∖␛a⭢⨝
+     ¿𝖠₀≡␛e: 𝖠₁﹕ᐖ‹⟦⟞⟧ ──→ ⟦PEV(⟞)⟧›☾ᐸ
      ⸘𝖠₀≡␛d: 𝖠₁﹕ᐖ‹⟦⟞⟧ ──→ ⟦VEP(⟞)⟧›☾ᐸ
-     ⸘𝖠₀≡␛b: generate_bootstrap(𝖠🃌>1⭜𝖠₁𝐩⭝DEST)
-     ⸘𝖠₀≡␛o: compile_f2f(𝖠₁,𝖠🃌>2⭜􋄅𝖠₂)
-     ⸘𝖠₀≡␛r: exec(                            moon_to_py(𝖠₁﹕⨝𝘀))
-     ⸘𝖠₀≡␛R: exec(compile_files(header_com)+𝗻+moon_to_py(𝖠₁﹕⨝𝘀))
-¡  : ‹Usage: e <str_to_encode>
-             d <str_to_decode>
-             b <boostrap_dest>?      - ⟦DEST⟧ default
-             o <file_in> <file_out>? - stdout default
-             r <code_to_run>         - no header
-             R <code_to_run>         - includes header›☾
+     ⸘𝖠₀≡␛b: generate_bootstrap(𝖠🃌>1⭜ᴰᴱ󰀒ᵀ𝖠₁𝐩)
+     ⸘𝖠₀≡␛o: compile_f2f(𝖠₁,𝖠🃌>2≕𝘮⭜􋄅𝖠₂)ᣆ􍺴☾
+     ⸘𝖠₀≡␛r: exec(                            (ast⭜ᵐᵒᵒⁿ􋕟ᵗᵒ􋕟ᵖʸmoon_to_py_debug)(𝖠₁﹕⨝𝘀))
+     ⸘𝖠₀≡␛R: exec(compile_files(header_com)+𝗻+(ast⭜ᵐᵒᵒⁿ􋕟ᵗᵒ􋕟ᵖʸmoon_to_py_debug)(𝖠₁﹕⨝𝘀))
+     ¡     : show_docs
+¡  : show_docs
 
     ¿𝖠₀∈␛r␛x: 𝕜.show_preast = 𝕜.show_ast = ✓
     ‹Using code:𝗻⟦linewnum(code,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
  ¡    : ¿𝖠🃌≡1∧𝖠₀≡␛D: VEP(ℑ𝔑.read)☾ ► exit
-
     pyc = pre+𝗻+moon_to_py_debug(code,⠶𝕜)
  ¡:  ‹⟦__file__⟧: Failed to compile!›☾
      moon_to_py_debug(code,show_preast=✓) ► exit

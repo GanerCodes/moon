@@ -1,3 +1,10 @@
+Do actual caching
+Error handling:
+  1. Format for sourcemaps
+  2. Thing that takes errors and uses sourcemap to get relevent ranges
+  3. Thing that concats trees so you can generate sourcemaps for multi-files
+
+
 󰤱   ⦃"⦃󱅏⦄,⦃⦄"⦄
 󰤱  error handling, bootstrap, ⨡ a,b,c
 󰤱  "󷺹󷺽" causes error it should cat

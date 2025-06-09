@@ -53,7 +53,7 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛
                          ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
 
-ops = parse_operator_file((OP_FILE))
+ops = OP_FILE  parse_operator_file
  opsꟿ☾
  generate_fontcompose_conf(ops)☾
  get_operator_table(ops)ᴍ☾

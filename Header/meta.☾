@@ -17,9 +17,12 @@ __þIMPORTS__ = ℵ  path → Module
     __repr__ = 𝕊↦‹Module "⟦𝕊.name⟧"›
 
 ⊢ __þIMPORT__(p,𝖦):
-    p󷸊𝐩
+    ‹__þIMPORT__ ⟦p⟧›☾
+    ↪
+     p󷸊𝐩  󰤱 fix this…?
+    p = p 𝐩
     failed=⍁
-    ∀D⬠(𝖦.__dir__, pwd, moon_dir/‹Libraries›):
+    ∀D⬠(𝖦􊬏􋕞􋕞ᵢᵣ􋕞􋕞􊬐, pwd, moon_dir/‹Libraries›):
         ∀F⬠(⠤p.is_absolute⭜ₚ⭝⍁, ⠤Dᑀ/ᑈ(p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name)):
             F󷸊.resolve
             ¿F.is_file: found = F ; ⇥
@@ -36,8 +39,8 @@ __þIMPORTS__ = ℵ  path → Module
     ↪E
 ⊢ __þADDGLOBALS_CLEAN__(M,𝖦):  󰤱
     𝖦.update(M)
- ⊢ __þGET_GLOB_MODNAME__()
- ⊢ __þSET_GLOB_MODNAME__()
+__þGET_GLOB_MODNAME__ = 𝚲𝔸
+__þSET_GLOB_MODNAME__ = 𝚲𝔸
  PEV(␛@)
 
  DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭

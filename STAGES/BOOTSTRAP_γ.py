@@ -2183,9 +2183,9 @@ def rewrite_ports(ÄÕÒü):
 __file__='/home/ganer/Projects/Moon_BETA/Libraries/Compiler/to_ast.☾'
 (GRAM_PATH := '/home/ganer/Projects/Moon_BETA/Libraries/Compiler/gram')
 (gram := gram_rp(ÄÔéÄ(ÂÛê('𝗐\u2009𝖶'), ÂÛê('𝘄?\u2009𝗪?'))(ÐØó(GRAM_PATH)), áÕÒ, False))
-(gram_comm := peggrampeg(gram, ÂÑÖ()(M='comm')))
-(gram_scrp := peggrampeg(gram, ÂÑÖ()(M='scrp')))
-(gram_main := peggrampeg(gram, ÂÑÖ()(M='main')))
+(gram_comm := gram_rp(gram, ÂÑÖ()(M=['comm'],I=['comment∨σscript∨']),True))
+(gram_scrp := gram_rp(gram, ÂÑÖ()(M=['scrp'],I=['σscript∨']),True))
+(gram_main := gram_rp(gram, ÂÑÖ()(M=['main'],I=['']),True))
 
 def to_ast(áÖïþáÖüþáÖðþáÖñ, warn_short=True, trim_length_info=True, force_full_match=False, dbg_parser=0, dbg_show_gram_tree=False, **áÏè):
     (áÖïþáÖüþáÖðþáÖñ := (+getattr(gram_comm(áÖïþáÖüþáÖðþáÖñ, remove_trashes=False), 'ftrp')('comment', lambda ÂîÓ: ÂåÔ((ÄÊPSH(ÂîÓ[0]), ÄÊPSH('t'), ÄÊPSH(Âøî(ÁØò(lambda ÂîÓ: MOD(Áëý, áØÁ=ÄÊCUR((1,), {}, ÂÖÐ, ÂýÃ, '\n'))(ÂîÓ, MOD(ÄÕÍÔ, áØÁ=' ')))(getattr(ÂîÓ[0], 't')))), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3], ÂîÓ))))

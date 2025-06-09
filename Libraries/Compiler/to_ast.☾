@@ -1,10 +1,10 @@
  ⨡ rewriters *
 
-GRAM_PATH = ‹/home/ganer/Projects/Moon_BETA/Libraries/Compiler/gram›
-gram = gram_rp((‹𝗐 𝖶›⍭󰛔⍭‹␛𝘄? ␛𝗪?›)((GRAM_PATH)),𝘳,✗)
-gram_comm = peggrampeg(gram,ℵ(M=‹comm›))
-gram_scrp = peggrampeg(gram,ℵ(M=‹scrp›))
-gram_main = peggrampeg(gram,ℵ(M=‹main›))
+gram      = moon_dir/‹Libraries/Compiler/gram› ⭢ 
+gram      = gram_rp(‹𝗐 𝖶›⍭󰛔ᵍʳᵃᵐ⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
+gram_comm = gram_rp(gram,ℵ(M=‹comm›⛶,I=‹comment∨σscript∨›⛶),✓)
+gram_scrp = gram_rp(gram,ℵ(M=‹scrp›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗σscript∨›⛶),✓)
+gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⛶),✓)
 
 ⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,trim_length_info=✓,force_full_match=✗,
               dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):

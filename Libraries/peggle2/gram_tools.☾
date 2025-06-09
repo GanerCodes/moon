@@ -65,9 +65,6 @@ nrm = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
 is_short = 󱁕↦󱁕ᵉ.parse_len≠󱁕ᵉ.input_len
 warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
 
- basic gram const replacements
-gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle2
-
 ⊢ fill_󱁕_holes_basic(󱁕): ¿␛p∉󱁕ᵉ: α,β = 󱁕.first_sides(󷺹ᵉ∋␛p)
                                  ¿□≇α∧β≇□: 󱁕ᵉ ᵖ=(⠤αᵉ ᵖ﹕₂, ⠤βᵉ ᵖ₂﹕)
                          ∀c⬠󱁕: fill_󱁕_holes_basic(c)
@@ -94,6 +91,9 @@ gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%�
                  ∀r⬠󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,+r⭢🃌󷹒))
                  󱁕.rm(󷺹ᵉ ⁻∩␛R␛Iᐸ)
                  ↪ +󱁕,gram_surgery(⬤,δ)
+
+ basic gram const replacements
+gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle2
 
 ⊢ gram_subsup(x,𝘎=gram_rp(
         󰦥󰦥󰦥󰦥󰦥
