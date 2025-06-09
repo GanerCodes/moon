@@ -6,7 +6,7 @@
 ⨡ ast_to_py
 ⨡ tree *
 show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
-title     = ⥌x,c=␛─↦𝔸⨝𝗻ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
+title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
 
 IDENT     = ␛Δ
 BASE      = ‹/home/ganer/Projects/Moon_BETA›𝐩
@@ -24,12 +24,12 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
 compile_f2f = 󰲣x  moon_to_py ᐒy⭜􍪵y󱖔􍡩⟞
 ⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
-    ¿show_in           : title(‹IN›,show_code(𝚌))☾
+    ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast          : 𝑩𝑩(󱁕,‹AST›)
     𝘤 = to_py(𝚌)(󱁕.cpr, reparse=✓)
-    ¿show_out_no_rename: title(‹OUT›,show_code(𝘤                                ))☾
-    ¿show_out          : title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓)))☾
+    ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
+    ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
 
 inform_fp = 󰲣‹𝗻__dir__=(__file__:=⟦PEV(␛𝐩)⟧(⟦repr(x ᔐ)⟧)).parent𝗻⟦y⟧›
