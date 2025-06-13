@@ -1,4 +1,5 @@
 ⦃import os,sys,inspect,traceback,threading⦄
+⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
 ⦃from sys import stdin,stdout,stderr,setrecursionlimit,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
 ⦃from math import *⦄
@@ -22,11 +23,11 @@ moon_dir = 𝐩(__file__).parent.parent.resolve()
 setattr = 󰲥setattr_(x,y,z) ∨ z
 setitem = 󰲥setitem_(x,y,z) ∨ z
 
-þSTK=[]
-þPSH=⥌x  ↦þSTK.append(x)∨x
-þPKE=⥌x=0↦þSTK₋₁₋ₓ
-þPOP=⥌x=0↦þSTK.pop(-1-x)
-þDEL=⥌x  ↦þSTK.__delitem__(-x:)
+þSTK={}
+þPSH=⥌x  ↦þSTK.setdefault(𝔗ℑ𝔇(),[]).append(x)∨x
+þPKE=⥌x=0↦þSTK.setdefault(𝔗ℑ𝔇(),[])₋₁₋ₓ
+þPOP=⥌x=0↦þSTK.setdefault(𝔗ℑ𝔇(),[]).pop(-1-x)
+þDEL=⥌x  ↦þSTK.setdefault(𝔗ℑ𝔇(),[]).__delitem__(-x:)
 ␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
 ⊢ þCUR(𝑃,𝐾,⠤𝒜):
     ⊢ꬶ(⠤𝐴): ¿len(𝐴)<len(𝑃): ↪𝚲ꬶ(⠤𝐴,⠤𝔸)

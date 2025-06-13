@@ -89,9 +89,9 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶�
     ↪󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
 
 ast_clean_e = 󱁕↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈‹Tpρ›)),✓,✗)  󰤱 put into gram_tools
-ast_add_pos = ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤ſⁱ∾ƒ,󷺻+⟞⭢🃌+i)) ➡₁  󰤱 put this func in peggle
+ast_add_pos = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾ast_add_pos,󷺻+⟞⭢🃌+i))➡₁  󰤱 put this func in peggle
 
-⊢ get_region(L,p): ¿Lᐹᔐ: L = lines(L)
+⊢ get_region(L,p): ¿Lᐹᔐ: L = lines(L)  󰤱 put this into text_tools
                    ¿p₀≡p₂: ↪[Lₚ􊬣 ₚ􊬤﹕ₚ􊬦]
                    ↪[Lₚ􊬣 ₚ􊬤﹕,⠤Lₚ􊬣₊₁﹕ₚ􊬥,Lₚ􊬥 ﹕ₚ􊬦]
 
@@ -110,7 +110,7 @@ ast_add_pos = ƒ≔⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i, 󱁕 ᣆ􋑻􊾸􋘳􊾲 (⬤
                     ↪L
 
 ⊢ out_to_in_mapper(󱁕,α,ω): SM,𝙲 = into_srcmap(󱁕,ω),lines(α)
-                           ↪ p↦get_region(𝙲,map_region(SM,p)☾)⨝𝗻
+                           ↪p↦get_region(𝙲,map_region(SM,p)☾)⨝𝗻
 
 ⊢ ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
     󱁕 = fill_󱁕_holes_basic(

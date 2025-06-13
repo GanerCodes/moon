@@ -2,8 +2,8 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
             (␛⫚, ‹⫚›),
             (␛¶, ‹¶✿›))
 
-⦃from subprocess import Popen⦄
-⊢ 󱠨(𝚌,ns=□,get_code=✗):  󰤱 this is dumb; also header
+⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓):  󰤱 this is dumb; also header
+    ⦃from subprocess import Popen⦄
     (pi≔𝐩(‹/tmp/⟦fn≔sha(__file__,𝚌)⟧.☾›),𝚌)
     po=pi.parent/‹⟦fn⟧.py›
     Popen(‹bash -c ⟦env[‹PREVILER›]⟧ o '⟦pi⟧' '⟦po⟧'›⍭).wait
@@ -19,20 +19,21 @@ __þIMPORTS__ = ℵ  path → Module
 ⊢ __þIMPORT__(p,𝖦):
     ‹__þIMPORT__ ⟦p⟧›☾
     ↪
-     p󷸊𝐩  󰤱 fix this…?
-    p = p 𝐩
-    failed=⍁
-    ∀D⬠(𝖦􊬏􋕞􋕞ᵢᵣ􋕞􋕞􊬐, pwd, moon_dir/‹Libraries›):
-        ∀F⬠(⠤p.is_absolute⭜ₚ⭝⍁, ⠤Dᑀ/ᑈ(p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name)):
+    name, failed = (p󷸊𝐩).name, ⍁
+    (p,name,failed)☾
+    ∀D⬠(⠤p.is_absolute⭜ₚ􋕜ₚₐᵣₑₙₜ⭝⍁, 𝖦􊬏􋕞􋕞ᵢᵣ􋕞􋕞􊬐, pwd, moon_dir/‹Libraries›):
+        ∀F⬠Dᑀ/ᑈ(p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name):
+            ‹THE F IS: ⟦F⟧›☾
             F󷸊.resolve
-            ¿F.is_file: found = F ; ⇥
+            ¿F.is_file: ⇥
             ¡          : failed.append(F)
+            failed☾
     ¡: ✗⨳‹Unable to find module! Paths checked:⟦failed⟕𝗻⟧›
     ¿F∈__þIMPORTS__: ↪__þIMPORTS__󰂘
     __þIMPORTS__󰂘 = □
-    ns = {__file__=F, __dir__=F.parent}
-     󰤱 exec (F) here
-    ↪ __þIMPORTS__󰂘 ≔ Module(p.name)
+    ns = {__name__=name, __file__=F, __dir__=F.parent}
+    󱠨((F),ns=ns)
+    ↪ __þIMPORTS__󰂘 ≔ Module(name,ns)
 ⊢ __þADD_EXPORTS__(𝖦,⠤𝔸):  󰤱
     E = 𝖦.setdefault(‹__EXPORTS__›,{})
     E.update({⠤𝔸})
@@ -41,11 +42,13 @@ __þIMPORTS__ = ℵ  path → Module
     𝖦.update(M)
 __þGET_GLOB_MODNAME__ = 𝚲𝔸
 __þSET_GLOB_MODNAME__ = 𝚲𝔸
+
+BOOTSTRAP_GLOBALS = globals().copy()
+
  PEV(␛@)
 
  DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
  IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
-
  ⮌ types ⨡ FunctionType as _FT
  ⮌ sys ⨡ _getframe
  ⊢ ´(n=0):
@@ -58,8 +61,6 @@ __þSET_GLOB_MODNAME__ = 𝚲𝔸
          𝘎 = _getframe(i).f_globals
          ¿𝘎[‹__file__›]≠__file__: ⇥
      ↪ 𝘎
-
-
  ⊢ get_implict_imports(code):  so what if you import stuff by accident this wont need fixing in a month
      ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
          ↪ ‹(‹⟦auto_imports⨝␛ ⟧␛›⍭ᴍ󰋺)›

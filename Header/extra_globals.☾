@@ -10,7 +10,7 @@ TOFRAC = 󰲡FRAC_CONV.get(x,x)
     CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip󷹎𝗻
     SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
     SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)
-    NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2⋅CHAR_NRM)
+    NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2 CHAR_NRM)
     sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟ᴍ𝚃↦󰲡x.translate(𝚃)
 
 supscript, subscript, nrmscript = SCRIPTˢᵘᵖ, SCRIPTˢᵘᵇ, SCRIPTⁿʳᵐ

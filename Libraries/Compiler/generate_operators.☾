@@ -1,8 +1,8 @@
-OP_FILE = __file__ 𝐩 ⭢.parent / ‹operators›
+ OP_FILE = __dir__ / ‹operators›
+OP_FILE = 𝐩(__file__).parent / ‹operators›
 
 ⨡ peggle2
 󱀘𝑙𝑙(𝑙):□
-sup,sub,nrm = SCRIPTˢᵘᵖ,SCRIPTˢᵘᵇ,SCRIPTⁿʳᵐ
 
 ords = ‹0󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱󷰾›
 clrs = ‹0 e3b f77 c66 b56 6cf b9d c08 0f5 1e6 2d7 3c8 4b9 85f 67f eae d8d c6c b4d ff5 ce3 bd2 ad1 fa2 0›⍭
@@ -12,12 +12,11 @@ dummy_ords = ⦉0,ords🃌-1⦊
  ς: collapses chains (i.e. ⋄)
  λ: works as a chainable comparison function
 
-minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○␛
-    peggle2("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧') ∨ 󰆴'⁅'⨝󰆴'⁆' ∨ ~'[^⟦⟧⁅⁆]')*")
+minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○peggle2("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧')∨󰆴'⁅'⨝󰆴'⁆'∨~'[^⟦⟧⁅⁆]')*")
 ⊢ parse_operator_file(contents):
     p = ⟨⟨󷺹󷹕󷺹≠𝘀ᐸ🃌≡0⍮(¬○⬄ 󷸴 󷺹󷹕󷺹≠𝘀ᐸ🃌→󷹗 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
     g_order  = ᐳords󰑅ᔨ󷺽
-    g_symbs  = 󷺹𝌂󷺹∈sup(‹αλςν›)ᐸ󰸷􊾖2 → 󷺺⋄󷺽
+    g_symbs  = 󷺹𝌂󷺹∈‹αλςν›󷸔ᐸ󰸷􊾖2 → 󷺺⋄󷺽
     g_sig    = 󰻾
     g_combos = minigram
     g_desc   = 󰲡⟨⟨ 󷺹≡␛{⭜󰮈⍮ 󷺹≠␛}⍮ 󷺹≡␛}⭜󰮈 ⍈ 󷺹󷹌␛,󰈳␛,⟩ 󷸴 ⟨󷺹≠␛{ ⍈ ⛶○⨝⟩⟩(x)⨉ᴍ⨝
@@ -35,11 +34,11 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ↪ops
 
 ⊢ get_operator_table(parsed_ops,do_join=✗):
-    infer = 󷺹∋␛∧   ⭜‹ᴮ›          ⭝ ␛
-            ⟞∋␛󷺤   ⭜‹ᴾ󰀒›         ⭝ ␛
-            ⟞∋␛󷸏   ⭜‹ᴾᴮʳ›        ⭝ ␛
-            ⟞∋␛󷸐   ⭜‹󰀒ᴮˡ›        ⭝ ␛
-            ⟞∩␛∨␛⩚ ⭜‹ᴾ󰀒ᴮ›        ⭝ ␛
+    infer = 󷺹∋␛∧   ⭜‹󷺗󷺗ᴮ󷺗󷺗›      ⭝ ␛
+            ⟞∋␛󷺤   ⭜‹ᴾ󰀒󷺗󷺗󷺗›      ⭝ ␛
+            ⟞∋␛󷸏   ⭜‹ᴾ󷺗ᴮ󷺗ʳ›      ⭝ ␛
+            ⟞∋␛󷸐   ⭜‹󷺗󰀒ᴮˡ󷺗›      ⭝ ␛
+            ⟞∩␛∨␛⩚ ⭜‹ᴾ󰀒ᴮ󷺗󷺗›      ⭝ ␛
             ⟞∋␛.   ⭜(⟞₀≡␛.⭜␛ᴾ⭝␛󰀒)⭝ ␛
             ᐦ ➡+␛ᴺ+(⟞∩‹󷺤󷸏󷸐∨⩚›∧⟞₀≠⟞􍨄⭜␛󰀷⭝ᐦ)ᐸ
     𝚛 = ℵ(parsed_ops󰌷⭢󰈳󷺹₀∈dummy_ordsᐸᓕ⁰)ꟿ󷺻⟝ᐵ₄ᖘ􍨅󷺹+ᑅinfer(⟞₁)ᐸ󷺿

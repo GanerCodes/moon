@@ -1,3 +1,5 @@
+⫦⫣ (󷷾󷷿󷸀) ⟞⟝ ⨡⭸⭷ (ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
+
 Do actual caching
 Error handling:
   1. Format for sourcemaps
@@ -5,17 +7,21 @@ Error handling:
   3. Thing that concats trees so you can generate sourcemaps for multi-files
 
 󰤱  named exceptions
-󰤱  error handling, ⨡ a,b,c
+󰤱  ⨡ a,b,c
 󰤱  whitespace involution lol
 󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
+󰤱  why is `a b c` so weird
 󰤱  string ␛ before newline should not add it
 󰤱  with statements (prob ⓦ under or something)
 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
 󰤱􊽨 replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
 󰤱􊽨 deque for þSTK
 󰤱􊽨 raising
-(ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
+󰤱  "joe"󷹝¹⁶ should give the charcodes in the base iasdjia
+      for 􋇙 maybe use a 𐞑 or somethingiadfsj
+
+ 🐈‍⬛‍⬛‍⬛‍⬛‍⬛
 All orders for all operators
 Colors and number-labels of ⬤
   number for which slot in order so like (󰲣⌃󰲡)(2,3)≡3²
@@ -26,7 +32,7 @@ Colors and number-labels of ⬤
   specifics of the following is a 󰤱, but it seems cool
   what if i had like symbols inside balls like (α) (β)
     and balls with symbols mean perform the outer func
-    on the iterable that's the input and the same symbol
+    on the iterable thats the input and the same symbol
     means to zip together like ⟦⟧⁅⁆ in fontcompose
     
     (󰁎󷰭¹)☾       ⟶ aᴍ²☾       skipping syms adds levels
@@ -62,5 +68,3 @@ Colors and number-labels of ⬤
     
     
      ‹xˣₓ􊾆􊿶􊫄􊬴 󷰠󷰭󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱␀ ␀αβγΔεζ ␀123456›⍭⨉
-    
-⨡⭸⭷

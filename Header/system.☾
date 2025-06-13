@@ -1,19 +1,17 @@
 ⊢ PL_SLEEP(x): ⦃from time import sleep⦄
-               sleep(x)
-⊢ PL_TIME(): ⦃from time import time⦄
-             ↪time()
-⊢ PL_CPU_COUNT_(): ⦃import multiprocessing⦄
-                   ↪multiprocessing.cpu_count()
-⊢ PL_THREAD(ƒ, ⠤𝔸, ⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
-                        atom = []
-                        T(target=ᐳatom.append←ƒ(⠤𝔸, ⠶𝕂))≕t→.start
-                        ↪𝚲t.join →► atom₀
-⊢ PL_TEXT_COPY(x):    ⦃from clipboard import copy⦄
-                       ↪copy(x)
-                   ¡Exception:
-                       print("WARNING: Failed to copy.")
-⊢ PL_TEXT_PASTE():    ⦃from clipboard import paste⦄
-                       ↪paste()
-                   ¡Exception:
-                       print("WARNING: Failed to paste.")
+               x sleep
+⊢ PL_TIME: ⦃from time import time⦄
+           ↪time
+⊢ PL_CPU_COUNT: ⦃import multiprocessing⦄
+                ↪multiprocessing.cpu_count
+⊢ PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
+                      atom = []
+                      T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
+                      ↪𝚲t.join ► atom₀
+⊢ PL_TEXT_COPY(x):            ⦃from clipboard import copy⦄
+                               ↪x
+                   ¡Exception: print(‹WARNING: Failed to copy.›)
+⊢ PL_TEXT_PASTE  :            ⦃from clipboard import paste⦄
+                               ↪paste
+                   ¡Exception: print(‹WARNING: Failed to paste.›)
 𝔗 = PL_THREAD

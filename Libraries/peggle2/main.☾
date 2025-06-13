@@ -10,7 +10,7 @@ fcache = 𝚲ƒ↦ƒ  󰻾􋒍  ⨡ cache
 ⨡ text_format
 
            ⦃import regex as ⦃re⦄⦄
-¡Exception: ⦃import re⦄
+¡Exception: ⦃import re    as ⦃re⦄⦄
  ⮌ pickle ⨡ loads,dumps
 
 show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹⟦i⟧,⟦x⟧𝘁⟦𝑅ₓ⟧𝘁⟦y⟧›
@@ -27,7 +27,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 
 ⊢ (fcache) gram_convert(󱁕):
     name_remaps = ℵ(‹elm_o elm_a assign_cln group_inner group›⍭󱑼‹∨∧←∧∧›)
-    TT = 󱁕↦(󱁕ᵗ, ⠤(󱁕ᵗ∈␛ᔐ␛~ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᵗ≡␛← ⭜(󱁕₀ᵗ,⠤󱁕₁﹕ᴍTT)⭝ 󱁕ᴍTT))
+    TT = 󱁕↦(󱁕ᵗ,⠤󱁕ᵗ≡␛ᔐ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᵗ≡␛~ ⭜(󱁕ᵉ ʳ,)⭝ 󱁕ᵗ≡␛← ⭜(󱁕₀ᵗ,⠤󱁕₁﹕ᴍTT)⭝ 󱁕ᴍTT)
     escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)
     ⊢ reduce_j(󱁕): α,o,β,⠤C = 󱁕
                    ¿C: ✗⨳  β = reduce_j(󱁕.cp(c=[β,⠤C]))  ????????
@@ -44,7 +44,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
                       ↪󱁕
     ⊢ parse_elm(N): α,n,β = +N₀,N₁,+N₂
                     l1,l2 = α 􋇐 ⭠∈‹❗⠶ƨ›
-                    ∀o⬠(⠤l1,⠤β,⠤l2): ¿o≡␛~: n = Ń(o,𝔗(re.compile(+n)))
+                    ∀o⬠(⠤l1,⠤β,⠤l2): ¿o≡␛~: n = Ń(o,e=ℵ􋄅(r=re.compile(+n)))
                                      ¡    : n = Ń(o,n)
                     ↪n
     rules = 󱁕.rm  (bad)                                                  ␛
@@ -76,7 +76,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
         γ,⠤𝐶 = 𝑅󰃬
          𝓢☾ ; 𝑅󰃬☾ ; debug=✓
         ¿debug: V = 𝓢ᐖ𝑅􍪴􊬤 ₀ᐸ⨝𝘀
-                ‹⟦𝐷﹕󰃺⟧⟦ŧ𝼝(␛│,fg=‹0f0›)⟧⟦χ<𝐷🃌⭜𝐷󰃺⭝ᐦ⟧⟦𝐷󰃺₊₁﹕⟧ ⟦V⟧ ⟦ŧ𝼝(γ,‹f5f›)⟧ ⟦dotrim(𝖿𝗆𝗍(𝐶),75)⟧›☾
+                ‹⟦𝐷﹕󰃺⟧⟦ŧ𝼝(␛│,fg=‹0f0›)⟧⟦χ<𝐷🃌⭜𝐷󰃺⭝ᐦ⟧⟦𝐷󰃺₊₁﹕⟧ ⟦V⟧ ⟦ŧ𝼝(γ,‹f5f›)⟧ ⟦dotrim(🟑𝖿𝗆𝗍🟑(𝐶),75)⟧›☾
         𝔠 = ℭ󰃺
         ¿γ≡␛ᔐ: ¿𝐶₀≡𝐷󰃺﹕􊸴􊮝󰃺₊􊳵􊬣􊹳: 𝔠󰃬 = ✓,𝝌
                ¡             : 𝔠󰃬 = ✗,χ
@@ -267,7 +267,10 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
         conflict = (𝕊ʳᵘˡᵉˢ.keys)∩(h.keys)
         ¬(allow_conflict ∧ conflict) ⨳ ‹Conflicting rules! ⟦conflict⟧›
         ↪(ᐹ𝕊)(peggle2(𝕊ʳᵘˡᵉˢ | h))
-    ⊢ __call__(𝕊,⠤𝔸,⠶𝕂): ↪peggle2_call(𝕊ᴿ,⠤𝔸,⠶𝕂)
+    ⊢ __call__(𝕊,⠤𝔸,DEBUG=✗,⠶𝕂):
+         ¿DEBUG: ‹Running Peggle 2 with the following rules:›☾
+                 𝕊.print_rules 
+         ↪peggle2_call(𝕊ᴿ,⠤𝔸,DEBUG=DEBUG,⠶𝕂)
     ⊢ print_rules(𝕊): 𝕊ʳᵘˡᵉˢ.itemsꟿ󰲣(‹⟦x⟧:›☾,y☾)
     ⊢ print_normalized(𝕊): 𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ↨ ꟿ󰲣 ☾‹⟦x⟧𝘁⟦yᴍᔐ⭢⨝𝘀⟧›
 
