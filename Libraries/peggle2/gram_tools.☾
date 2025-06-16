@@ -1,27 +1,30 @@
-⨡ 𝐍
+⨡ Ń
 ⨡ main
 ⨡ rgx_golfatron
 ⨡ text_format
+
+𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
 
 n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
 
  0 width, left of node
 ⊢ ⟵(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
-          ¿𝒑ᐹᔐ: ↪󱁕
-          ¿𝒑󷹵Ń: 𝒑=𝒑₀
-          ¿␛p∉𝒑ᵉ: ↪󱁕
-          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ﹕₂⋅2
+          ¿𝒑 ᐹ ᔐ: ↪󱁕
+          ¿𝒑 󷹵 Ń: 𝒑=𝒑₀
+          ¿𝒑ᵉ∌␛p: ↪󱁕
+          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ﹕₂ 2
           ↪󱁕
- 0 width, right of node
+ 0 width, rght of node
 ⊢ ⟶(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
-          ¿𝒑ᐹᔐ: ↪󱁕
-          ¿𝒑󷹵Ń: 𝒑=𝒑􍨄
-          ¿␛p∉𝒑ᵉ: ↪󱁕
-          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ₂﹕⋅2
+          ¿𝒑 ᐹ ᔐ: ↪󱁕
+          ¿𝒑 󷹵 Ń: 𝒑=𝒑􍨄
+          ¿𝒑ᵉ∌␛p: ↪󱁕
+          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ₂﹕ 2
           ↪󱁕
  between and including nodes as range
 ⊢ ⊥(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
-          ¿𝒑ᐹᔐ∨𝒑󷹵𝗜: ↪󱁕
+          ¿𝒑ᐹᔐ∨𝗜󷹴𝒑: ↪󱁕
           ¿𝒑󷹵Ń: 𝒑 = Ń(ᐦ,⠤𝒑)
           l,r = 𝒑.first_sides(󷺹ᵉ∋␛p)
           ¿l≅□: ↪󱁕
@@ -36,9 +39,6 @@ n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
           ¿𝒑ᐹᔐ: ↪󱁕
           󱁕ᵉ = 𝒑ᵉ.copy
           ↪󱁕
-
-𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
-𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
 
  eᵖ format: (is,ie)
 ⊢ offset_𝚌(󱁕,𝚙): ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝚙, 󱁕ᵉ ᵖ₁+𝚙)
@@ -95,18 +95,18 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
  basic gram const replacements
 gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle2
 
-⊢ gram_subsup(x,𝘎=gram_rp(
-        󰦥󰦥󰦥󰦥󰦥
-            sup  = ~‹%SUP%+›
-            sub  = ~‹%SUB%+›
-            main = ((σscript = sup∨sub)∨~‹.|\n›)*
-        󰦥󰦥󰦥󰦥󰦥,
-        ℵ(SUP=*´󷸔,SUB=*´󷸓)),r=‹main›): ꬶ=󰲡𝘎(x,r,remove_trashes=✗).ftrp(
-                                           ‹σscript›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
-                                               𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
-                                                  ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
-                                               𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
-                                       ↪under_gram(ꬶ(x))
+⊢ gram_subsup(x,𝘎=gram_rp(󰦥󰦥󰦥󰦥󰦥
+                              sup  = ~‹%SUP%+›
+                              sub  = ~‹%SUB%+›
+                              main = ((σscript = sup∨sub)∨~‹.|\n›)*
+                          󰦥󰦥󰦥󰦥󰦥,
+              ℵ(SUP=*´󷸔,SUB=*´󷸓)),r=‹main›):
+    ꬶ=󰲡𝘎(x,r,remove_trashes=✗).ftrp(
+       ‹σscript›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
+           𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
+              ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
+           𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
+    ↪under_gram(ꬶ(x))
 
 ⊢ peggrampeg(𝚌,ns={},𝘎=peggle2(
         󰦥󰦥󰦥󰦥󰦥

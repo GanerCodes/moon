@@ -25,14 +25,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
     ¿𝚘≡󷰾: ↪𝚡+Δ⋅𝚣
     ¿𝚘≡0: ↪[Δ%2⋅𝚣+𝚡]⟗⭠Δ⹏2⋅𝚣
     ¿𝚘≡1: ↪Δ⋅𝚣+𝚡
-    ✗⨳‹⟦𝚘⟧∉󷰾󷸻1›    
-
-padl     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
-padc     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
-padr     = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
-linewrap = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
-linenum  = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
-linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
+    ✗⨳‹⟦𝚘⟧∉󷰾󷸻1›
 
 ⊢ (𝼞cache) pads(𝚡,w=*,h=*):
     ¿𝚡ᐹᔐ : 𝚡=lines(𝚡)
@@ -63,6 +56,14 @@ linewnum = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,
     ↪𝚡 ᙡ 2₁ ꟿ󰲥Oₙ􊮝₁₋ₓ􊮚􊱃₊􊮚􊱃+y+Cₙ󰅂⭢⨝𝗻
 
 box,BOX = 2⭥ᐖ󰲡box_(xᐹ𝑙|𝑡⭜x⨝𝗻⭝x,⠤𝔸,⠶𝕂,big=⟞)
+padl      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padc      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+padr      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
+linewrap  = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
+linenum   = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
+linewnum  = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
+show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
+title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
 
 fmp = {⠤[ᐦ,␀,⬤,󰮈,✓,✗,□,ⴳ,ⴴ,½,⅓,¼,⅕,⅙,⅐,⅛,⅑,⅒,⅔,⅖,󷶲,󷶷,¾,⅗,󷶳,⅜,󷷆,⅘,󷶴,󷷂,⅚,󷶵,⅝,󷶹,󷶶,⅞,󷶺,󷷇,󷶻,󷷈,↉,󷷉,π,ℇ,∞,î,τ,󷺍,󷺎,󷺏,󷱩,󷱪,󷱬,󷱭,󷱮,󷱯,󷱰,󷱫,𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦]󱑼␛
         ‹ᐦ󷺗␀󷺗⬤󷺗󰮈󷺗✓󷺗✗󷺗□󷺗ⴳ󷺗ⴴ󷺗½󷺗⅓󷺗¼󷺗⅕󷺗⅙󷺗⅐󷺗⅛󷺗⅑󷺗⅒󷺗⅔󷺗⅖󷺗󷶲󷺗󷶷󷺗¾󷺗⅗󷺗󷶳󷺗⅜󷺗󷷆󷺗⅘󷺗󷶴󷺗󷷂󷺗⅚󷺗󷶵󷺗⅝󷺗󷶹󷺗󷶶󷺗⅞󷺗󷶺󷺗󷷇󷺗󷶻󷺗󷷈󷺗↉󷺗󷷉󷺗π󷺗ℇ󷺗∞󷺗î󷺗τ󷺗󷺍󷺗󷺎󷺗󷺏󷺗󷱩󷺗󷱪󷺗󷱬󷺗󷱭󷺗󷱮󷺗󷱯󷺗󷱰󷺗󷱫󷺗𝑒󷺗𝑜󷺗𝑑󷺗𝑏󷺗𝑙󷺗𝑡󷺗𝑠󷺗ᔐ󷺗𝑖󷺗𝑓󷺗𝑦›}
@@ -85,8 +86,8 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ↪ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
-⭷ rm_esc,lines,padl,padc,padr,pads,stackr,box,BOX,␛
-  linenum,linewnum,dotrim,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+⭷ rm_esc,lines,padl,padc,padr,pads,stackr,box,BOX,linenum,linewnum,dotrim,show_code,␛
+  title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢ test_text_format(): tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                       linewrap(linenum(‹egg salad number twelve fortnite

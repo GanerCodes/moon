@@ -1,0 +1,16 @@
+⦃import sys,os⦄
+󱀘 Shut:  github.com/joblib/joblib/issues/868#issuecomment-1034684910
+    ⊢ __init__ (𝕊): 𝕊ᴼ = sys.__stdout__⋄sys.__stderr__ ᐵ.fileno
+    ⊢ __enter__(𝕊): 𝕊ᴰ = 𝕊ᴼ ᴍ os.dup
+                    𝕊ᴺ = open(os.devnull, ‹w+b›)
+                    𝕊ᴼ ᐖ os.dup2(𝕊ᴺ.fileno , ⟞)
+                    𝕊󰀒 = sys.stdout⋄sys.stderr
+                    sys.stdout,sys.stderr = sys.__stdout__⋄sys.__stderr__
+                    ↪𝕊
+    ⊢ __exit__(𝕊, ⠤𝔸): ᐦ☾
+                       sys.stdout, sys.stderr = 𝕊󰀒
+                       𝕊ᴼ      ᴍ os.close
+                       𝕊ᴰ 󱑼 𝕊ᴼ ꟿ os.dup2
+                       𝕊ᴰ      ᴍ os.close
+
+⭷ shut = 󰲡ⓦ(Shut,a≔𝔸⋄𝕂→►𝚲x(⠤a₀,⠶a₁))

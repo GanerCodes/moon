@@ -14,4 +14,3 @@
 ⊢ PL_TEXT_PASTE  :            ⦃from clipboard import paste⦄
                                ↪paste
                    ¡Exception: print(‹WARNING: Failed to paste.›)
-𝔗 = PL_THREAD

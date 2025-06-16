@@ -1,4 +1,4 @@
-from functools import cache
+⦃from functools import cache⦄
 
  100 ⬤⋄⬤⋄⬤ ⇒ 10⨯10⨯1
  200 ⬤⋄⬤⋄⬤ ⇒ 10⨯10⨯2

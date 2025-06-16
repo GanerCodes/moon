@@ -1,4 +1,4 @@
-⨡ tree_txt
+⨡ tree_txt ⭸ *
 
 ⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
     l,o,r = 󱁕

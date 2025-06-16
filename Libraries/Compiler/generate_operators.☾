@@ -1,5 +1,4 @@
- OP_FILE = __dir__ / ‹operators›
-OP_FILE = 𝐩(__file__).parent / ‹operators›
+OP_FILE = __dir__/‹operators›
 
 ⨡ peggle2
 󱀘𝑙𝑙(𝑙):□
@@ -53,11 +52,12 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
                          ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
 
 ops = OP_FILE  parse_operator_file
+
+⭷ ops,generate_fontcompose_conf,get_operator_table
+
  opsꟿ☾
  generate_fontcompose_conf(ops)☾
  get_operator_table(ops)ᴍ☾
-
-⭷ ops,generate_fontcompose_conf,get_operator_table
 
   ⊢ main():
        opsᐵᐵ☾ᐸ→►ᐦ☾

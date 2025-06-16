@@ -1,12 +1,12 @@
-⮌ socketserver ⨡  TCPServer, StreamRequestHandler
+⦃from socketserver import TCPServer,StreamRequestHandler⦄
 TCPServer.allow_reuse_address = ✓
-󰋺(‹j☾›)
+⨡ j☾
 
 ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ → ⨝␛.
 
 ⊢ HTTP_Server(ƒ):
-    ⮌ http.client ⨡ responses as 𝚌msgs
-    ⮌ mimetypes ⨡ guess_type
+    ⦃from http.client import responses as ⦃𝚌msgs⦄⦄
+    ⦃from mimetypes import guess_type⦄
     ext_to_mime = 󰲡guess_type(x)₀∨"text-plain"
     
     󱀘 𝔖(StreamRequestHandler):
@@ -17,28 +17,25 @@ ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ → ⨝␛.
             𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x.lower
             
             𝐴 = 𝚖,𝚙,𝙷
-            𝚌,𝙷,𝚋 = 200, ℵ, 𝑦∘0
-            try:
-                V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯=𝔯))
-            except Exception as ε:
-                ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
-                __error_printer__(ε)
-                ␛-⋅🃌t☾
-                V = 500
-            ∀r ∈ V ᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅 ⛶:
+            𝚌,𝙷,𝚋 = 200, ℵ, 0 𝑦
+                                V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯=𝔯))
+            ¡⦃Exception as ⦃ε⦄⦄: ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
+                                 __error_printer__(ε)
+                                 ␛-⋅🃌t☾
+                                 V = 500
+            ∀r ⬠ V ᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅 ⛶:
                 ¿rᐹ𝑑  : 𝙷=r.copy
                 ⸘rᐹ𝑖  : 𝚌=r
                 ⸘rᐹᔐ|𝑦: 𝚋=r
-            ¿PEV("𝙲𝚃")≕a∈𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ₜₚₑ􊬐 = 𝙷.pop(a)≕v→󷸹≡␛. ⭜ext_to_mime(␛_+v)⭝ v
-            ¿𝚋ᐹᔐ:
-                ¿‹content-type›≕k∉𝙷: 𝙷ₖ≔‹text/plain›
-                𝚋 = 𝑀∘𝚋
+            ¿PEV(‹𝙲𝚃›)≕a∈𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ₜₚₑ􊬐 = 𝙷.pop(a)≕v→󷸹≡␛. ⭜ext_to_mime(␛_+v)⭝ v
+            ¿𝚋ᐹᔐ: ¿‹content-type›≕k∉𝙷: 𝙷ₖ≔‹text/plain›
+                  𝚋 = 𝑀∘𝚋
             ¿𝚋∧𝙷∌k≔‹content-length›: 𝙷ₖ≔𝚋🃌
             𝕊.wfile.write(𝑀(‹HTTP/1.1 ⟦𝚌⟧ ⟦𝚌msgs.get(𝚌,␛?)⟧›+(𝙷ᐵ⨝␛:ᐸ⟗𝗿𝗻)+𝗿𝗻)+𝚋)
             𝕊.wfile.flush
     ↪ ⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port), 𝔖), 󷺹.serve_forever)
 
-__exports__ = ‹𝔍 ipv4 HTTP_Server transpile transpile_dir joon_header›⍭
+⭷ 𝔍,ipv4,HTTP_Server,transpile,transpile_dir,joon_header
 
  ⊢ server(𝚖,𝚙,𝙷,𝚎):
      ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾

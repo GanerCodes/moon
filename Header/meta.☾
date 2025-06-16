@@ -1,128 +1,84 @@
+⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
+⦃from base64 import b64encode as ⦃b64e⦄,b64decode as ⦃b64d⦄⦄
+stre, strd = 󷺹𝑀 zibe b64e 𝑀, 󷺹𝑀 b64d zibd 𝑀
+
 IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›),
             (␛⫚, ‹⫚›),
             (␛¶, ‹¶✿›))
 
-⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓):  󰤱 this is dumb; also header
-    ⦃from subprocess import Popen⦄
-    (pi≔𝐩(‹/tmp/⟦fn≔sha(__file__,𝚌)⟧.☾›),𝚌)
-    po=pi.parent/‹⟦fn⟧.py›
-    Popen(‹bash -c ⟦env[‹PREVILER›]⟧ o '⟦pi⟧' '⟦po⟧'›⍭).wait
-    code = (po)
-    ¿get_code: ↪code
-    ↪eval(code,globals()|(ns≅□⭜ⁿˢ{}))
+__þIMPORTS__ = ℵ
+TP_CACHE = {}
+TRANSPILE_REF = Holder
+EXEC_NATIVE = exec
+dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_relative_to(moon_dir)ᐸ␛
+              ᐖ‹⟦moon_dir ⟞₀.relative_to ᔐ repr⟧:strd(⟦⟞₁.native_code stre repr⟧)›ᐸ␛
+              ᑀ⨝␛,⟧})›
+⊢ moon_to_py_cached(𝚌):  ¿sha(𝚌)≕n∈TP_CACHE: ↪TP_CACHEₙ
+                         ¿moon_dir/‹STAGES›≕p∉P≔sys.path: P.append(p)
+                        ¿TRANSPILE_REF¬:
+                            i,o = ‹☾ py›⍭ᐖ‹/tmp/⟦sha(𝚌)⟧.⟦⟞⟧›𝐩
+                            (i,𝚌)
+                            Popen([‹python›,moon_dir/‹STAGES/BOOTSTRAP_ζ.py›,␛o,i,o]).wait
+                            ↪(o)
+                        TRANSPILE_REF⨳‹Cannot transpile without transpiler!›
+                        ↪TP_CACHEₙ≔𝚌⭢+TRANSPILE_REF
+⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗):
+    ¿native¬: 𝚌 = moon_to_py_cached(𝚌)
+    ¿get_code: ↪𝚌
+    ns = BOOTSTRAP_GLOBALS|(ns≅□⭜ⁿˢ{})
+      EXEC_NATIVE(𝚌,ns)
+    ¡: ‹Failed to exec!›☾
+       ⦃raise ⦃ε⦄⦄
+    ↪ns
 
-__þIMPORTS__ = ℵ  path → Module
-󱀘 Module(ℵ⭢ᐹ):
-    ⊢ __init__(𝕊,name,ns): 𝕊.name=name ; super(ns)
-    __repr__ = 𝕊↦‹Module "⟦𝕊.name⟧"›
+󱀘 Module(ℵ⭢ᐹ): ⊢ __init__(𝕊,name,ns,code=□,native_code=□):
+                    𝕊.name,𝕊.code,𝕊.native_code = name,code,native_code
+                    super().__init__(ns)
+                ⊢ __repr__(𝕊): ↪‹Module[⟦𝕊.name⟧]›
 
 ⊢ __þIMPORT__(p,𝖦):
-    ‹__þIMPORT__ ⟦p⟧›☾
-    ↪
-    name, failed = (p󷸊𝐩).name, ⍁
-    (p,name,failed)☾
-    ∀D⬠(⠤p.is_absolute⭜ₚ􋕜ₚₐᵣₑₙₜ⭝⍁, 𝖦􊬏􋕞􋕞ᵢᵣ􋕞􋕞􊬐, pwd, moon_dir/‹Libraries›):
-        ∀F⬠Dᑀ/ᑈ(p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name):
-            ‹THE F IS: ⟦F⟧›☾
-            F󷸊.resolve
-            ¿F.is_file: ⇥
-            ¡          : failed.append(F)
-            failed☾
-    ¡: ✗⨳‹Unable to find module! Paths checked:⟦failed⟕𝗻⟧›
-    ¿F∈__þIMPORTS__: ↪__þIMPORTS__󰂘
-    __þIMPORTS__󰂘 = □
-    ns = {__name__=name, __file__=F, __dir__=F.parent}
-    󱠨((F),ns=ns)
-    ↪ __þIMPORTS__󰂘 ≔ Module(name,ns)
+    name,failed = (p󷸊𝐩).name,⍁
+    dirs = (⠤p.is_absolute⭜ₚ􋕜ₚₐᵣₑₙₜ⭝⍁, 𝖦􊬏􋕞􋕞ᵢᵣ􋕞􋕞􊬐, pwd, moon_dir/‹Libraries›)
+    sufs = (p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name)
+    F=𝚌=□
+    ∀F⬠dirs⨉sufsꟿ/: F󷸊.resolve
+                    ‹⟦F⟧ ⟦moon_dir F.is_relative_to⟧ ⟦moon_dir F.relative_to ᔐ≕h∈TP_CACHE⟧›☾
+                    ℵ(TP_CACHE)⁻⨝𝘀☾
+                    ¿moon_dir F.is_relative_to ∧← moon_dir F.relative_to ᔐ≕h∈TP_CACHE:
+                        𝚌=TP_CACHEₕ; ⇥
+                    ¿F.is_file: ⇥
+                    failed.append(F)
+    ¡: F=□
+    ‹⟦␛✗␛✓󰂘􊮇􋕞􋕞􊪵󰂛󰂟󰂢󰂡󰂤󰂦󰂥􋕞􋕞⟧ ⟦␛✗␛✓􀲞􋘲􊴎⟧ ⟦𝖦􊬏􋕞􋕞ᵢₗₑ􋕞􋕞􊬐⟧: ⟦p⟧→⟦F⟧›☾
+    F≇□⨳‹Unable to find module "⟦p⟧"! Paths checked:⟦failed⟕𝗻⟧›
+    ¿F∉__þIMPORTS__: __þIMPORTS__󰂘 = □
+                     ns = {__name__=name, __file__=F, __dir__=F.parent, __EXPORTS__={}}
+                     𝕂 = {}
+                     ¿𝚌≇□≕native¬: 𝕂􊬏󰂼ₑ􊬐=𝚌=F 
+                     𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = 󱠨(𝚌,get_code=✓,native=native)
+                     ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
+                     __þIMPORTS__󰂘 ≔ Module(name,ns,⠶𝕂)
+    mod = __þIMPORTS__󰂘
+    mod􊬏􋕞􋕞󰂗󰂪󰂢󰂡󰂤󰂦󰂥􋕞􋕞􊬐 𝖦.update
+    ↪mod
 ⊢ __þADD_EXPORTS__(𝖦,⠤𝔸):  󰤱
     E = 𝖦.setdefault(‹__EXPORTS__›,{})
     E.update({⠤𝔸})
     ↪E
-⊢ __þADDGLOBALS_CLEAN__(M,𝖦):  󰤱
-    𝖦.update(M)
+⊢ __þADDGLOBALS_CLEAN__(M,𝖦): 𝖦.update(M 𝑑 ꟿ󰲣x.startswith(␛_)⭜󰮈⭝(x,y))
 __þGET_GLOB_MODNAME__ = 𝚲𝔸
 __þSET_GLOB_MODNAME__ = 𝚲𝔸
 
 BOOTSTRAP_GLOBALS = globals().copy()
 
  PEV(␛@)
-
- DISABLE_AUTOIMP = ‹kots ℍ HEADER›⍭
+ DISABLE_AUTOIMP = ␛ℍ
  IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
  ⮌ types ⨡ FunctionType as _FT
  ⮌ sys ⨡ _getframe
- ⊢ ´(n=0):
-     frame = _getframe(n+1)
-     ↪ _FT(frame.f_code, frame.f_globals)
-  󰲡1 ¿x≤1¡ 𝓢()(x-1)+𝓢()(x-2)󰅂(5)☾
-
- ⊢ outer_globals(i=0):
-     ∀i󷸊+1:
-         𝘎 = _getframe(i).f_globals
-         ¿𝘎[‹__file__›]≠__file__: ⇥
-     ↪ 𝘎
- ⊢ get_implict_imports(code):  so what if you import stuff by accident this wont need fixing in a month
-     ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
-         ↪ ‹(‹⟦auto_imports⨝␛ ⟧␛›⍭ᴍ󰋺)›
-
-  𝔸∋* ⟶ merge all (public) module contents with globals
-  𝔸∋- ⟶ don't set module itself as global (automatic w/ !)
-  𝔸∋! ⟶ store the object with module name into globals instead of module
-  g ⟶ store anything into globals
-  store_code ⟶ m.__cpy_code__ is the source code
-  󷹇 var name __exports__ determines the default stuff to dump into namespace
-  󰤱 bug that store_code doesn't work if found in cache
- ⊢ 󰋺(𝔣,⠤𝔸,g=✓,store_code=✓,just_get_path=✗):
-     ⮌ sys ⨡ path as 𝘗
-     ⮌ pathlib ⨡ Path as 𝐩
-     𝘎 = outer_globals()
-     𝙳 = [␛., ⠤𝘗]
-     ¿𝘎.get(‹__file__›)≕fp:
-         𝙳.append(𝐩(fp).parent)
-     𝙳 󷸊 ᴍ𝐩ᐵ.resolve()ᐸ 󰈲󷺹.is_dir()ᐸ ⭢ ᚤ
-     𝚏, 𝙲𝙷𝙺 = □, ⍁
-     ∀p,e ∈ 𝙳⨉‹ .☾›⍭:
-         f = p/‹⟦𝔣⟧⟦e⟧›
-         ¿f.is_dir():
-             ¿ 𝙲𝙷𝙺.append(h≔f/‹main.☾›)►h.is_file()␛
-              ∨𝙲𝙷𝙺.append(h≔f/‹⟦𝔣⟧󷺗.☾›)►h.is_file():
-                 𝚏,𝚗 = h,PEV(𝚗𝚊≔f.stem)
-                 ⇥
-             ↺
-         𝙲𝙷𝙺.append(f)
-         ¿f.is_file():
-             𝚏,𝚗 = f,PEV(𝚗𝚊≔f.stem)
-             ⇥
-     𝚏 ⨳ ‹Can't find "⟦𝔣⟧", files checked:⟦𝙲𝙷𝙺⟕𝗻𝘁⟧›
-     ¿just_get_path: ↪𝚏
-     ¿𝚏∈IMPORTED_:
-         ¿IMPORTED_􀲤≕𝘔≅□: ↪
-     ¡:
-         𝚌𝚘𝚍𝚎 = ⓦ(𝚏.open(), 󷺹.read())
-         󱀘 Module(ℵ´ 􋇑): __repr__ = 𝚲‹Module "⟦𝚗𝚊⟧"›
-         ns = {‹__name__›:𝚗, ‹__file__›:𝚏, ‹__dir__›:𝚏.parent}
-         IMPORTED_􀲤 = □
-         𝘔 = Module(⠶󱠨(␛+𝚌𝚘𝚍𝚎, get_ns=✓, cap_stdout=✗, ns=ns, fname=ᔐ(𝚏)))
-         IMPORTED_􀲤 = imports􀲴􀲚 = 𝘔
-         ¿store_code: 𝘔[‹__cpy_code__›] = 𝚌𝚘𝚍𝚎
-     𝑘 = *∈𝔸 ⭜𝘔⁻󰈳󰲡x₀≡␛_󰅂⭝ [⠤𝔸 ∖ {!}]
-     𝑘󷸊󰌷("__exports__"∈𝘔⁻ ⭜[⠤𝘔[‹__exports__›]]⭝ ⍁)
-     ¿g:
-         ∀k∈𝑘:
-             K = PEV(k)
-              ☾‹⟦‹✗✓›󰂝􊮇􍻧⟧: Adding "⟦k⟧"(⟦K⟧) from "⟦𝔣⟧"(⟦𝚗⟧) to ⟦𝘎[‹__file__›]⟧›
-             ¿K∈𝘔: 𝘎󰂝 = 𝘔󰂝
-             ¡   : ‹Warning, ⟦k⟧∉⟦𝘔⟧›☾
-         ¿-∉𝔸∌! ∧ 𝚗𝚊∉𝑘:
-             𝘎􀲴 = 𝘔
-     !∉𝔸 ∨ 𝚗∈𝘔 ⨳ ‹Can't find "⟦𝚗⟧" inside module "⟦𝚗𝚊⟧"!›
-     ↪ 𝘔
-
- ℳℱ_cache = {}
- ⊢ ℳℱ(load):
-     ⊢ ƒ(⠤𝔸,⠶𝕂):
-         ¿ℳℱ_cache∋𝓲≔id(load): 𝑓 = ℳℱ_cache􋜆
-         ¡                   : 𝑓 = ℳℱ_cache􋜆 = load
-         ↪ 𝑓(⠤𝔸,⠶𝕂)
-     ↪ ƒ
- SUBPROCA = ℳℱ(𝚲󰋺(‹subproca›).SUBPROCA)
+ ⊢ ´(n=0): frame = _getframe(n+1)
+            ↪ _FT(frame.f_code, frame.f_globals)
+ 󰲡1 ¿x≤1¡ 𝓢()(x-1)+𝓢()(x-2)󰅂(5)☾
+ ⊢ get_implict_imports(code): ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
+                                  ↪‹(‹⟦auto_imports⨝␛ ⟧␛›⍭ᴍ󰋺)›
+ subproca

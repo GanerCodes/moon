@@ -1,6 +1,6 @@
 ⦃from unicodedata import is_normalized⦄
 ⦃from keyword import kwlist⦄
- ⨡ rewriters *
+⨡ rewriters ⭸ *
 
 𝐌 = ℵ(𝑣_spec      = ‹✓ True ✗ False □ None›⍭ℵ,
       std_kwd     = ‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭ℵ,
@@ -131,4 +131,4 @@ ast_add_pos = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾
     ¡⦃Exception as ⦃ε⦄⦄: ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
                          ✗⨳‹Error in python reparsing! ⟦ε⟧›
 
-__exports__ = ‹ast_to_py PEV VEP›⍭
+⭷ ast_to_py,PEV,VEP

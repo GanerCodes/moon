@@ -1,4 +1,4 @@
- ⨡ rewriters *
+⨡ rewriters ⭸ *
 
 gram      = moon_dir/‹Libraries/Compiler/gram› ⭢ 
 gram      = gram_rp(‹𝗐 𝖶›⍭󰛔ᵍʳᵃᵐ⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
@@ -88,4 +88,4 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
     󱁕.ftrp(␛∘,󱁕↦󱁕.set(c=[󱁕₀,⠤󱁕₁﹕ᐵᵗ≡␛𝑃∧⟞₀🃌≡1∧⟞₀ᵗ≡␛𝔸⭜⟞₀⭝⟞]),✓)  󰤱 dumb hack
     ↪󱁕
 
-__exports__ = ‹to_ast›⍭
+⭷ to_ast

@@ -45,7 +45,7 @@
     𝐶𝑛 = ␛ℶ
     __iter__ = 𝕊↦iter(𝕊.values())
 󱀘 _hwrap(𝑑):
-    ⊢ __init__(𝕊, 𝑐): 𝕊􋇑, 𝕊􋇛 = 𝑐, 𝑐􋆷􋇛
+    ⊢ __init__(𝕊,𝑐): 𝕊􋇑,𝕊􋇛 = 𝑐,𝑐􋆷􋇛
     __getitem__ = ⥌𝕊,x↦𝕊􋇑().setdef(x)
     __setitem__ = ⥌𝕊,x,y↦(⒯≔𝕊􋇑()).__setitem__(x,y) →►← ⒯
     __call__ = 𝕊↦𝕊􋇑(⠤𝔸,⠶𝕂)

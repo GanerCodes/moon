@@ -9,7 +9,6 @@
 ⦃from cmath import *⦄
 ⦃from types import UnionType⦄
 ⦃from random import shuffle,choice,uniform,randint⦄
-⦃from pathlib import Path as ⦃𝐩⦄⦄
 ⦃from tempfile import gettempdir⦄
 ⦃from builtins import setattr as ⦃setattr_⦄⦄
 ⦃from operator import setitem as ⦃setitem_⦄,__gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,delitem⦄
@@ -17,7 +16,6 @@
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
-moon_dir = 𝐩(__file__).parent.parent.resolve()
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
 setattr = 󰲥setattr_(x,y,z) ∨ z
@@ -29,12 +27,11 @@ setitem = 󰲥setitem_(x,y,z) ∨ z
 þPOP=⥌x=0↦þSTK.setdefault(𝔗ℑ𝔇(),[]).pop(-1-x)
 þDEL=⥌x  ↦þSTK.setdefault(𝔗ℑ𝔇(),[]).__delitem__(-x:)
 ␀CAT´ = 󰲣callable(y)⭜y(x)⭝x⋅y
-⊢ þCUR(𝑃,𝐾,⠤𝒜):
-    ⊢ꬶ(⠤𝐴): ¿len(𝐴)<len(𝑃): ↪𝚲ꬶ(⠤𝐴,⠤𝔸)
-            𝙰,𝙺 = [⠤𝒜],{⠶𝐾}
-            ∀k,v⬠zip(𝑃,𝐴): isinstance(k,int)⭜􀳣𝙰➡ₖ=v
-            ↪𝙰₀(⠤𝙰₁﹕,⠤𝐴ₗₑₙ₍􊴂₎﹕,⠶𝙺)
-    ↪ꬶ()
+⊢ þCUR(𝑃,𝐾,⠤𝒜): ⊢ꬶ(⠤𝐴): ¿len(𝐴)<len(𝑃): ↪𝚲ꬶ(⠤𝐴,⠤𝔸)
+                        𝙰,𝙺 = [⠤𝒜],{⠶𝐾}
+                        ∀k,v⬠zip(𝑃,𝐴): isinstance(k,int)⭜􀳣𝙰➡ₖ=v
+                        ↪𝙰₀(⠤𝙰₁﹕,⠤𝐴ₗₑₙ₍􊴂₎﹕,⠶𝙺)
+                ↪ꬶ()
 
 𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦 = Exception,object,dict,bool,list,tuple,set,str,int,float,bytes
 ´ᐦ´ = 󷺗
@@ -138,7 +135,7 @@ CURR= ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
     __init__ = ⥌𝕊,𝖲↦𝕊􋊡≔𝖲→►□
     __bool__ = ⥌𝕊↦𝕊􋊡 ˢ
     __call__ = ⥌𝕊↦𝕊 ⭜𝕊􋊡 ʳ⭝ 𝕊􋊡 ʳ.copy
-    __repr__ = ⥌𝕊↦‹Timer[⟦"ID"􊶊􌋄􋘲􊫀􊮥₀⟧; ⟦𝕊􋊡 ʸ⫰⟧s; ⟦‹Running Completed›⍭→􊴎􊮎􊶊⟧; ⟦𝕊􋊡 ⁿ⟧ Remaining loops]=⟦𝕊􋊡 ʳ⟧›
+    __repr__ = ⥌𝕊↦‹Timer[⟦"ID"􊶊􌋄􋘲􊫀􊮥₀⟧; ⟦𝕊􋊡 ʸ⫰⟧s; ⟦𝕊⭜‹Running›⭝‹Completed›⟧; ⟦𝕊􋊡 ⁿ⟧ Remaining loops]=⟦𝕊􋊡 ʳ⟧›
 
 tmp = {ᴍ=‹Áÿú󷺗›,ꟿ=‹ËãÂ󷺗›,ſ=‹ÆÑ󷺗󷺗›,Ϝ=‹ÐÌ󷺗󷺗›,󰈳=‹ÄÔÔè›,󰈲=‹ÄÔÔç›,=‹ÐÌÛ󷺗›,󰒼=‹ÄÔàÑ›,󰒽=‹ÄÔàÒ›,ᙎ=‹Ááæ󷺗›,ᙡ=‹Ááú󷺗›,ᗢ=‹Áßô󷺗›,ᙧ=‹ÁâÁ󷺗›,⊚=‹ÂØÍ󷺗›,⊜=‹ÂØÏ󷺗›,🟕=‹ãéÜ󷺗›,🟖=‹ãéÝ󷺗›,⊛=‹ÂØÎ󷺗›,⍟=‹ÂÛÜ󷺗›,○=‹Âåæ󷺗›,⍜=‹ÂÛÙ󷺗›,󰬫=‹ÄÔüÑ›,󰬩=‹ÄÔüÏ›,=‹ÐâÄ󷺗›,󰔶=‹ÄÔâÑ›,=‹ÐÇò󷺗›,󱑼=‹ÄÕåØ›,󷹅=‹ÄÝöÔ›,⪡=‹Âúù󷺗›,⪢=‹Âúú󷺗›,󰸵=‹ÄÕÊÂ›,󰸷=‹ÄÕÊÄ›,⤉=‹ÂóÍ󷺗›,⤈=‹ÂóÌ󷺗›,⟷=‹Âîí󷺗›,󷹌=‹ÄÝöÜ›,󷹍=‹ÄÝöÝ›,󷹎=‹ÄÝöÞ›,󷸹=‹ÄÝöÈ›,󷸺=‹ÄÝöÉ›,󷸸=‹ÄÝöÇ›,󷸻=‹ÄÝöÊ›,⨝=‹Âøî󷺗›,⟕=‹ÂîÊ󷺗›,⟖=‹ÂîË󷺗›,⟗=‹ÂîÌ󷺗›,⫰=‹ÂüÌ󷺗›,⫯=‹ÂüË󷺗›,󷹒=‹ÄÝöâ›,󷹓=‹ÄÝöã›,󷹔=‹ÄÝöä›,󷹕=‹ÄÝöå›,󷹖=‹ÄÝöæ›,󷸓=‹ÄÝõà›,󷸼=‹ÄÝöË›,󷸔=‹ÄÝõá›,=‹ÏäÒ󷺗›,󱅏=‹ÄÕØÃ›,=‹ÐâÇ󷺗›}
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
@@ -146,9 +143,8 @@ RCD = 󷺹∉ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
 SPE = 󷺹∈ENC+␛þ
 PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍􍴕􌿍⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱󰀂⁼ᴱᴺ󰀂⁾󷺹₀RCDᐸ⭢⨝␛Þ
 VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉􍴕􌿍⁽􋅂󰁱󰀂⁼ᴱᴺ󰀂⁾⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀SPEᐸ⭢⨝
-⊢ OPWRAP_(⠤𝚇):
-    ⊢ R(ƒ): ∀x⬠𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
-    ↪ R
+⊢ OPWRAP_(⠤𝚇): ⊢ R(ƒ): ∀x⬠𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
+               ↪ R
 
 𝗙,𝗜 = callable,󰲡hasattr(x,‹__iter__›)
 ⊢ 𝗛(x): ↪hash(x)
@@ -218,7 +214,12 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗
 ؆´ = ⥌𝚡,𝚜=2↦®􀲿􋄽ᐵ⋅𝚡􀲿􍩯
 ´ = ⥌𝚡↦𝚲𝚡(⠤𝔸󰌷,⠶𝕂)
 ∾´ = ⥌𝚡↦𝚲𝚡(⠤𝔸ᴙ,⠶𝕂)
-
 *´ = 󰲣⦃x*y⦄
 /´ = 󰲣⦃x/y⦄
 󰔛 = 𝑜()  󰤱 tmp
+
+󱀘 Holder: __slots__ = ␛x,
+          ⊢__init__(𝕊,x=␀):  𝕊ˣ≔x
+          ⊢__pos__ (𝕊    ): ↪𝕊ˣ◄⬅𝕊ˣ≇␀⨳‹Holder value unset!›
+          ⊢__call__(𝕊,x=␀):  𝕊ˣ≔x
+          ⊢__bool__(𝕊    ): ↪𝕊ˣ≇␀

@@ -1,7 +1,7 @@
 ⦃from functools import cache⦄
 ⨡ peggle2/gram_tools
 ⨡ text_format
- ⨡ op_table ⭸ *
+⨡ op_table ⭸ *
 
 fix = ␛﹕󰛔␛ː
 ⊢ ☾´(⠤𝔸,s=𝗻,sep=𝘀,❗=✗,⠶𝕂):

@@ -6,7 +6,7 @@ fcache = 𝚲ƒ↦ƒ  󰻾􋒍  ⨡ cache
          ↪ FC(⠤𝔸,⠶𝕂)
      ↪󰻾
 
-⨡ 𝐍
+⨡ Ń
 ⨡ text_format
 
            ⦃import regex as ⦃re⦄⦄
@@ -240,7 +240,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ↪󱁕
 
  parse_to_node = 󱁕↦(ƒ ≔ 󰲡Ń(x, ⠤𝔸ᴍ󰲡ƒ(⠤xᐹ𝑡 ⭜x⭝ x⛶􋇡)))(⠤󱁕)
-⊢ parse_to_node(󱁕): ⊢ƒ(x,⠤𝔸): ↪Ń(x, ⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,))∀x⬠𝔸))
+⊢ parse_to_node(󱁕): ⊢ƒ(x,⠤𝔸): ↪Ń(x,⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,))∀x⬠𝔸))
                     ↪ƒ(⠤󱁕)
 
 ⊢ (fcache) peggle2_call(R,content,rule=‹main›,DEBUG=✗,chop=✓,⠶𝓚):

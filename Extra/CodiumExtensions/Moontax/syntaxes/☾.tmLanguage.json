@@ -20,13 +20,13 @@
       "name": "string.template.sys.moon",
       "begin": "\\$", "end": "󷹹",
       "patterns": [{ "include": "#str_sub_inner" },
-                   { "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛⟦󷹹]*",
+                   { "match": "([^␛⟦󷹹]|\n)*",
                      "name": "string.template.sys.guts.moon" }]},
     "str_tsub": {
       "name": "string.template.sub.moon",
       "begin": "‹", "end": "›",
       "patterns": [{ "include": "#str_sub_inner" },
-                   { "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛⟦␛›]*",
+                   { "match": "([^␛⟦␛›]|\n)*",
                      "name": "string.template.sub.guts.moon" }]},
     "str_nsub": {
       "patterns": [{ "include": "#str_nsub1" },
@@ -35,13 +35,13 @@
       "name": "string.quoted.double.moon",
       "begin": "\"", "end": "\"",
       "patterns": [{ "include": "#str_gen_inner" },
-                   { "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛\"]*",
+                   { "match": "([^␛\"]|\n)*",
                      "name": "string.guts.double.moon" }]},
     "str_nsub2": {
       "name": "string.quoted.single.moon",
       "begin": "'", "end": "'",
       "patterns": [{ "include": "#str_gen_inner" },
-                   { "match": "[^𝗮-𝘇𝟬-𝟵󷺗␛']*",
+                   { "match": "([^␛']|\n)*",
                      "name": "string.guts.single.moon" }]},
     "str_empty_marker": {
       "match": "󷺗",
@@ -58,9 +58,6 @@
       "beginCaptures": { "0": { "name": "punctuation.section.brackets.begin.moon" }},
       "endCaptures": { "0": { "name": "punctuation.section.brackets.end.moon" }},
       "patterns": [{ "include": "#str" }]},
-    "str_spec_char": {
-      "match": "‹[𝟬-𝟵𝗮-𝗳]{2}|[𝗮-𝘇󷺗]›",
-      "name": "constant.character.special.moon" },
     "str_escape": {
       "match": "␛.",
       "name": "string.other.single-char.moon" }}}

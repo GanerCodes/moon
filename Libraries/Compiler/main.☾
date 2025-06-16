@@ -1,25 +1,21 @@
-⦃from sys import stdin as ⦃ℑ𝔑⦄, argv as ⦃𝔸⦄⦄
+⦃from sys import stdin as ⦃ℑ𝔑⦄⦄
 ⦃from time import time as ⦃𝓉⦄⦄
 ⦃from subprocess import Popen⦄
 ⨡ text_format
-⨡ to_ast
-⨡ ast_to_py
-⨡ tree *
-show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
-title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
+⨡ to_ast    ⭸ *
+⨡ ast_to_py ⭸ *
+⨡ tree      ⭸ *
 
-IDENT     = ␛Δ
-BASE      = ‹/home/ganer/Projects/Moon_BETA›𝐩
-COMPILER  = ‹python3 ⟦BASE⟧/STAGES/BOOTSTRAP_⟦IDENT⟧.py›
-BINARY    = ‹python3›  ‹pypy3.11›
-DEST      = ‹/tmp/bootstrap_via_⟦IDENT⟧.py›𝐩
-TMP       = mkd(‹/tmp/⟦IDENT⟧›)
+IDENT    = ␛ι
+BASE     = ‹/home/ganer/Projects/Moon_BETA›𝐩
+COMPILER = ‹python3 ⟦BASE/‹STAGES/BOOTSTRAP_ζ.py›⟧›
+DEST     = ‹/tmp/bootstrap_via_⟦IDENT⟧.py›𝐩
+TMP      = mkd(‹/tmp/⟦IDENT⟧›)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
 
-   header_com = BASE/‹Header󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Header/builtins›)󷹎
-bootstrap_com = BASE/‹Libraries/Compiler›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹generate_operators op_table node_types tree tree_txt expr lambdas rewriters to_ast ast_to_py main›
-bootstrap_lib = BASE/‹Libraries󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ⍭‹text_format 𝐍 peggle2/main peggle2/rgx_golfatron peggle2/gram_tools›
-pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧›
+header_com = BASE/‹Header›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Header/builtins›)󷹎
+pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
+                  moon_dir = ⟦PEV(␛𝐩)⟧(⟦BASE ᔐ repr⟧)›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
@@ -32,53 +28,54 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
 
-⊢ decorate_code(𝚌,inform=□,lib=✗):
-    ¿informᐹᔐ|𝐩: 𝚌󷸊+ᵜ‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(⟦repr(inform ᔐ)⟧)).parent𝗻›
-    ¿lib       : 𝚌󷸊+ᵜ‹exec(⟦repr(𝚌)⟧,__:=globals().copy())
-                      for k,v in __.get("__EXPORTS__",{}).items():globals()[k]=v
-                      del __𝗻›
+⊢ decorate_code(𝚌,inform=□):
+    ¿informᐹᔐ|𝐩: ↪‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir / ⟦repr(inform ᔐ)⟧)).parent𝗻⟦𝚌⟧›
     ↪𝚌
-⊢ compile_file(𝚙,lib=✗,set_fp=✓,external=✗,instant=✓,cache=✓):
-     cache=✗  󰤱
-    ¿𝚙ᐹ𝑡|𝑙: 𝚙,𝚘 = 𝚙
-    ¡     :   𝚘 = TMP/‹⟦sha(TMP,𝚙󷸊.resolve,𝚙 )⟧---⟦𝚙.stem⟧.py›
+⊢ compile_file(𝚙,set_fp=✓,threaded=✗,instant=✓,cache=✓):
+    ¿𝚙ᐹ𝑡|𝑙: 𝚙,𝚘 = 𝚙ᴍ𝐩
+    ¡     : 𝚙󷸊𝐩
+            𝚘 = TMP/‹⟦sha(TMP,𝚙󷸊.resolve,𝚙 )⟧---⟦𝚙.stem⟧.py›
     ‹⟦IDENT⟧ ⟦padl(𝚙.name,25)⟧ ⭢ ⟦𝚘.name⟧›☾
     ⊢R: ¿cache∧𝚘.is_file: 𝚌 = 𝚘 
-        ⸘external        : 𝚌 = Popen(‹⟦COMPILER⟧ o⟦cache⭜ᐦ⭝␛󷱉⟧ ⟦𝚙⟧ ⟦𝚘⟧›⍭).wait ► 𝚘 
+        ⸘threaded        : 𝚌 = Popen(‹⟦COMPILER⟧ o⟦cache⭜ᐦ⭝␛󷱉⟧ ⟦𝚙⟧ ⟦𝚘⟧›⍭).wait ► 𝚘 
         ¡                : 𝚌 = 𝚙  moon_to_pyᐒ(𝚘,⟞)►⟞
-        ↪decorate_code(𝚌,set_fp⭜𝚙,lib)
+        ↪decorate_code(𝚌,set_fp⭜𝚙.resolve.relative_to(moon_dir))
     ↪R ᣆⁱⁿˢᵗᵃⁿᵗ 
-⊢ compile_files(F,lib_idx=⍁,threaded=✓,cache=✓):
-    files = F↨ꟿ󰲣compile_file(y,lib=x∈lib_idx,external=threaded,instant=✗,cache=cache)
+⊢ compile_files(F,threaded=✓,cache=✓):
+    threaded=✗  󰤱
+    files = F↨ꟿ󰲣compile_file(y,threaded=threaded,instant=✗,cache=cache)
     ↪files 󱖔ᵗʰʳᵉᵃᵈᵉᵈ􀸩􍰥􀸧􊾡  ⭢⨝𝗻
 
 ⊢ generate_bootstrap(dest=‹/tmp/bootstrap.py›𝐩):
     pyc = ‹⟦pathlib_import⟧
-           ⟦compile_files(header_com+bootstrap_lib+bootstrap_com,
-                          header_com🃌ᑀ+ᑈbootstrap_lib⭥)⟧›
+           ⟦header_com compile_files⟧
+           ⟦dump_cached_imports⟧
+           ⟦compile_file(__file__)⟧
+           TRANSPILE_REF(moon_to_py)›
     ¿dest: (dest,pyc)
     ↪pyc
 
-⭷ moon_to_py,moon_to_py_debug,compile_file,compile_files,generate_bootstrap
+⊢ transpiler_cli(⠤𝖠):
+    show_docs = 𝚲‹Usage: e <str_to_encode>
+                         d <str_to_decode>
+                         b <boostrap_dest>?      - ⟦DEST⟧ default
+                         o <file_in> <file_out>? - header ✗, stdout default
+                         O <file_in> <file_out>? - header ✓, stdout default
+                         r <code_to_run>         - header ✗
+                         R <code_to_run>         - header ✓›☾
+    ¿𝖠🃌: m,⠤𝖠 = 𝖠
+         ƒ = ␛a∈m ⭜moon_to_py_debug⭝ moon_to_py
+         ¿␛e∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ
+         ⸘␛d∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ
+         ⸘␛b∈m: generate_bootstrap(𝖠⭜ᴰᴱ󰀒ᵀ𝖠₀𝐩)
+         ⸘␛o∈m: compile_file((𝖠₀,𝖠🃌>1⭜𝖠₁⭝‹/dev/fd/1›),set_fp=✗,threaded=✗,instant=✓,cache=␛󷱉∉m)
+         ⸘␛O∈m: (𝖠􍨄,compile_files(header_com)+←𝖠﹕􍨄ᴍƒ○⭢⟕𝗻)
+         ⸘␛r∈m: ƒ(𝖠⨝𝘀) ⭢ exec
+         ⸘␛R∈m: pathlib_import+𝗻+compile_files(header_com)+𝗻+ƒ(𝖠⨝𝘀) ⭢ exec(⬤,{})
+         ⸘␛D∈m: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
+         ¡    : show_docs
+    ¡  : show_docs
 
-¿__name__≡‹__main__›:
-show_docs = 𝚲‹Usage: e <str_to_encode>
-                     d <str_to_decode>
-                     b <boostrap_dest>?      - ⟦DEST⟧ default
-                     o <file_in> <file_out>? - header ✗, stdout default
-                     O <file_in> <file_out>? - header ✓, stdout default
-                     r <code_to_run>         - header ✗
-                     R <code_to_run>         - header ✓›☾
-𝖠 = 𝔸₁﹕
-¿𝖠🃌: m,⠤𝖠 = 𝖠
-     ƒ = ␛a∈m ⭜moon_to_py_debug⭝ moon_to_py
-     ¿␛e∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ
-     ⸘␛d∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ
-     ⸘␛b∈m: generate_bootstrap(𝖠⭜ᴰᴱ󰀒ᵀ𝖠₀𝐩)
-     ⸘␛o∈m: compile_file((𝖠₀,𝖠🃌>1⭜𝖠₁⭝‹/dev/fd/1›),set_fp=✗,external=✗,wrap=✗,instant=✓,cache=␛󷱉∉m)
-     ⸘␛O∈m: (𝖠􍨄,compile_files(header_com)+←𝖠﹕􍨄ᴍƒ○⭢⟕𝗻)
-     ⸘␛r∈m: ƒ(𝖠⨝𝘀) ⭢ exec
-     ⸘␛R∈m: pathlib_import+𝗻+compile_files(header_com)+𝗻+ƒ(𝖠⨝𝘀) ⭢ exec(⬤,{})
-     ⸘␛D∈m: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
-     ¡    : show_docs
-¡  : show_docs
+⭷ moon_to_py,moon_to_py_debug,compile_file,compile_files,generate_bootstrap,transpiler_cli
+
+¿__name__≡‹__main__›: transpiler_cli(⠤𝔸₁﹕)
