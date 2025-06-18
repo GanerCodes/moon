@@ -1,0 +1,139 @@
+(ÄÊPSH(__ÄÊIMPORT__('tree_txt', globals())), __ÄÊADDGLOBALS_CLEAN__(ÄÊPKE(), globals()), ÄÊPOP())[-1]
+
+def denode_op(ÄÕÒü):
+    (ÄÊPSH(ÄÕÒü), ((l := ÄÊPKE(0)[0]), (o := ÄÊPKE(0)[1]), (r := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+    (áÖü := OP_TABLE[getattr(o[0], 't')])
+    (ÄÊPSH(ÁØò(lambda ÂîÓ: ÁØò(lambda ÂîÓ: ÂîÓ if getattr(ÂîÓ, 't') == '𝚜' else áÎô(getattr(ÂîÓ[0], 't'), *ÂîÓ[slice(1, None)]))(ÂîÓ))([l, r])), ((áÖù := ÄÊPKE(0)[0]), (áØÀ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (ÄÊPSH(Áÿú(ÁØò(lambda ÂîÓ: ÁØò(lambda ÂîÓ: ÄÔýò if getattr(ÂîÓ, 't') == '𝚜' else getattr(ÂîÓ[0], 't'))(ÂîÓ))([l, r]), áÍè)), ((L := ÄÊPKE(0)[0]), (R := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (áÖü := ÐÌü(getattr(áÖü, 'copy')))
+    for t in L:
+        if t == '⟥':
+            (ÄÊPSH(áÖü), ÄÊPSH('L'), ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH((ÂÚü(), False, True, False)), (setattr(ÄÊPKE(8), ÄÊPKE(7), ÄÊPKE(0)[0]), setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[1]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[2]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[3])), ÄÊDEL(9))[9]
+        elif t == '≺':
+            (ÄÊPSH(áÖü), ÄÊPSH('L'), ÄÊPSH(áÖü), ÄÊPSH('R'), ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH((ÐÌü(getattr(getattr(áÎõ['ᴍ'], 'L'), 'copy')), ÂÚü(), False, True, False)), (setattr(ÄÊPKE(10), ÄÊPKE(9), ÄÊPKE(0)[0]), setattr(ÄÊPKE(8), ÄÊPKE(7), ÄÊPKE(0)[1]), setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[2]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[4])), ÄÊDEL(11))[11]
+    for t in R:
+        if t == '⟤':
+            (ÄÊPSH(áÖü), ÄÊPSH('R'), ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH((ÂÚü(), True, False, False)), (setattr(ÄÊPKE(8), ÄÊPKE(7), ÄÊPKE(0)[0]), setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[1]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[2]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[3])), ÄÊDEL(9))[9]
+        elif t == '≻':
+            (ÄÊPSH(áÖü), ÄÊPSH('L'), ÄÊPSH(áÖü), ÄÊPSH('R'), ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH((ÂÚü(), ÐÌü(getattr(getattr(áÎõ['ᴍ'], 'R'), 'copy')), True, False, False)), (setattr(ÄÊPKE(10), ÄÊPKE(9), ÄÊPKE(0)[0]), setattr(ÄÊPKE(8), ÄÊPKE(7), ÄÊPKE(0)[1]), setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[2]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[4])), ÄÊDEL(11))[11]
+        elif t == 'ᵜ':
+            None
+        elif t == '꜠':
+            if getattr(áÖü, 'B'):
+                (ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH(False), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+                if (ÄÊDEL(1), False)[1] if ÄÊPSH(getattr(áÖü, 'P')) else ÄÊPOP() if getattr(áÖü, 'S') else (ÄÊDEL(1), True)[1]:
+                    (ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH((ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+            elif getattr(áÖü, 'P') or getattr(áÖü, 'S'):
+                (ÄÊPSH(áÖü), ÄÊPSH('L'), ÄÊPSH((ÄÊPSH(áÖü), ÄÊPSH('R'), ÄÊPSH(ÂÕØ(getattr(áÖü, 'L'), getattr(áÖü, 'R'))), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+                (ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH((ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+            else:
+                ÂùÆ(False)
+    (áÖÉ := ÅÒ('𝗈𝗉', MOD(Áëý, áØÁ=not áÖù)(áÎô('op_⸓_l', *áÖù), lambda ÂîÓ: MOD(ÄÕéý, áØÁ=Âîë)(ÂîÓ, ÄÕÒü[1][0])), áÎô('op_lit', ÄÕÒü[1][0]), MOD(Áëý, áØÁ=not áØÀ)(áÎô('op_⸓_r', *áØÀ), lambda ÂîÓ: MOD(ÄÕéý, áØÁ=Âîì)(ÂîÓ, ÄÕÒü[1][0])), e=MOD(ÂÑÖ, áØÁ=None)()(**getattr(ÄÕÒü, 'e'), O=áÖü)))
+    if '´' in R:
+        (ÄÊPSH(getattr(áÖÉ, 'e')), ÄÊPSH('´'), ÄÊPSH('´'), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return áÖÉ
+
+def part(áÖü, áÖÔ, d):
+    (ÄÊPSH((getattr(getattr(áÖü, 'e'), 'O'), 0)), ((áÏì := ÄÊPKE(0)[0]), (i := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    if d == -1:
+        for i, n in ÂÓÏ(áÖÔ)[slice(None, None, -1)]:
+            if not (ÂÑÕ := IS_OP(n)):
+                continue
+            if ÂÔø(getattr(áÏì, 'L'), getattr(ÂÑÕ, 't')):
+                break
+    elif d == 1:
+        (áØÁþáØÂþáÖø := Âêà(getattr(áÏì, 'R')))
+        for i, n in ÂÓÏ(áÖÔ):
+            if not (ÂÑÕ := IS_OP(n)):
+                continue
+            while áØÁþáØÂþáÖø:
+                if getattr(ÂÑÕ, 't') in áØÁþáØÂþáÖø[-1] or ((((getattr(áÏì, 'P') or (getattr(áÏì, 'B') and (not getattr(áÏì, 'S')))) and getattr(ÂÑÕ, 't') in getattr(áÎõ['⨳'], 'R')) and getattr(ÂÑÕ, 'P')) and (not i)):
+                    getattr(áØÁþáØÂþáÖø, 'append')(getattr(ÂÑÕ, 'R'))
+                    break
+                getattr(áØÁþáØÂþáÖø, 'pop')()
+            else:
+                break
+        else:
+            (ÄÊPSH(i), ÄÊPSH(ÄÊPKE(0) + 1), (i := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    return áÇù(áÖÔ, i) or MOD(ÂÚü, áØÁ=2)()
+
+def create_call(áÖü, áÖù, áØÀ):
+    (ÂÑÕ := getattr(getattr(áÖü, 'e'), 'O'))
+    if getattr(ÂÑÕ, 't') in '⭢→➡':
+        return áÓÐ(*áÖù)
+    if getattr(ÂÑÕ, 't') in '⭠←⬅':
+        return áÓÐ(*áØÀ)
+    if getattr(ÂÑÕ, 't') == '⥉':
+        return MOD(ÄÕéý, áØÁ=ÂØÙ)(áÓÐ(áÓÐ(*áØÀ), áÓÐ(*áÖù)), (áÖù, áØÀ))
+    if not getattr(ÂÑÕ, 'ÏÁ'):
+        (ÄÊPSH((áÖù is not áÓÆþáÓÍþáÓÄþáÓÄ, áØÀ is not áÓÆþáÓÍþáÓÄþáÓÄ)), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        (U := ([áÖù, áØÀ] if Ïß and Ïà else [áÖù] if Ïß else [áØÀ] if Ïà else ÂÚü()))
+    else:
+        (U := (áÖù, áØÀ))
+    return MOD(ÄÕéý, áØÁ=ÂØÙ)(áÓâþáÓãþáÒú(áÖü, *U), (áÖù, áØÀ))
+
+def apply_op(áÖü, áÖÞ, áÖä):
+    (ÄÊPSH(part(áÖü, áÖÞ, -1)), ((ll := ÄÊPKE(0)[0]), (lr := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (ÄÊPSH(part(áÖü, áÖä, 1)), ((rl := ÄÊPKE(0)[0]), (rr := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    if rl:
+        (rl := parse_expr(rl))
+    (ÄÊPSH((getattr(getattr(áÖü, 'e'), 'O'), ÂÚü())), ((áÕÉ := ÄÊPKE(0)[0]), (áÑæ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    if '𝚜' in áÕÉ:
+        getattr(áÑæ, 'append')(getattr(áÕÉ, 'pop')('𝚜'))
+
+    def suffix(áÖä):
+        if áÖä and (not (áÎÛ := IS_OP(áÖä[0])) or (getattr(áÎÛ, 'P') and ((ÄÊDEL(1), False)[1] if ÄÊPSH(getattr(áÎÛ, 'B')) else ÄÊPOP() if getattr(áÎÛ, 'S') else (ÄÊDEL(1), True)[1]))):
+            getattr(áÖä, 'insert')(0, denode_op(áÓâþáÓã(MOD(ÄÕéý, áØÁ=Âîì)('␀CAT', áÖä))))
+        return áÖä
+    (suf2 := (lambda áÖä: Âêà(getattr(áÖä, 'pop')(0)) if áÖä and getattr(áÖä[0], 't') == 'target_rhs' else ÂÚü()))
+    if (getattr(áÕÉ, 'B') and lr) and rl:
+        return (ll + [create_call(áÖü, áÓë(*lr), áÓë(*rl)), *áÑæ], rr)
+    elif getattr(áÕÉ, 'S') and lr:
+        return (ll + [create_call(áÖü, áÓë(*lr), áÓÆþáÓÍþáÓÄþáÓÄ), *áÑæ, *suf2(áÖä)], suffix(áÖä))
+    elif getattr(áÕÉ, 'P') and rl:
+        return (áÖÞ + [create_call(áÖü, áÓÆþáÓÍþáÓÄþáÓÄ, áÓë(*rl)), *áÑæ], rr)
+    elif getattr(áÕÉ, 'N') and (getattr(áÕÉ, 'Ïë') or ((ÄÊDEL(1), False)[1] if ÄÊPSH(lr) else ÄÊPOP() if rl else (ÄÊDEL(1), True)[1])):
+        return (áÖÞ + [create_call(áÖü, áÓÆþáÓÍþáÓÄþáÓÄ, áÓÆþáÓÍþáÓÄþáÓÄ) if getattr(áÕÉ, 'Ïë') else áÖü, *áÑæ, *suf2(áÖä)], áÖä)
+    if getattr(áÕÉ, 'B'):
+        if lr:
+            return (ll + [create_call(áÖü, áÓë(*lr), áÓë(áÓéþáÓæ('⬤'))), *áÑæ], áÖä)
+        if rl:
+            return (áÖÞ + [create_call(áÖü, áÓë(áÓéþáÓæ('⬤')), áÓë(*rl)), *áÑæ], rr)
+    áÍñþáÍñ(áÖü)
+    ÂùÆ(False, 'Unable to apply operator %s: ll=%s; lr=%s; rl=%s; rr=%s' % (áÖü, ll, lr, rl, rr))
+
+def parse_expr(ÄÕÒü):
+    (ÄÊPSH(([], [*ÄÕÒü])), ((áÖÞ := ÄÊPKE(0)[0]), (áÖä := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    while áÖä:
+        (c := getattr(áÖä, 'pop')(0))
+        if IS_OP(c):
+            (ÄÊPSH(apply_op(c, áÖÞ, áÖä)), ((áÖÞ := ÄÊPKE(0)[0]), (áÖä := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        else:
+            getattr(áÖÞ, 'append')(c)
+    return áÓë(*áÖÞ + áÖä)
+
+def curry_ops(ÄÕÒü):
+
+    @getattr(ÄÕÒü, 'ftrp')('∘', None, True)
+    def _(ÄÕÒü):
+        (Æå := (lambda ÂîÓ: getattr(ÂîÓ, 't') == '𝑣_spec' and getattr(ÂîÓ[0], 't') == '⬤'))
+        (ÓÎ := (lambda ÂîÓ: getattr(ÂîÓ, 't') == 'kw_𝕒'))
+        (Ëðá := (lambda ÂîÓ: ÓÎ(ÂîÓ) and Æå(ÂîÓ[1])))
+        (C := ÁØò(lambda ÂîÓ: [ÂîÓ, 1] if Æå(ÂîÓ) else [áÓäþáÓé(+ÂîÓ[0]), -1] if Ëðá(ÂîÓ) else [áÓÜþáÓçþáÓØþáÓà(áÓäþáÓé(+ÂîÓ[0]), ÂîÓ[1]), 0] if ÓÎ(ÂîÓ) else [ÂîÓ, 0])(getattr(ÄÕÒü, 'c')))
+        if getattr(ÄÕÒü[0], 't') == '𝗈𝗉':
+            (ÄÊPSH(C), ÄÊPSH(slice(2, 2)), ÄÊPSH(ÁØò(lambda ÂîÓ: [áÓäþáÓé(getattr(ÂîÓ, 't')), -1] if ãÊú(ÂîÓ) == 1 and Æå(ÂîÓ[0]) else [áÓÜþáÓçþáÓØþáÓà(áÓäþáÓé(getattr(ÂîÓ, 't')), ÂîÓ[0]), 0])(ÄÔÔç(ÄÕÒü[0][2], ãÊú))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        if not ÂØõ(ÁØò(lambda ÂîÓ: ÂîÓ[1])(C)):
+            return ÄÕÒü
+        (ÄÊPSH(MOD(ÂÚü, áØÁ=3)()), ((áÑõ := ÄÊPKE(0)[0]), (áÑð := ÄÊPKE(0)[1]), (áÑæ := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+        for c, k in C:
+            if getattr(c, 't') == 'item':
+                getattr(áÑð, 'append')(c)
+            elif k == 0:
+                getattr(áÑæ, 'append')(c)
+            elif k == 1:
+                (getattr(áÑõ, 'append')(áÓá(ãÊú(áÑæ))), getattr(áÑæ, 'append')(áÓéþáÓæ('⬤')))
+            elif getattr(c, 't') == 'qvar':
+                getattr(áÑõ, 'append')(c)
+        if getattr(ÄÕÒü[0], 't') == '𝗈𝗉':
+            getattr(ÄÕÒü[0][2], 'set')(c=ÂÚü())
+        return áÓÕþáÓÓþáÓßþáÓß('þCUR', áÓÌ(*áÑõ), áÎô('𝐷', *áÑð), *áÑæ)

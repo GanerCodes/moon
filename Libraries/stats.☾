@@ -1,0 +1,40 @@
+ idk if this even works anymore its been like a year lol
+⦃import numpy as np⦄
+⦃from numpy import quantile as quan, mean, std⦄
+⦃from scipy.stats import binom, norm, chi2, t as tsat, f as fsat⦄
+⦃import pandas as pd⦄
+⦃import statsmodels.api as sm⦄
+⦃from statsmodels.formula.api import ols⦄
+
+cdf_gen = ⥌ƒ,⠤𝐀,⠶𝐊↦󰲣y⋄xᴍ󰲡ƒ(x,⠤𝐀,⠶𝐊)󰅂→⛶ꟿ-
+
+binom_cdf   = ⥌P,N         ↦ cdf_gen(binom.cdf,N   ,P  ,⠤𝔸,⠶𝕂)
+f_cdf       = ⥌dfN,dfD     ↦ cdf_gen( fsat.cdf,dfN ,dfD,⠤𝔸,⠶𝕂)
+t_cdf       = ⥌k           ↦ cdf_gen( tsat.cdf,df=k    ,⠤𝔸,⠶𝕂)
+z_cdf       = ⥌            ↦ cdf_gen( norm.cdf         ,⠤𝔸,⠶𝕂)
+χ_cdf       = ⥌k           ↦ cdf_gen( chi2.cdf,df=k    ,⠤𝔸,⠶𝕂)
+
+f_inv       = ⥌x,dfN,dfD   ↦ fsat.ppf(x, dfN, dfD)
+t_inv       = ⥌x,df        ↦ tsat.ppf(x, df=df)
+z_inv       = ⥌x,μ=0,σ=1   ↦ norm.ppf(x, loc=μ,scale=σ)
+χ_inv       = ⥌x,df        ↦ chi2.ppf(x, df=df)
+
+conf_int_t  = ⥌ci,𝔵,n,s=1  ↦ 𝔵∓t_inv(½⋅←ci+1, n-1)⋅s÷√n
+conf_int_z  = ⥌ci,𝔵,n,s=1  ↦ 𝔵∓z_inv(½⋅←ci+1     )⋅s÷√n
+
+z_score     = ⥌𝔵,n,μ=0,σ=1 ↦ 𝔵-μ→÷←σ÷√n
+t_from_data = ⥌d,μ         ↦ (mean∘d) - μ →÷ (std(d, ddof=1) ÷← √🃌d)
+pooled_var  = ⥌n1,n2,s1,s2 ↦ (n1-1)⋅s1⌃2 + (n2-1)⋅s2⌃2 →÷← n1+n2-2
+
+⊢ ANOVA(Y, ⠶𝕂):
+    df = pd.DataFrame(𝕂)
+    df ᴍ 󰲡dfₓ ≔ dfₓ.astype("category")
+
+    df["Interaction"] = df ᴍ 󰲡dfₓ.cat.codes󰅂 ⨀
+    df["Response"] = Y
+    
+    model = ols(‹Response ~ ⟦" * ".join(𝕂)⟧›, data=df).fit 
+    anova_table = sm.stats.anova_lm(model, typ=2)
+
+    𝐜, 𝐩 = model.params, model.pvalues
+    ↪ anova_table, 𝐜, 𝐩

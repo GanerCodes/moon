@@ -1,0 +1,158 @@
+def _map_d(x, y, n=1):
+    (mapwd := (lambda x, y: [áÑÿ for z in x if (áÑÿ := y(z)) is not ÄÔýò]))
+
+    def _get_d(x):
+        if not áÓö(x):
+            return {0}
+        if ÁØö(x, ÁÜÙ):
+            return {1}
+        return {*ÁØò(lambda ÂîÓ: ÂîÓ + 1)(ÄÔÒØ([_get_d(z) for z in x]))}
+
+    def _map_m_d(x, y, n):
+        if ÁØö(x, ÁÜÙ):
+            return y(x) if n == 1 else x if n else mapwd(x, y)
+        if (d := _get_d(x)) in 0:
+            return x if n else y(x)
+        (x := mapwd(x, lambda x: _map_m_d(x, y, n)))
+        return y(x) if n in d else x
+
+    def _map_p_d(x, y, i):
+        if not i:
+            return y(x)
+        if ÁØö(x, ÁÜÙ):
+            return mapwd(x, y)
+        if áÓö(x):
+            return mapwd(x, lambda x: _map_p_d(x, y, i - 1))
+        return y(x)
+    return _map_m_d(x, y, -1 - n) if n < 0 else _map_p_d(x, y, ÂÒå if n is ÂÕË else n)
+
+@OPWRAP_(*'ᴍꟿ')
+def _(áÑã, áØÆ=ÂÞÅ, Æå=ÂÞÅ, áØÁ=1):
+    (áÖß := (_map_d if áÑã == 'ᴍ' else lambda x, y, z: _map_d(x, lambda x: y(*(x if áÓö(x) else [x])), z)))
+    if ÄÝøÇ(áØÁ, áÍÞ):
+        if áØÁ is ë:
+            return ÁØö(áØÆ)(áÖß(getattr(áØÆ, 'items')(), Æå, 1))
+        elif áØÁ is î:
+            return ÁØö(áØÆ)(ÄÕåØ(áÖß(getattr(áØÆ, 'items')(), Æå, 1), getattr(áØÆ, 'values')()))
+        elif áØÁ is ì:
+            return ÁØö(áØÆ)(ÄÕåØ(getattr(áØÆ, 'keys')(), áÖß(getattr(áØÆ, 'items')(), Æå, 1)))
+    return _map_d(áØÆ, (lambda x: Æå(*(x if áÓö(x) else [x]))) if áÑã == 'ꟿ' else Æå, áØÁ)
+
+def ÐôÅ(áØÆ=ÂÞÅ, áØÇ=ÐÌü, áØÁ=ÐÌü(PL_CPU_COUNT)):
+    (áØÆ := [*áØÆ])
+    (V := MOD(Âêà, áØÁ=ãÊú(áØÆ))(None))
+    (T := ËãÂ(ÂÓÏ(áØÆ), lambda x, y: lambda: (ÄÊPSH(V), ÄÊPSH(x), ÄÊPSH(ÂÞÅCAT(y, áØÇ)), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]))
+
+    def W():
+        while T:
+            try:
+                (Æå := ÐÌü(getattr(T, 'pop')))
+            except IndexError:
+                return
+            ÐÌü(Æå)
+    Áÿú(ÁØò(lambda ÂîÓ: ÂÞÅCAT(W, PL_FORK))(ÂÿÇ(ÂóÌ(ãÊú(áØÆ), áØÁ))), ÐÌü)
+    return V
+
+@OPWRAP_(*'\U000f04bc\U000f04bd')
+def _(áÑã, áØÆ=ÂÞÅ, áØÇ=ÄÕÍÔ, ÁÜñ=False):
+    (áØÆ := [*áØÆ])
+    (áÖê := [(áØÆ, i) for i, v in ÂÓÏ(áØÆ) if (áÑÿ := áØÇ(v)) is not ÄÔýò])
+    getattr(áÖê, 'sort')(reverse=áÑã == '\U000f04bd')
+    return Áÿú(áÖê, lambda x: x[1] if ÁÜñ else áØÆ[x[1]])
+
+@OPWRAP_(*'\U000f0233\U000f0232')
+def _(áÑã, áØÆ=ÂÞÅ, Æå=ÂÞÅ, áØÁ=ÂÞÅ, ÁÜñ=False):
+    if ÁÜñ:
+        ÂùÆ(áØÁ is not ÂÞÅ, '"%sˣᔨ" is invalid' % (áÑã,))
+    (Æå := (ÄÕÍÔ if Æå is ÂÞÅ else Æå if áÓó(Æå) else CUR(lambda ÂîÓ, ÂîÒ: ÂîÓ == ÂîÒ, Æå)))
+    if áÑã == '\U000f0233':
+        (ÄÊPSH(Æå), ÄÊPSH(CUR(lambda ÂîÓ, ÂîÒ: not ÂîÓ(ÂîÒ), ÄÊPKE(0))), (Æå := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    if ÁÜñ:
+        return [i for i, z in ÂÓÏ(áØÆ) if (áÑÿ := Æå(z)) and áÑÿ is not ÄÔýò]
+    if áØÁ is ÂÞÅ:
+        return [z for z in áØÆ if (áÑÿ := Æå(z)) and áÑÿ is not ÄÔýò]
+    if áØÁ == ë:
+        return [áÑÿ for z in áØÆ if (áÑÿ := Æå(z)) and áÑÿ is not ÄÔýò]
+    if not áÓó(áØÁ):
+        (áØÁ := MOD(ÄÕÍÔ, áØÁ=áØÁ))
+    return [áØÁ(z) if áÑÿ else z for z in áØÆ if (áÑÿ := Æå(z)) is not ÄÔýò]
+
+@OPWRAP_(*'ᙎᙡᗢᙧ')
+def _(áÑã, áØÆ=ÂÞÅ, áØÇ=ÂÞÅ, áØÁ=ÂÞÅ, ÁÜñ=False):
+    if ÁÜñ:
+        (ÄÊPSH(áØÆ), ÄÊPSH(ÂÿÇ(ÄÊPKE(0))), (áØÆ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    (chnk := 1)
+    if áÓö(áØÇ) and ãÊú(áØÇ) > 2:
+        (ÄÊPSH(áØÇ), (*(áØÇ := ÄÊPKE(0)[slice(0, -1, None)]), (chnk := ÄÊPKE(0)[-1])), ÄÊDEL(1))[1]
+    if áØÇ is not ÂÞÅ:
+        (ÄÊPSH([áØÇ, áØÇ] if ÁØö(áØÇ, áÍÞ) else áØÇ), ((áÝÍ := ÄÊPKE(0)[0]), (áÝÎ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    elif áÑã in 'ᙎᙡ':
+        (ÄÊPSH([1, 1]), ((áÝÍ := ÄÊPKE(0)[0]), (áÝÎ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    elif áÑã in 'ᗢᙧ':
+        (ÄÊPSH([1, 1] if áØÁ is ÂÞÅ else [0, áØÁ]), ((áÝÍ := ÄÊPKE(0)[0]), (áÝÎ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (áÝÏ := (áÑã in 'ᙡᙧ'))
+    (áÝÐ := ((None if áØÁ is ÂÞÅ else áØÁ) if áÑã in 'ᙎᙡ' else ÂÞÅ))
+    (áÝÑ := ((chnk if áØÁ is ÂÞÅ else áØÁ + 1) if áÑã in 'ᗢᙧ' else chnk))
+    (ÄÊPSH((áØÆ, áÝÍ, áÝÎ, áÝÏ, áÝÐ, áÝÑ)), ((áÖê := ÄÊPKE(0)[0]), (l := ÄÊPKE(0)[1]), (r := ÄÊPKE(0)[2]), (m := ÄÊPKE(0)[3]), (áØÁ := ÄÊPKE(0)[4]), (ÏÁ := ÄÊPKE(0)[5])), ÄÊDEL(1))[1]
+    if ÁØö(l, áÍÛ):
+        (l := áÍÞ(l))
+    if ÁØö(r, áÍÛ):
+        (r := áÍÞ(r))
+    if ÁØö(ÏÁ, áÍÛ):
+        (ÏÁ := áÍÞ(ÏÁ))
+    (c := ãÊú((áÖê := [*áÖê])))
+    if áØÁ is ÂÞÅ:
+        return Áÿú(ÂÿÇ(áÖê)[slice(l, c - r, ÏÁ)], lambda x: áÖê[slice(x - l, x)] + MOD(Âêà, áØÁ=áÍÖ(m))(áÖê[x]) + áÖê[slice(x + 1, x + r + 1)])
+    (V := (MOD(Âêà, áØÁ=l)(áØÁ) + áÖê + MOD(Âêà, áØÁ=r)(áØÁ)))
+    (r := Áÿú(ÂÿÇ(áÖê)[slice(None, None, ÏÁ)], lambda x: V[slice(x, x + l)] + MOD(Âêà, áØÁ=áÍÖ(m))(V[x + l]) + V[slice(x + l + 1, x + l + r + 1)]))
+    if áØÁ is ÄÔýò:
+        return MOD(Áÿú, áØÁ=2)(r, ÄÕÍÔ)
+    return r
+
+def ÐÌÛ(áØÆ, Æå=áÍÖ, áØÁ=ÂÞÅ, ÁÜñ=False):
+    if not áÓó(Æå):
+        (ÄÊPSH(Æå), ÄÊPSH(CUR(lambda ÂîÓ, ÂîÒ: ÂîÓ == ÂîÒ, ÄÊPKE(0))), (Æå := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    if áØÁ is not ÂÞÅ:
+        (X := MOD(ÐÌÛ, ÁÜñ=ÁÜñ)(áØÆ, Æå))
+        if áØÁ is ë:
+            return ÄÔàÑ(getattr(X, 'items')())
+        if áØÁ is ì:
+            return Áÿú(ÄÔàÑ(getattr(X, 'items')()), lambda x: x[1])
+        if áØÁ is áÍÖ:
+            return [getattr(X, 'get')(False, ÂÚü()), getattr(X, 'get')(True, ÂÚü())]
+        ÂùÆ(False, 'Invalid modifier for \ueb86!')
+    (r := {})
+    for i, z in ÂÓÏ(áØÆ):
+        if (áÑÿ := Æå(z)) is ÄÔýò:
+            continue
+        if ÁÜñ:
+            (z := i)
+        if áÑÿ in r:
+            getattr(r[áÑÿ], 'append')(z)
+        else:
+            (ÄÊPSH(r), ÄÊPSH(áÑÿ), ÄÊPSH([z]), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return r
+
+def ÁÞç(áØÆ=ÂÞÅ, áØÇ=ÂÞÅ, áØÁ=ÂÞÅ):
+    if áØÇ is ÂÞÅ:
+        (ÄÊPSH((áØÇ, áØÆ)), ((áØÆ := ÄÊPKE(0)[0]), (áØÇ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    ÂùÆ(áØÇ is not ÂÞÅ, 'ᖘ needs right side')
+
+    def Æå(áØÆ):
+        (áØÆ := (ÄÔÙù(áØÆ) if (is_str := ÁØö(áØÆ, ÁÜÙ)) else ÐÌü(getattr(áØÆ, 'copy')) if ÁØö(áØÆ, áÍÙ) else [*áØÆ]))
+        (ÄÊPSH((MOD(Áëý, áØÁ=áÓó)(áØÁ, lambda ÂîÓ: ÂîÓ(áØÆ)), [])), ((ids := ÄÊPKE(0)[0]), (TD := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        if (ÄÝøÆ(ÁÜÙ, ÄÊPSH(ids)) and ÁØö(ÄÊPOP(), ÄÊPSH(áÓö))) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False):
+            ÁØòþÁÙÇ(lambda ÂîÓ, ÂîÒ: getattr(TD, 'append')(ÂîÓ) if ÂîÒ is ÄÔýò else (ÄÊPSH(áØÆ), ÄÊPSH(ÂîÓ), ÄÊPSH(ÂîÒ), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3])(ids, (V := áØÇ(ÄÝöÊ(áØÆ, ids))))
+        else:
+            ÁØÿþÁÙÇ(lambda ÂîÓ, ÂîÒ: getattr(TD, 'append')(ÂîÓ) if ÂîÒ is ÄÔýò else (ÄÊPSH(áØÆ), ÄÊPSH(ÂîÓ), ÄÊPSH(ÂîÒ), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3])(ids, (V := Âêà(áØÇ(áØÆ[ids]))))
+        for x in ÄÔàÒ(TD):
+            del áØÆ[x]
+        return Âøî(áØÆ, ÁØã) if is_str else áØÆ
+    return Æå if áØÆ is ÂÞÅ else Æå(áØÆ)
+(ÆÑ := (lambda áØÆ, áØÇ, áØÁ=ÂÞÅ: reduce(áØÇ, áØÆ, *(() if áØÁ is ÂÞÅ else (áØÁ,)))))
+(ÐÌ := (lambda áØÆ, áØÇ, áØÁ=ÂÞÅ: [*accumulate(áØÆ, áØÇ, initial=None if áØÁ is ÂÞÅ else áØÁ)]))
+(ÂøÑ := (lambda áØÆ, áØÁ=ÂÞÅ: (ÁØã if ÁØö(áØÆ, ÁÜÙ) else 0) if ((ÄÊDEL(1), False)[1] if ÄÊPSH(áØÆ) else ÄÊPOP() if áØÁ is not ÂÞÅ else (ÄÊDEL(1), True)[1]) else MOD(ÆÑ, áØÁ=áØÁ)(áØÆ, ì)))
+(ÂøÐ := (lambda áØÆ, áØÁ=ÂÞÅ: 1 if ((ÄÊDEL(1), False)[1] if ÄÊPSH(áØÆ) else ÄÊPOP() if áØÁ is not ÂÞÅ else (ÄÊDEL(1), True)[1]) else MOD(ÆÑ, áØÁ=áØÁ)(áØÆ, ÂØú)))
+(ÄÕéý := (lambda áØÆ=ÂÞÅ, áØÇ=ÂÞÅ, áØÁ=ÂÞÅ: (lambda Æå: Æå(*ÂÕÃ([áØÆ, áØÇ], [ÂÞÅ]))) if áØÁ is ÂÞÅ else áØÁ(*ÂÕÃ([áØÆ, áØÇ], [ÂÞÅ]))))
+(ÂÔð := (lambda áØÁ=ÂÞÅ: áÍè() if áØÁ is ÂÞÅ else ÁØò(lambda ÂîÓ: áÍè())(ÂÿÇ(áØÁ))))
+(ÂÚü := (lambda áØÁ=ÂÞÅ: áÍá() if áØÁ is ÂÞÅ else ÁØò(lambda ÂîÓ: [])(ÂÿÇ(áØÁ)) if áØÁ > 0 else ÂØÍ(Âêà, -áØÁ)([])))

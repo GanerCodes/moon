@@ -1,0 +1,48 @@
+{ "name"      : "moon",
+  "scopeName" : "source.moon",
+  "patterns"  : [{ "include": "#str" }],
+  "repository": {
+    
+    "str"       : { "patterns": [{ "include": "#str_star" },
+                                 { "include": "#str_sys"  },
+                                 { "include": "#str_sub"  },
+                                 { "include": "#str_nsub1"},
+                                 { "include": "#str_nsub2"},
+                                 { "include": "#str_atom" }] },
+    
+    "str_star" : { "name"    : "string.star.moon",
+                   "begin"   : "󰦥{5}",
+                   "end"     : "󰦥{5}" },
+    
+    "str_sys"  : { "name"    : "string.sys.moon",
+                   "begin"   : "\\$",
+                   "end"     : "󷹹",
+                   "patterns": [{ "include": "#str_atom" }] },
+    
+    "str_sub"  : { "name"    : "string.sub.moon",
+                   "begin"   : "‹",
+                   "end"     : "›",
+                   "patterns": [{ "include": "#str_atom" }] },
+    
+    "str_nsub1": { "name"    : "string.nsub1.moon",
+                   "begin"   : "\"",
+                   "end"     : "\"",
+                   "patterns": [{ "include": "#str_esc" }] },
+    
+    "str_nsub2": { "name"    : "string.nsub2.moon",
+                   "begin"   : "'",
+                   "end"     : "'",
+                   "patterns": [{ "include": "#str_esc" }] },
+    
+    "str_atom" : { "patterns": [{ "include": "#str_esc" },
+                                { "include": "#embed"   }] },
+    
+    "embed"    : { "name"         : "source.moon",
+                   "begin"        : "⟦",
+                   "end"          : "⟧",
+                   "beginCaptures": { "0": { "name": "punctuation.strsub.moon" }},
+                   "endCaptures"  : { "0": { "name": "punctuation.strsub.moon" }},
+                   "patterns"     : [{ "include": "#str" }] },
+    
+    "str_esc"  : { "name"         : "string.esc.moon",
+                   "match"        : "␛." } } }

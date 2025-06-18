@@ -1,0 +1,81 @@
+(IMPSIMPS := (('ℍ', 'ℍ\U000f7e19\U000f7e18\U000f7e1b\U000f7e1a\U000f7e17\U000f7e16\U000f7e1c\U000f7e3d\U000f7e15ĵ\U000f7e88\U000f7c7d\U000f7c7e'), ('⫚', '⫚'), ('¶', '¶✿')))
+(ÄÊPSH((lambda ÂîÓ: ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ, áÍÇ), zibe), b85e), áÍÇ), lambda ÂîÓ: ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ, áÍÇ), b85d), zibd), áÍÇ))), ((stre := ÄÊPKE(0)[0]), (strd := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+(__ÄÊIMPORTS__ := ÐÌü(ÂÑÖ()))
+(TP_CACHE := {})
+(TRANSPILE_REF := ÐÌü(Holder))
+(EXEC_NATIVE := exec)
+(dump_cached_imports := (lambda: 'TP_CACHE.update({%s})' % ((lambda ÂîÓ: Âøî(ÂîÓ, ','))(ÁØò(lambda ÂîÓ: '%s:strd(%s)' % (ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(moon_dir, getattr(ÂîÓ[0], 'relative_to')), ÁÜÙ), repr), ÂÞÅCAT(ÂÞÅCAT(getattr(ÂîÓ[1], 'native_code'), stre), repr)))(ÄÔÔç(__ÄÊIMPORTS__, lambda ÂîÓ: getattr(ÂîÓ[0], 'is_relative_to')(moon_dir)))),)))
+
+def moon_to_py_cached(áÖï):
+    if not TRANSPILE_REF:
+        (ÄÊPSH(ÁØò(lambda ÂîÓ: ÂÞÅCAT('/tmp/%s.%s' % (sha(áÖï), ÂîÓ), áÌî))(ÂÛê('☾\u2009py'))), ((i := ÄÊPKE(0)[0]), (o := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        ÐØì(i, áÖï)
+        ÐÌü(getattr(Popen(['python', ð(moon_dir, 'STAGES/BOOTSTRAP_Δ.py'), 'o', i, o]), 'wait'))
+        return ÐØó(o)
+    ÂùÆ(TRANSPILE_REF, 'Cannot transpile without transpiler!')
+    return áÖï + TRANSPILE_REF
+
+def ÄÕôñ(áÖï, ns=None, get_code=False, include_builtins=True, native=False):
+    if not native:
+        (áÖï := moon_to_py_cached(áÖï))
+    if get_code:
+        return áÖï
+    (ns := (BOOTSTRAP_GLOBALS | ({} if ns is None else ns)))
+    try:
+        EXEC_NATIVE(áÖï, ns)
+    except:
+        Âçß('Failed to exec!')
+        raise Ïã
+    return ns
+
+class Module(ÁØö(ÐÌü(ÂÑÖ()))):
+
+    def __init__(áÑÞ, name, ns, code=None, native_code=None):
+        (ÄÊPSH(áÑÞ), ÄÊPSH('name'), ÄÊPSH(áÑÞ), ÄÊPSH('code'), ÄÊPSH(áÑÞ), ÄÊPSH('native_code'), ÄÊPSH((name, code, native_code)), (setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[0]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[1]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[2])), ÄÊDEL(7))[7]
+        getattr(super(), '__init__')(ns)
+
+    def __repr__(áÑÞ):
+        return 'Module[%s]' % (getattr(áÑÞ, 'name'),)
+
+def __ÄÊIMPORT__(p, áÒÿ):
+    (ÄÊPSH((getattr((ÄÊPSH(p), ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0), áÌî)), (p := ÄÊPKE(0)), ÄÊDEL(2))[2], 'name'), ÂÚü())), ((name := ÄÊPKE(0)[0]), (failed := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (dirs := (*([getattr(p, 'parent')] if ÐÌü(getattr(p, 'is_absolute')) else ÂÚü()), áÒÿ['__dir__'], ÐÌü(pwd), ð(moon_dir, 'Libraries')))
+    (sufs := (p, '%s.☾' % (p,), ð(p, 'main.☾'), ð(p, getattr(p, 'name'))))
+    (F := (áÖï := None))
+    for F in ËãÂ(ÂøÚ(dirs, sufs), ð):
+        (ÄÊPSH(F), ÄÊPSH(ÐÌü(getattr(ÄÊPKE(0), 'resolve'))), (F := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        Âçß('%s %s %s' % (F, ÂÞÅCAT(moon_dir, getattr(F, 'is_relative_to')), (h := ÂÞÅCAT(ÂÞÅCAT(moon_dir, getattr(F, 'relative_to')), ÁÜÙ)) in TP_CACHE))
+        'TP_CACHE: %s' % (Âçß(Âøî(ÂÑÖ()(TP_CACHE) ** î, ' ')),)
+        if ÂÞÅCAT(moon_dir, getattr(F, 'is_relative_to')) and (h := ÂÞÅCAT(ÂÞÅCAT(moon_dir, getattr(F, 'relative_to')), ÁÜÙ)) in TP_CACHE:
+            (áÖï := TP_CACHE[h])
+            break
+        if ÐÌü(getattr(F, 'is_file')):
+            break
+        getattr(failed, 'append')(F)
+    else:
+        (F := None)
+    Âçß('%s %s %s: %s ⟶ %s' % ('✗✓'[F in __ÄÊIMPORTS__], '✗✓'[ÂÞÅCAT(áÖï, áÍÖ)], ÄÕÊÂ(ÂÞÅCAT(áÒÿ['__file__'], ÁÜÙ), 60), p, F))
+    ÂùÆ(F is not None, 'Unable to find module "%s"! Paths checked:%s' % (p, ÂîÊ(failed, '\n')))
+    if F not in __ÄÊIMPORTS__:
+        (ÄÊPSH(__ÄÊIMPORTS__), ÄÊPSH(F), ÄÊPSH(None), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        (ns := {'__name__': name, '__file__': F, '__dir__': getattr(F, 'parent'), '__EXPORTS__': {}, '__þIMPORTS__': __ÄÊIMPORTS__, 'TP_CACHE': TP_CACHE, 'TRANSPILE_REF': TRANSPILE_REF})
+        (áÑÕ := {})
+        if not (native := (áÖï is not None)):
+            (ÄÊPSH(áÑÕ), ÄÊPSH('code'), ÄÊPSH((áÖï := ÂÞÅCAT(F, ÐØó))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        (ÄÊPSH(áÑÕ), ÄÊPSH('native_code'), ÄÊPSH(ÄÕôñ(áÖï, get_code=True, native=native)), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        (ns := ÄÕôñ(áÑÕ['native_code'], ns=ns, native=True))
+        (ÄÊPSH(__ÄÊIMPORTS__), ÄÊPSH(F), ÄÊPSH(Module(name, ns, **áÑÕ)), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (mod := __ÄÊIMPORTS__[F])
+    ÂÞÅCAT(mod['__EXPORTS__'], getattr(áÒÿ, 'update'))
+    return mod
+
+def __ÄÊADD_EXPORTS__(áÒÿ, *áÑË):
+    (E := getattr(áÒÿ, 'setdefault')('__EXPORTS__', {}))
+    getattr(E, 'update')({**dict(áÑË)})
+    return E
+
+def __ÄÊADDGLOBALS_CLEAN__(M, áÒÿ):
+    getattr(áÒÿ, 'update')(MOD(ËãÂ, áØÁ=ë)(ÂÞÅCAT(M, áÍÙ), lambda x, y: ÄÔýò if getattr(x, 'startswith')('_') else (x, y)))
+(__ÄÊGET_GLOB_MODNAME__ := (lambda *áÑË: áÑË))
+(__ÄÊSET_GLOB_MODNAME__ := (lambda *áÑË: áÑË))
+(BOOTSTRAP_GLOBALS := getattr(globals(), 'copy')())

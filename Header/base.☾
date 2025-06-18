@@ -14,6 +14,9 @@
 ⦃from operator import setitem as ⦃setitem_⦄,__gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,delitem⦄
 ⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
+⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
+⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
+⦃from base64 import b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow

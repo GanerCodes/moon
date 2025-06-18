@@ -1,0 +1,101 @@
+(ÄÊPSH(__ÄÊIMPORT__('expr', globals())), __ÄÊADDGLOBALS_CLEAN__(ÄÊPKE(), globals()), ÄÊPOP())[-1]
+
+def Ïé_add_vk(ÄÕÒü, áÑæ='𝔸', áÑð='𝕂'):
+    if 'VK' in getattr(ÄÕÒü, 'e'):
+        return ÄÕÒü
+    (ÄÊPSH((ÄÕÒü[0], MOD(ÄÝöË, áØÁ=2)(+ÄÕÒü[1]))), ((áÖâ := ÄÊPKE(0)[0]), (ÄÔÕý := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (cur := {*ÁØò(lambda ÂîÓ: (lambda ÂîÓ: ÂîÓ[-1] if ÂîÓ in ÂÛê('𝔸\u2009𝕂') else ÄÔýò)(getattr(ÂîÓ, 't')))(áÖâ)})
+    if '𝔸' not in cur and áÑæ in ÄÔÕý:
+        getattr(getattr(áÖâ, 'c'), 'append')(Æå_dec_áÑË(MOD(ÄÕéý, áØÁ=Âîì)(áÑæ, áÖâ)))
+    if '𝕂' not in cur and áÑð in ÄÔÕý:
+        getattr(getattr(áÖâ, 'c'), 'append')(Æå_dec_áÑÕ(MOD(ÄÕéý, áØÁ=Âîì)(áÑð, áÖâ)))
+    (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('VK'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def preformat_whiskers(ÄÕÒü):
+    if getattr(ÄÕÒü[2], 't') == '✓':
+        (ÄÊPSH(ÄÕÒü), ÄÊPSH(2), ÄÊPSH(MOD(ÄÕéý, áØÁ=ÂØÙ)(áÎô('𝑋↓↑'), ÄÕÒü[2])), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (c := (getattr(ÄÕÒü[2], 't') == '𝑋𝐶' and getattr((áÎÎ := ÄÕÒü[2][0]), 't') in ÂÛê('𝑇↑\u2009slice')))
+    if getattr(ÄÕÒü[1], 't') in 'ᑀᐵ\U000f7eb9\U000f7eba':
+        if c:
+            (áÕÃ := (áÕÃ if (getattr(áÎÎ[0], 't') == '𝑋↓↑' and ãÊú(áÎÎ[0])) and getattr((áÕÃ := áÎÎ[0][0]), 't') == 'slice' else áÎÎ))
+        if c and getattr(áÕÃ[0], 't') == 'ᗜ':
+            (ÄÊPSH(áÕÃ), ÄÊPSH(0), ÄÊPSH(áÎô('𝑋↓↑', áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟞', ÄÕÒü)))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        elif c:
+            getattr(getattr(áÕÃ[0], 'c'), 'insert')(0, áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟞', ÄÕÒü)))
+        else:
+            getattr(getattr(ÄÕÒü[2], 'c'), 'insert')(0, áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟞', ÄÕÒü)))
+    if getattr(ÄÕÒü[3], 't') in 'ᑅᑈ\U000f7ebd\U000f7ebe':
+        if c:
+            (áÕÃ := (áÕÃ if (getattr(áÎÎ[-1], 't') == '𝑋↓↑' and ãÊú(áÎÎ[-1])) and getattr((áÕÃ := áÎÎ[-1][-1]), 't') == 'slice' else áÎÎ))
+        if c and getattr(áÕÃ[-1], 't') == 'ᗜ':
+            (ÄÊPSH(áÕÃ), ÄÊPSH(-1), ÄÊPSH(áÎô('𝑋↓↑', áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟝', ÄÕÒü)))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        elif c:
+            getattr(getattr(áÕÃ[-1], 'c'), 'append')(áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟝', ÄÕÒü)))
+        else:
+            getattr(getattr(ÄÕÒü[2], 'c'), 'append')(áÓé(MOD(ÄÕéý, áØÁ=Âîë)('⟝', ÄÕÒü)))
+    return ÄÕÒü
+
+def format_whiskers(ÄÕÒü):
+    (ÄÊPSH(Áÿú(ÂÛê('ᑀᐵᐒᐖ\u2009\U000f7eb9\U000f7eba\U000f7ebb\U000f7ebc\u205fᑅᑈᐘᐛ\u2009\U000f7ebd\U000f7ebe\U000f7ebf\U000f7ec0'), Âåæ(ÂÑÖ(), ÂÛÅ))), ((tl := ÄÊPKE(0)[0]), (tr := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (ÄÊPSH(ÄÕÒü), ((lb := ÄÊPKE(0)[0]), (áÖù := ÄÊPKE(0)[1]), (áÖÔ := ÄÊPKE(0)[2]), (áØÀ := ÄÊPKE(0)[3]), (rb := ÄÊPKE(0)[4])), ÄÊDEL(1))[1]
+    (ÄÊPSH((MOD(Áëý, áØÁ=+lb)(+áÖù, lambda ÂîÓ: tl[ÂîÓ]) or 'ᐳ', MOD(Áëý, áØÁ=+rb)(+áØÀ, lambda ÂîÓ: tr[ÂîÓ]) or 'ᐸ')), ((áÖù := ÄÊPKE(0)[0]), (áØÀ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (áÖü := getattr(áÎõ['␀TAC'], 'copy')())
+    (ÄÊPSH(áÖü), ÄÊPSH('t'), ÄÊPSH(áÖù + áØÀ), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÖü), ÄÊPSH('L'), ÄÊPSH(getattr(áÖü, 'L') if áÖù in tl ** î else ÂÚü()), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÖü), ÄÊPSH('R'), ÄÊPSH(getattr(áÖü, 'R') if áØÀ in tr ** î else ÂÚü()), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÖü), ÄÊPSH('N'), ÄÊPSH((ÄÊPSH(áÖü), ÄÊPSH('Ïë'), ÄÊPSH((ÄÊPSH(áÖü), ÄÊPSH('ÏÁ'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    if áÖù != 'ᐳ':
+        (ÄÊPSH(áÖü), ÄÊPSH('S'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    if áØÀ != 'ᐸ':
+        (ÄÊPSH(áÖü), ÄÊPSH('P'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    if áÖù != 'ᐳ' and áØÀ != 'ᐸ':
+        (ÄÊPSH(áÖü), ÄÊPSH('B'), ÄÊPSH(True), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÂÑÕ := áÓâþáÓã(MOD(ÄÕéý, áØÁ=ÂØÙ)(getattr(áÖü, 't'), ÄÕÒü)))
+    (ÄÊPSH(ÂÑÕ), ÄÊPSH('t'), ÄÊPSH(getattr(ÂÑÕ, 'e')), ÄÊPSH('O'), ÄÊPSH(('𝗈𝗉', áÖü)), (setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[0]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[1])), ÄÊDEL(5))[5]
+    (ÄÊPSH(getattr(ÂÑÕ, 'e')), ÄÊPSH('k'), ÄÊPSH((0 if áÖù == 'ᐳ' else 1 if áÖù in 'ᑀᐒ\U000f7eb9\U000f7ebb' else 2, 0 if áØÀ == 'ᐸ' else 1 if áØÀ in 'ᑅᐘ\U000f7ebd\U000f7ebf' else 2)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÖü), ÄÊPSH('t'), ÄÊPSH('␀T%s' % ((áÖù in 'ᑀᐵᐒᐖ') * '⟞' + '⟝' * (áØÀ in 'ᑅᑈᐘᐛ'),)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH((áÖù in 'ᑀᐵ\U000f7eb9\U000f7eba', áØÀ in 'ᑅᑈ\U000f7ebd\U000f7ebe')), ((il := ÄÊPKE(0)[0]), (ir := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (ÄÊPSH(ÂÑÕ), ÄÊPSH(1), ÄÊPSH(Ïé_add_vk(áÓßþáÓÓþáÓàþáÓÔ(MOD(ÄÕéý, áØÁ=Âîë)(áÓÙþáÓãþáÓÓþáÓåþáÓÓþáÓàþáÓæ(*ÁØò(lambda ÂîÓ: áÓé(MOD(ÄÕéý, áØÁ=Âîë)(ÂîÓ, áÖÔ)))((áÖù != 'ᐳ') * '⟞' + '⟝' * ('ᐸ' != áØÀ))), áÖÔ), getattr(áÖÔ, 'set')(t='x')), '𝓐', '𝓚')), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    if not ÂØõ(getattr(getattr(ÂÑÕ, 'e'), 'k')):
+        return ÂÑÕ[1]
+    return ÂÑÕ
+
+def reformat_whiskers(ÄÕÒü):
+
+    @getattr(ÄÕÒü, 'frp')(lambda ÂîÓ: (getattr(ÂîÓ, 't') == '∘' and getattr(ÂîÓ[0], 't') == '𝗈𝗉') and getattr(getattr(getattr(ÂîÓ[0], 'e'), 'O'), 't') in ÂÛê('␀T\u2009␀T⟞\u2009␀T⟝\u2009␀T⟞⟝'), None, True)
+    def _(ÄÕÒü):
+        (ÄÊPSH(ÄÕÒü), ((Æå := ÄÊPKE(0)[0]), (áÖí := ÄÊPKE(0)[1]), (áÖî := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+        (ÄÊPSH((áÖí != áÓÆþáÓÍþáÓÄþáÓÄ, áÖî != áÓÆþáÓÍþáÓÄþáÓÄ)), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        (ÄÊPSH(getattr(getattr(Æå, 'e'), 'k')), ((áÖù := ÄÊPKE(0)[0]), (áØÀ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        ÂùÆ(((ÄÊDEL(1), False)[1] if Ïß else ÄÊPOP()) if ÄÊPSH(not áÖù) else (ÄÊDEL(1), True)[1]) and (((ÄÊDEL(1), False)[1] if Ïà else ÄÊPOP()) if ÄÊPSH(not áØÀ) else (ÄÊDEL(1), True)[1])
+        if (ÄÊDEL(1), False)[1] if ÄÊPSH(áÖù) else ÄÊPOP() if áØÀ else (ÄÊDEL(1), True)[1]:
+            return Æå
+        if not áÖù and 1 == áØÀ:
+            return getattr(ÄÕÒü, 'set')(c=[Æå, áÖî]) if Ïà else Æå
+        if áÖù == 1 and (not áØÀ):
+            return getattr(ÄÕÒü, 'set')(c=[Æå, áÖí]) if Ïß else Æå
+        if (((áÖù == ÄÊPSH(1) and ÄÊPOP() == ÄÊPSH(áØÀ)) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False)) and Ïß) and Ïà:
+            return ÄÕÒü
+        if áÖù == 2 or áØÀ == 2:
+            (Æå := áÎô('∘', áÓé((ÁØã, 'ᑀ', 'ᐵ')[áÖù] + (ÁØã, 'ᑅ', 'ᑈ')[áØÀ]), Æå))
+        if (not áÖù or Ïß) and (not áØÀ or Ïà):
+            return getattr(ÄÕÒü, 'set')(c=[Æå, *MOD(Âêà, áØÁ=Ïß)(áÖí), *MOD(Âêà, áØÁ=Ïà)(áÖî)])
+        if ((ÄÊDEL(1), False)[1] if ÄÊPSH(áÖù) else ÄÊPOP() if áØÀ else (ÄÊDEL(1), True)[1]) and ((ÄÊDEL(1), False)[1] if ÄÊPSH(Ïß) else ÄÊPOP() if Ïà else (ÄÊDEL(1), True)[1]):
+            return áÎô('∘', áÓé('CUR'), Æå)
+        if áÖù and áØÀ:
+            if (ÄÊDEL(1), False)[1] if ÄÊPSH(Ïß) else ÄÊPOP() if Ïà else (ÄÊDEL(1), True)[1]:
+                return áÎô('∘', áÓé('CUR'), Æå)
+            if (ÄÊDEL(1), False)[1] if ÄÊPSH(Ïß) else ÄÊPOP() if not Ïà else (ÄÊDEL(1), True)[1]:
+                return áÎô('∘', áÓé('CURR'), Æå, áÖî)
+            if (ÄÊDEL(1), False)[1] if ÄÊPSH(not Ïß) else ÄÊPOP() if Ïà else (ÄÊDEL(1), True)[1]:
+                return áÎô('∘', áÓé('CUR'), Æå, áÖí)
+        if ÄÝøø(áÖù, áØÀ) and ((ÄÊDEL(1), False)[1] if ÄÊPSH(Ïß) else ÄÊPOP() if Ïà else (ÄÊDEL(1), True)[1]):
+            return áÎô('∘', áÓé('MOD'), Æå)
+        ÂùÆ(False)
+
+def rewrite_lambs(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('whiskers', format_whiskers, True)
+    getattr(ÄÕÒü, 'ftrp')('lamb_h_preset', lambda ÄÕÒü: MOD(ÄÕéý, áØÁ=Âîì)(áÓÙþáÓãþáÓÓþáÓåþáÓÓþáÓàþáÓæ(*ÁØò(lambda ÂîÓ: áÓé(MOD(ÄÕéý, áØÁ=Âîì)(ÂîÓ, ÄÕÒü[0])))(ÄÝöÈ('xyzwvutsr', ÂóÍ(0, -1 + MOD(ÄÔÞÔ, ÁÜñ=ÄÕøü)('𝚲\U000f0c9f\U000f0ca1\U000f0ca3\U000f0ca5\U000f0ca7\U000f0ca9\U000f0cab\U000f0cad\U000f0caf\U000f0cb1', +ÄÕÒü[0]))))), ÄÕÒü[0]), True)
+    getattr(ÄÕÒü, 'ftrp')('lamb_h_implicit', lambda ÄÕÒü: áÓÙþáÓãþáÓÓþáÓåþáÓÓþáÓàþáÓæ(áÓé(ÄÕÒü[0])), True)
+    getattr(ÄÕÒü, 'ftrp')('lamb', Ïé_add_vk, True)

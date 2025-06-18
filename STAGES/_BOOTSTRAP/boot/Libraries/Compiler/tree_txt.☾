@@ -1,0 +1,20 @@
+(ÄÊPSH(__ÄÊIMPORT__('tree', globals())), __ÄÊADDGLOBALS_CLEAN__(ÄÊPKE(), globals()), ÄÊPOP())[-1]
+
+def rewrite_str_indent(ÄÕÒü):
+    if 'p' not in getattr(ÄÕÒü, 'e'):
+        return ÄÕÒü
+    (ÄÊPSH((getattr(getattr(ÄÕÒü, 'e'), 'p')[0], getattr(getattr(ÄÕÒü, 'e'), 'p')[1] + 1)), ((pl := ÄÊPKE(0)[0]), (áÖð := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    for áÎÚ in getattr(ÄÕÒü, 'gets')('str_tsub_guts'):
+        (ÄÊPSH((lines(getattr(áÎÚ[0], 't')), [])), ((áØÁ := ÄÊPKE(0)[0]), (h := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        for i, ÂîÓ in ÂÓÏ(áØÁ):
+            (I := (getattr(getattr(áÎÚ, 'e'), 'p')[0] + i))
+            getattr(h, 'append')(ÂîÓ if pl == I else ÂîÓ[slice(ÂóÌ(MOD(Áëý, áØÁ=ÄÊCUR((1,), {}, ÂÕó, ÂýÃ, None))(MOD(ÄÔÞÔ, ÁÜñ=ÄÕøü)(ÂîÓ, lambda ÂîÓ: ÂîÓ not in ' \t'), MOD(ÄÕÍÔ, áØÁ=ãÊú(ÂîÓ))), áÖð), None)])
+            (pl := I)
+        (ÄÊPSH(áÎÚ[0]), ÄÊPSH('t'), ÄÊPSH(Âøî(h, '\n')), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def add_blocks(ÄÕÒü):
+    (start := (lambda ÄÕÒü: getattr(ÄÕÒü, 't') == 'stmt' and getattr(ÄÕÒü[0], 't') == 'blk_head'))
+    (Æå := Âåæ(UGX_CREATE(('B', (àìÒ := []), '*', None, ('∨', ('B', (àìÒ := []), '', lambda C: áÎô('blk', C[0], *Áëý(C[slice(1, None)], Æå)), ('∧', (start, ''), (lambda ÂîÓ: ÄÝöç(getattr(getattr(ÂîÓ, 'e'), 'p')), ''), (lambda ÂîÓ: getattr(getattr(ÂîÓ, 'e'), 'p')[1] >= ÂÛÒ()[1], '*'))), (ÃÆë, '')))), áÍá))
+    getattr(ÄÕÒü, 'ftrp')('stmts', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=Æå(ÄÕÒü)), True)
+(flatten_statments := (lambda ÄÕÒü: getattr(ÄÕÒü, 'flat')(lambda ÂîÓ: getattr(ÂîÓ, 't') in ÂÛê('stmt'))))

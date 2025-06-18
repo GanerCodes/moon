@@ -1,0 +1,73 @@
+__ÄÊIMPORT__('text_format', globals())
+__ÄÊIMPORT__('generate_operators', globals())
+(áÖáþáÖæ := [*get_operator_table(ops), [ÂÛê('.\u2009ᴺ')]])
+(add_before := (lambda p, n: getattr(áÖáþáÖæ, 'insert')(MOD(ÄÔÞÔ, ÁÜñ=ÄÕøü)(áÖáþáÖæ, lambda ÂîÓ: ÂÔö(MOD(ÁÛÛ, áØÁ=(slice(None, None), 0))(ÂîÓ), p)), n)))
+MOD(ÄÕéý, áØÁ=add_before)('!', [ÂÛê('␀CAT\u2009ᴺᴮ')])
+MOD(ÄÕéý, áØÁ=add_before)('ᴍ', [ÂÛê('␀TAC\u2009ᴮ')])
+MOD(ÄÕéý, áØÁ=add_before)('⨳', [ÂÛê('␀A3\u2009ᴮ\U000f004c')])
+MOD(ÄÕéý, áØÁ=add_before)('␀A3', ÁØò(lambda ÂîÓ: [ÂîÓ, 'ᴮ'])('≔\U000f7e09\U000f7e0a\U000f7e0b≕\U000f7e0e\U000f7e0c\U000f7e0d'))
+MOD(ÄÕéý, áØÁ=add_before)('≔', [ÂÛê('␀A2\u2009ᴮ\U000f004c')])
+MOD(ÄÕéý, áØÁ=add_before)('␀A2', [ÂÛê('⭜\u2009ᴮ\U000f004c')])
+MOD(ÄÕéý, áØÁ=add_before)('⭜', [ÂÛê('⭝\u2009ᴺᴮ\U000f004c')])
+MOD(ÄÕéý, áØÁ=add_before)('⭝', [ÂÛê('␀A1\u2009ᴮ\U000f004c')])
+(áÖåþáÖæ := Áÿú(ÄÝöÞ(ÂÁÍ(ÂÕÅ)('    \u2009␀T  \u2009ᴺ \U000f0012 \u2009    \n␀TAC\u2009␀T⟞ \u2009ᴺ \U000f0012 \u2009    \n    \u2009␀T⟝ \u2009ᴺᴾ  \u2009␀TAC\n␀TAC\u2009␀T⟞⟝\u2009ᴺᴾ\U000f0012ᴮ\u2009␀TAC\n    \u2009   ⬅\u2009 ᴾ  \u2009␀A1 \n␀A1 \u2009   ➡\u2009  \U000f0012 \u2009    \n    \u2009   ←\u2009 ᴾ  \u2009␀A2 \n␀A2 \u2009   ⥉\u2009   ᴮ\u2009␀A2 \n␀A2 \u2009   →\u2009  \U000f0012 \u2009    \n    \u2009   ⭠\u2009 ᴾ  \u2009␀A3 \n␀A3 \u2009   ⭢\u2009  \U000f0012 \u2009    ', ÄÔéÄ([' '], ÁØã)), '\n'), ÂÛê))
+(MT := 'NPSBlrαςνλΔ')
+
+class OP(ÁØö(ÐÌü(ÂÑÖ()))):
+    (__repr__ := (lambda áÑÞ: '%s%s' % (getattr(áÑÞ, 't'), ÄÝõá(Âøî(getattr(áÑÞ, 'M'))))))
+
+    def __init__(áÑÞ, *áÑË, **áÑÕ):
+        getattr(super(), '__init__')(*áÑË, **áÑÕ)
+        getattr(áÑÞ, 'setdef')(ÁØã)
+
+    def __getitem__(áÑÞ, x):
+        (x := VEP(x))
+        if ÂÖó(x, MT):
+            return x if ÂÖó(x, getattr(áÑÞ, 'M')) else None
+        return getattr(super(), '__getitem__')(x)
+
+    def __setitem__(áÑÞ, x, y):
+        (x := VEP(x))
+        if ÂÖó(x, MT):
+            return (ÄÊPSH(áÑÞ), ÄÊPSH('M'), ÄÊPSH(getattr(ÄÊPKE(1), ÄÊPKE(0))), ÄÊPSH(MOD(ÄÕéý, áØÁ=ÂÕØ if y else ÂÕÃ)(ÄÊPKE(0), x)), setattr(ÄÊPKE(3), ÄÊPKE(2), ÄÊPKE(0)), ÄÊDEL(4))[4]
+        return getattr(super(), '__setitem__')(x, y)
+    (__setattr__ := __setitem__)
+    (__getattr__ := __getitem__)
+
+def cb(áÎõ):
+    for ÂÑÕ in áÎõ ** ì:
+        (ÄÊPSH(ÂÑÕ), ÄÊPSH('R'), ÄÊPSH(getattr(ÄÊPKE(1), ÄÊPKE(0))), ÄÊPSH(ÂÕØ(ÄÊPKE(0), '≔\U000f7e09\U000f7e0a\U000f7e0b')), setattr(ÄÊPKE(3), ÄÊPKE(2), ÄÊPKE(0)), ÄÊDEL(4))[4]
+    for k in '≔\U000f7e09\U000f7e0a\U000f7e0b':
+        (ÄÊPSH(áÎõ[k]), ÄÊPSH('L'), ÄÊPSH(ÂÔð()), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    for k in '≕\U000f7e0e\U000f7e0c\U000f7e0d':
+        (ÄÊPSH(áÎõ[k]), ÄÊPSH('R'), ÄÊPSH(ÂÔð()), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÎõ['⬅']), ÄÊPSH('R'), ÄÊPSH(getattr(ÄÊPKE(1), ÄÊPKE(0))), ÄÊPSH(ÂÕØ(ÄÊPKE(0), '→⭢')), setattr(ÄÊPKE(3), ÄÊPKE(2), ÄÊPKE(0)), ÄÊDEL(4))[4]
+    (ÄÊPSH(áÎõ['←']), ÄÊPSH('R'), ÄÊPSH(getattr(ÄÊPKE(1), ÄÊPKE(0))), ÄÊPSH(ÂÕØ(ÄÊPKE(0), '⭢')), setattr(ÄÊPKE(3), ÄÊPKE(2), ÄÊPKE(0)), ÄÊDEL(4))[4]
+    return áÎõ
+
+def make_op_table(áÖáþáÖæ, áÖåþáÖæ, cb):
+    (áÎõ := ÐÌü(ÂÑÖ()))
+    for áÖÞ in ÂÀÇ(áÖáþáÖæ):
+        (ÄÊPSH(áÖÞ), ÄÊPSH(ÁØò(lambda ÂîÓ: (ÂîÓ[0], ÄÝöË(Âøî(ÂîÓ[slice(1, None)]))))(ÄÊPKE(0))), (áÖÞ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        (ÄÊPSH((áÍè(MOD(ÁÛÛ, áØÁ=(slice(None, None), 0))(áÖÞ)), ÐÌü(ÂÑÖ()))), ((áØÂ := ÄÊPKE(0)[0]), (áÖá := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        for t, m in áÖÞ:
+            (food := ÂÕØ(áÍè(áÎõ ** î), ÐÌü(getattr(áØÂ, 'copy')) if 'α' in m else ÂÔð()))
+            (ÄÊPSH(áÖá), ÄÊPSH(t), ÄÊPSH(OP(t=t, M=m, L=ÐÌü(getattr(food, 'copy')) if áÍè(ÂÕÖ(m, 'BS')) else ÂÔð(), R=ÐÌü(getattr(food, 'copy')) if áÍè(ÂÕÖ(m, 'BP')) else ÂÔð())), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        (ÄÊPSH(áÎõ), ÄÊPSH(ÄÊPKE(0) | áÖá), (áÎõ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    (áÏì := ÐÌü(ÂÑÖ()))
+    for L, t, m, R in áÖåþáÖæ:
+        (ÄÊPSH(m), ÄÊPSH(ÄÝöË(ÄÊPKE(0))), (m := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        (Lc := (ÂÕØ(getattr(áÎõ[L], 'L'), getattr(áÎõ[L], 'R')) if L else ÂÔð()))
+        (Rc := (ÂÕØ(getattr(áÎõ[R], 'L'), getattr(áÎõ[R], 'R')) if R else ÂÔð()))
+        for áÏÖ, ÂÑÕ in áÎõ:
+            if áÏÖ not in Lc and ÂÕÖ('PB', getattr(ÂÑÕ, 'M')):
+                getattr(getattr(ÂÑÕ, 'R'), 'add')(t)
+            if áÏÖ not in Rc and ÂÕÖ('SB', getattr(ÂÑÕ, 'M')):
+                getattr(getattr(ÂÑÕ, 'L'), 'add')(t)
+        (ÄÊPSH(áÏì), ÄÊPSH(t), ÄÊPSH(OP(t=t, M=m, L=ÂÕØ(ÂÕÃ(áÍè(áÎõ ** î), getattr(áÎõ[L], 'L')), áÍè([L])) if L else ÂÔð(), R=ÂÕØ(getattr(áÎõ[R], 'R'), áÍè(ÁØò(lambda ÂîÓ: ÂîÓ[1])(áÖåþáÖæ)) if 'α' in m else ÂÔð()) if R else ÂÔð())), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    (ÄÊPSH(áÎõ), ÄÊPSH(ÄÊPKE(0) | áÏì), (áÎõ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    return cb(áÎõ)
+(OP_TABLE := (áÎõ := make_op_table(áÖáþáÖæ, áÖåþáÖæ, cb)))
+(IS_OP := (lambda ÄÕÒü: getattr(getattr(ÄÕÒü, 'e'), 'O') if getattr(ÄÕÒü, 't') == '𝗈𝗉' and '´' not in getattr(ÄÕÒü, 'e') else None))
+(MODIFIERS := ÂÛê('⟥≺\u2009⦣\u205f≻ᵜ꜠´⟤\u2009ᔨ⦢𐞑'))
+(áÕÒ := ÂÑÖ()(OP_LIT=áÎõ ** î, OP_MOD_L_N=MODIFIERS[0][0], OP_MOD_L_Y=MODIFIERS[0][1], OP_MOD_R_N=MODIFIERS[1][0], OP_MOD_R_Y=MODIFIERS[1][1], VAR_SPEC='ⴳⴴ✓✗□ᐦ\U000f0b88\U000f18e9⬤îĵ\U000f7e88ℇτπ\U000f7e8d\U000f7e8f∞\U000f7c6a\U000f7c7d\U000f7c7e\U000f7c6b\U000f7c6c\U000f7c6d\U000f7c6e\U000f7c6f\U000f7c70\U000f7c69' + Âøî(ÐÌü(getattr(FRAC_CONV, 'values'))), BLK_KWDS='\ue00a', STD_KWDS='↪⮂↺⇥\U000f01b4', BLK_CLN_KWDS='\U000f1018¿⸘¡', SUP=ÄÝõá(ë), SUB=ÄÝõà(ë)))

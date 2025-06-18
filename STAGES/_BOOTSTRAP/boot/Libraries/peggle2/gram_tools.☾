@@ -1,0 +1,139 @@
+__ÄÊIMPORT__('Ń', globals())
+__ÄÊIMPORT__('main', globals())
+__ÄÊIMPORT__('rgx_golfatron', globals())
+__ÄÊIMPORT__('text_format', globals())
+(áÎô := (lambda x, *áÑË, **áÑÕ: MOD(ÄÕéý, áØÁ=ÂØÙ)(ÅÒ(x, *áÑË, **áÑÕ), áÑË)))
+(áÐè := (lambda x, **áÑÕ: MOD(ÄÕéý, áØÁ=ÂØÙ)(ÅÒ(+x if ÁØö(x, ÅÒ) else ÁÜÙ(x), e=ÂÑÖ()(T=True, **getattr(áÑÕ, 'get')('e', {}))), x)))
+(nÄÕÒüm := (lambda ÄÕÒü: áÐè(ÄÕÒü) if ÁØö(ÄÕÒü, ÁÜÙ | ÂÑÅ) else ÄÕÒü))
+
+def Âîë(ÄÕÒü, áÎÜ):
+    (ÄÕÒü := nÄÕÒüm(ÄÕÒü))
+    if ÁØö(áÎÜ, ÁÜÙ):
+        return ÄÕÒü
+    if ÄÝøÇ(áÎÜ, ÅÒ):
+        (áÎÜ := áÎÜ[0])
+    if ÂÔø(getattr(áÎÜ, 'e'), 'p'):
+        return ÄÕÒü
+    (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH(ÂÞÅCAT(getattr(getattr(áÎÜ, 'e'), 'p')[slice(None, 2)], 2)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def Âîì(ÄÕÒü, áÎÜ):
+    (ÄÕÒü := nÄÕÒüm(ÄÕÒü))
+    if ÁØö(áÎÜ, ÁÜÙ):
+        return ÄÕÒü
+    if ÄÝøÇ(áÎÜ, ÅÒ):
+        (áÎÜ := áÎÜ[-1])
+    if ÂÔø(getattr(áÎÜ, 'e'), 'p'):
+        return ÄÕÒü
+    (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH(ÂÞÅCAT(getattr(getattr(áÎÜ, 'e'), 'p')[slice(2, None)], 2)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def ÂØÙ(ÄÕÒü, áÎÜ):
+    (ÄÕÒü := nÄÕÒüm(ÄÕÒü))
+    if ÁØö(áÎÜ, ÁÜÙ) or ÄÝøÆ(áÓö, áÎÜ):
+        return ÄÕÒü
+    if ÄÝøÇ(áÎÜ, ÅÒ):
+        (áÎÜ := ÅÒ(ÁØã, *áÎÜ))
+    (ÄÊPSH(getattr(áÎÜ, 'first_sides')(lambda ÂîÓ: ÂÔö(getattr(ÂîÓ, 'e'), 'p'))), ((l := ÄÊPKE(0)[0]), (r := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    if l is None:
+        return ÄÕÒü
+    (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((*getattr(getattr(l, 'e'), 'p')[slice(None, 2)], *getattr(getattr(r, 'e'), 'p')[slice(2, None)])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def ÂØØ(ÄÕÒü, áÎÜ):
+    (ÄÕÒü := nÄÕÒüm(ÄÕÒü))
+    (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((*getattr(getattr(áÎÜ[0], 'e'), 'p')[slice(2, None)], *getattr(getattr(áÎÜ[-1], 'e'), 'p')[slice(None, 2)])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def áÍô(ÄÕÒü, áÎÜ):
+    (ÄÕÒü := nÄÕÒüm(ÄÕÒü))
+    if ÁØö(áÎÜ, ÁÜÙ):
+        return ÄÕÒü
+    (ÄÊPSH(ÄÕÒü), ÄÊPSH('e'), ÄÊPSH(ÐÌü(getattr(getattr(áÎÜ, 'e'), 'copy'))), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def offset_áÖï(ÄÕÒü, áÖý):
+    if 'p' in getattr(ÄÕÒü, 'e'):
+        (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((getattr(getattr(ÄÕÒü, 'e'), 'p')[0] + áÖý, getattr(getattr(ÄÕÒü, 'e'), 'p')[1] + áÖý)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    for c in ÄÕÒü:
+        offset_áÖï(c, áÖý)
+    return ÄÕÒü
+
+def offset_áÖùþáÖï(ÄÕÒü, áÖý):
+    if 'p' in getattr(ÄÕÒü, 'e'):
+        (áÖî := getattr(getattr(ÄÕÒü, 'e'), 'p'))
+        (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((áÖî[0] + áÖý[0], áÖî[1] if áÖî[0] else áÖî[1] + áÖý[1], áÖî[2] + áÖý[0], áÖî[3] if áÖî[2] else áÖî[3] + áÖý[1])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    for c in ÄÕÒü:
+        offset_áÖùþáÖï(c, áÖý)
+    return ÄÕÒü
+
+def reform_positions(ÄÕÒü, áÖï):
+    (áÖß := (lambda ÂîÓ: ÄÕåØ(MOD(ÐÌ, áØÁ=0)(ÂîÓ, CUR(lambda ÂîÓ, ÂîÒ: ÂîÓ + 1 + ÂîÒ)), ÂîÓ))(Áÿú(lines(áÖï), ãÊú)))
+    (s := 0)
+
+    def Æå(ÄÕÒü):
+        nonlocal s
+        while áÖß[s][0] + áÖß[s][1] < getattr(getattr(ÄÕÒü, 'e'), 'p')[0]:
+            (ÄÊPSH(s), ÄÊPSH(ÄÊPKE(0) + 1), (s := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        for i, x in enumerate(áÖß[slice(s, None)]):
+            if x[0] + x[1] >= getattr(getattr(ÄÕÒü, 'e'), 'p')[1]:
+                (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((s, getattr(getattr(ÄÕÒü, 'e'), 'p')[0] - áÖß[s][0], i + s, getattr(getattr(ÄÕÒü, 'e'), 'p')[1] - x[0])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+                break
+        for z in ÄÕÒü:
+            Æå(z)
+    return ÂåÔ(Æå(ÄÕÒü), ÄÕÒü)
+(is_short := (lambda ÄÕÒü: getattr(getattr(ÄÕÒü, 'e'), 'parse_len') != getattr(getattr(ÄÕÒü, 'e'), 'input_len')))
+(warn_if_short := (lambda ÄÕÒü: MOD(ÂùÆ, áØÁ=ÂÄ)(not is_short(ÄÕÒü), 'Parse length warning %s<%s' % (getattr(getattr(ÄÕÒü, 'e'), 'parse_len'), getattr(getattr(ÄÕÒü, 'e'), 'input_len')))))
+
+def fill_ÄÕÒü_holes_basic(ÄÕÒü):
+    if 'p' not in getattr(ÄÕÒü, 'e'):
+        (ÄÊPSH(getattr(ÄÕÒü, 'first_sides')(lambda ÂîÓ: ÂÔö(getattr(ÂîÓ, 'e'), 'p'))), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        if None is not Ïß and Ïà is not None:
+            (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((*getattr(getattr(Ïß, 'e'), 'p')[slice(None, 2)], *getattr(getattr(Ïà, 'e'), 'p')[slice(2, None)])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    for c in ÄÕÒü:
+        fill_ÄÕÒü_holes_basic(c)
+    return ÄÕÒü
+
+def gram_surgery(ÄÕÒü, holes=None, áÖÇ=0):
+
+    def Æå(ÄÕÒü):
+        nonlocal áÖÇ
+        if 'p' not in getattr(ÄÕÒü, 'e'):
+            return
+        if ÄÕÒü and (not getattr(getattr(ÄÕÒü, 'e'), 'T')):
+            for c in ÄÕÒü:
+                Æå(c)
+            (ÄÊPSH(ÐÌü(getattr(ÄÕÒü, 'farnodes'))), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+            if 'p' in getattr(Ïß, 'e') and ÂÔö(getattr(Ïà, 'e'), 'p'):
+                (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((getattr(getattr(Ïß, 'e'), 'p')[0], getattr(getattr(Ïà, 'e'), 'p')[1])), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+            return
+        (ÄÊPSH((ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((getattr(getattr(ÄÕÒü, 'e'), 'p')[0] + áÖÇ, getattr(getattr(ÄÕÒü, 'e'), 'p')[1] + áÖÇ)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]), ((l := ÄÊPKE(0)[0]), (r := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        while holes and holes[0][0] <= l:
+            (ÄÊPSH(áÖÇ), ÄÊPSH(ÄÊPKE(0) + (ÏÁ := getattr(holes, 'pop')(0)[1])), (áÖÇ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+            (ÄÊPSH(getattr(ÄÕÒü, 'e')), ÄÊPSH('p'), ÄÊPSH((ÄÊPSH((l + ÏÁ, r + ÏÁ)), ((l := ÄÊPKE(0)[0]), (r := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    Æå(ÄÕÒü)
+    return ÄÕÒü
+
+def under_gram(ÄÕÒü):
+    (Ïâ := ÂÚü())
+    for r in getattr(ÄÕÒü, 'find')(lambda ÂîÓ: ÂÔö(getattr(ÂîÓ, 'e'), 'R'), True, False):
+        getattr(Ïâ, 'append')((getattr(getattr(r, 'e'), 'p')[0], ãÊú(+r)))
+    for r in getattr(ÄÕÒü, 'find')(lambda ÂîÓ: ÂÔö(getattr(ÂîÓ, 'e'), 'I'), True, False):
+        getattr(Ïâ, 'append')((getattr(getattr(r, 'e'), 'p')[1], ÄÝöâ(ãÊú(+r))))
+    getattr(ÄÕÒü, 'rm')(lambda ÂîÓ: ÂÕÖ(getattr(ÂîÓ, 'e') ** î, 'RI'))
+    return (+ÄÕÒü, ÄÊCUR((1,), {}, gram_surgery, ÂýÃ, Ïâ))
+(gram_rp := (lambda áÖó, r, m=True: MOD(Áëý, áØÁ=m)(MOD(ÆÑ, áØÁ=áÖó)(MOD(ËãÂ, áØÁ=ì)(r, Âåæ(rgx_golfatron, ÂåÔ)), lambda x, y: MOD(ÄÔéÄ, áØÁ=x)(ÂîÌ([y[0]], '%'), y[1])), peggle2)))
+
+def gram_subsup(x, áÔë=gram_rp('\n                              sup  = ~‹%SUP%+›\n                              sub  = ~‹%SUB%+›\n                              main = ((σscript = sup∨sub)∨~‹.|\\n›)*\n                          ', ÂÑÖ()(SUP=ÄÝõá(ë), SUB=ÄÝõà(ë))), r='main'):
+    (Ëðá := (lambda x: getattr(áÔë(x, r, remove_trashes=False), 'ftrp')('σscript', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(t=getattr(ÄÕÒü[0], 't'), c=[áÐè('\U000f071e\U000f071a'[getattr(ÄÕÒü[0], 't')[-1] == 'p'], e=MOD(ÂÑÖ, áØÁ=None)()(I=True, p=(getattr(getattr(ÄÕÒü, 'e'), 'p')[0], getattr(getattr(ÄÕÒü, 'e'), 'p')[0]))), *ÁØò(lambda ÂîÓ: offset_áÖï(ÂîÓ, getattr(getattr(ÄÕÒü, 'e'), 'p')[0]))(Ëðá(ÄÝöË(+ÄÕÒü))), áÐè('\U000f071b', e=MOD(ÂÑÖ, áØÁ=None)()(I=True, p=(getattr(getattr(ÄÕÒü, 'e'), 'p')[1], getattr(getattr(ÄÕÒü, 'e'), 'p')[1])))]))))
+    return under_gram(Ëðá(x))
+
+def peggrampeg(áÖï, ns={}, áÔë=peggle2('\n           main = (brak∨~‹.|\\n›)*\n           brak = \U000f01b4‹%⦃› ~‹((?!⦄%).)*› \U000f01b4‹⦄%›\n        '), m=True):
+    return MOD(Áëý, áØÁ=m)(+getattr(áÔë(áÖï), 'ftrp')('brak', lambda ÂîÓ: getattr(ÂîÓ, 'set')(c=[áÐè(ÄÕôñ(+ÂîÓ, ns=ns))])), peggle2)
+__ÄÊADD_EXPORTS__(globals(), ('peggle2', peggle2), ('ÅÒ', ÅÒ), ('áÎô', áÎô), ('áÐè', áÐè), ('Âîë', Âîë), ('Âîì', Âîì), ('ÂØÙ', ÂØÙ), ('ÂØØ', ÂØØ), ('áÍô', áÍô), ('offset_áÖùþáÖï', offset_áÖùþáÖï), ('offset_áÖï', offset_áÖï), ('reform_positions', reform_positions), ('gram_rp', gram_rp), ('under_gram', under_gram), ('gram_subsup', gram_subsup), ('peggrampeg', peggrampeg), ('is_short', is_short), ('warn_if_short', warn_if_short), ('fill_ÄÕÒü_holes_basic', fill_ÄÕÒü_holes_basic))
+
+def test_gram_tools():
+    (g := peggrampeg("\n                        sub = \U000f01b4'\U000f071e' (sub ∨ sup ∨ ~‹[^\U000f071b]›)* \U000f01b4'\U000f071b'\n                        sup = \U000f01b4'\U000f071a' (sub ∨ sup ∨ ~‹[^\U000f071b]›)* \U000f01b4'\U000f071b'\n                        main = (sup ∨ sub ∨ (%⦃␛t+‹he›⦄%=~‹.›))*\n                     "))
+    (ÄÊPSH(gram_subsup(Âçß('someᶜᵒᵒˡ\U0010affe\U0010aff5\U0010aff6\U0010affe\U0010af7e₂k'))), ((s := ÄÊPKE(0)[0]), (ÏÆ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (ÄÕÒü := ÐÌü(getattr(g(Âçß(s)), 'P')))
+    ÐÌü(getattr(ÏÆ(ÄÕÒü), 'P'))

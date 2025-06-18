@@ -1,0 +1,51 @@
+(fcache := (lambda: lambda Æå: Æå))
+from functools import cache
+(ÄÊPSH(('\n\\^$.|?*+()[]{}', '\\]-')), ((ch1 := ÄÊPKE(0)[0]), (ch2 := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+(ST := 1113936)
+(CF := ((CT := ÂÑÖ()(ËãÂ(ÂÓÏ(ÁãÁ(ch1 + ch2)), ÂÕì(CUR(lambda ÂîÓ, ÂîÒ: [ÂîÓ, ÄÝöí(ST + ÂîÒ)]))))) ** ÂÕì))
+(IF := ((IT := ÂÑÖ()(ËãÂ(ÂÓÏ(ÁãÁ(ch1 + ch2)), ÂÕì(CUR(lambda ÂîÓ, ÂîÒ: [ÂîÓ, ÄÝöí(ãÊú(CF) + ST + ÂîÒ)]))))) ** ÂÕì))
+(OF := ((OT := ÂÑÖ()(ËãÂ(ÂÓÏ(ÁãÁ(ch1)), ÂÕì(CUR(lambda ÂîÓ, ÂîÒ: [ÂîÓ, ÄÝöí(ãÊú(IF) + ãÊú(CF) + ST + ÂîÒ)]))))) ** ÂÕì))
+(ÄÊPSH(ÁØò(lambda ÂîÓ: MOD(ËãÂ, áØÁ=î)(ÂîÓ, lambda x, y: ÄÝöí(x)))([CT, IT, OT])), ((CT := ÄÊPKE(0)[0]), (IT := ÄÊPKE(0)[1]), (OT := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+(ÄÊPSH(ÁØò(lambda ÂîÓ: MOD(ËãÂ, áØÁ=î)(ÂîÓ, lambda x, y: ÄÝöí(x)))([CF, IF, OF])), ((CF := ÄÊPKE(0)[0]), (IF := ÄÊPKE(0)[1]), (OF := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+ÁØò(lambda ÂîÓ: (ÄÊPSH(IF), ÄÊPSH(ÄÝöí(IT[ÄÝöí(ÂîÓ)])), ÄÊPSH('\\' + ÂîÓ), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3])(ch2)
+(OF := MOD(ËãÂ, áØÁ=ì)(OF, lambda x, y: '\\' + y))
+(DASH := CT[ÄÝöí('-')])
+(ÄÊPSH((CT[ÄÝöí('[')], CT[ÄÝöí(']')])), ((BL := ÄÊPKE(0)[0]), (BR := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+(ÄÊPSH((CT[ÄÝöí('(')], CT[ÄÝöí(')')])), ((PL := ÄÊPKE(0)[0]), (PR := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+(ÄÊPSH((CT[ÄÝöí('?')], CT[ÄÝöí('|')])), ((Q := ÄÊPKE(0)[0]), (BAR := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+
+def rgx_rans(x):
+    (ÄÊPSH(x), ÄÊPSH(ÄÔàÑ(ÄÊPKE(0), (áÚâ := (lambda x: ord(x[0]))))), (x := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    (r := [])
+    for ÂîÓ in MOD(Ááú, áØÁ='!')(x):
+        (h := Áÿú(ÂîÓ, áÚâ))
+        getattr(r, 'append')(DASH if h[0] + h[1] + h[2] == ÂÞÅCAT(3, h[0]) + 3 else ÂîÓ[1])
+    return getattr(ÆÑ(r, lambda x, y: x + y * (y[-1] != x[-1])), 'translate')(IT)
+
+@ÐÌü(fcache)
+def rgx_golfatron(áÑã):
+
+    @cache
+    def áüì(x):
+        (ÄÊPSH(MOD(ÐÌÛ, áØÁ=áÍÖ)(x)), ((t := ÄÊPKE(0)[0]), (Ïõ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        return ËãÂ(ÂÑÖ()(ÐÌÛ(Ïõ, lambda x: x[0])), lambda x, y: (x, áüì((H := áÍé(Áÿú(y, lambda x: x[slice(1, None)])))), 1 if ÁØã in H and ÂØõ(H) else 0))
+
+    def ÐÉ(x):
+        (ÄÊPSH(MOD(ÐÌÛ, áØÁ=áÍÖ)(x, lambda x: len(x) != 1)), ((s := ÄÊPKE(0)[0]), (m := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        (ÄÊPSH(m), ÄÊPSH(Áÿú(ÄÊPKE(0), lambda x: getattr(ÁØã, 'join')(getattr(x, 'translate')(OT)))), (m := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        if (s := getattr(ÁØã, 'join')(s)):
+            getattr(m, 'append')(getattr(s, 'translate')(OT) if ãÊú(s) == 1 else BL + rgx_rans(s) + BR)
+        return m
+
+    def Åø(x):
+        (ÄÊPSH(x), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1]), (Ïá := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+        (r := Ïß)
+        if Ïà and (Ïà := ÐÉ(Áÿú(Ïà, Åø))):
+            (h := getattr(BAR, 'join')(Ïà))
+            if Ïß and ãÊú(Ïà) > 1:
+                (h := (PL + h + PR))
+            (ÄÊPSH(r), ÄÊPSH(ÄÊPKE(0) + h), (r := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        return r + Q if Ïá and Ïß else r
+    (áÑã := áüì(áÍé(sorted(áÑã, key=lambda x: (-ãÊú(x), x)))))
+    return getattr(getattr(getattr(Åø((ÁØã, áÑã, False)), 'translate')(CF), 'translate')(IF), 'translate')(OF)
+__ÄÊADD_EXPORTS__(globals(), ('rgx_golfatron', rgx_golfatron))

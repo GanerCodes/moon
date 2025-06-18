@@ -1,0 +1,449 @@
+§ TODOs ------------------------------------
+
+    󰤱  bootstrap everything
+    󰤱  a?₂?.x?(x,y)
+    󰤱􊽨 󰶡 and 󰶣 for minus/plus one?
+    󰤱  splitting; also under splitting so like 𝚡󷹌𝗻󰈳𝗻⭢…⭢⨝𝗻 is rarded
+    󰤱  x􍪵 should be exp
+    󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
+    󰤱  Documentation (oh gosh people are finding the project now)
+    󰤱  UGEX EMPTY LIST INPUT THING
+    󰤱  5󰸵2 sould be "05" ≡ 5󷹜²􍢉
+    󰤱  heckin [1,2,34,󷱂]⫰ᔨ
+    󰤱  textwrap is cringe
+    󰤱  versions of ⭜ ⭝ that foward the value like 󷸊
+    󰤱  fold with multiple prev vals
+    󰤱  Under
+    󰤱  Implicit shape  operator
+        https://ganer.xyz/s/35253369382cfe6b
+        default: hypercube w/ max dim?
+        100 items: shape² = ⬤⋄⬤ = 10⨯10
+        100 items: shape³ = ⬤⋄⬤⋄⬤ = 1⨯1⨯1⨯100…?  1 largest cube factor
+        100 items: shape 25⋄4 = 25⨯4
+        100 items: shape 10⋄5 = 10⨯5⨯2…?
+        100 items: shape ⬤⋄5 = 20⨯5
+        124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
+    󰤱  finish sup/sub 󷸓󷸔
+    󰤱  way to map over contingious truthy groups of 𝌂
+    󰤱   for getting time/date? self calls + mod is format
+    󰤱  Better window, multidimentional
+    󰤱  option for operator to ignore superscripts like →
+    󰤱  __setminus__, __crossprod__, __union__, __intersection__, __subset__ ; mutex
+    󰤱  normalize binds/stuff for edits/cross-plat
+        󰤱 SCRIPT_MAP hardcoded in moonvert rn, also rewrite moonvert lol
+    󰤱  regex but better
+    󰤱  add the edge cases for the new compose ops
+        󰤱 rlly combinators need overhaul like where is good under
+    󰤱  Better ☾
+    󰤱  proper cli for generating font
+    󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
+    󰤱  eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
+    󰤱  implicit imports are jank
+    󰤱  Font generator slow
+    󰤱􊽨 Web/phone-app maker
+    󰤱􊽨  option to print progress
+    󰤱􊽨 Make x⭜y⭝z store vals
+    󰤱􊽨 Star versions of: 󰈲󰈳󰒼󰒽
+
+§ CoolCharBank™ ------------------------------------
+
+    ꝛᴥ
+    󷸟󷸝󷸞 󷸣󷸤󷸥 󷸠󷸡󷸢 󷸦⍜⍥󷸧
+    ⌾✪🅭⚆⍟⦾⦿⏣
+    ⧿ 󰹳  ⧟ 󱗘
+    󷹾 󷺀 󷹽 󷹿 󷹥 󷹧 󰇘 󷹦 󰘣 󰝔 󰡏 󰘡 󷹠 󰘞 󷹟 󰘟 󷹡 󰘠 󰩀 󰨾 󰨿
+    󰅳⌘ℿ⩇⌢⌣⏜⏝≬𝄞⦁⦂⦇⦈⦉⦊⨾⩤⩥϶⛯
+    󱣬󰈴 󰨑󱓝 󰇙
+     󰕖 󰆍󰸇󰉉󰄷󰄶󰈝󰈔󰈕󰴜󰏢󰈋󰋋󰈸󰥓
+    󰩹󰩺 󰔛󱫭󱫟󱫍  󱎫󱫤󱫞󱫦 󱫌 󰔟
+    󰣡󰣢󰣣󰣤󰣥󰣦󰣧 󰫃󰫄󰫅󰫆󰫇󰫈 󰯁󰯂󰯃 🮦 🮧
+    ⏶⏷⏴⏵▲▼▶◀🞁🞃🞀🞂▴▾◂▸▵▿◃▹◢◣◤◥◸◹◺◿ ⎔⬡
+    𝛬󰎦󰎩󰎬󰎮󰎰󰎵󰎸󰎻󰎾󰎣
+    ᒋᖊᖋᖌᖍᖤᖢᖥᖣᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᕞᕟᕠᕡᖧᖨᖪᖬᕗᕙᗝᗞᗟᗠᗡᗣᗤᗥᗦᗧᗨᗩᗪᗫᗬᗭᗮᗯᗰᗱᗲᗳᗵᗶᗷᗸᗹᗺᗻᗼᗽᗾᗿᘀᘁᘂᘃᘄᘅᘆᘇᘈᘉᘊᘋᘌᘍᘎᘏᘐᘑᘒᘓᘔᘕᘖᘗᘘᘙᘚᘛᘜᘝᘞᘟᘠᘡᘢᘣᘤᘥᘦᘧᘨᘩᘪᘫᘬᘭᘮᘯᘰᘱᘲᘳᘴᘵᘶᘷᘸᘹᘺᘻᘼᘽᘾᘿᙀᙁᙂᙃᙄᙅᙆᙇᙈᙉᙊᙋᙌᙍᙏᙐᙑᙒᙓᙔᙕᙖᙗᙘᙙᙚᙛᙜᙝᙞᙟᙠᙢᙣᙤᙥᙦᙨᙩᙪᙫᙬ᙭᙮ᙯᙰᙱᙲᙳᙴᙵᙶᙷᙸᙹᙺᙻᙼᙽᢰᢱᢲᢳᢴᢵᢶᢷᢸᢹᢺᢻᢼᢽᢾᢿᣀᣁᣂᣃᣄᣅᣇᣈᣉᣊᣋᣌᣍᣎᣏᣐᣑᣒᣓᣠᣡᣢᣣᣤᣥᣦᣧᣨᣩᣪᣫᣬᣭᣮᣯᣰᣱᣲ
+    󰅊󰱗󰆏󰆒󱉬󱉧󰅇󰅌󱓥
+    󰅲 󰅪 󰅩 󰅴     
+    𝼋 ⥾ 𖣂 󰙨 ⹔ 󱗘 󱕛    
+    ᚢᚣᚤᚥ ᛥᛝᛞᛜ
+    ᚵᚡ ᚦᚧ ᛒᛔ ᚷᚸᛤ ᛖᛗ ᚺᚻ ᛕᚱ
+    ᛄᚼᛡᛀᚽᛂ ᚶᛙᛍ ᛌᛧᛁ
+    ᚿᛆᚾᛅᚭᚮᚬᚯ ᚴᛮᚳᚠᚨᚩᚪᚫᚰᛓ
+    ᛚᛐᛛᛑ ᛸᛣᛦ ᛉᛠᛘᛯ ᛨᛏᛎ
+    ᚹᛩᛇᛢᛈᚲᛊᛋᛪᛶᛵᛳᛟᛃᛴᛲ᛬᛫
+    ᕻᓐᓒᔥᣛ ᔇᔅᔉᔊᓪᣗᕐᔾᖮ ᣜᣝᓫᕑᣞᣟᐝ ᗮᐪ󰂅ᓑᣕᐡᐢ ᐤᐞᐠᑊᘁᣔ
+§ OverPowered STUFF [f,⬤,g,√🍊] ------------------------------------
+
+    4⭥            ⦢􊾢 2⋄2
+    [0,1,2,3]     ⦢􊾢 2⋄2
+    [0,1,2,3]        2⋄2 ᴙ 󰆩
+    [[0,1],[2,3]]         ᴙ 󰆩
+    [[2,3],[0,1]]           󰆩
+    [2,3,0,1]
+
+    ᖘᓕᕋᔨ need to be unified
+    xᓕ⁰⦢􊾢
+
+    󰈲󰈳⦢􊽺 replace matched values
+         󷹇 ᔨ⦢􊽺 replace matched /w new idxs
+    󰒼󰒽⦢􊽺 replace values then sort back
+         󷹇 ᔨ⦢􊽺 replace matched /w new idxs
+    󱑼󷹅⦢􊽺 transpose basically
+         󰤱 what about the padding
+    ⪡⪢⦢􊽺  nums: opposite dir bitshift after
+          list: undo rotate
+         shape: undo reshape
+    +-⦢􊽺 (2 +⦢􍯏² 5 = (2+5)⋅2-5=9)
+    ∓±⦢􊽺 two arg mean
+
+    ∪⦢􊽺 remove added items from left
+    󷹩⦢􊽺 remove added items from left and add removed items from the left
+    ∩⦢􊽺 add back removed items from left
+    ∖⦢􊽺 add back removed items
+    󰆩⦢􊽺 inverses of eachother
+    󷹝⦢􊽺 involution
+    󷹜⦢􊽺 involution (i think?)
+    ⛶⦢􊽺 get first (last might be more useful?)
+    ᴙ⦢􊽺 involution
+    󷸚󷸛󷸙󷸘󷸜󷸗󷸖󷸕⦢􊽺 put back
+    ⋅÷⦢􊽺 inverses of eachother
+         󷹇 mind the new mod case
+    ⫰⫯󷹒⦢􊽺 just move outta sup
+    󷸓󷸼󷸔⦢􊽺 undo involution; can certainly transmit properties to another str
+    󰑅󷹓󷹕󷹖󷹔⦢􊽺 replace the val(s)
+         󷹇 ᔨ⦢􊽺 replace val(s) w/ val(s) at new idx?
+    󷸹󷸺󷸻󷸸⦢􊽺 󰤱 lots of options
+    󷹌󷹍󷹎⦢􊽺 join it back w/ OG seperators
+    ⬓▢⬒⦢􊽺 add back on difference
+    󰸵󰸷⦢􊽺 remove num of added elms from start/end
+    ⤉⤈⟷⦢􊽺 replace min/max/both val
+         󷹇 ᔨ⦢􊽺 replace val w/ val at new idx?
+    󷹄⦢􊽺 add back on difference
+    ⭥⦢􊽺 reindex input
+    ↨⦢􊽺 replace & reindex
+    𝌂⦢􊽺 flatten
+        󰤱 do i keep 󰮈ed vals? prob not ∵ ⤉/⤈
+    ᚤ⦢􊽺
+        󰤱 which one
+            replace just first unique with vals
+            replace all duplicates result 
+        󷹇 ᔨ⦢􊽺 replace vals w/ vals at new idx?
+    󰌷⦢􊽺 just rebuild shape
+    √؆⦢􊽺 raise results to 1/1/exp
+    !⦢􊽺 something something inverse gamma
+    ⴵ⦢􊽺 set sign to val
+    ~⦢􊽺 involution
+    ⦢􊽺 undo shuffle…? (what if multiple?)
+    ⍭⦢􊽺 join back with   then  
+    ⌃⦢􊽺 take log
+    
+     ⍮ delim, 􊽬/􋅋: make sure does/doesnt match
+              /⁺: 0/1 or more
+     ⟨ stuff ⟩􊽬􋅋⁺: sub-ugex expression but groups in output
+     ( stuff )􊽬􋅋⁺: sub-ugex expression but spalts into output
+     A B C 󷸴 D E : try match A B C if fail try match D E
+     ⍈: apply function to a matched expression
+     󷹗/⍖: operators that push/pop ugex
+
+                        reverse this entire match
+                        ↓        ↓ join everything so its a string 
+     `⟨(⬤≡␛a⍮⁺ ⬤≡␛b⍮⁺ ⍈ ᴙ) 󷸴 ⴳ ⍈ ⨝⟩("joebbaaaaaabbab") ≡ "joebbbbaaaaaaba"`
+       1+ a's  1+ b's        ↑ keep in output
+    
+    ℂ󷸜󰤷 ≡ ℂ󰤷 ≡ x󰤷y → θ
+    ρ⦡θ ≡ (ρ,θ)⦡ → ℂ
+    ℂ⦡ → (ρ,θ)
+    ρ⦡󰁓 ≡ ρℇ󰁓􍢉
+    ℇ󰁓􍢉󷸜
+    
+    ␛a 󱖔⁺􍮡􋄎􍯏² ␛b
+    
+    f○[1,2,0] = f(𝔸₁,𝔸₂,𝔸₀)
+    f○[1,2,*,0] = f(𝔸₁,𝔸₂,⠤𝔸₃﹕,𝔸₀)
+    
+    Signatures􊽨:
+        (    f    {󰬩,󰬫,󱖚,󱖘,⍥,○}􋀐    g    )(⠤𝔸🃌=m)
+        (    f    {󰬩,󰬫,󱖚,󱖘,⍥,○}􋀐[g₀,g₁,…])(⠤𝔸🃌=m)
+        ([f₀,f₁,…]{󰬩,󰬫,󱖚,󱖘,⍥,○}􋀐    g    )(⠤𝔸🃌=m)
+        ([f₀,f₁,…]{󰬩,󰬫,󱖚,󱖘,⍥,○}􋀐[g₀,g₁,…])(⠤𝔸🃌=m)
+
+     ¿(<⋅>)ⁿ each g gets n args, where do the extra arguments go?
+     ᴍO⟦:_<>AD⟧ ⟶ ⍥⍜󰬫󰬩󱖚󱖘
+     󰬩󰬫󱖚󱖘○⍜⍥⊙⚆⌾⍟⌽⊸⟜
+    
+     󰬫/󰬩:
+        default is 𝗙(y)⭜s=2⭝s=1
+         g takes 2 arguments, as many times as possible (or once for each function in list), and puts excess to the right(󰬫)/left(󰬩)
+
+        {󰬩,󰬫} = {󰬩,󰬫}⁺,{󰬩,󰬫}⁻: distribute
+
+        f 󰬫² g  (𝟘,𝟙,𝟚) = f(g(𝟘,𝟙),𝟚)
+        f 󰬫􍧱 g  (𝟘,𝟙,𝟚) = f(g(𝟙,𝟚),𝟘)
+        f 󰬩² g  (𝟘,𝟙,𝟚) = f(𝟘,g(𝟙,𝟚))
+        f 󰬩􍧱 g  (𝟘,𝟙,𝟚) = f(𝟚,g(𝟘,𝟙))
+
+        f 󰬫² [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙),h(𝟚,𝟛),𝟜)
+        f 󰬫􍧱 [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟙,𝟚),h(𝟛,𝟜),𝟘)
+        f 󰬩² [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟘,g(𝟙,𝟚),h(𝟛,𝟜))
+        f 󰬩􍧱 [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟜,g(𝟘,𝟙),h(𝟚,𝟛))
+        
+         󷹇 if it was just g instead of [g,h] it would just have all g′s
+
+         what about underflow? fill in as much as possible, keep empty args still.
+        f 󰬩⁰ g (𝟘) = f(𝟘, g())
+        f 󰬫⁰ g (𝟘) = f(g(), 𝟘)
+        f {󰬫,󰬩}􋀐􋁎􊽭¹ g  (𝟘) = f(𝟘)
+        f {󰬩,󰬫}􊽭¹   g  (𝟘) = f(g(𝟘))
+        
+        f 󰬫⁰ [g,h] (𝟘)   = f(g(),h(),𝟘)
+        f 󰬩⁰ [g,h] (𝟘)   = f(𝟘,g(),h())
+        
+        f 󰬫¹ [g,h] (𝟘)   = f(g(𝟘),h())
+        f 󰬫􍨅 [g,h] (𝟘)   = f(g(),h(𝟘))
+        f 󰬩¹ [g,h] (𝟘)   = f(g(𝟘),h())
+        f 󰬩􍨅 [g,h] (𝟘)   = f(g(),h(𝟘))
+        
+        f 󰬫² [g,h] (𝟘,𝟙)   = f(g(𝟘,𝟙),h())
+        f 󰬫􍧱 [g,h] (𝟘,𝟙)   = f(g(),h(𝟘,𝟙))
+        f 󰬩² [g,h] (𝟘,𝟙)   = f(g(𝟘,𝟙),h())
+        f 󰬩􍧱 [g,h] (𝟘,𝟙)   = f(g(),h(𝟘,𝟙))
+        f 󰬫² [g,h] (𝟘,𝟙,𝟚) = f(g(𝟘,𝟙),h(𝟚))
+        f 󰬫􍧱 [g,h] (𝟘,𝟙,𝟚) = f(g(𝟘),h(𝟙,𝟚))
+        f 󰬩² [g,h] (𝟘,𝟙,𝟚) = f(g(𝟘,𝟙),h(𝟚))
+        f 󰬩􍧱 [g,h] (𝟘,𝟙,𝟚) = f(g(𝟘),h(𝟙,𝟚))
+    
+     ○/⍜
+        󷹇 concat = 𝑖○+´○²ᔐ
+        
+        f ○¹ g = f ○ g = f(g(⠤𝔸))
+        
+        󷹇 part_R is the one that may be small
+        󷹇 FT{L,R} = fill towards left/right
+        f ○² g  (⠤𝔸) = f(g(part_L       ),g(part_R    FTR))
+        f ○􍧱 g  (⠤𝔸) = f(g(part_L       ),g(FTL    part_R))
+        f ⍜² g  (⠤𝔸) = f(g(part_L    FTR),g(       part_R))
+        f ⍜􍧱 g  (⠤𝔸) = f(g(FTL    part_L),g(       part_R))
+        
+        f ○􋀐 [g]   (⠤𝔸)          = f(g(⠤𝔸))
+        f ○² [g]   (𝟘,𝟙)         = f(g(𝟘,𝟙))
+        f ○¹ [g,h] (𝟘,𝟙)         = f(g(𝟘),h(𝟙))
+        f ○² [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜)   = f(g(𝟘,𝟙,𝟜),h(𝟚,𝟛,𝟜))
+        f ○² [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜,𝟝) = f(g(𝟘,𝟙,𝟜,𝟝),h(𝟚,𝟛,𝟜,𝟝))
+        
+        
+        
+        f ○􋔛 [g,h] (𝟘,𝟙,𝟚,𝟛,𝟜,𝟝) = f(g(𝟘,𝟙,𝟜,𝟝),h(𝟚,𝟛,𝟜,𝟝))
+        f○³[g,h]   (𝟘,𝟙)     ≟ f(g(𝟘,𝟘,𝟘),h(𝟙,𝟙,𝟙))
+        f○³[g,h]   (𝟘,𝟙,𝟚,𝟛) ≟ f(g(𝟘,𝟙,𝟚),h(𝟛,𝟙,𝟚))
+        f○􍧟[g,h]   (𝟘,𝟙,𝟚,𝟛) ≟ f(g(𝟘,𝟙,𝟚),h(𝟘,𝟙,𝟛))
+        f○³[g,h,i] (𝟘,𝟙,𝟚,𝟛) ≟ f(g(𝟘,𝟙,𝟚),h(𝟛,𝟙,𝟚),i(𝟛,𝟙,𝟚))
+        
+        f○¹g (𝟘,𝟙,𝟚,𝟛) = f(g(𝟘,𝟙,𝟚,𝟛))
+        
+        f○³[g,h,i] (𝟘,𝟙,𝟚,𝟛) = f(g(𝟘),h(𝟙),i(𝟚))
+        
+        f○³[g,h,i] (𝟘,𝟙,𝟚,𝟛) = f(g(𝟘,𝟙,𝟚),h(𝟛),i())
+        f󰬫³[g,h,i] (𝟘,𝟙,𝟚,𝟛) = f(g(𝟘,𝟙,𝟚),h(𝟛),i())
+        f○􍧟[g,h,i] (𝟘,𝟙,𝟚,𝟛) = f(g(),h(𝟘),i(𝟙,𝟚,𝟛))
+        f󰬩³[g,h,i] (𝟘,𝟙,𝟚,𝟛) = f(g(),h(𝟘),i(𝟙,𝟚,𝟛))
+        f○􋔛[g,h,i] (⠤𝔸)      = f(g(⠤𝔸),h(),i())
+        f○􍰓[g,h,i] (⠤𝔸)      = f(g(),h(),i(⠤𝔸))
+        
+        f○¹[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟚,𝟛,𝟜),h(𝟙,𝟚,𝟛,𝟜))
+        f○􍨅[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙,𝟚,𝟛),h(𝟘,𝟙,𝟚,𝟜))
+        
+        f○²[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙,𝟜),h(𝟚,𝟛,𝟜))
+
+        f󰬫²[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙),h(𝟚,𝟛),𝟜)
+        f󰬩²[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟜,g(𝟘,𝟙),h(𝟚,𝟛))
+        f󰬩􍧱[g,h] (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟘,g(𝟙,𝟚),h(𝟛,𝟜))
+        f○􍧱g     (𝟘,𝟙,𝟚,𝟛,𝟜) ≟ f(g(𝟘,𝟙,𝟚),g(𝟛,𝟜,𝟚))
+        f○􍧱g     (𝟘,𝟙,𝟚,𝟛,𝟜) ≟ f(g(𝟘,𝟙,𝟚),g(𝟘,𝟛,𝟜))
+        f○􍧱g     (𝟘,𝟙,𝟚,𝟛,𝟜) ≟ f(g(𝟙,𝟚,𝟘),g(𝟛,𝟜,𝟘))
+        f○􍧟g     (𝟘,𝟙,𝟚,𝟛,𝟜) ≟ f(g(𝟘,𝟙),g(𝟚,𝟛),g(𝟜,𝟙))
+        
+        f○²g     (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙,𝟜),g(𝟚,𝟛,𝟜))
+        f󰬫²g     (𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟙),g(𝟚,𝟛),𝟜)
+        f󰬩²g     (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟜,g(𝟘,𝟙),g(𝟚,𝟛))
+        f󰬩􍧱g     (𝟘,𝟙,𝟚,𝟛,𝟜) = f(𝟘,g(𝟙,𝟚),g(𝟛,𝟜)) ¿ maybe reverse ±
+        
+        (f ? [g,h])(𝟘,𝟙,𝟚,𝟛) = f(g(𝟘,𝟙),h(𝟚,𝟛))
+        (f ? [g,h])(𝟘,𝟙,𝟚,𝟛,𝟜,𝟝) = f(g(𝟘,𝟙,𝟚),h(𝟛,𝟜,𝟝))
+        
+        f󰬩²g = f(g(𝟘, 𝟙), 𝟚)
+        f󰬫²g = f(𝟘, g(𝟙, 𝟚))
+
+        f󰬩²[g,h] (𝟘,…,𝟜) = f(g(𝟘,𝟙), g(𝟚,𝟛), 𝟜)
+        f󰬫²[g,h] (𝟘,…,𝟜) = f(𝟘, g(𝟙, 𝟚))
+
+        (f○¹g) = f(g(⠤𝔸))
+        (f○􋔛g) = f(⠤𝔸ᴍg)
+        f○²g←(𝟘)           = f(g(𝟘    ), g(𝟘    ))
+        f○²g←(𝟘,𝟙)         = f(g(𝟘    ), g(𝟙    ))
+        f○²g←(𝟘,𝟙,𝟚)       = f(g(𝟘,𝟚  ), g(𝟙,𝟚  ))
+        f○²g←(𝟘,𝟙,𝟚,𝟛)     = f(g(𝟘,𝟙  ), g(𝟚,𝟛  ))
+        f○²g←(𝟘,𝟙,𝟚,𝟛,𝟜)   = f(g(𝟘,𝟙,𝟜), g(𝟚,𝟛,𝟜))
+        f○²g←(𝟘,𝟙,𝟚,𝟛,𝟜,𝟝) = f(g(𝟘,𝟙,𝟚), g(𝟛,𝟜,𝟝))
+
+        f○³g←(𝟘)             = f(g(𝟘    ), g(𝟘    ), g(𝟘    ))
+        f○³g←(𝟘,𝟙)           = f(g(𝟘,𝟙  ), g(𝟘,𝟙  ), g(𝟘,𝟙  ))
+        f○³g←(𝟘,𝟙,𝟚)         = f(g(𝟘    ), g(𝟙    ), g(𝟚    ))
+        f○³g←(𝟘,𝟙,𝟚,𝟛)       = f(g(𝟘,𝟛  ), g(𝟙,𝟛  ), g(𝟚,𝟛  ))
+        f○³g←(𝟘,𝟙,𝟚,𝟛,𝟜)     = f(g(𝟘,𝟛,𝟜), g(𝟙,𝟛,𝟜), g(𝟚,𝟛,𝟜))
+        f○³g←(𝟘,𝟙,𝟚,𝟛,𝟜,𝟝)   = f(g(𝟘,𝟙  ), g(𝟚,𝟛  ), g(𝟜,𝟝  ))
+        f○³g←(𝟘,𝟙,𝟚,𝟛,𝟜,𝟝,𝟞) = f(g(𝟘,𝟙,𝟞), g(𝟚,𝟛,𝟞), g(𝟜,𝟝,𝟞))
+
+        f○⁴g←(𝟘)         = f(g(𝟘    ), g(𝟘    ), g(𝟘    ), g(𝟘    ))
+        f○⁴g←(𝟘,𝟙)       = f(g(𝟘,𝟙  ), g(𝟘,𝟙  ), g(𝟘,𝟙  ), g(𝟘,𝟙  ))
+        f○⁴g←(𝟘,𝟙,𝟚)     = f(g(𝟘,𝟙,𝟚), g(𝟘,𝟙,𝟚), g(𝟘,𝟙,𝟚), g(𝟘,𝟙,𝟚))
+        f○⁴g←(𝟘,𝟙,𝟚,𝟛)   = f(g(𝟘    ), g(𝟙    ), g(𝟚    ), g(𝟛    ))
+        f○⁴g←(𝟘,𝟙,𝟚,𝟛,𝟜) = f(g(𝟘,𝟜  ), g(𝟙,𝟜  ), g(𝟚,𝟜  ), g(𝟛,𝟜  ))
+
+        (f○¹g) = f(g(⠤𝔸))
+        (f○􋔛g) = f(⠤𝔸ᴍg)
+
+        f○¹g⋄h = f(g(h(⠤𝔸)))
+        f○􋔛g⋄h = f(⠤𝔸ᴍg○h)
+        f○²g⋄h = f(g(𝟘),h(𝟙))
+        f○³g⋄h = f(g(𝟘,𝟙),h(𝟘,𝟙))
+        f○⁴g⋄h = f(g(𝟘,𝟙),h(𝟚,𝟛))
+
+    󱖚/󱖘 (♺):
+         @OPWRAP_
+         ⊢ op´(x=␀, y=␀, s=1):  by ♺
+              where x⫢LHS, y⫢RHS, s=superscript
+             ↪ result
+        choices:
+            start adding arguments from outside vs inside
+            n describes num of args on all but inside vs outside
+        f󱖘ⁿg (𝟘,𝟙,𝟚,𝟛) = f(g(g(n_itms),n-1_itms),rest_itms)
+        f󱖘[g,h] (𝟘,𝟙,𝟚,𝟛) = f(g(𝟙,𝟚,𝟛),𝟘)
+        f󱖘[g,h] (𝟘,𝟙,𝟚,𝟛) = f(g(h(𝟚,𝟛),𝟙),𝟘)
+        f󱖘ⁿ[g,h  ] (𝟘,𝟙,𝟚,𝟛,𝟜,𝟝,𝟞) = f(g(h(rest_itms),n_itms),n_itms)
+        f󱖘ⁿ[g,h,i] (𝟘,𝟙,𝟚,𝟛,𝟜,𝟝,𝟞) = f(g(h(i(rest_itms), n_itms), n_itms), n_itms)
+
+        (󱖘¹ops)(l) ; l↨ ſ 󰲣opsₓ􊬤(x₀,y)
+
+        f󱖚g (𝟘,𝟙,𝟚) = f(g(𝟘,𝟙),𝟚)
+        f󱖘g (𝟘,𝟙,𝟚) = f(𝟘,g(𝟙,𝟚))
+
+§ Regex STUFF ------------------------------------
+
+    $ ^ ? | + * [^-] ( ) {,} \
+        ¿ ∨ ⨁ ⨀ ⁅⌐…⁆ ⟨ ⟩ ⟮…⟯ ␐ ⮞ ← → 𝘀 𝘁 𝘄 𝗻 𝗪
+
+    We remove space/tabs/newlines automatically
+
+    ⟨stuff⭣󰮈⟩        removes this match
+    ⟨stuff⭣ƒ⟩        applies ƒ to this match
+    ⟨stuff⭣"a⟨0⟩b"⟩  applies replacement
+    ⟨␛h⭡stuff⟩       match named ␛h
+    ⟨⭡stuff⟩         match named 0 (increments every "⟨⭡…⟩")
+    ⟨␛h⭡stuff⭣ƒ⟩     applies ƒ to this match named ␛h
+
+    𝔯   @s does str match?
+    𝔯   %s apply match-functions and repack into string
+    𝔯   ÷s ℵ: match_names↦ordered_matches
+    𝔯   ⋅s match
+    𝔯􊯛ₕ ⋅s list of matches named ␛h
+    𝔯₀󰄎₃⋅s zipmatch [[r₀􊬣,r₃􊬣], [r₀􊬤,r₃􊬤], …]
+    𝔯  ⋅s match (w/o nesting, i.e. [a,[b,c]] becomes [[a,b,c],[b,c]])
+
+    𝔯 = ⟨ ⟨␛m⭡mul(⟨⁅0…9⁆⨁⭣𝑖⟩, ⟨⁅0…9⁆⨁⭣𝑖⟩)⟩ ∨ do() ∨ don′t() ⟩
+    𝔯⋅‹mul(5,2) do() mul(2,8) don′t()›
+    = [(‹m›, [5, 2]), ‹do()›, (‹m›, [5, 2]), ‹don′t()›]
+
+§ Better Syntax STUFF ------------------------------------
+
+    x⇒⟦  just find matching
+        in_block
+    in_block
+    ⟧ out_block
+
+     Δ=𝘀⋅4 happens here:
+    ¿x: in_block
+        in_block
+        j = ‹some
+        abc
+        ›  j ≡ ‹some𝗻abc𝗻› ; trick doesn't apply to magic 󰦥
+        in_block
+       out_block
+       
+     Δ=𝘀⋅1 happens here:
+    ¿x:
+     in_block
+     in_block
+     in_block
+    out_block
+
+    𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞ ⟦h+=1 ; h+=2 ; h ⟧ ֎ rets h ֎
+    𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞ ⟦
+        h+=1 ; h+2 ⟧ ֎ rets h+2 ֎
+    𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞
+        h+=1
+        h+2
+    ֎ rets h+2 ֎
+
+§ What if ☾ was fast? ------------------------------------
+
+    Actual AST tree
+    Target llvm?
+        exec/eval would be impossible/inefficent but thats ok
+    
+    Internal types:
+        ᔐ: [graphemes: 𝑖]
+        𝑖{1,2,4,8,16,32,64,128,256,∞}
+        ℵ
+        ƒ?
+    
+    Typing is implicit, regenerate functions/code snippets  
+        ƒ = x↦x²
+        X = ƒ(5)
+          = ƒ(5 ⫢ ©,𝑖64)
+            ƒ(𝑖64) = (𝑖64)⁽􋇖⁶⁴⁾
+                   = (𝑖64).__sup__(𝑖64)
+                   = 𝑖64
+            ∴ ƒ:𝑖64→𝑖64
+            (𝑖64).__sup__(𝑖64)
+             ¯¯¯↖primitive¯¯¯↖primitive
+            ∴ llvm.powi.i64.i64
+            5,2⫢© ∴ llvm.powi.i64.i64(5,2)
+                  ∴ llvm will auto reduce this for us
+                  ∴ final expression would be like
+                        SETLOCAL(id(X), 25⫢𝑖64)
+            
+            
+            
+            (ᐹx).__sup__(2) 󷹇 2ᐹ𝑖
+        ƒ = x⫢𝑖64 ↦ resolve((𝑖64).__sup__, (𝑖64))
+                
+        󱀘 𝑖:
+            __sup__ = 󰲣POW_INT_INT 
+    
+  x 󱖔􋁤􌿍􋄉􋄽 y
+  x ≡↷⫰ y
+  x ↑􋁑≡⦢ᶠ y
+  x f 
+  ⫰
+
+y = x%10 󰷔|  2| ∀c∈󱁕:ƒ(c)
+          |     α,β = 󱁕.farnodes
+          |     ¿✓:
+          |         󱁕ᵉ ᵖ = (αᵉ ᵖ₀, βᵉ ᵖ₁)
+          |  ƒ: "the" 
+          |󷺹>2|
+
+ 󰤱
+󷸹󷸺󷸸󷸻󷹕󷹓󰑅󷹔󷹖𝌂⤉⤈ᚤ󰒼󰒽󰈲󰈳 ✓
+󰤱 not unique version of 
+ᒕᒒ ᒋᒉ ᒌ
+󰈲ᓯ󰈲ᔨ
+[0,1,0,10] 󰈲ᔨ       ≡ [1,3]
+["joe",␛h] ⤉²ᔨ    🃌 ≡ 0
+["joe",␛h] ⤉²ᔨ⁵󰁱² 🃌 ≡ 5⫯⫰
+[1,2] ᕋ⁰ 5 ≡ [5,2]
+[[1,2],3] ᕋ⁰ᕋ⁰ 5 ≡ [[5,2],3]
+[[1,2],3] ᕋ⁰􊽧² [5] ≡ [5]
+[0,1,2] ᕋ⁰󰁱² [5,3] ≡ [5,1,3]
+["joe",␛h] ⤉²ᔨ⁵󰁱² 🃌 ≡ 5
+𝕏 ᖘ􍳳 ƒ
+𝕏 under ƒ indexed by ꬶ(𝕏)
+wherevowels = 𝕏󰈲ᔨV

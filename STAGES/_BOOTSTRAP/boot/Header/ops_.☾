@@ -1,0 +1,68 @@
+(áÍù := áÓö)
+
+def adjust_depth(áØÆ, áØÁ, áÍù=áÓö):
+    if áØÁ is ÂÞÅ:
+        return 1
+    if áØÁ >= 0:
+        return áØÁ
+    (ÄÊPSH((áØÆ, 0)), ((áØÆ := ÄÊPKE(0)[0]), (k := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    while (ÄÊPSH(k), ÄÊPSH(ÄÊPKE(0) + 1), (k := ÄÊPKE(0)), ÄÊDEL(2))[2] if áÍù(áØÆ) else None:
+        if ÁØö(áØÆ, ÁÜÙ):
+            break
+        if ÁØö(áØÆ, ÁÜÙ) or not ãÊú(áØÆ):
+            break
+        (ÄÊPSH(áØÆ), ÄÊPSH(ÄÊPKE(0)[0]), (áØÆ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    return ÂóÍ(áØÁ + k - 1, 0)
+
+def flatten(áØÆ, áØÁ=ÂÞÅ, áÖÞ=None, áÍù=áÓö):
+    (áØÁ := adjust_depth(áØÆ, áØÁ))
+    if áÖÞ is None:
+        (áÖÞ := ÂÚü())
+    if (áØÁ <= 0 or not áÍù(áØÆ)) or ÁØñ(ÁÜÙ, áØÆ):
+        return ÂåÔ((getattr(áÖÞ, 'extend') if áÍù(áØÆ) else getattr(áÖÞ, 'append'))(áØÆ), áÖÞ)
+    for x in áØÆ:
+        flatten(x, áØÁ - 1, áÖÞ, áÍù=áÍù)
+    return áÖÞ
+
+def chain_structure(áØÆ, áØÁ=ÂÞÅ, áÍù=áÓö):
+    (áØÁ := adjust_depth(áØÆ, áØÁ))
+    if (áØÁ <= 0 or not áÍù(áØÆ)) or ÁØö(áØÆ, ÁÜÙ):
+        return MOD(Âêà, áØÁ=ãÊú(áØÆ))(None) if áÍù(áØÆ) else None
+    return ÁØò(lambda ÂîÓ: chain_structure(ÂîÓ, áØÁ - 1, áÍù=áÍù))(áØÆ)
+
+def deflatten(áØÆ, áÖÛ, áÍù=áÓö):
+    if áÖÛ is None:
+        return getattr(áØÆ, 'pop')(0) if áØÆ else ÄÔýò
+    return ÁØò(lambda ÂîÓ: deflatten(áØÆ, ÂîÓ, áÍù=áÍù))(áÖÛ)
+
+def flatten_under(áØÆ, Æå, áØÁ=ÂÞÅ, ÁÜñ=ÂÞÅ, áÍù=áÓö):
+    (áØÁ := adjust_depth(áØÆ, áØÁ))
+    if ÁÜñ is ÂÞÅ:
+        (ÁÜñ := flatten(áØÆ, áØÁ, áÍù=áÍù))
+    return deflatten(Æå(ÁÜñ), chain_structure(áØÆ, áØÁ, áÍù=áÍù))
+
+def ÄÔÙù(áØÆ=ÂÞÅ, áØÇ=ÂÞÅ, áØÁ=ÂÞÅ, ÁÜñ=ÂÞÅ):
+    if ((áØÆ is not ÄÊPSH(ÂÞÅ) and ÄÊPOP() is not ÄÊPSH(áØÇ)) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False)) and ((ÁØö(áØÆ, ÄÊPSH(áÍÞ)) and ÁØñ(ÄÊPOP(), ÄÊPSH(áØÇ))) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False)):
+        ÂùÆ(ÁÜñ is ÂÞÅ, '\U000f0931')
+        return ÄÝöì('%s%s' % (ÄÝöì(ÂüÌ(áØÆ)), ÄÝöì(ÂüÌ(áØÇ)))) * (ÃÆí(áØÆ) * ÃÆí(áØÇ) or 1)
+    if áØÇ is not ÂÞÅ:
+        (áØÆ := [áØÆ, áØÇ])
+    if ÁÜñ is not ÂÞÅ:
+        if áÍù(ÁÜñ):
+            return flatten_under(áØÆ, ÄÕÍÔ, áØÁ, [*ÁÜñ])
+        return flatten_under(áØÆ, ÁÜñ, áØÁ)
+    return flatten(áØÆ, áØÁ, áÍù=áÓö)
+(ÄÝõÞ := (lambda áØÆ, áØÁ=ÂÕË: ÂÚü() if ÄÝøÇ(áØÆ, áÓö) else ÁØò(lambda ÂîÓ: ãÊú(ÂîÓ) if ÁØö(ÂîÓ, áÓö) else ÄÔýò)(ÂÕÅ(MOD(ÂØÎ, áØÁ=-áØÁ)(lambda ÂîÓ: ÂîÓ[0] if ãÊú(ÂîÓ) else 0, lambda ÂîÓ: ÄÝøÇ(ÂîÓ, áÓö) or ÁØö(ÂîÓ, ÁÜÙ)), áØÆ))))
+(ÄÝõß := (lambda áØÆ, áØÁ=ÂÕË: ãÊú(MOD(ÄÝõÞ, áØÁ=áØÁ)(áØÆ))))
+(ÐÈÔ := (lambda áØÆ, áØÇ, áØÁ=ÂÞÅ: MOD(ÆÑ, áØÁ=áØÆ)(ÂÀÇ(áØÇ), lambda x, y: MOD(ÁâÁ, áØÁ=y - 1)(x))))
+(ÄÔÒØ := (lambda áØÆ, áØÁ=ÂÕË: MOD(ÄÔÙù, áØÁ=MOD(ÄÝõß, áØÁ=áØÁ)(áØÆ) - 1)(áØÆ)))
+
+@OPWRAP_(*'⪡⪢')
+def _(áÑã, áØÆ=ÂÞÅ, áØÇ=1, áØÁ=ÂÞÅ):
+    if ÁØö(áØÆ, ÂÑÅ):
+        return (áØÆ > ÄÊPSH(ÂýÃ) and ÄÊPOP() > ÄÊPSH(áØÇ)) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False) if áÑã == '⪢' else (áØÆ < ÄÊPSH(ÂýÃ) and ÄÊPOP() < ÄÊPSH(áØÇ)) and (ÄÊDEL(1) or True) or (ÄÊDEL(1) or False)
+    if áÑã == '⪡':
+        (ÄÊPSH(áØÇ), ÄÊPSH(ÄÝöâ(ÄÊPKE(0))), (áØÇ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+    if áØÁ is ÂÞÅ:
+        return áØÆ and áØÆ[slice((i := (-áØÇ % ãÊú(áØÆ))), None)] + áØÆ[slice(None, i)]
+    return ÐÈÔ(MOD(ÄÔÒØ, áØÁ=áØÁ)(áØÆ), Âúú(MOD(ÄÝõÞ, áØÁ=áØÁ)(áØÆ), áØÇ))

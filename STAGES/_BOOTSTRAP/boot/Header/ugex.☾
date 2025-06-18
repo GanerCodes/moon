@@ -1,0 +1,117 @@
+class winder:
+
+    def __init__(áÑÞ, áÖï, áÖõ=-1):
+        (ÄÊPSH(áÑÞ), ÄÊPSH('áÖï'), ÄÊPSH(áÑÞ), ÄÊPSH('áÖõ'), ÄÊPSH(áÑÞ), ÄÊPSH('áÖà'), ÄÊPSH((áÖï, áÖõ, ÂÚü())), (setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[0]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[1]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[2])), ÄÊDEL(7))[7]
+    (__bool__ := (lambda áÑÞ: getattr(áÑÞ, 'áÖõ') + 1 < ãÊú(getattr(áÑÞ, 'áÖï'))))
+    (__repr__ := (lambda áÑÞ: '[%s│%s]⟨%s⟩' % (ÂîË(getattr(áÑÞ, 'áÖï')[slice(None, getattr(áÑÞ, 'áÖõ') + 1)], ' '), ÂîÊ(getattr(áÑÞ, 'áÖï')[slice(getattr(áÑÞ, 'áÖõ') + 1, None)], ' '), Âøî(getattr(áÑÞ, 'áÖà'), ' '))))
+    (peek := (lambda áÑÞ: getattr(áÑÞ, 'áÖï')[getattr(áÑÞ, 'áÖõ') + 1]))
+    (next := (lambda áÑÞ: getattr(áÑÞ, 'áÖï')[(ÄÊPSH(áÑÞ), ÄÊPSH('áÖõ'), ÄÊPSH(getattr(ÄÊPKE(1), ÄÊPKE(0))), ÄÊPSH(ÄÊPKE(0) + 1), setattr(ÄÊPKE(3), ÄÊPKE(2), ÄÊPKE(0)), ÄÊDEL(4))[4]]))
+    (note := (lambda áÑÞ: ÂåÔ(getattr(getattr(áÑÞ, 'áÖà'), 'append')(getattr(áÑÞ, 'áÖõ')), áÑÞ)))
+    (eton := (lambda áÑÞ: ÂåÔ(ÐÌü(getattr(getattr(áÑÞ, 'áÖà'), 'pop')), áÑÞ)))
+    (wind := (lambda áÑÞ: ÂåÔ((ÄÊPSH(áÑÞ), ÄÊPSH('áÖõ'), ÄÊPSH(ÐÌü(getattr(getattr(áÑÞ, 'áÖà'), 'pop'))), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3], áÑÞ)))
+(ARROW_TARG := ÂÚü())
+
+def ÄÝöç(áØÆ, áØÁ=ÂÞÅ):
+    (áÖí := ARROW_TARG[-1])
+    if áØÁ is ÂÞÅ:
+        getattr(áÖí, 'append')(áØÆ)
+        return áØÆ
+    if áØÁ == ÂÕË:
+        getattr(áÖí, 'extend')(áØÆ)
+        return áØÆ
+    getattr(áÖí, 'extend')((h := MOD(Âêà, áØÁ=áØÁ)(áØÆ)))
+    return h
+
+def ÄÝöè(áØÁ=ÂÞÅ):
+    (áÖí := ARROW_TARG[-1])
+    if áØÁ is ÂÞÅ:
+        return getattr(áÖí, 'pop')(-1)
+    if áØÁ == ÂÕË:
+        (r := áÖí[slice(None, None)])
+        del áÖí[slice(None, None)]
+        return r
+    if (ÄÊPSH(áØÁ), ÄÊPSH(ÄÊPKE(0) * -1 == 0), (áØÁ := ÄÊPKE(0)), ÄÊDEL(2))[2]:
+        return ÂÚü()
+    (r := áÖí[slice(áØÁ, None)])
+    del áÖí[slice(áØÁ, None)]
+    return r
+
+def ÂÛÒ(áØÁ=ÂÞÅ):
+    (áÖí := ARROW_TARG[-1])
+    if áØÁ is ÂÞÅ:
+        return áÖí[-1]
+    if áØÁ == ÂÕË:
+        return áÖí[slice(None, None)]
+    if (ÄÊPSH(áØÁ), ÄÊPSH(ÄÊPKE(0) * -1 == 0), (áØÁ := ÄÊPKE(0)), ÄÊDEL(2))[2]:
+        return ÂÚü()
+    return áÖí[slice(áØÁ, None)]
+(UGX_CREATE := (lambda x, d=False: lambda ÂîÓ: d if (y := UGX_RUN(winder([*ÂîÓ]), x)) is ÂÞÅ else y[0]))
+
+def UGX_SCAN(áÖÿ, Æå, áÓà):
+    if not áÖÿ:
+        return ÂÚü() if '*' == áÓà or áÓà == '?' else ÂÞÅ
+    (áÍí := Æå((p := ÐÌü(getattr(áÖÿ, 'peek')))))
+    if áÓà == '¬':
+        return ÂÞÅ if áÍí else ÂÚü()
+    if áÓà == '⮞':
+        return ÂÚü() if áÍí else ÂÞÅ
+    if not áÍí:
+        return ÂÞÅ if áÓà in '+' else ÂÚü()
+    (V := (ÂÚü() if ÐÌü(getattr(áÖÿ, 'next')) is ÄÔýò or ÄÔýò is áÍí else Âêà(p)))
+    if áÓà in '?':
+        return V
+    while áÖÿ:
+        if not (v := Æå((p := ÐÌü(getattr(áÖÿ, 'peek'))))):
+            break
+        if v is ÄÔýò or ÄÔýò is ÐÌü(getattr(áÖÿ, 'next')):
+            continue
+        getattr(V, 'append')(p)
+    return V
+
+def UGX_RUN(áÖÿ, áØÃ):
+    (ÄÊPSH(áØÃ), ((áÓç := ÄÊPKE(0)[0]), *(áÒø := ÄÊPKE(0)[slice(1, None, None)])), ÄÊDEL(1))[1]
+    if ÁØö(áÓç, áÓó):
+        return UGX_SCAN(áÖÿ, áÓç, áÒø[0])
+    elif áÓç in 'BP':
+        (ÄÊPSH(áÒø), ((áÓæ := ÄÊPKE(0)[0]), (áÓà := ÄÊPKE(0)[1]), (áÓå := ÄÊPKE(0)[2]), (áÓÕ := ÄÊPKE(0)[3])), ÄÊDEL(1))[1]
+        getattr(ARROW_TARG, 'append')(áÓæ)
+        ÂåÔ(ÐÌü(getattr(áÖÿ, 'note')), (V := (r := UGX_RUN(áÖÿ, áÓÕ))))
+        if áÓà == '⮞':
+            ÂåÔ(ÐÌü(getattr(áÖÿ, 'wind')), (V := (ÂÞÅ if r is ÂÞÅ else ÂÚü())))
+        elif áÓà == '¬':
+            ÂåÔ(ÐÌü(getattr(áÖÿ, 'wind')), (V := (ÂÚü() if r is ÂÞÅ else ÂÞÅ)))
+        elif áÓà == '?':
+            ÂåÔ(ÐÌü(getattr(áÖÿ, 'wind')), (V := (ÂÚü() if r is ÂÞÅ else ÂÞÅ)))
+        elif r is ÂÞÅ:
+            ÂåÔ(ÐÌü(getattr(áÖÿ, 'wind')), (V := (ÂÚü() if áÓà == '∗' else ÂÞÅ)))
+        elif áÓà not in '?':
+            while áÖÿ:
+                ÂåÔ(ÐÌü(getattr(áÖÿ, 'note')), (r := UGX_RUN(áÖÿ, áÓÕ)))
+                if r is ÂÞÅ:
+                    ÐÌü(getattr(áÖÿ, 'wind'))
+                    break
+                ÂåÔ(ÐÌü(getattr(áÖÿ, 'eton')), getattr(V, 'extend')(r))
+            ÐÌü(getattr(áÖÿ, 'eton'))
+        if áÓå is ÄÔýò:
+            (V := ÂÚü())
+        if V is not ÂÞÅ and áÓó(áÓå):
+            (V := áÓå(V))
+        getattr(ARROW_TARG, 'pop')(-1)
+        if V is ÂÞÅ:
+            return V
+        return MOD(Áëý, áØÁ=áÓç == 'B')(V, Âêà)
+    elif áÓç in '∧∨':
+        if áÓç == '∧':
+            ÂåÔ(ÐÌü(getattr(áÖÿ, 'note')), (V := ÂÚü()))
+            for U in áÒø:
+                if (r := UGX_RUN(áÖÿ, U)) is ÂÞÅ:
+                    return ÂåÔ(ÐÌü(getattr(áÖÿ, 'wind')), ÂÞÅ)
+                getattr(V, 'extend')(r)
+            return ÂåÔ(ÐÌü(getattr(áÖÿ, 'eton')), V)
+        elif áÓç == '∨':
+            for U in áÒø:
+                ÐÌü(getattr(áÖÿ, 'note'))
+                if (r := UGX_RUN(áÖÿ, U)) is not ÂÞÅ:
+                    return ÂåÔ(ÐÌü(getattr(áÖÿ, 'eton')), r)
+                ÐÌü(getattr(áÖÿ, 'wind'))
+            return ÂÞÅ

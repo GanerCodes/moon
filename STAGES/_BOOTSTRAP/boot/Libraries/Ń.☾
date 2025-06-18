@@ -1,0 +1,194 @@
+__ÄÊIMPORT__('text_format', globals())
+from collections import deque as áÐòþáÑÁ
+
+class ÅÒ:
+    (__slots__ := ('t', 'c', 'e'))
+
+    def __init__(ÄÕÒü, t, *c, e=ÂÞÅ):
+        (ÄÊPSH(ÄÕÒü), ÄÊPSH('t'), ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(ÄÕÒü), ÄÊPSH('e'), ÄÊPSH((t, [*c] if c else [], MOD(ÂÑÖ, áØÁ=None)() if e is ÂÞÅ else e)), (setattr(ÄÊPKE(6), ÄÊPKE(5), ÄÊPKE(0)[0]), setattr(ÄÊPKE(4), ÄÊPKE(3), ÄÊPKE(0)[1]), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)[2])), ÄÊDEL(7))[7]
+    (__contains__ := (lambda ÄÕÒü, x: x in getattr(ÄÕÒü, 'e') if ÁØö(x, ÁÜÙ) else x in getattr(ÄÕÒü, 'c')))
+    (__repr__ := (lambda ÄÕÒü: 'Ń(%s│%s)⟨%s⟩' % (getattr(ÄÕÒü, 't') or '∅', getattr(ÄÕÒü, 'e') or '∅', Âøî(ÄÕÒü, ', '))))
+    (__setitem__ := (lambda ÄÕÒü, x, y: (ÄÊPSH(getattr(ÄÕÒü, 'c')), ÄÊPSH(x), ÄÊPSH(y), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]))
+    (__and__ := (lambda ÄÕÒü, x: getattr(ÄÕÒü, 't') == getattr(x, 't')))
+    (__len__ := (lambda ÄÕÒü: ãÊú(getattr(ÄÕÒü, 'c'))))
+    (__iter__ := (lambda ÄÕÒü: iter(getattr(ÄÕÒü, 'c'))))
+
+    def __getitem__(ÄÕÒü, i):
+        return getattr(ÄÕÒü, 'c')[i]
+
+    def __delitem__(ÄÕÒü, i):
+        del getattr(ÄÕÒü, 'c')[i]
+
+    def set(ÄÕÒü, t=None, c=None, e=None):
+        if t is not None:
+            (ÄÊPSH(ÄÕÒü), ÄÊPSH('t'), ÄÊPSH(t), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        if c is not None:
+            (ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(c), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        if e is not None:
+            (ÄÊPSH(ÄÕÒü), ÄÊPSH('e'), ÄÊPSH(e), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        return ÄÕÒü
+    (cp := (copy := (lambda ÄÕÒü, t=None, c=None, e=ÂÞÅ: ÁØö(ÄÕÒü)(getattr(ÄÕÒü, 't') if t is None else t, *(getattr(ÄÕÒü, 'c') if c is None else c), e=ÐÌü(getattr(getattr(ÄÕÒü, 'e'), 'copy')) if e is ÂÞÅ else e))))
+    (cpr := (rcopy := (lambda ÄÕÒü, t=None: ÁØö(ÄÕÒü)(getattr(ÄÕÒü, 't') if t is None else t, *Áÿú(getattr(ÄÕÒü, 'c'), getattr(ÁØö(ÄÕÒü), 'rcopy')), e=getattr(getattr(ÄÕÒü, 'e'), 'copy')()) if ÁØö(ÄÕÒü, ÅÒ) else ÄÕÒü)))
+
+    def part(ÄÕÒü):
+        (ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(ÂÕÃ(getattr(ÄÕÒü, 'c'), getattr(ÄÕÒü, 'e') ** ì)), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        return (ÄÕÒü, getattr(ÄÕÒü, 'e'))
+
+    def frp(ÄÕÒü, Æå, r, pre=False, not_T=True):
+        if r is None:
+            return lambda r: getattr(ÄÕÒü, 'frp')(Æå, r, pre, not_T)
+        if not_T:
+            (Æå := (lambda ÄÕÒü, Æå=Æå: not getattr(getattr(ÄÕÒü, 'e'), 'T') and Æå(ÄÕÒü)))
+        if pre:
+            if not ãÊú(ÄÕÒü):
+                return r(ÄÕÒü) if Æå(ÄÕÒü) else ÄÕÒü
+            (ÄÊPSH((áÐòþáÑÁ([ÄÕÒü]), áÐòþáÑÁ())), ((áÖå := ÄÊPKE(0)[0]), (áÖæ := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+            (ÄÊPSH((getattr(áÖå, 'popleft'), getattr(áÖå, 'extend'), getattr(áÖæ, 'appendleft'))), ((pl := ÄÊPKE(0)[0]), (ex := ÄÊPKE(0)[1]), (al := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+            while áÖå:
+                (C := pl())
+                ex([c for c in C if getattr(c, 'c')])
+                al(C)
+            for C in áÖæ:
+                for i, c in enumerate(C):
+                    if not Æå(c):
+                        continue
+                    (ÄÊPSH(C), ÄÊPSH(i), ÄÊPSH(r(c)), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+            return r(ÄÕÒü) if Æå(ÄÕÒü) else ÄÕÒü
+        else:
+
+            def áÏï(ÄÕÒü):
+                if Æå(ÄÕÒü):
+                    return r(ÄÕÒü)
+                for i, y in enumerate(ÄÕÒü):
+                    (ÄÊPSH(ÄÕÒü), ÄÊPSH(i), ÄÊPSH(áÏï(y)), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+                return ÄÕÒü
+            return áÏï(ÄÕÒü)
+
+    def ftrp(ÄÕÒü, fs, Æå, pre=False, not_T=True, **áÏè):
+        if Æå is None:
+            return lambda Æå: getattr(ÄÕÒü, 'ftrp')(fs, Æå, pre, not_T, **áÏè)
+        if ÄÝøÇ(fs, ÁÜÙ):
+            (fs := frozenset(fs))
+        return ÄÕÒü if not_T and getattr(getattr(ÄÕÒü, 'e'), 'T') else getattr(ÄÕÒü, 'frp')((lambda x: getattr(x, 't') == fs) if ÁØö(fs, ÁÜÙ) else lambda x: getattr(x, 't') in fs, Æå, pre, not_T, **áÏè)
+
+    def gets(ÄÕÒü, Æå, not_T=True):
+        if not áÓó(Æå):
+            if ÁØö(Æå, ÁÜÙ):
+                (Æå := (lambda ÄÕÒü, t=Æå: getattr(ÄÕÒü, 't') == t))
+            else:
+                (Æå := (lambda ÄÕÒü, t=Æå: getattr(ÄÕÒü, 't') in t))
+        return [c for c in ÄÕÒü if (((ÄÊDEL(1), False)[1] if getattr(getattr(c, 'e'), 'T') else ÄÊPOP()) if ÄÊPSH(not_T) else (ÄÊDEL(1), True)[1]) and Æå(c)]
+
+    def find(ÄÕÒü, Æå, pre=True, not_T=True, R=None):
+        if R is None:
+            (R := [])
+        if not_T and getattr(getattr(ÄÕÒü, 'e'), 'T'):
+            return R
+        if pre:
+            for c in ÄÕÒü:
+                getattr(c, 'find')(Æå, True, not_T, R)
+        if (do := Æå(ÄÕÒü)):
+            getattr(R, 'append')(ÄÕÒü)
+        if do and (not pre):
+            for c in ÄÕÒü:
+                getattr(c, 'find')(Æå, False, not_T, R)
+        return R
+
+    def flat(ÄÕÒü, Æå, áÑÂ=True):
+        (C := [])
+        for c in ÄÕÒü:
+            (getattr(C, 'append') if getattr(getattr(c, 'e'), 'T') or not Æå((c := (getattr(c, 'flat')(Æå) if áÑÂ else c))) else getattr(C, 'extend'))(c)
+        (ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(C), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+        return ÄÕÒü
+
+    def rm(ÄÕÒü, Æå, not_T=True):
+        if ÁØö(Æå, ÁÜÙ):
+            (Æå := (lambda ÄÕÒü, t=Æå: getattr(ÄÕÒü, 't') == t))
+        for i, x in ÂÓÏ(ÄÕÒü)[slice(None, None, -1)]:
+            if not (((ÄÊDEL(1), False)[1] if getattr(getattr(x, 'e'), 'T') else ÄÊPOP()) if ÄÊPSH(not_T) else (ÄÊDEL(1), True)[1]):
+                continue
+            if Æå(x):
+                del ÄÕÒü[i]
+            else:
+                getattr(ÄÕÒü[i], 'rm')(Æå, not_T)
+        return ÄÕÒü
+
+    def __pos__(ÄÕÒü):
+        (áØÀ := '')
+        if getattr(getattr(ÄÕÒü, 'e'), 'T'):
+            return getattr(ÄÕÒü, 't')
+        (áÖã := áÐòþáÑÁ(getattr(ÄÕÒü, 'c')))
+        while áÖã:
+            (v := getattr(áÖã, 'popleft')())
+            if getattr(getattr(v, 'e'), 'T'):
+                (ÄÊPSH(áØÀ), ÄÊPSH(ÄÊPKE(0) + getattr(v, 't')), (áØÀ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+            else:
+                getattr(áÖã, 'extendleft')(reversed(getattr(v, 'c')))
+        return áØÀ
+
+    def lchar(ÄÕÒü):
+        if getattr(getattr(ÄÕÒü, 'e'), 'T') and getattr(ÄÕÒü, 't'):
+            return getattr(ÄÕÒü, 't')[0]
+        for c in getattr(ÄÕÒü, 'c'):
+            if not (x := getattr(c, 'lchar')()):
+                continue
+            return x
+        return ''
+
+    def rchar(ÄÕÒü):
+        if getattr(getattr(ÄÕÒü, 'e'), 'T') and getattr(ÄÕÒü, 't'):
+            return getattr(ÄÕÒü, 't')[-1]
+        for c in getattr(ÄÕÒü, 'c')[slice(None, None, -1)]:
+            if not (x := getattr(c, 'rchar')()):
+                continue
+            return x
+        return ''
+
+    def farnodes(ÄÕÒü, Æå=lambda ÂîÓ: not getattr(getattr(ÂîÓ, 'e'), 'T')):
+        (Ïß := (Ïà := ÄÕÒü))
+        while Æå(Ïß) and ãÊú(Ïß):
+            (Ïß := Ïß[0])
+        while Æå(Ïà) and ãÊú(Ïà):
+            (Ïà := Ïà[-1])
+        return (Ïß, Ïà)
+
+    def first_l(ÄÕÒü, Æå):
+        if Æå(ÄÕÒü):
+            return ÄÕÒü
+        for áÎÚ in ÄÕÒü:
+            if not (l := getattr(áÎÚ, 'first_l')(Æå)) is not None:
+                continue
+            return l
+
+    def first_r(ÄÕÒü, Æå):
+        if Æå(ÄÕÒü):
+            return ÄÕÒü
+        for áÎÚ in ÄÕÒü[slice(None, None, -1)]:
+            if not (r := getattr(áÎÚ, 'first_r')(Æå)) is not None:
+                continue
+            return r
+
+    def first_sides(ÄÕÒü, Æå):
+        return (getattr(ÄÕÒü, 'first_l')(Æå), getattr(ÄÕÒü, 'first_r')(Æå))
+    (filter := (lambda ÄÕÒü, Æå, *áÑË, **áÑÕ: getattr(ÄÕÒü, 'rm')(Âåæ(Âó, Æå), *áÑË, **áÑÕ)))
+    (as_txt := __pos__)
+
+    def P(ÄÕÒü, fs=True):
+        (ÄÊPSH(ËãÂ(ÂÛê('∅\u2009f00\u205f→\u200900f\u205f\U000f0141\u2009ff0\u205f\U000f0142\u2009ff0'), Åøþáüì)), ((NA := ÄÊPKE(0)[0]), (AR := ÄÊPKE(0)[1]), (yl := ÄÊPKE(0)[2]), (yr := ÄÊPKE(0)[3])), ÄÊDEL(1))[1]
+        if ÄÝøÇ(ÄÕÒü, ÅÒ):
+            return Åøþáüì(ÁÜÙ(ÄÕÒü), 'f00')
+
+        def format_e(e):
+            if not e:
+                return ÁØã
+            (r := ËãÂ(e, lambda x, y: ÄÔýò if x in {'T', 'p'} else '%s%s%s' % (x, AR, getattr(y, 't')) if ÁØö(y, ÅÒ) else '%s=%s' % (x, y)))
+            return MOD(Áëý, áØÁ=r)(ÁØã if 'p' not in e else Åøþáüì((lambda ÂîÓ: Âøî(ËãÂ(ÄÕåØ(Áÿú(ÂÿÇ(ÂîÓ), ÁÛÛ([ÄÝõà, ÄÝõá])), ÂîÓ), ÂÕÅ)) if ãÊú(ÂîÓ) == 4 else ÄÝõà(Âøî(ÂîÓ, '…')))(getattr(e, 'p')), 'ff0'), lambda ÂîÓ: stackr(ÂîÓ, Âøî(r, '\n')))
+        (áØÀ := box((ÂÞÅCAT(False, getattr(getattr(ÄÕÒü, 't'), 'P')) if ÁØö(getattr(ÄÕÒü, 't'), ÅÒ) else stackr(Åøþáüì(getattr(ÄÕÒü, 't'), 'f55'), ÂÞÅCAT(getattr(ÄÕÒü, 'e'), format_e)) if ÁØö(ÄÕÒü, ÅÒ) else ÁÜÙ(getattr(ÄÕÒü, 't'))) or NA, fg='0f0' if ÁØö(ÄÕÒü, ÅÒ) and getattr(getattr(ÄÕÒü, 'e'), 'T') else '00007f'))
+        if ãÊú(ÄÕÒü):
+            (ÄÊPSH(Áÿú('─╰├┬│', ÄÊCUR((1,), {'fg': '11a'}, Åøþáüì, ÂýÃ))), ((ÂâÑ := ÄÊPKE(0)[0]), (ÂäÇ := ÄÊPKE(0)[1]), (Ââî := ÄÊPKE(0)[2]), (ÂãÀ := ÄÊPKE(0)[3]), (ÂâÓ := ÄÊPKE(0)[4])), ÄÊDEL(1))[1]
+            (áØÀ := stackr(áØÀ, Âøî(ËãÂ(ÂÓÏ(ÄÕÒü), lambda x, y: Âøî(ËãÂ(ÂÓÏ(ÂÞÅCAT(ÂÞÅCAT(False, getattr(y, 'P')), lines)), CUR(lambda ÂîÓ, ÂîÒ: ÂÁÍ(ì)(ÂîÒ, ÂâÑ if ((ÄÊDEL(1), False)[1] if ÄÊPSH(ÂîÓ) else ÄÊPOP() if ãÊú(ÄÕÒü) != 1 else (ÄÊDEL(1), True)[1]) else ÂîÓ and ' ' or ÂäÇ if x == ãÊú(ÄÕÒü) - 1 else x and Ââî or ÂãÀ if ((ÄÊDEL(1), False)[1] if ÄÊPSH(ÂîÓ) else ÄÊPOP() if ãÊú(ÄÕÒü) == 0 else (ÄÊDEL(1), True)[1]) else ÂâÓ))), '\n')), '\n')))
+        return ÂåÔ(Âçß(áØÀ), ÄÕÒü) if fs else áØÀ
+__ÄÊADD_EXPORTS__(globals(), ('ÅÒ', ÅÒ))
+
+def test_ÅÒ():
+    ÐÌü(getattr(ÅÒ('the', ÅÒ('joe', e=ÂÞÅCAT({'T': True, 'p': [2, 4], 'swag': 'loog'}, MOD(ÂÑÖ, áØÁ=None)())), ÅÒ('egg', ÅÒ('egg2'), ÅÒ('egg3', e=ÂÞÅCAT({'T': True, 'p': [1, 2, 3, 4]}, MOD(ÂÑÖ, áØÁ=None)())))), 'P'))

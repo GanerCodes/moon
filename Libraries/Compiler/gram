@@ -66,7 +66,7 @@ lambs = (  (whiskers=(    (⠶W_L 𝖶 (𝑋𝐶  ∨ ✓) ⠶W_R)
 𝔸𝕂 = (𝔸 = 󰆴'⠤' 𝖶 𝑋↓↑) ∨ (𝕂 = 󰆴'⠶' 𝖶 𝑋↓↑)
 slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
 
-ptarg    = '*' ∨ '@' ∨ 𝑣
+ptarg    = '*' ∨ '@' ∨ 𝑣 ∨ 𝑣_spec ∨ op_lit
 pargs_i  = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
 pargs_e  = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
 import   = 󰆴'⨡' 𝖶 str_timp 𝗐 (󰆴'⭸' 𝖶 pargs_i)?

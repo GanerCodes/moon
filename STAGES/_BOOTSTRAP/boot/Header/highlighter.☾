@@ -1,0 +1,15 @@
+(styf := moon_dir / 'STAGES/style.json')
+(styd := ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(styf, ÐØó), áÐÞ[ÿ]), ÂÑÖ()))
+
+@cache
+def sty(s, bg=0, def_='bec'):
+    for k, v in styd:
+        if s not in k or 'color' not in v:
+            continue
+        return termclr(s, v['color'], bg)
+    return termclr(s, def_, bg)
+(__highlighter__ := (lambda l, b=False, clr='bec': Âøî(Áÿú(ÂÞÅCAT(ÂÞÅCAT(l, ÁÜÙ), VEP), ÄÊCUR((1,), {}, sty, ÂýÃ, b, clr)))))
+
+def highlight_tester():
+    while (l := ÐÌü(getattr(stdin, 'readline'))):
+        Âçß(ÂÞÅCAT(getattr(l, 'rstrip')('\n'), __highlighter__))

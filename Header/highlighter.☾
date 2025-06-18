@@ -1,4 +1,4 @@
-styf = 𝐩(‹/home/ganer/Projects/Moon_BETA/STAGES/style.json›)
+styf = moon_dir/‹STAGES/style.json›
 styd = styf  𝔍󰄟 ℵ
 
 ⊢ (cache) sty(s,bg=0,def=‹bec›):

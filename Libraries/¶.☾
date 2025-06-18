@@ -49,10 +49,10 @@
          󰤱 pocklington test
          󰤱 tell if n-1 is easily factored?
         n<2¹⁵⁰⁰⨳‹󰤱 implement APRCL for n<2¹⁵⁰⁰›  󰤱 APRCL
-              ✗⨳‹󰤱 implement ECPP for n>2¹⁵⁰⁰  󰤱 ECPP
+              ✗⨳‹󰤱 implement ECPP󷺗 for n>2¹⁵⁰⁰›  󰤱 ECPP
     __getitem__ = ⥌𝕊,t↦𝚲𝕊.__call__(⠤𝔸,s=t)
     ⊢ __call__(𝕊,x,s=␀):
-        ¿x≅∞: ↪ ‹󰤱 ∞ primes›
+        ¿x≅∞: ↪‹󰤱 ∞ primes›
         ¿s≅␀: ¿x≤1: ↪[2]⋅x  󰤱 speedup
               t,p=[2],3
               ∀t🃌<x: ¿p∈¶: t.append(p)

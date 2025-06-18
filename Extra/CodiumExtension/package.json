@@ -1,0 +1,31 @@
+{ "name": "moon",
+  "displayName": "☾",
+  "version": "0.0.1",
+  "publisher": "☾",
+  "icon": "☾.png",
+  "engines": { "vscode": "^1.50.0" },
+  "main": "./main.js",
+  "activationEvents": ["onCommand:moon.sup", "onCommand:moon.nrm", "onCommand:moon.sub"],
+  "contributes": {
+    "commands": [
+      {"title": "Supscript", "command": "moon.sup"  },
+      {"title": "Nrmscript", "command": "moon.nrm"  },
+      {"title": "Subscript", "command": "moon.sub"  },
+      {"title": "Align"    , "command": "moon.align"}],
+    "keybindings": [
+      { "command": "moon.sup"  , "key": "alt+w", "when": "editorTextFocus" },
+      { "command": "moon.nrm"  , "key": "alt+x", "when": "editorTextFocus" },
+      { "command": "moon.sub"  , "key": "alt+s", "when": "editorTextFocus" },
+      { "command": "moon.align", "key": "alt+a", "when": "editorTextFocus" }],
+    "languages": [{
+      "id": "moon",
+      "icon": {
+        "dark" : "☾.png",
+        "light": "☾.png" },
+      "aliases": ["☾"],
+      "extensions": [".☾",".cpy"],
+      "configuration": "./☾.conf.json" }],
+    "grammars": [{
+      "language": "moon",
+      "scopeName": "source.moon",
+      "path": "./syntaxes/☾.tmLanguage.json" }] } }

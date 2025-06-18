@@ -1,0 +1,245 @@
+(ÄÊPSH(__ÄÊIMPORT__('lambdas', globals())), __ÄÊADDGLOBALS_CLEAN__(ÄÊPKE(), globals()), ÄÊPOP())[-1]
+
+def rewrite_for(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('comp_∀', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=[MOD(ÄÕéý, áØÁ=ÂØÙ)(áÓÙþáÓâþáÓå(ÄÕÒü[0], ÄÕÒü[1], ÄÕÒü[2], ÄÕÒü[3] or áÓÒ), ÄÕÒü)]), True)
+    getattr(ÄÕÒü, 'ftrp')('stmt_∀', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=[MOD(ÄÕéý, áØÁ=ÂØÙ)(áÓÙþáÓâþáÓå(áÓÒ, ÄÕÒü[0] or áÓÒ, ÄÕÒü[1] or áÓéþáÓæ('✓'), ÄÕÒü[2] or áÓÒ), ÄÕÒü)]), True)
+
+def grp_blks(ÄÕÒü):
+    (áÎÙ := (lambda x: lambda ÄÕÒü: ((getattr(ÄÕÒü, 't') == 'blk' and getattr(ÄÕÒü[0], 't') == 'stmt') and getattr(ÄÕÒü[0][0], 't') == 'blk_head') and (lambda ÂîÓ: getattr(ÂîÓ, 't') == 'stmt_∀' if x == '∀' else getattr(ÂîÓ[0][0], 't') == x)(ÄÕÒü[0][0][0])))
+
+    @getattr(ÄÕÒü, 'ftrp')(ÂÛê('stmts\u2009blk'), None, True)
+    def _(ÄÕÒü):
+        return getattr(ÄÕÒü, 'set')(c=UGX_CREATE(('B', (àìÒ := []), '*', None, ('∨', ('B', (àìÒ := []), '', lambda ÂîÓ: áÎô('¿⸘¡', *ÂîÓ), ('∧', (áÎÙ('¿'), ''), (áÎÙ('⸘'), '*'), (áÎÙ('¡'), '?'))), ('B', (àìÒ := []), '', lambda ÂîÓ: áÎô('\ue00a¡\ue80d', *ÂîÓ), ('∧', (áÎÙ('\ue00a'), ''), (áÎÙ('¡'), '*'))), ('B', (àìÒ := []), '', lambda ÂîÓ: áÎô('∀¡', *ÂîÓ), ('∧', (áÎÙ('∀'), ''), (áÎÙ('¡'), '?'))), (ÃÆë, ''))))(getattr(ÄÕÒü, 'c')))
+(part_cont := (lambda áüì, Æå: lambda x: UGX_CREATE(('B', (àìÒ := []), '*', None, ('∨', ('B', (àìÒ := []), '*', Æå, (áüì, '')), (ÃÆë, ''))))(x) or ÂÚü()))
+(T1 := MOD(ÂÑÖ, áØÁ=None)()(ÄÕåØ('𝗮𝗯𝗳𝗻𝗿𝘁𝘃', [7, 8, 12, 10, 13, 9, 11])))
+
+def map_special(x, ÄÕÒü=ÂÚü()):
+    (T2 := getattr(ÁÜÙ, 'maketrans')(áÍÙ(ÄÕåØ('𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳', '0123456789abcdef'))))
+    return áÓæþáÓçþáÓå(áÐè(MOD(ÄÕéý, áØÁ=ÂØÙ)(' ' if x else ÁØã, ÄÕÒü)) if x in '𝘀' else áÓæþáÓçþáÓåþáÓÔ(áÐè(MOD(ÄÕéý, áØÁ=ÂØÙ)(ÁÜÙ(T1[x] or MOD(ÄÝöì, áØÁ=16)(getattr(x, 'translate')(T2))), ÄÕÒü))))
+
+def rewrite_strs(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('str_spec_char', lambda ÄÕÒü: map_special(+ÄÕÒü, ÄÕÒü))
+    getattr(ÄÕÒü, 'ftrp')(ÂÛê('empty_str\u2009str_t\U000f09a5\u2009str_timp\u2009str_tsub\u2009str_nsub\u2009str_tsys_guts\u2009str_tsub_guts\u2009str_timp_guts\u2009str_nsub1_guts\u2009str_nsub2_guts\u2009str_escape'), lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(t='str'), True)
+    getattr(ÄÕÒü, 'ftrp')('str', lambda ÄÕÒü: áÓæþáÓçþáÓå(*ÄÔÙù(ÁØò(lambda ÂîÓ: MOD(Áëý, áØÁ=lambda ÂîÓ: getattr(getattr(ÂîÓ, 'e'), 'T') or getattr(ÂîÓ, 't') != 'str')(ÂîÓ, Âêà))(ÄÕÒü))), True)
+    getattr(ÄÕÒü, 'ftrp')('x', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=part_cont(lambda ÂîÓ: not getattr(getattr(ÂîÓ, 'e'), 'T') and getattr(ÂîÓ, 't') == 'str', lambda x: áÓæþáÓçþáÓå(*ÄÔÙù(x)))(ÄÕÒü)), True)
+    getattr(ÄÕÒü, 'ftrp')('str', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=part_cont(lambda ÂîÓ: getattr(getattr(ÂîÓ, 'e'), 'T'), lambda x: áÐè(MOD(ÄÕéý, áØÁ=ÂØÙ)(Âøî(ÁÙÇ(lambda ÂîÒ: +ÂîÒ)(x)), x)))(ÄÕÒü)), True)
+
+def rewrite_numbers(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('neg_num', lambda ÄÕÒü: áÓÚþáÓåþáÓã('()', áÓâþáÓã(MOD(ÄÕéý, áØÁ=Âîë)('¯', ÄÕÒü)), áÓá(MOD(ÄÕéý, áØÁ=ÂØÙ)(getattr(UPSIDEDOWNSYNDROME, 'flip')(+ÄÕÒü), ÄÕÒü))))
+    getattr(ÄÕÒü, 'ftrp')('pos_num', áÓá)
+    getattr(ÄÕÒü, 'ftrp')('number', MOD(ÁÛÛ, áØÁ=0))
+    getattr(ÄÕÒü, 'ftrp')('number_exp', lambda ÄÕÒü: áÓÚþáÓåþáÓã('()', ÄÕÒü[0], áÓâþáÓã(MOD(ÄÕéý, áØÁ=Âîì)('⌃', ÄÕÒü[0])), áÓÚþáÓåþáÓã('()', *ÄÕÒü[1])), True)
+
+def rewrite_ternary(ÄÕÒü):
+    (is_xpr_atom := (lambda ÄÕÒü: getattr(ÄÕÒü, 't') == 'x'))
+
+    @getattr(ÄÕÒü, 'ftrp')('opC', None, True)
+    def _(ÄÕÒü):
+        (ÄÊPSH(ÄÕÒü), ((áÖü := ÄÊPKE(0)[0]), *(Ïß := ÄÊPKE(0)[slice(1, None, None)])), ÄÊDEL(1))[1]
+        if getattr(getattr(getattr(áÖü, 'e'), 'O'), 't') != '⭝' or ãÊú(áÖü[2]):
+            return ÄÕÒü
+        (ÄÊPSH(Ïß), ((Ïß := ÄÊPKE(0)[0]), *(Ïà := ÄÊPKE(0)[slice(1, None, None)])), ÄÊDEL(1))[1]
+        (Ïá := Ïß[0])
+        if (getattr(Ïá, 't') != 'opC' or getattr(getattr(getattr(Ïá[0], 'e'), 'O'), 't') != '⭜') or ãÊú(Ïá[0][2]):
+            return ÄÕÒü
+        return áÓçþáÓØþáÓåþáÓá(*Ïá[slice(1, None)], *Ïà)
+
+    @getattr(ÄÕÒü, 'ftrp')('opC', None, True)
+    def _(ÄÕÒü):
+        (ÄÊPSH(ÄÕÒü), ((áÖü := ÄÊPKE(0)[0]), *(Ïß := ÄÊPKE(0)[slice(1, None, None)])), ÄÊDEL(1))[1]
+        if (t := getattr(getattr(getattr(áÖü, 'e'), 'O'), 't')) not in '⭜⭝':
+            return ÄÕÒü
+        (ÄÊPSH(Ïß), ((Ïß := ÄÊPKE(0)[0]), (Ïà := ÄÊPKE(0)[1]), *(_ := ÄÊPKE(0)[slice(2, None, None)])), ÄÊDEL(1))[1]
+        ÂùÆ(is_xpr_atom(Ïà))
+        ÂùÆ(not ãÊú(áÖü[2]) or (ãÊú(áÖü[2]) == 1 and getattr(áÖü[2][0], 't') == '𝚜'))
+        (áÑæ := (Ïà, áÖü[2][0][0] if ãÊú(áÖü[2]) else MOD(ÄÕéý, áØÁ=Âîì)(áÓë(áÓéþáÓæ('□')), ÄÕÒü)))
+        return áÓçþáÓØþáÓåþáÓá(Ïß, *MOD(Áëý, áØÁ=t == '⭝')(áÑæ, ÂÀÇ))
+
+def group_targets(ÄÕÒü):
+    (dot := (lambda ÂîÓ: getattr(ÂîÓ, 't') == '𝗈𝗉' and getattr(ÂîÓ[1][0], 't') == '.'))
+    (exp := (lambda ÂîÓ: getattr(ÂîÓ, 't') == 'exp'))
+    (ÄÊPSH(MOD(ÂÚü, áØÁ=2)()), ((R := ÄÊPKE(0)[0]), (C := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+    (áÖï := getattr(ÄÕÒü, 'c'))
+
+    def adds(x):
+        if C:
+            if ãÊú(C) == 1 and getattr(C[0], 't') == 'mcal':
+                getattr(R, 'append')(*C[0])
+            else:
+                getattr(R, 'append')(áÎô('target_rhs', *C))
+            getattr(C, 'clear')()
+        if x is not None:
+            getattr(R, 'append')(x)
+    while áÖï:
+        (v := getattr(áÖï, 'pop')(0))
+        if getattr(v, 't') == '𝐿':
+            getattr(C, 'append')(v)
+        elif getattr(v, 't') == '𝑇':
+            getattr(C, 'append')(áÓàþáÓÕþáÓÓþáÓß(v))
+        elif dot(v):
+            getattr(C, 'append')(áÓÓþáÓçþáÓçþáÓå((lambda ÂîÓ: áÓæþáÓçþáÓå(ÂîÓ) if getattr(ÂîÓ, 't') == '𝑣' else ÂîÓ)(getattr(áÖï, 'pop')(0))))
+        elif exp(v):
+            getattr(C, 'append')(áÓØþáÓëþáÓã(getattr(áÖï, 'pop')(0)))
+        else:
+            adds(v)
+    adds(None)
+    (ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(R), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def regroup_elements(ÄÕÒü):
+    (áüì := Âåæ(ÄÔÙù, MOD(ÁØò(lambda ÂîÓ: [áÓàþáÓÕþáÓÓþáÓß(ÂîÓ)] if getattr(ÂîÓ, 't') == '𝑇' else ÂîÓ if getattr(ÂîÓ, 't') == 'target_rhs' else [ÂîÓ]))))
+    getattr(ÄÕÒü, 'ftrp')('x', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=ÂÕÅ(UGX_CREATE(('B', (àìÒ := []), '*', None, ('∨', ('B', (àìÒ := []), '', lambda x: áÎô('applier', *áüì(x)), ('∧', (lambda ÂîÓ: getattr(ÂîÓ, 't') != 'num', ''), (lambda ÂîÓ: getattr(ÂîÓ, 't') in '𝑇\u2009target_rhs', '+'))), (ÃÆë, '')))), getattr(ÄÕÒü, 'c')) or ÂÚü()), True)
+    MOD(ÄÕéý, áØÁ=ÂØÙ)(getattr(ÄÕÒü, 'ftrp')('target_rhs', lambda ÄÕÒü: áÎô('applier', *ÄÕÒü), True), ÄÕÒü)
+
+    def áÕá(áÖý, ÄÕÒü):
+        if getattr(ÄÕÒü, 't') == 'mcal':
+            return áÎô('∘', áÖý, *ÄÕÒü[0])
+        if getattr(ÄÕÒü, 't') == '𝐿':
+            return áÓÜ(áÖý, *ÄÕÒü)
+        if getattr(ÄÕÒü, 't') == 'attr':
+            return áÓÓ(áÖý, ÄÕÒü)
+        if getattr(ÄÕÒü, 't') == 'exp':
+            return áÎô('opC', áÓÇþáÓÈ('⌃'), áÖý, ÄÕÒü[0])
+        ÂùÆ(False)
+    getattr(ÄÕÒü, 'ftrp')('applier', lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(c=[MOD(ÆÑ, áØÁ=áÓë(ÄÕÒü[0]))(getattr(ÄÕÒü, 'c')[slice(1, None)], áÕá)]), True)
+
+def reduce_Ïð(ÄÕÒü):
+    if not getattr((áÖü := getattr(getattr(ÄÕÒü[0], 'e'), 'O')), 'Ïð'):
+        return ÄÕÒü
+    (áÑæ := [ÄÕÒü[0]])
+    for n in ÄÕÒü[slice(1, None)]:
+        if (getattr(n, 't') == 'x' and ãÊú(n) == 1) and (lambda ÂîÓ: getattr(ÂîÓ, 't') == 'opC' and getattr(getattr(getattr(ÂîÓ[0], 'e'), 'O'), 't') == getattr(áÖü, 't'))(n[0]):
+            getattr(áÑæ, 'extend')(n[0][slice(1, None)])
+            continue
+        getattr(áÑæ, 'append')(n)
+    (ÄÊPSH(ÄÕÒü), ÄÊPSH('c'), ÄÊPSH(áÑæ), setattr(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+    return ÄÕÒü
+
+def add_cmp_op_chains(ÄÕÒü):
+    for L in ÂÀÇ(áÖáþáÖæ):
+        if not (áÖå := áÍè(ÁØò(lambda ÂîÓ: ÂîÓ[0] if ÂÔö(ÄÝöË(ÂîÓ[1]), 'λ') else ÄÔýò)(L))):
+            continue
+        (relv := (lambda ÂîÓ: áÖü if getattr(ÂîÓ, 't') == 'opC' and getattr((áÖü := getattr(getattr(ÂîÓ[0], 'e'), 'O')), 't') in áÖå else None))
+        (charg := (lambda ÂîÓ: (ãÊú(ÂîÓ) == 1 and getattr(ÂîÓ, 't') == 'x') and relv(ÂîÓ[0])))
+
+        @getattr(ÄÕÒü, 'ftrp')('opC', None, True)
+        def _(ÄÕÒü):
+            if not (áÖü := relv(ÄÕÒü)):
+                return ÄÕÒü
+            (ÄÊPSH(getattr(ÄÕÒü, 'c')), ÄÊPSH(slice(1, None)), ÄÊPSH(ÄÔÙù(ÁØò(lambda ÂîÓ: MOD(Áëý, áØÁ=charg)(ÂîÓ, [Âêà, MOD(ÁÛÛ, áØÁ=0)]))(getattr(ÄÕÒü, 'c')[slice(1, None)]))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3]
+            return ÄÕÒü
+        getattr(ÄÕÒü, 'ftrp')('opC', lambda ÄÕÒü: getattr(ÄÕÒü, 'cp')(t='cmp') if relv(ÄÕÒü) else ÄÕÒü, True)
+    return ÄÕÒü
+
+def rewrite_cmp(ÄÕÒü):
+
+    @getattr(ÄÕÒü, 'ftrp')('cmp', None, True)
+    def _(ÄÕÒü):
+        if ãÊú(ÄÕÒü) <= 3:
+            return getattr(ÄÕÒü, 'set')(t='opC')
+        (ÄÊPSH(áÇù(getattr(ÄÕÒü, 'c'), lambda ÂîÓ: getattr(ÂîÓ, 't') == '𝗈𝗉')), ((o := ÄÊPKE(0)[0]), (v := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        (ÄÊPSH(o), ÄÊPSH(ÂÀÇ(ÄÊPKE(0))), (o := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        (C := ÆÑ([áÓâþáÓãþáÒú(getattr(o, 'pop')(0), getattr(v, 'pop')(0), áÓÖ(getattr(v, 'pop')(0))), *ÁØò(lambda ÂîÓ: áÓâþáÓãþáÒú(getattr(o, 'pop')(0), ÐÌü(áÓã), áÓÖ(ÂîÓ)))(v)], lambda *áÑË: áÓâþáÓãþáÒú('∧', *áÑË)))
+        return MOD(ÄÕéý, áØÁ=ÂØÙ)(áÓâþáÓãþáÒú('∨', áÓâþáÓãþáÒú('∧', getattr(ÄÕÒü, 'set')(t='opC', c=C), áÓâþáÓãþáÒú('∨', áÓå(1), áÓéþáÓæ('✓'))), áÓâþáÓãþáÒú('∨', áÓå(1), áÓéþáÓæ('✗'))), ÄÕÒü)
+
+def rewrite_asgns(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('asgn', lambda ÄÕÒü: áÓë(áÓâþáÓãþáÒú(denode_op(áÓâþáÓã(MOD(ÄÕéý, áØÁ=ÂØØ)('≔', ÄÕÒü))), *ÄÕÒü)), True)
+    ÁØò(lambda ÂîÓ: getattr(getattr(ÂîÓ, 'flat')(lambda ÂîÓ: getattr(ÂîÓ, 't') == 'x', False), 'flat')(lambda ÂîÓ: getattr(ÂîÓ, 't') == 'applier', False))(date_ÄÕÒü(lambda ÂîÓ: getattr(ÂîÓ, 't') in ÂÛê('asgn_targs\u2009asgn_targ'), 'x')(ÄÕÒü))
+    (ÄÔöà := (lambda x, **áÑÕ: ÅÒ('\U000f0a08', e=MOD(ÂÑÖ, áØÁ=None)()(I=x, **áÑÕ))))
+    (âÛ := (lambda x, **áÑÕ: ÅÒ('߷', e=MOD(ÂÑÖ, áØÁ=None)()(I=x, **áÑÕ))))
+
+    def p(ÄÕÒü, áÎÄ, *áÖÛ, áÎÜþáÎØ=None):
+        if getattr(ÄÕÒü, 't') in ÂÛê('x\u2009applier\u2009target_rhs'):
+            return p(ÄÕÒü[0], áÎÄ, *áÖÛ, áÎÜþáÎØ=áÎÜþáÎØ)
+        if getattr(ÄÕÒü, 't') == '𝗈𝗉':
+            return áÎô('S𝑣', áÓé(ÄÕÒü[1][0]), ÄÔöà(áÖÛ))
+        if getattr(ÄÕÒü, 't') == '𝑣':
+            return áÎô('S𝑣', ÄÕÒü[0], ÄÔöà(áÖÛ))
+        if getattr(ÄÕÒü, 't') == '𝑇':
+            (i := MOD(Áëý, áØÁ=lambda ÂîÓ: ÂîÓ is None)(MOD(ÄÔÞÔ, ÁÜñ=ÄÕøü)(ÄÕÒü, lambda ÂîÓ: getattr(ÂîÓ, 't') == '𝔸' or ((getattr(ÂîÓ, 't') == 'x' and ãÊú(ÂîÓ) == 1) and getattr(ÂîÓ[0], 't') == '𝔸')), MOD(ÄÕÍÔ, áØÁ=ÂÕË)))
+            return áÓÌ(*ËãÂ(ÂÓÏ(ÄÕÒü), lambda x, y: p(y, áÎÄ, *áÖÛ, x if x <= i else x - ãÊú(ÄÕÒü), áÎÜþáÎØ=ãÊú(ÄÕÒü))))
+        if getattr(ÄÕÒü, 't') == '𝔸':
+            return áÎô('𝔸', p(ÄÕÒü[0], áÎÄ, *áÖÛ[slice(None, -1)], slice(None) if (not áÖÛ or None is áÎÜþáÎØ) or áÎÜþáÎØ == 1 else slice(áÖÛ[-1], o if (o := (áÖÛ[-1] - áÎÜþáÎØ + 1)) else None)))
+        if getattr(ÄÕÒü, 't') in '𝑖𝑎':
+            getattr(áÎÄ, 'extend')(getattr(ÄÕÒü, 'c'))
+            return áÎô('S' + getattr(ÄÕÒü, 't'), âÛ(ãÊú(áÎÄ) - 2), âÛ(ãÊú(áÎÄ) - 1), ÄÔöà(áÖÛ))
+        ÂùÆ(False)
+
+    @getattr(ÄÕÒü, 'frp')(lambda ÂîÓ: getattr(ÂîÓ, 't') == 'opC' and +ÂîÓ[0] in '≔\U000f7e09\U000f7e0a\U000f7e0b≕\U000f7e0e\U000f7e0c\U000f7e0d', None, True)
+    def _(ÄÕÒü):
+        (áÎÛ := ÄÕÒü[0])
+        (áØÂ := getattr(áÎÛ[1][0], 't'))
+        (ÄÊPSH((ÄÕÒü[1], ÄÕÒü[2]) if áØÂ in '≔\U000f7e09\U000f7e0a\U000f7e0b' else (ÄÕÒü[2], ÄÕÒü[1])), ((áÎÇ := ÄÊPKE(0)[0]), (áÍô := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        if (áØÂ in '≔≕' and getattr(áÎÇ, 't') == 'x') and ãÊú(áÎÇ) == 1:
+            if getattr(áÎÇ[0], 't') == '𝑣':
+                return áÓë(áÎô('S𝑣', áÎÇ[0], áÍô))
+            if getattr(áÎÇ[0], 't') == '𝗈𝗉':
+                return áÓë(áÎô('S𝑣', áÓé(áÎÇ[0][1][0]), áÍô))
+        (áÍö := p(áÎÇ, (áÎÄ := ÂÚü())))
+        (is_ref_áÍë := CURR(lambda ÂîÓ, ÂîÒ: getattr(ÂîÓ, 't') == '𝑣' and +ÂîÓ == ÂîÒ, getattr(getattr(áÎÛ, 'e'), 'áÖû')))
+        (áÔê := (lambda ÄÕÒü, áÖõ: getattr(ÄÕÒü, 'ftrp')('\U000f0a08', lambda ÄÕÒü: MOD(ÆÑ, áØÁ=áÓà(áÐè(áÖõ)))(getattr(getattr(ÄÕÒü, 'e'), 'I'), CUR(lambda ÂîÓ, ÂîÒ: áÓÜ(ÂîÓ, áÓÓþáÓèþáÓçþáÓâ(ÂîÒ)))))))
+        (áÔë := (lambda ÄÕÒü, ÏÁ: getattr(ÄÕÒü, 'ftrp')('߷', lambda ÄÕÒü: áÓà(áÐè(ÏÁ + ~getattr(getattr(ÄÕÒü, 'e'), 'I'))))))
+        (áÎÞ := áÎô('𝑇'))
+        if áØÂ in '\U000f7e09\U000f7e0a\U000f7e0b\U000f7e0e\U000f7e0c\U000f7e0d':
+            (áÎÜ := getattr(ÐÌü(getattr(áÍö, 'cpr')), 'ftrp')(ÂÛê('S𝑣\u2009S𝑖\u2009S𝑎'), lambda ÄÕÒü: getattr(ÄÕÒü, 'set')(t=getattr(ÄÕÒü, 't')[slice(1, None)], c=getattr(ÄÕÒü, 'c')[slice(None, -1)])))
+            getattr(áÎÄ, 'append')(MOD(ÄÕéý, áØÁ=áÔë)(áÎÜ, ãÊú(áÎÄ)))
+        if áØÂ in '\U000f7e0a\U000f7e0b':
+            (áÍô := getattr(áÍô, 'frp')(is_ref_áÍë, lambda ÄÕÒü: áÓà(áÐè(0))))
+        (áÍù := Áÿú(áÎÄ, áÓÖ))
+        (áÍô := áÓÖ(áÍô))
+        if áØÂ in '\U000f7e0c\U000f7e0d':
+            (áÍô := getattr(áÍô, 'frp')(is_ref_áÍë, lambda ÄÕÒü: áÓÜ(áÓÌ(*áÍù), áÐè(ãÊú(áÍù) - 1))))
+            getattr(getattr(áÎÞ, 'c'), 'append')(áÍô)
+            getattr(getattr(áÎÞ, 'c'), 'append')(MOD(ÄÕéý, áØÁ=áÔë)(MOD(ÄÕéý, áØÁ=áÔê)(áÍö, 0), ãÊú(áÎÄ) + 1))
+            if áØÂ == '\U000f7e0d':
+                getattr(getattr(áÎÞ, 'c'), 'append')(áÓã(áÓá(1)))
+            (áÍÿ := áÓÜ(áÎÞ, áÓá(ãÊú(áÎÞ) - 1)))
+        else:
+            if (r2l := ÂÔö('≕\U000f7e0e', áØÂ)):
+                getattr(áÍù, 'insert')(0, áÍô)
+            else:
+                getattr(áÍù, 'append')(áÍô)
+            getattr(getattr(áÎÞ, 'c'), 'extend')(áÍù)
+            getattr(getattr(áÎÞ, 'c'), 'append')(MOD(ÄÕéý, áØÁ=áÔë)(MOD(ÄÕéý, áØÁ=áÔê)(áÍö, r2l * ãÊú(áÎÄ)), ãÊú(áÍù) - r2l))
+            (áÍÿ := áÓÜ(áÎÞ, áÓá(ãÊú(áÎÄ) - 1 if áØÂ == '\U000f7e0b' else ãÊú(áÎÞ) + (áØÂ == '\U000f7e0e') + ~(2 * (áØÂ in '\U000f7e09\U000f7e0e')))))
+        getattr(getattr(áÍÿ[0], 'c'), 'append')(áÓå(ãÊú(áÍù) - (áØÂ == '\U000f7e0d')))
+        return áÍÿ
+
+def add_short_circuits(ÄÕÒü):
+
+    @getattr(ÄÕÒü, 'frp')(lambda ÂîÓ: (getattr(ÂîÓ, 't') == '∘' and getattr(ÂîÓ[0], 't') == '𝗈𝗉') and getattr(ÂîÓ[0][1][0], 't') in '\U000f7ea5\U000f7e92', None, True)
+    def _(ÄÕÒü):
+        (ÄÊPSH((ÄÕÒü[1], ÄÕÒü[2])), ((a := ÄÊPKE(0)[0]), (b := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        if getattr(ÄÕÒü[0][1][0], 't') == '\U000f7ea5':
+            return áÓçþáÓØþáÓåþáÓá(áÓÖ(a), áÓÊ(áÓå(1), áÓéþáÓæ('✗')), áÓçþáÓØþáÓåþáÓá(b, ÐÌü(áÓã), áÓÊ(áÓå(1), áÓéþáÓæ('✓'))))
+        else:
+            return áÓçþáÓØþáÓåþáÓá(áÓÖ(a), áÓçþáÓØþáÓåþáÓá(b, áÓÊ(áÓå(1), áÓéþáÓæ('✗')), ÐÌü(áÓã)), áÓÊ(áÓå(1), áÓéþáÓæ('✓')))
+        return ÄÕÒü
+(part_ats := (lambda ÂîÓ: (getattr(ÂîÓ, 'copy')(c=(h := MOD(ÐÌÛ, áØÁ=áÍÖ)(getattr(ÂîÓ, 'c'), lambda ÂîÓ: getattr(ÂîÓ, 't')[-1] == '@'))[0]), áÍÙ(ÁØò(lambda ÂîÓ: (lambda ÂîÓ: (getattr(ÂîÓ, 't'), ÂîÓ))(getattr(ÂîÓ, 'copy')(t=getattr(ÂîÓ, 't')[slice(None, -1)])))(h[1])))))
+
+def rewrite_ugex(ÄÕÒü):
+    getattr(ÄÕÒü, 'flat')(lambda ÂîÓ: getattr(ÂîÓ, 't') in ÂÛê('ugx_and\u2009ugx_or') and ãÊú(ÂîÓ) == 1)
+    getattr(ÄÕÒü, 'ftrp')('ugx_☾', lambda ÂîÓ: getattr(ÂîÓ, 'set')(t='𝑇', c=[ÂîÓ[0], áÓÓþáÓèþáÓçþáÓâ(ÁØã if ãÊú(ÂîÓ) <= 1 else +ÂîÓ[1])]), True)
+
+    @getattr(ÄÕÒü, 'ftrp')(ÂÛê('ugx_paren\u2009ugx_brack'), None, True)
+    def _(ÄÕÒü):
+        (ÄÊPSH(part_ats(ÄÕÒü)), ((n := ÄÊPKE(0)[0]), (e := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        if ãÊú(n) > 1:
+            (n := getattr(n, 'copy')(c=[áÎô('ugx_and', *n)]))
+        (ÄÊPSH((getattr(e, 'get')('stk', áÎô('𝐿')), getattr(e, 'get')('apply', áÓéþáÓæ('□')))), ((b := ÄÊPKE(0)[0]), (c := ÄÊPKE(0)[1])), ÄÊDEL(1))[1]
+        (r := áÓÌ(áÓÓþáÓèþáÓçþáÓâ('BP'[getattr(n, 't') == 'ugx_paren']), áÎô('S𝑣', áÓé('\U0001cce8'), b), áÓÓþáÓèþáÓçþáÓâ((lambda ÂîÓ: ÂîÓ and +ÂîÓ)(getattr(e, 'get')('mod', ÁØã))), c, n))
+        return r
+    getattr(ÄÕÒü, 'ftrp')(ÂÛê('ugx_and\u2009ugx_or'), lambda ÄÕÒü: áÓÌ(áÓÓþáÓèþáÓçþáÓâ('∧∨'[getattr(ÄÕÒü, 't') == 'ugx_or']), *ÄÕÒü), True)
+    getattr(ÄÕÒü, 'ftrp')('ugx_x', lambda ÄÕÒü: áÓÕþáÓÓþáÓßþáÓß('UGX_CREATE', *ÄÕÒü))
+
+def rewrite_ports(ÄÕÒü):
+    getattr(ÄÕÒü, 'ftrp')('str_timp_guts', lambda ÂîÓ: ÂåÔ(getattr(ÂîÓ[0], 'set')(t=getattr(getattr(ÂîÓ[0], 't'), 'rstrip')(' ')), ÂîÓ), True)
+    getattr(ÄÕÒü, 'ftrp')('str_timp', lambda ÄÕÒü: áÓÕþáÓÓþáÓßþáÓß('__þIMPORT__', ÄÕÒü[0], ÐÌü(áÒÿ)), True)
+
+    @getattr(ÄÕÒü, 'ftrp')('import', None, True)
+    def _(ÄÕÒü):
+        if ãÊú(ÄÕÒü) < 2:
+            return ÄÕÒü
+        ÁØò(lambda ÂîÓ: ÂîÓ if +ÂîÓ[-1] != '@' else ÂåÔ((ÄÊPSH(ÂîÓ), ÄÊPSH(1), ÄÊPSH(áÓÕþáÓÓþáÓßþáÓß(áÓÜ(ÐÌü(áÓà), áÓäþáÓé('__þGET_GLOB_MODNAME__')))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3], getattr(ÂîÓ, 'set')(t=' ')) if ãÊú(ÂîÓ) == 2 else (ÄÊPSH(ÂîÓ), ÄÊPSH(0), ÄÊPSH(áÓÕþáÓÓþáÓßþáÓß(áÓÜ(ÐÌü(áÓà), áÓäþáÓé('__þSET_GLOB_MODNAME__')))), setitem(ÄÊPKE(2), ÄÊPKE(1), ÄÊPKE(0)), ÄÊDEL(3))[3])(getattr(ÄÕÒü[1], 'c'))
+        return áÓÜ(áÓÌ(áÓÖ(ÄÕÒü[0]), *ÁØò(lambda ÂîÓ: ÂîÓ if getattr(ÂîÓ[0], 't') == '∘' else áÓÕþáÓÓþáÓßþáÓß('__þADDGLOBALS_CLEAN__', ÐÌü(áÓà), ÐÌü(áÒÿ)) if ãÊú(ÂîÓ) == 1 and +ÂîÓ == '*' else áÓë(áÓé(ÂîÓ[0][0]), áÓâþáÓã('≔'), ÂîÓ[1] if ãÊú(ÂîÓ) == 2 and getattr(ÂîÓ, 't') == ' ' else áÓÜ(ÐÌü(áÓà), áÓäþáÓé(ÂîÓ[-1][0]))))(getattr(ÄÕÒü[1], 'c')), ÐÌü(áÓã)), áÎô('neg_num', áÐè('\U000f7c3e')))
+    getattr(ÄÕÒü, 'ftrp')('export', lambda ÄÕÒü: áÓÕþáÓÓþáÓßþáÓß('__þADD_EXPORTS__', ÐÌü(áÒÿ), *ÁØò(lambda ÂîÓ: áÓÌ(áÓäþáÓé(ÂîÓ[0]), ÂîÓ[-1]))(getattr(ÄÕÒü[0], 'c'))), True)

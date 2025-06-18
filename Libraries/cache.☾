@@ -1,5 +1,3 @@
-⦃from pickle import loads as ⦃pl⦄,dumps as ⦃pd⦄⦄
-
 󱀘 Cacher:
     ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥): 𝕊􊽺,𝕊􍺪,𝕊􍺤,𝕊􍺢,𝕊􎀞 = ƒ,𝘩,𝘦,𝘥,{}
     ⊢ __call__(𝕊,⠤𝔸,⠶𝕂): 𝚎=𝕊􍺪(𝕊􊽺.__name__,⠤𝔸,⠶𝕂)
@@ -14,15 +12,15 @@
     ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=TMPDIR/‹☾_cache›):
         super().__init__(ƒ,𝘩,𝘦,𝘥)
         𝕊􀲥􀲹=mkd(fp)
-    ⊢ chk_cache(𝕊,x): ¿x∈𝕊􎀞: ↪𝕊􎀞ₓ
-                      ¿(𝕊􀲥􀲹/x≕f).exists: ↪𝕊􎀞ₓ≔ᵇ(f)
-                      ↪␀
+    ⊢ chk_cache(𝕊,x  ): ¿x∈𝕊􎀞: ↪𝕊􎀞ₓ
+                        ¿(𝕊􀲥􀲹/x≕f).exists: ↪𝕊􎀞ₓ≔ᵇ(f)
+                        ↪␀
     ⊢ add_cache(𝕊,x,y): ᵇ(𝕊􀲥􀲹/x, 𝕊􎀞ₓ≔y)
 
-mkmk_cache = Ƈ↦⥌𝘩=sha,𝘦=pd,𝘥=pl,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
-cache, fcache = Cacher⋄FileCacher ᴍ mkmk_cache
+mkmk_cache = Ƈ↦⥌𝘩=sha,𝘦=pdump,𝘥=pload,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
+cache,fcache = Cacher⋄FileCacher ᴍ mkmk_cache
 
-__exports__ = ‹Cacher FileCacher cache fcache mkmk_cache›⍭
+⭷ Cacher,FileCacher,cache,fcache,mkmk_cache
 
  sqc = mk_fcache(fp="/tmp/weed")(☾○√)
  sqc(5)
