@@ -33,6 +33,7 @@ const tools = { sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                 sub: s=>[...s].map(c=>SUB[c]??c).join(''),
                 nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
                 align }
+// 󰤱 generalized upper/lower/swapcase, switching op orders, switching alphabets
 
 const activate = ℭ => 
     Object.entries(tools).map(([k,v])=>

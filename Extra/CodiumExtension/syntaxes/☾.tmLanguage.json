@@ -1,7 +1,19 @@
 { "name"      : "moon",
   "scopeName" : "source.moon",
-  "patterns"  : [{ "include": "#str" }],
+  "patterns"  : [{ "include": "#gen" }],
   "repository": {
+    "gen"       : { "patterns": [{ "include": "#com" },
+                                 { "include": "#str" }] },
+    
+    "com"       : { "patterns": [{ "include": "#com_ln" },
+                                 { "include": "#com_il" }] },
+    
+    "com_ln"    : { "name" : "comment.ln.moon",
+                    "match": ".*"},
+    
+    "com_il"    : { "name" : "comment.il.moon",
+                    "begin": "🟑",
+                    "end"  : "🟑" },
     
     "str"       : { "patterns": [{ "include": "#str_star" },
                                  { "include": "#str_sys"  },
@@ -42,7 +54,7 @@
                    "end"          : "⟧",
                    "beginCaptures": { "0": { "name": "punctuation.strsub.moon" }},
                    "endCaptures"  : { "0": { "name": "punctuation.strsub.moon" }},
-                   "patterns"     : [{ "include": "#str" }] },
+                   "patterns"     : [{ "include": "#gen" }] },
     
     "str_esc"  : { "name"         : "string.esc.moon",
                    "match"        : "␛." } } }
