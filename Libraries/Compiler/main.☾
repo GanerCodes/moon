@@ -64,13 +64,13 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                ¿𝚌¬       : ‹God is good!›☾
                ⸘𝚌≡‹clear›: os.system(‹clear›)
                ¡         : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
-                           𝘤 = compile_code(𝚌)
-                           𝘤 VEP __highlighter__ ⭢ ☾
-                             󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣eval(x,y,y),ret=✓)☾
-                           ¡:               󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣exec(x,y,y),ret=✓)
+                           𝘤 = 𝚌 compile_code
+                           𝘤 VEP __highlighter__  ☾
+                               󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣eval(x,y,y),ret=✓)☾
+                           ¡:  󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣exec(x,y,y),ret=✓)
                               ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
 
-⊢ transpiler_cli(⠤𝖠):
+⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
     show_docs = 𝚲‹Usage: e <str_to_encode>
                          d <str_to_decode>
                          b <boostrap_dest>

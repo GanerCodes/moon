@@ -28,7 +28,7 @@ echo "Installing to \"$DEST\""
 
 (mkdir ./bin || :) >/dev/null 2>&1
 echo '#/bin/sh' > ./bin/☾
-echo 'exec' \"$PYTHON\" '-S' '-u' \""$(realpath refresher.py)"\" '"$@"' >> ./bin/☾
+echo 'exec' \"$PYTHON\" '-S' '-u' \""$(realpath bootstrap.py)"\" '"$@"' >> ./bin/☾
 chmod a+x ./bin/☾
 
 (rm "$DEST" || :) >/dev/null 2>&1

@@ -6,21 +6,21 @@ Error handling:
   2. Thing that takes errors and uses sourcemap to get relevent ranges
   3. Thing that concats trees so you can generate sourcemaps for multi-files
 
-󰤱  named exceptions
-󰤱  ⨡ a,b,c
+󰤱  named exceptions, ¡ε=𝑒:, chain multiple ¡′s, finally􊽨
+󰤱  ⨡ a ⨡ b ⨡ c
+󰤱  `a b≕c d` ⟶ `(PSH(␀CAT(a, b)), (c := PKE(0)), DEL(1))[1]` ???
+󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)`
 󰤱  whitespace involution lol
-󰤱  rewrite_strs λ_add_vk format_whiskers regroup_elements add_cmp_op_chains
-󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
-󰤱  why is `a b c` so weird
-󰤱  ∀a⬠bᐖ1: 1  check for this
 󰤱  string ␛ before newline should not add it
+󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  with statements (prob ⓦ under or something)
 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
-󰤱􊽨 replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
+󰤱  replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
+󰤱  ∀a⬠bᐖ1:1  check for this type beat
 󰤱􊽨 deque for þSTK
-󰤱􊽨 raising
 󰤱  "joe"󷹝¹⁶ should give the charcodes in the base iasdjia
       for 􋇙 maybe use a 𐞑 or somethingiadfsj
+󰤱  the random 󰤱′s all throughout the code
 
  🐈‍⬛‍⬛‍⬛‍⬛‍⬛
 All orders for all operators
@@ -70,17 +70,13 @@ Colors and number-labels of ⬤
     
      ‹xˣₓ􊾆􊿶􊫄􊬴 󷰠󷰭󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱␀ ␀αβγΔεζ ␀123456›⍭⨉
 
-
-
-
-Special stuff that we need:
-    þSTK is a stack we need to be able to access
-        þPSH = 󰲡push x onto þSTK and return x
-        þPKE = 󰲡xth item on þSTK
-        þPOP = 󰲡pop and returns xth item on þSTK
-        þDEL = 󰲡delete x items from top of þSTK
-        __þADDGLOBALS_CLEAN__ __þIMPORT__ __þADD_EXPORTS__
-        __þGET_GLOB_MODNAME__ __þSET_GLOB_MODNAME__
+þSTK is a stack we need to be able to access
+    þPSH = 󰲡push x onto þSTK and return x
+    þPKE = 󰲡xth item on þSTK
+    þPOP = 󰲡pop and returns xth item on þSTK
+    þDEL = 󰲡delete x items from top of þSTK
+    __þADDGLOBALS_CLEAN__ __þIMPORT__ __þADD_EXPORTS__
+    __þGET_GLOB_MODNAME__ __þSET_GLOB_MODNAME__
 
 For a transpiler:
     Must provide PEV and VEP functions that convert encode/decode var names to the lang

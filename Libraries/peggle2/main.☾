@@ -1,4 +1,3 @@
-fcache = 𝚲ƒ↦ƒ  󰻾􋒍  ⨡ cache
  FC, bruh = fcache, 0
  ⊢ fcache(⠤𝔸,⠶𝕂):
      global bruh
@@ -8,10 +7,11 @@ fcache = 𝚲ƒ↦ƒ  󰻾􋒍  ⨡ cache
 
 ⨡ Ń
 ⨡ text_format
+ ⨡ cache
+fcache = 𝚲ƒ↦ƒ  󰻾􋒍
 
-           ⦃import regex as ⦃re⦄⦄
-¡Exception: ⦃import re    as ⦃re⦄⦄
- ⮌ pickle ⨡ loads,dumps
+   ⦃import regex as ⦃re⦄⦄
+¡𝑒: ⦃import re    as ⦃re⦄⦄
 
 show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹⟦i⟧,⟦x⟧𝘁⟦𝑅ₓ⟧𝘁⟦y⟧›
 
@@ -274,7 +274,6 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
     ⊢ print_rules(𝕊): 𝕊ʳᵘˡᵉˢ.itemsꟿ󰲣(‹⟦x⟧:›☾,y☾)
     ⊢ print_normalized(𝕊): 𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ↨ ꟿ󰲣 ☾‹⟦x⟧𝘁⟦yᴍᔐ⭢⨝𝘀⟧›
 
- 𝗲𝗯𝟮𝟲
 𝐑=[‹[#][^𝗻]*›, ‹[⯅⯆△▽↷]›, ‹"([^"␛␛]|␛␛.)*"›, ‹'([^'␛␛]|␛␛.)*'›, ‹‹([^␛›␛␛]|␛␛.)*␛››,
    ‹[^⯅⯆△▽↷󰆴()?❗⮞.:⠶ƨ✗+*=¬∨∧~#‹'"𝘀𝘁𝗻␛␛]+|✗›, ‹[󰆴❗⮞⠶ƨ~¬]›, ‹[*+?]›, ‹([𝘀𝘁]|[\\␛␛]𝗻)+›,
    ‹([𝘀𝘁𝗻]|[\\␛␛]𝗻)+›]ᴍre.compile
