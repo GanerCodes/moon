@@ -1,7 +1,7 @@
 ⨡ rewriters ⭸ *
+⨡ gram.data
 
-gram      = moon_dir/‹Libraries/Compiler/gram› ⭢ 
-gram      = gram_rp(‹𝗐 𝖶›⍭󰛔ᵍʳᵃᵐ⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
+gram      = gram_rp(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›,𝘳,✗)
 gram_comm = gram_rp(gram,ℵ(M=‹comm›⛶,I=‹comment∨σscript∨›⛶),✓)
 gram_scrp = gram_rp(gram,ℵ(M=‹scrp›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗σscript∨›⛶),✓)
 gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⛶),✓)
@@ -48,40 +48,40 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
             ¿+𝚕: 𝒏ᶜ.insert(0,𝒩(‹sup›,𝚕₀ ₀))
             ¿+𝚛: 𝒏ᶜ.append(  𝒩(‹sup›,𝚛₀ ₀))
             ↪𝒏
-        󱁕.ftrp(‹sup›,󱁕↦󱁕₀ᵗ≡␛x∧󱁕₀🃌≡1∧󱁕₀ ₀ᵗ≡␛𝑣 ⭜𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀)⭝ ␛
-                                              𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕)),✓)
-        󱁕.flat(󷺹ᵗ≡‹tmp›)
-        󱁕.ftrp(‹op›,denode_op,✓)
-        󱁕.ftrp(‹x›,group_targets,✓)
+        󱁕.ftrp(‹sup›,󱁕↦󱁕₀ᵗ≡␛x∧󱁕₀🃌≡1∧󱁕₀ ₀ᵗ≡␛𝑣 ⭜𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀)⭝␛
+                                              𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕)),✓  ) ␛
+         .flat(󷺹ᵗ≡‹tmp›)                                             ␛
+         .ftrp(‹op›,denode_op,✓)                                     ␛
+         .ftrp(‹x›,group_targets,✓)
         rewrite_for(󱁕)
         grp_blks(󱁕)
         rewrite_strs(󱁕)
         flatten_statments(󱁕)
-        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)
-        󱁕.rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)
-        󱁕.ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)
-        󱁕.ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)
-        󱁕.ftrp(‹opC›,reduce_ς,✓)
+        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)                                ␛
+         .rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›) ␛
+         .ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)                      ␛
+         .ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)                                  ␛
+         .ftrp(‹opC›,reduce_ς,✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)
         regroup_elements(󱁕)
         rewrite_asgns(󱁕)
         rewrite_cmp(󱁕)
-        󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)
-        󱁕.frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
+        󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓) ␛
+         .frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
         
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢 (denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝖼𝖺𝗅𝗅(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
-        󱁕.ftrp(‹x󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓)
-        󱁕.ftrp(‹x›,squashcat,✓)
-        󱁕.ftrp(‹opC›,󷺹.set(t=␛∘),✓)
-        󱁕.ftrp(‹⋅󷺗›,squashmul,✓)
+        󱁕.ftrp(‹x󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓) ␛
+         .ftrp(‹x›,squashcat,✓)                                               ␛
+         .ftrp(‹opC›,󷺹.set(t=␛∘),✓)                                           ␛
+         .ftrp(‹⋅󷺗›,squashmul,✓)
         
         reformat_whiskers(󱁕)
         
-        󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)
-        󱁕.frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)
-        󱁕.ftrp(‹ᗜ›,󰲡𝗏𝗌(␛□)󱖔􋔡x)
+        󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)         ␛
+         .frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓) ␛
+         .ftrp(‹ᗜ›,󰲡𝗏𝗌(␛□)󱖔􋔡x)
         add_short_circuits(󱁕)
         curry_ops(󱁕)
         rewrite_ugex(󱁕)

@@ -1,3 +1,4 @@
+⭷ GRAM=󰦥󰦥󰦥󰦥󰦥
 
 op_⸓_ln     = ~‹%OP_MOD_L_N%›
 op_⸓_ly     = ~‹%OP_MOD_L_Y%›
@@ -67,17 +68,18 @@ lambs = (  (whiskers=(    (⠶W_L 𝖶 (𝑋𝐶  ∨ ✓) ⠶W_R)
 𝔸𝕂 = (𝔸 = 󰆴'⠤' 𝖶 𝑋↓↑) ∨ (𝕂 = 󰆴'⠶' 𝖶 𝑋↓↑)
 slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
 
-ptarg    = '*' ∨ '@' ∨ 𝑣 ∨ 𝑣_spec ∨ op_lit
-pargs_i  = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
-pargs_e  = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
-import   = 󰆴'⨡' 𝖶 str_timp 𝗐 (󰆴'⭸' 𝖶 pargs_i)?
-export   = 󰆴'⭷' 𝖶 pargs_e
-str_timp = (str_sub_inner ∨ str_timp_guts)+
+pargs_i   = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
+pargs_e   = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
+ptarg     = '*' ∨ '@' ∨ 𝑣 ∨ 𝑣_spec ∨ op_lit
+import    = 󰆴'⨡' (((󰆴SP ~‹[^󰜛]+› 󰆴SE ∨ ✓) 𝖶        )
+                  (str_tsub ∨ str_nsub ∨ str_timp  )
+                  (𝖶 󰆴'⭸' 𝖶 pargs_i             ∨ ✓)
+                  (𝗐 󰆴';'         ✓ ∨ 𝗐 ⠶import ∨ ✓))
+export    = 󰆴'⭷' 𝖶 pargs_e
+str_timp  = ⠶timp_guts (𝘄 ⠶timp_guts)* 𝗐
+timp_guts = ⠶(str_sub_inner ∨ str_timp_guts)+
 
 native_code = 󰆴'⦃' (~‹[^⦃⦄␛␛]+› ∨ 󰆴"␛␛" ~‹.› ∨ 󰆴'⦃' 𝖶 𝑋𝐶? 𝖶 󰆴'⦄' )* 󰆴'⦄'
- native_imp = ((native_imp_from   = (󰆴'⮌' 𝖶 ~‹[^ \t\n⨡]+› 𝖶))?
-               (native_imp_fields = (󰆴'⨡' 𝖶 native_imp_targ (󰆴',' 𝗐 native_imp_targ)* )))
- native_imp_targ = ~‹[^ \t\n:,]+› (𝗐 󰆴':' 𝗐 ~‹[^ \t\n,]+›)? 𝗐
 
 pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
 neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
@@ -107,7 +109,7 @@ str_tsys = 󰆴'$' 𝗐 (ƨ(sup) ∨ ✓) 𝗐 (⠶str_sub_inner ∨ str_tsys_gu
 str_tsub = 󰆴'‹'                  (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
 str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
 str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
-str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⭸\n]+"
+str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⨡⭸ \t\n]+"
 str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*
@@ -136,3 +138,5 @@ ugx_brack = 󰆴'⟨' 𝖶 ⠶ugx_seq 󰆴'⟩' ⠶ugx_gtail
 𝘄 = 󰆴(~‹(␛␛\n|[ \t])+›  )
 𝗪 = 󰆴(~‹(␛␛\n|[ \t\n])+›)
 comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
+
+󰦥󰦥󰦥󰦥󰦥

@@ -1,0 +1,86 @@
+IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›),
+            (␛⫚, ‹⫚›),
+            (␛¶, ‹¶✿›))
+
+stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
+    
+__þIMPORTS__ = ℵ
+TP_CACHE = {}
+TRANSPILE_REF = Holder
+EXEC_NATIVE = exec
+dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_relative_to(moon_dir)ᐸ␛
+              ᐖ‹⟦moon_dir ⟞₀.relative_to ᔐ repr⟧:strd(⟦⟞₁.native_code stre repr⟧)›ᐸ␛
+              ᑀ⨝␛,⟧})›
+⊢ (cache) moon_to_py_cached(𝚌): TRANSPILE_REF⨳‹Cannot transpile without transpiler!›
+                                ↪𝚌⭢(+TRANSPILE_REF)
+⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,ƒ=EXEC_NATIVE,ret=✗):
+    ¿native¬: 𝚌 = moon_to_py_cached(𝚌)
+    ¿get_code: ↪𝚌
+    ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
+                  r=ƒ(𝚌,ns)
+                   ¿ret: ↪r
+    ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ‹Failed to exec!›☾
+                   ⦃raise ⦃ε⦄⦄
+    ↪ns
+
+󱀘 Module(ℵ⭢ᐹ): ⊢ __init__(𝕊,name,ns,code=□,native_code=□,hardcoded=✗):
+                    super().__init__(ns)
+                    𝕊.name,𝕊.code,𝕊.native_code,𝕊.hardcoded = name,code,native_code,hardcoded
+                ⊢ __repr__(𝕊): ↪‹Module[⟦𝕊.name⟧,⟦␛✗␛✓􊶊􋕜ₕₐᵣ󰂼ₑ⟧]›
+
+⊢ IMPORT_find_file(p,g_dir=□,w_dir=□,flags=ᐦ):
+    name,F,native,failed = (p󷸊𝐩).name,□,□,⍁
+    dirs = (p.is_absolute⭜p.parent⭝□, g_dir, w_dir≅□⭜pwd⭝w_dir, moon_dir/‹Libraries›)󰈳□
+    sufs = (p, ‹⟦p⟧.☾›, p/‹main.☾›, p/p.name)
+    ∀F⬠dirs⨉sufsꟿ/: F󷸊.resolve
+                    ¿␛↺∉flags ∧ moon_dir F.is_relative_to ␛
+                     ∧← moon_dir F.relative_to ᔐ≕h∈TP_CACHE:
+                        native = h; ⇥
+                    ¿F.is_file: ⇥
+                    failed.append(F)
+                    F=□
+    ↪name,F,native,failed
+
+⊢ __þIMPORT__(p,𝖦,flags=ᐦ):
+    ¿flags: ‹FOUND FLAGS: ⟦flags⟧›☾
+    name,F,native,failed = pᣆ􋅂􀸳􋇡IMPORT_find_file(⬤,𝖦.get(‹__dir__›),pwd,flags)
+    F≇□⨳‹Unable to find module "⟦name⟧"! Paths checked:⟦failed⟕𝗻⟧›
+    ¿␛↺∈flags ∨ F∉__þIMPORTS__:
+        __þIMPORTS__󰂘 = □
+                      ns,𝕂 = {__name__=name, __file__=F, __dir__=F.parent,
+                               __EXPORTS__={}, __þIMPORTS__=__þIMPORTS__,
+                               TP_CACHE=TP_CACHE, TRANSPILE_REF=TRANSPILE_REF},{}
+                       ¿native≅□: 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = 󱠨(𝕂􊬏󰂼ₑ􊬐≔F ,get_code=✓)
+                       ¡        : 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = TP_CACHEₙₐₜᵢᵥₑ
+                       ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
+                       __þIMPORTS__󰂘 = Module(name,ns,hardcoded=native≇□,⠶𝕂)
+        ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: __þIMPORTS__.pop(F,□)
+                       ⦃raise ⦃ε⦄⦄
+    mod = __þIMPORTS__󰂘
+    mod􊬏􋕞􋕞󰂗󰂪󰂢󰂡󰂤󰂦󰂥􋕞􋕞􊬐 𝖦.update
+    ↪mod
+⊢ __þADD_EXPORTS__(𝖦,⠤𝔸):  󰤱
+    E = 𝖦.setdefault(‹__EXPORTS__›,{})
+    E.update({⠤𝔸})
+    ↪E
+⊢ __þADDGLOBALS_CLEAN__(M,𝖦): 𝖦.update(M 𝑑 ꟿ󰲣x.startswith(␛_)⭜󰮈⭝(x,y))
+__þGET_GLOB_MODNAME__ = 𝚲𝔸
+__þSET_GLOB_MODNAME__ = 𝚲𝔸
+
+⊢ show_imports: ⨡ text_format
+                show_table = 󰲣ₓ+yᴍ²ᔐ⭢⍉ᐵᴍ𝼞ꬷ⭢⤉≕m►←⟞ᴍpadc(⬤,m)ᐸ⍉ᴍ⬤⨝␛│⭢⨝𝗻  󰤱 put this into text_format & add divider line
+                show_table(‹Static Name Path›⍭,__þIMPORTS__ꟿ󰲣␛✗␛✓􋕜ₕₐᵣ󰂼ₑ,y.name,x󰅂)☾
+
+BOOTSTRAP_GLOBALS = globals().copy()
+
+ PEV(␛@)
+ DISABLE_AUTOIMP = ␛ℍ
+ IMPIMPMAP = 𝑑(IMPSIMPSꟿ󷺹⋄ᵜ󷺾⭢󰌷)
+ ⮌ types ⨡ FunctionType as _FT
+ ⮌ sys ⨡ _getframe
+ ⊢ ´(n=0): frame = _getframe(n+1)
+            ↪ _FT(frame.f_code, frame.f_globals)
+ 󰲡1 ¿x≤1¡ 𝓢()(x-1)+𝓢()(x-2)󰅂(5)☾
+ ⊢ get_implict_imports(code): ¿𝑠(IMPIMPMAP.itemsᐵ₀∈code∧IMPORTED_∌⟞₁⭜⟞₁⭝󰮈) ≕ auto_imports:
+                                  ↪‹(‹⟦auto_imports⨝␛ ⟧␛›⍭ᴍ󰋺)›
+ subproca

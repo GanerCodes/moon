@@ -1,8 +1,8 @@
 ⨡ lambdas ⭸ *
 
 ⊢ rewrite_for(󱁕):
-    󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)
-    󱁕.ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
+    󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)␛
+     .ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
 ⊢ grp_blks(󱁕):  ¿⸘¡∀
     𝒎 = 󰲡󱁕↦󱁕ᵗ≡‹blk›∧󱁕₀ᵗ≡‹stmt›∧󱁕₀ ₀ᵗ≡‹blk_head›∧(󱁕₀ ₀ ₀ᐒx≡␛∀ ⭜⟞ᵗ≡‹stmt_∀›⭝ ⟞₀ ₀ᵗ≡x)
     ⊢ (󱁕.ftrp(‹stmts blk›⍭,□,✓)) (󱁕):
@@ -20,17 +20,17 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
 ⊢ rewrite_strs(󱁕):
      󰤱 normalize newlines and stuff from literals so we get the same string output
      󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
-    󱁕.ftrp(‹str_spec_char›, 󱁕↦map_special(+󱁕,󱁕))
-    󱁕.ftrp(‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys_guts str_tsub_guts str_timp_guts str_nsub1_guts str_nsub2_guts str_escape›⍭,
-        󱁕↦󱁕.set(t=‹str›),✓)
-    󱁕.ftrp(‹str›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)
-    󱁕.ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)
-    󱁕.ftrp(‹str›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
+    str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys_guts str_tsub_guts str_timp_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
+    󱁕.ftrp(‹str_spec_char›, 󱁕↦map_special(+󱁕,󱁕))                      ␛
+     .ftrp(str_types, 󱁕↦󱁕.set(t=‹str›),✓)                             ␛
+     .ftrp(‹str›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                     ␛
+     .ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)␛
+     .ftrp(‹str›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
 ⊢ rewrite_numbers(󱁕):
-    󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))
-    󱁕.ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)
-    󱁕.ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)
-    󱁕.ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
+    󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))␛
+     .ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)                                                      ␛
+     .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
+     .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
 
 ⊢ rewrite_ternary(󱁕):
     is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  ∧ 󱁕🃌≡1
@@ -182,8 +182,8 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
 
 part_ats = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ.copy(t=⟞ᵗ﹕􍨄)ᑀᵗ,⟞ᐸ)ᐸ
 ⊢ rewrite_ugex(󱁕):
-    󱁕.flat(󷺹ᵗ∈‹ugx_and ugx_or›⍭∧⟞🃌≡1)
-    󱁕.ftrp(‹ugx_☾›,󷺹.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(⟞🃌≤1⭜ᐦ⭝+⟞₁)]),✓)
+    󱁕.flat(󷺹ᵗ∈‹ugx_and ugx_or›⍭∧⟞🃌≡1)␛
+     .ftrp(‹ugx_☾›,󷺹.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(⟞🃌≤1⭜ᐦ⭝+⟞₁)]),✓)
     ⊢ (󱁕.ftrp(‹ugx_paren ugx_brack›⍭,□,✓)) (󱁕):
         n,e = part_ats(󱁕)
         ¿n🃌>1: n=n.copy(c=[𝒩(‹ugx_and›,⠤n)])
@@ -193,21 +193,20 @@ part_ats = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ
                𝖺𝗎𝗍𝗈(e.get(‹mod›,ᐦ)ᑀ∧+⟞),
                c,n)
         ↪r
-    󱁕.ftrp(‹ugx_and ugx_or›⍭, 󱁕↦𝖳(𝖺𝗎𝗍𝗈(‹∧∨›􋑺􊫼􊮢􊬏ᵤₓ􋕞󰂼ᵣ􊬐),⠤󱁕), ✓)
-    󱁕.ftrp(‹ugx_x›,󱁕↦𝖼𝖺𝗅𝗅(‹UGX_CREATE›,⠤󱁕))
+    󱁕.ftrp(‹ugx_and ugx_or›⍭, 󱁕↦𝖳(𝖺𝗎𝗍𝗈(‹∧∨›􋑺􊫼􊮢􊬏ᵤₓ􋕞󰂼ᵣ􊬐),⠤󱁕), ✓)␛
+     .ftrp(‹ugx_x›,󱁕↦𝖼𝖺𝗅𝗅(‹UGX_CREATE›,⠤󱁕))
 
 ⊢ rewrite_ports(󱁕):
-    󱁕.ftrp(‹str_timp_guts›,󷺹₀.set(t=⟞₀ᵗ.rstrip(𝘀))►⟞,✓)
-    󱁕.ftrp(‹str_timp›,󱁕↦𝖼𝖺𝗅𝗅(‹__þIMPORT__›,󱁕₀,𝖦),✓)
     ⊢ (󱁕.ftrp(‹import›,□,✓)) (󱁕):
-        ¿󱁕🃌<2: ↪󱁕
-        󱁕₁ᶜᐖ+⟞􍨄≠␛@⭜⟞⭝⟞🃌≡2 ⭜⟞₁≔𝖼𝖺𝗅𝗅(𝗂(𝗆,𝗊𝗏(‹__þGET_GLOB_MODNAME__›)))→►⟞.set(t=𝘀)⭝ ␛
-                           ⟞₀≔𝖼𝖺𝗅𝗅(𝗂(𝗆,𝗊𝗏(‹__þSET_GLOB_MODNAME__›)))ᐸ
-        ↪𝗂(𝖳(𝖽(󱁕₀),
-             ⠤󱁕₁ᶜᐵ₀ᵗ≡␛∘⭜⟞                                  ⭝ ␛
-             ⟞🃌≡1∧+⟞≡␛*⭜𝖼𝖺𝗅𝗅(‹__þADDGLOBALS_CLEAN__›,𝗆,𝖦)⭝ ␛
-                        𝗑(𝗏(⟞₀ ₀)🟑fix🟑,𝗈𝗉(␛≔),
-                          ⟞🃌≡2∧⟞ᵗ≡𝘀 ⭜⟞₁⭝ 𝗂(𝗆,𝗊𝗏(⟞􍨄 ₀) 🟑ᣆ􍪵􊿥􊾾􋁤􋂝􋇣 𝗊𝗏🟑))ᐸ,
+        flags,imp,vars,⠤E = 󱁕  󰤱 E
+        import = 𝖼𝖺𝗅𝗅(‹__þIMPORT__›,imp,𝖦,𝖺𝗎𝗍𝗈(+flags)🟑󰤱 pos🟑)
+        ¿vars 󷺥 E: ↪󱁕
+        varsᐖ+⟞􍨄≠␛@⭜⟞⭝⟞🃌≡2 ⭜⟞₁≔𝖼𝖺𝗅𝗅(𝗂(𝗆,𝗊𝗏(‹__þGET_GLOB_MODNAME__›)))→►⟞.set(t=𝘀)⭝ ␛
+                            ⟞₀≔𝖼𝖺𝗅𝗅(𝗂(𝗆,𝗊𝗏(‹__þSET_GLOB_MODNAME__›)))ᐸ
+        ↪𝗂(𝖳(𝖽(import),
+             ⠤varsᐵ₀ᵗ≡␛∘⭜⟞                                  ⭝ ␛
+              ⟞🃌≡1∧+⟞≡␛*⭜𝖼𝖺𝗅𝗅(‹__þADDGLOBALS_CLEAN__›,𝗆,𝖦)⭝ ␛
+                         𝗑(𝗏(⟞₀ ₀),𝗈𝗉(␛≔),⟞🃌≡2∧⟞ᵗ≡𝘀 ⭜⟞₁⭝ 𝗂(𝗆,𝗊𝗏(⟞􍨄 ₀)))ᐸ,
              𝗉),
            𝒩(‹neg_num›,𝔗(␛󷰾)))
     󱁕.ftrp(‹export›, 󱁕↦𝖼𝖺𝗅𝗅(‹__þADD_EXPORTS__›,𝖦,⠤󱁕₀ᶜᐖ𝖳(𝗊𝗏(⟞₀),⟞􍨄)ᐸ), ✓)

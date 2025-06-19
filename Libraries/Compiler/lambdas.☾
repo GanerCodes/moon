@@ -71,7 +71,7 @@
         ✗⨳
 
 ⊢ rewrite_lambs(󱁕):
-    󱁕.ftrp(‹whiskers󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, format_whiskers, ✓)
-    󱁕.ftrp(‹lamb_h_preset󷺗󷺗›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᐖ𝗏(⟞󱖔􋄥󱁕₀))󱖔􋄥󱁕₀, ✓)
-    󱁕.ftrp(‹lamb_h_implicit›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝗏(󱁕₀)), ✓)
-    󱁕.ftrp(‹lamb󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, λ_add_vk, ✓)
+    󱁕.ftrp(‹whiskers󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, format_whiskers, ✓)                                                ␛
+     .ftrp(‹lamb_h_preset󷺗󷺗›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›󷸹⭠0⤉⭠󷰾+‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›󰑅ᔨ⭠+󱁕₀→ᐖ𝗏(⟞󱖔􋄥󱁕₀))󱖔􋄥󱁕₀, ✓)␛
+     .ftrp(‹lamb_h_implicit›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝗏(󱁕₀)), ✓)                                               ␛
+     .ftrp(‹lamb󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, λ_add_vk, ✓)

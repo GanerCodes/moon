@@ -6,17 +6,17 @@
 ⨡ ast_to_py ⭸ *
 ⨡ tree      ⭸ *
 
-IDENT = ␛ι
-BASE  = ‹/home/ganer/Projects/Moon_BETA›𝐩
-TMP   = mkd(‹/tmp/⟦IDENT⟧›)
+BASE, TMP = moon_dir, mkd(TMPDIR / __file__  sha)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
 
-header_com = BASE/‹Header›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Header/builtins›)󷹎
+header_com = BASE/‹Builtins›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Builtins/builtins›)󷹎
 pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
-                  moon_dir = ⟦PEV(␛𝐩)⟧(⟦BASE ᔐ repr⟧)›
+                  moon_dir = ⟦PEV(␛𝐩)⟧(__file__).parent›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
-moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py.𝔠⭜cₕ⭝cₕ≔to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+moon_to_py.𝔠 = {}
+
 ⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
     ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
@@ -26,26 +26,35 @@ moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹r
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
 
-decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦repr(𝚙 ᔐ)⟧)).parent𝗻⟦𝚌⟧›
+decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent𝗻⟦𝚌⟧›
 ⊢ compile_code(𝚌,𝚙=□): ¿𝚙≅✓: 𝚌,𝚙=𝚌 ,𝚌
                        𝘤=moon_to_py(𝚌)
                        ¿𝚙≇□: 𝘤󷸊decorate_code(⬤,𝚙󷸊𝐩)
                        ↪𝘤
 compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Compiled ⟦⟞ ᔐ󱖔ᵈᵒᵗʳⁱᵐ25⟧ ⟦𝗻󰛔􀲟␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧ ⭢ ⟦𝗻󰛔􍺠␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧›☾ᐸ⭢⨝𝗻
 
+⊢ refresh_cached_imports: TP_CACHE.clear
+                          reimps = ⍁
+                          ∀k,v⬠[⠤__þIMPORTS__]¿v.hardcoded∨v.name≡‹Compiler›:
+                              ¿v.__file__≕f⭢.is_file: reimps.append(f)
+                              __þIMPORTS__.pop(k)
+                          reimps󷺻(sha(⟞ ≕c,{},{}),c moon_to_py)◄‹Transpiled ⟦⟞⟧›☾ᐸ␛
+                                ꟿ󰲣moon_to_py.𝔠ₓ≔y
+
 ⊢ generate_bootstrap(dest=‹/tmp/bootstrap.py›𝐩):
     _,ƒ = PL_FORK(compile_code,__file__,✓)
-    pyc = ‹⟦pathlib_import⟧
+    pyc = ‹#!/bin/python
+           ⟦pathlib_import⟧
            ⟦header_com compile_files⟧
            ⟦dump_cached_imports⟧
            ⟦ƒ⟧›
     ¿dest: (dest,pyc)
     ↪pyc
 
-⊢ update_importer: TP_CACHE.clear
-                   ∀k,v⬠[⠤__þIMPORTS__]¿v.hardcoded∨v.name≡‹Compiler›: __þIMPORTS__.pop(k)
-                   ⨡ Compiler
-                   TRANSPILE_REF(moon_to_py)
+⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): refresh_cached_imports
+                                  ⨡ Compiler
+                                  TRANSPILE_REF(moon_to_py)
+                                  generate_bootstrap(⠤𝔸,⠶𝕂)
 
 ⊢ moon_cli: ⦃import traceback,readline⦄
             ns = globals()
@@ -57,8 +66,8 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                ¡         : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
                            𝘤 = compile_code(𝚌)
                            𝘤 VEP __highlighter__ ⭢ ☾
-                             󱠨(𝘤,ns=ns,native=✓,ƒ=eval,ret=✓)☾
-                           ¡:               󱠨(𝘤,ns=ns,native=✓,ƒ=exec,ret=✓)
+                             󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣eval(x,y,y),ret=✓)☾
+                           ¡:               󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣exec(x,y,y),ret=✓)
                               ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):
@@ -75,8 +84,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
          ¿␛e∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ
          ⸘␛d∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ
          ⸘␛b∈m: generate_bootstrap(𝖠₀𝐩)
-         ⸘␛B∈m: update_importer
-                generate_bootstrap(𝖠₀𝐩)
+         ⸘␛B∈m: generate_bootstrap_live(𝖠₀𝐩)
          ⸘␛o∈m: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
          ⸘␛O∈m: (𝖠􍨄,compile_files(header_com)+←𝖠﹕􍨄ᴍƒ○⭢⟕𝗻)
          ⸘␛r∈m: ƒ(𝖠⨝𝘀) ⭢ exec
@@ -87,7 +95,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
     ¡  : moon_cli
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
-  transpiler_cli,moon_cli,update_importer
+  transpiler_cli,moon_cli,refresh_cached_imports
 
 TRANSPILE_REF(moon_to_py)
 

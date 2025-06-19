@@ -1,0 +1,50 @@
+styf = moon_dir/‹Builtins/Data/style.json›
+styd = styf  𝔍󰄟 ℵ
+
+⊢ (cache) sty(s,bg=0,def=‹bec›):
+    ∀k,v⬠styd: ¿s∉k ∨ ‹color›∉v: ↺
+               ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
+    ↪termclr(s,def,bg)
+__highlighter__ = ⥌l,b=✗,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
+
+⊢ highlight_tester(): ∀stdin.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
+
+🟑
+⊢ __error_printer__(ε):
+    ℭ = traceback.linecache.CPY_CACHE
+    ə = ε.__traceback__
+    TB,i = [],0
+    ∀i󷸊+1:
+        ¿i≥500: ‹Too long a traceback, stopping at ⟦i⟧ frames!›☾
+                ⇥
+        g = ə.tb_frame.f_globals
+        ∀_⬠␛_: ¿‹__file__›∈g:
+                   f = ᔐ(g􊬏􋕞􋕞ᵢₗₑ􋕞􋕞􊬐)
+                   ¿f∈ℭ            : F = ℭ
+                   ⸘𝐩(f)≕f⭢.exists: F = (f)
+                   ¡               : ‹Cannot find "⟦f⟧"??›☾ ; ⇥
+               ¡: ‹Traceback with no file? ⟦traceback.format_exception(ε) ⟕⟧›☾
+                  ⇥
+               
+               F = F.split(𝗻)
+               pps = ⠤ə.tb_frame.f_code.co_positions,
+               s, e, a, b = pps􌿰􋕜ₜ􋕞ₗₐₛₜᵢ􊲗₂
+               ¿a≅□: TB 󷸊+ [(f, s, ᐦ, "Missing location!", ᐦ)]
+               l = 𝗻.join(Fₛ₋₁﹕ₑ).encode(‹utf-8›)
+               A,B,C = l﹕ₐ⋄lₐ﹕⋄l﹕ ᴍ 󰲡x.decode(‹utf-8›, errors=‹replace›)
+               TB 󷸊+ [(f,s,__highlighter__(A),
+                           __highlighter__(B,✓),
+                           __highlighter__(C))]
+        ¿ə.tb_next≕ə≅□: ⇥
+    CLR1, CLR2 = ‹faf›, ‹f55›
+    mark = termclr(␛⮡, CLR1)
+    maxl, prevf = TB⤉⁰􌾕􋋎󰲡x₁, □
+    zf = ᔐ(maxl₁)🃌
+    ∀f,s,A,B,C⬠TB: ¿f≠prevf: termclr(f, CLR1)☾
+                   ‹⟦mark⟧ ⟦ᔐ(s).zfill(zf)⟧𝘁⟦A⟧⟦B⟧⟦C⟧›☾
+                   prevf = f
+    ‹⟦termclr(‹Error:›, CLR2)⟧ ⟦__highlighter__(ε)⟧›☾
+
+sys.excepthook = 󰲥__error_printer__(y)
+threading.excepthook = sys.excepthook
+🟑
