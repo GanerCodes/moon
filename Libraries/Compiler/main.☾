@@ -1,6 +1,5 @@
 ⦃from sys import stdin as ⦃ℑ𝔑⦄⦄
 ⦃from time import time as ⦃𝓉⦄⦄
-⦃from subprocess import Popen⦄
 ⨡ text_format
 ⨡ to_ast    ⭸ *
 ⨡ ast_to_py ⭸ *
@@ -41,14 +40,16 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                           reimps󷺻(sha(⟞ ≕c,{},{}),c moon_to_py)◄‹Transpiled ⟦⟞⟧›☾ᐸ␛
                                 ꟿ󰲣moon_to_py.𝔠ₓ≔y
 
-⊢ generate_bootstrap(dest=‹/tmp/bootstrap.py›𝐩):
+⊢ generate_bootstrap(dest=‹/tmp/☾.py›𝐩):
     _,ƒ = PL_FORK(compile_code,__file__,✓)
     pyc = ‹#!/bin/python
            ⟦pathlib_import⟧
            ⟦header_com compile_files⟧
            ⟦dump_cached_imports⟧
            ⟦ƒ⟧›
-    ¿dest: (dest,pyc)
+    ¿dest: (dest󷸊𝐩,pyc)
+           os.chmod(dest,0o775)
+            chmod(dest,‹+x›)  󰤱􊽨
     ↪pyc
 
 ⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): refresh_cached_imports
@@ -71,28 +72,32 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                               ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
-    show_docs = 𝚲‹Usage: e <str_to_encode>
-                         d <str_to_decode>
-                         b <boostrap_dest>
-                         B <boostrap_dest> (updates compiler)
-                         o <file_in> <file_out?stdout> (header ✗)
-                         O <file_in> <file_out?stdout> (header ✓)
-                         r <code_to_run>               (header ✗)
-                         R <code_to_run>               (header ✓)›☾
-    ¿𝖠🃌: m,⠤𝖠 = 𝖠
-         ƒ = ␛a∈m ⭜moon_to_py_debug⭝ moon_to_py
-         ¿␛e∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾ᐸ
-         ⸘␛d∈m: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾ᐸ
-         ⸘␛b∈m: generate_bootstrap(𝖠₀𝐩)
-         ⸘␛B∈m: generate_bootstrap_live(𝖠₀𝐩)
-         ⸘␛o∈m: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
-         ⸘␛O∈m: (𝖠􍨄,compile_files(header_com)+←𝖠﹕􍨄ᴍƒ○⭢⟕𝗻)
-         ⸘␛r∈m: ƒ(𝖠⨝𝘀) ⭢ exec
-         ⸘␛R∈m: pathlib_import+𝗻+compile_files(header_com)+𝗻+ƒ(𝖠⨝𝘀) ⭢ exec(⬤,{})
-         ⸘␛D∈m: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
-         ⸘␛h∈m: show_docs
-         ¡    : ‹Invalid mode(s): ⟦m⟧›☾ ► show_docs
-    ¡  : moon_cli
+    show_docs = 𝚲‹Usage: ∅                  (cli mode)
+                         <file_path>        (run ☾ file)
+                         -h                 (show this)
+                         -c <code_to_run>   (eval mode)
+                         -C <code_to_run>   (exec mode)
+                         -b <boostrap_dest>
+                         -B <boostrap_dest> (updates compiler)
+                         -e <str_to_encode>
+                         -d <str_to_decode>
+                         -o <file_in> <file_out?stdout>›☾
+    𝖠,f=[⠤𝖠],∅
+    ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪ ← 0 𝖠.pop ⭢₁﹕ ➡►⭠ 𝖺≠2␛-:□
+    ƒ = ␛a∈f ⭜moon_to_py_debug⭝ moon_to_py
+    ¿f󷺥𝖠 : moon_cli
+    ⸘f󷺥𝖠🃌≠1: ↪󱠨(𝖠₀ ,ns={__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
+    ⸘␛e∈f: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾
+    ⸘␛d∈f: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾
+    ⸘␛D∈f: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
+    ⸘␛c∈f: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
+    ⸘␛C∈f: 𝖠⨝𝘀 ⭢ ƒ ⭢ exec
+    ⸘␛b∈f: 𝖠₀𝐩 generate_bootstrap
+    ⸘␛B∈f: 𝖠₀𝐩 generate_bootstrap_live
+    ⸘␛o∈f: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
+    ⸘␛h∈f: show_docs
+    ¡    : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
+
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
   transpiler_cli,moon_cli,refresh_cached_imports
