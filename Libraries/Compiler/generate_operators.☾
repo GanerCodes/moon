@@ -1,7 +1,6 @@
-OP_FILE = __dir__/‹operators›
-
 ⨡ peggle2
-󱀘𝑙𝑙(𝑙):□
+⨡ cache
+OP_FILE = __dir__/‹operators›
 
 ords = ‹0󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱󷰾›
 clrs = ‹0 e3b f77 c66 b56 6cf b9d c08 0f5 1e6 2d7 3c8 4b9 85f 67f eae d8d c6c b4d ff5 ce3 bd2 ad1 fa2 0›⍭
@@ -12,7 +11,7 @@ dummy_ords = ⦉0,ords🃌-1⦊
  λ: works as a chainable comparison function
 
 minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○peggle2("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧')∨󰆴'⁅'⨝󰆴'⁆'∨~'[^⟦⟧⁅⁆]')*")
-⊢ parse_operator_file(contents):
+⊢ (fcache) parse_operator_file(contents):
     p = ⟨⟨󷺹󷹕󷺹≠𝘀ᐸ🃌≡0⍮(¬○⬄ 󷸴 󷺹󷹕󷺹≠𝘀ᐸ🃌→󷹗 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
     g_order  = ᐳords󰑅ᔨ󷺽
     g_symbs  = 󷺹𝌂󷺹∈‹αλςν›󷸔ᐸ󰸷􊾖2 → 󷺺⋄󷺽

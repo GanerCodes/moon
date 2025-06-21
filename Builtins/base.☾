@@ -1,7 +1,8 @@
 ⦃import os,sys,inspect,traceback,threading,errno,struct⦄
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
-⦃from sys import stdin,stdout,stderr,setrecursionlimit,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
+⦃from sys import stdin as ⦃ℑ𝔑⦄,stdout as ⦃𝔒𝔘𝔗⦄,stderr as ⦃𝔈ℜℜ⦄,argv as ⦃𝔸⦄⦄
+⦃from sys import exit,setrecursionlimit,path as ⦃syspath⦄⦄
 ⦃from math import *⦄
 ⦃from site import getsitepackages⦄
 ⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
@@ -198,7 +199,7 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗
              ⦃with ⦃𝔸₀⦄ as ⦃𝐚⦄:return ⦃𝐀.append(𝐚) ∨ ⓦ(⠤𝔸₁﹕,ƒ,𝐀=𝐀)⦄⦄
 
 ⊢ ☾´(⠤𝔸,❗=✗,𝚙=𝘀,𝚜=𝗻):
-    (❗ ⭜stderr⭝ stdout ➡≕ƒ).write(𝔸⨝ᔐ(𝚙) + ᔐ(𝚜))
+    (❗ ⭜𝔈ℜℜ⭝ 𝔒𝔘𝔗 ➡≕ƒ).write(𝔸⨝ᔐ(𝚙) + ᔐ(𝚜))
     ƒ.flush()
     ¿𝔸:↪𝔸₀
 

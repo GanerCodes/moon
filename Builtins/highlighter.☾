@@ -7,7 +7,7 @@ styd = styf  𝔍󰄟 ℵ
     ↪termclr(s,def,bg)
 __highlighter__ = ⥌l,b=✗,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
 
-⊢ highlight_tester: ∀stdin.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
+⊢ highlight_tester: ∀ℑ𝔑.readline≕l: l.rstrip(𝗻) __highlighter__ ☾
 
 🟑
 ⊢ __error_printer__(ε):

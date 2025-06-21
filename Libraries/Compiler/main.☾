@@ -1,11 +1,9 @@
-⦃from sys import stdin as ⦃ℑ𝔑⦄⦄
-⦃from time import time as ⦃𝓉⦄⦄
 ⨡ text_format
 ⨡ to_ast    ⭸ *
 ⨡ ast_to_py ⭸ *
 ⨡ tree      ⭸ *
 
-BASE, TMP = moon_dir, mkd(TMPDIR / __file__  sha)
+BASE,TMP = moon_dir,mkd(TMPDIR/__file__  sha)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
 
 header_com = BASE/‹Builtins›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Builtins/builtins›)󷹎
@@ -40,7 +38,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                           reimps󷺻(sha(⟞ ≕c,{},{}),c moon_to_py)◄‹Transpiled ⟦⟞⟧›☾ᐸ␛
                                 ꟿ󰲣moon_to_py.𝔠ₓ≔y
 
-⊢ generate_bootstrap(dest=‹/tmp/☾.py›𝐩):
+⊢ generate_bootstrap(dest=TMP/‹☾.py›):
     _,ƒ = PL_FORK(compile_code,__file__,✓)
     pyc = ‹#!/bin/python
            ⟦pathlib_import⟧
@@ -63,8 +61,6 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
 ⊢ moon_cli: ⦃import traceback,readline⦄
             HIST_FILE = TMPDIR/‹☾_cli_history› ⭢ mkf
             HIST_FILE ᔐ readline.read_history_file
-             ns = globals()
-             ns['globals'] = 𝚲ns
             pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=✓)
             ∀: 𝚌 = pfx input
                ¿𝚌¬: ‹God is good!›☾

@@ -5,7 +5,7 @@
 
 fix = ␛﹕󰛔␛ː
 ⊢ ☾´(⠤𝔸,s=𝗻,sep=𝘀,❗=✗,⠶𝕂):
-    ❗ ⭜stderr⭝ stdout ➡≕ƒ → .write(fix(𝔸⨝ᔐ(sep) + ᔐ(s)))
+    ❗ ⭜𝔈ℜℜ⭝ 𝔒𝔘𝔗 ➡≕ƒ → .write(fix(𝔸⨝ᔐ(sep) + ᔐ(s)))
     ƒ.flush
     ¿𝔸: ↪𝔸₀
 𝑩 = 𝚲BOX(stackr(⠤𝔸))

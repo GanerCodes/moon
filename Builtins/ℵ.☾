@@ -54,6 +54,9 @@
      __repr__ = 𝕊↦‹⟦𝕊􋇛⟧()›
      __bool__ = 𝚲✗
 
+󱀘𝑙𝑙(𝑙):□
+sys.modules[‹𝑙𝑙› PEV] = 𝑙𝑙  stupid hack 󰤱 figure out how to avoid this
+
 sys.modules[␛ℵ PEV] = ℵ
 sys.modules[␛ℶ PEV] = ℶ
 
