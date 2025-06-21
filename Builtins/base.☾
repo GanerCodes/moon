@@ -1,4 +1,4 @@
-⦃import os,sys,inspect,traceback,threading,errno⦄
+⦃import os,sys,inspect,traceback,threading,errno,struct⦄
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
 ⦃from sys import stdin,stdout,stderr,setrecursionlimit,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄
@@ -17,6 +17,7 @@
 ⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
 ⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
 ⦃from base64 import b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
+⦃from multiprocessing import shared_memory⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow

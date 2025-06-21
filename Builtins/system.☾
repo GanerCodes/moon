@@ -8,11 +8,17 @@
                   ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ↪□
                   os.waitpid(p,0)
 ⊢ PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
-⊢ PL_FORK  (ƒ,⠤𝔸,⠶𝕂): f = tmpf
+ ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
+ f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
+⊢ PL_FORK  (ƒ,⠤𝔸,⠶𝕂): 𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)  f = tmpf
+                      𝔲 = 󷺹[4:4+struct.unpack(␛I,⟞﹕₄)₀]
                       p = os.fork
-                      ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
-                      f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
+                      ¿p: ↪p, 𝚲p PL_WAIT_PID ► 𝔲(𝗆.buf) pload ◄ (𝗆.close►𝗆.unlink)
+                      v = ƒ(⠤𝔸,⠶𝕂) pdump
+                      𝗆.buf﹕₄ = struct.pack(␛I,v🃌)
+                      𝗆.buf₄﹕₄₊ᵥ􊹳 = v
                       0 os._exit
+                      
 ⊢ PL_SLEEP(x): ⦃from time import sleep⦄
                x sleep
 ⊢ PL_TIME: ⦃from time import time⦄
