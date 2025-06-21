@@ -1,24 +1,25 @@
-⊢ PL_SLEEP(x): ⦃from time import sleep⦄
-               x sleep
-⊢ PL_TIME: ⦃from time import time⦄
-           ↪time
 ⊢ PL_CPU_COUNT: ⦃import multiprocessing⦄
                 ↪multiprocessing.cpu_count
 ⊢ PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
                       atom = []
                       T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
                       ↪𝚲t.join ► atom₀
-⊢ PL_FORK  (ƒ,⠤𝔸,⠶𝕂): f = ‹/tmp/⟦󱅏⭢ᔐ⭢₂﹕⟧›𝐩
+⊢ PL_WAIT_PID(p):               os.kill(p,0)
+                  ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ↪□
+                  os.waitpid(p,0)
+⊢ PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
+⊢ PL_FORK  (ƒ,⠤𝔸,⠶𝕂): f = tmpf
                       p = os.fork
-                      ¿p: ↪p, 𝚲os.waitpid(p,0) ► f ᵇ pload ◄ f os.remove
+                      ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
                       f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
                       0 os._exit
-⊢ PL_TEXT_COPY(x):            ⦃from clipboard import copy⦄
-                               ↪copy
-                   ¡Exception: ‹WARNING: Failed to copy.›☾
-⊢ PL_TEXT_PASTE  :            ⦃from clipboard import paste⦄
-                               ↪paste
-                   ¡Exception: ‹WARNING: Failed to paste.›☾
-
-⊢ PL_CHECK_PID(p):            ↪os.kill(p,0)►✓  󰤱 windows
-                   ¡Exception: ↪✗
+⊢ PL_SLEEP(x): ⦃from time import sleep⦄
+               x sleep
+⊢ PL_TIME: ⦃from time import time⦄
+           ↪time
+⊢ PL_TEXT_COPY(x):    ⦃from clipboard import copy⦄
+                       ↪copy
+                   ¡𝑒: ‹WARNING: Failed to copy.›☾
+⊢ PL_TEXT_PASTE  :    ⦃from clipboard import paste⦄
+                       ↪paste
+                   ¡𝑒: ‹WARNING: Failed to paste.›☾

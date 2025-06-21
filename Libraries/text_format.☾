@@ -89,21 +89,21 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 ⭷ rm_esc,lines,padl,padc,padr,pads,stackr,box,BOX,linenum,linewnum,dotrim,show_code,␛
   title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
-⊢ test_text_format(): tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
-                      linewrap(linenum(‹egg salad number twelve fortnite
-                                        the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
-                      a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-                      b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-                      c = box(‹5⭥ᐵ²›)☾
-                      d = BOX(‹5⭥ᐵ²›)☾
-                      stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
-                      padl(‹egg›,11,␛─)☾
-                      padl(‹egg›,11,𝘀)☾
-                      padc(‹egg›,11,𝘀)☾
-                      padc(‹egg›,11,␛─)☾
-                      padc(‹lul›,10,␛─)☾
-                      padc(‹lads𝗻x›,10,␛─)☾
-                      padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
-                      padc(‹egg›,11,𝘀)☾
-                      padr(‹egg›,11,𝘀)☾
-                      padr(‹egg›,11,␛─)☾
+⊢ test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
+                    linewrap(linenum(‹egg salad number twelve fortnite
+                                      the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
+                    a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                    b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                    c = box(‹5⭥ᐵ²›)☾
+                    d = BOX(‹5⭥ᐵ²›)☾
+                    stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
+                    padl(‹egg›,11,␛─)☾
+                    padl(‹egg›,11,𝘀)☾
+                    padc(‹egg›,11,𝘀)☾
+                    padc(‹egg›,11,␛─)☾
+                    padc(‹lul›,10,␛─)☾
+                    padc(‹lads𝗻x›,10,␛─)☾
+                    padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
+                    padc(‹egg›,11,𝘀)☾
+                    padr(‹egg›,11,𝘀)☾
+                    padr(‹egg›,11,␛─)☾

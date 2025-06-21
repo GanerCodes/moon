@@ -7,8 +7,8 @@
 
 ⨡ Ń
 ⨡ text_format
- ⨡ cache
-fcache = 𝚲ƒ↦ƒ  󰻾􋒍
+⨡ cache
+fcache_ = 𝚲ƒ↦ƒ  󰻾􋒍
 
    ⦃import regex as ⦃re⦄⦄
 ¡𝑒: ⦃import re    as ⦃re⦄⦄
@@ -25,7 +25,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
           ‹⟦s⟧ took ⟦time-𝓽_⟧s›☾
           𝓽_ = □
 
-⊢ (fcache) gram_convert(󱁕):
+⊢ (fcache_) gram_convert(󱁕):
     name_remaps = ℵ(‹elm_o elm_a assign_cln group_inner group›⍭󱑼‹∨∧←∧∧›)
     TT = 󱁕↦(󱁕ᵗ,⠤󱁕ᵗ≡␛ᔐ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᵗ≡␛~ ⭜(󱁕ᵉ ʳ,)⭝ 󱁕ᵗ≡␛← ⭜(󱁕₀ᵗ,⠤󱁕₁﹕ᴍTT)⭝ 󱁕ᴍTT)
     escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)
@@ -243,7 +243,7 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 ⊢ parse_to_node(󱁕): ⊢ƒ(x,⠤𝔸): ↪Ń(x,⠤(ƒ(⠤isinstance(x,𝑡) ⭜x⭝ (x,))∀x⬠𝔸))
                     ↪ƒ(⠤󱁕)
 
-⊢ (fcache) peggle2_call(R,content,rule=‹main›,DEBUG=✗,chop=✓,⠶𝓚):
+⊢ (fcache_) peggle2_call(R,content,rule=‹main›,DEBUG=✗,chop=✓,⠶𝓚):
     c,r = content,rule
     root,rule = Rᵀ􋕟ʳᵒᵒᵗ,Rᵣ
     
@@ -257,9 +257,9 @@ show_cache_table = ⥌𝑅,ℭ↦ℭ↨ꟿ⥌i,v↦ℵ(v)󰒼⭢ꟿ󰲣☾‹
 
 󱀘 peggle2:
     __slots__ = ‹rules R›⍭
-    ⊢ __init__(𝕊,g):
-        ¿gᐹᔐ: g = FROM_GRAM(g)
-        𝕊ʳᵘˡᵉˢ, 𝕊ᴿ = gᐹpeggle2 ⭜gʳᵘˡᵉˢ⋄gᴿ⭝ g⋄make_rules(g)
+    ⊢ __init__(𝕊,g,𝔠=✓): ¿gᐹᔐ: g = FROM_GRAM(g)
+                         𝕊ʳᵘˡᵉˢ,𝕊ᴿ = gᐹpeggle2 ⭜gʳᵘˡᵉˢ⋄gᴿ⭝ g⋄make_rules(g)
+                         
     ⊢ __repr__(𝕊): ↪‹⟦ᐹ𝕊→.__name__⟧[⟦𝕊ʳᵘˡᵉˢ🃌⟧ Rules, ⟦𝕊ᴿ ᵀ􋕟ʳᵒᵒᵗ🃌⟧ Normalized]›
     ⊢ __contains__(𝕊,x): ↪x∈𝕊ʳᵘˡᵉˢ
     ⊢ __or__(𝕊,h,allow_conflict=✗):
@@ -300,41 +300,41 @@ GRANDMA_RULES = ℵ({
     W          =␛~⋄𝐑₉
 })
 BOOTSTRAP = peggle2(GRANDMA_RULES)
-FROM_GRAM = 󰲡peggle2(gram_convert(BOOTSTRAP(x,‹statements›)))
+
+⊢ dump_peg(𝕊): ↪pdump((𝕊ʳᵘˡᵉˢ𝑑,𝕊ᴿ𝑑,𝕊ᴿ.getdef))
+⊢ load_peg(𝚢): 𝕊 = peggle2 peggle2.__new__
+               rules,R,d = 𝚢 pload
+               𝕊ʳᵘˡᵉˢ,𝕊ᴿ = rules ℵ,R ℵᵈ
+               ↪𝕊
+pcache = fcache(𝘦=dump_peg,𝘥=load_peg)
+ pcache = 󰲡x
+
+FROM_GRAM = 󰲡BOOTSTRAP(x,‹statements›) gram_convert peggle2󰅂 pcache
 
 ⭷ peggle2
 
-⊢ test_peggle2(): GRAM = 󰦥󰦥󰦥󰦥󰦥
-                  main    = 󰆴W? (entry 󰆴W?)*
-                  entry   = (
-                      ƨ(section=󰆴'[' wrd 󰆴']') 󰆴W?
-                      (pair = (
-                          (bruh:key = ⠶wrd) 󰆴(w? ↷ '=')
-                          (value = (wrd ∨ str)+) 󰆴W? ) )* )
-                  str     = ~‹"[^"]+"›
-                  wrd     = ~‹[-\w]+›
-                  w       = ~‹[ \t]+›
-                  W       = ~‹[ \t\n]+›
-                  󰦥󰦥󰦥󰦥󰦥
-                  CONTENT = 󰦥󰦥󰦥󰦥󰦥
-                  [section1]
-                  somekey = somevalue
-                  someotherkey=someothervalue
-                  [duawhdiawi]x=y
-                  somekey =                 somevalue
-                  someotherkey=✓□awhdapi
-                  󰦥󰦥󰦥󰦥󰦥
-                  
-                  RULE = ‹main›
-                  gram = peggle2(GRAM)☾
-                  󱁕 = gram(CONTENT,RULE)
-                  󱁕ᴾ
-
-🟑
-⊢ dump_peg(𝕊): ↪dumps((𝑑∘𝕊ʳᵘˡᵉˢ,𝑑∘𝕊ᴿ,𝕊ᴿ.getdef))
-⊢ load_peg(𝚢):
-    𝕊 = peggle2.__new__(peggle2)
-    rules, R, d = loads(𝚢)
-    𝕊ʳᵘˡᵉˢ, 𝕊ᴿ = ℵ(rules), ℵᵈ(R)
-    ↪𝕊
-pcache = fcache(𝘦=dump_peg, 𝘥=load_peg)
+⊢ test_peggle2: GRAM = 󰦥󰦥󰦥󰦥󰦥
+                main    = 󰆴W? (entry 󰆴W?)*
+                entry   = (
+                    ƨ(section=󰆴'[' wrd 󰆴']') 󰆴W?
+                    (pair = (
+                        (bruh:key = ⠶wrd) 󰆴(w? ↷ '=')
+                        (value = (wrd ∨ str)+) 󰆴W? ) )* )
+                str     = ~‹"[^"]+"›
+                wrd     = ~‹[-\w]+›
+                w       = ~‹[ \t]+›
+                W       = ~‹[ \t\n]+›
+                󰦥󰦥󰦥󰦥󰦥
+                CONTENT = 󰦥󰦥󰦥󰦥󰦥
+                [section1]
+                somekey = somevalue
+                someotherkey=someothervalue
+                [duawhdiawi]x=y
+                somekey =                 somevalue
+                someotherkey=✓□awhdapi
+                󰦥󰦥󰦥󰦥󰦥
+                
+                RULE = ‹main›
+                gram = peggle2(GRAM)☾
+                󱁕 = gram(CONTENT,RULE)
+                󱁕ᴾ

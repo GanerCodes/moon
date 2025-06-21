@@ -1,4 +1,4 @@
-⦃import os,sys,inspect,traceback,threading⦄
+⦃import os,sys,inspect,traceback,threading,errno⦄
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
 ⦃from sys import stdin,stdout,stderr,setrecursionlimit,path as ⦃syspath⦄,exit,argv as ⦃𝔸⦄⦄

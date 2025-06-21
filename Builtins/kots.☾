@@ -1,8 +1,8 @@
-TMPDIR = gettempdir 𝐩 / ‹tmp_☾›
-mkd  = ⥌f,e=✓,p=✓↦    𝐩(f)≕p         →.mkdir(exist_ok=e,parents=p) ► p
-mkf  = ⥌f,e=✓    ↦mkd(𝐩(f)≕p→.parent)→.touch(exist_ok=e          ) ► p
-tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIR/b/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
-tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIR/b/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
+TMPDIR = gettempdir 𝐩 / ‹☾_tmp›
+mkd  = ⥌f,e=✓,p=✓↦    f 𝐩≕p           →.mkdir(exist_ok=e,parents=p) ► p
+mkf  = ⥌f,e=✓    ↦mkd(f 𝐩≕p→.parent)►p→.touch(exist_ok=e          ) ► p
+tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIRᑀᣆᵇ⬤/bᐸ/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
+tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIRᑀᣆᵇ⬤/bᐸ/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
 
 󱀘 suppar2: __init__ = ⥌𝕊,ƒ↦ƒ≕𝕊􊽺 ► □
            __call__ = ⥌𝕊,⠤𝔸,⠶𝕂↦𝕊􊽺(⠤𝔸,⠶𝕂)

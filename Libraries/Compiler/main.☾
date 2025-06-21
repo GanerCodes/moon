@@ -53,23 +53,29 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
     ↪pyc
 
 ⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): refresh_cached_imports
+                                  ŧ𝼝(‹Refreshed cached imports!›,‹f0f›)☾
                                   ⨡ Compiler
+                                  ŧ𝼝(‹Re-imported compiler!›,‹f0f›)☾
                                   TRANSPILE_REF(moon_to_py)
                                   generate_bootstrap(⠤𝔸,⠶𝕂)
+                                  ŧ𝼝(‹Generated bootstrap!›,‹f0f›)☾
 
 ⊢ moon_cli: ⦃import traceback,readline⦄
+            HIST_FILE = TMPDIR/‹☾_cli_history› ⭢ mkf
+            HIST_FILE ᔐ readline.read_history_file
             ns = globals()
             ns['globals'] = 𝚲ns
             pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=✓)
             ∀: 𝚌 = pfx input
-               ¿𝚌¬       : ‹God is good!›☾
-               ⸘𝚌≡‹clear›: os.system(‹clear›)
-               ¡         : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
-                           𝘤 = 𝚌 compile_code
-                           𝘤 VEP __highlighter__  ☾
-                               󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣eval(x,y,y),ret=✓)☾
-                           ¡:  󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣exec(x,y,y),ret=✓)
-                              ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
+               ¿𝚌¬: ‹God is good!›☾
+               ¡  : readline.write_history_file(HIST_FILE)
+                    ¿𝚌≡‹clear›: os.system(‹clear›)
+                    ¡         : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
+                                𝘤 = 𝚌 compile_code
+                                𝘤 VEP __highlighter__  ☾
+                                    󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣eval(x,y,y),ret=✓)☾
+                                ¡:  󱠨(𝘤,ns=ns,native=✓,ƒ=󰲣exec(x,y,y),ret=✓)
+                                   ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
     show_docs = 𝚲‹Usage: ∅                  (cli mode)
@@ -97,7 +103,6 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
     ⸘␛o∈f: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
     ⸘␛h∈f: show_docs
     ¡    : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
-
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
   transpiler_cli,moon_cli,refresh_cached_imports
