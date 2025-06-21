@@ -17,11 +17,8 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
     ¿native¬: 𝚌 = moon_to_py_cached(𝚌)
     ¿get_code: ↪𝚌
     ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
-                  r=ƒ(𝚌,ns)
-                   ¿ret: ↪r
-    ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ‹Failed to exec!›☾
-                   ⦃raise ⦃ε⦄⦄
-    ↪ns
+    r=ƒ(𝚌,ns)
+    ↪ret ⭜r⭝ ns
 
 󱀘 Module(ℵ⭢ᐹ): ⊢ __init__(𝕊,name,ns,code=□,native_code=□,hardcoded=✗):
                     super().__init__(ns)
@@ -54,6 +51,7 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
                        ¡        : 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = TP_CACHEₙₐₜᵢᵥₑ
                        ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
                        __þIMPORTS__󰂘 = Module(name,ns,hardcoded=native≇□,⠶𝕂)
+                       sys.modulesₙₐₘₑ = __þIMPORTS__󰂘
         ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: __þIMPORTS__.pop(F,□)
                        ⦃raise ⦃ε⦄⦄
     mod = __þIMPORTS__󰂘

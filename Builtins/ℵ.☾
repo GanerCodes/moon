@@ -18,7 +18,7 @@
     __bool__ = 𝕊↦𝕊🃌>0
     __or__   = ⥌𝕊,x↦𝕊.copy()(x)
     __setattr__ = 𝑑.__setitem__
-    __getattr__ = __getitem__
+    __getattr__ =   __getitem__
     ⊢ __getstate__(𝕊): ¿𝕊.hasdef(): ↪𝑑(𝕊),𝕊.getdef()
                        ¡          : ↪𝑑(𝕊),
     ⊢ __setstate__(𝕊,s): 𝕊.__init__(s₀)
@@ -44,18 +44,18 @@
 󱀘 ℶ´(ℵ´):
     𝐶𝑛 = ␛ℶ
     __iter__ = 𝕊↦iter(𝕊.values())
-󱀘 _hwrap(𝑑):
-    ⊢ __init__(𝕊,𝑐): 𝕊􋇑,𝕊􋇛 = 𝑐,𝑐􋆷􋇛
-    __getitem__ = ⥌𝕊,x↦𝕊􋇑().setdef(x)
-    __setitem__ = ⥌𝕊,x,y↦(⒯≔𝕊􋇑()).__setitem__(x,y) →►← ⒯
-    __call__ = 𝕊↦𝕊􋇑(⠤𝔸,⠶𝕂)
-    __or__   = ⥌𝕊,x↦𝕊􋇑()|x
-    __pow__  = ⥌𝕊,x↦𝕊􋇑()⌃x
-    __repr__ = 𝕊↦‹⟦𝕊􋇛⟧()›
-    __bool__ = 𝚲✗
+ 󱀘 _hwrap(𝑑):
+     ⊢ __init__(𝕊,𝑐): 𝕊􋇑,𝕊􋇛 = 𝑐,𝑐􋆷􋇛
+     __getitem__ = ⥌𝕊,x↦𝕊􋇑().setdef(x)
+     __setitem__ = ⥌𝕊,x,y↦(⒯≔𝕊􋇑()).__setitem__(x,y) →►← ⒯
+     __call__ = 𝕊↦𝕊􋇑(⠤𝔸,⠶𝕂)
+     __or__   = ⥌𝕊,x↦𝕊􋇑()|x
+     __pow__  = ⥌𝕊,x↦𝕊􋇑()⌃x
+     __repr__ = 𝕊↦‹⟦𝕊􋇛⟧()›
+     __bool__ = 𝚲✗
 
- __OUT__[PEV(␛ℵ)] = ℵ
- __OUT__[PEV(␛ℶ)] = ℶ
+sys.modules[␛ℵ PEV] = ℵ
+sys.modules[␛ℶ PEV] = ℶ
 
-ℵ´ = _hwrap(ℵ´)
-ℶ´ = _hwrap(ℶ´)
+ ℵ´ = _hwrap(ℵ´)
+ ℶ´ = _hwrap(ℶ´)
