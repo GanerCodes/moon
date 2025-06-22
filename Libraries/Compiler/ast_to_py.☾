@@ -78,9 +78,9 @@ py_esc_str = ⨝○󷺺∈𝑠(‹𝗻𝘁\'"{}›) ⭜‹\u⟦⟞󷹝󷹜¹⁶�
      ⸘󱁕ᵗ≡‹native_imp_targ󷺗󷺗›: 󱁕.set(c=(󱁕ᶜᑀ🃌≡2⭜(⟞₀,𝗏(+⟞₁))⭝⟞)⨝𝔗(‹ as ›))
     ⸘󱁕ᵗ≡‹¡›: 󱁕₀ ₀ᶜ.append(𝔗(␛:))
                ¿󱁕🃌>1: ∀c⬠󱁕₁﹕: h,⠤C = (c󷸊₀)₀ᶜ
-                              cᶜ = [𝔗(‹except ›), C⭜C􍨄⭝𝔗(‹Exception›),
-                                    𝔗(‹ as ›), C🃌>1⭜C₀⭝𝗏(␛), 𝔗(␛:)]
-               ¡    : 󱁕ᶜ.append(𝔗(‹except:pass›))
+                              cᶜ = [𝔗(‹except ›), C∧C₀⭜C􍨄⭝𝗏(␛𝑒),
+                                    𝔗(‹ as󷺗󷺗󷺗 ›), C🃌>1⭜C₀⭝𝗏(␛), 𝔗(␛:)]
+               ¡    : 󱁕ᶜ.append(𝔗(‹except Exception:pass›))
     ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭: 󱁕₀.set(t=𝐌􋑺􊫼.get(+󱁕,+󱁕))
                                         󱁕ᶜ.insert(1,𝙨)
     ⸘󱁕ᵗ≡‹cln_pfx›: ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))

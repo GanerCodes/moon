@@ -4,8 +4,8 @@
                       atom = []
                       T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
                       ↪𝚲t.join ► atom₀
-⊢ PL_WAIT_PID(p):      os.kill(p,0)
-                  ¡ε=𝑒: ↪□
+⊢ PL_WAIT_PID(p):   os.kill(p,0)
+                  ¡: ↪□
                   os.waitpid(p,0)
 ⊢ PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
  ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
@@ -24,7 +24,7 @@
            ↪time
 ⊢ PL_TEXT_COPY(x):    ⦃from clipboard import copy⦄
                        ↪copy(x)
-                   ¡𝑒: ‹WARNING: Failed to copy.›☾
+                   ‹WARNING: Failed to copy.›☾
 ⊢ PL_TEXT_PASTE  :    ⦃from clipboard import paste⦄
                        ↪paste()
-                   ¡𝑒: ‹WARNING: Failed to paste.›☾
+                   ‹WARNING: Failed to paste.›☾
