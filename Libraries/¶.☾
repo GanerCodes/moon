@@ -13,7 +13,7 @@
                     lb=ub⹏r
                     ∀ub-lb>1: m=(ub+lb)⹏2
                               ¿c(m): ub=m
-                              ¡: lb=m
+                              ¡    : lb=m
                     ↪ub
 
 󱀘 ¶´:
@@ -39,6 +39,7 @@
         B=bin(d)₃﹕
         P,Q=1,(1-D)⹏4
         U,V,Qk=1,P,Q
+        
         ∀b⬠B: U, V, Qk = U⋅V%n, (V²-2Qk)%n, pow(Qk,2,n)
               ¿b≡␛1:
                   U, V, Qk = ((2∣𝓽≔P⋅U+V)⭜𝓽⭝𝓽+n)⹏2%n, ((2∣𝓽≔D⋅U+P⋅V)⭜𝓽⭝𝓽+n)⹏2%n, Qk⋅Q%n
@@ -66,7 +67,7 @@
          󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
         ¿s≅+´: ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
                ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
-        ¿s≅∣´: ↪𝑙(x¶󰻾)  󰤱 speedup
+        ¿s≅∣´: ↪[⠤x¶󰻾]  󰤱 speedup
         ¿s≅*´: x󷸊⫰  󰤱 speedup
                ¿x≡1: ↪⍁
                t=⍁
@@ -90,11 +91,7 @@
                         ¿xx≠1:
                            a󷸊+1
                            ↺
-                        ☾(‹a=›,a)
-                        ☾(‹b=a²%x=›,b)
-                        ☾(‹pp=›,pp)
-                        ☾(‹v=›,v)
-                        ☾ᐦ
+                        ☾(‹a=›,a)  ☾(‹b=a²%x=›,b)  ☾(‹pp=›,pp)  ☾(‹v=›,v)  ☾ᐦ
                        ass󷸊+ₐ
                        bs󷸊+
                        vs󷸊+ᵥ
@@ -108,7 +105,7 @@
                ✗⨳‹Dixon's alg failed and I don't feel like doing the 󰤱 big boi next step yet.›
         ¿s≅⊞´: ↪ℵ⁰(x¶󰻾ꟿ⁺󷺻🃌󷺽)  󰤱 speedup
         ¿s≅⨉´: ↪x¶􋁼ꟿ⁺󷺹⛶􍪹󷺿
-        ¿s≅􋑂: x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
+        ¿s≅􋑂 : ↪x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
         ¿s≅%´: t=󷰾²􋁒ˣ  󰤱 speedup
                ¿t<0: x󷸊⹏2
                ¿2∣x: ↪0

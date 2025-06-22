@@ -1,8 +1,5 @@
 ⫦⫣ (󷷾󷷿󷸀) ⟞⟝ ⨡⭸⭷ (ⵗ) 󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
 
-󰤱 bro whyt cant u assign vars in cli mode fr this is stupid
-
-Do actual caching
 Error handling:
   1. Format for sourcemaps
   2. Thing that takes errors and uses sourcemap to get relevent ranges
@@ -19,6 +16,7 @@ Error handling:
 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
 󰤱  replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
 󰤱  ∀a⬠bᐖ1:1  check for this type beat
+󰤱  split up files into smaller asts for better threading
 󰤱􊽨 deque for þSTK
 󰤱  "joe"󷹝¹⁶ should give the charcodes in the base iasdjia
       for 􋇙 maybe use a 𐞑 or somethingiadfsj

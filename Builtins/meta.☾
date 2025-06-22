@@ -13,10 +13,10 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
               ᑀ⨝␛,⟧})›
 ⊢ (cache) moon_to_py_cached(𝚌): TRANSPILE_REF⨳‹Cannot transpile without transpiler!›
                                 ↪𝚌⭢(+TRANSPILE_REF)
-⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,ƒ=EXEC_NATIVE,ret=✗):
+⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,ƒ=EXEC_NATIVE,ret=✗,init_ns=✓):
     ¿native¬: 𝚌 = moon_to_py_cached(𝚌)
     ¿get_code: ↪𝚌
-    ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
+    ¿init_ns: ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
     r=ƒ(𝚌,ns)
     ↪ret ⭜r⭝ ns
 

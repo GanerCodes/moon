@@ -56,10 +56,10 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         grp_blks(󱁕)
         rewrite_strs(󱁕)
         flatten_statments(󱁕)
-        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)                                ␛
-         .rm(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›) ␛
-         .ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)                      ␛
-         .ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)                                  ␛
+        󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)                                  ␛
+         .rm  (󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›) ␛
+         .ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)                        ␛
+         .ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)                                    ␛
          .ftrp(‹opC›,reduce_ς,✓)
         add_cmp_op_chains(󱁕)
         rewrite_ternary(󱁕)

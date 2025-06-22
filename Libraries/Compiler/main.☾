@@ -32,7 +32,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
 
 ⊢ refresh_cached_imports: TP_CACHE.clear
                           reimps = ⍁
-                          ∀k,v⬠[⠤__þIMPORTS__]¿v.hardcoded∨v.name≡‹Compiler›:
+                          ∀k,v⬠[⠤__þIMPORTS__]¿v≇□∧(v.hardcoded∨v.name≡‹Compiler›):
                               ¿v.__file__≕f⭢.is_file: reimps.append(f)
                               __þIMPORTS__.pop(k)
                           reimps󷺻(sha(⟞ ≕c,{},{}),c moon_to_py)◄‹Transpiled ⟦⟞⟧›☾ᐸ␛
@@ -62,6 +62,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
             HIST_FILE = TMPDIR/‹☾_cli_history› ⭢ mkf
             HIST_FILE ᔐ readline.read_history_file
             pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=✓)
+            ns = 󱠨(ᐦ)
             ∀: 𝚌 = pfx input
                ¿𝚌¬: ‹God is good!›☾
                ¡  : readline.write_history_file(HIST_FILE)
@@ -70,9 +71,9 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                                 𝘤 = 𝚌 compile_code
                                 𝘤 VEP __highlighter__ ☾
                                 s=✗
-                                 󱠨(𝘤,ns=globals(),native=✓,ƒ=eval🟑󰲣eval(x,globals())🟑,ret=✓)☾
+                                 󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗)☾
                                   ↺
-                                 󱠨(𝘤,ns=globals(),native=✓,ƒ=exec🟑󰲣exec(x,globals())🟑,ret=✓)
+                                 󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗)
                                 ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
