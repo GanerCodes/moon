@@ -85,8 +85,8 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         curry_ops(󱁕)
         rewrite_ugex(󱁕)
         󱁕.ftrp(␛∘,󱁕↦󱁕.set(c=[󱁕₀,⠤󱁕₁﹕ᐵᵗ≡␛𝑃∧⟞₀🃌≡1∧⟞₀ᵗ≡␛𝔸⭜⟞₀⭝⟞]),✓)  󰤱 dumb hack
-    ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: 𝑩𝑩(󱁕,‹Error converting to AST!›)
-                   ⦃raise ⦃ε⦄⦄
+    ¡ε=𝑒: 𝑩𝑩(󱁕,‹Error converting to AST!›)
+          ⦃raise ⦃ε⦄⦄
     ↪󱁕
 
 ⭷ to_ast

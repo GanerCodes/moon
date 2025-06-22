@@ -66,10 +66,7 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
         ¿vᵗ≡␛𝐿 : C.append(v)
         ⸘vᵗ≡␛𝑇 : C.append(𝗆𝖼𝖺𝗅(v))
         ⸘dot(v): C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)ᑀᵗ≡␛𝑣 ⭜𝗌𝗍𝗋(⟞)⭝ ⟞))
-        ⸘exp(v): 🟑vᶜ=C+vᶜ
-                 C.clear()
-                 C.append(v)🟑
-                 C.append(𝖾𝗑𝗉(𝚌.pop(0)))
+        ⸘exp(v): C.append(𝖾𝗑𝗉(𝚌.pop(0)))
         ¡      : adds(v)
     adds(□)
     󱁕ᶜ = R
@@ -81,8 +78,8 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
                               ⍈ 󰲡𝒩(‹applier›, ⠤𝼝(x))⟩ 󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), ✓)
     󱁕.ftrp(‹target_rhs›, 󱁕↦𝒩(‹applier›,⠤󱁕),✓)󱖔􋔡󱁕
     ⊢ 𝙁(𝚙,󱁕): ¿󱁕ᵗ≡‹mcal›: ↪𝒩(␛∘,𝚙,⠤󱁕₀)
-              ¿󱁕ᵗ≡‹𝐿󷺗󷺗󷺗›: ↪𝗂(𝚙,⠤󱁕)  󰤱 weird!
-              ¿󱁕ᵗ≡‹attr›: ↪𝖺(𝚙, 󱁕)
+              ¿󱁕ᵗ≡‹𝐿󷺗󷺗󷺗›: ↪𝗂(𝚙,⠤󱁕 )  󰤱 weird!
+              ¿󱁕ᵗ≡‹attr›: ↪𝖺(𝚙, 󱁕₀)
               ¿󱁕ᵗ≡‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
               𝑩𝑩(󱁕); ✗⨳‹Invalid element type found in target rhs!›
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)

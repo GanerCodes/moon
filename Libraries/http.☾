@@ -17,11 +17,11 @@ ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ ⭢ ⨝␛.
             
             𝐴 = 𝚖,𝚙,𝙷
             𝚌,𝙷,𝚋 = 200,ℵ,0 𝑦
-                                V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯=𝔯))
-            ¡⦃Exception as ⦃ε⦄⦄: ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
-                                 __error_printer__(ε)
-                                 ␛-⋅🃌t☾
-                                 V = 500
+                 V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯=𝔯))
+            ¡ε=𝑒: ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
+                  __error_printer__(ε)
+                  ␛-⋅🃌t☾
+                  V = 500
             ∀r⬠Vᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅⛶: ¿rᐹ𝑑  : 𝙷=r.copy
                                ⸘rᐹ𝑖  : 𝚌=r
                                ⸘rᐹᔐ|𝑦: 𝚋=r

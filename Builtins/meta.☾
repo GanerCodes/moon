@@ -44,16 +44,16 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
     F≇□⨳‹Unable to find module "⟦name⟧"! Paths checked:⟦failed⟕𝗻⟧›
     ¿␛↺∈flags ∨ F∉__þIMPORTS__:
         __þIMPORTS__󰂘 = □
-                      ns,𝕂 = {__name__=name, __file__=F, __dir__=F.parent,
-                               __EXPORTS__={}, __þIMPORTS__=__þIMPORTS__,
-                               TP_CACHE=TP_CACHE, TRANSPILE_REF=TRANSPILE_REF},{}
-                       ¿native≅□: 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = 󱠨(𝕂􊬏󰂼ₑ􊬐≔F ,get_code=✓)
-                       ¡        : 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = TP_CACHEₙₐₜᵢᵥₑ
-                       ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
-                       __þIMPORTS__󰂘 = Module(name,ns,hardcoded=native≇□,⠶𝕂)
-                       sys.modulesₙₐₘₑ = __þIMPORTS__󰂘
-        ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: __þIMPORTS__.pop(F,□)
-                       ⦃raise ⦃ε⦄⦄
+             ns,𝕂 = {__name__=name, __file__=F, __dir__=F.parent,
+                      __EXPORTS__={}, __þIMPORTS__=__þIMPORTS__,
+                      TP_CACHE=TP_CACHE, TRANSPILE_REF=TRANSPILE_REF},{}
+              ¿native≅□: 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = 󱠨(𝕂􊬏󰂼ₑ􊬐≔F ,get_code=✓)
+              ¡        : 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = TP_CACHEₙₐₜᵢᵥₑ
+              ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
+              __þIMPORTS__󰂘 = Module(name,ns,hardcoded=native≇□,⠶𝕂)
+              sys.modulesₙₐₘₑ = __þIMPORTS__󰂘
+        ¡ε=𝑒: __þIMPORTS__.pop(F,□)
+              ⦃raise ⦃ε⦄⦄
     mod = __þIMPORTS__󰂘
     mod􊬏􋕞􋕞󰂗󰂪󰂢󰂡󰂤󰂦󰂥􋕞􋕞􊬐 𝖦.update
     ↪mod

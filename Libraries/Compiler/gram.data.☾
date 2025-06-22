@@ -13,7 +13,7 @@ blk_cln_kwd = ~‹%BLK_CLN_KWDS%›
 SB='󰜞'
 SP='󰜚'
 SE='󰜛'
-
+ (𝑣 ∨ 𝑣_spec ∨ op_lit) 𝗐 (󰆴'=' 𝗐 𝑋↓↑)?
 main = gram_%M%
 
 gram_main = stmts ∨ 𝖶
@@ -30,7 +30,8 @@ stmt_∀ =     󰆴'∀'𝖶 (𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↓ ∨ ✓ 𝑋�
 comp_∀ = 𝑋↑↑ 󰆴'∀'𝖶  𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↑                  (󰆴'¿'𝖶 𝑋↑↑ ∨ ✓)
 ⊢_dec    = 󰆴'⊢' 𝖶 (wrap = ⠶𝑃 𝖶 ∨ ✓) (𝑣 ∨ op_lit ∨ ✓) 𝖶 (𝑃 ∨ ✓) 𝖶 󰆴':'
 kwd_std  =     std_kwd 𝗐 (𝑋↑↑ ∨ ✓)
-cln_pfx  = blk_cln_kwd 𝖶 (𝑋↑↓ ∨ ✓) 𝖶 󰆴':'
+cln_pfx  = (  ⮞'¡' blk_cln_kwd 𝖶 ((𝑣 ∨ 𝑣_spec ∨ op_lit) 𝖶 󰆴'=' 𝖶 𝑋↑↓ ∨ 𝑋↑↓ ∨ ✓)
+            ∨      blk_cln_kwd 𝖶 (                                     𝑋↑↓ ∨ ✓)) 𝖶 󰆴':'
 std_pfx  =     blk_kwd 𝖶
 asgn     = 𝑋↑↑ 𝖶 󰆴'='𝗐 (asgn ∨ 𝑋↑↑)
 grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"

@@ -71,10 +71,10 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                                 𝘤 = 𝚌 compile_code
                                 𝘤 VEP __highlighter__ ☾
                                 s=✗
-                                 󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗)☾
-                                  ↺
-                                 󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗)
-                                ¡⦃⦃𝑒⦄ as ⦃ε⦄⦄: ε traceback.format_exception⭢⨝ᐦ☾
+                                     󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗)☾
+                                      ↺
+                                     󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗)
+                                ¡ε=𝑒: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
     show_docs = 𝚲‹Usage: ∅                  (cli mode)
@@ -88,20 +88,21 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                          -d <str_to_decode>
                          -o <file_in> <file_out?stdout>›☾
     𝖠,f=[⠤𝖠],∅
-    ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪ ← 0 𝖠.pop ⭢₁﹕ ➡►⭠ 𝖺≠2␛-:□
+    ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪(0 𝖠.pop ⭢₁﹕ᑀ₀≡␛-⭜􍪵􍪴􊬤􊲯) →►⭠ 𝖺≠2␛-:□
     ƒ = ␛a∈f ⭜moon_to_py_debug⭝ moon_to_py
     ¿f󷺥𝖠 : moon_cli
-    ⸘f󷺥𝖠🃌≠1: ↪󱠨(𝖠₀ ,ns={__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
-    ⸘␛e∈f: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾
-    ⸘␛d∈f: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾
-    ⸘␛D∈f: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
-    ⸘␛c∈f: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
-    ⸘␛C∈f: 𝖠⨝𝘀 ⭢ ƒ ⭢ exec
-    ⸘␛b∈f: 𝖠₀𝐩 generate_bootstrap
-    ⸘␛B∈f: 𝖠₀𝐩 generate_bootstrap_live
-    ⸘␛o∈f: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
-    ⸘␛h∈f: show_docs
-    ¡    : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
+    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop ; ↪󱠨(𝖠₀ ,ns={__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
+    ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾
+    ⸘f∋‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾
+    ⸘f∋‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
+    ⸘f∋‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
+    ⸘f∋‹C󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ exec
+    ⸘f∋‹b󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap
+    ⸘f∋‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
+    ⸘f∋‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
+    ⸘f∋‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs
+    ⸘f∋‹get-dir›: moon_dir☾
+    ¡           : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
   transpiler_cli,moon_cli,refresh_cached_imports

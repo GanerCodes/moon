@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 
 MOON_PATH = execSync('☾ --get-dir').toString().trim();
 const ζ = (...𝔸)=>[...𝔸[0]].map((_,i)=>𝔸.map(x=>x[i]));
-const CHARLISTS = fs.readFileSync(`${MOON_PATH}/FontCompose/.SCRIPT_MAP`,
+const CHARLISTS = fs.readFileSync(`${MOON_PATH}/Builtins/Data/script.map`,
         {encoding: 'utf8', flag: 'r'}).split('\n').map(x=>[...x]);
 const [SUP,SUB,NRM] = [{},{},{}];
 for(const [n,p,b] of ζ(...CHARLISTS)) {
