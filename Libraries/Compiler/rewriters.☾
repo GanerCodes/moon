@@ -19,7 +19,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
                ⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶)󱖔􋔡󱁕))))
 ⊢ rewrite_strs(󱁕):
      󰤱 normalize newlines and stuff from literals so we get the same string output
-    str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys_guts str_tsub_guts str_timp_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
+    str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys str_tsys_guts str_tsub_guts str_timp_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
     󱁕.ftrp(‹str_spec_char›,󱁕↦map_special(+󱁕,󱁕))                                          ␛
      .ftrp( str_types     ,󱁕↦󱁕.set(t=‹str›),✓)                                           ␛
      .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                              ␛
