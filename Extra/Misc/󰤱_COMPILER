@@ -5,7 +5,6 @@ Error handling:
   2. Thing that takes errors and uses sourcemap to get relevent ranges
   3. Thing that concats trees so you can generate sourcemaps for multi-files
 
-󰤱  $󷹹
 󰤱  ⨡ a ⨡ b ⨡ c
 󰤱  `a b≕c d` ⟶ `(PSH(␀CAT(a, b)), (c := PKE(0)), DEL(1))[1]` ???
 󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)`
