@@ -1,5 +1,7 @@
 ⨡ lambdas ⭸ *
 
+part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁  󰤱 fix ugex bug
+
 ⊢ rewrite_for(󱁕):
     󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)␛
      .ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
@@ -10,49 +12,39 @@
                   󷸴 ⟨𝒎(␛)⍮         𝒎(␛¡)⍮ ⍈ 󷺻𝒩(‹¡›,⠤⟞)⟩
                   󷸴 ⟨𝒎(␛∀)⍮         𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹∀¡󷺗›,⠤⟞)⟩
                   󷸴 ⴳ⟩(󱁕ᶜ))
-
-part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁  󰤱 fix ugex bug
-T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
 ⊢ map_special(x,󱁕=⍁):
+    T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
     T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼‹0123456789abcdef›))
     ↪𝗌𝗍𝗋((x∈␛𝘀 ⭜     (𝔗( (x⭜𝘀⭝ᐦ                   )󱖔􋔡󱁕)) ␛
                ⭝ 𝗌𝗍𝗋𝖻(𝔗(ᔐ(T1ₓ ∨ x.translate(T2)󷹜¹⁶)󱖔􋔡󱁕))))
 ⊢ rewrite_strs(󱁕):
      󰤱 normalize newlines and stuff from literals so we get the same string output
-     󰤱 make thing so i can just, newline in a string and continue it at same indent without it adding the indent
     str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys_guts str_tsub_guts str_timp_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
-    󱁕.ftrp(‹str_spec_char›, 󱁕↦map_special(+󱁕,󱁕))                      ␛
-     .ftrp(str_types, 󱁕↦󱁕.set(t=‹str›),✓)                             ␛
-     .ftrp(‹str›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                     ␛
-     .ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)␛
-     .ftrp(‹str›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
+    󱁕.ftrp(‹str_spec_char›,󱁕↦map_special(+󱁕,󱁕))                                          ␛
+     .ftrp( str_types     ,󱁕↦󱁕.set(t=‹str›),✓)                                           ␛
+     .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                              ␛
+     .ftrp(‹x󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)         ␛
+     .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
 ⊢ rewrite_numbers(󱁕):
     󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))␛
      .ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)                                                      ␛
      .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
      .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
-
 ⊢ rewrite_ternary(󱁕):
-    is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  ∧ 󱁕🃌≡1
-     why was this checking for atoms?
-
-    ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕):  x⭜y⭝z
-        𝚘,⠤α = 󱁕
-        ¿𝚘ᵉ ᴼ ᵗ≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
-        α,⠤β = α
-        γ = α₀
-        ¿γᵗ≠‹opC› ∨ γ₀ᵉ ᴼ ᵗ≠␛⭜ ∨ γ₀ ₂🃌: ↪󱁕
-        ↪𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
-    
-    ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕):  𝅘𝅥𝅮 all the single conditionals 𝅘𝅥𝅮
-        𝚘,⠤α = 󱁕
-        ¿𝚘ᵉ ᴼ ᵗ≕t∉␛⭜␛⭝: ↪󱁕
-        α,β,⠤_ = α
-        is_xpr_atom(β) ⨳
-        𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
-        𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝗏𝗌(␛□))󱖔􋄥󱁕)
-        ↪𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
-
+    is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms?
+    ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y⭝z
+                               ¿𝚘ᵉ ᴼ ᵗ≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
+                               α,⠤β = α
+                               γ = α₀
+                               ¿γᵗ≠‹opC› ∨ γ₀ᵉ ᴼ ᵗ≠␛⭜ ∨ γ₀ ₂🃌: ↪󱁕
+                               ↪𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
+    ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y, x⭝y
+                               ¿𝚘ᵉ ᴼ ᵗ≕t∉␛⭜␛⭝: ↪󱁕
+                               α,β,⠤_ = α
+                               is_xpr_atom(β) ⨳
+                               𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
+                               𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝗏𝗌(␛□))󱖔􋄥󱁕)
+                               ↪𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 ⊢ group_targets(󱁕):
     dot = 󷺹ᵗ≡‹𝗈𝗉› ∧ ⟞₁ ₀ᵗ≡␛.
     exp = 󷺹ᵗ≡‹exp›
@@ -71,7 +63,6 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
     adds(□)
     󱁕ᶜ = R
     ↪󱁕
-
 ⊢ regroup_elements(󱁕):  󰤱 treat (some) 𝑣_specs as num
     𝼝 = 󰌷○󷺺ᵗ≡␛𝑇 ⭜[𝗆𝖼𝖺𝗅(⟞)]⭝ ⟞ᵗ≡‹target_rhs› ⭜⟞⭝ [⟞]
     󱁕.ftrp(‹x›, 󱁕↦󱁕.set(c=⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ∈‹𝑇 target_rhs›⍮⁺
@@ -83,7 +74,6 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
               ¿󱁕ᵗ≡‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
               𝑩𝑩(󱁕); ✗⨳‹Invalid element type found in target rhs!›
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
-
 ⊢ reduce_ς(󱁕):
     ¿¬(𝚘≔󱁕₀ᵉ ᴼ)󰁝: ↪󱁕
     𝕒 = 􋑺􊬣
@@ -93,7 +83,6 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
             𝕒.append(n)
     󱁕ᶜ = 𝕒
     ↪󱁕
-
 ⊢ add_cmp_op_chains(󱁕):  󰤱 invalid for cmp ops: ≺≻꜠´⟥⟤
     ∀L⬠𝙾𝚃ᴙ¿𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈):
         relv = 󷺹ᵗ≡‹opC› ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘  󰤱 check for invalid modifiers
@@ -103,7 +92,6 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
                                    ↪󱁕
         󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)
     ↪󱁕
-
 ⊢ rewrite_cmp(󱁕): ⊢ (󱁕.ftrp(‹cmp›,□,✓)) (󱁕):  >>>abcd ⟶ a>b󷹗 ∧ 󷹘>c󷹗 ∧ 󷹘>d󷹗
                       ¿󱁕🃌≤3: ↪󱁕.set(t=‹opC›)
                       o,v = 󱁕ᶜ𝌂󷺹ᵗ≡‹𝗈𝗉›
@@ -113,7 +101,12 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
                       ↪𝗈𝗉𝖢(␛∨,𝗈𝗉𝖢(␛∧,󱁕.set(t=‹opC›,c=C),
                                      𝗈𝗉𝖢(␛∨,𝗋(1),𝗏𝗌(␛✓))),
                               𝗈𝗉𝖢(␛∨,𝗋(1),𝗏𝗌(␛✗)))󱖔􋔡󱁕
-
+⊢ add_short_circuits(󱁕):
+    ⊢ (󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ ₁ ₀ᵗ∈‹󷺥󷺒›,□,✓)) (󱁕):
+        a,b = 󱁕₁,󱁕₂
+        ¿󱁕₀ ₁ ₀ᵗ≡␛󷺥: ↪𝗍𝖾𝗋𝗇(𝖽(a),𝖱(𝗋(1),𝗏𝗌(␛✗)),𝗍𝖾𝗋𝗇(b,𝗉,𝖱(𝗋(1),𝗏𝗌(␛✓))))
+        ¡          : ↪𝗍𝖾𝗋𝗇(𝖽(a),𝗍𝖾𝗋𝗇(b,𝖱(𝗋(1),𝗏𝗌(␛✗)),𝗉),𝖱(𝗋(1),𝗏𝗌(␛✓)))
+        ↪󱁕
 ⊢ rewrite_asgns(󱁕):
     󱁕.ftrp(‹asgn›,󱁕↦𝗑(𝗈𝗉𝖢(denode_op(𝗈𝗉(␛≔󱖔􋁿󱁕)),⠤󱁕)),✓)
     date_󱁕(󷺹ᵗ∈‹asgn_targs asgn_targ›⍭, ‹x›)(󱁕)ᐵ.flat(󷺹ᵗ≡␛x,✗).flat(󷺹ᵗ≡‹applier›,✗)
@@ -175,16 +168,8 @@ T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥�
                  𝑵 = 𝗂( 𝒓, 𝗇(𝚝≡␛󷸋 ⭜𝑺🃌-1⭝ 𝒓🃌+(𝚝≡␛󷸎)+~⭠2⋅⭠𝚝∈‹󷸉󷸎›))
         𝑵₀ᶜ.append(𝗋(𝑰🃌-⭠𝚝≡␛󷸍))
         ↪wrap(𝑵)
-
-⊢ add_short_circuits(󱁕):
-    ⊢ (󱁕.frp(󷺹ᵗ≡‹∘›∧⟞₀ᵗ≡‹𝗈𝗉›∧⟞₀ ₁ ₀ᵗ∈‹󷺥󷺒›,□,✓)) (󱁕):
-        a,b = 󱁕₁,󱁕₂
-        ¿󱁕₀ ₁ ₀ᵗ≡␛󷺥: ↪𝗍𝖾𝗋𝗇(𝖽(a),𝖱(𝗋(1),𝗏𝗌(␛✗)),𝗍𝖾𝗋𝗇(b,𝗉,𝖱(𝗋(1),𝗏𝗌(␛✓))))
-        ¡          : ↪𝗍𝖾𝗋𝗇(𝖽(a),𝗍𝖾𝗋𝗇(b,𝖱(𝗋(1),𝗏𝗌(␛✗)),𝗉),𝖱(𝗋(1),𝗏𝗌(␛✓)))
-        ↪󱁕
-
-part_ats = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ.copy(t=⟞ᵗ﹕􍨄)ᑀᵗ,⟞ᐸ)ᐸ
 ⊢ rewrite_ugex(󱁕):
+    part_ats = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ.copy(t=⟞ᵗ﹕􍨄)ᑀᵗ,⟞ᐸ)ᐸ
     󱁕.flat(󷺹ᵗ∈‹ugx_and ugx_or›⍭∧⟞🃌≡1)␛
      .ftrp(‹ugx_☾›,󷺹.set(t=␛𝑇,c=[⟞₀,𝖺𝗎𝗍𝗈(⟞🃌≤1⭜ᐦ⭝+⟞₁)]),✓)
     ⊢ (󱁕.ftrp(‹ugx_paren ugx_brack›⍭,□,✓)) (󱁕):
@@ -198,7 +183,6 @@ part_ats = 󷺹.copy(c=(⟞ᶜ􋇐󷺹ᵗ􍨄≡␛@ᐸ≕h)₀),𝑑(h₁ᐵ
         ↪r
     󱁕.ftrp(‹ugx_and ugx_or›⍭, 󱁕↦𝖳(𝖺𝗎𝗍𝗈(‹∧∨›􋑺􊫼􊮢􊬏ᵤₓ􋕞󰂼ᵣ􊬐),⠤󱁕), ✓)␛
      .ftrp(‹ugx_x›,󱁕↦𝖼𝖺𝗅𝗅(‹UGX_CREATE›,⠤󱁕))
-
 ⊢ rewrite_ports(󱁕):
     ⊢ (󱁕.ftrp(‹import›,□,✓)) (󱁕):
         flags,imp,vars,⠤E = 󱁕  󰤱 E

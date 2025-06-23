@@ -36,7 +36,5 @@
                    __iter__    = 𝕊↦𝕊⭢.__iter__   (⠤𝔸)
     
     ¿𝓓: ‹Running: "⟦termclr(cmd,‹3d3›)⟧"›☾
-    p = 𝔓(cmd⍭, ⠶K)  run = 𝔓(cmd⍭,⬤,⠶K)
+    p = 𝔓(cmd⍭,⠶K)  run = 𝔓(cmd⍭,⬤,⠶K)
     ↪ p Popen_Proxy ᣆ􋘥􊽬 
-
-⭷ þSUBPROCA

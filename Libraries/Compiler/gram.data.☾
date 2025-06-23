@@ -10,15 +10,11 @@ op_lit      = ~‹%OP_LIT%›
 blk_cln_kwd = ~‹%BLK_CLN_KWDS%›
     blk_kwd = ~‹%BLK_KWDS%›
 
-SB='󰜞'
-SP='󰜚'
-SE='󰜛'
- (𝑣 ∨ 𝑣_spec ∨ op_lit) 𝗐 (󰆴'=' 𝗐 𝑋↓↑)?
 main = gram_%M%
 
 gram_main = stmts ∨ 𝖶
 gram_comm = (⠶(str ∨ native_code) ∨ comment ∨ ~‹.|\n›)*
-gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ str ∨ ~‹.|\n›)*
+gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ sys_call_stupid_script_hack ∨ str ∨ ~‹.|\n›)*
 
 stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
 stmt  = blk_head ∨ kwd_std ∨ asgn ∨ 𝑋𝐶
@@ -29,13 +25,13 @@ blk_head = ⊢_dec ∨ cln_pfx ∨ std_pfx ∨ stmt_∀
 stmt_∀ =     󰆴'∀'𝖶 (𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↓ ∨ ✓ 𝑋↑↓ ∨ ✓ ✓) 𝖶 (󰆴'¿'𝖶 𝑋↑↓ ∨ ✓) 󰆴':'
 comp_∀ = 𝑋↑↑ 󰆴'∀'𝖶  𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↑                  (󰆴'¿'𝖶 𝑋↑↑ ∨ ✓)
 ⊢_dec    = 󰆴'⊢' 𝖶 (wrap = ⠶𝑃 𝖶 ∨ ✓) (𝑣 ∨ op_lit ∨ ✓) 𝖶 (𝑃 ∨ ✓) 𝖶 󰆴':'
-kwd_std  =     std_kwd 𝗐 (𝑋↑↑ ∨ ✓)
+kwd_std  = std_kwd 𝗐 (𝑋↑↑ ∨ ✓)
 cln_pfx  = (  ⮞'¡' blk_cln_kwd 𝖶 ((𝑣 ∨ 𝑣_spec ∨ op_lit) 𝖶 󰆴'=' 𝖶 𝑋↑↓ ∨ 𝑋↑↓ ∨ ✓)
             ∨      blk_cln_kwd 𝖶 (                                     𝑋↑↓ ∨ ✓)) 𝖶 󰆴':'
 std_pfx  =     blk_kwd 𝖶
 asgn     = 𝑋↑↑ 𝖶 󰆴'='𝗐 (asgn ∨ 𝑋↑↑)
 grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
-𝐿 = 󰆴'[' (⠶𝑝𝑐 ∨ 𝖶) 󰆴']' ∨ 󰆴SB (⠶𝑝𝑐 ∨ 𝖶) 󰆴SE
+𝐿 = 󰆴'[' (⠶𝑝𝑐 ∨ 𝖶) 󰆴']' ∨ 󰆴󰜞 (⠶𝑝𝑐 ∨ 𝖶) 󰆴󰜛
 𝑃 = 󰆴'(' (⠶𝑝𝑐 ∨ 𝖶) 󰆴')'
 𝑆 = 󰆴'⦉' (⠶𝑝𝑐 ∨ 𝖶) 󰆴'⦊'
 𝐷 = 󰆴'{' (𝖶 ⠶𝐷_item (󰆴',' 𝖶 ⠶𝐷_item)* (󰆴',' 𝖶)? ∨ 𝖶) 󰆴'}'
@@ -50,7 +46,7 @@ grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ native_code
+𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ sys_call ∨ native_code
        ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp ∨ number
        ∨ 𝑣_spec ∨ 𝑣)
 
@@ -72,7 +68,7 @@ slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
 pargs_i   = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
 pargs_e   = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
 ptarg     = '*' ∨ '@' ∨ 𝑣 ∨ 𝑣_spec ∨ op_lit
-import    = 󰆴'⨡' (((󰆴SP ~‹[^󰜛]+› 󰆴SE ∨ ✓) 𝖶        )
+import    = 󰆴'⨡' (((󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝖶      )
                   (str_tsub ∨ str_nsub ∨ str_timp  )
                   (𝖶 󰆴'⭸' 𝖶 pargs_i             ∨ ✓)
                   (𝗐 󰆴';'         ✓ ∨ 𝗐 ⠶import ∨ ✓))
@@ -86,8 +82,8 @@ pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-
 neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
 number     = pos_num ∨ neg_num
 number_exp = number sup
-script = ( (sub = 󰆴SB 𝖶 𝑋𝐶 𝖶 󰆴SE)
-          ∨(sup = 󰆴SP 𝖶 𝑋𝐶 𝖶 󰆴SE))
+script = ( (sub = 󰆴󰜞 𝖶 𝑋𝐶 𝖶 󰆴󰜛)
+          ∨(sup = 󰆴󰜚 𝖶 𝑋𝐶 𝖶 󰆴󰜛))
 grp = ~"[⁅⟦]" 𝖶 (𝑋𝐶 ∨ ✓) 𝖶 ~"[⁆⟧]"
 
 op = op_⸓_l op_lit op_⸓_r
@@ -104,10 +100,12 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
 W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
 
-str = empty_str ∨ str_tsys ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 𝗐)+
+sys_call_stupid_script_hack = '$' 𝗐 ⮞σsup σscript 𝗐 str_tsys
+sys_call = 󰆴'$' 𝗐 (󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝗐 str_tsys
+str = empty_str ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 𝗐)+
 str_t󰦥   = 󰆴(~‹󰦥{5}›) ~‹((?!󰦥{5})(.|\n))*› 󰆴(~‹󰦥{5}› ∨ ✓)
-str_tsys = 󰆴'$' 𝗐 (ƨ(sup) ∨ ✓) 𝗐 (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
-str_tsub = 󰆴'‹'                  (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
+str_tsys = (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
+str_tsub = 󰆴'‹'                   (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
 str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
 str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
 str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⨡⭸ \t\n]+"
@@ -124,7 +122,7 @@ str_escape = 󰆴"␛␛" ~‹.›
 str_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛›'␛"󷹹]+"
 
 ugx_x     = ugx_brack
-ugx_mod   = 󰆴SP ~‹[?*+⮞¬]› 󰆴SE
+ugx_mod   = 󰆴󰜚 ~‹[?*+⮞¬]› 󰆴󰜛
 ugx_and   = ⠶ugx_atom+
 ugx_or    = ugx_and 󰆴'󷸴' 𝖶 (⠶ugx_or ∨ ugx_and)
 ugx_☾     = 𝑋𝐶 𝖶 󰆴'⍮'? (mod:ugx_mod)?
@@ -135,6 +133,9 @@ ugx_gtail = (mod@=(𝖶 ∧ ugx_mod))? (𝗐 ∧ stk@=sub)?
 ugx_paren = 󰆴'(' 𝖶 ⠶ugx_seq 󰆴')' ⠶ugx_gtail
 ugx_brack = 󰆴'⟨' 𝖶 ⠶ugx_seq 󰆴'⟩' ⠶ugx_gtail
 
+󰜞 = '󰜞'
+󰜛 = '󰜛'
+󰜚 = '󰜚'
 ᗜ = 𝗐 ''
 𝘄 = 󰆴(~‹(␛␛\n|[ \t])+›  )
 𝗪 = 󰆴(~‹(␛␛\n|[ \t\n])+›)

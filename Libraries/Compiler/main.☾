@@ -89,7 +89,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                          -o <file_in> <file_out?stdout>›☾
     𝖠,f=[⠤𝖠],∅
     ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪(0 𝖠.pop ⭢₁﹕ᑀ₀≡␛-⭜􍪵􍪴􊬤􊲯) →►⭠ 𝖺≠2␛-:□
-    ƒ = ␛a∈f ⭜moon_to_py_debug⭝ moon_to_py
+    ƒ = ␛a␛A∩f ⭜𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f∋␛A)󰅂⭝ moon_to_py
     ¿f󷺥𝖠 : moon_cli
     ⸘f󷺥𝖠🃌<1: 0 𝔸.pop ; ↪󱠨(𝖠₀ ,ns={__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
     ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾
