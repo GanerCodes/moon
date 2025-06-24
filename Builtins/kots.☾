@@ -1,4 +1,5 @@
-TMPDIR = 🟑gettempdir🟑 ‹/dev/shm›𝐩 / ‹☾_tmp›
+  TMPDIR = 🟑gettempdir🟑 ‹/dev/shm›𝐩 / ‹☾_tmp›
+CACHEDIR = TMPDIR / ‹cache›
 mkd  = ⥌f,e=✓,p=✓↦    f 𝐩≕p           →.mkdir(exist_ok=e,parents=p) ► p
 mkf  = ⥌f,e=✓    ↦mkd(f 𝐩≕p→.parent)►p→.touch(exist_ok=e          ) ► p
 tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIRᑀᣆᵇ⬤/bᐸ/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))

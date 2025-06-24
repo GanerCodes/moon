@@ -249,17 +249,15 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789αβγδεζηθϑ
 ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻᴬᴮ󰀂ᴰᴱ󰀅ᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾ󰀐ᴿ󰀒ᵀᵁⱽᵂ󰀗󰀘󰀙⁰¹²³⁴⁵⁶⁷⁸⁹󰁌󰁍󰁎󰁏󰁐󰁑󰁒󰁓◌󰁔󰁕󰁖󰁗󰁘󰁙󰁛󰁜󰁝󰁞󰁟󰁠󰁡󰁢󰁣󰁤◌◌󰀶󰀷◌󰀻󰁁󰁃󰁅󰁈󰁊󰁋󰁱󰂂󰂁󰁲⁺⁻⁼⁽⁾󰁺󰁻󰁸󰁹˜◌◌◌◌◌ꜝ 󰦥󰦥󰦥󰦥󰦥
 SCRIPT_DEPTH = 2
 
-op_gen = 󰋺(𝐩(‹..›) / ‹Compiler/generate_operators›, ⠤‹ops generate_fontcompose_conf›⍭)
+⨡ Compiler/generate_operators
 DAT󷸊+𝗻+generate_fontcompose_conf(ops)
 
-¿ __name__ ≡ "__main__":
-    op_gen.main
-    ‹Running tests:›☾
-    󰋺(𝐩(‹..›) / ‹Tests/tests.☾› ⭢ .resolve)
-    DAT☾
-    󰋺(‹generate›)
-    ⨡ platform
-    platform.system ≡ "Linux" ∧ $ᴼᴱibus-daemon -dxrR󷹹
+¿__name__≡‹__main__›: op_gen.main
+                      ⨡ generate
+                       ‹Running tests:›☾
+                       󰋺(𝐩(‹..›) / ‹Tests/tests.☾› ⭢ .resolve)
+                       ⦃import platform⦄
+                       platform.system ≡ "Linux" ∧ $ᴼᴱibus-daemon -dxrR󷹹
 
  󰤱􊽨 thing that disallows base symmap keys from generating even if inside the compose so we can style em?
 

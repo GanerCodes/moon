@@ -1,88 +1,70 @@
-󰋺(‹CONFIGURE›, *)
-cd(__dir__)
-⨡ shutil, subprocess
-⨡ fontforge as ℱℱ
+⦃import shutil,subprocess⦄
+⦃import fontforge as ⦃ℱℱ⦄⦄
+⨡ shut
+⨡ process  ‹process load_font save_font›
+⨡ multisupersubscriptify  merge_into_font
+⨡ CONFIGURE ⭸ *
+__dir__ cd
 
 in_font        = ‹JuliaMono/JuliaMono-Regular.ttf›
 custom_symbols = ‹MoonCustomSymbols.ttf›
 ¿COPY_OUT_FONT:
     COPY_OUT_EXT = 1󷸻𝐩(COPY_OUT_FONT).suffix
-    OUTPUT_EXTS 󷸊∪ {COPY_OUT_EXT}
+    OUTPUT_EXTS 󷸊∪ ⦉COPY_OUT_EXT⦊
 OUTPUT_EXTS = 𝑠(OUTPUT_EXTSᴍ⫯)
 EXT = ‹ttf›
-
-󰋺(‹shut›)
-󰋺(‹process›, ⠤‹process load_font save_font›⍭)
-󰋺(‹multisupersubscriptify›, ‹merge_into_font›)
-
 in_font, custom_symbols = in_font⋄custom_symbols ᐖ𝐩(⟞).resolve
 
 𝐑 = ⥌x,y=□↦‹Running command: "⟦𝘀.join←x⟧"›☾ ► ( ᣆʸ 𝚲shut)∘𝚲subprocess.run←x
 cp = shutil.copy
 
-fold = ‹Output›⥉𝐩→.resolve
+fold = ‹Output›𝐩→.resolve
 𝑟 = process(DAT, MULTICHARS, SCRIPT_EXIST, SCRIPT_DEPTH)
-
 𝑟.write_multi(fold / ‹multi.json›)  󰤱 fix these (WYM??)
 𝑟.write_style(fold / ‹style.json›)  󰤱 fix these (WYM??)
 
 stages = {}
-⊢ 𝕗(fi, fo):
-    ‹python FontPatcher/font-patcher --careful --mono ›␛
-    ‹--complete --has-no-italic --out ⟦fold⟧ --name JuliaMono ›␛
-    ‹⟦fi⟧›⍭⥉𝐑
-    (fold/‹JuliaMono-Regular.ttf›).rename(fo)
+⊢ 𝕗(fi,fo): ‹python FontPatcher/font-patcher --careful --mono ›␛
+            ‹--complete --has-no-italic --out ⟦fold⟧ --name JuliaMono ›␛
+            ‹⟦fi⟧›⍭𝐑
+            fold/‹JuliaMono-Regular.ttf›⭢.rename(fo)
 stages[‹Nerd›] = 𝕗
 
-⊢ 𝕗(fi, fo):
-     f3 = ‹/tmp/emoji/static/NotoEmoji-Regular.ttf›⥉𝐩  doesn't work w/ fontforge or fonttools 󰂁-󰂂
-    save_font(merge_into_font(custom_symbols, fi), fo)
-    ‹Merged "⟦custom_symbols⟧" into font›☾
+⊢ 𝕗(fi,fo): save_font(merge_into_font(custom_symbols, fi), fo)
+            ‹Merged "⟦custom_symbols⟧" into font›☾
 stages[‹CustomSymbols›] = 𝕗
 
-⊢ 𝕗(fi, fo):
-    𝒻 = load_font(fi)
-     🗨⛱❄☃☄⌨✉✏✒✂⛏⚔⚖⛓⚗⚰⚱⛰✈⛴⏱⏲☀☁⛈☂☢☣⚒⛸
-    chars = 󰦥󰦥󰦥󰦥󰦥👍👎👆👇👈👉☝✌✋👋👏✊👌💪🙌🙏✍❤️❣🩷💖💕💞💘😻😉😊🙃😏😎🤭🤔😚😌🥵🥰😍😂🤤😘😋😆🤣😳😤😕☹😞🥹😭💀🫂👁️🎉👀✨🔥🌈⛹☕⛲⛺⛵⌛⏳⌚⏰⛅☔💬⚡⛄⚽⚾⛳♿⛔󰦥󰦥󰦥󰦥󰦥
-    
-    ‹filter link›⍭󰌷(charsᴍord) ᐖᐳ𝒻.removeGlyph∘⟞ᐸ  ε↦‹Error removing "⟦⟞ᐹᔐ⭜⟞⭝chr∘⟞⟧": ⟦ε⟧›☾ᐸ ᴍ 
-    𝑟.add_glyphs(𝒻)
-     𝒻.familyname = 𝒻.fullname = 𝒻.fontname = "JuliaBeta"
-    save_font(𝒻, fo)
+⊢ 𝕗(fi,fo): 𝒻 = load_font(fi)
+             🗨⛱❄☃☄⌨✉✏✒✂⛏⚔⚖⛓⚗⚰⚱⛰✈⛴⏱⏲☀☁⛈☂☢☣⚒⛸
+            chars = 󰦥󰦥󰦥󰦥󰦥👍👎👆👇👈👉☝✌✋👋👏✊👌💪🙌🙏✍❤️❣🩷💖💕💞💘😻😉😊🙃😏😎🤭🤔😚😌🥵🥰😍😂🤤😘😋😆🤣😳😤😕☹😞🥹😭💀🫂👁️🎉👀✨🔥🌈⛹☕⛲⛺⛵⌛⏳⌚⏰⛅☔💬⚡⛄⚽⚾⛳♿⛔󰦥󰦥󰦥󰦥󰦥
+            ‹filter link›⍭󰌷(charsᴍord) ᐖᐳ⟞ 𝒻.removeGlyphᐸ  ε↦‹Error removing "⟦⟞ᐹᔐ⭜⟞⭝chr∘⟞⟧": ⟦ε⟧›☾ᐸ ᴍ 
+            𝑟.add_glyphs(𝒻)
+             𝒻.familyname = 𝒻.fullname = 𝒻.fontname = "JuliaBeta"
+            save_font(𝒻, fo)
 stages[‹ProcedualChars›] = 𝕗
 
-enabled_stages = [        NERDFONT ∧ ‹Nerd›,
-                    CUSTOM_SYMBOLS ∧ ‹CustomSymbols›,
-                   PROCEDUAL_CHARS ∧ ‹ProcedualChars› ]
-¿CHECK_REPOS: 𝐑(‹sh ./cloneRepos.sh›⍭)
-¿GENERATE_XCOMPOSE:
-    𝑟.set_compose(f ≔ fold / ‹.XCompose›)
-    ⓦ(open(‹.SCRIPT_MAP›, ␛w),
-          󰲡x.write←𝗻.join←𝑟.script_map)
-    ¿COPY_OUT_XCOMPOSE:
-        cp(f, COPY_OUT_XCOMPOSE)
-¿PATH_CODE_CONFIG:
-    𝑟.set_codium(PATH_CODE_CONFIG)
+enabled_stages = [NERDFONT        ∧ ‹Nerd󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,
+                  CUSTOM_SYMBOLS  ∧ ‹CustomSymbols󷺗›,
+                  PROCEDUAL_CHARS ∧ ‹ProcedualChars›]
+¿CHECK_REPOS: ‹sh ./cloneRepos.sh›⍭𝐑
+¿GENERATE_XCOMPOSE: 𝑟.set_compose(f ≔ fold/‹.XCompose›)
+                    (‹.SCRIPT_MAP›, 𝑟.script_map⨝𝗻)
+                    ¿COPY_OUT_XCOMPOSE: cp(f,COPY_OUT_XCOMPOSE)
+¿PATH_CODE_CONFIG: 𝑟.set_codium(PATH_CODE_CONFIG)
 
-cp(in_font, font ≔ fold / in_font.name)
-∀s,ƒ∈stages.items:
-    ¿hasattr(ƒ, ‹no_font›):
-        ƒ
-        ↺
+cp(in_font, font ≔ fold/in_font.name)
+∀s,ƒ⬠stages.items:
+    ¿hasattr(ƒ, ‹no_font›): ƒ; ↺
     fo = fold / ‹⟦font.stem⟧_⟦s⟧.⟦EXT⟧›
-    ¿s∈enabled_stages:
-        ‹Running stage ⟦s⟧, "⟦font⟧" ↦ "⟦fo⟧"›☾
-        ƒ(font, font≔fo)
-    ⸘fo.exists:
-        ‹Stage ⟦s⟧ disabled, but using previous result ⟦font≔fo⟧›☾
+    ¿s∈enabled_stages: ‹Running stage ⟦s⟧, "⟦font⟧" ⟶ "⟦fo⟧"›☾
+                       ƒ(font, font≔fo)
+    ⸘fo.exists: ‹Stage ⟦s⟧ disabled, but using previous result ⟦font≔fo⟧›☾
 
-ƒ_fnam = 󰲡fold / ‹99_⟦in_font.stem⟧.⟦x⟧›
+ƒ_fnam = 󰲡fold/‹99_⟦in_font.stem⟧.⟦x⟧›
 
 𝕗 = ℱℱ.open(ᔐ←font)
-¿1󷸻font.suffix≕ε ∈ OUTPUT_EXTS:
-    cp(font, ƒ_fnam(EXT))
-    OUTPUT_EXTS 󷸊 ∖󰃨
-OUTPUT_EXTS󷺼save_font(𝕗, ⟞ ⥉ ƒ_fnam)
+¿1󷸻font.suffix≕ε ∈ OUTPUT_EXTS: cp(font, EXT ƒ_fnam)
+                                OUTPUT_EXTS 󷸊 ∖󰃨
+OUTPUT_EXTS󷺼save_font(𝕗, ⟞ ƒ_fnam)
 
-¿COPY_OUT_FONT:
-    cp(ƒ_fnam∘COPY_OUT_EXT, COPY_OUT_FONT)
+¿COPY_OUT_FONT: cp(COPY_OUT_EXT ƒ_fnam, COPY_OUT_FONT)

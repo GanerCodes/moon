@@ -2,6 +2,9 @@
 ⨡ to_ast    ⭸ *
 ⨡ ast_to_py ⭸ *
 ⨡ tree      ⭸ *
+⨡ cache
+
+code_file_caching=✓
 
 BASE,TMP = moon_dir,mkd(TMPDIR/__file__  sha)
 𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
@@ -11,9 +14,6 @@ pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
                   moon_dir = ⟦PEV(␛𝐩)⟧(__file__).parent›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
-moon_to_py = ⥌𝚌,𝙺={},𝓚={}↦sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py.𝔠⭜cₕ⭝cₕ≔to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
-moon_to_py.𝔠 = {}
-
 ⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
     ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
@@ -22,6 +22,13 @@ moon_to_py.𝔠 = {}
     ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
+
+þmoon_to_py = ⥌𝚌,𝙺,𝓚↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
+⊢ moon_to_py(𝚌,𝙺={},𝓚={}):
+    ¿sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py􋈨: ↪cₕ
+    ↪cₕ≔(code_file_caching⭜þmoon_to_py_fcache(𝚌,𝙺,𝓚)⭝þmoon_to_py(𝚌,𝙺,𝓚))
+moon_to_py􋈨 = {}
 
 decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent𝗻⟦𝚌⟧›
 ⊢ compile_code(𝚌,𝚙=□): ¿𝚙≅✓: 𝚌,𝚙=𝚌 ,𝚌
@@ -40,19 +47,21 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
 
 ⊢ generate_bootstrap(dest=TMP/‹☾.py›):
     _,ƒ = PL_FORK(compile_code,__file__,✓)
-    pyc = ‹#!/bin/python
-           ⟦pathlib_import⟧
+    pyc = ‹⟦pathlib_import⟧
            ⟦header_com compile_files⟧
            ⟦dump_cached_imports⟧
-           ⟦ƒ⟧›
+           ⟦ƒ⟧›ᐒ␛
+          ‹#!/bin/python
+           BOOTSTRAP_HASH=⟦⟞ sha repr⟧
+           ⟦⟞⟧›
     ¿dest: (dest󷸊𝐩,pyc)
-           os.chmod(dest,0o775)
-            chmod(dest,‹+x›)  󰤱􊽨
+           os.chmod(dest,0o775)  chmod(dest,‹+x›)  󰤱􊽨
     ↪pyc
 
 ⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): refresh_cached_imports
                                   ŧ𝼝(‹Refreshed cached imports!›,‹f0f›)☾
-                                  ⨡ Compiler
+                                  Compiler = ⨡ Compiler
+                                  Compiler.code_file_caching=✗
                                   ŧ𝼝(‹Re-imported compiler!›,‹f0f›)☾
                                   TRANSPILE_REF(moon_to_py)
                                   generate_bootstrap(⠤𝔸,⠶𝕂)

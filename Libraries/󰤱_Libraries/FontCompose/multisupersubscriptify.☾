@@ -1,8 +1,7 @@
-󰋺("shut", "Shut")
-⨡ psMat as 𝒫ℳ
-⨡ fontforge as ℱℱ
-⨡ unicodedata as 𝒰𝒟
-⨡ sys
+⨡ shut
+⦃import psMat as ⦃𝒫ℳ⦄⦄
+⦃import fontforge as ⦃ℱℱ⦄⦄
+⦃import unicodedata as ⦃𝒰𝒟⦄⦄
 
 w = 1200  󰤱 detect from font
 
@@ -11,58 +10,36 @@ save_font = 󰲣shut( x.generate, y.resolve ⥉ ᔐ)
 
 𝔯,𝔰,𝔱 = "𝔯𝔰𝔱"
 𝔗 = ⥌𝒻,ℊ,𝐭,w=w↦𝐭ꟿ󰲡(
-        x≡𝔯 ⭜ℊ.addReference(𝒻󰂼ᵣ􊭨􊵾􊬣.glyphname)␛
+        x≡𝔯 ⭜ℊ.addReference(𝒻􊵾􊬣􋘲󰂼ᵣ.glyphname)␛
             ⭝ℊ.transform((x≡𝔰∧𝒫ℳ.scale∨𝒫ℳ.translate)(⠤𝔸)))→►monospace_char(ℊ)
 
-⊢ monospace_char(ℊ):  based on monospacifier
-    ¿ℊ.width≤0: ↪
-    ¿0≤(ℊ.unicode≕𝓾)≤sys.maxunicode ∧ 𝒰𝒟.category(chr(𝓾))∈"Mn"⋄"Mc"⋄"Me": ↪
-    ¿𝓾󷹜¹⁶≡0x10FFF7: ↪
-     Δ = w-ℊ.width
-     ℊ. left_side_bearing = 𝑖(γ ≔ ℊ.left_side_bearing+Δ/2)
-     ℊ.right_side_bearing = 𝑖(ℊ.right_side_bearing+Δ-γ)
-     ℊ.width              = 𝑖(w)
-     ℊ. left_side_bearing = 0
-     ℊ.right_side_bearing = 0
-    ℊ.width              = w
-⊢ monospace_font(𝒻):
-    𝒻.glyphs ᴍ monospace_char
-    ↪ 𝒻
+ based on monospacifier
+⊢ monospace_char(ℊ): ¿ℊ.width≤0: ↪
+                     ¿0≤(ℊ.unicode≕𝓾)≤sys.maxunicode ∧ 𝒰𝒟.category(chr(𝓾))∈⍭‹Mn Mc Me›: ↪
+                     ¿𝓾󷹜¹⁶≡0x10FFF7: ↪
+                     ℊ.width = w
 
-⊢ remove_char(𝒻, c):
-    try:
-        𝒻.removeGlyph(𝒻󰂼ᵣ􊮎)
-    except Exception as e:
-        ‹Couldn't remove "⟦c⟧": ⟦e⟧›☾
+⊢ monospace_font(𝒻): 𝒻.glyphs ᴍ monospace_char
+                     ↪𝒻
 
-⊢ char_maker(ƒ):
-    ⊢ 𝑓(𝒻, c, n, *𝔸, log=1, ⠶𝕂):
-        ℊ = 𝒻.createChar(l≔ord←c, n)
-        try:
-            𝔗(𝒻, ℊ, ⠤ƒ(𝒻, *𝔸, ⠶𝕂))
-        except Exception as ε:
-            ¿log≤0 ∨ (log<2 ∧ ᔐ(ε)∋"No such glyph"): ↪
-            ‹Gen Err: "⟦n⟧" (⟦c⟧ @ ⟦hex←l⟧), "⟦ε⟧"›☾
-    ↪ 𝑓
+⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻󰂼ᵣ􊮎)
+                    ¡ε=𝑒: ‹Couldn't remove "⟦c⟧": ⟦ε⟧›☾
 
-@char_maker
-⊢ add_script(𝒻, c, m, scale=ⴳ):
-    ¿scale:
-         W = 𝒻󰂼ᵣ􊮎.width
-         ¿((W⋄w)⤈ →/← (W⋄w)⤉) > .51: W = w
-        W = w
-        ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15⋅w⋄¯.20⋅w], W
-        ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15⋅w⋄ .55⋅w], W
-         ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄½, 𝔱⋄0⋄¯¼⋅W], W⹏2
-         ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄½, 𝔱⋄0⋄+¾⋅W], W⹏2
-         ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄⅔, 𝔱⋄0⋄(¯⅓⋅W)], 𝑖(⅔⋅W)
-         ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄⅔, 𝔱⋄0⋄(+⅔⋅W)], 𝑖(⅔⋅W)
-    ¡:
-        ¿m≡␛b: ↪ [𝔯⋄c, 𝔱⋄0⋄.35⋅¯w], w
-        ⸘m≡␛p: ↪ [𝔯⋄c, 𝔱⋄0⋄.35⋅ w], w
+⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,*𝔸,log=1,⠶𝕂):
+                     ℊ = 𝒻.createChar(l≔c ord, n)
+                          𝔗(𝒻,ℊ,⠤ƒ(𝒻,*𝔸,⠶𝕂))
+                     ¡ε=𝑒: ¿log≤0 ∨ (log<2 ∧ ε ᔐ∋‹No such glyph›): ↪
+                           ‹Gen Err: "⟦n⟧" (⟦c⟧ @ ⟦l 󷹜¹⁶⟧), "⟦ε⟧"›☾
+                 ↪𝑓
 
-@char_maker
-⊢ add_multichar(𝒻, s):
+⊢ (char_maker) add_script(𝒻,c,m,scale=✓):
+    ¿scale: W = w
+            ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15⋅w⋄¯.20⋅w], W
+            ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15⋅w⋄ .55⋅w], W
+    ¡     : ¿m≡␛b: ↪ [𝔯⋄c, 𝔱⋄0⋄.35⋅¯w], w
+            ⸘m≡␛p: ↪ [𝔯⋄c, 𝔱⋄0⋄.35⋅ w], w
+
+⊢ (char_maker) add_multichar(𝒻,s):
     ¿s🃌≡2: ↪ [𝔯⋄s₀, 𝔱⋄¯⅘w⋄0,
               𝔯⋄s₁, 𝔱⋄.9w⋄0, 𝔰⋄⅗], w
     ¿s🃌≡3: ↪ [𝔯⋄s₀, 𝔱⋄¯⅘w⋄⅘w,
@@ -73,21 +50,31 @@ save_font = 󰲣shut( x.generate, y.resolve ⥉ ᔐ)
               𝔯⋄s₂, 𝔱⋄¯w⋄⅗⋅w,
               𝔯⋄s₃, 𝔱⋄0⋄¯1.9⋅w, 𝔰⋄⅖, 𝔱⋄.7⋅w⋄⅗⋅w], w
 
-⊢ merge_into_font(𝓐, 𝓑, log=✓):
-    𝓐, 𝓑 = 𝓐⋄𝓑ᐵᐹ(ᔐ|𝐩)⭜load_font(⟞)⭝⟞
+⊢ merge_into_font(𝓐,𝓑,log=✓):
+    𝓐,𝓑 = 𝓐⋄𝓑ᐵᐹ(ᔐ|𝐩)⭜load_font(⟞)⭝⟞
     log ⭜ ‹Merging the following chars: ›☾􊾖
-    ∀𝚐∈𝓐.glyphs:
-        𝚗,𝚞 = 𝚐.glyphname, 𝚐.unicode
-        ¿𝚞<0: ↺
-        log⭜ chr(𝚞)☾􊾖
-        ¿𝚞∉𝓑: 𝓑.createChar(𝚞,𝚗)
-        𝓐.selection.select(𝚞); 𝓐.copy 
-        𝓑.selection.select(𝚞); 𝓑.paste
+    ∀𝚐⬠𝓐.glyphs: 𝚗,𝚞 = 𝚐.glyphname,𝚐.unicode
+                  ¿𝚞<0: ↺
+                  log⭜ chr(𝚞)☾􊾖
+                  ¿𝚞∉𝓑: 𝓑.createChar(𝚞,𝚗)
+                  𝓐.selection.select(𝚞); 𝓐.copy 
+                  𝓑.selection.select(𝚞); 𝓑.paste
     log⭜ ᐦ☾
-    ↪ 𝓑
+    ↪𝓑
 
+ Δ = w-ℊ.width
+ ℊ. left_side_bearing = 𝑖(γ ≔ ℊ.left_side_bearing+Δ/2)
+ ℊ.right_side_bearing = 𝑖(ℊ.right_side_bearing+Δ-γ)
+ ℊ.width              = 𝑖(w)
+ ℊ. left_side_bearing = 0
+ ℊ.right_side_bearing = 0
+ W = 𝒻󰂼ᵣ􊮎.width
+ ¿((W⋄w)⤈ →/← (W⋄w)⤉) > .51: W = w
+ ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄½, 𝔱⋄0⋄¯¼⋅W], W⹏2
+ ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄½, 𝔱⋄0⋄+¾⋅W], W⹏2
+ ¿m≡␛b: ↪ [𝔯⋄c, 𝔰⋄⅔, 𝔱⋄0⋄(¯⅓⋅W)], 𝑖(⅔⋅W)
+ ⸘m≡␛p: ↪ [𝔯⋄c, 𝔰⋄⅔, 𝔱⋄0⋄(+⅔⋅W)], 𝑖(⅔⋅W)
  ↪ t + [𝔱⋄¯⅘⋅w⋄0, 𝔯⋄s₁, 𝔱⋄¯⅘⋅w⋄0, 𝔯⋄s₂, 𝔱⋄⅖⋅w⋄¯⅗⋅w, 𝔰⋄½, 𝔱⋄.55⋅w⋄½⋅w], w
- 􋐳
  􋕠|􋕡 􊾯ᴼO󰂡􊼍 􊼇󰂛Iᴵ􊾩 􌎒􊱃□􋄅􌎕 􍛄􍍘󰤃􍍙􍛇 􌥶􋕠􌥴|􌥷􋕡􌥵
  󱾄󱽽󱾌 󱾁󱾌 󱽿󱾊󱾇󱾏 𐂷🌲🌳🌴🎄🎋 󱹯󱹡󱹟󱹮󱹡󱹰 󱹩󱹡󱹯󱹯󱹝󱹣󱹡 A𝔸𝓐𝐀𝐴𝔄𝕬🄐Ⓐ🄰🅐А𝗔 ; little snowman 󱼩
  ↓↓ done ∈ each function because i want to keep characters

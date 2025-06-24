@@ -9,11 +9,12 @@
     ⊢ add_cache(𝕊,x,y): ↪𝕊􎀞ₓ≔y
 
 󱀘 FileCacher(Cacher):
-    ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=TMPDIR/‹☾_cache›):
+    ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=ᐦ,file_only=✗):
         super().__init__(ƒ,𝘩,𝘦,𝘥)
-        𝕊􀲥􀲹=mkd(fp)
-    ⊢ chk_cache(𝕊,x  ): ¿x∈𝕊􎀞: ↪𝕊􎀞ₓ
-                        ¿(𝕊􀲥􀲹/x≕f).exists: ↪𝕊􎀞ₓ≔ᵇ(f)
+        𝕊􀲥􀲷,𝕊􀲥􀲹=file_only,mkd(fpᐹ𝐩∧fp.is_absolute ⭜fp⭝ CACHEDIR/fp)
+    ⊢ chk_cache(𝕊,x  ): ¿𝕊􀲥􀲷¬∧x∈𝕊􎀞: ↪𝕊􎀞ₓ
+                        ¿(𝕊􀲥􀲹/x≕f).exists: v=ᵇ(f)
+                                            ↪𝕊􀲥􀲷⭜𝕊􎀞ₓ≔v⭝v
                         ↪␀
     ⊢ add_cache(𝕊,x,y): ᵇ(𝕊􀲥􀲹/x, 𝕊􎀞ₓ≔y)
 

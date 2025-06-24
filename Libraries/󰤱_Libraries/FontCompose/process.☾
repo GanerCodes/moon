@@ -5,12 +5,11 @@
 ⮌ json ⨡ dumps as jds
 ⮌ PEGGLE2_BOOTSTRAP_AAUGH ⨡ Peggle1Bootstrap
 Parser = Peggle1Bootstrap₂
-🌈 = 󰋺(␛🌈)
 󰋺(␛𝐍)
 󰋺(‹multisupersubscriptify›, ⠤‹load_font save_font add_script remove_char add_multichar monospace_font›⍭)
 󰋺(‹organizer›, ⠤‹get_codepoint save_pua›⍭)
 
-jds󷸊(ensure_ascii=✗, indent=□, separators=‹,:›)
+jds󷸊(⬤,ensure_ascii=✗,indent=□,separators=‹,:›)
 jdumps = o↦(hasattr(o, ‹__json__›) ⭜o.__json__⭝ jds)(o)
 
 symmap = {
