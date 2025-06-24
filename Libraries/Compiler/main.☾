@@ -100,7 +100,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
     ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪(0 𝖠.pop ⭢₁﹕ᑀ₀≡␛-⭜􍪵􍪴􊬤􊲯) →►⭠ 𝖺≠2␛-:□
     ƒ = ␛a␛A∩f ⭜𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f∋␛A)󰅂⭝ moon_to_py
     ¿f󷺥𝖠 : moon_cli
-    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop ; ↪󱠨(𝖠₀ ,ns={__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
+    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop ; ↪󱠨(𝖠₀ ,ns={__file__=𝖠₀,__dir__=𝖠₀𝐩⭢.parent,__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
     ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦PEV(⟞)⟧›☾
     ⸘f∋‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᐖ‹⟦⟞⟧ ⟶ ⟦VEP(⟞)⟧›☾
     ⸘f∋‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾

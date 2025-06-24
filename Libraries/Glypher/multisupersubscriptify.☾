@@ -5,8 +5,8 @@
 
 w = 1200  󰤱 detect from font
 
-load_font = 󰲡shut(ℱℱ.open    , x.resolve ⥉ ᔐ)
-save_font = 󰲣shut( x.generate, y.resolve ⥉ ᔐ)
+load_font = 󰲡shut(ℱℱ.open    , x.resolve⭢ᔐ)
+save_font = 󰲣shut( x.generate, y.resolve⭢ᔐ)
 
 𝔯,𝔰,𝔱 = "𝔯𝔰𝔱"
 𝔗 = ⥌𝒻,ℊ,𝐭,w=w↦𝐭ꟿ󰲡(

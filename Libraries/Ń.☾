@@ -83,7 +83,7 @@
                      ∀𝒏⬠󱁕﹕﹕􍨄¿𝒏.first_r(ƒ)≕r≇□: ↪r  sort t⟶b, r⟶l
      ⊢ first_sides(󱁕,ƒ): ↪󱁕.first_l(ƒ),󱁕.first_r(ƒ)
      filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.rm(¬○ƒ,⠤𝔸,⠶𝕂)
-     as_txt = __pos__
+     ⊢ (property) 󰊄(𝕊): ↪+𝕊
      ⊢ P(󱁕,fs=✓): NA,AR,yl,yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
                   ¿󱁕󷹵Ń: ↪ŧ𝼝(ᔐ(󱁕),‹f00›)
                   ⊢ format_e(e): ¿¬e: ↪ᐦ

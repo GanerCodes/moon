@@ -38,6 +38,7 @@
     󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
     󰤱  eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
     󰤱  implicit imports are jank
+    󰤱  rule named "ᔐ" in peggle2 doesn′t work
     󰤱  Font generator slow
     󰤱􊽨 Web/phone-app maker
     󰤱􊽨  option to print progress
