@@ -38,8 +38,7 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
                     F=□
     ↪name,F,native,failed
 
-⊢ __þIMPORT__(p,𝖦,flags=ᐦ):
-    ¿flags: ‹FOUND FLAGS: ⟦flags⟧›☾
+⊢ __þIMPORT__(p,𝖦,flags=ᐦ):  current flags: ↺
     name,F,native,failed = pᣆ􋅂􀸳􋇡IMPORT_find_file(⬤,𝖦.get(‹__dir__›),pwd,flags)
     F≇□⨳‹Unable to find module "⟦name⟧"! Paths checked:⟦failed⟕𝗻⟧›
     ¿␛↺∈flags ∨ F∉__þIMPORTS__:

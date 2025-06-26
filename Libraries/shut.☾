@@ -7,10 +7,10 @@
                     𝕊󰀒 = sys.stdout⋄sys.stderr
                     sys.stdout,sys.stderr = sys.__stdout__⋄sys.__stderr__
                     ↪𝕊
-    ⊢ __exit__(𝕊, ⠤𝔸): ᐦ☾
-                       sys.stdout, sys.stderr = 𝕊󰀒
-                       𝕊ᴼ      ᴍ os.close
-                       𝕊ᴰ 󱑼 𝕊ᴼ ꟿ os.dup2
-                       𝕊ᴰ      ᴍ os.close
+    ⊢ __exit__(𝕊,⠤𝔸): ᐦ☾
+                      sys.stdout, sys.stderr = 𝕊󰀒
+                      𝕊ᴼ      ᴍ os.close
+                      𝕊ᴰ 󱑼 𝕊ᴼ ꟿ os.dup2
+                      𝕊ᴰ      ᴍ os.close
 
-⭷ shut = 󰲡ⓦ(Shut,a≔𝔸⋄𝕂→►𝚲x(⠤a₀,⠶a₁))
+⭷ shut = 󰲡ⓦ(Shut,(𝔸⋄𝕂)≕a→►𝚲x(⠤a₀,⠶a₁))

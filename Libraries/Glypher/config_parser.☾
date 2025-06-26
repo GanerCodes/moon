@@ -1,53 +1,70 @@
 ⨡ peggle2
 ⨡ peggle2/gram_tools
 ⨡ ☾ontgen
+⨡ text_format
 
 GRAM=󰦥󰦥󰦥󰦥󰦥
 main      = (𝗪 ∨ 󰆴com ∨ concat ∨ 󰆴'␠')*
 ☾sub      = 󰆴'⫾' ƨ((󰆴"␛␛" '⫾' ∨ ~‹[^⫾]›)+) 󰆴'⫾'
 atom      = ☾sub ∨ style ∨ ∀ ∨ ⨝ ∨ output ∨ l
-output    = 󰆴'⟶' 𝖶 (s ∨ 𝘄 ∨ (ignored='◌') ∨ ~‹[^␠⫾⟧⁆⟩\n\t ]›)*
+output    = 󰆴'⟶' 𝖶 (s ∨ 𝘄 ∨ (ignore='◌') ∨ ~‹[^␠⫾⟧⁆⟩\n\t ]›)*
 style     = style_reg ∨ (smol = 󰆴'𝕟')
 style_reg = 󰆴'⟨' ~‹[^⟩]*› 󰆴'⟩'
 concat    = (⠶atom 𝗐)+
 ∀         = 󰆴'⟦' (⠶atom ∨ 𝗪)* 󰆴'⟧'
 ⨝         = 󰆴'⁅' (⠶atom ∨ 𝗪)* 󰆴'⁆'
-l         = esc ∨ l_s ∨ ~‹[^␠⫾⟶⟨⟩⟦⟧⁅⁆\t\n ]›
+l         = esc ∨ s ∨ l_s ∨ ~‹[^␠⫾⟶⟨⟩⟦⟧⁅⁆\t\n ]›
 l_s       = ~‹[𝕄𝕊ᐦ]›
-s         = 󰆴'"' (⠶esc ∨ ~‹[^"]›)* 󰆴'"' ∨ ⠶esc
+s         = 󰆴'‹' (⠶esc ∨ ~"[^›]")* 󰆴'›' ∨ ⠶esc
 esc       = 󰆴‹␛␛› ~‹.›
 𝘄         = ~‹(␛␛\n|[ \t])+›
 𝗪         = ~‹(␛␛\n|[ \t\n])+›
 com       = ~‹[^\n]*›
 󰦥󰦥󰦥󰦥󰦥
 
-⨡ main ⭸ *
+pfxd = 󷺹󰈲⭢󷺹₀ᐸꟿ⁺󰲣yᐵ₁﹕ᐸ⭢pfxd
+chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
 
+⊢ parse_config(conf,include_chars=ᐦ,ns=□):
+    ¿ns≅□: ns={}
+    gram = peggle2(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›)
+    󱁕 = gram(conf,remove_trashes=✗).ftrp(‹☾sub›,󷺻𝔗(󱠨(⟞.rm(󷺹ᵗ≡␛󰆴)􋒷,ns,ƒ=eval,ret=✓)))􋒷 gram
+    󱁕.rm(󷺹ᵗ∈␛𝘄␛𝗪).ftrp(‹concat›,󷺹.set(t=‹⨝›))
+    ⊢ parse_stmt(󱁕):
+        s=⍁
+        ⊢ do(󱁕): ¿󱁕ᵗ≡‹l󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪[[󱁕₀ᵗ≡‹l_s› ⭜‹(⟦󱁕􋒷⟧)›⭝ 󱁕􋒷]]
+                 ¿󱁕ᵗ≡‹style󷺗󷺗󷺗󷺗›: ↪do(󱁕₀)
+                 ¿󱁕ᵗ≡‹smol󷺗󷺗󷺗󷺗󷺗›: ↪[[                   {smol=✓}⭢ℵ]]
+                 ¿󱁕ᵗ≡‹style_reg›: ↪[[‹fg bg bc bw›⍭󱑼󱁕􋒷.split(␛|)⭢ℵ]]
+                 ¿󱁕ᵗ≡‹output󷺗󷺗󷺗›: s.extend(j≔󱁕ᐵᵗ≡‹ignore›⭜□⭝⟞􋒷)
+                                  ↪[[□]]
+                 ¿󱁕ᵗ≡␛⨝: ↪󱁕ᴍdo⭢⨉⭢ᴍ󰌷
+                 ⸘󱁕ᵗ≡␛∀: ↪󱁕ᴍdo⭢󰌷
+        ↪do(󱁕)ᐵᐵ≅□⭜􍪵0 s.pop
+    symbs = 󱁕ᴍparse_stmt⭢󰌷⭢ᐵ􍨄≅□⭜󰮈⭝(⟞􍨄,⟞﹕􍨄󰈳(⬤ᐹ𝑙)􋇐(⬤ᐹ𝑑)ᑀ₀,⟞₁ſ󰁸󰁹|ᐸ⭢𝑙)ᐸ␛
+              󷺹₀ᐸꟿ⁺󰲣yᐵ₁ᐸᑀᐵ₀ᐸ,⟞ᐵ₁ᐸſ󰁸󰁹|ᐸ󰅂 ⭢ ℵ
+    seq,sty = 2⭥ᐖsymbsꟿ⁺󰲣y􍪴󰅂
+    K = KEYMAP⁻∪(‹(𝕊) (𝕄) (ᐦ)›⍭𝑠)
+    B,E = seqᴍ𝑙,ℵ
+    ∀B: r = 0 B.pop
+        r₁󷸊ᐵᐵ∈E⭜E􍪴⭝⟞⛶􍧱ᐸ⨉ᴍ󰌷ᐸ󰌷⭢ᚤ
+        (dest ≔⬅ r₁󰌷⭢⊂K⭜E⭝B)ᵣ􊬣=r₁
+    E󷸊ꟿ⁺󰲣yᐵ∖‹(ᐦ)›󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
+    c = chkp(Eꟿ►⭢󰌷→pfxd,⬤)
+    E󷸊ꟿ⁺󰲣yᐵc⭜􍪵⟞+␛𝕊  󰤱 doesn't add multiple spaces but eh
+    ↪⦉⠤include_chars⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K⭜⍁⭝Eₓ,y₁󰅂
+conf_to_xcompose = c↦cꟿ󰲣x∧y⭜􍭓(y₀,ₓ)󰅂ᴍ⨉⭢󰌷⭢xcomp_seqs
+
+⭷ parse_config,conf_to_xcompose
+
+ E󰒼ꟿ󰲣padl(‹⟦x⟧ ⟦y⨝␛│⟧›,40)__highlighter__󰅂ᙡ0⋄3⋄4ᴍ⬤⨝𝘀⭢⨝𝗻☾
+ ⨡ main ⭸ *
+ ⨡􋀸 Compiler/generate_operators
+ c = parse_config(CONFIG+𝗻+generate_fontcompose_conf(ops))
+ ‹/tmp/.XCompose› 󱖔􍡩 c conf_to_xcompose
+
+ CONFIG = 󰦥󰦥󰦥󰦥󰦥q⟦|<>(){}[]⟧ ⟶ ␛⫾⟬⟭⦃⦄⦅⦆␛⟦␛⟧󰦥󰦥󰦥󰦥󰦥
  CONFIG = 󰦥󰦥󰦥󰦥󰦥⟦⁅x⟨1|2|3|4⟩⟦⁅y⟶α⁆⁅z⟶β⁆⟧⁆⁅⁅h⟦xyz⟧⁆⟶𝕏𝕐ℤ⁆⟧󰦥󰦥󰦥󰦥󰦥
  CONFIG = 󰦥󰦥󰦥󰦥󰦥⁅a⟶e⁆󰦥󰦥󰦥󰦥󰦥
-
-gram = peggle2(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›)
-󱁕 = gram(CONFIG,remove_trashes=✗).ftrp(‹☾sub›,󷺻𝔗(󱠨(⟞.rm(󷺹ᵗ≡␛󰆴)􋒷,globals(),ƒ=eval,ret=✓)))􋒷 gram
-󱁕.rm(󷺹ᵗ∈␛𝘄␛𝗪).ftrp(‹concat›,󷺹.set(t=‹⨝›))
-⊢ parse_stmt(󱁕):
-    s=⍁
-    ⊢ do(󱁕): ¿󱁕ᵗ≡‹l󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪[[󱁕₀ᵗ≡‹l_s› ⭜‹(⟦󱁕􋒷⟧)›⭝ 󱁕􋒷]]
-             ¿󱁕ᵗ≡‹style󷺗󷺗󷺗󷺗›: ↪do(󱁕₀)
-             ¿󱁕ᵗ≡‹smol󷺗󷺗󷺗󷺗󷺗›: ↪[[                   {smol=✓}⭢ℵ]]
-             ¿󱁕ᵗ≡‹style_reg›: ↪[[‹fg bg bc bw›⍭󱑼󱁕􋒷.split(␛|)⭢ℵ]]
-             ¿󱁕ᵗ≡‹output󷺗󷺗󷺗›: s.extend(j≔󱁕ᐵᵗ≡‹ignore›⭜󰮈⭝⟞􋒷)
-                              ↪[[□]]
-             ¿󱁕ᵗ≡␛⨝: ↪󱁕ᴍdo⭢⨉⭢ᴍ󰌷
-             ⸘󱁕ᵗ≡␛∀: ↪󱁕ᴍdo⭢󰌷
-    ↪do(󱁕)ᐵᐵ≡□⭜[0 s.pop]⭝⟞
-
-symbs = 󱁕ᴍparse_stmt⭢󰌷⭢ᐖ(⟞􍨄 ₀,⟞﹕􍨄󰈳(⬤ᐹ𝑙)􋇐(⬤ᐹ𝑑)ᑀ₀,⟞₁ſ󰁸󰁹|ᐸ⭢𝑙)ᐸ ℵ
-
-k = KEYMAP⁻∪(‹(𝕊) (𝕄) (ᐦ)›⍭𝑠)
-b,e = [⠤symbs⁻],k.copy
-∀b: (S,_) = r = symbsₛ􊮝₀􋘲􋕜ₚ󰂼ₚ
-    r₀=Sᐵ≡‹(ᐦ)›⭜⍁⭝⟞∈k⭜􍪴⭝⟞∈symbs⭜symbs􍪴 ₀⭝􍪴ᐸ󰌷
-    S⊂k⭜e⭝b➡≕dest⭢.append(s)
-    ¿dest≡e: r₀󷸊󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝
-
-symbsꟿ⁺󰲣y₀󰅂 ⭢􍮕  xcomp_seqs ⭢ ☾
+ CONFIG = 󰦥󰦥󰦥󰦥󰦥⟦⁅[ [⁆⁅] ]⁆⟧  ⟶         ␛⟨␛⟩󰦥󰦥󰦥󰦥󰦥
+ CONFIG = 󰦥󰦥󰦥󰦥󰦥a⟶α ␠ b⟶α ␠ ⟨f00⟩αα⟶β 󰦥󰦥󰦥󰦥󰦥

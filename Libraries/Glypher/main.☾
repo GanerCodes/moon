@@ -8,11 +8,14 @@ PATH_CODE_CONFIG  = ‹~/.config/VSCodium/User/settings.json›
 COPY_OUT_XCOMPOSE = ‹/c/X11_Configs/.XCompose›
 COPY_OUT_FONT     = ✓ ∧ ‹/c/Fonts/99_JuliaMono-Regular.ttf›
 
-d4,c4,d8 = ‹wsad qezc wsadqezc›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
-D4,C4,D8 = ‹WSAD QEZC WSADQEZC›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
-letnum = abcABC123
-greek = ‹ςΘθϑαβδ∇∂ΔεηφϕΦικλΛμπΨΠψρσΣτυνωΩΞχγΓζξ›
-lngeek = ‹␛⟦⁅␛⟦⟦letnum⟧␛⟧⁆⁅𝕄⟨␛⟦⟦greek⟧␛⟧⟩⁆␛⟧›
+𝔭 = ⨡ config_parser
+ ⨡􋀸 Compiler/generate_operators
+
+ 𝔭.d4,𝔭.c4,𝔭.d8 = ‹wsad qezc wsadqezc›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
+ 𝔭.D4,𝔭.C4,𝔭.D8 = ‹WSAD QEZC WSADQEZC›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
+ 𝔭.letnum = abcABC123
+ 𝔭.greek  = ‹ςΘθϑαβδ∇∂ΔεηφϕΦικλΛμπΨΠψρσΣτυνωΩΞχγΓζξ›
+ 𝔭.lngeek = ‹␛⟦⟦𝔭.letnum⟧⁅𝕄␛⟦⟦𝔭.greek⟧␛⟧⁆␛⟧›
 
 CONFIG=󰦥󰦥󰦥󰦥󰦥
 
@@ -34,7 +37,7 @@ wh⟦⁅p⟦𝕊/⟧⁆⁅t⟦𝕊/⟧⁆𝕊x+-123ABGLs⟧⟶
       ˍ¯     ˏ´     ˳˚     ᴗ˘    ˬˇ   ‥¨   ․˙     ˎ`   ꞈˆ     ˷˜
 
  micheal's mathematical monikers
-⟨cb3⟩⟦ ⁅algebra⟶󰫮⁆⁅graph⟶󰡷⁆⁅connected⟶⁆⁅holds⟶✓⁆⁅generated𝕊by⟶⚙⁆⁅ID⟶󰫶⁆⁅metricm⟶󰣰⁆⁅basis⟶󰨥⁆⁅topology⟶󰬁⁆⁅VS⟶󰬃⁆⁅ideal⟶󱧡⁆⁅point⟶⁆⁅vector𝕊⟶󰬃⁆⁅module⟶󰫺⁆⁅polynomial⟶󰡱⁆⁅path⟶󰉽⁆⁅vector𝕊space⟶󰬃⁆⁅ED⟶󰫲⁆⁅ieal⟶󱧡⁆⁅MS⟶󰍒⁆⁅topological𝕊space⟶⁆⁅edge⟶󰝊⁆⁅object⟶▢⁆⁅scalar⟶ᾇ⁆⁅domain⟶󰫱⁆⁅node⟶⁆⁅chain⟶󰿨⁆⁅line⟶󰕞⁆⁅surjection⟶󰚥⁆⁅vector⟶⁆⁅lattice⟶󱗿⁆⁅morphism⟶⁆⁅manifold⟶⁆⁅imorphism⟶󰉷⁆⁅fix⟶⁆⁅space⟶󱁐⁆⁅topological𝕊⟶⁆⁅DVR⟶⁆⁅homomorphism⟶󰠩⁆⁅find⟶󰍉⁆⁅ijection⟶󰎑⁆⁅form⟶␌⁆⁅gen𝕊by⟶⚙⁆⁅id𝕊⟶󰻾⁆⁅loop⟶➰⁆⁅element⟶⁆⁅functor⟶󱨹⁆⁅salgebra⟶󰊰⁆⁅tree⟶󱁕⁆⁅transformation⟶󰊄⁆⁅vectorv⟶⁆⁅UFD⟶󰬂⁆⁅relation⟶󰑇⁆⁅neighborhood⟶󰷔⁆⁅derangement⟶⁆⁅function⟶󰊕⁆⁅group⟶󰫴⁆⁅tensor⟶󰗴⁆⁅set𝕊⟶󰬀⁆⁅TS⟶⁆⁅category⟶󰫰⁆⁅partition⟶󱇙⁆⁅metric𝕊⟶󰍒⁆⁅example⟶⁆⁅family⟶󱘎⁆⁅measure⟶󰑭⁆⁅field⟶󰫳⁆⁅fix⟶⁆⁅ring⟶󰫿⁆⁅PID⟶󰫽⁆⁅matrix⟶󰘨⁆⁅proot⟶⎋⁆⁅play⟶⁆⁅pause⟶⁆⁅prove⟶⁆⁅have⟶⏏⁆⁅⟦ᐦh⟧surface⟶ϡϠ⁆ ⟧
+⟨cb3⟩⟦ ⁅algebra⟶󰫮⁆⁅graph⟶󰡷⁆⁅connected⟶⁆⁅holds⟶✓⁆⁅generated𝕊by⟶⚙⁆⁅ID⟶󰫶⁆⁅metricm⟶󰣰⁆⁅basis⟶󰨥⁆⁅topology⟶󰬁⁆⁅VS⟶󰬃⁆⁅ideal⟶󱧡⁆⁅point⟶⁆⁅vector𝕊⟶󰬃⁆⁅module⟶󰫺⁆⁅polynomial⟶󰡱⁆⁅path⟶󰉽⁆⁅ED⟶󰫲⁆⁅ieal⟶󱧡⁆⁅MS⟶󰍒⁆⁅topological𝕊space⟶⁆⁅edge⟶󰝊⁆⁅object⟶▢⁆⁅scalar⟶ᾇ⁆⁅domain⟶󰫱⁆⁅node⟶⁆⁅chain⟶󰿨⁆⁅line⟶󰕞⁆⁅surjection⟶󰚥⁆⁅vector⟶⁆⁅lattice⟶󱗿⁆⁅morphism⟶⁆⁅manifold⟶⁆⁅imorphism⟶󰉷⁆⁅fix⟶⁆⁅space⟶󱁐⁆⁅topological𝕊⟶⁆⁅DVR⟶⁆⁅homomorphism⟶󰠩⁆⁅find⟶󰍉⁆⁅ijection⟶󰎑⁆⁅form⟶␌⁆⁅gen𝕊by⟶⚙⁆⁅id𝕊⟶󰻾⁆⁅loop⟶➰⁆⁅element⟶⁆⁅functor⟶󱨹⁆⁅salgebra⟶󰊰⁆⁅tree⟶󱁕⁆⁅transformation⟶󰊄⁆⁅vectorv⟶⁆⁅UFD⟶󰬂⁆⁅relation⟶󰑇⁆⁅neighborhood⟶󰷔⁆⁅derangement⟶⁆⁅function⟶󰊕⁆⁅group⟶󰫴⁆⁅tensor⟶󰗴⁆⁅set𝕊⟶󰬀⁆⁅TS⟶⁆⁅category⟶󰫰⁆⁅partition⟶󱇙⁆⁅metric𝕊⟶󰍒⁆⁅example⟶⁆⁅family⟶󱘎⁆⁅measure⟶󰑭⁆⁅field⟶󰫳⁆⁅fix⟶⁆⁅ring⟶󰫿⁆⁅PID⟶󰫽⁆⁅matrix⟶󰘨⁆⁅proot⟶⎋⁆⁅play⟶⁆⁅pause⟶⁆⁅prove⟶⁆⁅have⟶⏏⁆⁅⟦ᐦh⟧surface⟶ϡϠ⁆ ⟧
 
  q ⟦⫾letnum⫾⟧                    ⟨f48⟩  ⟶ 𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡
 wb ⟦⫾lngeek⫾⟧                    ⟨8dc⟩  ⟶ 𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝞁𝝝𝝷𝞋𝝰𝝱𝝳𝝯𝞉𝝙𝝴𝝶𝞅𝝫𝞍𝝸𝝹𝝺𝝠𝝻𝝿𝞇𝝥𝝭𝞀𝞂𝝨𝞃𝞄𝝼𝞈𝝮𝝣𝞆𝝲𝝘𝝵𝝽
@@ -64,7 +67,7 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
 ⟦⁅rrr⟦𝕊⟦⫾num⫾⟧⟧⁆⁅𝕄⟦⁅WC⁆⁅wc⁆⟧r⁆⟧⟶
       ♺ ◌♳♴♵♶♷♸♹◌◌     ♼   ♽
 
-⟨7e2⟩ ⁅w⟦fF⟧𝕊⟶ƒ󰊕⁆
+⟨7e2⟩ w⟦fF⟧𝕊⟶ƒ󰊕
 ⟨6fe⟩ wS⟦lP⟧⟶ℓ℘
 ⟨f5f⟩ whB⟶ת
 
@@ -72,119 +75,110 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
             ⊲⋪⊴⋬⊳⋫⊵⋭       🜂🜄     ᐄᐂ     ⁆
       ⁅o⟦𝕊=-/cdlpxfnv⁅o𝕊⁆⁅88⁆⟧          ⟶
          ⋅≖⊖⨸©⎊⎉⌾⨂⎔⭔⬠  •   ↀ             ⁆
-      ⁅O⟦:⁅⟦+x⟧𝕊⁆⁅o𝕊⁆⟧                  ⟶
-         ⍥  ⊕⊗     ⊙                     ⁆
-      ⁅ ⟦:_⟧O                           ⟶
-         󷸧󷸦                              ⁆
+      ⁅⟦⁅O⟦:⁅⟦+x⟧𝕊⁆⁅o𝕊⁆⟧⁆⁅⟦:_⟧O⁆⟧       ⟶
+          ⍥  ⊕⊗     ⊙      󷸧󷸦            ⁆
       ⁅⟦⁅[⟦-|⟧]⁆⁅#⟦R𝕊\⟧⁆⟧               ⟶
                  ⵌ⌗♯                   ⁆
-      ⁅ST⟦+⁅A⟦𝕊-d⟧⁆⟧                    ⟶
-             ⭐✪✡                        ⁆
-      ⁅ ⟦⁅⟦<>⟧⟦<>⟧⁆⁅<.>⁆⟧𝕊    ⟶ «◌♢»⟐    ⁆
-      ⁅ <>R                   ⟶ 󱀝        ⁆
-      ⁅ ⟦56⟧-                 ⟶ ⬠⎔       ⁆
-      ⁅ T⟦⫾d4⫾⫾D4⫾⟧𝕊          ⟶ △▽▷◁⯅⯆⯇⯈ ⁆
-      ⁅ '⟦1234⟧               ⟶ ′″‴⁗     ⁆
-      ⁅ \..𝕊                  ⟶ ¨        ⁆
-      ⁅ ?⟦rR⟧                 ⟶ ⸮␦       ⁆
-      ⁅ ⟦⁅!⟦𝕊@?⟧⁆⁅ !⁆⟧        ⟶ ❗‼‽󱈸     ⁆
-      ⁅ ⟦<b⟧$                 ⟶ ¢£       ⁆
-      ⁅ $R                    ⟶ 󷹹        ⁆⟧
+      ⁅⟦⁅⟦<>⟧⟦<>⟧⁆⁅<.>⁆⟧𝕊    ⟶ «◌♢»⟐     ⁆
+      ⁅ST⟦+⁅A⟦𝕊-d⟧⁆⟧         ⟶ ⭐✪✡      ⁆
+      ⁅<>R                   ⟶ 󱀝         ⁆
+      ⁅⟦56⟧-                 ⟶ ⬠⎔        ⁆
+      ⁅T⟦⫾d4⫾⫾D4⫾⟧𝕊          ⟶ △▽▷◁⯅⯆⯇⯈  ⁆
+      ⁅'⟦\1234⟧              ⟶ ¨′″‴⁗       ⁆
+      ⁅?⟦rR⟧                 ⟶ ⸮␦        ⁆
+      ⁅⟦⁅!⟦𝕊@?⟧⁆⁅ !⁆⟧        ⟶ ❗‼‽󱈸      ⁆
+      ⁅⟦<b⟧$                 ⟶ ¢£        ⁆
+      ⁅$R                    ⟶ 󷹹         ⁆⟧
 
-⟨b56⟩⟦⁅.4 ⟶ ⁞⁆⁅⟦24⟧* ⟶ ⁑󷺄⁆⁅{3⟶🝑⁆⁅*𝕊⟶∗⁆⁅⟦34⟧sq ⟶ ∛∜⁆
+⟨b56⟩⟦⁅.4⟶⁞⁆⁅⟦24⟧*⟶⁑󷺄⁆⁅{3⟶🝑⁆⁅*𝕊⟶∗⁆⁅⟦34⟧sq⟶∛∜⁆
       ⁅vv⟶‖⁆⁅|..⟶⦙⁆⁅⟦3|⟧|⟶┆󰤃⁆
-      ⁅ dp⟦adqc⁅p𝕊⁆⟧ ⟶ ⋉⋊⋋⋌⋈ ⁆
-      ⁅ ⟦xX⟧⟦xX⟧     ⟶ ⨯×◌⨉  ⁆
-      ⁅ v⟦ws⟧⟦ws-.⁅v⟦ws⟧⁆⁅eq⁆_⟧⟶
-              ⩚◌⩜⩑   ⩕◌    ⩞ ⩠␛
-              ◌⩛⩝⩒   ⩙⩖    ⩢ ⩣ ⁆
-      ⁅ 𝕄⟦ᐦi⁅ii⁆⁅iii⁆⁅o⟦ᐦi⁅ii⁆⟧⁆⁅⟦wc⟧⟦cᐦ⟧⁆pqb⟧int
-        ⟶ ∫∬  ∭    ⨌    ∮∯  ∰     ∲∱  ∳⨑  ⨕⨖⑀       ⁆
-      ⁅ ⟦<>⟧⟦/⁅=/⁆⟧            ⟶ ≮≰≯≱               ⁆
-      ⁅ if⟦fgtq⟧               ⟶ ⟺⇕󷹂󷹃               ⁆
-      ⁅ .⟦[(⟧⟦)]⟧              ⟶ 󷹯󷹭󷹮󷹰               ⁆
-      ⁅ e⟦⁅⟦[]⟧_⁆⁅⟦ws⟧𝕊⁆⟧      ⟶ ⋸◌⟒⫙               ⁆
-      ⁅ U⟦ws⟧                  ⟶ ⋃⋂                 ⁆
-      ⁅ ==/                    ⟶ ≢                  ⁆
-      ⁅ ~⟦<>⟧⟦⁅⟦ᐦ=⟧⟦𝕊/⟧⁆⁅~⟦𝕊n⟧⁆n⟧                  ⟶
-          ≺⊀≼⋠≾⋨⪱≻⊁≽⋡≿⋩⪲≁                           ⁆
-      ⁅ ⟦⁅eq⟦aft.q⁅i⟦<>⟧⁆⟧⁆⟧                       ⟶
-             ≈≝≜󷹀≟   ⪟⪠                             ⁆
-      ⁅ u⟦⁅⟦ad⟧⟦⁅_𝕊⁆⁅_/⁆⟧⁆⟧                        ⟶
-                 ⊇⊉⊆⊈                               ⁆
-      ⁅ ⟦⁅<|⟦|ᐦ⟧⁆⁅-|⁆⁅~|⁆⁅|-⁆⁅⟦|ᐦ⟧|>⁆⟧𝕊 ⟶ ᗕᗏ⟞⦚⟝ᗌᗒ   ⁆⟧
+      ⁅dp⟦adqc⁅p𝕊⁆⟧ ⟶ ⋉⋊⋋⋌⋈ ⁆
+      ⁅⟦xX⟧⟦xX⟧     ⟶ ⨯×◌⨉  ⁆
+      ⁅v⟦ws⟧⟦ws-.⁅v⟦ws⟧⁆⁅eq⁆_⟧⟶
+             ⩚◌⩜⩑   ⩕◌    ⩞ ⩠␛
+             ◌⩛⩝⩒   ⩙⩖    ⩢ ⩣ ⁆
+      ⁅𝕄⟦ᐦi⁅ii⁆⁅iii⁆⁅o⟦ᐦi⁅ii⁆⟧⁆⁅⟦wc⟧⟦cᐦ⟧⁆pqb⟧int
+       ⟶ ∫∬  ∭    ⨌    ∮∯  ∰     ∲∱  ∳⨑  ⨕⨖⑀     ⁆
+      ⁅⟦<>⟧⟦/⁅=/⁆⟧            ⟶ ≮≰≯≱             ⁆
+      ⁅if⟦fgtq⟧               ⟶ ⟺⇕󷹂󷹃             ⁆
+      ⁅.⟦[(⟧⟦)]⟧              ⟶ 󷹯󷹭󷹮󷹰             ⁆
+      ⁅e⟦⁅⟦[]⟧_⁆⁅⟦ws⟧𝕊⁆⟧      ⟶ ⋸◌⟒⫙             ⁆
+      ⁅U⟦ws⟧                  ⟶ ⋃⋂               ⁆
+      ⁅==/                    ⟶ ≢                ⁆
+      ⁅~⟦<>⟧⟦⁅⟦ᐦ=⟧⟦𝕊/⟧⁆⁅~⟦𝕊n⟧⁆n⟧                ⟶
+         ≺⊀≼⋠≾⋨⪱≻⊁≽⋡≿⋩⪲≁                         ⁆
+      ⁅⟦⁅eq⟦aft.q⁅i⟦<>⟧⁆⟧⁆⟧                     ⟶
+            ≈≝≜󷹀≟   ⪟⪠                           ⁆
+      ⁅u⟦⁅⟦ad⟧⟦⁅_𝕊⁆⁅_/⁆⟧⁆⟧                      ⟶
+                ⊇⊉⊆⊈                             ⁆
+      ⁅⟦⁅<|⟦|ᐦ⟧⁆⁅-|⁆⁅~|⁆⁅|-⁆⁅⟦|ᐦ⟧|>⁆⟧𝕊 ⟶ ᗕᗏ⟞⦚⟝ᗌᗒ ⁆⟧
 
 ⟨3f4|3f412|3f4|1⟩⟦⁅NL⁆⁅SP⁆⁅HT⁆⁅DEL⁆⁅ESC⁆⁅NUL⁆⁅ENQ⁆⁅SOH⁆⁅STX⁆⁅ETX⁆⁅EOT⁆⁅ACK⁆⁅BEL⁆⁅BS⁆⁅LF⁆⁅VT⁆⁅FF⁆⁅CR⁆⁅SO⁆⁅SI⁆⁅DLE⁆⁅DC1⁆⁅DC2⁆⁅DC3⁆⁅DC4⁆⁅NAK⁆⁅SYN⁆⁅ETB⁆⁅CAN⁆⁅EM⁆⁅SUB⁆⁅FS⁆⁅GS⁆⁅RS⁆⁅US⁆⁅ATM⁆⟧ ⟶ ␤␛␠␉␡␛␛␀␅␁␂␃␄␆␇␈␊␋␌␍␎␏␐␑␒␓␔␕␖␗␘␙␚␜␝␞␟󰵇
-⟨67f⟩⟦⁅a⟦ ⁅ ⟦⁅qc⁆⁅ez⁆⟧         ⟶ ⤡⤢               ⁆
-          ⁅ ⫾D4⫾𝕊              ⟶ ⭡⭣⭠⭢             ⁆
-          ⁅ ⟦⁅WW⁆⁅SS⁆⁅AA⁆⁅DD⁆⟧ ⟶ ⬆⬇⬅➡             ⁆
-          ⁅ ⟦lxyw⟧⟦ad⟧         ⟶ ⟵␛⟶⇜⇝↢↣⬿⤳        ⁆
-          ⁅ b⫾d4⫾⫾d4⫾          ⟶ ◌◌⮢⮣◌↯⮠⮡⮤⮦↜↭⮥⮧◌↝ ⁆
-          ⁅ bb⟦⁅w𝕊⁆⁅s𝕊⁆⁅ws⁆⟧   ⟶ 󰘣󰘡󰡏              ⁆
-          ⁅ c⟨c4⟩              ⟶ ⌜⌝⌞⌟             ⁆
-          ⁅ d⟦⫾d4⫾/⟧           ⟶ ↟↡↞↠↮            ⁆
-          ⁅ f⟨c4⟩              ⟶ ⌈⌉⌊⌋             ⁆
-          ⁅ i⟦⫾d4⫾⁅⟦ad⟧/⁆⟧𝕊    ⟶ ⇑⇓⇐⇒⇍⇏           ⁆
-          ⁅ m⫾d4⫾              ⟶ ↥↧↤↦             ⁆
-          ⁅ o⟦ad⟧              ⟶ ⬰⇴               ⁆
-          ⁅ t⫾d4⫾              ⟶ ⊥⊤⊣⊢             ⁆
-          ⁅ u⟦⁅w+⁆⁅s⟦.s⟧⁆⟧     ⟶ ⨄⩀⋒              ⁆
-          ⁅ .⫾d4⫾              ⟶ ⋮⋯⋰⋱             ⁆
-          ⁅ ⟨d8⟩𝕊              ⟶ ↑↓←→↖↗↙↘         ⁆ ⟧⁆
-      ⁅A⟦ ⁅ R⟨D8⟩𝕊             ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾         ⁆
-          ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧ ⟶ ↶↷↩↪             ⁆ ⟧⁆ ⟧
+⟨67f⟩⟦⁅a⟦⁅ ⟦⁅qc⁆⁅ez⁆⟧         ⟶ ⤡⤢              ⁆
+         ⁅ ⫾D4⫾𝕊              ⟶ ⭡⭣⭠⭢            ⁆
+         ⁅ ⟦⁅WW⁆⁅SS⁆⁅AA⁆⁅DD⁆⟧ ⟶ ⬆⬇⬅➡            ⁆
+         ⁅ ⟦lxyw⟧⟦ad⟧         ⟶ ⟵␛⟶⇜⇝↢↣⬿⤳       ⁆
+         ⁅ b⫾d4⫾⫾d4⫾          ⟶ ◌◌⮢⮣◌↯⮠⮡⮤⮦↜↭⮥⮧◌↝⁆
+         ⁅ bb⟦⁅w𝕊⁆⁅s𝕊⁆⁅ws⁆⟧   ⟶ 󰘣󰘡󰡏             ⁆
+         ⁅ c⟨c4⟩              ⟶ ⌜⌝⌞⌟            ⁆
+         ⁅ d⟦⫾d4⫾/⟧           ⟶ ↟↡↞↠↮           ⁆
+         ⁅ f⟨c4⟩              ⟶ ⌈⌉⌊⌋            ⁆
+         ⁅ i⟦⫾d4⫾⁅⟦ad⟧/⁆⟧𝕊    ⟶ ⇑⇓⇐⇒⇍⇏          ⁆
+         ⁅ m⫾d4⫾              ⟶ ↥↧↤↦            ⁆
+         ⁅ o⟦ad⟧              ⟶ ⬰⇴              ⁆
+         ⁅ t⫾d4⫾              ⟶ ⊥⊤⊣⊢            ⁆
+         ⁅ u⟦⁅w+⁆⁅s⟦.s⟧⁆⟧     ⟶ ⨄⩀⋒             ⁆
+         ⁅ .⫾d4⫾              ⟶ ⋮⋯⋰⋱            ⁆
+         ⁅ ⟨d8⟩𝕊              ⟶ ↑↓←→↖↗↙↘        ⁆ ⟧⁆
+      ⁅A⟦⁅ R⟨D8⟩𝕊             ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾        ⁆
+         ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧ ⟶ ↶↷↩↪            ⁆ ⟧⁆ ⟧
 
 ⟨d7d⟩⟦⁅vt⟶⨃⁆⁅ic⟶⯈⁆⁅IC⟶⮞⁆⁅st⟶✣⁆⁅sps⟶ᔲ⁆
       ⁅⟦sS⟧r  ⟶ ƨƧ⁆⁅FF⟦𝕊R⟧ ⟶ ᖵᖶ⁆
       ⁅.⟦tb⟧  ⟶ ∴∵⁆⁅ai⟦AD⟧ ⟶ 󷹛󷹚⁆
       ⁅i⟦ᐦ/⟧s ⟶ ⫢󷹈⁆⁅s⟦ᐦ/⟧i ⟶ 󷹉󷹊⁆
-      ⁅E⟦𝕊/⟧  ⟶ ∃∄⁆ ⟧
+      ⁅E⟦𝕊/⟧  ⟶ ∃∄⁆⟧
 
-ee ⟶ə ␠ ix ⟶🝤 ␠ th ⟶þ ␠ TH ⟶Þ
+ee⟶ə ␠ ix⟶🝤 ␠ th⟶þ ␠ TH⟶Þ ␠ O-⟶␛◌
 sec⟶§ ␠ to𝕊⟶󰤱 ␠ nt𝕊⟶󷹇 ␠ mod⟶⸓
-asy⟶󱟱 ␠ lgq⟶ȹ ␠ cll⟶󱇙
-ref⟶ꔧ ␠ doc⟶󰈙 ␠ awt⟶󱫬
+asy⟶󱟱 ␠ lgq⟶ȹ ␠ cll⟶󱇙 ␠ ccn⟶ᗜ
+ref⟶ꔧ ␠ doc⟶󰈙 ␠ awt⟶󱫬 ␠ cir⟶󱖈
 wre⟶≀ ␠ NEW⟶🆕 ␠ und⟶󱣩 ␠ act⟶⮎
-⟦'"⁅𝕄⟦αωι⟧⁆⟧_⟶⍘󷹆⍶⍹⍸
-t⟦⁅ex⁆⁅xt⁆⟧⟶󰊄
+cod⟶
+cp⟦r⁅t⫾d4⫾⁆⟧ ⟶ ☽⯟◌⯝⚸
+c⟦JjoW⟧𝕊 ⟶ ᒍ🝇⩫
+C⟦bd⁅l⟦𝕊ws⟧⁆⟧ ⟶ ᖲᖱᒪⴷⴸ
 ⟦OR⟧/ ⟶ Ø℟
 ⟦nNs⟧' ⟶ ńŃś
 ./⟦/.⟧ ⟶ ╱⁒
 F⟦-|⟧ ⟶ ─│
+t⟦⁅ex⁆⁅xt⁆⟧   ⟶ 󰊄
 l⟦⁅ae⁆⁅AE⁆⟧   ⟶ æÆ
 star⟦𝕊-d⟧     ⟶ ⭐✪✡
 w/⟦𝕊o⟧        ⟶ 󰇚󱂰
 pl⟦[]𝕊⟧       ⟶ փ
-q⟦|<>(){}[]⟧  ⟶ ␛⫾⟬⟭⦃⦄⦅⦆␛⟦␛⟧
-c⟦   (){}[]⟧  ⟶     ❴❵󰅁󰅂␛⁅␛⁆
+⟦'"⁅𝕄⟦αωι⟧⁆⟧_ ⟶ ⍘󷹆⍶⍹⍸
+q⟦|<>()  []⟧  ⟶ ␛⫾⟬⟭⦅⦆␛⟦␛⟧
+c⟦   (){}[]⟧  ⟶   ❴❵󰅁󰅂␛⁅␛⁆
+⟦⁅[𝕊[⁆⁅]𝕊]⁆⟧  ⟶ 《》
+⟦⁅( (⁆⁅) )⁆⟧  ⟶ ｟｠
+⟦⁅[ <⁆⁅] >⁆⟧  ⟶ 〔〕
+⟦⁅[ (⁆⁅] )⁆⟧  ⟶ 【】
 ⟦[]⟧𝕊𝕊        ⟶ ⟮⟯
 ⟦[]⟧.         ⟶ ⦑⦒
 ⟦lr⟧|         ⟶ ⥏⥑
 ⟦lr⟧.         ⟶ ⢨⡅
 ⁅_⟦[]⟧⁆       ⟶ ⦋⦌
-⁅⟦{}⟧𝕊⁆       ⟶ ⦉⦊
-⟦⁅[𝕊[⁆⁅]𝕊]⁆⟧  ⟶ 《》
-⟦⁅( (⁆⁅) )⁆⟧  ⟶ ｟｠
-⟦⁅[ <⁆⁅] >⁆⟧  ⟶ 〔〕
-⟦⁅[ (⁆⁅] )⁆⟧  ⟶ 【】
-⟦⁅[ [⁆⁅] ]⁆⟧  ⟶ ␛⟨␛⟩
-⟦⁅𝕊⟦𝕊𝕄⟧⁆⁅𝕄𝕊⁆⟧ ⟶   "‍"
+⟦⁅𝕊⟦𝕊𝕄⟧⁆⁅𝕄𝕊⁆⟧ ⟶   ‹‍›
 
-C⟦bd⁅l⟦𝕊ws⟧⁆⟧ ⟶ ᖲᖱᒪⴷⴸ
-c⟦⁅ cn                        ⟶ ᗜ        ⁆
-  ⁅ ir                        ⟶ 󱖈        ⁆
-  ⁅ od                        ⟶         ⁆
-  ⁅ p⟦r⁅t⫾d4⫾⁆⟧               ⟶ ☽⯟◌⯝⚸    ⁆
-  ⁅ ⟦jJoW⟧𝕊                   ⟶ ᒍ🝇⩫     ⁆⟧
+⟨ece⟩;⟦⁅⟦{}⟧ ⟶ ‹⎧⎪⎨⎩› ‹⎫⎪⎬⎭›       ⁆
+       ⁅⟦()⟧ ⟶ ‹⎛⎜⎝›   ‹⎞⎟⎠›       ⁆
+       ⁅⟦[]⟧ ⟶ ‹⎡⎢⎣›   ‹⎤⎥⎦›       ⁆
+       ⁅int  ⟶ ‹⌠⎮⌡›               ⁆
+       ⁅sum  ⟶ ‹⎲⎳›                ⁆
+       ⁅box  ⟶ ‹┌┬┐├┼┤└┴┘╭╮╰╯│─╱╳╲›⁆⟧
 
-⟨ece⟩;⟦⁅ ⟦{}⟧ ⟶ "⎧⎪⎨⎩" "⎫⎪⎬⎭"        ⁆
-       ⁅ ⟦()⟧ ⟶ "⎛⎜⎝" "⎞⎟⎠"          ⁆
-       ⁅ ⟦[]⟧ ⟶ "⎡⎢⎣" "⎤⎥⎦"          ⁆
-       ⁅ int  ⟶ "⌠⎮⌡"                ⁆
-       ⁅ sum  ⟶ "⎲⎳"                 ⁆
-       ⁅ box  ⟶ "┌┬┐├┼┤└┴┘╭╮╰╯│─╱╳╲" ⁆⟧
-
-<⟦2345678⁅cat⁆⟧           ⟶ "❤️"🩷💕💞💘"❤️‍🔥"💖😻
+<⟦2345678⁅cat⁆⟧           ⟶ ‹❤️›🩷💕💞💘‹❤️‍🔥›💖😻
 ⟦⁅⟦+-⟧1⁆⁅ap⫾d4⫾⁆⟧         ⟶ 👍👎👆👇👈👉◌◌
 ⟦⁅(;⁆⁅:⟦ᐦ:⟧⟦()⟧⁆⁅𝕄:⟦()⟧⁆⟧ ⟶ 😉😕😊😞🙃☹☺
 heh⟶😏 ␠ cool⟶😎 ␠ blush⟶🤭 ␠ overjoy⟶🥹
@@ -200,21 +194,22 @@ sob⟶😭 ␠ fist⟶✊ ␠ wheel⟶✇  ␠ piece⟶☮
 ok ⟶👌 ␠ gear⟶  ␠  dino⟶󱍢  ␠ fire⟶󱐚
 spin⟶߷ ␠ CM⟶⚇ ␠ 0x⟶󱊧 ␠ OX⟶☠
 weed⟦𝕊/⟧ ⟶ 󰞦󱙮
-𝕄deso⟶"\overline{}"
-shrug⟶"⎺⟍_⟨⍩⟩_⟋⎺"
-ᐦ⟶⟨54f⟩ 󷰻ᗜ󰈙ńś
-ᐦ⟶⟨cb3⟩ 󷰺󱀝ə
-ᐦ⟶⟨5fe⟩ 󷰙󱟱󱫬⍘󷹆
-ᐦ⟶⟨f77⟩ 󷸏󷸐
-ᐦ⟶⟨c66⟩ ⩚
-ᐦ⟶⟨b56⟩ *\/≪≫⩟⊼⊻⊽⥱
-ᐦ⟶⟨b4d⟩ ⸓
-ᐦ⟶⟨9b7⟩ 󷰳#$?.,:;¨⋮⋯⋰⋱:′″‴⁗
-ᐦ⟶⟨f0a⟩ 󷰴➤⯈⯅⯆⯇◁△▽▷
-ᐦ⟶⟨cf7⟩ 󷰵փᖲᖱᒪⴷⴸ󷹇🆕©⌾⎉⎔⭔⬠󰂆†
-ᐦ⟶⟨2e5⟩ 󷰶󰤱§🝇⎊␛◌
-ᐦ⟶⟨|fc02|ff63|1⟩ " "
-ᐦ⟶⟨|0fc2|55de|1⟩ " "
+𝕄deso⟶‹\overline{}›
+shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
+
+⟨54f⟩⟶󷰻ᗜ󰈙ńś
+⟨cb3⟩⟶󷰺󱀝ə
+⟨5fe⟩⟶󷰙󱟱󱫬⍘󷹆
+⟨f77⟩⟶󷸏󷸐
+⟨c66⟩⟶⩚
+⟨b56⟩⟶*\/≪≫⩟⊼⊻⊽⥱
+⟨b4d⟩⟶⸓
+⟨9b7⟩⟶󷰳#$?.,:;¨⋮⋯⋰⋱:′″‴⁗
+⟨f0a⟩⟶󷰴➤⯈⯅⯆⯇◁△▽▷
+⟨cf7⟩⟶󷰵փᖲᖱᒪⴷⴸ󷹇🆕©⌾⎉⎔⭔⬠󰂆†
+⟨2e5⟩⟶󷰶󰤱§🝇⎊␛◌
+⟨|fc02|ff63|1⟩⟶‹ ›
+⟨|0fc2|55de|1⟩⟶‹ ›
 
  󷷾󷷿󷸀󷰙󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰰󷰱󷰲󷰳󷰴󷰵󷰶󷰷󷰸󷰹󷰺󷰻󷰼󷹏󷹐󷹑󰋁󰠷󱐝󱑍󷸿ᒍ󷷊󷹙󷸵󷸶󷸷󷹋󷹞󷸝󷸞󷸟󷸠󷸡󷸢󷸣󷸤󷸥󷸨󷸩󷸪󷸫󷸬󷸭󷸮󷸯󷸰󷸱󷸲󷸳󷹥󷹧󷹦󰇘󰑁󰑃󷹟󷹠󷹡󷹽󷹾󷹿󷺀｜＋／＼＃＞＜⅄ɹԀ˥ʞƆʎʍʌʇɯʞᴉɥƃɟɔɐ𝝤𝝦𝝧𝝩𝝪𝝬𝝾𝞊𝞌𝞎𝞏𝞐𝞑𝞒𝞓𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ХхΑΒΕΗΚΜΝΟΡΤΥ⥜⥠⥝⥡֍∥⨆⨲⋎⋏⩄⩅ᖯᐊᐅᕦᗐᗑᓎẞᖇⵗⵐ
 
@@ -227,8 +222,24 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789αβγδεζηθϑ
 ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻᴬᴮ󰀂ᴰᴱ󰀅ᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾ󰀐ᴿ󰀒ᵀᵁⱽᵂ󰀗󰀘󰀙⁰¹²³⁴⁵⁶⁷⁸⁹󰁌󰁍󰁎󰁏󰁐󰁑󰁒󰁓◌󰁔󰁕󰁖󰁗󰁘󰁙󰁛󰁜󰁝󰁞󰁟󰁠󰁡󰁢󰁣󰁤◌◌󰀶󰀷◌󰀻󰁁󰁃󰁅󰁈󰁊󰁋󰁱󰂂󰂁󰁲⁺⁻⁼⁽⁾󰁺󰁻󰁸󰁹˜◌◌◌◌◌ꜝ 󰦥󰦥󰦥󰦥󰦥
 SCRIPT_DEPTH = 2
 
- ⨡ Compiler/generate_operators
- DAT󷸊+𝗻+generate_fontcompose_conf(ops)
+⨡ multisupersubscriptify
+
+fi = ‹External/JuliaMono/JuliaMono-Regular.ttf›𝐩
+fo = ‹Output/FontNerd.ttf›𝐩
+
+𝕒_gen = ‹--careful --mono --complete --has-no-italic›
+$ᵒᵉpython External/FontPatcher/font-patcher ⟦𝕒_gen⟧ --name JuliaMono ⟦fi⟧󷹹
+‹JuliaMono-Regular.ttf›𝐩⭢.rename(fo)
+
+ remake organizer
+ generate supsubs
+ aoisdjioasd
+𝚏 = load_font(fo)
+
+ 𝚏☾
+
+ c = parse_config(CONFIG+𝗻+ops generate_fontcompose_conf, __file__ , 𝔭)
+ ‹/tmp/.XCompose› 󱖔􍡩 c conf_to_xcompose
 
  ¿__name__≡‹__main__›: op_gen.main
                        ⨡ generate
@@ -236,8 +247,6 @@ SCRIPT_DEPTH = 2
                        󰋺(𝐩(‹..›) / ‹Tests/tests.☾› ⭢ .resolve)
                        ⦃import platform⦄
                        platform.system ≡ "Linux" ∧ $ᴼᴱibus-daemon -dxrR󷹹
-
- 󰤱􊽨 thing that disallows base symmap keys from generating even if inside the compose so we can style em?
 
 
 

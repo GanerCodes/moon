@@ -19,7 +19,6 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     g_combos = minigram
     g_desc   = 󰲡⟨⟨ 󷺹≡␛{⭜󰮈⍮ 󷺹≠␛}⍮ 󷺹≡␛}⭜󰮈 ⍈ 󷺹󷹌␛,󰈳␛,⟩ 󷸴 ⟨󷺹≠␛{ ⍈ ⛶○⨝⟩⟩(x)⨉ᴍ⨝
     ƒs = g_order⋄g_symbs⋄g_sig⋄g_combos⋄g_desc
-    
     𝚌 = contents󷹎𝗻
     𝚌,𝚂 = 𝚌􋇐󷺹₀≡␛>
     𝚌 = p(𝚌)
@@ -43,8 +42,9 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     ↪ do_join ⭜𝚛ᐵᐵ⨝ᐸ⨝𝘀ᐸ⨝𝗻⭝ 𝚛
 ⊢ generate_fontcompose_conf(parsed_ops):
     style = parsed_ops.style
+    esc = ␛›󰛔␛␛␛›
     ↪ℵ(parsed_ops󰌷⭢ᓕ⁰)ꟿ␛
-        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⦑c⦑⟦clrs􍪴⟧⦒⦒›⟧␛⟦⁅BLK⟦⟞⟧𝕊⟶"⟦ords􍪴⟧"⁆⟦⟝ᐖ‹⁅⟦␛ᴍ∈⟞₃ ⭜␛"󰛔􍪵􊿨␛␛␛"⭢₁﹕⭝ ‹;;⟦⟞₃⟧ᴍ›⟧⟶"⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2⟧"⁆›ᐸ⨝⟧␛⟧›󷺿␛
+        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⟨⟦clrs􍪴⟧⟩›⟧␛⟦⁅BLK⟦⟞⟧𝕊⟶␛‹⟦ords􍪴⟧␛›⁆⟦⟝ᐖ‹⁅⟦⟞₃esc⟧⟶‹⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2ᐸ ⭢ esc⟧␛›⁆›ᐸ⨝⟧␛⟧›󷺿␛
         →⨝𝗻→+style⟕𝗻
 ⊢ to_docs(parsed_ops):
     ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛

@@ -5,10 +5,10 @@
 
 w = 1200  󰤱 detect from font
 
-load_font = 󰲡shut(ℱℱ.open    , x.resolve⭢ᔐ)
-save_font = 󰲣shut( x.generate, y.resolve⭢ᔐ)
+load_font = 󰲡🟑shut(🟑ℱℱ.open    (x 𝐩⭢.resolve⭢ᔐ)
+save_font = 󰲣🟑shut(🟑 x.generate(y 𝐩⭢.resolve⭢ᔐ)
 
-𝔯,𝔰,𝔱 = "𝔯𝔰𝔱"
+𝔯,𝔰,𝔱 = ‹𝔯𝔰𝔱›
 𝔗 = ⥌𝒻,ℊ,𝐭,w=w↦𝐭ꟿ󰲡(
         x≡𝔯 ⭜ℊ.addReference(𝒻􊵾􊬣􋘲󰂼ᵣ.glyphname)␛
             ⭝ℊ.transform((x≡𝔰∧𝒫ℳ.scale∨𝒫ℳ.translate)(⠤𝔸)))→►monospace_char(ℊ)
@@ -25,9 +25,9 @@ save_font = 󰲣shut( x.generate, y.resolve⭢ᔐ)
 ⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻󰂼ᵣ􊮎)
                     ¡ε=𝑒: ‹Couldn't remove "⟦c⟧": ⟦ε⟧›☾
 
-⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,*𝔸,log=1,⠶𝕂):
+⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,⠤𝔸,log=1,⠶𝕂):
                      ℊ = 𝒻.createChar(l≔c ord, n)
-                          𝔗(𝒻,ℊ,⠤ƒ(𝒻,*𝔸,⠶𝕂))
+                          𝔗(𝒻,ℊ,⠤ƒ(𝒻,⠤𝔸,⠶𝕂))
                      ¡ε=𝑒: ¿log≤0 ∨ (log<2 ∧ ε ᔐ∋‹No such glyph›): ↪
                            ‹Gen Err: "⟦n⟧" (⟦c⟧ @ ⟦l 󷹜¹⁶⟧), "⟦ε⟧"›☾
                  ↪𝑓
@@ -61,6 +61,10 @@ save_font = 󰲣shut( x.generate, y.resolve⭢ᔐ)
                   𝓑.selection.select(𝚞); 𝓑.paste
     log⭜ ᐦ☾
     ↪𝓑
+
+⭷ load_font,save_font,monospace_char,monospace_font,␛
+  remove_char,char_maker,add_script,add_multichar,merge_into_font
+
 
  Δ = w-ℊ.width
  ℊ. left_side_bearing = 𝑖(γ ≔ ℊ.left_side_bearing+Δ/2)
