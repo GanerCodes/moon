@@ -42,18 +42,19 @@ chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
                  ⸘󱁕ᵗ≡␛∀: ↪󱁕ᴍdo⭢󰌷
         ↪do(󱁕)ᐵᐵ≅□⭜􍪵0 s.pop
     symbs = 󱁕ᴍparse_stmt⭢󰌷⭢ᐵ􍨄≅□⭜󰮈⭝(⟞􍨄,⟞﹕􍨄󰈳(⬤ᐹ𝑙)􋇐(⬤ᐹ𝑑)ᑀ₀,⟞₁ſ󰁸󰁹|ᐸ⭢𝑙)ᐸ␛
-              󷺹₀ᐸꟿ⁺󰲣yᐵ₁ᐸᑀᐵ₀ᐸ,⟞ᐵ₁ᐸſ󰁸󰁹|ᐸ󰅂 ⭢ ℵ
+              󷺹₀ᐸꟿ⁺󰲣yᐵ₁ᐸᑀᐵ₀ᐸ󰈲,⟞ᐵ₁ᐸſ󰁸󰁹|ᐸ󰅂 ⭢ ℵ
     seq,sty = 2⭥ᐖsymbsꟿ⁺󰲣y􍪴󰅂
     K = KEYMAP⁻∪(‹(𝕊) (𝕄) (ᐦ)›⍭𝑠)
     B,E = seqᴍ𝑙,ℵ
     ∀B: r = 0 B.pop
-        r₁󷸊ᐵᐵ∈E⭜E􍪴⭝⟞⛶􍧱ᐸ⨉ᴍ󰌷ᐸ󰌷⭢ᚤ
+        r₁󷸊ᐵᐵ∈K⭜⟞⛶􍧱⭝⟞∈E⭜E􍪴⭝⟞⛶􍧱ᐸ⨉ᴍ󰌷ᐸ󰌷⭢ᚤ
         (dest ≔⬅ r₁󰌷⭢⊂K⭜E⭝B)ᵣ􊬣=r₁
     E󷸊ꟿ⁺󰲣yᐵ∖‹(ᐦ)›󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
-    c = chkp(Eꟿ►⭢󰌷→pfxd,⬤)
-    E󷸊ꟿ⁺󰲣yᐵc⭜􍪵⟞+␛𝕊  󰤱 doesn't add multiple spaces but eh
-    ↪⦉⠤include_chars⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K⭜⍁⭝Eₓ,y₁󰅂
-conf_to_xcompose = c↦cꟿ󰲣x∧y⭜􍭓(y₀,ₓ)󰅂ᴍ⨉⭢󰌷⭢xcomp_seqs
+    ↪⦉⠤include_chars⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
+⊢ conf_to_xcompose(c):
+    t = chkp(cꟿ󰲣y₀󰅂⭢󰌷→pfxd,⬤)
+    c󷸊ꟿ⁺󰲣y₀ᐵt⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱 doesn't add multiple spaces but eh
+    ↪cꟿ󰲣x∧y⭜􍭓(y₀,ₓ)󰅂ᴍ⨉⭢󰌷⭢xcomp_seqs
 
 ⭷ parse_config,conf_to_xcompose
 

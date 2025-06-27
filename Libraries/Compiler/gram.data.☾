@@ -47,7 +47,7 @@ grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
 𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ sys_call ∨ native_code
-       ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ op ∨ number_exp ∨ number
+       ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ number_exp ∨ number ∨ op
        ∨ 𝑣_spec ∨ 𝑣)
 
 𝝀𝑃 = ⠶𝝀𝕒 𝖶 (󰆴',' 𝖶 ⠶𝝀𝕒 𝖶)*

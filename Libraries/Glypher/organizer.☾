@@ -1,5 +1,6 @@
 ⦃from platform import uname⦄
 ⦃from random import randint,seed⦄
+⨡ ☾ontgen ⭸ KEYMAP
 uname₁ seed
 
 pua = 0x100000⋄0x10FFFD  we own this plane
@@ -22,12 +23,11 @@ ml = lm􍮕
                  lmₚᵤₐ󰃏,ml􊵧 = 𝔡,puaΔ
                  ↪lm,ml
 
-⊢ pua_conseq(𝔡): ⦃global ⦃lm⦄,⦃ml⦄⦄
-                 𝔡 󷸊󰈳(⬤∈ml)
+⊢ pua_conseq(𝔡): 𝔡 󷸊󰈳(⬤∈ml)
                  𝕏 = puaΔ-1
-                 ∀𝕏󷸊+1: ¿¬𝕏 ≔ (I ≔ 𝔡⭥ᴍ󰲡𝕏+x) 󰑅 󰲡x∈lm󰅂: ⇥
-                 lm 󷸊| {⠤I󱑼𝔡}
-                 ml 󷸊| {⠤𝔡󱑼I}
+                 ∀𝕏󷸊+1: ¿¬𝕏≔(I ≔ 𝔡⭥ᐖ𝕏+⟞)󰑅󰲡x∈lm󰅂: ⇥
+                 lm.update({⠤I󱑼𝔡})
+                 ml.update({⠤𝔡󱑼I})
                  ↪lm,ml
 
 to_ranges = L↦[ L⁻󰒼≕s⭢₀,
@@ -41,20 +41,25 @@ to_ranges = L↦[ L⁻󰒼≕s⭢₀,
             ‹Wrote pua mapping to "⟦d⟧"›☾
             ↪lms
 
-get_codepoint  = ⥌c,p↦pua_single(n≔  ‹⟦p⟧_⟦c⟧›) ►←      (mlₙ chr,n,c)
-get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N󱑼Cꟿ󰲣(mlₓ chr,x,y)󰅂
+get_codepoint  = ⥌c,p↦pua_single(n≔  ‹⟦p⟧_⟦c⟧›) ►←      (mlₙchr,n,c)
+get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N󱑼Cꟿ󰲣(mlₓchr,x,y)󰅂
 
-⊢ get_new_chars(force_include, no_scale, multichars,
-                ignore_scripts, special_symkeys):
-    𝒞 = generate_compose(no_write=ⴳ)
-    ℭ = 𝒞.items 󰈲󰲡x₁🃌≡1󰅂 ꟿ󰲣(y,x)󰅂 → 𝑑
-    get_seq = 󰲡x∈ℭ∧ℭₓ ∨ x∈symmap∧x
-    
-    supsub = (ℭ ∪ special_symkeys) ∖ ignore_scripts 󰒼
-    sub = get_codepoints(    supsub, ‹sub›) ꟿ󰲥 (x,y,z,x∈ℭ∧ℭₓ ∨←  (j≔get_seq←z) ∧ ␛/⋅(1+←z∉special_symkeys)+(z≡␛/∧␛𝕊∨j), x∉no_scale)
-    sup = get_codepoints(    supsub, ‹sup›) ꟿ󰲥 (x,y,z,x∈ℭ∧ℭₓ ∨←  (j≔get_seq←z) ∧ ␛\⋅(1+←z∉special_symkeys)+(z≡␛\∧␛𝕊∨j), x∉no_scale)
-    mul = get_codepoints(multichars, ‹mul›) ꟿ󰲥 (x,y,z,x∈ℭ∧ℭₓ ∨← ⋀(K≔zᴍget_seq) ∧ ␛ᴍ+(Kᴍ󰲡x+␛𝕊󰅂⨁􊾖))
-    S = sub⋄sup⋄mul
-    ↪ {⠶𝒞,⠤S⨁󰈲󷺹₃ᐸꟿ󰲧w,x⋄y󰅂}, ⠤S
+native = KEYMAP⁻∖‹𝕄𝕊›
+⊢ add_multichars(conf,mchars):
+    r,R = ℵ,⍁
+    ∀x,y⬠mchars󱑼(get_codepoints(mchars,‹mul›)ᐵ₀):
+        S = xᐵ∈native⭜⟞⛶􍧱⭝conf􍪴 ₀ᐸ⨉⭢ᴍ󰌷ᐵ⨝␛𝕊+ᵜ␛𝕄ᐸ
+        t = xᐵ∈conf⭜conf􍪴 ₁⭝{}ᐸſ󰁸󰁹|
+        r=(S,{⠶t,mode=‹mul›,parents=[⠤x]})
+        R.append(y)
+    ↪R
+⊢ add_scripts(conf,existing):
+    ⊢ inherit(c,s,m): p=‹/\›[m≡‹sup›]
+                      ¿c∈existing: h=existing[p≡␛\]
+                                   ¿h≠␛◌: s=h
+                      S = c≡p⭜[c]⭝c∈native⭜[p+c]⭝2pᑀ+ᑈconf ₀
+                      ↪s,(S,{⠶conf ₁,mode=m,parents=[c]})
+    chars = conf⁻󰈲󷺹🃌≡1
+    ↪‹sup sub›⍭ᐖchars󱑼(get_codepoints(chars,⟞)ᐵ₀)ꟿinherit(⬤,⬤,⟞)⭢ℵᐸ≺|
 
-save_pua
+⭷ save_pua,add_multichars,add_scripts,lm

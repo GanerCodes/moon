@@ -2,7 +2,7 @@
 ⨡ cache
 OP_FILE = __dir__/‹operators›
 
-ords = ‹0󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱󷰾›
+ords = ‹󷰽󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰷󷰰󷰱󷰾›
 clrs = ‹0 e3b f77 c66 b56 6cf b9d c08 0f5 1e6 2d7 3c8 4b9 85f 67f eae d8d c6c b4d ff5 ce3 bd2 ad1 fa2 0›⍭
 dummy_ords = ⦉0,ords🃌-1⦊
  α: include self in group (right asoc.)
@@ -44,7 +44,7 @@ minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷�
     style = parsed_ops.style
     esc = ␛›󰛔␛␛␛›
     ↪ℵ(parsed_ops󰌷⭢ᓕ⁰)ꟿ␛
-        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⟨⟦clrs􍪴⟧⟩›⟧␛⟦⁅BLK⟦⟞⟧𝕊⟶␛‹⟦ords􍪴⟧␛›⁆⟦⟝ᐖ‹⁅⟦⟞₃esc⟧⟶‹⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2ᐸ ⭢ esc⟧␛›⁆›ᐸ⨝⟧␛⟧›󷺿␛
+        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⟨⟦clrs􍪴⟧⟩›⟧␛⟦⁅ORD⟦⟞⟧⟶␛‹ORD⟞:⟦ords􍪴⟧␛›⁆⟦⟝ᐖ‹⁅⟦⟞₃esc⟧⟶‹⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2ᐸ ⭢ esc⟧␛›⁆›ᐸ⨝⟧␛⟧›󷺿␛
         →⨝𝗻→+style⟕𝗻
 ⊢ to_docs(parsed_ops):
     ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛

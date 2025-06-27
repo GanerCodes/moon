@@ -1,15 +1,8 @@
-⨡ text_format
-⨡ to_ast    ⭸ *
-⨡ ast_to_py ⭸ *
-⨡ tree      ⭸ *
 ⨡ cache
-
 code_file_caching=✓
 
-BASE,TMP = moon_dir,mkd(TMPDIR/__file__  sha)
-𝕜 = ℵ(show_preast=✗,show_ast=✗,show_py_ast=✗,dbg_parser=0)
-
-header_com = BASE/‹Builtins›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(BASE/‹Builtins/builtins›)󷹎
+TMP = mkd(TMPDIR/__file__  sha)
+header_com = moon_dir/‹Builtins›ᑀ/‹⟦⟝⟧.☾›⭢.resolveᐛ(moon_dir/‹Builtins/builtins›)󷹎
 pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
                   moon_dir = ⟦PEV(␛𝐩)⟧(__file__).parent›
 
@@ -23,7 +16,16 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
 
-þmoon_to_py = ⥌𝚌,𝙺,𝓚↦to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+⊢ þdo_imps: ¿þmoon_to_py.has_lazy_load: ↪
+            ⨡ text_format
+            ⨡ to_ast    ⭸ *
+            ⨡ ast_to_py ⭸ *
+            ⨡ tree      ⭸ *
+            þmoon_to_py.has_lazy_load = ✓
+⊢ þmoon_to_py(𝚌,𝙺,𝓚): þdo_imps
+                      ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+þmoon_to_py.has_lazy_load = ✗
+
 þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
 ⊢ moon_to_py(𝚌,𝙺={},𝓚={}):
     ¿sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py􋈨: ↪cₕ
@@ -85,32 +87,33 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                                      󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗)
                                 ¡ε=𝑒: ε traceback.format_exception⭢⨝ᐦ☾
 
-⊢ transpiler_cli(⠤𝖠):  󰤱 actually parse args in a not dumb way
+⊢ transpiler_cli(⠤𝖠):
     show_docs = 𝚲‹Usage: ∅                  (cli mode)
                          <file_path>        (run ☾ file)
                          -h                 (show this)
                          -c <code_to_run>   (eval mode)
                          -C <code_to_run>   (exec mode)
-                         -b <boostrap_dest>
-                         -B <boostrap_dest> (updates compiler)
+                         -B <boostrap_dest>
                          -e <str_to_encode>
                          -d <str_to_decode>
                          -o <file_in> <file_out?stdout>›☾
     𝖠,f=[⠤𝖠],∅
     ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪(0 𝖠.pop ⭢₁﹕ᑀ₀≡␛-⭜􍪵􍪴􊬤􊲯) →►⭠ 𝖺≠2␛-:□
-    ƒ = ␛a␛A∩f ⭜𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f∋␛A)󰅂⭝ moon_to_py
-    ¿f󷺥𝖠 : moon_cli
-    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop ; ↪󱠨(𝖠₀ ,ns={__file__=𝖠₀,__dir__=𝖠₀𝐩⭢.parent,__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
-    ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍPEV⭢⨝𝘀☾
-    ⸘f∋‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍVEP⭢⨝𝘀        ⭢ __highlighter__⭢☾
-    ⸘f∋‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
-    ⸘f∋‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
+    ƒ = ␛a␛A∩f⭢¬ ⭜moon_to_py⭝ þdo_imps►𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f∋␛A)
+    ¿f󷺥𝖠: þdo_imps; moon_cli
+    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop; ↪󱠨(𝖠₀ ,ns={__file__=𝖠₀,__dir__=𝖠₀𝐩⭢.parent,__name__=‹__main__›},ƒ=󰲣exec(x,y,y))
     ⸘f∋‹C󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ exec
-    ⸘f∋‹b󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap
-    ⸘f∋‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
-    ⸘f∋‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
+    ⸘f∋‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
     ⸘f∋‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs
     ⸘f∋‹get-dir›: moon_dir☾
+    ¡:
+    þdo_imps
+    ¿f∋‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input ⭢ VEP ⭢ __highlighter__ ⭢ ☾
+    ⸘f∋‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍVEP⭢⨝𝘀        ⭢ __highlighter__ ⭢ ☾
+    ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍPEV⭢⨝𝘀☾
+    ⸘f∋‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
+    ⸘f∋‹b󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap
+    ⸘f∋‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
     ¡           : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
@@ -119,3 +122,4 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
 TRANSPILE_REF(moon_to_py)
 
 ¿__name__≡‹__main__›: transpiler_cli(⠤𝔸₁﹕)
+¡                   : þdo_imps
