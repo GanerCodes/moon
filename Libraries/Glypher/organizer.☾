@@ -1,4 +1,3 @@
-⨡ 𝔍
 ⦃from platform import uname⦄
 ⦃from random import randint,seed⦄
 uname₁ seed
@@ -6,46 +5,44 @@ uname₁ seed
 pua = 0x100000⋄0x10FFFD  we own this plane
 
 puaΔ = pua₀ + randint(0, (puaᴙ≺-) 󷷈 𝑖)
-o≔pua₀⋄puaΔ⋄pua₁ ᴍhex →►← ‹Offset: ⟦o₀⟧ ≤ ⟦o₁⟧ < ⟦o₂⟧›☾
+o = pua₀⋄puaΔ⋄pua₁ ᴍ hex
+‹Offset: ⟦o₀⟧ ≤ ⟦o₁⟧ < ⟦o₂⟧›☾
 
-pua_fold = __dir__/‹PuaMaps›
-lm≔{} →►← pua_maps_in ≔ [⠤pua_fold.glob(‹*.json›)] ␛
-            →ᴍ 󰲡json.load(x.open) ␛
-                →ꟿ⁻󰲡␛| x.split ᴍ𝑖(⬤,16)󰅂 𝑡󰅂 ␛
-                →.items ꟿ󰲣x₀󷸹x₁󱑼y ꟿ⥌l,c↦
-                l∈lm ⭜(c≡lmₗ ⨳ ‹⟦c⟧→⟦l⟧←⟦lmₗ⟧›)⭝ lmₗ≔c
-ml = lmꟿ󰲣y,x󰅂
+pua_fold,lm = __dir__/‹PuaMaps›, ℵ
+pua_maps_in = [⠤pua_fold.glob(‹*.json›)]
+pua_maps_inᐵ 𝔍󰄟 ꟿ⁻󷺹󷹎␛|ᴍ󷹜¹⁶⭢𝑡󷺿⭢ℵ␛
+                 ꟿ 󷺹≺󷸹󱑼󷺽        ␛
+           ᐸ󰌷²⭢ꟿ 󷺹∈lm ⭜(⟝≡lm􍪴⨳‹⟦⟝⟧→⟦⟞⟧←⟦lm􍪴⟧›)⭝ lm􍪴≔󷺽
+ml = lm􍮕
 
 ⊢ pua_single(𝔡): ⦃global ⦃puaΔ⦄⦄
-                 ¿𝔡∈ml: ↪lm, ml
+                 ¿𝔡∈ml: ↪lm,ml
                  puaΔ 󷸊- 1
                  ∀puaΔ 󷸊+ 1: ¿puaΔ∉lm: ⇥
-                 lm[puaΔ],ml[𝔡] = 𝔡,puaΔ
+                 lmₚᵤₐ󰃏,ml􊵧 = 𝔡,puaΔ
                  ↪lm,ml
 
 ⊢ pua_conseq(𝔡): ⦃global ⦃lm⦄,⦃ml⦄⦄
-                 𝔡 󰈳= 󰲡x∈ml
+                 𝔡 󷸊󰈳(⬤∈ml)
                  𝕏 = puaΔ-1
                  ∀𝕏󷸊+1: ¿¬𝕏 ≔ (I ≔ 𝔡⭥ᴍ󰲡𝕏+x) 󰑅 󰲡x∈lm󰅂: ⇥
-                 lm |= 𝑑←I󱑼𝔡
-                 ml |= 𝑑←𝔡󱑼I
+                 lm 󷸊| {⠤I󱑼𝔡}
+                 ml 󷸊| {⠤𝔡󱑼I}
                  ↪lm,ml
 
-to_ranges = lm↦[
-        s ≔ lm 󰒼 → ₀,
-       ⠤s ᙧ 0⋄1 ꟿ󰲣x+1≠y∧(x+1,y)󰅂 󰈲 ⭢ ⨁⁽⁾,
-        s₋₁+1
-    ] ᙧ¹ ꟿ󰲣((x,y), x󷸹yᴍ󰲡lmₓ)󰅂 ⥉ 𝑑
+to_ranges = L↦[ L⁻󰒼≕s⭢₀,
+               ⠤s ᙧ 0⋄1 ꟿ󷺹+1≠⟝⭜􍭓⟞+1⭢⋄󷺽 ⭢ 󰌷,
+                s􍨄+1]ᙧ¹⭢ꟿ󷺹⋄⟝⭢𝑡,Lᑀ􍪸ᐛ⭠⟞󷸹󷺽 ⭢ ℵ
 
-⊢ save_pua: lms = to_ranges(lm) ꟿ⁻󰲣 ‹⟦x₀hex⟧|⟦x₁hex⟧›
-            t = time 100 𝑖
+⊢ save_pua: lms = lm to_ranges ꟿ⁻󰲣‹⟦x₀󷹜¹⁶⟧|⟦x₁󷹜¹⁶⟧›
+            t = time⋅100 ⭢ 𝑖
             pua_maps_in ᴍ 󰲡x.rename(y ≔ pua_fold/‹Old/⟦t⟧_⟦x.name⟧›) ► ‹Moved "⟦x⟧"↦"⟦y⟧"›☾
             (d≔pua_fold/‹pua_log.json›, lms 𝔍󰄞)
             ‹Wrote pua mapping to "⟦d⟧"›☾
             ↪lms
 
-get_codepoint  = ⥌c,p↦pua_single(n≔  ‹⟦p⟧_⟦c⟧›) ►←      (chr←mlₙ,n,c)
-get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N󱑼Cꟿ󰲣(chr←mlₓ,x,y)󰅂
+get_codepoint  = ⥌c,p↦pua_single(n≔  ‹⟦p⟧_⟦c⟧›) ►←      (mlₙ chr,n,c)
+get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N󱑼Cꟿ󰲣(mlₓ chr,x,y)󰅂
 
 ⊢ get_new_chars(force_include, no_scale, multichars,
                 ignore_scripts, special_symkeys):
@@ -58,4 +55,6 @@ get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N�
     sup = get_codepoints(    supsub, ‹sup›) ꟿ󰲥 (x,y,z,x∈ℭ∧ℭₓ ∨←  (j≔get_seq←z) ∧ ␛\⋅(1+←z∉special_symkeys)+(z≡␛\∧␛𝕊∨j), x∉no_scale)
     mul = get_codepoints(multichars, ‹mul›) ꟿ󰲥 (x,y,z,x∈ℭ∧ℭₓ ∨← ⋀(K≔zᴍget_seq) ∧ ␛ᴍ+(Kᴍ󰲡x+␛𝕊󰅂⨁􊾖))
     S = sub⋄sup⋄mul
-    ↪ 𝒞 | 𝑑(S ſ+ 󰈲󰲡x₃󰅂 ꟿ󰲧(w,(x,y))), ⠤S
+    ↪ {⠶𝒞,⠤S⨁󰈲󷺹₃ᐸꟿ󰲧w,x⋄y󰅂}, ⠤S
+
+save_pua

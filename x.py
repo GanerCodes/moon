@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='NcCYZ3gJcuaP-x-GuidjV5XKt6zO-m_pwwXn62tdGIc'
+BOOTSTRAP_HASH='0vSxDIb8CCo5fUcGSYw-Fbbp4aJP0GyGR3TqD_K9mD0'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -829,6 +829,7 @@ def ÄÝöì(áØÆ=ÂÞÅ, áØÁ=ÂÞÅ, C=ÂÞÅ):
             (p := 1)
         if nc and áØÇ <= 36:
             (ÄÊPSH(áØÆ), ÄÊPSH(ÂüÌ(ÄÊPKE(0))), (áØÆ := ÄÊPKE(0)), ÄÊDEL(2))[2]
+        Âçß((áØÆ, C, p, áØÁ))
         (áØÆ := (MOD(ÆÑ, áØÁ=0)(ÁØò(lambda ÂîÓ: MOD(ÄÔÞÔ, ÁÜñ=ÄÕøü)(C, ÂîÓ))(áØÆ), CUR(lambda ÂîÓ, ÂîÒ: ÂîÓ * áØÇ + ÂîÒ)) * p))
         if áØÁ is ÂÞÅ:
             return áØÆ
