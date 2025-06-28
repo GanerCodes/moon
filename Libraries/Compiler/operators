@@ -678,21 +678,21 @@
 󷰱 󰁘   slf self
     󰤱 docs, might be removed
 
-0 =       Alternate Assignment
-0 ⨡   cim import
-0 ⭸   cec extract
-0 ⭷   cee export
-0 ↪   cr𝕊 return
-0 ⊢   atd Python "def"
-0 󱀘   ccl Python "class"
-0 󰆴   cT𝕊 Python "del"
-0    lb𝕊 Python except
-0 ¿⸘¡   ⟦⁅?⟦?!⟧⁆⁅!!⁆⟧ {if,elif,else}
-0 ⮂⮌   c⟦yf⟧𝕊 Python "{yield,from}"
-0 ↺⇥   c⟦cb⟧𝕊 Python "{continue,break}"
-0 ∀➰   ⟦⁅AA⁆⁅cl𝕊⁆⟧ Python "{for,while}"
-0 ⠤⠶   c⟦dD⟧𝕊 Python {*,**} for {vargs,kargs}
-0 ⭜⭝   ce⟦nl⟧ ternary {if,else}
+󷰽 =       Alternate Assignment
+󷰽 ⨡   cim import
+󷰽 ⭸   cec extract
+󷰽 ⭷   cee export
+󷰽 ↪   cr𝕊 return
+󷰽 ⊢   atd Python "def"
+󷰽 󱀘   ccl Python "class"
+󷰽 󰆴   cT𝕊 Python "del"
+󷰽    lb𝕊 Python "try"
+󷰽 ¿⸘¡   ⟦⁅?⟦?!⟧⁆⁅!!⁆⟧ {if,elif,else}
+󷰽 ⮂⮌   c⟦yf⟧𝕊 Python "{yield,from}"
+󷰽 ↺⇥   c⟦cb⟧𝕊 Python "{continue,break}"
+󷰽 ∀➰   ⟦⁅AA⁆⁅cl𝕊⁆⟧ Python "{for,while}"
+󷰽 ⠤⠶   c⟦dD⟧𝕊 Python {*,**} for {vargs,kargs}
+󷰽 ⭜⭝   ce⟦nl⟧ ternary {if,else}
     "x ⭜ y ⭝ z" ⟶ y if x else z
     "x ⭜ y" ⟶ y if x else □
     `✓ ⭜5⭝ 0 ➡≡ 5`
@@ -700,21 +700,20 @@
     `✗⭜5 ➡≡ □`
     `✓⭜5 ➡≡ 5`
     `✗ ⭜5⭝ ✓ ⭜9⭝ 0 ➡≡ 9`
->⟨5fe⟩⟶=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘¡⭜⭝
-
-0 ⬅➡   a⟦⁅AA⁆⁅DD⁆⟧ push right into {left,right} (Strongest)
-0 ←→   a⟦ad⟧𝕊 push {right,left} into {left,right} (Medium)
-0  ⥉   csw swap right and left (Medium)
-0 ⭠⭢   a⟦AD⟧𝕊 push {right,left} into {left,right} (Weakest)
-0 ≔≕   ⟦⁅eqd⁆⁅deq⁆⟧ Assign to {left,right}
+󷰽 ⬅➡   a⟦⁅AA⁆⁅DD⁆⟧ push right into {left,right} (Strongest)
+󷰽 ←→   a⟦ad⟧𝕊 push {right,left} into {left,right} (Medium)
+󷰽  ⥉   csw swap right and left (Medium)
+󷰽 ⭠⭢   a⟦AD⟧𝕊 push {right,left} into {left,right} (Weakest)
+󷰽 ≔≕   ⟦⁅eqd⁆⁅deq⁆⟧ Assign to {left,right}
     `x≔22→+2 ≡ 24 ∧ x≡22`
     `22≕x+2 ≡ 24 ∧ x≡22`
-0 󷸉󷸎   ⟦⁅eqD⁆⁅Deq⁆⟧ Assign to {left,right}, return previous value
+󷰽 󷸉󷸎   ⟦⁅eqD⁆⁅Deq⁆⟧ Assign to {left,right}, return previous value
     `(␛a≕x)►(x󷸉␛b→+x) ≡ "ab"`
-0 󷸊󷸌   ⟦⁅eqm⁆⁅meq⁆⟧ Assign to {left,right}, foward value
+󷰽 󷸊󷸌   ⟦⁅eqm⁆⁅meq⁆⟧ Assign to {left,right}, foward value
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
-0 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
+󷰽 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
+>⟨5fe⟩⟶=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘¡⭜⭝
 >⟨e6b⟩⟶󷰚⬅➡←→⭠⭢⥉
 >⟨f0a⟩⟶󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
 
@@ -723,12 +722,12 @@
 󷰾 𝓐𝓚   MS⟦AK⟧ whisker {vargs,kargs}
     `󷺻[⠤𝓐,⟞,𝓚􊯛ⱼ]ᐸ(5,2,j=15) ≡ [2,5,15]`
 󷰾 󰮈   cot signal delete element from iteration
->  ⟨fa2⟩⟶󰮈
     Many iteration operators disgard values if their operand function returns this.
     `[1,2,3,4,5]ᐵ>2⭜⟞⭝󰮈ᐸ ≡ [3,4,5]`
     `[0,1,2,3,4,5,6]󰈲􍯏􊽮󷺹<4⭜✓⭝⟞>4⭜󰮈ᐸ ≡ [0,1,4,9,4]`
     󰤱˜ docs
-󷰾 󱣩   cot a variable modifier is present but value isn't set
+󷰾 󱣩   und a variable modifier is present but value isn't set
+    󰤱 docs
 󷰾 ⬤   ooo𝕊 dummy variable for currying
 >  ⟨7c9⟩⟶⬤
     See 
@@ -778,7 +777,7 @@
 󷰾 󰋺   cic runtime include ☾ code
     "󰋺(‹my_file.☾›, ‹usefull_thing_1›, ‹other_usefull_stuff›)"
 󷰾 󱠨   cex runtime exec ☾ code
->⟨fa2⟩⟶󱣩ᔐ󱠨󰋺
+>⟨fa2⟩⟶󰮈󱣩ᔐ󱠨󰋺
 
 󷰾 ´   '' neutralize operator
     Forces operator to act as regular variable

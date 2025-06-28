@@ -1,3 +1,5 @@
+__dir__ cd
+
 ⊢ cp(𝕊,t): ⦃import shutil⦄
            𝕊.is_file⨳
            shutil.copy(𝕊,t)
@@ -114,9 +116,9 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
       ⁅U⟦ws⟧                  ⟶ ⋃⋂               ⁆
       ⁅==/                    ⟶ ≢                ⁆
       ⁅~⟦<>⟧⟦⁅⟦ᐦ=⟧⟦𝕊/⟧⁆⁅~⟦𝕊n⟧⁆n⟧                ⟶
-         ≺⊀≼⋠≾⋨⪱≻⊁≽⋡≿⋩⪲≁                         ⁆
-      ⁅⟦⁅eq⟦aeft.q⁅i⟦<>⟧⁆⟧⁆⟧                     ⟶
-            ≈󷸅≝≜󷹀≟   ⪟⪠                           ⁆
+         ≺⊀≼⋠≾⋨⪱≻⊁≽⋡≿⋩⪲                          ⁆
+      ⁅⟦⁅eq⟦aeft.q⁅i⟦<>⟧⁆⟧⁆⟧                    ⟶
+            ≈󷸅≝≜󷹀≟   ⪟⪠                          ⁆
       ⁅u⟦⁅⟦ad⟧⟦𝕊/.|o⟧⁆⟧ ⟶ ⊇⊉⪾⫐⟄ ⊆⊈⪽⫏⟃            ⁆
       ⁅⟦⁅<|⟦|ᐦ⟧⁆⁅-|⁆⁅~|⁆⁅|-⁆⁅⟦|ᐦ⟧|>⁆⟧𝕊 ⟶ ᗕᗏ⟞⦚⟝ᗌᗒ ⁆⟧
 
@@ -127,17 +129,17 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ⁅ ⟦lxyw⟧⟦ad⟧          ⟶ ⟵␛⟶⇜⇝↢↣⬿⤳       ⁆
          ⁅ b⫾d4⫾⫾d4⫾           ⟶ ◌◌⮢⮣◌↯⮠⮡⮤⮦↜↭⮥⮧◌↝⁆
          ⁅ bb⟦⁅w𝕊⁆⁅s𝕊⁆⁅ws⁆⟧    ⟶ 󰘣󰘡󰡏             ⁆
-         ⁅ c⟨c4⟩               ⟶ ⌜⌝⌞⌟            ⁆
+         ⁅ c⫾c4⫾               ⟶ ⌜⌝⌞⌟            ⁆
          ⁅ d⟦⫾d4⫾/⟧            ⟶ ↟↡↞↠↮           ⁆
-         ⁅ f⟨c4⟩               ⟶ ⌈⌉⌊⌋            ⁆
+         ⁅ f⫾c4⫾               ⟶ ⌈⌉⌊⌋            ⁆
          ⁅ i⟦⫾d4⫾⁅⟦ad⟧/⁆⁅ad⁆⟧𝕊 ⟶ ⇑⇓⇐⇒⇍⇏⇔         ⁆
          ⁅ m⫾d4⫾               ⟶ ↥↧↤↦            ⁆
          ⁅ o⟦ad⟧               ⟶ ⬰⇴              ⁆
          ⁅ t⫾d4⫾               ⟶ ⊥⊤⊣⊢            ⁆
          ⁅ u⟦⁅w+⁆⁅s⟦.s⟧⁆⟧      ⟶ ⨄⩀⋒             ⁆
          ⁅ .⫾d4⫾               ⟶ ⋮⋯⋰⋱            ⁆
-         ⁅ ⟨d8⟩𝕊               ⟶ ↑↓←→↖↗↙↘        ⁆ ⟧⁆
-      ⁅A⟦⁅ R⟨D8⟩𝕊              ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾        ⁆
+         ⁅ ⫾d8⫾𝕊               ⟶ ↑↓←→↖↗↙↘        ⁆ ⟧⁆
+      ⁅A⟦⁅ R⫾D8⫾𝕊              ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾        ⁆
          ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧  ⟶ ↶↷↩↪            ⁆ ⟧⁆ ⟧
 
 ⟨d7d⟩⟦⁅vt⟶⨃⁆⁅ic⟶⯈⁆⁅IC⟶⮞⁆⁅st⟶✣⁆⁅sps⟶ᔲ⁆
@@ -200,6 +202,7 @@ lit⟶🔥 ␠ clap⟶👏 ␠ cheer⟶🎉 ␠ dagger⟶†
 sob⟶😭 ␠ fist⟶✊ ␠ wheel⟶✇  ␠ piece⟶☮
 ok ⟶👌 ␠ gear⟶  ␠  dino⟶󱍢  ␠ fire⟶󱐚
 spin⟶߷ ␠ CM⟶⚇ ␠ 0x⟶󱊧 ␠ OX⟶☠
+
 weed⟦𝕊/⟧ ⟶ 󰞦󱙮
 𝕄deso⟶‹\overline{}›
 shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
@@ -222,6 +225,7 @@ shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
 
 󰦥󰦥󰦥󰦥󰦥
 
+REMOVES      = 󰦥󰦥󰦥󰦥󰦥 ☝✋✌✍✨✊❣☺☹ 󰦥󰦥󰦥󰦥󰦥⬄
 MULTICHARS   = 󰦥󰦥󰦥󰦥󰦥 𝓵𝓷 𝓵𝓰 𝗶𝗺 𝘁𝗿 𝗦𝗟 𝗚𝗟 𝗿𝗸 𝘀𝘁 𝗪⁵ 𝗘𝗻𝗱 𝗔𝘂𝘁 𝗚𝗮𝗹 𝗸𝗲𝗿 𝓵𝓸𝓰 𝘀𝗶𝗻 𝗰𝗼𝘀 𝘀𝗶𝗻𝗵 𝗰𝗼𝘀𝗵 𝘁𝗮𝗻 𝘀𝗲𝗰 𝗰𝘀𝗰 𝗰𝗼𝘁 𝗰𝗶𝘀 𝗹𝗼𝗴 𝗟𝗼𝗴 𝗔𝘀𝘀 𝗔𝗿𝗴 𝗮𝗿𝗴 𝗲𝘅𝗽 𝗱𝗶𝘃 𝗱𝗲𝘁 𝗱𝗲𝗴 𝗲𝗿𝗳 𝗶𝗻𝘁 𝗴𝗰𝗱 𝗹𝗰𝗺 𝗵𝗼𝗺 𝗼𝗯𝗷 𝗹𝗶𝗺 𝗶𝗻𝗳 𝘀𝘂𝗽 𝗺𝗼𝗱 𝗣𝗚𝗟 𝗣𝗦𝗟 𝘁𝗼𝗿 𝘄𝗿𝘁 𝗪𝗧𝗦 𝗪𝗧* 𝘃𝗮𝗿 𝘀𝘁𝗱 𝗰𝗼𝘃 𝗦𝗣𝗘𝗖 𝗦𝗜𝗡𝗛 𝗖𝗢𝗦𝗛 𝗧𝗔𝗡𝗛 𝗦𝗘𝗖𝗛 𝗖𝗦𝗖𝗛 𝗖𝗢𝗧𝗛 𝗖𝗛𝗔𝗥 𝗖𝗨𝗥𝗟 𝗙𝗥𝗢𝗕 𝗚𝗥𝗔𝗗 𝗥𝗔𝗡𝗞 𝗦𝗣𝗔𝗡 𝗪𝗟𝗢𝗚 𝗘𝗥𝗙𝗖 𝗠𝗘𝗠𝗘 𝗡𝗨𝗟𝗟 𝗩𝗢𝗜𝗗 𝗖𝗢𝗥𝗥 󰦥󰦥󰦥󰦥󰦥⬄⭢⍭
 SCRIPT_EXIST = 󰦥󰦥󰦥󰦥󰦥 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789αβγδεζηθικλμνξπρςστυφχψωΓΔΘΞΠΣΦΨΩ,<>;+-*=()[]{}~?&$%:!
                      ₐₑₕᵢⱼₖₗₘₙ󰂼ₚᵣₛₜᵤᵥₓ󰂓󰂔󰂕󰂖󰂗󰂘󰂙󰂚󰂛󰂜󰂝󰂞󰂟󰂠󰂡󰂢󰂣󰂤󰂥󰂦󰂧󰂨󰂩󰂪󰂫󰂬₀₁₂₃₄₅₆₇₈₉󰃤󰃥󰃦󰃧󰃨󰃩󰃪󰃫󰃬󰃭󰃮󰃯󰃰󰃱󰃳󰃴󰃵󰃶󰃷󰃸󰃹󰃺󰃻󰃼󰃎󰃏󰃓󰃙󰃛󰃝󰃠󰃢󰃣󰄎󰄟󰄞󰄏₊₋₌₍₎󰄗󰄘󰄕󰄖˷﹖﹠﹩﹪﹕◌
@@ -242,28 +246,30 @@ fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/JuliaNerd.ttf›⍭
 (fi,fo)󷸊₁⋄‹Output/JuliaNerdSymbols.ttf›𝐩
 ¿CUSTOM_SYMBOLS ∨ fo.is_file¬:
     merge_into_font(‹MoonCustomSymbols.ttf›𝐩,fi).generate(fo ᔐ)
-
 (fi,fo)󷸊₁⋄‹Output/99_JuliaMono-Regular.ttf›𝐩
 𝚏 = load_font(fi)
-
 adds = add_scripts   (⬤,SCRIPT_EXIST)
 addm = add_multichars(⬤,MULTICHARS  )
 gen_scripts = 󷺹ꟿ󰲣add_script(𝚏,x,‹⟦y₁ 􊬏ₚₐᵣₑₙₜₛ􊬐⨝≕p⟧_⟦y₁ 􊬏ₘ󰂼ₑ􊬐⟧›,p,y₁ 􊬏ₘ󰂼ₑ􊬐 􍨄,‹smol›∉y₁)
-
 MULTICHARS󱑼(c addm)ꟿ󰲣add_multichar(𝚏,y,‹⟦x⟧_mul›,x)  󰤱 subsup stuffs
 
+SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᴍremove_char(𝚏,⬤)
 S=c
 ∀i⬠SCRIPT_DEPTH⭥: c󷸊|(S󷸊adds)
                   gen_scripts(S)
 
+script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t􊬏ₚₐᵣₑₙₜₛ􊬐 ₀,□,⟞₀]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
+              󷺹₀ᐸ⭢ꟿ⁺󷺻⟝₀ᐵ∨ᑈ⟝₁󷺿⭢ℵ⭢⁺⍉ᴍ⨝⭢⨝𝗻
+script_map☾
+ this is cooked rn fr 󰤱󰤱󰤱󰤱󰤱󰤱󰤱󰤱󰤱
+ moon_dir/‹Builtins/Data/script.map› 󱖔􍡩 script_map
+
 xcomp_out = ‹Output/.XCompose›𝐩
 xcomp_out 󱖔􍡩 c conf_to_xcompose
+
 ¿COPY_OUT_XCOMPOSE: xcomp_out.cp(COPY_OUT_XCOMPOSE)
-
 fo.parentᑀ/ᑈ⭠fo.stemᑀ+␛.+ᑈOUTPUT_EXTS→ᐵᔐ 𝚏.generate
- ¿COPY_OUT_FONT: fo.cp(COPY_OUT_FONT)
-
-
+¿COPY_OUT_FONT: fo.cp(COPY_OUT_FONT)
 
  ¿__name__≡‹__main__›: op_gen.main
                        ⨡ generate

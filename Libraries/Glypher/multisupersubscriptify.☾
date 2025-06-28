@@ -22,7 +22,7 @@ save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
 ⊢ monospace_font(𝒻): 𝒻.glyphs ᴍ monospace_char
                      ↪𝒻
 
-⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻[c󷹝])
+⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻􍴖)
                     ¡ε=𝑒: ‹Couldn't remove "⟦c⟧": ⟦ε⟧›☾
 
 ⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,⠤𝔸,log=1,⠶𝕂):

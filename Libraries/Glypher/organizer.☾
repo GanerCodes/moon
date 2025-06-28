@@ -50,6 +50,7 @@ native = KEYMAP⁻∖‹𝕄𝕊›
     ∀x,y⬠mchars󱑼(get_codepoints(mchars,‹mul›)ᐵ₀):
         S = xᐵ∈native⭜⟞⛶􍧱⭝conf􍪴 ₀ᐸ⨉⭢ᴍ󰌷ᐵ⨝␛𝕊+ᵜ␛𝕄ᐸ
         t = xᐵ∈conf⭜conf􍪴 ₁⭝{}ᐸſ󰁸󰁹|
+        t.pop(‹smol›,□)
         r=(S,{⠶t,mode=‹mul›,parents=[⠤x]})
         R.append(y)
     ↪R
@@ -58,7 +59,10 @@ native = KEYMAP⁻∖‹𝕄𝕊›
                       ¿c∈existing: h=existing[p≡␛\]
                                    ¿h≠␛◌: s=h
                       S = c≡p⭜[c]⭝c∈native⭜[p+c]⭝2pᑀ+ᑈconf ₀
-                      ↪s,(S,{⠶conf ₁,mode=m,parents=[c]})
+                      t = conf ₁
+                      ¿‹parents›∈t: t󷸊.copy
+                                    t.pop(‹smol›,□)
+                      ↪s,S⋄{⠶t,mode=m,parents=[c]}
     chars = conf⁻󰈲󷺹🃌≡1
     ↪‹sup sub›⍭ᐖchars󱑼(get_codepoints(chars,⟞)ᐵ₀)ꟿinherit(⬤,⬤,⟞)⭢ℵᐸ≺|
 
