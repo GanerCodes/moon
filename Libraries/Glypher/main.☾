@@ -254,16 +254,16 @@ gen_scripts = 󷺹ꟿ󰲣add_script(𝚏,x,‹⟦y₁ 􊬏ₚₐᵣₑₙₜₛ�
 MULTICHARS󱑼(c addm)ꟿ󰲣add_multichar(𝚏,y,‹⟦x⟧_mul›,x)  󰤱 subsup stuffs
 
 SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᴍremove_char(𝚏,⬤)
+
 S=c
 ∀i⬠SCRIPT_DEPTH⭥: c󷸊|(S󷸊adds)
                   gen_scripts(S)
 
-script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t􊬏ₚₐᵣₑₙₜₛ􊬐 ₀,□,⟞₀]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
-              󷺹₀ᐸ⭢ꟿ⁺󷺻⟝₀ᐵ∨ᑈ⟝₁󷺿⭢ℵ⭢⁺⍉ᴍ⨝⭢⨝𝗻
-script_map☾
- this is cooked rn fr 󰤱󰤱󰤱󰤱󰤱󰤱󰤱󰤱󰤱
- moon_dir/‹Builtins/Data/script.map› 󱖔􍡩 script_map
+script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t􊬏ₚₐᵣₑₙₜₛ􊬐 ₀,⟞₀,□]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
+             ⁺󷺹₀ᐸ󰒼󷺹₀ᐸᐵ⍉ꟿ∨´ᐸ⭢⍉ᴍ⨝⭢⨝𝗻
 
+save_pua
+moon_dir/‹Builtins/Data/script.map› 󱖔􍡩 script_map
 xcomp_out = ‹Output/.XCompose›𝐩
 xcomp_out 󱖔􍡩 c conf_to_xcompose
 
@@ -271,12 +271,9 @@ xcomp_out 󱖔􍡩 c conf_to_xcompose
 fo.parentᑀ/ᑈ⭠fo.stemᑀ+␛.+ᑈOUTPUT_EXTS→ᐵᔐ 𝚏.generate
 ¿COPY_OUT_FONT: fo.cp(COPY_OUT_FONT)
 
- ¿__name__≡‹__main__›: op_gen.main
-                       ⨡ generate
-                       ‹Running tests:›☾
-                       󰋺(𝐩(‹..›) / ‹Tests/tests.☾› ⭢ .resolve)
-                       ⦃import platform⦄
-                       platform.system ≡ "Linux" ∧ $ᴼᴱibus-daemon -dxrR󷹹
+ ¿__name__≡‹__main__›:  ‹Running tests:›☾
+                       ⨡ Tests ;; run_tests
+                        
 
 
 

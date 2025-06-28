@@ -49,8 +49,8 @@ chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
     ∀B: r = 0 B.pop
         r₁󷸊ᐵᐵ∈K⭜⟞⛶􍧱⭝⟞∈E⭜E􍪴⭝⟞⛶􍧱ᐸ⨉ᴍ󰌷ᐸ󰌷⭢ᚤ
         (dest ≔⬅ r₁󰌷⭢⊂K⭜E⭝B)ᵣ􊬣=r₁
-    E󷸊ꟿ⁺󰲣yᐵ∖‹(ᐦ)›󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
-    ↪⦉⠤include_chars⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
+    E󷸊ꟿ⁺󰲣yᐵ∖􊬏₍􊫔₎􊬐󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
+    ↪⦉⠤include_chars∖􊸇⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
 ⊢ conf_to_xcompose(c):
     t = chkp(cꟿ󰲣y₀󰅂⭢󰌷→pfxd,⬤)
     c󷸊ꟿ⁺󰲣y₀ᐵt⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱 doesn't add multiple spaces but eh

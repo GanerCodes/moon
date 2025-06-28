@@ -1432,7 +1432,7 @@ class UPSIDEDOWNSYNDROME:
 
 class SCRIPT:
     (SCRIPT_FILE_LOC := ð(moon_dir, 'Builtins/Data/script.map'))
-    (ÄÊPSH(ÄÝöÞ(ÐÌü(ÐØó(SCRIPT_FILE_LOC).strip), '\n')), ((CHAR_NRM := ÄÊPKE(0)[0]), (CHAR_SUP := ÄÊPKE(0)[1]), (CHAR_SUB := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
+    (ÄÊPSH(ÄÝöÞ((ÐØó(SCRIPT_FILE_LOC).strip('\n')), '\n')), ((CHAR_NRM := ÄÊPKE(0)[0]), (CHAR_SUP := ÄÊPKE(0)[1]), (CHAR_SUB := ÄÊPKE(0)[2])), ÄÊDEL(1))[1]
     (SUP := ÁÜÙ.maketrans(CHAR_NRM, CHAR_SUP))
     (SUB := ÁÜÙ.maketrans(CHAR_NRM, CHAR_SUB))
     (NRM := ÁÜÙ.maketrans(CHAR_SUP + CHAR_SUB, ÂÞÅCAT(2, CHAR_NRM)))
