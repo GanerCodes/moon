@@ -4,7 +4,7 @@
 
 H,ŧ𝼝 = 𝼞cache(__highlighter__),𝼞cache(termclr)  
 find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[𝟬𝟭𝟬𝟮]›)
-find_next_char = re.compile(‹((?:(?:⟦S⟧)|𝟭𝗯\[0m)*.?)›)
+find_next_char = re.compile(‹((?:⟦S⟧)*.?)›)
 rm_esc         = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
 dotrim         = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
 lines          = 󷺹󷹵𝑙|𝑡⭜􍪵⟞ ᔐ⭢.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism

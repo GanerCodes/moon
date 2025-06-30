@@ -755,8 +755,10 @@
 󷰾 τπ󷺍󷺎󷺏   ⟦⁅t𝕊⁆⁅p⟦𝕊234⟧⁆⟧ {tau,½τ,½π,½󷺍,½󷺎}
 󷰾 􋐳􋐲􋐴􋑯   ,⟦⁅cos⁆⁅sin⁆⁅tan⁆⁅log⁆⟧ {cos,sin,tan,log} Function (maybe operator in future?)
 󷰾 􋑃􋑂     ,⟦⁅lcm⁆⁅gcd⁆⟧ {lcm,gcd} Function (maybe operator in future?)
-󷰾 ⟞⟝   ⟦⁅-|⁆⁅|-⁆⟧𝕊 {left,right}-tack arg for {left,right} whisker
->⟨54f⟩⟶□ᐦ∞îĵ󷺈ℇ󷺍󷺎󷺏⟞⟝
+󷰾 ⟞⟝   ⟦⁅-| ⁆⁅ |-⁆⟧ {left,right}-tack arg for {left,right} whisker
+󷰾 󷷿󷷾   ⟦⁅-||⁆⁅||-⁆⟧ {left,right}-iterator for {left,right} whisker
+󷰾 󷸀    ⁅|O|⁆        whisker iterator index
+>⟨54f⟩⟶□ᐦ∞îĵ󷺈ℇ󷺍󷺎󷺏⟞⟝󷷿󷷾󷸀
 󷰾 𝚲󰲡󰲣󰲥   ⟦⁅cZ𝕊⁆⁅wc⟦123⟧⁆⟧ λ function of form ⥌{,x,xy,xyz}↦
 󷰾  󰲧󰲩󰲫          wc⟦456⟧   λ function of form ⥌{xyzw,xyzwv,xyzwvu}↦
 󷰾  ⥌↦󰅂   ⟦⁅cz𝕊⁆⁅amd⁆⁅c}⁆⟧ {declare,start,close} λ function
