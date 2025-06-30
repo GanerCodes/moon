@@ -3,18 +3,18 @@
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
 H,ŧ𝼝 = 𝼞cache(__highlighter__),𝼞cache(termclr)  
-find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0)m|[𝟬𝟭𝟬𝟮]›)
+find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[𝟬𝟭𝟬𝟮]›)
 find_next_char = re.compile(‹((?:(?:⟦S⟧)|𝟭𝗯\[0m)*.?)›)
 rm_esc         = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
 dotrim         = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
-lines          = 󷺹ᔐ⭢.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
+lines          = 󷺹󷹵𝑙|𝑡⭜􍪵⟞ ᔐ⭢.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
 tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
 𝼞ꬷ             = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
 𝼞𝼞             = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
 
 ⊢ slice_𝚕𝚌(𝚌,𝚙):
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
-    ¿𝙻🃌≡1: 𝙻 = 𝙻₀ 􀲸􊬤﹕􀲸􊬦⛶
+    ¿𝙻🃌≡1: 𝙻 = [𝙻₀ 􀲸􊬤﹕􀲸􊬦]
     ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
     ↪𝙻⨝𝗻
 
@@ -60,7 +60,7 @@ padl      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞�
 padc      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 padr      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 linewrap  = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
-linenum   = 𝼞cache(⥌𝚡,m=1,s=󰻾↦lines(𝚡)ᑀ🃌-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
+linenum   = 𝼞cache(⥌𝚡,m=1,s=󰻾,Δ=0↦lines(𝚡)ᑀ🃌+Δ-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹+Δ⭢󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
 linewnum  = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
 show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
 title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
@@ -85,8 +85,8 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ↪ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
-⭷ rm_esc,lines,padl,padc,padr,pads,stackr,box,BOX,linenum,linewnum,dotrim,show_code,␛
-  title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+⭷ rm_esc,lines,tspl,padl,padc,padr,pads,stackr,box,BOX,linenum,linewnum,dotrim,␛
+  show_code,title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢ test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                     linewrap(linenum(‹egg salad number twelve fortnite
