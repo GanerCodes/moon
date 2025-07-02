@@ -40,8 +40,8 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
     ⸘󱁕ᵗ≡‹S𝑣›: 󱁕.set(c=[𝗀𝗋𝗉(‹()›,𝗏(󱁕₀),𝔗(‹:=›),󱁕₁)])
     ⸘󱁕ᵗ≡‹󷺗∘›: 𝚏=󱁕₀
               ¿𝚏ᵗ≡‹𝗈𝗉› ∧ +𝚏₁∈𝐌ᵒᵖ ∧ (𝚏₀🃌󷺥🃌𝚏₂):
-                  p=󱁕🃌<3 ∧ (ℴ≔𝚏ᵉ ᴼ)ʳ∨+𝚏∈‹¯¬~›
-                  󱁕.set(c=[𝔗(␛(),⠤[󱁕₁,𝙨,𝚏₁ ₀.set(t=𝐌ᵒᵖ[+𝚏])]ᣆᵖᴙ,𝙨,⠤󱁕₂﹕,𝔗(␛))])
+                  p = 󱁕🃌<3∧(ℴ≔𝚏ᵉ ᴼ)ʳ ∨ +𝚏∈‹¯¬~›
+                  󱁕.set(c=[𝔗(␛(),⠤[󱁕₁,𝔗(𝘀),𝚏₁ ₀.set(t=𝐌ᵒᵖ[+𝚏])]ᣆᵖᴙ,𝔗(𝘀),⠤󱁕₂﹕,𝔗(␛))])
               ¡: 󱁕.set(c=[𝚏,𝔗(␛(),⠤󱁕ᶜ₁﹕⨝𝔗(␛,),𝔗(␛))])
     ⸘󱁕ᵗ≡‹str›: sn = 󷺹ᵉ ᵀ¬ ∧ ⟞ᵗ≡‹str_sub›
                α,β = 󱁕ᶜ􋇐sn
@@ -75,14 +75,12 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
                                     𝔗(‹ as󷺗󷺗󷺗 ›), C🃌>1⭜C₀⭝𝗏(␛), 𝔗(␛:)]
                ¡    : 󱁕ᶜ.append(𝔗(‹except ⟦PEV(␛𝑒)⟧:pass›))
     ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭: 󱁕₀.set(t=𝐌􋑺􊫼.get(+󱁕,+󱁕))
-                                        󱁕ᶜ.insert(1,𝙨)
+                                        󱁕ᶜ.insert(1,𝔗(𝘀))
     ⸘󱁕ᵗ≡‹cln_pfx›: ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))
     ⸘󱁕ᵗ≡‹stmts›: 󱁕.set(c=󱁕ᶜ⟖󰻾􋈠⁽􋋉⁾)
     ⸘󱁕ᵗ≡‹blk›: P,d = 󰲡expand_ast_py(x,PEV),𝗻+𝖫()
                ↪󱁕.set(c=[P(󱁕₀),⠤󱁕₁﹕⟕󰻾􋈠⁽􋋉⁾ᴍPᐵ.frp(󷺹ᵉ ᵀ,󷺹.cp(t=𝗻󰛔􍪵􊾾d),✗,✗)ᐸ,𝔗(𝗻)])
     ↪󱁕.set(c=󱁕ᶜᐖexpand_ast_py(⟞,PEV))
-
-ast_add_pos = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾ast_add_pos,󷺻+⟞⭢🃌+i))➡₁  󰤱 put this func in peggle
 
 ⊢ get_region(L,p): ¿Lᐹᔐ: L = lines(L)  󰤱 put this into text_tools
                    ¿p₀≡p₂: ↪[Lₚ􊬣 ₚ􊬤﹕ₚ􊬦]
@@ -91,33 +89,32 @@ ast_add_pos = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾
 ⊢ map_region(SM,p): ↪get_region(SM,p)󰌷ᐵ𝌂2ᐸ󰌷⭢⟷⭢󰆩
 
  eᵖ: pos in result, e󰁜: pos in input
-⊢ into_srcmap(󱁕,𝚌): 󱁕.rm(󰲡xᵉ ᵖ﹕₂≡xᵉ ᵖ₂﹕ ∧ xᵉ 󰁜﹕₂≡xᵉ 󰁜₂﹕)
-                    L = lines(𝚌)ᐵ🃌⋅􊱃
-                    ⊢ R(p,Δ): ¿p₀≡p₂: Lₚ􊬣 ₚ􊬤﹕ₚ􊬦 = 󰃏⋅⭠p₃-p₁
-                              ¡     : Lₚ􊬣 ₚ􊬤﹕ = 󰃏⋅⭠Lₚ􊬣🃌-p₁
-                                      ∀r⬠p₀󷸸p₂: Lᵣ = 󰃏⋅Lᵣ🃌
-                                      Lₚ􊬥 ﹕ₚ􊬦 = 󰃏⋅⭠Lₚ􊬥🃌-p₃
-                    ⊢ ƒ(󱁕,n=0): R(󱁕ᵉ ᵖ,󱁕ᵉ 󰁜)
-                                ∀c⬠󱁕:ƒ(c,n+1)
-                    ƒ(󱁕)
-                    ↪L
+ ⊢ into_srcmap(󱁕,𝚌): 󱁕.rm(󰲡xᵉ ᵖ﹕₂≡xᵉ ᵖ₂﹕ ∧ xᵉ.␛ρ﹕₂≡xᵉ.␛ρ₂﹕)
+                     L = lines(𝚌)ᐵ🃌⋅􊱃
+                     ⊢ R(p,Δ): ¿p₀≡p₂: Lₚ􊬣 ₚ􊬤﹕ₚ􊬦 = 󰃏⋅⭠p₃-p₁
+                               ¡     : Lₚ􊬣 ₚ􊬤﹕ = 󰃏⋅⭠Lₚ􊬣🃌-p₁
+                                       ∀r⬠p₀󷸸p₂: Lᵣ = 󰃏⋅Lᵣ🃌
+                                       Lₚ􊬥 ﹕ₚ􊬦 = 󰃏⋅⭠Lₚ􊬥🃌-p₃
+                     ⊢ ƒ(󱁕,n=0): R(󱁕ᵉ ᵖ,󱁕ᵉ.␛ρ)
+                                 ∀c⬠󱁕:ƒ(c,n+1)
+                     ƒ(󱁕)
+                     ↪L
+ ⊢ out_to_in_mapper(󱁕,α,ω): SM,𝙲 = into_srcmap(󱁕,ω),lines(α)
+                            ↪p↦get_region(𝙲,map_region(SM,p))⨝𝗻
 
-ast_clean_e = 󱁕↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈‹Tpρ›)),✓,✗)  󰤱 put into gram_tools?
-⊢ out_to_in_mapper(󱁕,α,ω): SM,𝙲 = into_srcmap(󱁕,ω),lines(α)
-                           ↪p↦get_region(𝙲,map_region(SM,p)☾)⨝𝗻
+ast_clean_e  = ⥌󱁕,ok=⦉␛T,␛p,␛ρ⦊↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈ok)),✓,✗)  󰤱 put into gram_tools?
+ast_add_pos  = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾ast_add_pos,󷺹􋒷🃌+i))➡₁  󰤱 put this func in peggle
+ast_swap_pos = ⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕.set(e=󱁕ᵉᐒ{ρ=⟞ᵖ,T=⟞ᵀ}ℵ􋄅))►󱁕ᴍast_swap_pos
 
 ⊢ ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
-    󱁕 = fill_󱁕_holes_basic(
-            ast_clean_e(
-                expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁)))
+    󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁).cpr
+    󱁕 = fill_󱁕_holes_basic(ast_clean_e(󱁕))
     pyc = +󱁕
-    (ƒ≔⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕ᵉ 󰁜≔󱁕ᵉ.pop(␛p))►󱁕ᴍƒ)∘󱁕
+     𝑩𝑩(󱁕,‹󱁕₀›)
+    ast_swap_pos(󱁕)
+     𝑩𝑩(󱁕,‹󱁕₁›)
     ast_add_pos(󱁕)
-     t = 󱁕.cpr.flat(󷺹ᵉ∌␛ρ).rm(󷺹ᵉ ᵀ∧⟞ᵉ∌␛ρ,✗)
-     pyc☾
-     h = out_to_in_mapper(t,𝚌,pyc)
-     ➰✓: h(𝑡(input()󷹎ᴍ𝑖))☾
-    
+     𝑩𝑩(󱁕,‹󱁕₂›)
     ¿get_tree: ↪󱁕
     ¿reparse¬: ↪pyc
     ⦃import ast⦄

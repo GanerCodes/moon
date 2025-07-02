@@ -11,7 +11,7 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
     ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
     ¿show_ast          : 𝑩𝑩(󱁕,‹AST›)
-    𝘤 = to_py(𝚌)(󱁕.cpr, reparse=✓)
+    𝘤 = to_py(𝚌)(󱁕.cpr)
     ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
     ↪𝘤
@@ -23,7 +23,7 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
             ⨡ tree      ⭸ *
             þmoon_to_py.has_lazy_load = ✓
 ⊢ þmoon_to_py(𝚌,𝙺,𝓚): þdo_imps
-                      ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶{‹reparse›:✓,⠶𝓚})
+                      ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶𝓚)
 þmoon_to_py.has_lazy_load = ✗
 
 þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)

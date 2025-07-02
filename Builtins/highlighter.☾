@@ -1,9 +1,0 @@
-styf = moon_dir/‹Builtins/Data/style.json›
-styd = styf  𝔍󰄟 ℵ
-
-⊢ (cache) sty(s,bg=0,def=‹bec›):
-    ∀k,v⬠styd¿s∈k ∧ v∋‹color›: ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
-    ↪termclr(s,def,bg)
-__highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
-
-⊢ highlight_tester: ∀ℑ𝔑.readline≕l: 𝗻 l.rstrip __highlighter__ ☾

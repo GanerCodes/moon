@@ -51,7 +51,7 @@ n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
                   ↪󱁕
  (is,ie)⟶(ls,cs,le,ce)
  one day ☾ will be fast but for now this code is big and ugly 😭
-⊢ reform_positions(󱁕,𝚌): 𝙼 = lines(𝚌)ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
+⊢ reform_positions(󱁕,𝚌): 𝙼 = 𝚌 lines ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
                          🟑 ↪ 󱁕.frp(ⴳ,󱁕↦󱁕ᵉ ᵖ󷸊ᴍ󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ󰅂⭢󰆩 →► 󱁕,✓) 🟑
                          s=0
                          ⊢ ƒ(󱁕): ⦃nonlocal ⦃s⦄⦄
@@ -87,8 +87,8 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
  I:insert [add stuff to make not ctx-sens]
  R:remove [remove comments n stuff]
 ⊢ under_gram(󱁕): δ = ⍁
-                 ∀r⬠󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₀,+r⭢🃌 ))
-                 ∀r⬠󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,+r⭢🃌󷹒))
+                 ∀r⬠󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₀,r􋒷🃌 ))
+                 ∀r⬠󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,r􋒷🃌󷹒))
                  󱁕.rm(󷺹ᵉ ⁻∩␛R␛Iᐸ)
                  ↪ +󱁕,gram_surgery(⬤,δ)
 

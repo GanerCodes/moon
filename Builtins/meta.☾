@@ -13,10 +13,13 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
               ᑀ⨝␛,⟧})›
 ⊢ (cache) moon_to_py_cached(𝚌): TRANSPILE_REF⨳‹Cannot transpile without transpiler!›
                                 ↪𝚌⭢(+TRANSPILE_REF)
-⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,ƒ=EXEC_NATIVE,ret=✗,init_ns=✓):
+⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,
+    ƒ=EXEC_NATIVE,ret=✗,init_ns=✓,code_ref=✓):
+    𝘤=𝚌
     ¿native¬: 𝚌 = moon_to_py_cached(𝚌)
     ¿get_code: ↪𝚌
     ¿init_ns: ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
+    ¿code_ref∧native¬: ns[‹__moon_code__›]=𝘤
     r=ƒ(𝚌,ns)
     ↪ret ⭜r⭝ ns
 
@@ -46,9 +49,10 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
              ns,𝕂 = {__name__=name, __file__=F, __dir__=F.parent,
                       __EXPORTS__={}, __þIMPORTS__=__þIMPORTS__,
                       TP_CACHE=TP_CACHE, TRANSPILE_REF=TRANSPILE_REF},{}
-              ¿native≅□: 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = 󱠨(𝕂􊬏󰂼ₑ􊬐≔F ,get_code=✓)
-              ¡        : 𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐 = TP_CACHEₙₐₜᵢᵥₑ
-              ns = 󱠨(𝕂􊬏ₙₐₜᵢᵥₑ􋕞󰂼ₑ􊬐,ns=ns,native=✓)
+              𝕂[‹code›] = ns[‹__moon_code__›] = F 
+              ¿native≅□: 𝕂[‹native_code›] = 󱠨(𝕂[‹code›],get_code=✓)
+              ¡        : 𝕂[‹native_code›] = TP_CACHEₙₐₜᵢᵥₑ
+              ns = 󱠨(𝕂[‹native_code›],ns=ns,native=✓)
               __þIMPORTS__󰂘 = Module(name,ns,hardcoded=native≇□,⠶𝕂)
               sys.modulesₙₐₘₑ = __þIMPORTS__󰂘
         ¡ε=𝑒: __þIMPORTS__.pop(F,□)

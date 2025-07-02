@@ -1,20 +1,9 @@
+⦃import traceback,re⦄
 ⨡􋀸 text_format
-⨡ Compiler/to_ast
-⨡ peggle2/gram_tools
-⨡ Compiler/ast_to_py
-
- TERM_RESET_B = ‹𝟭𝗯[49m›
- TERM_RESET_F = ‹𝟭𝗯[39m›
- TERM_RESET   = ‹𝟭𝗯[󷺗0m›
- ⊢ termclr(t,fg=□,bg=□,rst=✓,rl=✗):
-     rlw = 󰲡rl⭜ˣ‹𝟬𝟭⟦x⟧𝟬𝟮›
-     mkc = 󰲩‹𝟭𝗯[⟦x⟧;2;⟦y⟧;⟦z⟧;⟦w⟧m› rlw
-     R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
-     ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
- ⊢ (cache) sty(s,bg=0,def=‹bec›):
-     ∀k,v⬠styd¿s∈k ∧ v∋‹color›: ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
-     ↪termclr(s,def,bg)
- __highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
+⨡􋀸 Compiler/ast_to_py
+⨡  Compiler/to_ast
+⨡  Compiler/node_types ⭸ 𝑩𝑩
+⨡  peggle2/gram_tools
 
 ⊢ find_section(󱁕,𝚜,a=␛p):
     ¿␛p∉󱁕ᵉ: ↪
@@ -27,93 +16,55 @@
                        αl,αc,βl,βc=r
                        ¿αl≡βl: 𝖺,ch,𝖻=tspl(t󰃤ₗ,αc⋄βc)
                                ch = 𝖺+ƒ(ch)+𝖻
-                       ¡     : ch = t󰃤ₗ﹕󰃥ₗ
+                       ¡     : ch = t󰃤ₗ﹕󰃥ₗ₊₁
                                (𝖺,ch₀),(ch􍨄,𝖻) = (ch₀⋄αc,ch􍨄⋄βc)ꟿtspl
                                ch = 𝖺+ƒ(ch⨝𝗻)+𝖻
                        ↪[⠤t﹕󰃤ₗ,ch,⠤t󰃥ₗ₊₁﹕]⨝𝗻
 
 expand_region = ⥌𝚌,r↦r₀⋄0⋄r₂⋄(𝚌 lines)ᵣ􊬥𝼞ꬷ
-color_regions = 󰲡𝔸ſˡⁱⁿᵉˢ􋁐ˣ󷺻under_region(⟞,⟝₀,ŧ𝼝(⬤,⠤⟝₁))󷺿
+color_regions = 󰲡𝔸ſˡⁱⁿᵉˢ􋁐ˣ󷺻under_region(⟞,⟝₀,ŧ𝼝(⬤,⠤⟝₁)🟑󷺹ᐖŧ𝼝(⟞,⠤⟝₁)ᐸ⨝ᐸ🟑)󷺿
 
 ⊢ mapper(𝚌): 󱁕 = 𝚌 to_ast
              𝒑 = ast_to_py(󱁕.cpr,𝚌,get_tree=✓)
-             reform_positions(𝒑,+𝒑)
-             𝘵 = 󰲡find_section(󱁕,find_section(𝒑,x,␛ρPEV)ᵉ 󰁜)ᵉ ᵖ
+             reform_positions(𝒑,𝒑􋒷)
              𝚌󷸊lines
-             ⊢ ƒ(⠤𝔸,expand_first=✓,lfmt=ŧ𝼝(⬤,‹f5f›)):
-                 ¿expand_first: 𝔸=[𝔸₀ᐒexpand_region(𝚌,⟞₀)⋄⟞₁,⠤𝔸₁﹕]
-                 r=color_regions(𝚌,⠤𝔸ᐵ₀𝘵,⟞₁ᐸ)
-                 ¿expand_first: r=linenum(r,Δ=𝔸₀ ₀ ₀+1,s=lfmt)
-                 ↪r
+             𝘵 = 󰲡find_section(󱁕,find_section(𝒑,x,␛ρ)ᵉ.␛ρ)ᵉ ᵖ
+             
+             ⊢ ƒ(⠤𝔸,lfmt=ŧ𝼝(⬤,‹f5f›)):
+                 𝔸󷸊ᐵ₀𝘵⋄⟞₁
+                 𝔸.insert(0,(expand_region(𝚌,𝔸ᐵ₀󷸻₀󰄎₂ᐸ󰆩⟷⭢󱑼₀󰄎₀⭢󰆩),□⋄□))
+                 r = color_regions(𝚌,⠤𝔸)
+                 r = linenum(r,Δ=𝔸₀ ₀ ₀,s=lfmt)
+                 ↪r lines ⭢ [𝔸₀ ₀ ₀-2:𝔸₀ ₀ ₂+3] ⭢ ⨝𝗻
              ↪ƒ
-⦃import re⦄
-
-⊢ termclr(t,fg=□,bg=□,rst=✓,rl=✗):
-    rlw = 󰲡rl⭜ˣ‹𝟬𝟭⟦x⟧𝟬𝟮›
-    mkc = 󰲩‹𝟭𝗯[⟦x⟧;2;⟦y⟧;⟦z⟧;⟦w⟧m› rlw
-    R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
-    ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
-
 find_esc_seqs = re.compile(S≔‹(𝟭𝗯\[(?:(?:[0-9]+;){4}[0-9]+|0|[34]9)m|[𝟬𝟭𝟬𝟮])›)
 ⊢ under_esc(x,ƒ): c,s = find_esc_seqs.split(x)↨⁺󷺹₀%2ᐸᴍ󷺺₁
                   ↪(c󰌷ᔨ􍯓􊽺⭢ᴍ⨝)󱑼􊾖s⭢󰌷⭢⨝
 
- mapper(‹a+b󰈲󷺹²›)((0⋄13⋄0⋄21,□⋄‹313›),(0⋄13⋄0⋄21,□⋄‹f00›))☾
+⊢ run_fancy_errors(ƒ,𝘦=BaseException,return_err=✗,exit_code=1):
+    hl_f = ŧ𝼝(⬤,‹fbf›,‹101›)
+         ↪ƒ()
+    ¡ε=𝘦: ə = ε.__traceback__
+          α = traceback.extract_tb(ə)ᐖ⟞.filename,⟞.name,⟞.lineno-1,⟞.colno,⟞.end_lineno-1,⟞.end_colnoᐸ
+          β = traceback.   walk_tb(ə)ᐵ₀.f_globalsᐸ
+          ∀(f,n,⠤r),G⬠α󱑼β:
+              ¿G.get(‹__moon_code__›)≕𝚌¬: ‹⟦f hl_f⟧ ⟦n VEP⟧›☾ ; ↺
+              𝘮=𝚌 mapper
+              ‹⟦G[‹__file__›] hl_f⟧ (⟦r⟧)
+               ⟦under_esc(𝘮((r,□⋄‹331133›)),__highlighter__(⬤,,))⟧›☾
+          ŧ𝼝(‹Error: ⟦ε⟧›,‹f33›)☾
+          ¿return_err: ↪ε
+          exit_code sys.exit
 
 𝚌 = 󰦥󰦥󰦥󰦥󰦥
-⊢ x(y): 1/0
+⊢ x(y): 1 ⨳
+        2
+        ⨡ ℍ
+        ĵ÷□
 x(2)
-󰦥󰦥󰦥󰦥󰦥
+󰦥󰦥󰦥󰦥󰦥⬄
+run_fancy_errors(𝚲𝚌 󱠨)
 
-run_self_aware = 󰲡󱠨(TRANSPILE_REFˣ(x,𝓚=ℵ(reparse=✗)),{__moon_code__=x}ℵ,native=✓)
-
-     run_self_aware(𝚌)
-¡ε=𝑒: ə = ε.__traceback__
-      i=0
-      ∀ə≇□⭜i󷸊+1:
-        G = ə.tb_frame.f_globals
-        ¿‹__moon_code__›∈G:
-            𝘮=mapper(G[‹__moon_code__›])
-            P = ə.tb_frame.f_code.co_positionsᐵ₀-1,⟞₂,⟞₁-1,⟞₃ᐸ󰈲󷺹⤈≥0
-            under_esc(𝘮((Pᴍ⬤󷸻₀󰄎₂⭢󰆩⟷ᑀ₀,0,⟞₁,0ᐸ,□⋄□),
-                        ⠤P↨ꟿ󰲣y,□⋄‹⟦3+2x⭢⋅17󷹜¹⁶⁺²􍢉⟧11⟦3+x⭢⋅17󷹜¹⁶⁺²􍢉⟧›󰅂),
-                      __highlighter__(⬤,b=□))☾􋋉
-             pps􌿰􋕜ₜ􋕞ₗₐₛₜᵢ􊲗₂
-        ə󷸊.tb_next
-
-🟑
-exit
-
-⊢ __error_printer__(ε):
-    ə = ε.__traceback__
-    TB,i = ⍁,0
-    ∀i󷸊+1: ¿i≥500: ‹Too long a traceback, stopping at ⟦i⟧ frames!›☾
-                   ⇥
-           g = ə.tb_frame.f_globals
-           ∀_⬠␛_: ¿‹__file__›∈g:
-                      f = g􊬏􋕞􋕞ᵢₗₑ􋕞􋕞􊬐 ᔐ
-                      ¿f󷸊𝐩→.exists: F = f 
-                      ¡            : ‹Cannot find "⟦f⟧"??›☾ ; ⇥
-                  ¡: ‹Traceback with no file? ⟦ε traceback.format_exception ⟕⟧›☾
-                     ⇥
-                  
-                  F = F.split(𝗻)
-                  pps = ⠤ə.tb_frame.f_code.co_positions,
-                  s,e,a,b = pps􌿰􋕜ₜ􋕞ₗₐₛₜᵢ􊲗₂
-                  ¿a≅□: TB 󷸊+ [f⋄s⋄ᐦ⋄‹Missing location!›⋄ᐦ]
-                  l = Fₛ₋₁﹕ₑ⨝𝗻⭢𝑀
-                  A,B,C = l﹕ₐ⋄lₐ﹕⋄l﹕ ᐵ.decode(‹utf-8›,errors=‹replace›)
-                  TB 󷸊+ [(f,s,__highlighter__(A),
-                              __highlighter__(B,✓),
-                              __highlighter__(C))]
-           ¿ə.tb_next≕ə≅□: ⇥
-    CLR1,CLR2 = ‹faf›,‹f55›
-    mark = termclr(␛⮡,CLR1)
-    maxl, prevf = TB⤉⁰􌾕􋋎󷺹₁, □
-    zf = maxl₁ ᔐ 🃌
-    ∀f,s,A,B,C⬠TB: ¿f≠prevf: termclr(f,CLR1)☾
-                   ‹⟦mark⟧ ⟦s ᔐ⭢.zfill(zf)⟧𝘁⟦A⟧⟦B⟧⟦C⟧›☾
-                   prevf = f
-    ‹⟦termclr(‹Error:›,CLR2)⟧ ⟦ε __highlighter__⟧›☾
-
-threading.excepthook = (sys.excepthook≔󰲥y __error_printer__)
+ ⟦3+2h⭢⋅17󷹜¹⁶⁺²􍢉⟧11⟦3+h⭢⋅17󷹜¹⁶⁺²􍢉⟧
+ mapper(‹a+b󰈲󷺹²›)((0⋄13⋄0⋄21,□⋄‹313›),(0⋄13⋄0⋄21,□⋄‹f00›))☾
+ threading.excepthook = (sys.excepthook≔󰲥y __error_printer__)

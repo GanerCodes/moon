@@ -17,9 +17,17 @@ h2hl = r2hl○h2r
 TERM_RESET_B = ‹𝟭𝗯[49m›
 TERM_RESET_F = ‹𝟭𝗯[39m›
 TERM_RESET   = ‹𝟭𝗯[󷺗0m›
+styd = (moon_dir/‹Builtins/Data/style.json›)  𝔍󰄟 ℵ
 
 ⊢ termclr(t,fg=□,bg=□,rst=✓,rl=✗):
     rlw = 󰲡rl⭜ˣ‹𝟬𝟭⟦x⟧𝟬𝟮›
     mkc = 󰲩‹𝟭𝗯[⟦x⟧;2;⟦y⟧;⟦z⟧;⟦w⟧m› rlw
     R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
     ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
+
+⊢ (cache) sty(s,bg=0,def=‹bec›):
+    ∀k,v⬠styd¿s∈k ∧ v∋‹color›: ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
+    ↪termclr(s,def,bg)
+__highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
+
+⊢ highlight_tester: ∀ℑ𝔑.readline≕l: 𝗻 l.rstrip __highlighter__ ☾
