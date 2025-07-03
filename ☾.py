@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='CydGB_KCXqgKfcCn1H_Bz5Vg5NPaeri4PHhsuA3ukiA'
+BOOTSTRAP_HASH='r7y7U7cCqhkJZTOqB5VTHn7ffYU5A5cqWXqAFlCoN28'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -1856,7 +1856,7 @@ def moon_to_py_cached(áÖï):
     ÂùÆ(TRANSPILE_REF,("Cannot transpile without transpiler!"))
     return ÂÞÅCAT(áÖï,((+ TRANSPILE_REF )))
 
-def ÄÕôñ(áÖï,ns=None,get_code=False,include_builtins=True,native=False,Æå=EXEC_NATIVE,ret=False,init_ns=True,code_ref=True):
+def ÄÕôñ(áÖï,ns=None,get_code=False,include_builtins=True,native=False,Æå=EXEC_NATIVE,ret=False,init_ns=True,code_ref=True,custom_errors=True):
     (áÕÃ:=áÖï)
     if (not native ):
         (áÖï:=moon_to_py_cached(áÖï))
@@ -1870,7 +1870,15 @@ def ÄÕôñ(áÖï,ns=None,get_code=False,include_builtins=True,native=False,Æ
     if (code_ref and (not native )):
         (ÄÊPSH(ns),ÄÊPSH(("__moon_code__")),ÄÊPSH(áÕÃ),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
     
-    (r:=Æå(áÖï,ns))
+    try :
+        (r:=Æå(áÖï,ns))
+    except BaseException as Ïã:
+        if (not custom_errors ):
+            raise Ïã
+        
+        (ÄÊPSH(__ÄÊIMPORT__(("errors"),globals(),(""))),ÄÊPOP())[((- 1 ))]
+        show_error(Ïã)
+    
     return ((r)if(ret)else(ns))
 
 class Module(ÁØö(ÐÌü(ÂÑÖ()))):

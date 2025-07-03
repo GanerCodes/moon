@@ -2,16 +2,16 @@
 
 Error handling:
   1. Format for sourcemaps
-  2. Thing that takes errors and uses sourcemap to get relevent ranges
-  3. Thing that concats trees so you can generate sourcemaps for multi-files
+  2. Thing that concats trees so you can generate sourcemaps for multi-files
 
-󰤱  show errors
+󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
+󰤱  op colors 💀
+󰤱  better errors
 󰤱  ⨡ a ⨡ b ⨡ c
 󰤱  `a b≕c d` ⟶ `(PSH(␀CAT(a, b)), (c := PKE(0)), DEL(1))[1]` ???
 󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)`
 󰤱  whitespace involution lol
 󰤱  string ␛ before newline should not add it
-󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  with statements (prob ⓦ under or something)
 󰤱  store info abt stuff so i can say have a symbol that gives me the current line or line number
 󰤱  replace multiple calls to ftrp with a thing that finds relevent nodes, groups them, then does things type by type; also make sure whenever u do a replcaement with some remaining you check if that type that the find condition for the latter replacements applies or not; if so, dont remove it from the 󰤱 list
