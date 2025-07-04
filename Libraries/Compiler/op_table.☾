@@ -54,8 +54,8 @@ MT = ‹NPSBlrαςνλΔ›
     ∀𝙻⬠𝙾𝚃ᴙ: 𝙻󷸊ᐵ₀,⟞₁﹕⨝⭢󷸼ᐸ
             𝚝,𝙾 = 𝑠(𝙻ᓕ􊽧󰁱⁰),ℵ
             ∀t,m⬠𝙻: food = 𝑠(𝒪⁻)∪(␛α∈m⭜𝚝.copy⭝∅)
-                    𝙾ₜ=OP(t=t,M=m,L=𝑠(m∩‹BS›) ⭜food.copy⭝ ∅,
-                                  R=𝑠(m∩‹BP›) ⭜food.copy⭝ ∅)
+                    𝙾ₜ=OP(t=t,M=m,L=⦉⠤m∩‹BS›⦊ ⭜food.copy⭝ ∅,
+                                  R=⦉⠤m∩‹BP›⦊ ⭜food.copy⭝ ∅)
             𝒪 󷸊| 𝙾
     𝓞 = ℵ
     ∀L,t,m,R⬠𝚂𝚃: m󷸊󷸼

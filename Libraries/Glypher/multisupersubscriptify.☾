@@ -39,6 +39,9 @@ save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
     ¡     : ¿m≡␛b: ↪[𝔯⋄c, 𝔱⋄0⋄¯.35w]⋄w
             ⸘m≡␛p: ↪[𝔯⋄c, 𝔱⋄0⋄ .35w]⋄w
 
+⊢ (char_maker) add_copy(𝒻,c,m):
+    ↪[𝔯⋄c]⋄W
+
 ⊢ (char_maker) add_multichar(𝒻,s):
     ¿s🃌≡2: ↪ [𝔯⋄s₀, 𝔱⋄¯⅘w⋄0,
               𝔯⋄s₁, 𝔱⋄.9w⋄0, 𝔰⋄⅗], w
@@ -81,7 +84,7 @@ save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
  􋕠|􋕡 􊾯ᴼO󰂡􊼍 􊼇󰂛Iᴵ􊾩 􌎒􊱃□􋄅􌎕 􍛄􍍘󰤃􍍙􍛇 􌥶􋕠􌥴|􌥷􋕡􌥵
  󱾄󱽽󱾌 󱾁󱾌 󱽿󱾊󱾇󱾏 𐂷🌲🌳🌴🎄🎋 󱹯󱹡󱹟󱹮󱹡󱹰 󱹩󱹡󱹯󱹯󱹝󱹣󱹡 A𝔸𝓐𝐀𝐴𝔄𝕬🄐Ⓐ🄰🅐А𝗔 ; little snowman 󱼩
  ↓↓ done ∈ each function because i want to keep characters
- ∀c∈pua_s…←pua_e+1: try(𝒻.removeGlyph(𝒻ᶜ))
+ ∀c∈pua_s󷸻pua_e: try(𝒻.removeGlyph(𝒻ᶜ))
  chatgpt is terrible at coding and this garbage doesnt even compile
  𝒻.selection.select(("ranges",None),pua_s,pua_s+2⋅chars🃌+doubles🃌)
  𝒻.selection.CenterInWidth()

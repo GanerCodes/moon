@@ -1,11 +1,11 @@
-󷷾󷷿󷸀⨡⭸⭷(ⵗ)󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
+󷷾󷷿󷸀󰛸⨡⭸⭷(ⵗ)󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
 
 Error handling:
   1. Format for sourcemaps
   2. Thing that concats trees so you can generate sourcemaps for multi-files
 
-󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  op colors 💀
+󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  better errors
 󰤱  ⨡ a ⨡ b ⨡ c
 󰤱  `a b≕c d` ⟶ `(PSH(␀CAT(a, b)), (c := PKE(0)), DEL(1))[1]` ???

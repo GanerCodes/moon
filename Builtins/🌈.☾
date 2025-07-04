@@ -14,6 +14,19 @@
 r2hl = 󰲡‹#⟦xᴍ󷹜¹⁶⁺²􍢉⭢⨝⟧›
 h2hl = r2hl○h2r
 
+⊢ rgb2hsv(r,g,b): m,v=r⋄g⋄b⭢⟷
+                  s=v⭜⁰(v-m≕Δ)⭢÷v
+                  h=v⭜⁰(v≡r⭜g-b⭢÷Δ%6⭝␛
+                        v≡g⭜b-r⭢÷Δ+2⭝␛
+                            r-g⭢÷Δ+4 )⋅60%360
+                  ↪h÷360,s,v
+⊢ hsv2rgb(h,s,v): h󷸊⋅360%360
+                  (s,v)󷸊ᴍ0󷹄1
+                  x = (c≔v⋅s)⋅(1-⫰⭠h÷60%2-1)
+                  ↪(h≤ 60 ⭜c⋄x⋄0⭝ h≤120⭜x⋄c⋄0⭝␛
+                    h≤180 ⭜0⋄c⋄x⭝ h≤240⭜0⋄x⋄c⭝␛
+                    h≤300 ⭜x⋄0⋄c⭝       c⋄0⋄x )ᐵ+ᑅv-c
+
 TERM_RESET_B = ‹𝟭𝗯[49m›
 TERM_RESET_F = ‹𝟭𝗯[39m›
 TERM_RESET   = ‹𝟭𝗯[󷺗0m›
@@ -26,7 +39,7 @@ styd = (moon_dir/‹Builtins/Data/style.json›)  𝔍󰄟 ℵ
     ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
 
 ⊢ (cache) sty(s,bg=0,def=‹bec›):
-    ∀k,v⬠styd¿s∈k ∧ v∋‹color›: ↪termclr(s,v􊬏󰂼ₗ󰂼ᵣ􊬐,bg)
+    ∀k,v⬠styd¿s∈k ∧ v∋‹fg›: ↪termclr(s,v􊬏􊬐,bg)
     ↪termclr(s,def,bg)
 __highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
 

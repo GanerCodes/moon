@@ -1,19 +1,18 @@
 __pycache__/
 /bin/☾
-/FontCompose/FontPatcher/
-/FontCompose/JuliaMono/
+/Libraries/Glypher/FontPatcher/
+/Libraries/Glypher/JuliaMono/
 
 /Extra/wasm_stuff.zip
 /Extra/cpy_wasm_cache/*
-/FontCompose/PuaMaps/Old/*
-!/FontCompose/PuaMaps/Old/.keep
+/Libraries/Glypher/PuaMaps/Old/*
+!/Libraries/Glypher/PuaMaps/Old/.keep
 
-/FontCompose/Output/*
-!/FontCompose/Output/99_JuliaMono-Regular.ttf
-!/FontCompose/Output/99_JuliaMono-Regular.otf
-!/FontCompose/Output/99_JuliaMono-Regular.woff2 
-!/FontCompose/Output/.XCompose
-!/FontCompose/Output/.SCRIPT_MAP
-!/FontCompose/Output/multi.json
-!/FontCompose/Output/style.json
-!/FontCompose/Output/style_regex.json
+/Libraries/Glypher/Output/*
+!/Libraries/Glypher/Output/99_JuliaMono-Regular.ttf
+!/Libraries/Glypher/Output/99_JuliaMono-Regular.otf
+!/Libraries/Glypher/Output/99_JuliaMono-Regular.woff2 
+!/Libraries/Glypher/Output/.XCompose
+!/Libraries/Glypher/Output/multi.json
+!/Libraries/Glypher/Output/style.json
+!/Libraries/Glypher/Output/style_regex.json

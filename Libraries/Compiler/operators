@@ -254,7 +254,7 @@
     ❗ susceptible to major change (󰤱 make ᖘᕋᓕ consistant)! ❗
     󰤱˜ docs
 󷰣 | 𝚡∧𝚢   bitwise or
-󷰤 ^ 𝚡∧𝚢   bitwise xor
+󷰣 ^ 𝚡∧𝚢   bitwise xor
 󷰥 & 𝚡∧𝚢   bitwise and
 󷰦 ⪡⪢ 𝚡∨􊽨𝚡 ⟦⁅<<⁆⁅>>⁆⟧X bitshift number or rotate array {left,right}
     𝑖 ⪡ 𝑖
@@ -284,15 +284,15 @@
 󷰨 ⋄󰁝 𝚡∧𝚢 <>𝕊 join into list
     `1⋄2 ≡ [1,2]`
     `1⋄2⋄9 ≡ [1,2,9]`
+󷰪 󷹩 𝚡∨𝚢 ux exclusive difference
+    ❗ susceptible to change with non-set args! ❗
+    󰤱 docs
 󷰪 ∪ 𝚡∨𝚢 uw𝕊 union
     𝑠 ∪ 𝗜 = x|𝑠(right)
     𝑙 ∪ 𝗜 = [⠤x,right∖x]
     ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
-󷰪 󷹩 𝚡∨𝚢 ux exclusive difference
-    ❗ susceptible to change with non-set args! ❗
-    󰤱 docs
-󷰫 ∩ 𝚡∨𝚢 us𝕊 intersection
+󷰬 ∩ 𝚡∨𝚢 us𝕊 intersection
     𝑠 ∩ 𝗜 = x∩𝑠(right)
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     ❗ susceptible to change with non-set args! ❗
@@ -628,8 +628,6 @@
     `0! ≡ 1`
     `3!5! ≡ 720`
     󰤱 micheal docs
-󷰯 …  𝚡∧𝚢 ..𝕊 indicies between
-    Same as 󷸹
 󷰯 ⌃󰁌 𝚡∧􊽨𝚢 c^ exponential
     `5⌃2 ≡ 5² ≡ 25`
 󷰯 󷷺󰁌 𝚡∧􊽨𝚢 dia^ diamond exponential

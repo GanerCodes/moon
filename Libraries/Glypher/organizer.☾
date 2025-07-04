@@ -45,14 +45,22 @@ get_codepoint  = ⥌c,p↦pua_single(n≔  ‹⟦p⟧_⟦c⟧›) ►←      (m
 get_codepoints = ⥌C,p↦pua_conseq(N≔Cᐖ‹⟦p⟧_⟦⟞⟧›) ►← N󱑼Cꟿ󰲣(mlₓchr,x,y)󰅂
 
 native = KEYMAP⁻∖‹𝕄𝕊›
+
+⊢ add_copies(conf,chars,N):
+    r = ℵ
+    ∀c,O⬠chars󱑼(N⭥ᐖ(get_codepoints(chars,‹cpy⟦󷸀⟧›)ᐵ₀))⍉:
+        t = c∈conf⭜conf ₁⭝{}
+        c⋄O→☾
+        ∀o⬠O: r󰂼=(ᐦ,t|{mode=‹cpy›,parents=[c]})
+    ↪r
 ⊢ add_multichars(conf,mchars):
     r,R = ℵ,⍁
-    ∀x,y⬠mchars󱑼(get_codepoints(mchars,‹mul›)ᐵ₀):
-        S = xᐵ∈native⭜⟞⛶􍧱⭝conf􍪴 ₀ᐸ⨉⭢ᴍ󰌷ᐵ⨝␛𝕊+ᵜ␛𝕄ᐸ
-        t = xᐵ∈conf⭜conf􍪴 ₁⭝{}ᐸſ󰁸󰁹|
+    ∀c,o⬠mcharsᐵ,ᑈ(get_codepoints(mchars,‹mul›)ᐵ₀):
+        S = cᐵ∈native⭜⟞⛶􍧱⭝conf􍪴 ₀ᐸ⨉⭢ᴍ󰌷ᐵ⨝␛𝕊+ᵜ␛𝕄ᐸ
+        t = cᐵ∈conf⭜conf􍪴 ₁⭝{}ᐸſ󰁸󰁹|
         t.pop(‹smol›,□)
-        r=(S,{⠶t,mode=‹mul›,parents=[⠤x]})
-        R.append(y)
+        r󰂼=(S,{⠶t,mode=‹mul›,parents=[⠤c]})
+        R.append(o)
     ↪R
 ⊢ add_scripts(conf,existing):
     ⊢ inherit(c,s,m): p=‹/\›[m≡‹sup›]
@@ -67,3 +75,5 @@ native = KEYMAP⁻∖‹𝕄𝕊›
     ↪‹sup sub›⍭ᐖchars󱑼(get_codepoints(chars,⟞)ᐵ₀)ꟿinherit(⬤,⬤,⟞)⭢ℵᐸ≺|
 
 ⭷ save_pua,add_multichars,add_scripts,lm
+
+¿__name__≡‹__main__›: add_copies(ℵ,‹abc›,5)☾

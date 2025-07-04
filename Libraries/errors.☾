@@ -60,7 +60,7 @@ find_esc_seqs = re.compile(S≔‹(𝟭𝗯\[(?:(?:[0-9]+;){4}[0-9]+|0|[34]9)m|[
     ¿return_err: ↪ε
     exit_code sys.exit
 
-⊢ run_fancy_errors(ƒ,𝘦=BaseException,return_err=✗,exit_code=1):
+⊢ run_fancy_errors(ƒ,𝘦=𝑒𝑒,return_err=✗,exit_code=1):
          ↪ƒ()
     ¡ε=𝘦: show_error(ε,return_err,exit_code)
 

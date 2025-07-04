@@ -74,18 +74,18 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
             HIST_FILE ᔐ readline.read_history_file
             pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=✓)
             ns = 󱠨(ᐦ)
-            ∀: 𝚌 = pfx input
+            ∀: 𝚌 = ns[‹__moon_code__›] = pfx input
                ¿𝚌¬: ‹God is good!›☾
                ¡  : readline.write_history_file(HIST_FILE)
-                    ¿𝚌≡‹clear›: os.system(‹clear›)
-                    ¡         : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
-                                𝘤 = 𝚌 compile_code
-                                𝘤 VEP __highlighter__ ☾
-                                s=✗
-                                     󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗)☾
-                                      ↺
-                                     󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗)
-                                ¡ε=𝑒: ε traceback.format_exception⭢⨝ᐦ☾
+                    ¿𝚌≡‹clr›: os.system(‹clr›)
+                    ¡       : ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾
+                              𝘤 = 𝚌 compile_code
+                              𝘤 VEP __highlighter__ ☾
+                              s,errp = ✗,{return_err=✓}
+                                   󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗,show_error_𝕂=errp)☾
+                                    ↺
+                                   󱠨(𝘤,ns,native=✓,ƒ=exec,ret=✓,init_ns=✗,show_error_𝕂=errp)
+                              ¡ε=𝑒: ε traceback.format_exception⭢⨝ᐦ☾
 
 ⊢ transpiler_cli(⠤𝖠):
     show_docs = 𝚲‹Usage: ∅                  (cli mode)
