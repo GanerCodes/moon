@@ -20,12 +20,20 @@
           ⸘𝚜≅+´: ↪(ᐹ𝚡)(𝚡.keys()󱑼𝙼(𝚡.items(),ƒ,1))
     ↪_map_d(𝚡,𝕏≡␛ꟿ ⭜󰲡ƒ(⠤𝗜(x) ⭜x⭝ ₓ)󰅂⭝ ƒ,𝚜)
 
-⊢ ´(𝚡=␀,𝚢=,𝚜=PL_CPU_COUNT):
-    P,G = ⍁²
-    ∀ƒ⬠𝚡ᐖ𝚲PL_FORK(𝚢,⟞)ᐸ:
-        ∀P󷸊󰈲PL_CHECK_PID→🃌≥𝚜: PL_SLEEP(󷷉)
-        (P,G)ᐵ.append∘ᑈƒ
-    ↪Gᴍ
+⊢ ´(𝚡=␀,𝚢=,𝚜=PL_CPU_COUNT,m=␛f):
+    ¿m≡␛f: P,G = ⍁²
+           ∀ƒ⬠𝚡ᐖ𝚲PL_FORK(𝚢,⟞)ᐸ:
+               ∀P󷸊󰈲PL_CHECK_PID→🃌≥𝚜: PL_SLEEP(󷷉)
+               (P,G)ᐵ.append∘ᑈƒ
+           ↪Gᴍ
+    ⸘m≡␛t: O=⍁􀳉􋌵
+           Q=𝚡ᐖ𝚲O􇴗≔⟞ 𝚢ᐸ
+           ⊢ƒ: ∀Q:   ꬵ=0 Q.pop
+                   ¡: ↺
+                   ꬵ
+           𝚜⭥ᐖƒ PL_THREADᐸᴍ
+           ↪O
+    ✗⨳‹⟦m⟧ is an invalid mode for !›
 
 ⊢ (OPWRAP_(⠤‹󰒼󰒽›)) (𝕏,𝚡=␀,𝚢=󰻾,ᔨ=✗):
     𝚡 = [⠤𝚡]
@@ -76,7 +84,7 @@
     ∀i,z⬠𝚡↨: ¿ƒ(z)≕𝕩≅󰮈: ↺
              ¿ᔨ  : z=i
              ¿𝕩∈r: r􊶨.append(z)
-             ¡   : r􊶨=
+             ¡   : r􊶨=[z]
     ↪r
 
  󰤱 dicts and such

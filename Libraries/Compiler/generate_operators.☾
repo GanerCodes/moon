@@ -13,7 +13,7 @@ dummy_ords = ⦉0,ords🃌-1⦊
  ς: collapses chains (i.e. ⋄)
  λ: works as a chainable comparison function
 minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○peggle2("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧')∨󰆴'⁅'⨝󰆴'⁆'∨~'[^⟦⟧⁅⁆]')*")
-⊢ 🟑(fcache)🟑 parse_operator_file(contents):
+⊢ (fcache) parse_operator_file(contents):
     p = ⟨⟨󷺹󷹕󷺹≠𝘀ᐸ🃌≡0⍮(¬○⬄ 󷸴 󷺹󷹕󷺹≠𝘀ᐸ🃌→󷹗 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
     g_order  = ᐳords󰑅ᔨ󷺽
     g_symbs  = 󷺹𝌂󷺹∈‹αλςν›󷸔ᐸ󰸷􊾖2 → 󷺺⋄󷺽

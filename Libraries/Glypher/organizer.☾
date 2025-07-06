@@ -1,13 +1,6 @@
-⦃from platform import uname⦄
-⦃from random import randint,seed⦄
 ⨡ ☾ontgen ⭸ KEYMAP
-uname₁ seed
-
 pua = 0x100000⋄0x10FFFD  we own this plane
-
-puaΔ = pua₀ + randint(0, (puaᴙ≺-) 󷷈 𝑖)
-o = pua₀⋄puaΔ⋄pua₁ ᴍ hex
-‹Offset: ⟦o₀⟧ ≤ ⟦o₁⟧ < ⟦o₂⟧›☾
+puaΔ = pua₀+1
 
 pua_fold,lm = __dir__/‹PuaMaps›, ℵ
 pua_maps_in = [⠤pua_fold.glob(‹*.json›)]
@@ -16,18 +9,23 @@ pua_maps_inᐵ 𝔍󰄟 ꟿ⁻󷺹󷹎␛|ᴍ󷹜¹⁶⭢𝑡󷺿⭢ℵ␛
            ᐸ󰌷²⭢ꟿ 󷺹∈lm ⭜(⟝≡lm􍪴⨳‹⟦⟝⟧→⟦⟞⟧←⟦lm􍪴⟧›)⭝ lm􍪴≔󷺽
 ml = lm􍮕
 
+showa = ⥌s,e,n=□↦‹⟦n≅□⭜ⁿe+1-s⟧ PUA slots allocated ⊂ ⟦s󷹜¹⁶⟧󷸻⟦e󷹜¹⁶⟧›☾␛
+                 ►(e<pua₁⨳‹WE RAN OUT OF PUA SPACE LOLOLOL›)
+
 ⊢ pua_single(𝔡): ⦃global ⦃puaΔ⦄⦄
                  ¿𝔡∈ml: ↪lm,ml
                  puaΔ 󷸊- 1
                  ∀puaΔ 󷸊+ 1: ¿puaΔ∉lm: ⇥
                  lmₚᵤₐ󰃏,ml􊵧 = 𝔡,puaΔ
+                 showa(puaΔ,puaΔ)
                  ↪lm,ml
 
-⊢ pua_conseq(𝔡): 𝔡 󷸊󰈳(⬤∈ml)
+⊢ pua_conseq(𝔡): 𝔡 󷸊󰈳⭠⬤∈ml
                  𝕏 = puaΔ-1
                  ∀𝕏󷸊+1: ¿¬𝕏≔(I ≔ 𝔡⭥ᐖ𝕏+⟞)󰑅󰲡x∈lm󰅂: ⇥
-                 lm.update({⠤I󱑼𝔡})
-                 ml.update({⠤𝔡󱑼I})
+                 ¿I: showa(I₀,I􍨄,𝔡🃌)
+                     lm.update({⠤I󱑼𝔡})
+                     ml.update({⠤𝔡󱑼I})
                  ↪lm,ml
 
 to_ranges = L↦[ L⁻󰒼≕s⭢₀,
@@ -48,10 +46,10 @@ native = KEYMAP⁻∖‹𝕄𝕊›
 
 ⊢ add_copies(conf,chars,N):
     r = ℵ
-    ∀c,O⬠chars󱑼(N⭥ᐖ(get_codepoints(chars,‹cpy⟦󷸀⟧›)ᐵ₀))⍉:
-        t = c∈conf⭜conf ₁⭝{}
-        c⋄O→☾
-        ∀o⬠O: r󰂼=(ᐦ,t|{mode=‹cpy›,parents=[c]})
+    nc = N⭥ᐖget_codepoints(chars,‹cpy⟦⟞⟧›)ᐵ₀ᐸ⨝
+    ∀i,O⬠nc↨: ∀c,o⬠chars󱑼O:
+                  r󰂼=(ᐦ, (c∈conf⭜conf ₁⭝{})␛
+                        |{mode=‹cpy›,n=i,parents=[c]})
     ↪r
 ⊢ add_multichars(conf,mchars):
     r,R = ℵ,⍁
@@ -74,6 +72,6 @@ native = KEYMAP⁻∖‹𝕄𝕊›
     chars = conf⁻󰈲󷺹🃌≡1
     ↪‹sup sub›⍭ᐖchars󱑼(get_codepoints(chars,⟞)ᐵ₀)ꟿinherit(⬤,⬤,⟞)⭢ℵᐸ≺|
 
-⭷ save_pua,add_multichars,add_scripts,lm
+⭷ save_pua,add_copies,add_multichars,add_scripts,lm
 
 ¿__name__≡‹__main__›: add_copies(ℵ,‹abc›,5)☾

@@ -8,16 +8,8 @@ __dir__ cd
 𝔭 = ⨡ config_parser
 ⨡ organizer
 ⨡ multisupersubscriptify
-⨡􋀸 Compiler/generate_operators
-
-CHECK_REPOS       = ✗
-NERDFONT          = ✗
-CUSTOM_SYMBOLS    = ✓
-PROCEDUAL_CHARS   = ✓
-COPY_OUT_XCOMPOSE = ✓ ⭜ ‹/c/X11_Configs/.XCompose›
-PATH_CODE_CONFIG  = ✓ ⭜ 𝐩.home/‹.config/VSCodium/User/settings.json›
-COPY_OUT_FONT     = ✓ ⭜ ‹/c/Fonts/99_JuliaMono-Regular.ttf›
-OUTPUT_EXTS       = ‹otf ttf woff2›⍭
+go = ⨡􋀸 Compiler/generate_operators
+⦃import fontforge as ⦃ℱℱ⦄⦄
 
 𝔭.d4,𝔭.c4,𝔭.d8 = ‹wsad qezc wsadqezc›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
 𝔭.D4,𝔭.C4,𝔭.D8 = ‹WSAD QEZC WSADQEZC›⍭ᐖ‹␛⟦⟦⟞⟧␛⟧›
@@ -231,16 +223,27 @@ SCRIPT_EXIST = 󰦥󰦥󰦥󰦥󰦥 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR
                      ₐₑₕᵢⱼₖₗₘₙ󰂼ₚᵣₛₜᵤᵥₓ󰂓󰂔󰂕󰂖󰂗󰂘󰂙󰂚󰂛󰂜󰂝󰂞󰂟󰂠󰂡󰂢󰂣󰂤󰂥󰂦󰂧󰂨󰂩󰂪󰂫󰂬₀₁₂₃₄₅₆₇₈₉󰃤󰃥󰃦󰃧󰃨󰃩󰃪󰃫󰃬󰃭󰃮󰃯󰃰󰃱󰃳󰃴󰃵󰃶󰃷󰃸󰃹󰃺󰃻󰃼󰃎󰃏󰃓󰃙󰃛󰃝󰃠󰃢󰃣󰄎󰄟󰄞󰄏₊₋₌₍₎󰄗󰄘󰄕󰄖˷﹖﹠﹩﹪﹕◌
                      ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻᴬᴮ󰀂ᴰᴱ󰀅ᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾ󰀐ᴿ󰀒ᵀᵁⱽᵂ󰀗󰀘󰀙⁰¹²³⁴⁵⁶⁷⁸⁹󰁌󰁍󰁎󰁏󰁐󰁑󰁒󰁓󰁔󰁕󰁖󰁗󰁘󰁙󰁛󰁜󰁝󰁞󰁟󰁠󰁡󰁢󰁣󰁤󰀶󰀷󰀻󰁁󰁃󰁅󰁈󰁊󰁋󰁱󰂂󰂁󰁲⁺⁻⁼⁽⁾󰁺󰁻󰁸󰁹˜◌◌◌◌◌ꜝ 󰦥󰦥󰦥󰦥󰦥⬄⭢󷹎𝗻ᴍ⬄⭢⍉ᐵ₀,⟞₁﹕ᐸ⭢ℵ
 SCRIPT_DEPTH = 2
+CHECK_REPOS       = ✗
+NERDFONT          = ✗
+CUSTOM_SYMBOLS    = ✓
+CODIUM_CONFIG     = ✓ ⭜ 𝐩.home/‹.config/VSCodium/User/settings.json›
+COPY_OUT_XCOMPOSE = ✓ ⭜ ‹/c/X11_Configs/.XCompose›𝐩
+COPY_OUT_FONT_DIR = ✓ ⭜ ‹/c/Fonts›𝐩
+OUTPUT_EXTS       = ‹otf ttf woff2›⍭
 scrpt_out = moon_dir/‹Builtins/Data/script.map›𝐩
 style_out = moon_dir/‹Builtins/Data/style.json›𝐩
+opord_out = moon_dir/‹Builtins/Data/opord     ›𝐩
 xcomp_out =          ‹Output/.XCompose󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
+fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/JuliaNerd.ttf›⍭ᴍ𝐩
 
 CONFIG󷸊+𝗻+ops generate_fontcompose_conf
+
+adds = add_scripts   (⬤,SCRIPT_EXIST)
+addm = add_multichars(⬤,MULTICHARS  )
 
 c = parse_config(CONFIG,CONFIG+MULTICHARS ᔐ,𝔭)
 ‹Parsed config›☾
 
-fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/JuliaNerd.ttf›⍭ᴍ𝐩
 ¿NERDFONT ∨ fo.is_file¬:
     𝕒_gen = ‹--careful --mono --complete --has-no-italic›
     $ᵒᵉpython External/FontPatcher/font-patcher ⟦𝕒_gen⟧ --name JuliaMono ⟦fi⟧󷹹
@@ -250,27 +253,53 @@ fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/JuliaNerd.ttf›⍭
 ¿CUSTOM_SYMBOLS ∨ fo.is_file¬: merge_into_font(‹MoonCustomSymbols.ttf›𝐩,fi).generate(fo ᔐ)
 (fi,fo)󷸊₁⋄‹Output/99_JuliaMono-Regular.ttf›𝐩
 𝚏 = load_font(fi)
-adds = add_scripts   (⬤,SCRIPT_EXIST)
-addm = add_multichars(⬤,MULTICHARS  )
-gen_scripts = 󷺹ꟿ󰲣add_script(𝚏,x,‹⟦y₁ 􊬏ₚₐᵣₑₙₜₛ􊬐⨝≕p⟧_⟦y₁ 􊬏ₘ󰂼ₑ􊬐⟧›,p,y₁ 􊬏ₘ󰂼ₑ􊬐 􍨄,‹smol›∉y₁)
- 󰤱 here, copy operators
-MULTICHARS󱑼(c addm)ꟿ󰲣add_multichar(𝚏,y,‹⟦x⟧_mul›,x)  󰤱 subsup stuffs
-SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᴍremove_char(𝚏,⬤)
 
+‹Genrating Multichars: ›☾􊾖
+MULTICHARS󱑼(c addm)ꟿ󰲣add_multichar(𝚏,y☾􊾖,‹⟦x⟧_mul›,x)  󰤱 subsup stuffs
+ᐦ☾
+
+‹Removing pre-existing scripts: ›☾􊾖
+SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᐖremove_char(𝚏,⟞☾􊾖)
+ᐦ☾
+
+‹Copying operators: ›☾􊾖
+N,clrs = go.blks🃌,go.clrs₁﹕􍨄
+op_chars = ops󰌷ᐖ0<⟞₀<N⭜􍭓⟞₄ ₀ᐸ󰆩⨝
+C = add_copies(c,op_chars,N)
+ord_its = [⠤C]⁺󷺹₁ ₁ 􊯛ₙ
+ord_its󱑼clrsꟿ󰲣xᐵ₁ ₁ 􊬏􊬐≔y
+c󷸊|C
+ord_itsᐵᐖadd_copy(⠤[𝚏,⟞₀☾􊾖,‹⟦⟞₀⟧_cpy⟦⟝⟧›,⟞₁ ₁[‹parents›]₀])ᐘ󷸀
+opord_out 󱖔􍡩 [op_chars,⠤ord_itsᐵᐵ₀ᐸ⨝ᐸ]⨝𝗻
+ᐦ☾
+
+𝚙 = ℱℱ.font
+params = ⍭‹weight ascent descent em encoding italicangle›
+∀p⬠params: 𝚙.(p) = 𝚏.(p)
+
+‹Generating scripts: ›☾􊾖
 S=c
 ∀i⬠SCRIPT_DEPTH⭥: c󷸊|(S󷸊adds)
-                  gen_scripts(S)
+                  gen_script = 󰲣add_script(𝚙,x☾􊾖,‹⟦y₁[‹parents›]⨝≕p⟧_⟦y₁[‹mode›]⟧›,
+                                           p,y₁[‹mode›]􍨄,‹smol›∉y₁,ℱ=i⭜􀲥𝚙)
+                  Sꟿgen_script
+ᐦ☾
 
-script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t􊬏ₚₐᵣₑₙₜₛ􊬐 ₀,⟞₀,□]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
+script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t[‹parents›] ₀,⟞₀,□]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
              ⁺󷺹₀ᐸ󰒼󷺹₀ᐸᐵ⍉ꟿ∨´ᐸ⭢⍉ᴍ⨝⭢⨝𝗻
 save_pua
 scrpt_out 󱖔􍡩 script_map
 xcomp_out 󱖔􍡩 c conf_to_xcompose
 style_out 󱖔􍡩 {⠤cℵꟿ󷺹,⟝₁󷺿⁺󷺹₁shaᐸᐵᐵ₀ᑀ🃌≡1⭜􍭓⟞ᐸᐸ⨝,⟞₀ ₁ᐸ}𝔍󰄞
 
+⊢ fex(𝚏,s): 𝚏.fontname   = ‹moonfont_⟦s⟧›
+            𝚏.familyname = ‹Moon Font ⟦s⟧›
+            𝚏.fullname   = ‹Moon Font ⟦s⟧ (based on JuliaMono)›
+            𝚏.generate(‹Output/⟦𝚏.fontname⟧.ttf›𝐩≕f⭢ᔐ)
+            ¿COPY_OUT_FONT_DIR: f.cp(COPY_OUT_FONT_DIR/f.name)
+𝚏⋄𝚙󱑼␛A␛Bꟿfex
+
 ¿COPY_OUT_XCOMPOSE: xcomp_out.cp(COPY_OUT_XCOMPOSE)
-fo.parentᑀ/ᑈ⭠fo.stemᑀ+␛.+ᑈOUTPUT_EXTS→ᐵᔐ 𝚏.generate
-¿COPY_OUT_FONT: fo.cp(COPY_OUT_FONT)
 
  ¿__name__≡‹__main__›:  ‹Running tests:›☾
                        ⨡ Tests ;; run_tests

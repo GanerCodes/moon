@@ -1,6 +1,7 @@
 󷷾󷷿󷸀󰛸⨡⭸⭷(ⵗ)󰇙⦙⫶ⵂ⁞ⵘ⣿󱋱
 
 Error handling:
+  https://ganer.xyz/s/6493fd709262abc8
   1. Format for sourcemaps
   2. Thing that concats trees so you can generate sourcemaps for multi-files
 
@@ -8,7 +9,7 @@ Error handling:
 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  better errors
 󰤱  ⨡ a ⨡ b ⨡ c
-󰤱  `a b≕c d` ⟶ `(PSH(␀CAT(a, b)), (c := PKE(0)), DEL(1))[1]` ???
+󰤱  `1+1 ≕ x y` ⟶ `(PSH((1 + 1)),(x:=PKE(0)),DEL(1))[1]` ???
 󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)`
 󰤱  whitespace involution lol
 󰤱  string ␛ before newline should not add it

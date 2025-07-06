@@ -52,25 +52,25 @@ MT = ‹NPSBlrαςνλΔ›
 ⊢ make_op_table(𝙾𝚃,𝚂𝚃,cb):
     𝒪 = ℵ
     ∀𝙻⬠𝙾𝚃ᴙ: 𝙻󷸊ᐵ₀,⟞₁﹕⨝⭢󷸼ᐸ
-            𝚝,𝙾 = 𝑠(𝙻ᓕ􊽧󰁱⁰),ℵ
-            ∀t,m⬠𝙻: food = 𝑠(𝒪⁻)∪(␛α∈m⭜𝚝.copy⭝∅)
-                    𝙾ₜ=OP(t=t,M=m,L=⦉⠤m∩‹BS›⦊ ⭜food.copy⭝ ∅,
-                                  R=⦉⠤m∩‹BP›⦊ ⭜food.copy⭝ ∅)
+            𝚝,𝙾 = ⦉⠤𝙻ᓕ􊽧󰁱⁰⦊,ℵ
+            ∀t,m⬠𝙻: food = ⦉⠤𝒪⁻⦊∪(␛α∈m ⭜􋁇 𝚝.copy)
+                    𝙾ₜ=OP(t=t,M=m,L=⦉⠤m∩‹BS›⦊ ⭜􋁇 food.copy,
+                                  R=⦉⠤m∩‹BP›⦊ ⭜􋁇 food.copy)
             𝒪 󷸊| 𝙾
     𝓞 = ℵ
     ∀L,t,m,R⬠𝚂𝚃: m󷸊󷸼
-                 Lc = L ⭜𝒪󰂞ᴸ∪𝒪󰂞ᴿ⭝ ∅
-                 Rc = R ⭜𝒪󰂤ᴸ∪𝒪󰂤ᴿ⭝ ∅
+                 Lc = L ⭜􋁇 𝒪󰂞ᴸ∪𝒪󰂞ᴿ
+                 Rc = R ⭜􋁇 𝒪󰂤ᴸ∪𝒪󰂤ᴿ
                  ∀𝓉,ℴ⬠𝒪: ¿𝓉∉Lc ∧ ‹PB›∩ℴᴹ: ℴᴿ.add(t)
                          ¿𝓉∉Rc ∧ ‹SB›∩ℴᴹ: ℴᴸ.add(t)
-                 𝓞ₜ = OP(t=t,M=m,L=L ⭜𝑠(𝒪⁻)∖𝒪󰂞ᴸ ⭢∪ 𝑠(󰂞)            ⭝ ∅,
-                                 R=R ⭜      𝒪󰂤ᴿ  ∪ (␛α∈m⭜𝑠(𝚂𝚃ᐵ₁)⭝∅)⭝ ∅)
+                 𝓞ₜ = OP(t=t,M=m,L=L ⭜􋁇 ⦉⠤𝒪⁻⦊∖𝒪󰂞ᴸ⭢∪ ⦉⠤󰂞⦊             ,
+                                 R=R ⭜􋁇       𝒪󰂤ᴿ ∪ (␛α∈m ⭜􋁇 ⦉⠤𝚂𝚃ᐵ₁⦊))
     𝒪 󷸊| 𝓞
     ↪cb(𝒪)
 
 OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃,𝚂𝚃,cb)
-IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
+IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 𝘳 = ℵ(OP_LIT       = 𝒪⁻,
       OP_MOD_L_N   = MODIFIERS₀ ₀,
       OP_MOD_L_Y   = MODIFIERS₀ ₁,

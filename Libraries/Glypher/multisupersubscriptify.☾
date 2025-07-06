@@ -8,14 +8,8 @@ w = 1200  󰤱 detect from font
 load_font = 󰲡shut(ℱℱ.open    ,x 𝐩⭢.resolve⭢ᔐ)
 save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
 
-𝔯,𝔰,𝔱 = ‹𝔯𝔰𝔱›
-𝔗 = ⥌𝒻,ℊ,𝐭,w=w↦𝐭ꟿ󰲡(
-        x≡𝔯 ⭜ℊ.addReference(𝒻􊵾􊬣􋘲󰂼ᵣ.glyphname)␛
-            ⭝ℊ.transform((x≡𝔰∧𝒫ℳ.scale∨𝒫ℳ.translate)(⠤𝔸)))→►monospace_char(ℊ)
-
- based on monospacifier
-⊢ monospace_char(ℊ): ¿ℊ.width≤0: ↪
-                     ¿0≤(ℊ.unicode≕𝓾)≤sys.maxunicode ∧ 𝒰𝒟.category(chr(𝓾))∈⍭‹Mn Mc Me›: ↪
+⊢ monospace_char(ℊ): ¿ℊ.width≤0: ↪  based on monospacifier
+                     ¿0≤(ℊ.unicode≕𝓾)≤sys.maxunicode ∧ 𝒰𝒟.category(𝓾󷹝)∈⍭‹Mn Mc Me›: ↪
                      ¿𝓾󷹜¹⁶≡0x10FFF7: ↪
                      ℊ.width = w
 
@@ -25,48 +19,59 @@ save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
 ⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻􍴖)
                     ¡ε=𝑒: ‹Couldn't remove "⟦c⟧": ⟦ε⟧›☾
 
-⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,⠤𝔸,log=1,⠶𝕂):
-                     ℊ = 𝒻.createChar(l≔c󷹝,n)
-                          𝔗(𝒻,ℊ,⠤ƒ(𝒻,⠤𝔸,⠶𝕂))
-                     ¡ε=𝑒: ¿log≤0 ∨ (log<2 ∧ ε ᔐ∋‹No such glyph›): ↪
-                           ‹Gen Err: "⟦n⟧" (⟦c⟧ @ ⟦l 󷹜¹⁶⟧), "⟦ε⟧"›☾
-                 ↪𝑓
-
-⊢ (char_maker) add_script(𝒻,c,m,scale=✓):
-    ¿scale: W = w
-            ¿m≡␛b: ↪[𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15w⋄¯.20w]⋄W
-            ⸘m≡␛p: ↪[𝔯⋄c, 𝔰⋄.7, 𝔱⋄.15w⋄ .55w]⋄W
-    ¡     : ¿m≡␛b: ↪[𝔯⋄c, 𝔱⋄0⋄¯.35w]⋄w
-            ⸘m≡␛p: ↪[𝔯⋄c, 𝔱⋄0⋄ .35w]⋄w
-
-⊢ (char_maker) add_copy(𝒻,c,m):
-    ↪[𝔯⋄c]⋄W
-
-⊢ (char_maker) add_multichar(𝒻,s):
-    ¿s🃌≡2: ↪ [𝔯⋄s₀, 𝔱⋄¯⅘w⋄0,
-              𝔯⋄s₁, 𝔱⋄.9w⋄0, 𝔰⋄⅗], w
-    ¿s🃌≡3: ↪ [𝔯⋄s₀, 𝔱⋄¯⅘w⋄⅘w,
-              𝔯⋄s₁, 𝔱⋄¯⅘w⋄⅘w,
-              𝔯⋄s₂, 𝔱⋄⅖w⋄0, 𝔰⋄½, 𝔱⋄.45w⋄0], w
-    ¿s🃌≡4: ↪ [𝔯⋄s₀, 𝔱⋄¯w⋄⅗⋅w,
-              𝔯⋄s₁, 𝔱⋄0⋄1.3⋅w,
-              𝔯⋄s₂, 𝔱⋄¯w⋄⅗⋅w,
-              𝔯⋄s₃, 𝔱⋄0⋄¯1.9⋅w, 𝔰⋄⅖, 𝔱⋄.7⋅w⋄⅗⋅w], w
-
 ⊢ merge_into_font(𝓐,𝓑,log=✓):
     𝓐,𝓑 = 𝓐⋄𝓑ᐵᐹ(ᔐ|𝐩)⭜load_font(⟞)⭝⟞
     log ⭜ ‹Merging the following chars: ›☾􊾖
     ∀𝚐⬠𝓐.glyphs: 𝚗,𝚞 = 𝚐.glyphname,𝚐.unicode
                   ¿𝚞<0: ↺
-                  log⭜ chr(𝚞)☾􊾖
+                  log⭜ 𝚞󷹝☾􊾖
                   ¿𝚞∉𝓑: 𝓑.createChar(𝚞,𝚗)
                   𝓐.selection.select(𝚞); 𝓐.copy 
                   𝓑.selection.select(𝚞); 𝓑.paste
     log⭜ ᐦ☾
     ↪𝓑
 
+⊢ addref(c,ℊ,𝒻,ℱ=□): c󷸊󷹝
+                     ¿ℱ≅□∨ℱ≡𝒻: ℊ.addReference(𝒻.glyphname)
+                     ¡       : ℱ.selection.select(c        ); ℱ.copy     
+                               𝒻.selection.select(ℊ.unicode); 𝒻.pasteInto
+    
+
+𝔯,𝔰,𝔱 = ‹𝔯𝔰𝔱›
+𝔗 = ⥌𝒻,ℊ,𝐭,w=w↦𝐭ꟿ󰲡(
+        x≡𝔯 ⭜addref(𝔸₀,ℊ,𝒻,𝔸🃌>1⭜𝔸₁)␛
+            ⭝ℊ.transform((x≡𝔰∧𝒫ℳ.scale∨𝒫ℳ.translate)(⠤𝔸)))→►monospace_char(ℊ)
+⊢ char_maker(ƒ): ⊢ 𝑓(𝒻,c,n,⠤𝔸,log=1,⠶𝕂):
+                     ℊ = 𝒻.createChar(c󷹝,n)
+                          𝔗(𝒻,ℊ,⠤ƒ(𝒻,⠤𝔸,⠶𝕂))
+                     ¡ε=𝑒: ¿log≤0 ∨ (log<2 ∧ ᔐ(ε)∋‹No such glyph›): ↪
+                           ‹Gen Err: "⟦n⟧" (⟦c⟧ @ ⟦c󷹝󷹜¹⁶⟧), "⟦ε⟧"›☾
+                 ↪𝑓
+
+⊢ (char_maker) add_script(𝒻,c,m,scale=✓,ℱ=□):
+    ¿scale: W = w
+            ¿m≡␛b: ↪[𝔯⋄c⋄ℱ, 𝔰⋄.7, 𝔱⋄.15w⋄¯.20w]⋄W
+            ⸘m≡␛p: ↪[𝔯⋄c⋄ℱ, 𝔰⋄.7, 𝔱⋄.15w⋄ .55w]⋄W
+    ¡     : ¿m≡␛b: ↪[𝔯⋄c⋄ℱ, 𝔱⋄0⋄¯.35w]⋄w
+            ⸘m≡␛p: ↪[𝔯⋄c⋄ℱ, 𝔱⋄0⋄ .35w]⋄w
+
+⊢ (char_maker) add_copy(𝒻,c,ℱ=□):
+    ↪[𝔯⋄c⋄ℱ]⋄w
+
+⊢ (char_maker) add_multichar(𝒻,s,ℱ=□):
+    ¿s🃌≡2: ↪ [𝔯⋄s₀⋄ℱ, 𝔱⋄¯⅘w⋄0,
+              𝔯⋄s₁⋄ℱ, 𝔱⋄.9w⋄0, 𝔰⋄⅗], w
+    ¿s🃌≡3: ↪ [𝔯⋄s₀⋄ℱ, 𝔱⋄¯⅘w⋄⅘w,
+              𝔯⋄s₁⋄ℱ, 𝔱⋄¯⅘w⋄⅘w,
+              𝔯⋄s₂⋄ℱ, 𝔱⋄⅖w⋄0, 𝔰⋄½, 𝔱⋄.45w⋄0], w
+    ¿s🃌≡4: ↪ [𝔯⋄s₀⋄ℱ, 𝔱⋄¯w⋄⅗⋅w,
+              𝔯⋄s₁⋄ℱ, 𝔱⋄0⋄1.3⋅w,
+              𝔯⋄s₂⋄ℱ, 𝔱⋄¯w⋄⅗⋅w,
+              𝔯⋄s₃⋄ℱ, 𝔱⋄0⋄¯1.9⋅w, 𝔰⋄⅖, 𝔱⋄.7⋅w⋄⅗⋅w], w
+
 ⭷ load_font,save_font,monospace_char,monospace_font,␛
-  remove_char,char_maker,add_script,add_multichar,merge_into_font
+  remove_char,char_maker,add_script,add_multichar,␛
+  add_copy,merge_into_font
 
  Δ = w-ℊ.width
  ℊ. left_side_bearing = 𝑖(γ ≔ ℊ.left_side_bearing+Δ/2)
