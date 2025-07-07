@@ -71,7 +71,8 @@ MT = ‹NPSBlrαςνλΔ›
 OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃,𝚂𝚃,cb)
 MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
-𝘳 = ℵ(OP_LIT       = 𝒪⁻,
+
+𝘳 = ℵ(OP_LIT       = 𝒪⁻󰌷[⠤moon_dir/‹Builtins/Data/opord›⭢∖‹𝗻𝘀›]⭢ᚤ,
       OP_MOD_L_N   = MODIFIERS₀ ₀,
       OP_MOD_L_Y   = MODIFIERS₀ ₁,
       OP_MOD_R_N   = MODIFIERS₁ ₀,
