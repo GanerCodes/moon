@@ -3,8 +3,8 @@
 ⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
     l,o,r = 󱁕
     𝚘 = OP_TABLE󰂼􊬣􊫼
-    𝚕,𝚛 = l⋄rᐵᐵᵗ≡␛𝚜 ⭜⟞⭝ 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
-    L,R = l⋄rᐵᐵᵗ≡␛𝚜 ⭜󰮈⭝ ⟞₀ᵗᐸᐸᴍ𝑠
+    𝚕,𝚛 = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
+    L,R = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍭓 ⟞₀ᵗᐸᐸᴍ𝑠
     
      󰤱 ´ ∵ neutral op needs apply specials like ꜠
     

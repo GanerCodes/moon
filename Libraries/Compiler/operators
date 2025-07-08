@@ -297,6 +297,11 @@
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
+󷰬 ∖ 𝚡∧𝚢 c\ set minus
+    𝑠 ∖ 𝗜 = x-𝑠(right)
+    𝗜 ∖ 𝗜 = left󰈳󷺹∈right
+    ❗ susceptible to change with non-set args! ❗
+    󰤱˜ docs
 󷰬 ⨉ 𝚡∨􊽨𝚡 XX cross product
     `‹ab›⨉‹de› ≡ [‹ab›,‹de›]⨉ ≡ [['a', 'd'], ['a', 'e'], ['b', 'd'], ['b', 'e']]`
     `‹ab›⨉² ≡ [['a', 'a'], ['a', 'b'], ['b', 'a'], ['b', 'b']]`
@@ -304,11 +309,6 @@
 󷰬 ⊞ 𝚡∨􊽨𝚡 #[] table product
     `‹ab›⊞‹de› ≡ [[['a', 'd'], ['a', 'e']], [['b', 'd'], ['b', 'e']]]`
     `‹ab›⊞² ≡ [[['a', 'a'], ['a', 'b']], [['b', 'a'], ['b', 'b']]]`
-    󰤱˜ docs
-󷰬 ∖ 𝚡∧𝚢 c\ set minus
-    𝑠 ∖ 𝗜 = x-𝑠(right)
-    𝗜 ∖ 𝗜 = left󰈳󷺹∈right
-    ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
 󷰭 ☾ 𝚡󷺤􊽨𝚡 cp𝕊 print
     "‹hello›☾" ⟶ prints "hello" to stdout

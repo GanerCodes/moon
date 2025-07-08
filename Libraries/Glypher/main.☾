@@ -232,7 +232,7 @@ COPY_OUT_FONT_DIR = ✓ ⭜ ‹/c/Fonts›𝐩
 OUTPUT_EXTS       = ‹otf ttf woff2›⍭
 scrpt_out = moon_dir/‹Builtins/Data/script.map›𝐩
 style_out = moon_dir/‹Builtins/Data/style.json›𝐩
-opord_out = moon_dir/‹Builtins/Data/opord     ›𝐩
+opord_out = moon_dir/‹Builtins/Data/opord󷺗󷺗󷺗󷺗󷺗›𝐩
 xcomp_out =          ‹Output/.XCompose󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
 fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/JuliaNerd.ttf›⍭ᴍ𝐩
 
@@ -265,6 +265,7 @@ SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᐖremove_char(𝚏,⟞☾􊾖)
 ‹Copying operators: ›☾􊾖
 N,clrs = go.blks🃌,go.clrs₁﹕􍨄
 op_chars = ops󰌷ᐖ0<⟞₀<N⭜􍭓⟞₄ ₀ᐸ󰆩⨝
+op_chars 󷸊+ ‹⭠⭢≔󷸉󷸊󷸋≕󷸎󷸌󷸍←→⭜⭝⬅➡›
 C = add_copies(c,op_chars,N)
 ord_its = [⠤C]⁺󷺹₁ ₁ 􊯛ₙ
 ord_its󱑼clrsꟿ󰲣xᐵ₁ ₁ 􊬏􊬐≔y
