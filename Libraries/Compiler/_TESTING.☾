@@ -1,6 +1,3 @@
- ⨡ Compiler
- refresh_cached_imports
- ⨡􋀸 Compiler
 ⨡ Ń
 ⨡ Compiler/node_types ⭸ *
 ⨡ Compiler/op_table ⭸ OP_TABLE
@@ -12,13 +9,13 @@ OPS_SO = mꟿ∾󷺺,󷸀⋄󷺽⭢󰌷⭢ℵ
  OPS_SOꟿ☾ ; exit
 
 OPS = ℵ
-
 𝙾𝚃 = ops get_operator_table ᴙ
 h = 󷰾 𝙾𝚃.pop
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 ‹󷺗!󷺗› 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀CAT󷺗󷺗󷺗 ᴺᴮ󷺗›⍭]
 ‹󷺗ᴍ󷺗› 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀TAC󷺗󷺗󷺗 󷺗ᴮ󷺗›⍭]
 𝙾𝚃.extend([h,
+           ‹␀T ᴺ󰀒 ␀T⟞ ᴺ󰀒 ␀T⟝ ᴺᴾ ␀T⟞⟝ ᴺᴾ󰀒ᴮ›⍭,
            ‹⭢ 󰀒 ⭠ ᴾ›⍭,
            ‹→ 󰀒 ← ᴾ›⍭,
           [‹⭜ ᴺᴮ󰁌›⍭],
@@ -28,10 +25,6 @@ add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 ‹≔󷸉󷸊󷸋›ᐖOPS􍪴≔(␛B,0,n)ᐸ
 ‹≕󷸎󷸌󷸍›ᐖOPS􍪴≔(␛B,n,0)ᐸ
- 𝚂𝚃=‹     ␀T   ᴺ 󰀒      
-     ␀TAC ␀T⟞  ᴺ 󰀒      
-          ␀T⟝  ᴺᴾ   ␀TAC
-     ␀TAC ␀T⟞⟝ ᴺᴾ󰀒ᴮ ␀TAC
 
  OPS󰒼󷺹₁ ₁﹕⤉ᐸꟿ☾ ; exit
 
@@ -42,12 +35,11 @@ n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 𝖮𝖯 = 󰲡𝗈𝗉(x)ᐒ(⟞ᵉ ᴼ≔x OP)►⟞
 
 ⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
+                 󰤱 ´ ∵ neutral op needs apply specials like ꜠
     l,o,r = 󱁕
     𝚘,𝚕,𝚛 = OP(o􋒷)
     𝙻,𝚁 = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
     L,R = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍭓 ⟞₀ᵗᐸᐸᴍ𝑠
-    
-     󰤱 ´ ∵ neutral op needs apply specials like ꜠
     
     ∀t⬠L: ¿t≡␛⟥: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,0     ,𝚛
           ⸘t≡␛≺: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,␛ᴍOP⭢₁,0
@@ -121,6 +113,7 @@ n=𝙾𝚃🃌-5  ⭠⭢ n ←→
                      ¡     : 𝙻.append(c)
                  ↪𝗑(⠤𝙻+𝚁)
 
+🟑
  ␛√≕s☾􋋏 ; OP_TABLEₛᐒ‹⟦⟞ᴸ⨝𝘀⟧ ⟦ŧ𝼝(␛│,‹f00›)⟧ ⟦⟞ᴿ⨝𝘀⟧›ᐸ☾
  ␛⍉≕s☾􋋏 ; OP_TABLEₛᐒ‹⟦⟞ᴸ⨝𝘀⟧ ⟦ŧ𝼝(␛│,‹f00›)⟧ ⟦⟞ᴿ⨝𝘀⟧›ᐸ☾
  ␛⨝≕s☾􋋏 ; OP_TABLEₛᐒ‹⟦⟞ᴸ⨝𝘀⟧ ⟦ŧ𝼝(␛│,‹f00›)⟧ ⟦⟞ᴿ⨝𝘀⟧›ᐸ☾
@@ -133,3 +126,4 @@ n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 󱁕 = 𝗑(␛1𝗏,␛􀇣𝗈𝗉,␛2𝗏,␛􀓻𝗈𝗉,␛3𝗏,␛􀇣𝗈𝗉,␛4𝗏)
 󱁕.ftrp(‹op›,denode_op,✓)
 󱁕 parse_expr 𝑩𝑩
+🟑

@@ -20,7 +20,7 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
 ⊢ expand_ast_py(󱁕,PEV=PEV):
     ¿󱁕ᵉ ᵀ: ↪󱁕
     ¿󱁕ᵗ≡‹𝗈𝗉›:  MOD(op, 𝚜=…, ᔨ=…)
-        ¿m≔󱁕₀󰌷󱁕₂: t = ℵ󰁺󰁻(m󷺹ᵗ∈𝑠(‹≺≻ᵜ꜠›) ⭜1⭝ ⟞ᵗ∈𝑠(‹ᔨ›) ⭜2⭝ ⟞ᵗ∈‹𝚜› ⭜0⭝ 󰮈)
+        ¿m≔󱁕₀󰌷󱁕₂: t = ℵ󰁺󰁻(m󷺹ᵗ∈⦉⠤‹≺≻ᵜ꜠›⦊ ⭜1⭝ ⟞ᵗ∈⦉⠤‹ᔨ›⦊ ⭜2⭝ ⟞ᵗ∈‹𝚜› ⭜0⭝ 󰮈)
                   a = t₀🃌≡1 ⭜t₀⭝ t₀🃌 ⭜[𝔗(␛(),⠤t₀⨝𝔗(␛,),𝔗(␛))]⭝ ⍁
                   𝕒 = (a ⭜[𝒩(␛𝚜,𝗑(⠤a))]⭝ ⍁)+t₂ᐖ𝗑(𝗏(⟞ᵗ),𝔗(␛=),⟞🃌 ⭜⟞₀⭝ 𝗏(␛󱣩))
                   󱁕₁ = t₁ſ􋑻􊿦󷺻𝖼𝖺𝗅𝗅(⟝ᵗ,⟞)󷺿
@@ -49,16 +49,16 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
                                  sn(⟞)⭜𝔗(‹%s›)                        ⭝ ␛
                                  ⟞,
                         𝔗(‹")›),⠤β⭜[𝔗(‹%(›),⠤β⟖𝔗(␛,),𝔗(‹)›)]⭝⍁])
-    ⸘󱁕ᵗ≡‹strb󷺗󷺗›: 󱁕.set(c=[𝔗(‹\x⟦+󱁕⭢󷹜󷹜¹⁶⁺²􍢉⟧›)])
-    ⸘󱁕ᵗ≡‹𝑣_spec›: 󱁕.set(c=[𝗏(𝐌􋇣􋕟ˢᵖᵉᶜ.get(+󱁕,+󱁕))󱖔􋔡󱁕])
+    ⸘󱁕ᵗ≡‹strb󷺗󷺗›: 󱁕.set(c=[𝔗(‹\x⟦󱁕􋒷⭢󷹜󷹜¹⁶⁺²􍢉⟧›)])
+    ⸘󱁕ᵗ≡‹𝑣_spec›: 󱁕.set(c=[𝗏(𝐌􋇣􋕟ˢᵖᵉᶜ.get(󱁕􋒷,󱁕􋒷))󱖔􋔡󱁕])
     ⸘󱁕ᵗ≡‹𝔸›: 󱁕.set(c=[𝔗(‹*󷺗›),⠤󱁕₀ᵉ ᵀ ⭜[𝗏(󱁕₀)]⭝ 󱁕₀ᵗ≡␛𝑣 ⭜[󱁕₀]⭝ [𝔗(␛(),⠤󱁕,𝔗(␛))]])
     ⸘󱁕ᵗ≡‹𝕂›: 󱁕.set(c=[𝔗(‹**›),⠤󱁕₀ᵉ ᵀ ⭜[𝗏(󱁕₀)]⭝ 󱁕₀ᵗ≡␛𝑣 ⭜[󱁕₀]⭝ [𝔗(␛(),⠤󱁕,𝔗(␛))]])
-    ⸘󱁕ᵗ∈‹𝑣 op_lit ƒ_𝑣›⍭: 󱁕.set(c=[𝔗(PEV(+󱁕)ᣆ􍯏􋁉ᵏʷˡⁱˢᵗ􋁎􋂙􊿑󰀅ᵃˡˢᵉ􊿉ᴺᵒⁿᵉ􊿉ᵀʳᵘᵉ􊿒⬤+␛_)󱖔􋔡󱁕])
-    ⸘󱁕ᵗ≡‹qvar›: 󱁕.set(c=[𝔗(‹"⟦PEV(+󱁕)⟧"›)󱖔􋔡󱁕])
+    ⸘󱁕ᵗ∈‹𝑣 op_lit ƒ_𝑣›⍭: 󱁕.set(c=[𝔗(PEV(󱁕􋒷)⭢ᣆ􍯏􋁉ᵏʷˡⁱˢᵗ􋁎􋂙􊿑󰀅ᵃˡˢᵉ􊿉ᴺᵒⁿᵉ􊿉ᵀʳᵘᵉ􊿒⬤+␛_)󱖔􋔡󱁕])
+    ⸘󱁕ᵗ≡‹qvar›: 󱁕.set(c=[𝔗(‹"⟦PEV(󱁕􋒷)⟧"›)󱖔􋔡󱁕])
     ⸘󱁕ᵗ≡‹𝝀𝑃›: 󱁕.set(c=󱁕⨝𝔗(␛,))
     ⸘󱁕ᵗ∈‹𝝀eq kw_𝕒›: 󱁕₀=𝗏(󱁕₀)
                     󱁕.set(c=󱁕ᶜ⨝𝔗(␛=))
-    ⸘󱁕ᵗ≡‹⊢_dec󷺗›: 󱁕.set(c=[⠤+󱁕₀⭜[𝔗(␛@),󱁕₀,𝔗(𝗻)]⭝⍁,𝔗(‹def ›),+󱁕₁⭜󱁕₁⭝𝗏(␛_),+󱁕₂⭜󱁕₂⭝𝔗(‹()›),𝔗(␛:)])
+    ⸘󱁕ᵗ≡‹⊢_dec󷺗›: 󱁕.set(c=[⠤󱁕􋒷₀⭜[𝔗(␛@),󱁕₀,𝔗(𝗻)]⭝⍁,𝔗(‹def ›),󱁕􋒷₁⭜󱁕₁⭝𝗏(␛_),󱁕􋒷₂⭜󱁕₂⭝𝔗(‹()›),𝔗(␛:)])
     ⸘󱁕ᵗ≡‹stmt_∀›: 󱁕.set(c=󱁕₀ᐒ[⠤⟞₁&𝖹 ⭜[𝔗(‹while(›)]⭝ [𝔗(‹for ›),⟞₁,𝔗(‹ in(›)],
                                ⟞₂,𝔗(‹):›),
                               ⠤⟞₃&𝖹 ⭜⍁⭝ [𝔗(𝗻),𝔗(𝖫(‹if not(›)),⟞₃,𝔗(‹):continue›)]])
@@ -74,7 +74,7 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
                               cᶜ = [𝔗(‹except ›), C∧C₀⭜C􍨄⭝𝗏(␛𝑒),
                                     𝔗(‹ as󷺗󷺗󷺗 ›), C🃌>1⭜C₀⭝𝗏(␛), 𝔗(␛:)]
                ¡    : 󱁕ᶜ.append(𝔗(‹except ⟦PEV(␛𝑒)⟧:pass›))
-    ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭: 󱁕₀.set(t=𝐌􋑺􊫼.get(+󱁕,+󱁕))
+    ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭: 󱁕₀.set(t=𝐌􋑺􊫼.get(󱁕􋒷,󱁕􋒷))
                                         󱁕ᶜ.insert(1,𝔗(𝘀))
     ⸘󱁕ᵗ≡‹cln_pfx›: ¿󱁕₀ᵗ≠‹std_kwd›: 󱁕ᶜ.append(𝔗(␛:))
     ⸘󱁕ᵗ≡‹stmts›: 󱁕.set(c=󱁕ᶜ⟖󰻾􋈠⁽􋋉⁾)
@@ -102,19 +102,16 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜‹\u⟦⟞󷹝󷹜¹�
  ⊢ out_to_in_mapper(󱁕,α,ω): SM,𝙲 = into_srcmap(󱁕,ω),lines(α)
                             ↪p↦get_region(𝙲,map_region(SM,p))⨝𝗻
 
-ast_clean_e  = ⥌󱁕,ok=⦉␛T,␛p,␛ρ⦊↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈ok)),✓,✗)  󰤱 put into gram_tools?
+ast_clean_e  = ⥌󱁕,ok=⦉⠤‹Tpρ›⦊↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(⟞ᵉ󰈲󷺹₀∈ok)),✓,✗)  󰤱 put into gram_tools?
 ast_add_pos  = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾ast_add_pos,󷺹􋒷🃌+i))➡₁  󰤱 put this func in peggle
 ast_swap_pos = ⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕.set(e=󱁕ᵉᐒ{ρ=⟞ᵖ,T=⟞ᵀ}ℵ􋄅))►󱁕ᴍast_swap_pos
 
 ⊢ ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
     󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁).cpr
-    󱁕 = fill_󱁕_holes_basic(ast_clean_e(󱁕))
-    pyc = +󱁕
-     𝑩𝑩(󱁕,‹󱁕₀›)
-    ast_swap_pos(󱁕)
-     𝑩𝑩(󱁕,‹󱁕₁›)
-    ast_add_pos(󱁕)
-     𝑩𝑩(󱁕,‹󱁕₂›)
+    󱁕 = 󱁕 ast_clean_e fill_󱁕_holes_basic
+    pyc = 󱁕􋒷
+    󱁕 ast_swap_pos
+    󱁕 ast_add_pos
     ¿get_tree: ↪󱁕
     ¿reparse¬: ↪pyc
     ⦃import ast⦄
@@ -123,3 +120,8 @@ ast_swap_pos = ⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕.set(e=󱁕ᵉᐒ{ρ=⟞ᵖ,T=⟞
           ✗⨳‹Error in python reparsing! ⟦ε⟧›
 
 ⭷ ast_to_py,PEV,VEP
+
+ to_ast(‹2+2›,dbg_show_gram_tree=✓) 𝑩𝑩
+ to_ast(‹2ᑀ+ᑅ2›,dbg_show_gram_tree=✓) 𝑩𝑩
+ ast_to_py(to_ast(‹(1⭜2)⭜(3⭝4)⭝(4⭜⁶5)⭜7⭝8›≕𝚌,dbg_show_gram_tree=✓) 𝑩𝑩, 𝚌)☾
+ ast_to_py(to_ast(‹"abc"ᐵ󷸀+⟞+⟝+󷷿+󷷾+ᑈ"def"›≕𝚌,dbg_show_gram_tree=✓) 𝑩𝑩, 𝚌)☾

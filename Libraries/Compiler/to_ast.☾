@@ -81,8 +81,8 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         
         󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)                                  ␛
          .frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)                          ␛
-         .ftrp(‹ᗜ󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󰲡𝗏𝗌(␛□)󱖔􋔡x)                                        ␛
-         .ftrp(‹sys_call›,󱁕↦󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹þSUBPROCA›),󱁕₁,𝗌𝗍𝗋(𝔗(+󱁕₀)))]),✓)
+         .ftrp(‹ᗜ󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗏𝗌(␛□)󱖔􋔡󱁕)                                       ␛
+         .ftrp(‹sys_call›,󱁕↦󱁕.set(c=[𝖼𝖺𝗅𝗅(𝗏(‹þSUBPROCA›),󱁕₁,𝗌𝗍𝗋(𝔗(󱁕₀􋒷)))]),✓)
         add_short_circuits(󱁕)
         curry_ops(󱁕)
         rewrite_ugex(󱁕)

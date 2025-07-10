@@ -2,6 +2,15 @@
 
 part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁  󰤱 fix ugex bug
 
+⊢ reduce_ς(󱁕):
+    ¿(𝚘≔󱁕₀ᵉ ᴼ)₀∌␛ς: ↪󱁕
+    𝕒 = 􋑺􊬣
+    ∀n⬠󱁕₁﹕: ¿(nᵗ≡␛x ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ ₁􋒷≡𝚘ᵗ):  󰤱 inner op modifiers
+                𝕒.extend(n₀ ₁﹕)
+                ↺
+            𝕒.append(n)
+    󱁕ᶜ = 𝕒
+    ↪󱁕
 ⊢ rewrite_for(󱁕):
     󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)␛
      .ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
@@ -31,22 +40,22 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
      .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
      .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
 ⊢ rewrite_ternary(󱁕):
-    is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms?
+    is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms? mixing supscripts?
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y⭝z
-                               ¿𝚘ᵉ ᴼ ᵗ≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
+                               ¿𝚘₁􋒷≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
                                α,⠤β = α
                                γ = α₀
-                               ¿γᵗ≠‹opC› ∨ γ₀ᵉ ᴼ ᵗ≠␛⭜ ∨ γ₀ ₂🃌: ↪󱁕
+                               ¿γᵗ≠‹opC› ∨ γ₀ ₁􋒷≠␛⭜ ∨ γ₀ ₂🃌: ↪󱁕
                                ↪𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y, x⭝y
-                               ¿𝚘ᵉ ᴼ ᵗ≕t∉␛⭜␛⭝: ↪󱁕
+                               ¿𝚘₁􋒷≕t∉␛⭜␛⭝: ↪󱁕
                                α,β,⠤_ = α
                                is_xpr_atom(β) ⨳
                                𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
                                𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝗏𝗌(␛□))󱖔􋄥󱁕)
                                ↪𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 ⊢ group_targets(󱁕):
-    dot = 󷺹ᵗ≡‹𝗈𝗉› ∧ ⟞₁ ₀ᵗ≡␛.
+    dot = 󷺹ᵗ≡‹𝗈𝗉󷺗› ∧ ⟞₁ ₀ᵗ≡␛.
     exp = 󷺹ᵗ≡‹exp›
     R,C = ⍁²
     𝚌 = 󱁕ᶜ
@@ -58,7 +67,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
         ¿vᵗ≡␛𝐿 : C.append(v)
         ⸘vᵗ≡␛𝑇 : C.append(𝗆𝖼𝖺𝗅(v))
         ⸘dot(v): C.append(𝖺𝗍𝗍𝗋(𝚌.pop(0)ᑀᵗ≡␛𝑣 ⭜𝗌𝗍𝗋(⟞)⭝ ⟞))
-        ⸘exp(v): C.append(𝖾𝗑𝗉(𝚌.pop(0)))
+        ⸘exp(v): C.append( 𝖾𝗑𝗉(𝚌.pop(0)))
         ¡      : adds(v)
     adds(□)
     󱁕ᶜ = R
@@ -74,18 +83,9 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
               ¿󱁕ᵗ≡‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
               𝑩𝑩(󱁕); ✗⨳‹Invalid element type found in target rhs!›
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
-⊢ reduce_ς(󱁕):
-    ¿¬(𝚘≔󱁕₀ᵉ ᴼ)󰁝: ↪󱁕
-    𝕒 = 􋑺􊬣
-    ∀n⬠󱁕₁﹕: ¿(nᵗ≡␛x ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ᵉ ᴼ ᵗ≡𝚘ᵗ):  󰤱 inner op modifiers
-                𝕒.extend(n₀ ₁﹕)
-                ↺
-            𝕒.append(n)
-    󱁕ᶜ = 𝕒
-    ↪󱁕
 ⊢ add_cmp_op_chains(󱁕):  󰤱 invalid for cmp ops: ≺≻꜠´⟥⟤
     ∀L⬠𝙾𝚃ᴙ¿𝚂≔𝑠(Lᐵ₁󷸼∋␛λ⭜⟞₀⭝󰮈):
-        relv = 󷺹ᵗ≡‹opC› ∧ (⟞₀ᵉ ᴼ≕𝚘)ᵗ∈𝚂 ⭜ 𝚘  󰤱 check for invalid modifiers
+        relv = 󷺹ᵗ≡‹opC› ∧ ⟞₀ ₁􋒷∈𝚂 ⭜ ⟞₀ᵉ ᴼ  󰤱 check for invalid modifiers
         charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡␛x ∧ relv(⟞₀)
         ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): ¿relv(󱁕)≕𝚘¬: ↪󱁕
                                    󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆᶜʰᵃʳᵍ􊱌󰄎􎗓􊬕ᐸ󰌷

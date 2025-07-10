@@ -1,84 +1,85 @@
 ⨡ tree_txt ⭸ *
 
 ⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
+                 󰤱 ´ ∵ neutral op needs apply specials like ꜠
     l,o,r = 󱁕
-    𝚘 = OP_TABLE󰂼􊬣􊫼
-    𝚕,𝚛 = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
+    𝚘,𝚕,𝚛 = OP(ℴ≔o􋒷)
+    𝙻,𝚁 = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
     L,R = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍭓 ⟞₀ᵗᐸᐸᴍ𝑠
     
-     󰤱 ´ ∵ neutral op needs apply specials like ꜠
-    
-    𝚘 = 𝚘.copy
-     󰤱 following seems jank
-    ∀t⬠L: ¿t≡␛⟥: 𝚘ᴸ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,✗,✓,✗
-          ⸘t≡␛≺: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = 𝒪􊯛􊫟ᴸ.copy,⍁,✗,✓,✗
-    ∀t⬠R: ¿t≡␛⟤: 𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,✓,✗,✗
-          ⸘t≡␛≻: 𝚘ᴸ,𝚘ᴿ,𝚘ᴾ,𝚘󰀒,𝚘ᴮ = ⍁,𝒪􊯛􊫟ᴿ.copy,✓,✗,✗
+    ∀t⬠L: ¿t≡␛⟥: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,0     ,𝚛
+          ⸘t≡␛≺: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,␛ᴍOP⭢₁,0
+    ∀t⬠R: ¿t≡␛≻: 𝚘,𝚕,𝚛 = 𝚘∖‹SB›∪␛P,0     ,␛ᴍOP⭢₂
+          ⸘t≡␛⟤: 𝚘,𝚕,𝚛 = 𝚘∖‹SB›∪␛P,𝚕     ,0
           ⸘t≡␛ᵜ: □
-          ⸘t≡␛꜠: ¿𝚘ᴮ: 𝚘ᴮ=✗
-                      ¿𝚘ᴾ󷺥𝚘󰀒: 𝚘ᴾ=𝚘󰀒=✓  bin? make unary
-                 ⸘𝚘ᴾ∨𝚘󰀒: 𝚘ᴸ=𝚘ᴿ=𝚘ᴸ∪𝚘ᴿ  unary? unify sides
-                         𝚘ᴾ=𝚘󰀒=✓
+          ⸘t≡␛꜠: ¿𝚘∋␛B  : 𝚘󷸊∖CB
+                          ¿𝚘∩␛P␛S: ↺
+                          𝚘󷸊∪␛P␛S  bin? make unary
+                 ⸘𝚘∩␛P␛S: 𝚕=𝚛=𝚕⤉𝚛  unary? unify sides
+                          𝚘󷸊∪␛P␛S
                  ¡: ✗⨳
-    𝙧 = Ń(‹𝗈𝗉›,𝒩(‹op_⸓_l›,  ⠤𝚕)ᣆ􊽬􀲱󷺹󱖔􋄤󱁕₁ ₀ᐸ,
+    𝙾 = 𝚘,𝚕,𝚛
+    𝙧 = Ń(‹𝗈𝗉›,𝒩(‹op_⸓_l›,  ⠤𝙻)ᣆ􀳥􊽬󷺹󱖔􋄤󱁕₁ ₀ᐸ,
                𝒩(‹op_lit›,󱁕₁ ₀),
-               𝒩(‹op_⸓_r›,  ⠤𝚛)ᣆ􊽬􀲽󷺹󱖔􋄥󱁕₁ ₀ᐸ,
-               e=ℵ􋄅(⠶󱁕ᵉ,O=𝚘))
+               𝒩(‹op_⸓_r›,  ⠤𝚁)ᣆ􀳱􊽬󷺹󱖔􋄥󱁕₁ ₀ᐸ,
+               e=ℵ􋄅(⠶󱁕ᵉ,O=𝙾))
     ¿␛´∈R: 𝙧ᵉ[␛´]=␛´
     ↪𝙧
 
+⊢ create_call(𝚘,𝙻,𝚁):
+     𝚘☾;𝙻☾;𝚁☾;ᐦ☾
+    t,(𝚖,𝚕,𝚛) = 𝚘₁􋒷,OP(𝚘)
+    ¿t∈‹⭢→➡›: ↪𝖷(⠤𝙻)
+    ¿t∈‹⭠←⬅›: ↪𝖷(⠤𝚁)
+    ¿t≡␛⥉   : ↪𝖷(𝖷(⠤𝚁),𝖷(⠤𝙻))󱖔􋔡(𝙻,𝚁)
+    ¿␛Δ∉𝚖: α,β = 𝙻⋄𝚁ᐵ≇𝖭𝖴𝖫𝖫
+           U = α∧β ⭜􀳤󰄎􀳰⭝ α ⭜􀳤⭝ β ⭜􀳰⭝ ⍁
+    ¡    : U = 𝙻,𝚁
+    ↪𝗈𝗉𝖢(𝚘,⠤U)󱖔􋔡(𝙻,𝚁)
+
 ⊢ part(𝚘,𝙲,d):
-    𝓞,i = 𝚘ᵉ ᴼ,0
-    ¿d≡󷰾: ∀i,n⬠𝙲↨﹕﹕􍨄: ¿IS_OP(n)≕ℴ¬: ↺ 🟑¿𝓞ᵗ∈‹!⌃¬󷺗›: ⇥  jank??🟑
-                      ¿      𝓞ᴸ∌ℴᵗ: ⇥
-    ⸘d≡1: 𝚜𝚝𝚔 = 𝓞ᴿ⛶
-          ∀i,n⬠𝙲↨: ¿IS_OP(n)≕ℴ¬: ↺    🟑¿𝓞ᵗ≡‹␀CAT›: ⇥  jank??🟑
-                   ∀𝚜𝚝𝚔: ¿ℴᵗ∈𝚜𝚝𝚔􍨄 ∨ (🟑allow xᴍ⨁🟑 𝓞ᴾ ∨ 𝓞ᴮ∧¬𝓞󰀒 ⭢∧ ℴᵗ∈𝒪􊯛􊱵ᴿ ∧ ℴᴾ ∧ i¬):
-                             𝚜𝚝𝚔.append(ℴᴿ)
+    (𝚖,𝚕,𝚛),i = OP(𝚘),0
+    ⫙ = ␛α∈𝚖⭜≤⭝<
+    ¿d≡󷰾: ∀i,n⬠𝙲↨﹕﹕􍨄: ¿OP(n)≕ℴ⭜ℴ≕(𝓂,𝓁,𝓇)➡¬: ↺
+                      ¿              𝓁<𝚕⭢¬: ⇥
+    ⸘d≡1: 𝚜𝚝𝚔 = 𝚛⛶
+          ∀i,n⬠𝙲↨: ¿OP(n)≕ℴ⭜ℴ≕(𝓂,𝓁,𝓇)➡¬: ↺
+                   ∀𝚜𝚝𝚔: ¿⫙(𝓁,𝚜𝚝𝚔􍨄) ∨ (␛P∈𝚖 ∨ ␛B∈𝚖∧␛S∉𝚖 ⭢∧ 𝓇<15 ∧ ␛P∈𝓂 ∧ i¬):
+                             𝚜𝚝𝚔.append(𝓇)
                              ⇥
                          𝚜𝚝𝚔.pop()
                    ¡: ⇥
           ¡: i 󷸊+ 1
-    ↪𝙲𝌂i⭢∨⍁²
-
-⊢ create_call(𝚘,𝚕,𝚛):
-    ℴ = 𝚘ᵉ ᴼ
-    ¿ℴᵗ ∈ ‹⭢→➡›: ↪𝖷(⠤𝚕)
-    ¿ℴᵗ ∈ ‹⭠←⬅›: ↪𝖷(⠤𝚛)
-    ¿ℴᵗ ≡ ␛⥉   : ↪𝖷(𝖷(⠤𝚛), 𝖷(⠤𝚕))󱖔􋔡(𝚕,𝚛)
-    ¿ℴ󰀷¬: α,β = 𝚕≇𝖭𝖴𝖫𝖫,𝚛≇𝖭𝖴𝖫𝖫
-          U = α∧β ⭜􀲰󰄎􀲼⭝ α ⭜􀲰⭝ β ⭜􀲼⭝ ⍁
-    ¡   : U = 𝚕,𝚛
-    ↪𝗈𝗉𝖢(𝚘,⠤U)󱖔􋔡(𝚕,𝚛)
+    ↪𝙲𝌂i ∨ ⍁²
 
 ⊢ apply_op(𝚘,𝙻,𝚁):
     ll,lr = part(𝚘,𝙻,󷰾)
     rl,rr = part(𝚘,𝚁,1)
-    ¿rl: rl = parse_expr(rl)
-     𝑩(stackr(𝑩(⠤llᴍ𝑩𝒏), 𝑩(⠤llᴍ𝑩𝒏)), 𝑩𝒏(𝚘), stackr(𝑩(⠤rlᴍ𝑩𝒏), 𝑩(⠤rlᴍ𝑩𝒏)))☾
-    𝘪 = 𝚘ᵉ ᴼ
-    ⊢ suffix(𝚁):  i need micheal or someone to tell me if this is stupid
-         cat: 5!√2 5!3!
-         ok : x⭥ᴙ  5!󰈲f
-        ¿𝚁∧(IS_OP(𝚁₀)≕𝒐¬ ∨ 𝒐ᴾ∧(𝒐ᴮ󷺥𝒐󰀒)):
-            𝚁.insert(0,denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥𝚁)))
-        ↪𝚁
+    ¿rl: rl󷸊parse_expr
+    
+     ‹ll=⟦ll⟧𝗻lr=⟦lr⟧›☾ ; 𝚘☾ ; ‹rl=⟦rl⟧𝗻rr=⟦rr⟧›☾ ; ᐦ☾
+    
+    ⊢ suffix(𝚁): ¿𝚁∧(OP(𝚁₀)≕𝒐¬ ∨ ␛P∈𝒐₀∧(␛B␛S∩𝒐₀⭢¬)):
+                     𝚁.insert(0,𝗈𝗉(‹␀CAT›))
+                 ↪𝚁
     suf2 = 𝚁↦𝚁∧𝚁₀ᵗ≡‹target_rhs› ⭜𝚁.pop(0)⛶⭝ ⍁
     
-     󰤱 make this not include the nulls and stuff when it shouldnt/doesnt need to
-    ¿𝘪ᴮ ∧        lr ∧ rl: ↪ll + [   create_call(𝚘, 𝗑(⠤lr), 𝗑(⠤rl))            ], rr  B
-    ⸘𝘪󰀒 ∧        lr     : ↪ll + [   create_call(𝚘, 𝗑(⠤lr),   𝖭𝖴𝖫𝖫)  , ⠤suf2(𝚁)], suffix(𝚁)  S
-    ⸘𝘪ᴾ             ∧ rl: ↪𝙻  + [   create_call(𝚘, 𝖭𝖴𝖫𝖫  , 𝗑(⠤rl))            ], rr  P
-    ⸘𝘪ᴺ ∧← 𝘪󰁘 ∨⭠ lr 󷺥 rl: ↪𝙻  + [𝘪󰁘⭜create_call(𝚘, 𝖭𝖴𝖫𝖫  ,   𝖭𝖴𝖫𝖫)⭝𝚘, ⠤suf2(𝚁)], 𝚁
-    ¿𝘪ᴮ: ¿lr: ↪ll + [create_call(𝚘, 𝗑(⠤lr), 𝗑(𝗏𝗌(␛⬤)))], 𝚁
-         ¿rl: ↪𝙻  + [create_call(𝚘, 𝗑(𝗏𝗌(␛⬤)), 𝗑(⠤rl))], rr
-    𝑩𝑩(𝚘)
+    𝚖,𝚕,𝚛 = OP(𝚘)
+    
+    ¿␛B∈𝚖 ∧          lr ∧ rl: ↪ll + [     create_call(𝚘,𝗑(⠤lr),𝗑(⠤rl))            ], rr
+    ⸘␛S∈𝚖 ∧          lr     : ↪ll + [     create_call(𝚘,𝗑(⠤lr),𝖭𝖴𝖫𝖫  )  , ⠤suf2(𝚁)], suffix(𝚁)
+    ⸘␛P∈𝚖               ∧ rl: ↪𝙻  + [     create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝗑(⠤rl))            ], rr
+    ⸘␛N∈𝚖 ∧← ␛ν∈𝚖 ∨⭠ lr 󷺥 rl: ↪𝙻  + [␛ν∈𝚖⭜create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝖭𝖴𝖫𝖫  )⭝𝚘, ⠤suf2(𝚁)], 𝚁
+    ¿␛B∈𝚖: ¿lr: ↪ll + [create_call(𝚘,lr,␛⬤𝗏𝗌)], 𝚁
+           ¿rl: ↪𝙻  + [create_call(𝚘,␛⬤𝗏𝗌,rl)], rr
+    
+    𝚘 𝑩𝑩
     ✗⨳‹Unable to apply operator ⟦𝚘⟧: ll=⟦ll⟧; lr=⟦lr⟧; rl=⟦rl⟧; rr=⟦rr⟧›
 
-⊢ parse_expr(󱁕): 𝙻,𝚁 = [],[⠤󱁕]
+⊢ parse_expr(𝙲): 𝙻,𝚁 = [],[⠤𝙲]
                  ∀𝚁: c = 𝚁.pop(0)
-                     ¿IS_OP(c): 𝙻,𝚁 = apply_op(c,𝙻,𝚁)
-                     ¡        : 𝙻.append(c)
+                     ¿OP(c): 𝙻,𝚁 = apply_op(c,𝙻,𝚁)
+                     ¡     : 𝙻.append(c)
                  ↪𝗑(⠤𝙻+𝚁)
 
 ⊢ curry_ops(󱁕):
@@ -97,3 +98,9 @@
                 ⸘cᵗ≡‹qvar›: 𝕡.append(c)
         ¿󱁕₀ᵗ≡‹𝗈𝗉›: 󱁕₀ ₂.set(c=⍁)
         ↪𝖼𝖺𝗅𝗅(‹þCUR›, 𝖳(⠤𝕡), 𝒩(␛𝐷,⠤𝕜), ⠤𝕒)
+
+🟑
+¿__name__≡‹__main__›:
+    󱁕 = 𝗑(␛1𝗏,␛􀇣𝗈𝗉,␛2𝗏,␛􀓻𝗈𝗉,␛3𝗏,␛􀇣𝗈𝗉,␛4𝗏)
+    󱁕.ftrp(‹op›,denode_op,✓)
+    󱁕 parse_expr 𝑩𝑩
