@@ -58,7 +58,7 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         rewrite_strs(󱁕)
         flatten_statments(󱁕)
         󱁕.ftrp(‹x›,󱁕↦parse_expr(󱁕),✓)                                 ␛
-         .rm  (󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ +⟞₁≡+⟞₂≡‹NULL›)␛
+         .rm  (󷺹ᵗ≡‹opC› ∧ ⟞₀ ₁􋒷≡‹␀CAT› ∧ ⟞₁ᵗ≡⟞₂ᵗ≡‹𝑣› ∧ ⟞₁􋒷≡⟞₂􋒷≡‹NULL›)␛
          .ftrp(‹x›,󱁕↦󱁕.copy(c=󱁕ᐵ ᣆ􍯏􊾾􋁣􋂝ˣ ⛶ᐸ󰌷),✓)                       ␛
          .ftrp(‹X›,󱁕↦󱁕.set(t=␛x),✓)                                   ␛
          .ftrp(‹opC›,reduce_ς,✓)
@@ -67,13 +67,13 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         regroup_elements(󱁕)
         rewrite_asgns(󱁕)
         rewrite_cmp(󱁕)
-        󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)␛
-         .frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
+        󱁕.frp(󷺹ᵗ≡‹opC› ∧ OG_OP(⟞₀􋒷)≡␛⋄, 󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)␛
+         .frp(󷺹ᵗ≡‹opC› ∧    ⟞₀ ₁ ₀􋒷≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢 (denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝖼𝖺𝗅𝗅(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
-        󱁕.ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓)␛
-         .ftrp(‹x󷺗󷺗›,squashcat,✓)                                             ␛
-         .ftrp(‹opC›,󷺹.set(t=␛∘),✓)                                           ␛
+        󱁕.ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))(󱁕ᶜ)), ✓)␛
+         .ftrp(‹x󷺗󷺗›,squashcat,✓)                                              ␛
+         .ftrp(‹opC›,󷺹.set(t=␛∘),✓)                                            ␛
          .ftrp(‹⋅󷺗󷺗›,squashmul,✓)
         reformat_whiskers(󱁕)
         󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)                                  ␛

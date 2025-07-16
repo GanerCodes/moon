@@ -30,7 +30,7 @@ OP_LIT = ⦉⠤OPS.keys󰈲󷺹🃌≡1ᐸ,⠤opf∖𝗻𝘀⭢⨝⦊⨝
          ¿x∈OPS: ↪OPSₓ
          i,o=OPS_SOₓ
          ↪OPS󰂼ᑀ₀, ⟞₁⭜i, ⟞₂⭜iᐸ
-OG_OP = 󰲡x∈OPS_SO ⭜OPS_SOₓ ₁⭝ x
+OG_OP = 󰲡x∈OPS_SO ⭜ˣ OPS_SOₓ ₁
 IS_OP = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 
 𝘳 = ℵ(OP_LIT       = OP_LIT,

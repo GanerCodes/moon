@@ -4,7 +4,10 @@ OP_FILE = __dir__/‹operators›
 
 blks = ‹󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰥󷰦󷰧󷰨󷰪󷰬󷰭󷰮󷰯󷰷󷰰󷰱›
 ords = ‹󷰽⟦blks⟧󷰾›
-clrs = ‹0 ⟦blksᐖ󷸀÷🃌󷷿⋅󷷈+.45,1,1ᐸꟿhsv2rgbᴍ²⬤⋅255ᴍr2hl⭢⨝␛ ⟧ 0›⍭
+ clrs = ‹0 ⟦blksᐖ󷸀÷🃌󷷿⋅󷷈+.45,1,1ᐸꟿhsv2rgbᴍ²⬤⋅255ᴍr2hl⭢⨝␛ ⟧ 0›⍭
+
+clrs = ‹0 ⟦blksᐖ󷸀􀗞􀗑󷷿􀗠󷷈􀠓.45,1,1ᐸ􀖌hsv2rgb􀖋²⬤􀑔255􀖋r2hl􀧘␛ ⟧ 0›􀘤
+
  ⨡ text_format;; clrsᴍŧ𝼝(␛#,⬤)⭢⨝⭢☾
 dummy_ords = ⦉0,ords🃌-1⦊
 
