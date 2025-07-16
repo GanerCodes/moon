@@ -9,9 +9,8 @@ __pycache__/
 !/Libraries/Glypher/PuaMaps/Old/.keep
 
 /Libraries/Glypher/Output/*
-!/Libraries/Glypher/Output/99_JuliaMono-Regular.ttf
-!/Libraries/Glypher/Output/99_JuliaMono-Regular.otf
-!/Libraries/Glypher/Output/99_JuliaMono-Regular.woff2 
+!/Libraries/Glypher/Output/moonfont_A.ttf
+!/Libraries/Glypher/Output/moonfont_B.ttf
 !/Libraries/Glypher/Output/.XCompose
 !/Libraries/Glypher/Output/multi.json
 !/Libraries/Glypher/Output/style.json

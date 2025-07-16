@@ -39,7 +39,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
      .ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)                                                      ␛
      .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
      .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
-⊢ rewrite_ternary(󱁕):
+⊢ rewrite_ternary(󱁕):  󰤱󰤱󰤱
     is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms? mixing supscripts?
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y⭝z
                                ¿𝚘₁􋒷≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
@@ -55,7 +55,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
                                𝕒 = β, 𝚘₂🃌 ⭜𝚘₂ ₀ ₀⭝ (𝗑(𝗏𝗌(␛□))󱖔􋄥󱁕)
                                ↪𝗍𝖾𝗋𝗇(α, ⠤𝕒 ᣆᵗ􋁤􋂝􀸧 ᴙ)
 ⊢ group_targets(󱁕):
-    dot = 󷺹ᵗ≡‹𝗈𝗉󷺗› ∧ ⟞₁ ₀ᵗ≡␛.
+    dot = 󷺹ᵗ≡‹𝗈𝗉󷺗› ∧ ⟞₁ ₀􋒷≡␛.
     exp = 󷺹ᵗ≡‹exp›
     R,C = ⍁²
     𝚌 = 󱁕ᶜ
@@ -85,6 +85,17 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
 ⊢ add_cmp_op_chains(󱁕):  󰤱󰤱󰤱 coloring
                          󰤱 invalid for cmp ops: ≺≻꜠´⟥⟤
+    
+    relv = 󷺹ᵗ≡‹opC› ⭜ ⟞₀ᵉ ᴼᑀ₀∋␛λ⭜⟞  󰤱 check for invalid modifiers
+    ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕):
+        ¿relv(󱁕)≕𝚘¬: ↪󱁕
+        󱁕 𝑩𝑩
+        same = 󷺹🃌≡1∧⟞ᵗ≡␛x ⭜ ⟞₀ relvᑀ⭜ ⟞₀ᵉ ᴼ₁﹕⤉≡⤉𝚘₁﹕
+        args = 󱁕ᶜ₁﹕ᴍsame
+        󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆˢᵃᵐᵉ􊱌󰄎􎗓􊬕ᐸ󰌷
+        ↪󱁕
+    󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)                    
+    🟑
     ∀L⬠𝙾𝚃ᴙ¿𝚂≔⦉⠤Lᐵ₁󷸼∋␛λ⭜􍭓⟞₀⦊:
         relv = 󷺹ᵗ≡‹opC› ∧ ⟞₀ ₁􋒷∈𝚂 ⭜ ⟞₀ᵉ ᴼ  󰤱 check for invalid modifiers
         charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡␛x ∧ relv(⟞₀)
@@ -92,6 +103,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
                                    󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆᶜʰᵃʳᵍ􊱌󰄎􎗓􊬕ᐸ󰌷
                                    ↪󱁕
         󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)
+    🟑
     ↪󱁕
 ⊢ rewrite_cmp(󱁕): ⊢ (󱁕.ftrp(‹cmp›,□,✓)) (󱁕):  >>>abcd ⟶ a>b󷹗 ∧ 󷹘>c󷹗 ∧ 󷹘>d󷹗
                       ¿󱁕🃌≤3: ↪󱁕.set(t=‹opC›)
@@ -166,8 +178,8 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
                  
                  𝒓ᶜ.extend(𝑰)
                  𝒓ᶜ.append(𝑮 󱖔􍻚 r2l⋅🃌𝑺 󱖔􍻜 𝑰🃌-r2l)
-                   𝑵 = 𝗂(𝒓, 𝗇(𝚝≡␛󷸋 ⭜𝑺🃌-1⭝ 𝒓🃌+(𝚝≡␛󷸎)+~⭠2⋅⭠𝚝∈‹󷸉󷸎›))
-                    𝑵 = 𝗂(𝒓, 𝗇(𝚝≡␛󷸋 ⭜𝑺🃌-1⭝ 𝒓🃌􀾢𝚝􀌤␛󷸎+􀡲2􀗠𝚝􀌭‹󷸉󷸎›))
+                   𝑵 = 𝗂(𝒓, 𝗇(𝚝≡␛󷸋 ⭜𝑺🃌-1⭝ 𝒓🃌+(𝚝≡␛󷸎)+~⭠2⋅⭠𝚝∈‹󷸉󷸎›))
+                 𝑵 = 𝗂(𝒓, 𝗇(𝚝≡␛󷸋 ⭜𝑺🃌-1⭝ 𝒓🃌􀾢𝚝􀌤␛󷸎􀾢􀡲2􀗠𝚝􀌭‹󷸉󷸎›))
         𝑵₀ᶜ.append(𝗋(𝑰🃌-⭠𝚝≡␛󷸍))
         ↪wrap(𝑵)
 
