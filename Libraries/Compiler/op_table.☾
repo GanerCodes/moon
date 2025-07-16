@@ -1,4 +1,9 @@
-🟑 𝙾𝚃 = [⠤get_operator_table(ops), [‹. ᴺ›⍭]]
+⨡ text_format
+⨡ generate_operators
+
+‹bruhHHHHHHHHHHHHHHHHHHHHHHH›☾
+
+𝙾𝚃 = [⠤get_operator_table(ops), [‹. ᴺ›⍭]]
 
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
 ‹󷺗!󷺗› 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀CAT󷺗󷺗󷺗 ᴺᴮ󷺗›⍭]
@@ -66,11 +71,6 @@ MT = ‹NPSBlrαςνλΔ›
     ↪cb(𝒪)
 
 OP_TABLE  = 𝒪 = make_op_table(𝙾𝚃,𝚂𝚃,cb)
-🟑
-
-⨡ text_format
-⨡ generate_operators
-
 MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 IS_OP     = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 

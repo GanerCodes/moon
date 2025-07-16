@@ -17,7 +17,7 @@
                           𝚘󷸊∪␛P␛S  bin? make unary
                  ⸘𝚘∩␛P␛S: 𝚕=𝚛=𝚕⤉𝚛  unary? unify sides
                           𝚘󷸊∪␛P␛S
-                 ¡: ✗⨳
+                 ¡      : ✗⨳
     𝙾 = 𝚘,𝚕,𝚛
     𝙧 = Ń(‹𝗈𝗉›,𝒩(‹op_⸓_l›,  ⠤𝙻)ᣆ􀳥􊽬󷺹󱖔􋄤󱁕₁ ₀ᐸ,
                𝒩(‹op_lit›,󱁕₁ ₀),
@@ -27,7 +27,6 @@
     ↪𝙧
 
 ⊢ create_call(𝚘,𝙻,𝚁):
-     𝚘☾;𝙻☾;𝚁☾;ᐦ☾
     t,(𝚖,𝚕,𝚛) = 𝚘₁􋒷,OP(𝚘)
     ¿t∈‹⭢→➡›: ↪𝖷(⠤𝙻)
     ¿t∈‹⭠←⬅›: ↪𝖷(⠤𝚁)
@@ -60,18 +59,18 @@
      ‹ll=⟦ll⟧𝗻lr=⟦lr⟧›☾ ; 𝚘☾ ; ‹rl=⟦rl⟧𝗻rr=⟦rr⟧›☾ ; ᐦ☾
     
     ⊢ suffix(𝚁): ¿𝚁∧(OP(𝚁₀)≕𝒐¬ ∨ ␛P∈𝒐₀∧(␛B␛S∩𝒐₀⭢¬)):
-                     𝚁.insert(0,𝗈𝗉(‹␀CAT›))
+                     𝚁.insert(0,𝖮𝖯(‹␀CAT›))
                  ↪𝚁
     suf2 = 𝚁↦𝚁∧𝚁₀ᵗ≡‹target_rhs› ⭜𝚁.pop(0)⛶⭝ ⍁
     
     𝚖,𝚕,𝚛 = OP(𝚘)
     
-    ¿␛B∈𝚖 ∧          lr ∧ rl: ↪ll + [     create_call(𝚘,𝗑(⠤lr),𝗑(⠤rl))            ], rr
-    ⸘␛S∈𝚖 ∧          lr     : ↪ll + [     create_call(𝚘,𝗑(⠤lr),𝖭𝖴𝖫𝖫  )  , ⠤suf2(𝚁)], suffix(𝚁)
-    ⸘␛P∈𝚖               ∧ rl: ↪𝙻  + [     create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝗑(⠤rl))            ], rr
-    ⸘␛N∈𝚖 ∧← ␛ν∈𝚖 ∨⭠ lr 󷺥 rl: ↪𝙻  + [␛ν∈𝚖⭜create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝖭𝖴𝖫𝖫  )⭝𝚘, ⠤suf2(𝚁)], 𝚁
-    ¿␛B∈𝚖: ¿lr: ↪ll + [create_call(𝚘,lr,␛⬤𝗏𝗌)], 𝚁
-           ¿rl: ↪𝙻  + [create_call(𝚘,␛⬤𝗏𝗌,rl)], rr
+    ¿␛B∈𝚖 ∧          lr ∧ rl: ↪[⠤ll,      create_call(𝚘,𝗑(⠤lr),𝗑(⠤rl))            ], rr
+    ⸘␛S∈𝚖 ∧          lr     : ↪[⠤ll,      create_call(𝚘,𝗑(⠤lr),𝖭𝖴𝖫𝖫  )  , ⠤suf2(𝚁)], suffix(𝚁)
+    ⸘␛P∈𝚖               ∧ rl: ↪[⠤𝙻 ,      create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝗑(⠤rl))            ], rr
+    ⸘␛N∈𝚖 ∧← ␛ν∈𝚖 ∨⭠ lr 󷺥 rl: ↪[⠤𝙻 , ␛ν∈𝚖⭜create_call(𝚘,𝖭𝖴𝖫𝖫  ,𝖭𝖴𝖫𝖫  )⭝𝚘, ⠤suf2(𝚁)], 𝚁
+    ¿␛B∈𝚖: ¿lr: ↪[⠤ll, create_call(𝚘,𝗑(⠤lr),␛⬤𝗏𝗌)], 𝚁
+           ¿rl: ↪[⠤𝙻 , create_call(𝚘,␛⬤𝗏𝗌,𝗑(⠤rl))], rr
     
     𝚘 𝑩𝑩
     ✗⨳‹Unable to apply operator ⟦𝚘⟧: ll=⟦ll⟧; lr=⟦lr⟧; rl=⟦rl⟧; rr=⟦rr⟧›
@@ -98,6 +97,8 @@
                 ⸘cᵗ≡‹qvar›: 𝕡.append(c)
         ¿󱁕₀ᵗ≡‹𝗈𝗉›: 󱁕₀ ₂.set(c=⍁)
         ↪𝖼𝖺𝗅𝗅(‹þCUR›, 𝖳(⠤𝕡), 𝒩(␛𝐷,⠤𝕜), ⠤𝕒)
+
+desaturate_op = 󱁕↦(󱁕₁ ₀.set(t=󱁕₁ ₀􋒷 OG_OP))►󱁕
 
 🟑
 ¿__name__≡‹__main__›:

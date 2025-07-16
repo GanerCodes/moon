@@ -1,14 +1,6 @@
- FC, bruh = fcache, 0
- ⊢ fcache(⠤𝔸,⠶𝕂):
-     global bruh
-     ¿bruh󷸊+1 ≤ 3:
-         ↪ FC(⠤𝔸,⠶𝕂)
-     ↪󰻾
-
-⨡ Ń
+ ⨡ Ń
 ⨡ text_format
 ⨡ cache
- fcache = 𝚲ƒ↦ƒ  󰻾􋒍
 
    ⦃import regex as ⦃re⦄⦄
 ¡𝑒: ⦃import re    as ⦃re⦄⦄

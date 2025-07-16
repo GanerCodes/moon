@@ -1,24 +1,26 @@
-⨡ Ń
+ ⨡ Ń
 ⨡ main
 ⨡ rgx_golfatron
 ⨡ text_format
 
 𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
-𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ􋄅(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
 
-n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ⭜𝔗(󱁕)⭝󱁕
+n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ ⭜􋑻 𝔗(󱁕)
 
  0 width, left of node
 ⊢ ⟵(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
           ¿𝒑 ᐹ ᔐ: ↪󱁕
-          ¿𝒑 󷹵 Ń: 𝒑=𝒑₀
+          ¿𝒑 󷹵 Ń: ¿𝒑🃌: 𝒑=𝒑₀
+                  ¡  : ↪󱁕
           ¿𝒑ᵉ∌␛p: ↪󱁕
           󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ﹕₂ 2
           ↪󱁕
  0 width, rght of node
 ⊢ ⟶(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
           ¿𝒑 ᐹ ᔐ: ↪󱁕
-          ¿𝒑 󷹵 Ń: 𝒑=𝒑􍨄
+          ¿𝒑 󷹵 Ń: ¿𝒑🃌: 𝒑=𝒑􍨄
+                  ¡  : ↪󱁕
           ¿𝒑ᵉ∌␛p: ↪󱁕
           󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ₂﹕ 2
           ↪󱁕
@@ -90,7 +92,7 @@ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ
                  ∀r⬠󱁕.find(󷺹ᵉ∋␛R,✓,✗): δ.append((rᵉ ᵖ₀,r􋒷🃌 ))
                  ∀r⬠󱁕.find(󷺹ᵉ∋␛I,✓,✗): δ.append((rᵉ ᵖ₁,r􋒷🃌󷹒))
                  󱁕.rm(󷺹ᵉ ⁻∩␛R␛Iᐸ)
-                 ↪ +󱁕,gram_surgery(⬤,δ)
+                 ↪ 󱁕􋒷,gram_surgery(⬤,δ)
 
  basic gram const replacements
 gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle2
@@ -104,16 +106,16 @@ gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%�
     ꬶ=󰲡𝘎(x,r,remove_trashes=✗).ftrp(
        ‹σscript›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
            𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
-              ⠤ꬶ(+󱁕⭢󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
+              ⠤ꬶ(󱁕􋒷󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
            𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
-    ↪under_gram(ꬶ(x))
+    ↪x ꬶ under_gram
 
 ⊢ peggrampeg(𝚌,ns={},𝘎=peggle2(
         󰦥󰦥󰦥󰦥󰦥
            main = (brak∨~‹.|\n›)*
            brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›
         󰦥󰦥󰦥󰦥󰦥), m=✓):
-    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(+⟞,ns=ns))])) ⭢ ᣆᵐ peggle2
+    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(⟞􋒷,ns=ns))])) ⭢ ᣆᵐ peggle2
 ⭷ peggle2,Ń,𝒩,𝔗,⟵,⟶,⊥,⊤,𝑬,offset_𝚕𝚌,offset_𝚌,reform_positions,gram_rp,under_gram,␛
   gram_subsup,peggrampeg,is_short,warn_if_short,fill_󱁕_holes_basic
 

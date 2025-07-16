@@ -5,7 +5,7 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
 ⊢ reduce_ς(󱁕):
     ¿(𝚘≔󱁕₀ᵉ ᴼ)₀∌␛ς: ↪󱁕
     𝕒 = 􋑺􊬣
-    ∀n⬠󱁕₁﹕: ¿(nᵗ≡␛x ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ ₁􋒷≡𝚘ᵗ):  󰤱 inner op modifiers
+    ∀n⬠󱁕₁﹕: ¿(nᵗ≡␛x ∧ n🃌≡1 ∧← n₀ᑀᵗ≡‹opC› ∧ ⟞₀ ₁􋒷≡󱁕₀ ₁􋒷):  󰤱 inner op modifiers
                 𝕒.extend(n₀ ₁﹕)
                 ↺
             𝕒.append(n)

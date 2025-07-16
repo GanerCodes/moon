@@ -68,17 +68,14 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         rewrite_asgns(󱁕)
         rewrite_cmp(󱁕)
         󱁕.frp(󷺹ᵗ≡‹opC›∧+⟞₀≡␛⋄,󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)␛
-         .frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))     ␛
-        
+         .frp(󷺹ᵗ≡‹opC› ∧ +⟞₀ ₁ ₀≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
         squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢 (denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
         squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝖼𝖺𝗅𝗅(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
         󱁕.ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))∘󱁕ᶜ), ✓)␛
          .ftrp(‹x󷺗󷺗›,squashcat,✓)                                             ␛
          .ftrp(‹opC›,󷺹.set(t=␛∘),✓)                                           ␛
          .ftrp(‹⋅󷺗󷺗›,squashmul,✓)
-        
         reformat_whiskers(󱁕)
-        
         󱁕.frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1,󱁕↦𝒩(␛𝑃,⠤󱁕)󱖔􋔡󱁕,✓)                                  ␛
          .frp (󷺹ᵗ≡‹𝑇›,󷺹∧⟞􍨄ᵗ≡␛ᗜ ⭜⟞.set(c=⟞ᶜ﹕􍨄)⭝ ⟞,✓)                          ␛
          .ftrp(‹ᗜ󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗏𝗌(␛□)󱖔􋔡󱁕)                                       ␛
@@ -86,7 +83,8 @@ gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
         add_short_circuits(󱁕)
         curry_ops(󱁕)
         rewrite_ugex(󱁕)
-        󱁕.ftrp(␛∘,󱁕↦󱁕.set(c=[󱁕₀,⠤󱁕₁﹕ᐵᵗ≡␛𝑃∧⟞₀🃌≡1∧⟞₀ᵗ≡␛𝔸⭜⟞₀⭝⟞]),✓)  󰤱 dumb hack
+        󱁕.ftrp(‹𝗈𝗉›,desaturate_op,✓) ␛
+         .ftrp(␛∘,󱁕↦󱁕.set(c=[󱁕₀,⠤󱁕₁﹕ᐵᵗ≡␛𝑃∧⟞₀🃌≡1∧⟞₀ᵗ≡␛𝔸⭜⟞₀⭝⟞]),✓)  󰤱 dumb hack
     ¡ε=𝑒: 𝑩𝑩(󱁕,‹Error converting to AST!›)
           ⦃raise ⦃ε⦄⦄
     ↪󱁕

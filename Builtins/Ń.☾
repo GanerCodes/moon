@@ -1,4 +1,3 @@
-⨡ text_format
 ⦃from collections import deque as ⦃𝔡𝔮⦄⦄
 
  Mutable and has attributes
@@ -6,7 +5,7 @@
  <Ń>.e.p is used as a (start_pos, end_pos) map to source-code when dealing ⓦ transpilers
 󱀘 Ń: __slots__ = ␛t,␛c,␛e
      ⊢ __init__(󱁕,t,⠤c,e=␀): 󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
-                              ∀z⬠󱁕ᶜ¿z󷹵Ń: ✗⨳‹⟦t⟧; ⟦z⟧, ⟦c⟧›
+                             ∀z⬠󱁕ᶜ¿z󷹵Ń: ✗⨳‹⟦t⟧; ⟦z⟧; ⟦c⟧›
      __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
      __repr__     = ⥌󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
      __setitem__  = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
@@ -81,10 +80,11 @@
                      ∀𝒏⬠󱁕   ¿𝒏.first_l(ƒ)≕l≇□: ↪l  sort t⟶b, l⟶r
      ⊢ first_r(󱁕,ƒ): ¿ƒ(󱁕): ↪󱁕
                      ∀𝒏⬠󱁕﹕﹕􍨄¿𝒏.first_r(ƒ)≕r≇□: ↪r  sort t⟶b, r⟶l
-     ⊢ first_sides(󱁕,ƒ): ↪󱁕.first_l(ƒ),󱁕.first_r(ƒ)
+     first_sides = ⥌󱁕,ƒ↦󱁕.first_l(ƒ),󱁕.first_r(ƒ)󰅂
      filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.rm(¬○ƒ,⠤𝔸,⠶𝕂)
      ⊢ (property) 󰊄(𝕊): ↪+𝕊
-     ⊢ P(󱁕,fs=✓): NA,AR,yl,yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
+     ⊢ P(󱁕,fs=✓): ¿hasattr(Ń,‹txt_format_imported›≕attr)¬: ⨡ text_format
+                  NA,AR,yl,yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
                   ¿󱁕󷹵Ń: ↪ŧ𝼝(ᔐ(󱁕),‹f00›)
                   ⊢ format_e(e): ¿¬e: ↪ᐦ
                                  r = eꟿ󰲣x∈⦉⠤‹Tpρ›⦊ ⭜󰮈⭝ yᐹŃ ⭜‹⟦x⟧⟦AR⟧⟦yᵗ⟧›⭝ ‹⟦x⟧=⟦y⟧›
@@ -99,7 +99,9 @@
                                                           ⟞󷺥󱁕🃌≡0 ⭜x∧├∨┬⭝│ )󷺿⭢⨝𝗻󰅂⭢⨝𝗻)
                   ↪ fs ⭜𝚛☾►󱁕⭝ 𝚛
 
-⭷ Ń
+ ⭷ Ń
 
+🟑
 ⊢ test_Ń: Ń(‹the›,Ń(‹joe›,e={T=✓,p=2⋄4,swag=‹loog›}ℵ􋄅),
                   Ń(‹egg›,Ń(‹egg2›),Ń(‹egg3›,e={T=✓,p=1⋄2⋄3⋄4}ℵ􋄅)))ᴾ
+🟑

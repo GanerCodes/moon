@@ -1,9 +1,8 @@
-⨡ Ń
+ ⨡ Ń
 ⨡ text_format
 ⨡ generate_operators
 
 opf = moon_dir/‹Builtins/Data/opord›⭢
-OP_LIT    = opf∖𝗻𝘀⭢⨝
 OPS_SO    = opf󷹎𝗻⍉ᐵ₀,⟞₁﹕ᐸꟿ∾󷺺,󷸀⋄󷺽⭢󰌷⭢ℵ
 MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 
@@ -11,10 +10,10 @@ OPS = ℵ
 𝙾𝚃 = [⠤ops get_operator_table, [‹. ᴺ›⍭]] ᴙ
 𝒽 = 󷰾 𝙾𝚃.pop
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
-‹󷺗!󷺗› 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀CAT ᴺᴮ›⍭]
-‹󷺗ᴍ󷺗› 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀TAC 󷺗ᴮ›⍭]
+␛! 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀CAT ᴺᴮ›⍭]
+␛ᴍ 󱖔ᵃᵈᵈ􋕟ᵇᵉᶠᵒʳᵉ [‹␀TAC 󷺗ᴮ›⍭]
 𝙾𝚃.extend([𝒽,
-           ‹␀T ᴺ󰀒󰁘󰀷 ␀T⟞ ᴺ󰀒󰁘󰀷 ␀T⟝ ᴺᴾ󰁘󰀷 ␀T⟞⟝ ᴺᴾ󰀒ᴮ󰁘󰀷›⍭,
+           ‹␀T ᴺ󰁘󰀷 ␀T⟞ ᴺ󰀒󰁘󰀷 ␀T⟝ ᴺᴾ󰁘󰀷 ␀T⟞⟝ ᴺᴾ󰀒ᴮ󰁘󰀷›⍭,
            ‹⭢ 󰀒 ⭠ ᴾ›⍭,
            ‹→ 󰀒 ← ᴾ›⍭,
           [‹⭜ ᴺᴮ󰁌›⍭],
@@ -25,11 +24,13 @@ n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 ‹≔󷸉󷸊󷸋›ᐖOPS􍪴≔(␛B,0,n)ᐸ
 ‹≕󷸎󷸌󷸍›ᐖOPS􍪴≔(␛B,n,0)ᐸ
 
-⊢ OP(x): ¿xᐹŃ: ↪xᵉ.get(␛O)
+OP_LIT = ⦉⠤OPS.keys󰈲󷺹🃌≡1ᐸ,⠤opf∖𝗻𝘀⭢⨝⦊⨝
+
+⊢ OP(x): ¿xᐹŃ  : ↪␛´∉xᵉ ⭜􋄅 xᵉ.get(␛O)
          ¿x∈OPS: ↪OPSₓ
          i,o=OPS_SOₓ
          ↪OPS󰂼ᑀ₀, ⟞₁⭜i, ⟞₂⭜iᐸ
-OG_OP = 󰲡x∈OPS ⭜OPSₓ⭝ x∈OPS_SO ⭜OPS_SOₓ ₁⭝ x
+OG_OP = 󰲡x∈OPS_SO ⭜OPS_SOₓ ₁⭝ x
 IS_OP = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 
 𝘳 = ℵ(OP_LIT       = OP_LIT,

@@ -33,7 +33,7 @@ setitem = 󰲥setitem_(x,y,z) ∨ z
 ⊢þPKE(x=0): ↪⦃⦃þSTK⦄[⦃𝔗ℑ𝔇()⦄][~x]⦄
 ⊢þPOP(x=0): ↪⦃⦃þSTK⦄[⦃𝔗ℑ𝔇()⦄].pop(~x)⦄
 ⊢þDEL(x  ):  ⦃del ⦃þSTK⦄[⦃𝔗ℑ𝔇()⦄][-x:]⦄
-␀CAT´ = 󰲣callable(y)⭜y(x)⭝isinstance(y,ᔐ)∧isinstance(x,int)¬⭜ᔐ(x)+y⭝x⋅y
+´␀CAT´ = 󰲣callable(y)⭜y(x)⭝isinstance(y,ᔐ)∧isinstance(x,int)¬⭜ᔐ(x)+y⭝x⋅y
 ⊢ þCUR(𝑃,𝐾,⠤𝒜): ⊢ꬶ(⠤𝐴): ¿len(𝐴)<len(𝑃): ↪𝚲ꬶ(⠤𝐴,⠤𝔸)
                         𝙰,𝙺 = [⠤𝒜],{⠶𝐾}
                         ∀k,v⬠zip(𝑃,𝐴): isinstance(k,int)⭜􀳣𝙰➡ₖ=v
