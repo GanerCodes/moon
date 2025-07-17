@@ -7,6 +7,9 @@ OPS_SO    = opf󷹎𝗻⍉ᐵ₀,⟞₁﹕ᐸꟿ∾󷺺,󷸀⋄󷺽⭢󰌷⭢ℵ
 MODIFIERS = ‹⟥≺ ⦣ ≻ᵜ꜠´⟤ ᔨ⦢𐞑›⍭
 
 OPS = ℵ
+OG_OP = 󰲡x∈OPS_SO ⭜ˣ OPS_SOₓ ₁
+IS_OP = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
+
 𝙾𝚃 = [⠤ops get_operator_table, [‹. ᴺ›⍭]] ᴙ
 𝒽 = 󷰾 𝙾𝚃.pop
 add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
@@ -19,7 +22,8 @@ add_before = ⥌p,n↦𝙾𝚃.insert(𝙾𝚃󰑅ᔨ󷺹ᓕ􊽧󰁱⁰∋p, n)
           [‹⭜ ᴺᴮ󰁌›⍭],
           [‹⭝ ᴮ󰁌›⍭],
            ‹➡ 󰀒 ⬅ ᴾ›⍭])
-∀i,V⬠𝙾𝚃↨: VᐖOPS􍪴􊬣≔(⦉⠤⟞₁󷸼⦊ᑀ, ␛B␛S∩⟞⭜⁰i, ␛B␛P∩⟞⭜⁰iᐸ)
+∀k,(i,v)⬠OPS_SO¿OG_OP(k)≡␛⭝: OPS_SOₖ=i+1⭢⋄v
+∀i,V⬠𝙾𝚃↨: ∀⟞⬠V: OPS􍪴􊬣 = ⦉⠤⟞₁󷸼⦊ᑀ, ␛B␛S∩⟞⭜⁰i, ␛B␛P∩⟞⭜⁰iᐸ
 n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 ‹≔󷸉󷸊󷸋›ᐖOPS􍪴≔(␛B,0,n)ᐸ
 ‹≕󷸎󷸌󷸍›ᐖOPS􍪴≔(␛B,n,0)ᐸ
@@ -30,8 +34,6 @@ OP_LIT = ⦉⠤OPS.keys󰈲󷺹🃌≡1ᐸ,⠤opf∖𝗻𝘀⭢⨝⦊⨝
          ¿x∈OPS: ↪OPSₓ
          i,o=OPS_SOₓ
          ↪OPS󰂼ᑀ₀, ⟞₁⭜i, ⟞₂⭜iᐸ
-OG_OP = 󰲡x∈OPS_SO ⭜ˣ OPS_SOₓ ₁
-IS_OP = 󱁕↦󱁕ᵗ≡‹𝗈𝗉› ∧ ␛´∉󱁕ᵉ ⭜ 󱁕ᵉ ᴼ
 
 𝘳 = ℵ(OP_LIT       = OP_LIT,
       OP_MOD_L_N   = MODIFIERS₀ ₀,

@@ -42,13 +42,13 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
 ⊢ rewrite_ternary(󱁕):  󰤱󰤱󰤱
     is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms? mixing supscripts?
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y⭝z
-                               ¿𝚘₁􋒷≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
+                               ¿OG_OP(𝚘₁􋒷)≠␛⭝ ∨ 𝚘₂🃌: ↪󱁕
                                α,⠤β = α
                                γ = α₀
-                               ¿γᵗ≠‹opC› ∨ γ₀ ₁􋒷≠␛⭜ ∨ γ₀ ₂🃌: ↪󱁕
+                               ¿γᵗ≠‹opC› ∨ OG_OP(γ₀ ₁􋒷)≠␛⭜ ∨ 𝚘ᵉ ᴼ₁-1≠γ₀ᵉ ᴼ₁ ∨ γ₀ ₂🃌: ↪󱁕
                                ↪𝗍𝖾𝗋𝗇(⠤γ₁﹕, ⠤β)
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y, x⭝y
-                               ¿𝚘₁􋒷≕t∉␛⭜␛⭝: ↪󱁕
+                               ¿OG_OP(𝚘₁􋒷)≕t∉␛⭜␛⭝: ↪󱁕
                                α,β,⠤_ = α
                                is_xpr_atom(β) ⨳
                                𝚘₂🃌¬ ∨ 𝚘₂🃌≡1 ∧ 𝚘₂ ₀ᵗ≡␛𝚜 ⨳
@@ -83,28 +83,14 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
               ¿󱁕ᵗ≡‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
               𝑩𝑩(󱁕); ✗⨳‹Invalid element type found in target rhs!›
     󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕ſ􍾚⁽􋑻􊿥⁾𝙁]),✓)
-⊢ add_cmp_op_chains(󱁕):  󰤱󰤱󰤱 coloring
-                         󰤱 invalid for cmp ops: ≺≻꜠´⟥⟤
-    
-    relv = 󷺹ᵗ≡‹opC› ⭜ ⟞₀ᵉ ᴼᑀ₀∋␛λ⭜⟞  󰤱 check for invalid modifiers
+⊢ add_cmp_op_chains(󱁕):
+    relv = 󷺹ᵗ≡‹opC› ⭜ ⟞₀ᵉ ᴼᑀ₀∋␛λ⭜⟞  󰤱 check for invalid modifiers like ≺≻꜠´⟥⟤
     ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕):
         ¿relv(󱁕)≕𝚘¬: ↪󱁕
-        󱁕 𝑩𝑩
-        same = 󷺹🃌≡1∧⟞ᵗ≡␛x ⭜ ⟞₀ relvᑀ⭜ ⟞₀ᵉ ᴼ₁﹕⤉≡⤉𝚘₁﹕
-        args = 󱁕ᶜ₁﹕ᴍsame
+        same = 󷺹🃌≡1∧⟞ᵗ≡␛x ⭜ ⟞₀ relvᑀ⭜ ⟞₁﹕⤉≡⤉𝚘₁﹕
         󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆˢᵃᵐᵉ􊱌󰄎􎗓􊬕ᐸ󰌷
         ↪󱁕
-    󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)                    
-    🟑
-    ∀L⬠𝙾𝚃ᴙ¿𝚂≔⦉⠤Lᐵ₁󷸼∋␛λ⭜􍭓⟞₀⦊:
-        relv = 󷺹ᵗ≡‹opC› ∧ ⟞₀ ₁􋒷∈𝚂 ⭜ ⟞₀ᵉ ᴼ  󰤱 check for invalid modifiers
-        charg = 󷺹🃌≡1 ∧ ⟞ᵗ≡␛x ∧ relv(⟞₀)
-        ⊢ (󱁕.ftrp(‹opC›,□,✓)) (󱁕): ¿relv(󱁕)≕𝚘¬: ↪󱁕
-                                   󱁕ᶜ₁﹕ = 󱁕ᶜ₁﹕ᐵᣆᶜʰᵃʳᵍ􊱌󰄎􎗓􊬕ᐸ󰌷
-                                   ↪󱁕
-        󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.cp(t=‹cmp›)⭝ 󱁕, ✓)
-    🟑
-    ↪󱁕
+    ↪ 󱁕.ftrp(‹opC›, 󱁕↦relv(󱁕) ⭜󱁕.set(t=‹cmp›)⭝ 󱁕, ✓)                    
 ⊢ rewrite_cmp(󱁕): ⊢ (󱁕.ftrp(‹cmp›,□,✓)) (󱁕):  >>>abcd ⟶ a>b󷹗 ∧ 󷹘>c󷹗 ∧ 󷹘>d󷹗
                       ¿󱁕🃌≤3: ↪󱁕.set(t=‹opC›)
                       o,v = 󱁕ᶜ𝌂󷺹ᵗ≡‹𝗈𝗉›
