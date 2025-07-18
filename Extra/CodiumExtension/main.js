@@ -5,7 +5,11 @@ const ᔐ𝑙 = x=>[...x].length;
 const [𝒪ℒ,ℒ𝒪] = [Object.entries,Object.fromEntries];
 const 𝒪ℳ = x=>x.reduce((x,y)=>({...x,...y}))
 const rmat = f=>fs.readFileSync(f, {encoding:'utf8', flag:'r'}).split('\n').map(x=>[...x]);
+const print = (...𝔸) => console.log(...𝔸) || 𝔸[0];
 Number.prototype.mod = function(n) { return (this%n + n)%n; };
+
+const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.end.character];
+const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
 MOON_PATH = require('child_process').execSync('☾ --get-dir').toString().trim();
 SCRP_PATH = `${MOON_PATH}/Builtins/Data/script.map`;
@@ -30,17 +34,14 @@ for(const [n,p,b] of ζ(...rmat(SCRP_PATH))) {
 const part = (s,i) => [s.slice(0,i),s.slice(i)];
 const align = 𝐸 => {
     const gl = l=>𝐸.document.lineAt(l);
-    const L = 𝐸.selections.map(𝚜 => [𝚜.start.line, 𝚜.start.character,
-                                     ...part(gl(𝚜.start.line).text,
-                                             𝚜.start.character)]);
+    const L = 𝐸.selections.map(𝔖𝔏).map(([αl,αc,βl,βc]) => [αl,αc,...part(gl(αl).text,αc)]);
     const n = Math.max(...L.map(([l,c,α,β]) => ᔐ𝑙(α)));
     const ns = [];
     𝐸.edit(𝑒𝑏=>
         L.forEach(([l,c,α,β])=>
             (𝑒𝑏.replace(new vs.Range(l,0,l,𝐸.document.lineAt(l).text.length),
                        α+' '.repeat(n-ᔐ𝑙(α))+β),
-             ns.push(new vs.Selection(new vs.Position(l,α.length+n-ᔐ𝑙(α)),
-                                      new vs.Position(l,α.length+n-ᔐ𝑙(α)))))))
+             ns.push(𝔏𝔖(l,α.length+n-ᔐ𝑙(α),l,α.length+n-ᔐ𝑙(α))))))
      .then(_=>𝐸.selections=ns) };
 align.manual = true;
 
@@ -54,12 +55,19 @@ const tools = {  sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                 align }
 // 󰤱 generalized upper/lower/swapcase, switching alphabets
 
-const activate = ℭ => 
+const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])                ];
+const cf = (𝐸,l,c) => [l,   part([...𝐸.document.lineAt(l).text],c)[0] .join('').length];
+const tin = (𝐸,𝚜,ƒ) => { 𝚜 = ƒ( [...fc(𝐸,𝚜[0],𝚜[1]),...fc(𝐸,𝚜[2],𝚜[3])]);
+                         return [...cf(𝐸,𝚜[0],𝚜[1]),...cf(𝐸,𝚜[2],𝚜[3]) ]; }
+const a1 = (𝐸,𝚜) => tin(𝐸,𝚜,𝚜=>[𝚜[0],𝚜[1],𝚜[2],𝚜[3]+1]);
+const nzSel = (𝐸,𝚜) => (𝚜=>𝔏𝔖(...𝚜[0]==𝚜[2]&&𝚜[1]==𝚜[3] ?a1(𝐸,𝚜): [𝚜[0],𝚜[1],𝚜[2],𝚜[3]]))(𝔖𝔏(𝚜));
+const activate = ℭ =>
     Object.entries(tools).map(([k,v])=>
         vs.commands.registerCommand(`moon.${k}`, _=>{
             const 𝐸 = vs.window.activeTextEditor;
             if(v.manual) v(𝐸);
-            else         𝐸.edit(𝑒𝑏 => 𝐸.selections.forEach(𝚜 => 𝑒𝑏.replace(𝚜,v(𝐸.document.getText(𝚜))))); })
+            else         𝐸.edit(𝑒𝑏 => 𝐸.selections.map(𝚜 => nzSel(𝐸,𝚜))
+                                       .forEach(𝚜 => 𝑒𝑏.replace(𝚜,v(𝐸.document.getText(𝚜))))); })
     ).forEach(ℭ.subscriptions.push);
 const deactivate = _ => {};
 
