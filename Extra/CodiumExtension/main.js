@@ -23,8 +23,13 @@ const mapS = (_=>{
     const expand   = ℒ𝒪(oadt.map(([x,...𝔸])=>[x,𝔸]));
     const contract = 𝒪ℳ(𝒪ℒ(expand).map(([k,v])=>ℒ𝒪(v.map(x=>[x,k]))));
     const loc      = x=>x in contract ?[contract[x],order[x]]: undefined;
-    const col      = (x,Δ=0,c=false)=>expand[x[0]][c?Math.min(Math.max(x[1]+Δ-1,0),N-1):(x[1]+Δ-1)%N];
-    return (S,...𝔸)=>[...S].map(x=>x in contract ?col(loc(x),...𝔸): x).join(''); })();
+    const col      = (x,Δ=0,c=0)=>expand[x[0]][c==1 ? Math.min(Math.max(x[1]+Δ-1,0),N-1):
+                                               c<0  ? -c:
+                                               (x[1]+Δ-1)%N];
+    
+    return (S,...𝔸)=>[...S].map(x => x in contract ?col(loc(x),...𝔸):
+                                     x in expand   ?expand[x][Math.floor(expand[x].length/2)]:
+                                     x).join(''); })();
 
 const [SUP,SUB,NRM] = [{},{},{}];
 for(const [n,p,b] of ζ(...rmat(SCRP_PATH))) {
@@ -45,13 +50,16 @@ const align = 𝐸 => {
      .then(_=>𝐸.selections=ns) };
 align.manual = true;
 
-const tools = {  sup: s=>[...s].map(c=>SUP[c]??c).join(''),
-                 sub: s=>[...s].map(c=>SUB[c]??c).join(''),
-                 nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
-                ord1: s=>mapS(s, 1,true),
-                dro1: s=>mapS(s,-1,true),
-                ord5: s=>mapS(s, 5,true),
-                dro5: s=>mapS(s,-5,true),
+const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
+                  sub: s=>[...s].map(c=>SUB[c]??c).join(''),
+                  nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
+                 ord1: s=>mapS(s, 1,  1),
+                 dro1: s=>mapS(s,-1,  1),
+                 ord3: s=>mapS(s, 3,  1),
+                 dro3: s=>mapS(s,-3,  1),
+                 set3: s=>mapS(s, 0,- 3),
+                set10: s=>mapS(s, 0,-10),
+                set17: s=>mapS(s, 0,-17),
                 align }
 // 󰤱 generalized upper/lower/swapcase, switching alphabets
 
