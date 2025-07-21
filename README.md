@@ -22,6 +22,4 @@ Feel free to use the Docker at `ganercodes/moon:latest`
 ### Credits
 [JuliaMono](https://juliamono.netlify.app/) (Base font)  
 [NerdFonts](https://www.nerdfonts.com/) (Extra symbols)  
-[FontForge](https://fontforge.org/en-US/) (Precedual glyph generation)  
-  
-Optional dependencies are included in `/Extra/Dependencies.txt`
+[FontForge](https://fontforge.org/en-US/) (Precedual glyph generation)

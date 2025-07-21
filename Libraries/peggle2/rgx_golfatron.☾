@@ -24,7 +24,7 @@ Q,BAR = CT􍴖􊯛﹖, CT􍴖􊯛􋕠
 ⊢ (fcache) rgx_golfatron(𝕏):
     ⊢ (cache) 𝼝(x): t,χ = x􋇐
                     ↪ ℵ(χ󰲡x₀)→ꟿ󰲣x,𝼝(H≔𝑡(yᴍ󰲡x₁﹕)),ᐦ∈H∧H⋁⭜1⭝0󰅂
-    ⊢ ϙ(x): s,m = x 􋇐 󰲡len(x)≠1
+    ⊢ ϙ(x): s,m = x 􋇐 󰲡x🃌≠1
             m󷸊ᴍ󰲡ᐦ.join(x.translate(OT))
             ¿s≔ᐦ.join(s): m.append(s🃌≡1 ⭜s.translate(OT)⭝ BL+rgx_rans(s)+BR)
             ↪m

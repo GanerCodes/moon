@@ -1,0 +1,30 @@
+⨡ peggle2/rgx_golfatron
+⦃import re⦄
+
+sty = ‹⟦moon_dir⟧/Builtins/Data/style.json›  𝔍󰄟 ℵ
+∀k,v⬠sty: styₖ = [‹fg›≕h∈v⭜(h,vₕ h2r r2hl),
+                  ‹bg›≕h∈v⭜(h,vₕ h2r r2hl)]󰈲 ⭢ ℵ
+mp = sty ℵ 𝑙  󷺹₁ pdumpᐸ ꟿ⁺ 󰲣yᐵ₀
+ mp 󷸊 ℵ ꟿ󰲣x pload,y 󰌷 ⭢ 󰈲󷺹󷹝>255ᐸ ᴍ re.escape ⭢ ⨝␛|󰅂 󰈲 󷺹₁
+ mpℵ⭢⁺ᴍ⬤⨝ᴍ☾ ; exit
+ ⭢ 󰈲󷺹∉‹␛⟦␛‹␛››ᐸ
+
+mp 󷸊 ℵ ꟿ󰲣x pload,y 󰌷 󰒼 ⭢ ᴍ re.escape ⭢ ⨝␛|󰅂 󰈲 󷺹₁
+
+tmlngf = ‹syntaxes/☾.tmLanguage.json›𝐩
+stylef = ‹themes/theme.json›𝐩
+tlangj = ‹grammar_basis.json›  𝔍󰄟
+stylej = ‹󷺗󷺗color_basis.json›  𝔍󰄟
+repo,ttoks,tpats = tlangj[‹repository›],stylej[‹tokenColors›],⍁
+
+∀i,(S,r)⬠mp↨:
+    s = ‹symbol.⟦n≔‹sty⟦i⟧›⟧.moon›
+    α=ℵ
+    ¿‹fg›≕x∈S: α.foreground = Sₓ
+    ¿‹bg›≕x∈S: α.background = Sₓ
+    repo[n] = { name=s, match=‹(⟦r⟧)+› }
+    tpats.append({ include=‹#⟦n⟧› })
+    ttoks.append({ scope=s, settings=α })
+repo[‹syms›][‹patterns›] = tpats
+stylef 󱖔􍡩 stylej 𝔍󰄞
+tmlngf 󱖔􍡩 tlangj 𝔍󰄞
