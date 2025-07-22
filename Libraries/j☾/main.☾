@@ -1,5 +1,9 @@
 ⦃import shutil⦄
-⨡ cache,peggle2,Ń,rgx_golfatron
+⨡ cache
+⨡ peggle2
+⨡ peggle2/rgx_golfatron
+⨡ peggle2/gram_tools
+⨡ Ń
 HEADER = __dir__ / ‹header.j☾› ⭢ 
 
 GRAM=󰦥󰦥󰦥󰦥󰦥
@@ -81,11 +85,10 @@ GRAM = ll 󰛔ᴳᴿᴬᴹ bp
 gram = peggle2(GRAM)
 
 𝚃 = ℵ(T=✓)
-𝔗 = 󷺻Ń(⟞, e=𝚃)
 𝔗𝔗 = 󷺻𝔗(⟞.as_txt)
 𝚜 = Ń(␛𝘄, 𝔗(𝘀))
 mp = 󷺹≕h󷹝ᑀ≤128∨h.isidentifier() ⭜h⭝ ⟞󷹜¹⁶⁺⁵􍢉⭢+ᵜ␛þ
-fmt_js_ᔐ = ␛\⋄␛$ →󰛔← ␛\␛\⋄␛\␛$
+fmt_js_ᔐ = ␛\⋄␛$ 􁁿 ␛\␛\⋄␛\␛$
 
 mkexp = 𝚲Ń(‹󷺗expr›, ⠤𝔸)
 mkgrp = 󰲡Ń(‹󷺗󷺗grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
@@ -100,7 +103,7 @@ mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
     
     ⊢ (󱁕.ftrp(‹sub sup›⍭, ⬤)) (󱁕):
         t = SCRIPT.nrm(󱁕.as_txt)
-        ¿󱁕ᵗ≡‹sub›: ↪ mkgrp(␛[␛], proc(t, 0))
+        ¿󱁕ᵗ≡‹sub›: ↪ mkgrp(␛[␛], proc(t,0))
         ¡        : ↪ mkexp(𝚍𝚘𝚝, mkvar(attr_repl(t)))
     
     ¿n<1: ↪󱁕

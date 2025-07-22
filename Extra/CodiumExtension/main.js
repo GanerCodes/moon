@@ -1,3 +1,4 @@
+//    "match"        : "󷺗|\\ud835[\\uddee-\\ude07\\udfec-\\udfed]"
 const [vs,fs] = ["vscode","fs"].map(require);
 
 const ζ = (...𝔸)=>[...𝔸[0]].map((_,i)=>𝔸.map(x=>x[i]));
@@ -14,6 +15,14 @@ const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),ne
 MOON_PATH = require('child_process').execSync('☾ --get-dir').toString().trim();
 SCRP_PATH = `${MOON_PATH}/Builtins/Data/script.map`;
 ORDR_PATH = `${MOON_PATH}/Builtins/Data/opord`;
+
+const highlights = [
+    [/(?<=␛)./gu, { color:"#22ff22", backgroundColor:"#006600aa" }],
+    [/ /gu      , { backgroundColor:"#ffff0044", borderWidth:"1px",
+                    borderStyle:"solid", borderColor:"#ff0" }],
+    [/ /gu      , { backgroundColor:"#0000ff66", borderWidth:"1px",
+                    borderStyle:"solid", borderColor:"#00f" }]
+];
 
 const mapS = (_=>{
     const odat     = rmat(ORDR_PATH);
@@ -69,14 +78,35 @@ const tin = (𝐸,𝚜,ƒ) => { 𝚜 = ƒ( [...fc(𝐸,𝚜[0],𝚜[1]),...fc(�
                          return [...cf(𝐸,𝚜[0],𝚜[1]),...cf(𝐸,𝚜[2],𝚜[3]) ]; }
 const a1 = (𝐸,𝚜) => tin(𝐸,𝚜,𝚜=>[𝚜[0],𝚜[1],𝚜[2],𝚜[3]+1]);
 const nzSel = (𝐸,𝚜) => (𝚜=>𝔏𝔖(...𝚜[0]==𝚜[2]&&𝚜[1]==𝚜[3] ?a1(𝐸,𝚜): [𝚜[0],𝚜[1],𝚜[2],𝚜[3]]))(𝔖𝔏(𝚜));
-const activate = ℭ =>
-    Object.entries(tools).map(([k,v])=>
+const activate = ℭ => {
+    highlights.forEach(x => x[1] = vs.window.createTextEditorDecorationType(x[1]))
+    const updateDecorations = 𝐸 => {
+        if(!𝐸) return;
+        const text = 𝐸.document.getText();
+        for(const [R,S] of highlights) {
+            const locs = [];
+            let m;
+            while((m = R.exec(text))) {
+                const [s,e] = [m.index,m.index+m[0].length].map(𝐸.document.positionAt);
+                locs.push({ range: new vs.Range(s,e) }); }
+            𝐸.setDecorations(S,locs); }
+    }
+    const activeEditor = vs.window.activeTextEditor;
+    if(activeEditor) updateDecorations(activeEditor);
+    vs.window.onDidChangeActiveTextEditor(updateDecorations, null, ℭ.subscriptions);
+    vs.workspace.onDidChangeTextDocument(ε => {
+        const 𝐸 = vs.window.activeTextEditor;
+        if(𝐸 && ε.document === 𝐸.document) updateDecorations(𝐸);
+    }, null, ℭ.subscriptions);
+
+    𝒪ℒ(tools).map(([k,v])=>
         vs.commands.registerCommand(`moon.${k}`, _=>{
             const 𝐸 = vs.window.activeTextEditor;
             if(v.manual) v(𝐸);
             else         𝐸.edit(𝑒𝑏 => 𝐸.selections.map(𝚜 => nzSel(𝐸,𝚜))
                                        .forEach(𝚜 => 𝑒𝑏.replace(𝚜,v(𝐸.document.getText(𝚜))))); })
     ).forEach(ℭ.subscriptions.push);
+}
 const deactivate = _ => {};
 
 module.exports = { activate, deactivate };

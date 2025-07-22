@@ -18,12 +18,12 @@
                     "begin": "🟑",
                     "end"  : "🟑" },
     
-    "str"       : { "patterns": [{ "include": "#str_star" },
-                                 { "include": "#str_sys"  },
-                                 { "include": "#str_sub"  },
-                                 { "include": "#str_nsub1"},
-                                 { "include": "#str_nsub2"},
-                                 { "include": "#str_atom" }] },
+    "str"       : { "patterns": [{"include": "#str_star" },
+                                 {"include": "#str_sys"  },
+                                 {"include": "#str_sub"  },
+                                 {"include": "#str_nsub1"},
+                                 {"include": "#str_nsub2"},
+                                 {"include": "#str_atom" }] },
     
     "str_star" : { "name"    : "string.star.moon",
                    "begin"   : "󰦥{5}",
@@ -42,15 +42,18 @@
     "str_nsub1": { "name"    : "string.nsub1.moon",
                    "begin"   : "\"",
                    "end"     : "\"",
-                   "patterns": [{ "include": "#str_esc" }] },
+                   "patterns": [{ "include": "#str_esc"  },
+                                { "include": "#spec_char"}] },
     
     "str_nsub2": { "name"    : "string.nsub2.moon",
                    "begin"   : "'",
                    "end"     : "'",
-                   "patterns": [{ "include": "#str_esc" }] },
+                   "patterns": [{ "include": "#str_esc"  },
+                                { "include": "#spec_char"}] },
     
-    "str_atom" : { "patterns": [{ "include": "#str_esc" },
-                                { "include": "#embed"   }] },
+    "str_atom" : { "patterns": [{ "include": "#embed"    },
+                                { "include": "#str_esc"  },
+                                { "include": "#spec_char"}] },
     
     "embed"    : { "name"         : "source.moon",
                    "begin"        : "⟦",
@@ -59,5 +62,10 @@
                    "endCaptures"  : { "0": { "name": "punctuation.strsub.moon" }},
                    "patterns"     : [{ "include": "#gen" }] },
     
-    "str_esc"  : { "name"         : "string.esc.moon",
-                   "match"        : "␛." } } }
+    "spec_char": { "name"         : "string.spec_char.moon",
+                   "match"        : "[󷺗𝗮-𝘇𝟬-𝟵]" },
+    
+    "str_esc"  : { "name"         : "string.escwhole.moon",
+                   "begin"        : "␛",
+                   "end"          : ".",
+                   "beginCaptures": { "0": { "name": "symbol.esc.moon" } } } } }
