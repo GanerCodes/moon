@@ -1,4 +1,3 @@
-//    "match"        : "󷺗|\\ud835[\\uddee-\\ude07\\udfec-\\udfed]"
 const [vs,fs] = ["vscode","fs"].map(require);
 
 const ζ = (...𝔸)=>[...𝔸[0]].map((_,i)=>𝔸.map(x=>x[i]));
