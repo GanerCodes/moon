@@ -3,6 +3,8 @@
 ⨡ rgx_golfatron
 ⨡ text_format
 
+𝑩𝑩 = ⥌󱁕↦BOX(󱁕ᴾ∘✗≕d+ᵜ⭠𝔸ᐖpadc(􍪴⟗𝘀,d,␛─)+𝗻ᐸ⨝)☾►󱁕
+
 𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
 𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ􋄅(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
 
@@ -116,7 +118,7 @@ gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%�
            brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›
         󰦥󰦥󰦥󰦥󰦥), m=✓):
     ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(⟞􋒷,ns=ns))])) ⭢ ᣆᵐ peggle2
-⭷ peggle2,Ń,𝒩,𝔗,⟵,⟶,⊥,⊤,𝑬,offset_𝚕𝚌,offset_𝚌,reform_positions,gram_rp,under_gram,␛
+⭷ peggle2,Ń,𝑩𝑩,𝒩,𝔗,⟵,⟶,⊥,⊤,𝑬,offset_𝚕𝚌,offset_𝚌,reform_positions,gram_rp,under_gram,␛
   gram_subsup,peggrampeg,is_short,warn_if_short,fill_󱁕_holes_basic
 
 ⊢ test_gram_tools: g = peggrampeg(󰦥󰦥󰦥󰦥󰦥

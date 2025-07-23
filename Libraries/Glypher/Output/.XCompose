@@ -86,7 +86,7 @@
 <Multi_key><1><6>:"⅙" #2159
 <Multi_key><A><A>:"∀" #2200
 <Multi_key><R><S>:"␞" #241E
-<Multi_key><F><S>:"␜" #241C
+<Multi_key><F><underscore><S>:"␜" #241C
 <Multi_key><o><d>:"⎊" #238A
 <Multi_key><i><s>:"⫢" #2AE2
 <Multi_key><1><9>:"⅑" #2151

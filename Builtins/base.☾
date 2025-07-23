@@ -229,6 +229,8 @@ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗
 /´ = 󰲣⦃x/y⦄
 󰔛 = 𝑜()  󰤱 tmp
 
+􋑂,􋑃,􋑯 = gcd,lcm,log
+
 󱀘 Holder: __slots__ = ␛x,
           ⊢__init__(𝕊,x=␀):  𝕊ˣ≔x
           ⊢__pos__ (𝕊    ): ↪𝕊ˣ◄⬅𝕊ˣ≇␀⨳‹Holder value unset!›

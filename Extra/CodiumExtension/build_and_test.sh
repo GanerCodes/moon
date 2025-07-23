@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 # base VS theme: https://github.com/Amereyeu/Black-plus-plus-vscodium
 

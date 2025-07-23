@@ -1,3 +1,5 @@
+const path = require("path");
+const { exec, execSync } = require("child_process");
 const [vs,fs] = ["vscode","fs"].map(require);
 
 const ζ = (...𝔸)=>[...𝔸[0]].map((_,i)=>𝔸.map(x=>x[i]));
@@ -11,7 +13,7 @@ Number.prototype.mod = function(n) { return (this%n + n)%n; };
 const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.end.character];
 const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
-MOON_PATH = require('child_process').execSync('☾ --get-dir').toString().trim();
+MOON_PATH = execSync('☾ --get-dir').toString().trim();
 SCRP_PATH = `${MOON_PATH}/Builtins/Data/script.map`;
 ORDR_PATH = `${MOON_PATH}/Builtins/Data/opord`;
 
@@ -22,6 +24,7 @@ const highlights = [
     [/ /gu      , { backgroundColor:"#0000ff66", borderWidth:"1px",
                     borderStyle:"solid", borderColor:"#00f" }]
 ];
+highlights.forEach(x => x[1] = vs.window.createTextEditorDecorationType(x[1]));
 
 const mapS = (_=>{
     const odat     = rmat(ORDR_PATH);
@@ -58,6 +61,17 @@ const align = 𝐸 => {
      .then(_=>𝐸.selections=ns) };
 align.manual = true;
 
+const dirOpener = 𝐸 => { 
+    const fdir = 𝐸?.document.uri.fsPath ?path.dirname(𝐸.document.uri.fsPath): null;
+    const wdir = vs.workspace.workspaceFolders?.[0]?.uri.fsPath || '.';
+    exec(`forgor term --working-directory "${fdir || wdir}"`); };
+dirOpener.manual = true;
+
+const fileRun = 𝐸 => {
+    const fpat = 𝐸.document.uri.fsPath;
+    exec(`forgor extrunner "${fpat}"`); };
+fileRun.manual = true;
+
 const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                   sub: s=>[...s].map(c=>SUB[c]??c).join(''),
                   nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
@@ -68,7 +82,7 @@ const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                  set3: s=>mapS(s, 0,- 3),
                 set10: s=>mapS(s, 0,-10),
                 set17: s=>mapS(s, 0,-17),
-                align }
+                align, dirOpener, fileRun }
 // 󰤱 generalized upper/lower/swapcase, switching alphabets
 
 const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])                ];
@@ -77,8 +91,8 @@ const tin = (𝐸,𝚜,ƒ) => { 𝚜 = ƒ( [...fc(𝐸,𝚜[0],𝚜[1]),...fc(�
                          return [...cf(𝐸,𝚜[0],𝚜[1]),...cf(𝐸,𝚜[2],𝚜[3]) ]; }
 const a1 = (𝐸,𝚜) => tin(𝐸,𝚜,𝚜=>[𝚜[0],𝚜[1],𝚜[2],𝚜[3]+1]);
 const nzSel = (𝐸,𝚜) => (𝚜=>𝔏𝔖(...𝚜[0]==𝚜[2]&&𝚜[1]==𝚜[3] ?a1(𝐸,𝚜): [𝚜[0],𝚜[1],𝚜[2],𝚜[3]]))(𝔖𝔏(𝚜));
-const activate = ℭ => {
-    highlights.forEach(x => x[1] = vs.window.createTextEditorDecorationType(x[1]))
+
+const activateHighlighter = ℭ => {
     const updateDecorations = 𝐸 => {
         if(!𝐸) return;
         const text = 𝐸.document.getText();
@@ -88,24 +102,25 @@ const activate = ℭ => {
             while((m = R.exec(text))) {
                 const [s,e] = [m.index,m.index+m[0].length].map(𝐸.document.positionAt);
                 locs.push({ range: new vs.Range(s,e) }); }
-            𝐸.setDecorations(S,locs); }
-    }
+            𝐸.setDecorations(S,locs); } };
     const activeEditor = vs.window.activeTextEditor;
     if(activeEditor) updateDecorations(activeEditor);
     vs.window.onDidChangeActiveTextEditor(updateDecorations, null, ℭ.subscriptions);
     vs.workspace.onDidChangeTextDocument(ε => {
         const 𝐸 = vs.window.activeTextEditor;
         if(𝐸 && ε.document === 𝐸.document) updateDecorations(𝐸);
-    }, null, ℭ.subscriptions);
+    }, null, ℭ.subscriptions); };
 
+const activateSelectionTools = ℭ => {
     𝒪ℒ(tools).map(([k,v])=>
         vs.commands.registerCommand(`moon.${k}`, _=>{
             const 𝐸 = vs.window.activeTextEditor;
             if(v.manual) v(𝐸);
             else         𝐸.edit(𝑒𝑏 => 𝐸.selections.map(𝚜 => nzSel(𝐸,𝚜))
                                        .forEach(𝚜 => 𝑒𝑏.replace(𝚜,v(𝐸.document.getText(𝚜))))); })
-    ).forEach(ℭ.subscriptions.push);
-}
+    ).forEach(ℭ.subscriptions.push); };
+
+const activate = ℭ => { activateHighlighter(ℭ); activateSelectionTools(ℭ); }
 const deactivate = _ => {};
 
 module.exports = { activate, deactivate };

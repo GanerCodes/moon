@@ -52,23 +52,23 @@
         n<2¹⁵⁰⁰⨳‹󰤱 implement APRCL for n<2¹⁵⁰⁰›  󰤱 APRCL
               ✗⨳‹󰤱 implement ECPP󷺗 for n>2¹⁵⁰⁰›  󰤱 ECPP
     __getitem__ = ⥌𝕊,t↦𝚲𝕊.__call__(⠤𝔸,s=t)
-    ⊢ __call__(𝕊,x,s=␀):
+    ⊢ __call__(𝕊,x,𝚜=␀):
         ¿x≅∞: ↪‹󰤱 ∞ primes›
-        ¿s≅␀: ¿x≤1: ↪[2]⋅x  󰤱 speedup
+        ¿𝚜≅␀: ¿x≤1: ↪[2]⋅x  󰤱 speedup
               t,p=[2],3
               ∀t🃌<x: ¿p∈¶: t.append(p)
                      p󷸊+2
               ↪t
-        ¿sᐹℤ: t=0
-              ∀s∣x: t󷸊+1
-                    x󷸊⹏s
+        ¿𝚜ᐹℤ: t=0
+              ∀𝚜∣x: t󷸊+1
+                    x󷸊⹏𝚜
               ↪t
-        ¿s≅<´: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
+        ¿𝚜≅<´: ↪2󷸹x󰈲󷺹∈¶  󰤱 speedup
          󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
-        ¿s≅+´: ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
+        ¿𝚜≅+´: ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
                ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
-        ¿s≅∣´: ↪[⠤x¶󰻾]  󰤱 speedup
-        ¿s≅*´: x󷸊⫰  󰤱 speedup
+        ¿𝚜≅∣´: ↪[⠤x¶󰻾]  󰤱 speedup
+        ¿𝚜≅*´: x󷸊⫰  󰤱 speedup
                ¿x≡1: ↪⍁
                t=⍁
                ∀2∣x: t󷸊+₂
@@ -103,10 +103,10 @@
                               ¡                : 🟑☾a;🟑 ↪t+f¶+x⹏f¶→󰒼
                        a󷸊+1
                ✗⨳‹Dixon's alg failed and I don't feel like doing the 󰤱 big boi next step yet.›
-        ¿s≅⊞´: ↪ℵ⁰(x¶󰻾ꟿ⁺󷺻🃌󷺽)  󰤱 speedup
-        ¿s≅⨉´: ↪x¶􋁼ꟿ⁺󷺹⛶􍪹󷺿
-        ¿s≅􋑂 : ↪x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
-        ¿s≅%´: t=󷰾²􋁒ˣ  󰤱 speedup
+        ¿𝚜≅⊞´: ↪ℵ⁰(x¶󰻾ꟿ⁺󷺻🃌󷺽)  󰤱 speedup
+        ¿𝚜≅⨉´: ↪x¶􋁼ꟿ⁺󷺹⛶􍪹󷺿
+        ¿𝚜≅􋑂 : ↪x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
+        ¿𝚜≅%´: t=󷰾²􋁒ˣ  󰤱 speedup
                ¿t<0: x󷸊⹏2
                ¿2∣x: ↪0
                p=3
@@ -115,7 +115,7 @@
                            t=-t
                      p󷸊+2
                ↪t
-        ¿s≅􋑯: ¿2∣x: ∀2∣x: x󷸊⹏2  󰤱 speedup
+        ¿𝚜≅􋑯: ¿2∣x: ∀2∣x: x󷸊⹏2  󰤱 speedup
                     ↪x≡1∧􋑯(2)
               p=3
               ∀p<⬒√x: ¿p∣x: ∀p∣x: x󷸊⹏p
@@ -124,7 +124,7 @@
               ↪􋑯(x)
 ¶´ = ¶´
 
-⊢✿´(x,y,s=␀): ¿y≡0: ↪𝑖(⫰x≡1)
+⊢✿´(x,y,𝚜=␀): ¿y≡0: ↪𝑖(⫰x≡1)
               ¿x≡0: ↪𝑖(y∈±1)
               ¿􋑂(x,y)>1: ↪0
               ¿x≡1: ↪1

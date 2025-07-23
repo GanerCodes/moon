@@ -2,7 +2,7 @@
 ⦃import re⦄
 
 sty = ‹⟦moon_dir⟧/Builtins/Data/style.json›  𝔍󰄟 ℵ
-󰦥󰦥󰦥󰦥󰦥␛'"‹›⦃⦄()[]⁅⁆⟨⟩⟦⟧󰦥󰦥󰦥󰦥󰦥ᐖsty.pop(⟞,□)
+󰦥󰦥󰦥󰦥󰦥 ␛'"‹›⦃⦄()[]⁅⁆⟨⟩⟦⟧󰦥󰦥󰦥󰦥󰦥ᐖsty.pop(⟞,□)
 ∀k,v⬠sty: styₖ = [‹fg›≕h∈v⭜(h,vₕ h2r r2hl),
                   ‹bg›≕h∈v⭜(h,vₕ h2r r2hl)]󰈲 ⭢ ℵ
 mp = sty ℵ 𝑙  󷺹₁ pdumpᐸ ꟿ⁺ 󰲣yᐵ₀
