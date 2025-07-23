@@ -10,7 +10,8 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 ⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
     ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
-    ¿show_ast          : 𝑩𝑩(󱁕,‹AST›)
+    ¿show_ast          : ⨡ peggle2/gram_tools
+                         𝑩𝑩(󱁕,‹AST›)
     𝘤 = to_py(𝚌)(󱁕.cpr)
     ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
     ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr,no_rename_vars=✓))))☾
