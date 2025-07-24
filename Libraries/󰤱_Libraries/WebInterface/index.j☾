@@ -21,6 +21,7 @@ except Exception as e:
         return s.split(TERM_RESET).map(esc2clr).reduce((x,y)=>[...x,...y],[]);
     s = s.replaceAll(/\x1b\[38;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x01${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
     s = s.replaceAll(/\x1b\[48;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x02${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
+     󷹹
     s = [...s];
     𝚂 = [[255,255,255],[0,0,0]];
     𝚁 = [];
@@ -31,7 +32,6 @@ except Exception as e:
         else
             𝚁.push([c,...𝚂]); }
     return 𝚁; }⦌
-
 © p2rc = ⥌s,   𝑝  ↦{
     ⎉ r=0, c=0, i=0, S=[⠤s];
     ∀(g=0; i < 🃌(S); g+=🃌(Sᵢ₊₊)) {
@@ -121,7 +121,7 @@ except Exception as e:
 © load_python = 󱟱 𝚲{
     log(‹Loading WASM Python…›);
     © { loadPyodide } = 󱫬 import(‹https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.mjs›);
-    py = 󱫬 loadPyodide({ stdin: prompt, stdout: log, stderr: log  });
+    py = 󱫬 loadPyodide({ stdin: prompt, stdout: log, stderr: log });
     log(‹Loaded WASM Python›);
     󱫬 py.runPythonAsync(‹
         import shutil

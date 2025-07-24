@@ -6,7 +6,7 @@ __dir__ cd
 real_files = ‹wasm_stuff.zip font.ttf index.j☾›⍭
 
 JS    = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile⟧›
-DOCS  = ops to_docs 𝔍󰂁
+DOCS  = ops to_docs 𝔍󰄞
 STYLE = moon_dir/‹Builtins/Data/style.json›                ⭢ ᵇ
 FONTA = moon_dir/‹Libraries/Glypher/Output/moonfont_A.ttf› ⭢ ᵇ
 FONTB = moon_dir/‹Libraries/Glypher/Output/moonfont_B.ttf› ⭢ ᵇ
@@ -21,8 +21,8 @@ cors = {‹access-control-allow-origin›: ␛*}
     ¿P≡‹info󷺗󷺗󷺗󷺗󷺗󷺗›: ↪DOCS , ℵ(𝙲𝚃=‹.json󷺗›,⠶cors)
     ⸘P≡‹style󷺗󷺗󷺗󷺗󷺗›: ↪STYLE, ℵ(𝙲𝚃=‹.json󷺗›,⠶cors)
     ⸘P≡‹index.js󷺗󷺗›: ↪JS   , ℵ(𝙲𝚃=‹.js󷺗󷺗󷺗›,⠶cors)
-    ⸘P≡‹font.ttf󷺗󷺗›: ↪FONTT, ℵ(𝙲𝚃=‹.ttf󷺗󷺗›,⠶cors)
-    ⸘P≡‹font.woff2›: ↪FONTW, ℵ(𝙲𝚃=‹.woff2›,⠶cors)
+    ⸘P≡‹fontA.ttf󷺗›: ↪FONTA, ℵ(𝙲𝚃=‹.ttf󷺗󷺗›,⠶cors)
+    ⸘P≡‹fontB.ttf󷺗›: ↪FONTB, ℵ(𝙲𝚃=‹.ttf󷺗󷺗›,⠶cors)
     ⸘P≡‹moon.svg󷺗󷺗›: ↪LOGO , ℵ(𝙲𝚃=‹.svg󷺗󷺗›,⠶cors)
     ⸘P﹕􊹳ₓ􊮝􊬏ᵤₙᵢ󰂼ₑ􊬐≡x:
         syms = ucod󰈲󷺹₀∋ᑅPₓ􊹳₊₁﹕⫯⭢ᴍ󷸺
@@ -30,4 +30,4 @@ cors = {‹access-control-allow-origin›: ␛*}
           ℵ(𝙲𝚃=‹.html›,⠶cors)
     ¡:  ↪ ᵇ(P∈real_files ⭜P⭝ ‹index.html›), cors
 
-‹Running server›☾ ► server(port=8000)
+‹Running server›☾ ► server(port=8080)
