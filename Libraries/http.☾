@@ -4,14 +4,14 @@
 TCPServer.allow_reuse_address = ✓
 ⨡ j☾
 
-ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ ⭢ ⨝␛.
+ipv4 = 󷺹 ᑀ􀗀8⟝ 􀠐 0xFFᐛ 4􀡈􁂁 􁋳␛.
 
 ⊢ HTTP_Server(ƒ):
     ext_to_mime = 󰲡guess_type(x)₀∨‹text-plain›
     󱀘 𝔖(StreamRequestHandler):
         ⊢ handle(𝕊):
             𝔯,𝔴 = 𝕊.rfile.readline, 𝕊.rfile.write
-            𝚛,⠤𝙷 = 1󷸹⭠ᐳ𝔯≕𝚛→.strip→.decode(‹utf-8›)ᐸ⊛¬∘✓
+            𝚛,⠤𝙷 = 1󷸹⭠󰲡𝔯≕𝚛→.strip.decode(‹utf-8›)󰅂⊛¬∘✓
             𝚖,𝚙,𝚟 = 𝚛󷹎𝘀
             𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x⫯
             
@@ -33,15 +33,16 @@ ipv4 = ᑀ ᑀ⪢ 8⟝ & 0xFFᐛ (4󷸹)ᴙ ⭢ ⨝␛.
             𝕊.wfile.flush
     ↪⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port),𝔖), 󷺹.serve_forever)
 
-⭷ 𝔍,ipv4,HTTP_Server,transpile,transpile_dir,joon_header
+⭷ ipv4,HTTP_Server,transpile,transpile_dir,joon_header
 
- ⊢ server(𝚖,𝚙,𝙷,𝚎):
-     ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾
-     ¿␛a∈𝚙: ↪ "joe"
-     ¿␛b∈𝚙: ↪ "joe", 201
-     ¿␛c∈𝚙: ↪ ℵ(hand=22), "joe", 201
-     ¿␛d∈𝚙: ↪ ℵ(hand=22), b"joe", 201
-     ¿␛e∈𝚙: ↪ ℵ(hand=22)
-     ¿␛f∈𝚙: ↪ 201
-     ↪ 200
- HTTP_Server(server)
+¿__name__≡‹__main__›:
+    ⊢ server(𝚖,𝚙,𝙷,𝚎):
+        ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾
+        ¿␛a∈𝚙: ↪ "joe"
+        ¿␛b∈𝚙: ↪ "joe", 201
+        ¿␛c∈𝚙: ↪ ℵ(hand=22), "joe", 201
+        ¿␛d∈𝚙: ↪ ℵ(hand=22), b"joe", 201
+        ¿␛e∈𝚙: ↪ ℵ(hand=22)
+        ¿␛f∈𝚙: ↪ 201
+        ↪ 200
+    HTTP_Server(server)

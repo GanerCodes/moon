@@ -1,15 +1,16 @@
 ⨡ http
 ⨡ Compiler/generate_operators ⭸ ops,to_docs
+__dir__ cd
 
-ucod = ℵ←(moon_dir / ‹FontCompose/UnicodeQuery/unicode.txt›)󷹎𝗻󰈲󷺹∧⟞∌␛#∧␛.∉⟞ᐸ ᐵ󷹎¹␛;ᐵ.lower⬄𝘀ᐸꟿ⁰󷺹󷹜¹⁶󷹝→⋄󷺽→ᴙ
+ ucod = ℵ←(moon_dir / ‹Libraries/Glypher/UnicodeQuery/unicode.txt›)󷹎𝗻󰈲󷺹∧⟞∌␛#∧␛.∉⟞ᐸ ᐵ󷹎¹␛;ᐵ.lower⬄𝘀ᐸꟿ⁰󷺹󷹜¹⁶󷹝→⋄󷺽→ᴙ
 real_files = ‹wasm_stuff.zip font.ttf index.j☾›⍭
 
 JS    = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile⟧›
-DOCS  = to_docs(ops)󱖔􋈗􋐃
-STYLE = ᵇ(moon_dir / ‹FontCompose/Output/style_regex.json›)
-FONTT = ᵇ(moon_dir / ‹FontCompose/Output/99_JuliaMono-Regular.ttf›)
-FONTW = ᵇ(moon_dir / ‹FontCompose/Output/99_JuliaMono-Regular.woff2›)
-LOGO  = ᵇ(moon_dir / ‹Extra/Assets/moon.svg›)
+DOCS  = ops to_docs 𝔍󰂁
+STYLE = moon_dir/‹Builtins/Data/style.json›                ⭢ ᵇ
+FONTA = moon_dir/‹Libraries/Glypher/Output/moonfont_A.ttf› ⭢ ᵇ
+FONTB = moon_dir/‹Libraries/Glypher/Output/moonfont_B.ttf› ⭢ ᵇ
+LOGO  = moon_dir/‹Extra/Assets/moon.svg›                   ⭢ ᵇ
 
 cors = {‹access-control-allow-origin›: ␛*}
 

@@ -246,7 +246,7 @@ c = parse_config(CONFIG,CONFIG+MULTICHARS ᔐ,𝔭)
 ‹Parsed config›☾
 
  cꟿ☾
- c[␛¿]☾
+ c[␛⭷]☾
  exit
 
 ¿NERDFONT ∨ fo.is_file¬:

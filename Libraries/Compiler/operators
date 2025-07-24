@@ -711,7 +711,7 @@
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
 󷰽 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
->⟨5fe⟩⟶=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘¡⭜⭝
+>⟨5fe⟩⟶⭸⭷=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘¡⭜⭝
 >⟨e6b⟩⟶󷰚⬅➡←→⭠⭢⥉
 >⟨f0a⟩⟶󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
 
@@ -825,7 +825,7 @@
 󷰾 ⟦⟧   q⟦[]⟧ {begin,close} magic string sub-expr
     `‹beastboy: ⟦2²⟧› ≡ "beastboy: 4"`
 󷰾 ⦃⦄   q⟦{}⟧ {begin,close} native code
-    `‹⦃⦃𝑥⦄:=2+2⦄ ≡ 4 ≡ 𝑥`
+    `⦃⦃𝑥⦄:=2+2⦄ ≡ 4 ≡ 𝑥`
 󷰾 ⦉⦊   ⟦{}⟧𝕊 {begin,close} set
     `‹⦉1,5,2,2⦊ ≡ ⦉1,5,2⦊`
 󷰾 󰦥   ST: hyperliteral star string
