@@ -21,7 +21,8 @@
     ↪_map_d(𝚡,𝕏≡␛ꟿ ⭜󰲡ƒ(⠤𝗜(x) ⭜x⭝ ₓ)󰅂⭝ ƒ,𝚜)
 
 ⊢ ´(𝚡=␀,𝚢=,𝚜=PL_CPU_COUNT,m=␛f):
-    ¿m≡␛f: P,G = ⍁²
+    ¿m≡␛f: ¿env.get(‹MOON_NO_FORK›): ↪𝚡ᐵ𝚢 pdump pload
+           P,G = ⍁²
            ∀ƒ⬠𝚡ᐖ𝚲PL_FORK(𝚢,⟞)ᐸ:
                ∀P󷸊󰈲PL_CHECK_PID→🃌≥𝚜: PL_SLEEP(󷷉)
                (P,G)ᐵ.append∘ᑈƒ

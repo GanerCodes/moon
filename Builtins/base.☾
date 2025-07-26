@@ -18,7 +18,6 @@
 ⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
 ⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
 ⦃from base64 import b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
-⦃from multiprocessing import shared_memory⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
@@ -149,11 +148,18 @@ CURR= ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
     __repr__ = ⥌𝕊↦‹Timer[⟦"ID"􊶊􌋄􋘲􊫀􊮥₀⟧; ⟦𝕊􋊡 ʸ⫰⟧s; ⟦𝕊⭜‹Running›⭝‹Completed›⟧; ⟦𝕊􋊡 ⁿ⟧ Remaining loops]=⟦𝕊􋊡 ʳ⟧›
 
 tmp = {ᴍ=‹Áÿú󷺗›,ꟿ=‹ËãÂ󷺗›,ſ=‹ÆÑ󷺗󷺗›,Ϝ=‹ÐÌ󷺗󷺗›,󰈳=‹ÄÔÔè›,󰈲=‹ÄÔÔç›,=‹ÐÌÛ󷺗›,󰒼=‹ÄÔàÑ›,󰒽=‹ÄÔàÒ›,ᙎ=‹Ááæ󷺗›,ᙡ=‹Ááú󷺗›,ᗢ=‹Áßô󷺗›,ᙧ=‹ÁâÁ󷺗›,⊚=‹ÂØÍ󷺗›,⊜=‹ÂØÏ󷺗›,🟕=‹ãéÜ󷺗›,🟖=‹ãéÝ󷺗›,⊛=‹ÂØÎ󷺗›,⍟=‹ÂÛÜ󷺗›,○=‹Âåæ󷺗›,⍜=‹ÂÛÙ󷺗›,󰬫=‹ÄÔüÑ›,󰬩=‹ÄÔüÏ›,=‹ÐâÄ󷺗›,󰔶=‹ÄÔâÑ›,=‹ÐÇò󷺗›,󱑼=‹ÄÕåØ›,󷹅=‹ÄÝöÔ›,⪡=‹Âúù󷺗›,⪢=‹Âúú󷺗›,󰸵=‹ÄÕÊÂ›,󰸷=‹ÄÕÊÄ›,⤉=‹ÂóÍ󷺗›,⤈=‹ÂóÌ󷺗›,⟷=‹Âîí󷺗›,󷹌=‹ÄÝöÜ›,󷹍=‹ÄÝöÝ›,󷹎=‹ÄÝöÞ›,󷸹=‹ÄÝöÈ›,󷸺=‹ÄÝöÉ›,󷸸=‹ÄÝöÇ›,󷸻=‹ÄÝöÊ›,⨝=‹Âøî󷺗›,⟕=‹ÂîÊ󷺗›,⟖=‹ÂîË󷺗›,⟗=‹ÂîÌ󷺗›,⫰=‹ÂüÌ󷺗›,⫯=‹ÂüË󷺗›,󷹒=‹ÄÝöâ›,󷹓=‹ÄÝöã›,󷹔=‹ÄÝöä›,󷹕=‹ÄÝöå›,󷹖=‹ÄÝöæ›,󷸓=‹ÄÝõà›,󷸼=‹ÄÝöË›,󷸔=‹ÄÝõá›,=‹ÏäÒ󷺗›,󱅏=‹ÄÕØÃ›,=‹ÐâÇ󷺗›}
+ ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
+ RCD = 󷺹∉ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_›
+ SPE = 󷺹∈ENC+␛þ
+ PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍􍴕􌿍⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱󰀂⁼ᴱᴺ󰀂⁾󷺹₀RCDᐸ⭢⨝␛Þ
+ VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉􍴕􌿍⁽􋅂󰁱󰀂⁼ᴱᴺ󰀂⁾⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀SPEᐸ⭢⨝
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
-RCD = 󷺹∉ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_›
-SPE = 󷺹∈ENC+␛þ
-PEV = 󷺹𝌂RCD󰈲􌿑􋄉􍯍􍴕􌿍⁽􍪵􍴗󰁱ᴱᴺ󰀂􋌵󰁱󰀂⁼ᴱᴺ󰀂⁾󷺹₀RCDᐸ⭢⨝␛Þ
-VEP = 󷺹𝌂SPE󰈲􍯏􀸕􋂝􊽷􍫧􋔳􌕹􊾦􊾮􋎏􋅄⁽􌿑􋄉􍴗􋄉􍴕􌿍⁽􋅂󰁱󰀂⁼ᴱᴺ󰀂⁾⁾􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒􍫝􌿑󷺹₀SPEᐸ⭢⨝
+RCD = 󷺹⊄ᑅ‹abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789›+␛_
+SPE = 󷺹⊂ᑅENC+␛þ
+enc = 󷺹ᐖ󷹜´(⟞󷹝,ENC🃌,C=ENC)ᐸ        􁂡␛þ
+dec = 󷺹􀡐␛þᐖ󷹜´(⟞,ENC🃌,C=ENC)󷹝ᐸ     􁂡
+PEV = 󷺹􀡞RCD􀨷ᵉⁿᶜRCD                􁂡
+VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒SPE 􁂡
 ⊢ OPWRAP_(⠤𝚇): ⊢ R(ƒ): ∀x⬠𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
                ↪ R
 

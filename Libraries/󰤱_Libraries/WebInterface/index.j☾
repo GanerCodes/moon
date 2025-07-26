@@ -124,32 +124,40 @@ except Exception as e:
     py = 󱫬 loadPyodide({ stdin: prompt, stdout: log, stderr: log });
     log(‹Loaded WASM Python›);
     󱫬 py.runPythonAsync(‹
-        import shutil
+        import shutil, os
+        os.environ['MOON_CACHEDIR'] = "/tmp/cpy_wasm_cache"
+        os.environ['MOON_NO_FORK'] = "1"
+        os.environ['MOON_DISABLE_CUSTOM_ERRORS'] = "1"
+        os.environ['MOON_LOG_IMPORTS'] = "1"
         from pyodide.http import pyfetch
         await (await pyfetch("wasm_stuff.zip")).unpack_archive()
-        shutil.move("./cpy_wasm_cache", "/tmp")
-        print("Downloaded ☾")
-        # 󱫬 py.loadPackage("regex")›);
+        shutil.move("./tmp/cpy_wasm_cache", "/tmp/cpy_wasm_cache")
+        shutil.move("☾.py", "moon.py")
+        import pyodide_js
+        await pyodide_js.loadPackage("regex")
+        print("Downloaded ☾") ›);
     󱫬 py.runPythonAsync(‹
-        from refresher import run_moon, cpy_get_highlighter
-        from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC
-        # fix
-        𝑓, 𝑐 = run_moon(["--code_cache_dir=/tmp/cpy_wasm_cache/code",
-                         "--gram_cache_dir=/tmp/cpy_wasm_cache/gram"],
-                         extract_interactive=True)
-        highlight = cpy_get_highlighter(𝑐.ns)
-        𝑐("""
-         󰆴 __header_namespace__["__error_printer__"]
-         󰆴         __builtins__["__error_printer__"]
-        "☾ Ready!"                                         ☾
-        "ctrl + <enter> 󷺄 Run multiline code"              ☾
-        "alt  + <↑/↓>   󷺄 Cycle history"                   ☾
-        "alt  + <l>     󷺄 Clear screen"                    ☾
-        "alt  + <=>     󷺄 Flip number"                     ☾
-        "alt  + </>     󷺄 Selection to fraction"           ☾
-        "alt  + <w/s/x> (mac: cmd+<,/./;>)"                ☾
-        "     󷺄 Superscript/subscript/normalize selection" ☾
-        """)›);
+        import moon
+        print(dir(moon)) ›);
+         from refresher import run_moon, cpy_get_highlighter
+         from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC
+         # fix
+         𝑓, 𝑐 = run_moon(["--code_cache_dir=/tmp/cpy_wasm_cache/code",
+                          "--gram_cache_dir=/tmp/cpy_wasm_cache/gram"],
+                          extract_interactive=True)
+         highlight = cpy_get_highlighter(𝑐.ns)
+         𝑐("""
+          󰆴 __header_namespace__["__error_printer__"]
+          󰆴         __builtins__["__error_printer__"]
+         "☾ Ready!"                                         ☾
+         "ctrl + <enter> 󷺄 Run multiline code"              ☾
+         "alt  + <↑/↓>   󷺄 Cycle history"                   ☾
+         "alt  + <l>     󷺄 Clear screen"                    ☾
+         "alt  + <=>     󷺄 Flip number"                     ☾
+         "alt  + </>     󷺄 Selection to fraction"           ☾
+         "alt  + <w/s/x> (mac: cmd+<,/./;>)"                ☾
+         "     󷺄 Superscript/subscript/normalize selection" ☾
+         """)›);
         
     ⎉ P = new URLSearchParams(window.location.search).get("code");
     ¿(P) { log_as_user(P);

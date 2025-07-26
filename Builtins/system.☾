@@ -10,7 +10,9 @@
 ⊢ PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
  ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
  f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
-⊢ PL_FORK(ƒ,⠤𝔸,⠶𝕂): 𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)
+⊢ PL_FORK(ƒ,⠤𝔸,⠶𝕂): ¿env.get(‹MOON_NO_FORK›): ↪ƒ(⠤𝔸,⠶𝕂) pdump pload
+                    ⦃from multiprocessing import shared_memory⦄
+                    𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)
                     𝔲 = 󷺹[4:4+struct.unpack(␛I,⟞﹕₄)₀]
                     p = os.fork
                     ¿p: ↪p, 𝚲p PL_WAIT_PID ► 𝔲(𝗆.buf) pload ◄ (𝗆.close►𝗆.unlink)
