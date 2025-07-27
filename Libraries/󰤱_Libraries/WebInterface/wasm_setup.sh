@@ -17,12 +17,12 @@ rm -r "$ZF" "$MOON_CACHEDIR" || :
 
 pushd "$MOON_TMPDIR"; zip "$ZF" -r `basename "$MOON_CACHEDIR"`
                       popd
-pushd  `☾ --get-dir`; zip "$ZF" -r Libraries Builtins                     \
-                                -x "Libraries/󰤱_Libraries/WebInterface/*" \
-                                -x "Libraries/Glypher/*"
-                      cp ☾.py "$MOON_CACHEDIR/moon.py"
-                      pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py
-                                              popd
+pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins                     \
+                               -x "Libraries/󰤱_Libraries/WebInterface/*" \
+                               -x "Libraries/Glypher/*"
+                     cp ☾.py "$MOON_CACHEDIR/moon.py"
+                     pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py
+                                             popd
                      popd
 [ $# -ge 1 ] && ☾ server.☾ || :
 exit 0
