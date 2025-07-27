@@ -8,7 +8,8 @@ __þIMPORTS__,TP_CACHE = ℵ,{}
 TRANSPILE_REF = Holder
  EXEC_NATIVE = exec
 ⊢ EXEC_NATIVE(𝚌,⠤𝔸,⠶𝕂):
-         exec(𝚌,⠤𝔸,⠶𝕂)
+          ‹Exec: `⟦𝚌﹕₁₂₈⟧`›☾
+          exec(𝚌,⠤𝔸,⠶𝕂)
     ¡ε=𝑒: ‹Exec failed! Writing to ⟦o≔‹/tmp/dmp›𝐩⟧›☾
           o󱖔􍡩𝚌
           ⦃raise ⦃ε⦄⦄

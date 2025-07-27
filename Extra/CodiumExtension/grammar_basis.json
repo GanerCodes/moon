@@ -16,7 +16,9 @@
     
     "com_il"    : { "name" : "comment.il.moon",
                     "begin": "🟑",
-                    "end"  : "🟑" },
+                    "end"  : "🟑",
+                    "beginCaptures": { "0": { "name": "punctuation.ilinecom.moon" }},
+                    "endCaptures"  : { "0": { "name": "punctuation.ilinecom.moon" }} },
     
     "str"       : { "patterns": [{"include": "#str_star" },
                                  {"include": "#str_sys"  },
@@ -27,21 +29,29 @@
     
     "str_star" : { "name"    : "string.star.moon",
                    "begin"   : "󰦥{5}",
-                   "end"     : "󰦥{5}" },
+                   "end"     : "󰦥{5}",
+                   "beginCaptures": { "0": { "name": "punctuation.str.moon" }},
+                   "endCaptures"  : { "0": { "name": "punctuation.str.moon" }} },
     
     "str_sys"  : { "name"    : "string.sys.moon",
                    "begin"   : "\\$",
                    "end"     : "󷹹",
+                   "beginCaptures": { "0": { "name": "punctuation.str.moon" }},
+                   "endCaptures"  : { "0": { "name": "punctuation.str.moon" }},
                    "patterns": [{ "include": "#str_atom" }] },
     
     "str_sub"  : { "name"    : "string.sub.moon",
                    "begin"   : "‹",
                    "end"     : "›",
+                   "beginCaptures": { "0": { "name": "punctuation.str.moon" }},
+                   "endCaptures"  : { "0": { "name": "punctuation.str.moon" }},
                    "patterns": [{ "include": "#str_atom" }] },
     
     "str_nsub1": { "name"    : "string.nsub1.moon",
                    "begin"   : "\"",
                    "end"     : "\"",
+                   "beginCaptures": { "0": { "name": "punctuation.str.moon" }},
+                   "endCaptures"  : { "0": { "name": "punctuation.str.moon" }},
                    "patterns": [{ "include": "#str_esc"  },
                                 { "include": "#spec_char"}] },
     

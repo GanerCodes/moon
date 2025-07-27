@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='VdliUno1v1gCKMCULLHbquNIlWESYhh952Z5pFcN6Qw'
+BOOTSTRAP_HASH='NYs1rBdE3hFSWjxT-731ByFCTgrqJ2D2YTlm9C6_b5o'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -1600,9 +1600,6 @@ class ÂÑØ(ÂÑÖ):
 class áÍáþáÍá(áÍá):
     None
 
-(ÄÊPSH((sys).modules),ÄÊPSH(ÂÞÅCAT(("𝑙𝑙"),PEV)),ÄÊPSH(áÍáþáÍá),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
-(ÄÊPSH((sys).modules),ÄÊPSH(ÂÞÅCAT(("ℵ"),PEV)),ÄÊPSH(ÂÑÖ()),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
-(ÄÊPSH((sys).modules),ÄÊPSH(ÂÞÅCAT(("ℶ"),PEV)),ÄÊPSH(ÂÑØ()),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
 
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/𝔍.☾')).parent
 (áÐÞ:=ÂÞÅCAT({ÁÁ:ÄÊCUR((1,),{"ensure_ascii":False,"indent":None,"separators":(",:")},jdumps__,ÂýÃ),ÿ:jloads__},ÂÑÖ()))

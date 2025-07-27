@@ -788,12 +788,14 @@
       ],
       "settings": { "foreground": "#8FBCBB" }
     },
-    {"scope":["source","text"],                            "settings":{"foreground":"#d4e4d3"}},
+    {"scope":["source","text"                           ], "settings":{"foreground":"#d4e4d3"}},
     {"scope":["comment","punctuation.definition.comment"], "settings":{"foreground":"#48ff00","fontStyle":"italic"}},
-    {"scope":["inlinecomment"],                            "settings":{"foreground":"#deb46c"}},
-    {"scope":["string"],                                   "settings":{"foreground":"#a080f0"}},
-    {"scope":["metacomment","punctuation.strsub"],         "settings":{"foreground":"#c300ff","fontStyle":"bold"}},
-    {"scope":["symbol.esc.moon"],                          "settings":{"foreground":"#22ff22"}},
-    {"scope":["string.spec_char.moon"],                    "settings":{"foreground":"#5443fd"}}
+    {"scope":["inlinecomment"                           ], "settings":{"foreground":"#deb46c"}},
+    {"scope":["string"                                  ], "settings":{"foreground":"#a080f0"}},
+    {"scope":["metacomment","punctuation.strsub"        ], "settings":{"foreground":"#c300ff","fontStyle":"bold"}},
+    {"scope":["symbol.esc.moon"                         ], "settings":{"foreground":"#22ff22"}},
+    {"scope":["string.spec_char.moon"                   ], "settings":{"foreground":"#5443fd"}},
+    {"scope":["punctuation.str.moon"                    ], "settings":{"foreground":"#3399ff"}},
+    {"scope":["punctuation.ilinecom.moon"               ], "settings":{"foreground":"#ff00ff"}}
   ]
 }

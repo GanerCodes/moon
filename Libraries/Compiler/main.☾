@@ -135,8 +135,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
     ⸘f∋‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
     ¡           : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs
 
-⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,␛
-  transpiler_cli,moon_cli
+⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,transpiler_cli,moon_cli
 
 TRANSPILE_REF(moon_to_py)
 

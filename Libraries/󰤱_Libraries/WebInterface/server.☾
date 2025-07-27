@@ -3,7 +3,7 @@
 __dir__ cd
 
  ucod = ℵ←(moon_dir / ‹Libraries/Glypher/UnicodeQuery/unicode.txt›)󷹎𝗻󰈲󷺹∧⟞∌␛#∧␛.∉⟞ᐸ ᐵ󷹎¹␛;ᐵ.lower⬄𝘀ᐸꟿ⁰󷺹󷹜¹⁶󷹝→⋄󷺽→ᴙ
-real_files = ‹wasm_stuff.zip font.ttf index.j☾›⍭
+real_files = ‹moon_wasm.zip font.ttf index.j☾›⍭
 
 JS    = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile⟧›
 DOCS  = ops to_docs 𝔍󰄞
