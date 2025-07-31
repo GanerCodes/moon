@@ -129,7 +129,6 @@ except Exception as e:
         os.environ['MOON_CACHEDIR'] = "/tmp/moon_wasm_cache"
         os.environ['MOON_NO_FORK'] = "1"
         os.environ['MOON_DISABLE_CUSTOM_ERRORS'] = "1"
-        os.environ['MOON_LOG_IMPORTS'] = "1"
         from pyodide.http import pyfetch
         os.mkdir("/tmp/moon")
         os.chdir("/tmp/moon")
