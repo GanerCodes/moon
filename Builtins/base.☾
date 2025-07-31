@@ -39,6 +39,8 @@ setitem = 󰲥setitem_(x,y,z) ∨ z
                         ↪𝙰₀(⠤𝙰₁﹕,⠤𝐴ₗₑₙ₍􊴂₎﹕,⠶𝙺)
                 ↪ꬶ()
 
+sys.modules[‹__main__›] = sys.modules[__name__]
+
 𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦 = Exception,object,dict,bool,list,tuple,set,str,int,float,bytes
 𝑒𝑒 = (BaseExceptionGroup,GeneratorExit,KeyboardInterrupt,Exception)
 ´ᐦ´ = 󷺗

@@ -3,7 +3,7 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
             (␛¶, ‹¶✿›))
 
 stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
-    
+
 __þIMPORTS__,TP_CACHE = ℵ,{}
 TRANSPILE_REF = Holder
  EXEC_NATIVE = exec
@@ -61,7 +61,7 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
     ¿␛Ń∈p: ↪
     name,F,native,failed = pᣆ􋅂􀸳􋇡IMPORT_find_file(⬤,𝖦.get(‹__dir__›),pwd,flags)
     ¿‹MOON_LOG_IMPORTS›∈env:
-        ‹⨡⟦flags󷸔⟧ ⟦p⟧ → ⟦F⟧ (native=⟦native⟧) (→ ⟦𝖦[‹__file__›]⟧)›☾
+        ‹⨡⟦flags󷸔⟧ ⟦p⟧ = "⟦name⟧" : ⟦F⟧ (native=⟦native⟧) (→ ⟦𝖦[‹__file__›]⟧)›☾
         ‹𝗻moon_dir=⟦moon_dir⟧𝗻__þIMPORTS__:𝗻⟦__þIMPORTS__ᐖ𝘁+⟞⨝𝘀␛→𝘀ᐸ⟖𝗻⟧›☾
     F≇□⨳‹Unable to find module "⟦name⟧"! Paths checked:⟦failed⟕𝗻⟧›
     ¿␛↺∈flags ∨ F∉__þIMPORTS__:

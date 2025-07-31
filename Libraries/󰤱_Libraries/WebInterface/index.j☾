@@ -124,7 +124,7 @@ except Exception as e:
     py = 󱫬 loadPyodide({ stdin: prompt, stdout: log, stderr: log });
     log(‹Loaded WASM Python›);
     󱫬 py.runPythonAsync(‹
-        import pyodide_js,shutil,os
+        import pyodide_js,shutil,sys,os
         os.environ['MOON_TMPDIR'] = "/tmp"
         os.environ['MOON_CACHEDIR'] = "/tmp/moon_wasm_cache"
         os.environ['MOON_NO_FORK'] = "1"
@@ -133,12 +133,13 @@ except Exception as e:
         from pyodide.http import pyfetch
         os.mkdir("/tmp/moon")
         os.chdir("/tmp/moon")
+        sys.path.insert(0,"/tmp/moon")
         await (await pyfetch("moon_wasm.zip")).unpack_archive()
         shutil.move("moon_wasm_cache", "/tmp/moon_wasm_cache")
         await pyodide_js.loadPackage("regex")
         print("Downloaded ☾")
         import moon
-        print(dir(moon))
+        print(moon.moon_cli(True,False)(lambda x:"2³􊿙"))
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
         print("alt  + <↑/↓>   󷺄 Cycle history"                  )
@@ -147,6 +148,7 @@ except Exception as e:
         print("alt  + </>     󷺄 Selection to fraction"          )
         print("alt  + <w/s/x> (mac: cmd+<,/./;>)"               )
         print("     󷺄 Superscript/subscript/normalize selection")
+        moon.transpiler_cli
     ›);
      from refresher import run_moon, cpy_get_highlighter
      from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC

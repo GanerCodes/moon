@@ -20,11 +20,11 @@ pushd "$MOON_TMPDIR"; zip "$ZF" -r `basename "$MOON_CACHEDIR"`
 pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins                     \
                                -x "Libraries/󰤱_Libraries/WebInterface/*" \
                                -x "Libraries/Glypher/*"
-                     cp ☾.py "$MOON_CACHEDIR/moon.py"
+                     cp moon.py "$MOON_CACHEDIR/moon.py"
                      pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py
                                              popd
                      popd
 [ $# -ge 1 ] && ☾ server.☾ || :
 exit 0
 }
-# rm -r /tmp/moon{,moon_wasm_cache} ; mkdir -p /tmp/moon ; cp /home/ganer/Projects/Moon_BETA/Libraries/󰤱_Libraries/WebInterface/moon_wasm.zip /tmp/moon ; cd /tmp/moon ; unzip moon_wasm.zip ; mv moon_wasm_cache /tmp/moon_wasm_cache ; { export MOON_TMPDIR="/tmp"; export MOON_CACHEDIR="/tmp/moon_wasm_cache"; export MOON_NO_FORK="1"; export MOON_DISABLE_CUSTOM_ERRORS="1"; export MOON_LOG_IMPORTS="1"; python; }
+# rm -r /tmp/moon{,moon_wasm_cache} ; mkdir -p /tmp/moon ; cp ~/Projects/moon/Libraries/󰤱_Libraries/WebInterface/moon_wasm.zip /tmp/moon ; cd /tmp/moon ; unzip moon_wasm.zip ; mv moon_wasm_cache /tmp/moon_wasm_cache ; { export MOON_TMPDIR="/tmp"; export MOON_CACHEDIR="/tmp/moon_wasm_cache"; export MOON_NO_FORK="1"; export MOON_DISABLE_CUSTOM_ERRORS="1"; export MOON_LOG_IMPORTS="1"; python; }

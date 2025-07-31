@@ -2,8 +2,8 @@ __þIMPORTS__.clear
 TP_CACHE.clear
 ⨡􋀸text_format
 ⨡􋀸cache
+⨡􋀸peggle2
 ⨡􋀸peggle2/rgx_golfatron
-⨡􋀸peggle2/main
 ⨡􋀸peggle2/gram_tools
 ⨡􋀸Compiler/gram.data
 ⨡􋀸Compiler/generate_operators
@@ -16,6 +16,6 @@ TP_CACHE.clear
 ⨡􋀸Compiler/rewriters
 ⨡􋀸Compiler/to_ast
 ⨡􋀸Compiler/ast_to_py
-⨡􋀸Compiler/main
+⨡􋀸Compiler
 
 ‹Generated cache!›☾
