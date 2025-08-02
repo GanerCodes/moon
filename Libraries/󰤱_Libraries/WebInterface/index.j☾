@@ -1,5 +1,5 @@
 var py, hist=[ᐦ], hist_p=0;
-© [ets, cli, syt] = ["entries", "cli_in", "symbolTable"]􊾡(GID)
+© [ets,cli,syt] = ["entries", "cli_in", "symbolTable"]􊾡(GID)
 © script    = 󰲣py.globals.get("SCRIPT")(x);
 © tofrac    = 󰲡py.globals.get("TOFRAC") (x);
 © flippy    = 󰲡py.globals.get("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(x);
@@ -138,7 +138,7 @@ except Exception as e:
         await pyodide_js.loadPackage("regex")
         print("Downloaded ☾")
         import moon
-        print(moon.moon_cli(True,False)(lambda x:"2³􊿙"))
+        𝑓 = moon.transpiler_cli = moon.moon_cli(True,False)
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
         print("alt  + <↑/↓>   󷺄 Cycle history"                  )
@@ -147,7 +147,6 @@ except Exception as e:
         print("alt  + </>     󷺄 Selection to fraction"          )
         print("alt  + <w/s/x> (mac: cmd+<,/./;>)"               )
         print("     󷺄 Superscript/subscript/normalize selection")
-        moon.transpiler_cli
     ›);
      from refresher import run_moon, cpy_get_highlighter
      from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC
