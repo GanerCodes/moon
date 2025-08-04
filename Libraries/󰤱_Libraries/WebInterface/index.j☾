@@ -1,9 +1,11 @@
 var py, hist=[ᐦ], hist_p=0;
-© [ets,cli,syt] = ["entries", "cli_in", "symbolTable"]􊾡(GID)
-© script    = 󰲣py.globals.get("SCRIPT")(x);
-© tofrac    = 󰲡py.globals.get("TOFRAC") (x);
-© flippy    = 󰲡py.globals.get("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(x);
-© highlight = 󰲡py.globals.get("highlight")(x);
+© [ets,cli,syt] = ["entries","cli_in","symbolTable"]􊾡(GID);
+© getv      = 󰲡py.globals.get("moon")[x];
+© PEV       = 󰲡getv("PEV")(x);
+© [󷸔,󷸼,󷸓]   = [⠤"󷸔󷸼󷸓"]􊾡(⥌s↦󰲡getv(s)(x));
+© tofrac    = 󰲡getv("TOFRAC")                (x);
+© flippy    = 󰲡getv("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(x);
+© highlight = 󰲡getv("__highlighter__")       (x);
 
 © safeRunMoon = ⥌val↦py.runPython(☾(‹
 try:
@@ -209,11 +211,11 @@ cli.addEventListener("keydown", 󱟱 ⥌e↦{
             © keys = [⠤mac ?"l.,;/=": "lwsx/="];
             ⌾(e.key) {
                 ᐂ keys₀: QSA("div", ets)􋁃(󰲡x.remove()); ⇥;
-                ᐂ keys₁: replace_selection(cli, 󰲡script(x, "sup")); ⇥;
-                ᐂ keys₂: replace_selection(cli, 󰲡script(x, "sub")); ⇥;
-                ᐂ keys₃: replace_selection(cli, 󰲡script(x, "nrm")); ⇥;
-                ᐂ keys₄: replace_selection(cli, 󰲡tofrac(x       )); ⇥;
-                ᐂ keys₅: replace_selection(cli, 󰲡flippy(x       )); ⇥;
+                ᐂ keys₁: replace_selection(cli, 󷸓               ); ⇥;
+                ᐂ keys₂: replace_selection(cli, 󷸔               ); ⇥;
+                ᐂ keys₃: replace_selection(cli, 󷸼               ); ⇥;
+                ᐂ keys₄: replace_selection(cli, 󰲡tofrac(x      )); ⇥;
+                ᐂ keys₅: replace_selection(cli, 󰲡flippy(x      )); ⇥;
                 ⊳      : ↪; }
             ↪ ə(e); }
         ¿(e.keyCode ≡ 9) {
