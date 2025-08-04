@@ -2,7 +2,7 @@ var py, hist=[ᐦ], hist_p=0;
 © [ets,cli,syt] = ["entries","cli_in","symbolTable"]􊾡(GID);
 © getv      = 󰲡py.globals.get("moon")[x];
 © PEV       = 󰲡getv("PEV")(x);
-© [󷸔,󷸼,󷸓]   = [⠤"󷸔󷸼󷸓"]􊾡(⥌s↦󰲡getv(s)(x));
+© [󷸔,󷸼,󷸓]   = [⠤"󷸔󷸼󷸓"]􊾡(⥌s↦󰲡getv(PEV(s))(x));
 © tofrac    = 󰲡getv("TOFRAC")                (x);
 © flippy    = 󰲡getv("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(x);
 © highlight = 󰲡getv("__highlighter__")       (x);
@@ -34,20 +34,18 @@ except Exception as e:
         else
             𝚁.push([c,...𝚂]); }
     return 𝚁; }⦌
-© p2rc = ⥌s,   𝑝  ↦{
-    ⎉ r=0, c=0, i=0, S=[⠤s];
-    ∀(g=0; i < 🃌(S); g+=🃌(Sᵢ₊₊)) {
-        ¿( g ≡ 𝑝) ⇥;
-        ¿(Sᵢ ≡ 𝗻) r++, c=0;
-        ¡         c++; }
-    ↪ [r,c]; };
-© rc2p = ⥌s, [𝑟,𝑐]↦{
-    ⎉ r=0, c=0, i=0, S=[⠤s];
-    ∀(; i < 🃌(S); i++) {
-        ¿(c≡𝑐 ∧ r≡𝑟) ⇥;
-        ¿(   Sᵢ ≡ 𝗻) r++, c=0;
-        ¡            c++; }
-    ↪ 🃌(S.slice(0,i)􌿑(ᐦ)); };
+© p2rc = ⥌s,   𝑝  ↦{ ⎉ r=0, c=0, i=0, S=[⠤s];
+                     ∀(g=0; i < 🃌(S); g+=🃌(Sᵢ₊₊)) {
+                         ¿( g ≡ 𝑝) ⇥;
+                         ¿(Sᵢ ≡ 𝗻) r++, c=0;
+                         ¡         c++; }
+                     ↪ [r,c]; };
+© rc2p = ⥌s, [𝑟,𝑐]↦{ ⎉ r=0, c=0, i=0, S=[⠤s];
+                     ∀(; i < 🃌(S); i++) {
+                         ¿(c≡𝑐 ∧ r≡𝑟) ⇥;
+                         ¿(   Sᵢ ≡ 𝗻) r++, c=0;
+                         ¡            c++; }
+                     ↪ 🃌(S.slice(0,i)􌿑(ᐦ)); };
 © sel_p  = ⥌ε↦[ε.selectionStart, ε.selectionEnd];
 © sel_rc = ⥌ε↦sel_p(ε).map(󰲡p2rc(ε.value, x));
 © caret_write = ⥌ε,t↦{
@@ -69,18 +67,16 @@ except Exception as e:
     ⎉ Δc = {};
     
     © wrap = ⥌𝑓↦⥌x,i↦(Δc[Rα+i] = ᔐ𝑙(r=𝑓(x))-ᔐ𝑙(x), r);
-    ¿(num > 0) {
-        © pad = 𝘀.repeat(nspace*num);
-        rows = rows.map(wrap(󰲡pad + x));
-    }⸘(num < 0) {
-        © 𝔯 = new RegExp(⦋String.raw`^ {0,${-num*nspace}}`⦌, ␛g);
-        rows = rows.map(wrap(󰲡x.replace(𝔯, ᐦ))); }
+    ¿(num>0) { © pad = 𝘀.repeat(nspace*num);
+               rows = rows.map(wrap(󰲡pad + x)); }
+    ⸘(num<0) { © 𝔯 = new RegExp(⦋String.raw`^ {0,${-num*nspace}}`⦌, ␛g);
+               rows = rows.map(wrap(󰲡x.replace(𝔯, ᐦ))); }
     
     L.splice(Rα, Rω-Rα+1, ⠤rows);
     ε.value = L􌿑(𝗻);
     Cα += Δc󰂤󰃤;
     Cω += Δc󰂤󰃼;
-    © [pα, pω] = [[Rα, Cα], [Rω, Cω]]􊾡(󰲡rc2p(ε.value, x));
+    © [pα,pω] = [[Rα,Cα],[Rω,Cω]]􊾡(󰲡rc2p(ε.value, x));
     ε.setSelectionRange(pα, pω); };
 © enter_preserve_indent = (ε) => {
     © L = ε.value.split(𝗻);
@@ -90,12 +86,16 @@ except Exception as e:
     L.splice(Rα, 1, α, ind+β);
     ε.value = L.join(𝗻);
     © p = rc2p(ε.value, [Rα+1, 🃌(ind)]);
-    ε.setSelectionRange(p, p); };
+    ε.setSelectionRange(p,p); };
 
 © reformt = ⥌s↦{
+    s = s.replace(⦋/\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/g⦌, ᐦ);
+    ↪ 󱀝 text ⟦s⟧;
+    
     © hex =  󰲡␛#+x􊾡(󰲡x.toString(16).padStart(2,␛0)).join(ᐦ);
     © 𝙲 = esc2clr(s)􊾡(󰲡󱀝 text {𝑆 ‹color:⟦hex(x₁)⟧;background-color:⟦hex(x₂)⟧;›} ⟦x₀⟧);
     ↪ 󱀝 text ⟦𝙲⟧; };
+     /\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/
      ↪ 🃌(𝙲)≡1 ⭜𝙲₀⭝ (󱀝 text ⟦𝙲⟧); };
 
 © log = 󰲡{
@@ -140,7 +140,9 @@ except Exception as e:
         await pyodide_js.loadPackage("regex")
         print("Downloaded ☾")
         import moon
-        𝑓 = moon.transpiler_cli = moon.moon_cli(True,False)
+        𝑓 = moon.moon_cli(True,False)
+        print(𝑓("2³􊿙☾"))
+        globals()['𝑓'] = 𝑓
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
         print("alt  + <↑/↓>   󷺄 Cycle history"                  )
@@ -211,11 +213,11 @@ cli.addEventListener("keydown", 󱟱 ⥌e↦{
             © keys = [⠤mac ?"l.,;/=": "lwsx/="];
             ⌾(e.key) {
                 ᐂ keys₀: QSA("div", ets)􋁃(󰲡x.remove()); ⇥;
-                ᐂ keys₁: replace_selection(cli, 󷸓               ); ⇥;
-                ᐂ keys₂: replace_selection(cli, 󷸔               ); ⇥;
-                ᐂ keys₃: replace_selection(cli, 󷸼               ); ⇥;
-                ᐂ keys₄: replace_selection(cli, 󰲡tofrac(x      )); ⇥;
-                ᐂ keys₅: replace_selection(cli, 󰲡flippy(x      )); ⇥;
+                ᐂ keys₁: replace_selection(cli, 󷸔     ); ⇥;
+                ᐂ keys₂: replace_selection(cli, 󷸓     ); ⇥;
+                ᐂ keys₃: replace_selection(cli, 󷸼     ); ⇥;
+                ᐂ keys₄: replace_selection(cli, tofrac); ⇥;
+                ᐂ keys₅: replace_selection(cli, flippy); ⇥;
                 ⊳      : ↪; }
             ↪ ə(e); }
         ¿(e.keyCode ≡ 9) {
