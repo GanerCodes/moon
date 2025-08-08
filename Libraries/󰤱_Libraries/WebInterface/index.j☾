@@ -9,7 +9,7 @@ var py, hist=[ᐦ], hist_p=0;
 
 © safeRunMoon = ⥌val↦py.runPython(☾(‹
 try:
-    𝑓("⟦val.replaceAll(⦋/[\\"\n]/g⦌, 󰲡({"\\":"\\\\","\n":"\\n",'"':'\\"'})ₓ)⟧")
+    𝑓(lambda:"⟦val.replaceAll(⦋/[\\"\n]/g⦌, 󰲡({"\\":"\\\\","\n":"\\n",'"':'\\"'})ₓ)⟧")
 except Exception as e:
     print("Error:", e)›));
 
@@ -140,8 +140,7 @@ except Exception as e:
         await pyodide_js.loadPackage("regex")
         print("Downloaded ☾")
         import moon
-        𝑓 = moon.moon_cli(True,False)
-        print(𝑓("2³􊿙☾"))
+        𝑓 = moon.moon_cli(True,False,False)
         globals()['𝑓'] = 𝑓
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
