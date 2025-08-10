@@ -128,6 +128,7 @@ except Exception as e:
     © { loadPyodide } = 󱫬 import(‹https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.mjs›);
     py = 󱫬 loadPyodide({ stdin:prompt, stdout:print 🟑log🟑, stderr:print 🟑log🟑 });
      log(‹Loaded WASM Python›);
+     󰤱 the stupid stdout hook needs to exist within the python bc u cant go into python during the handler bc pyodide dumb or something reeeeeeeeeee
     󱫬 py.runPythonAsync(‹
         import pyodide_js,shutil,sys,os
         os.environ['MOON_TMPDIR'] = "/tmp"
