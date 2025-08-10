@@ -89,6 +89,8 @@ except Exception as e:
     ε.setSelectionRange(p,p); };
 
 © reformt = ⥌s↦{
+    print(getv("split_text_colors")(s))
+    
     s = s.replace(⦋/\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/g⦌, ᐦ);
     ↪ 󱀝 text ⟦s⟧;
     
@@ -117,14 +119,14 @@ except Exception as e:
         key: k, code: "Key"+k.toUpperCase(),
         altKey: ✓, bubbles: ✓, cancelable: ✓ }));
 © auto_grow = ⥌ε↦(ε􋛟.minHeight = "1em",
-                  ε􋛟.minHeight = ‹⟦⤉(5, ε.scrollHeight)⟧px›,
+                  ε􋛟.minHeight = ‹⟦⤉(5,ε.scrollHeight)⟧px›,
                   ε.scrollIntoViewIfNeeded());
 
 © load_python = 󱟱 𝚲{
-    log(‹Loading WASM Python…›);
+     log(‹Loading WASM Python…›);
     © { loadPyodide } = 󱫬 import(‹https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.mjs›);
-    py = 󱫬 loadPyodide({ stdin: prompt, stdout: log, stderr: log });
-    log(‹Loaded WASM Python›);
+    py = 󱫬 loadPyodide({ stdin:prompt, stdout:print 🟑log🟑, stderr:print 🟑log🟑 });
+     log(‹Loaded WASM Python›);
     󱫬 py.runPythonAsync(‹
         import pyodide_js,shutil,sys,os
         os.environ['MOON_TMPDIR'] = "/tmp"
@@ -142,6 +144,7 @@ except Exception as e:
         import moon
         𝑓 = moon.moon_cli(True,False,False)
         globals()['𝑓'] = 𝑓
+        𝑓(lambda:"⨡ text_format")
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
         print("alt  + <↑/↓>   󷺄 Cycle history"                  )
@@ -151,40 +154,29 @@ except Exception as e:
         print("alt  + <w/s/x> (mac: cmd+<,/./;>)"               )
         print("     󷺄 Superscript/subscript/normalize selection")
     ›);
-     from refresher import run_moon, cpy_get_highlighter
-     from util import SCRIPT, UPSIDEDOWNSYNDROME, TOFRAC
      extract_interactive=True ; highlight = cpy_get_highlighter(𝑐.ns)
-    
-    ⎉ P = new URLSearchParams(window.location.search).get("code");
-    ¿(P) { log_as_user(P);
-           safeRunMoon(P); } };
+};
 
-(async _ => {
-    log(‹Loading Symbol Table…›);
-    
+(󱟱 𝚲{
     󱫬 load_python();
+    print(‹Loading Symbol Table…›);
     © styles = 󱫬 (󱫬 fetch("style")).json();
     © docs   = 󱫬 (󱫬 fetch("info" )).json();
-     docs􋁃(⥌[x,y,z]↦󱑼(x,y)􋁃(⥌[x,y]↦{
-         © ε = reformt(highlight(x));
-         ε.title = y;
-         syt􍪙(ε);
-         ε.onclick = 𝚲caret_write(cli, ε􋒷 ∨ QS(‹*:not(text:has(> *))›, ε)􋒷); }));
-     syt􍪙(ε);
-    
     docs􋁃(⥌[x,y,z]↦ {
         © symbs = 󱑼(x,y)􊾡(⥌[x,y]↦{
             © ε = reformt(highlight(x));
             ε.title = y;
             ε.onclick = 𝚲caret_write(cli, ε􋒷 ∨ QS(‹*:not(text:has(> *))›, ε)􋒷);
             ↪ ε; });
-        
-        syt􍪙(🃌(symbs)≡1⭜symbs₀
-                       ⭝󱀝 div {𝐶 symbolGroup} ⟦symbs⟧);
+        syt􍪙(🃌(symbs)≡1 ⭜symbs₀⭝ 󱀝 div {𝐶 symbolGroup} ⟦symbs⟧);
     });
+    print(‹Loaded Symbol Table›);
     
-    log(‹Loaded Symbol Table›); })();
-    
+     ⎉ P = new URLSearchParams(window.location.search).get("code");
+     ¿(P) { log_as_user(P);
+            safeRunMoon(P); }
+})();
+
 © ə = ⥌e↦(e.preventDefault(), auto_grow(cli));
 cli.addEventListener("keydown", 󱟱 ⥌e↦{
     © [[Rα, Cα], [Rω, Cω]] = sel_rc(cli);

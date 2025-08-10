@@ -30,4 +30,4 @@ cors = {‹access-control-allow-origin›: ␛*}
           ℵ(𝙲𝚃=‹.html›,⠶cors)
     ¡:  ↪ ᵇ(P∈real_files ⭜P⭝ ‹index.html›), cors
 
-‹Running server›☾ ► server(port=𝔸🃌≥1 ⭜𝔸₁𝑖⭝ 8080)
+‹Running server›☾ ► server(port=𝔸🃌>1 ⭜𝔸₁𝑖⭝ 8080)

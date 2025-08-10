@@ -12,6 +12,16 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
 𝼞ꬷ             = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
 𝼞𝼞             = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
 
+𝜺,𝐸 = find_esc_seqs, ‹(?:⟦S⟧)+› re.compile
+⊢ split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
+    r = x 𝐸.findall 􀠊 x 𝐸.split 􀀩 ᐵ₀𝜺.findall∖𝟬𝟭𝟬𝟮ᐵ₂﹕ᐸ,⟞₁ᐸ
+    𝚏 = 󷺹₅﹕􍨄󷹎␛;ᴍ𝑖
+    r=(rϜᶠᵍ􌾕ᵇᵍ󰲣y₀ſˣ󰲣y  ≡"39m"⭜ fg ⋄ bg ⭝␛
+                    y﹕₂≡"39󷺗"⭜ fg ⋄𝚏(y)⭝␛
+                    y﹕₂≡"38󷺗"⭜𝚏(y)⋄ bg ⭝␛
+                    ✗􀌙󰅂󰅂 􁊲 rᐵ₁)
+    ↪r𝌂󷺹₀ᐸᐖ⠤⟞₀ ₀ᐵ󰸷⁰ˣ󰀅󰀅4ᐸ,⟞ᐵ₁ᐸ⨝ᐸ
+
 ⊢ slice_𝚕𝚌(𝚌,𝚙):
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
     ¿𝙻🃌≡1: 𝙻 = [𝙻₀ 􀲸􊬤﹕􀲸􊬦]
@@ -86,8 +96,8 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
     ↪ᔐ(x)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
-⭷ rm_esc,lines,tspl,padl,padc,padr,pads,stackr,box,BOX,linenum,linewnum,dotrim,␛
-  show_code,title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+⭷ rm_esc,split_text_colors,lines,tspl,padl,padc,padr,pads,stackr,box,BOX,␛
+  linenum,linewnum,dotrim,show_code,title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢ test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                     linewrap(linenum(‹egg salad number twelve fortnite
