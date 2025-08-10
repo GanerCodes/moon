@@ -17,23 +17,23 @@ except Exception as e:
 © ᔐs = 󰲡[⠤x].slice(⠤𝔸).join(ᐦ);
 © ᔐ𝑙 = 󰲡[⠤x].length;
 
-⦋esc2clr = s => {
-    const TERM_RESET = "\x1b[0m";
-    if(s.includes(TERM_RESET))
-        return s.split(TERM_RESET).map(esc2clr).reduce((x,y)=>[...x,...y],[]);
-    s = s.replaceAll(/\x1b\[38;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x01${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
-    s = s.replaceAll(/\x1b\[48;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x02${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
-     󷹹
-    s = [...s];
-    𝚂 = [[255,255,255],[0,0,0]];
-    𝚁 = [];
-    while(s.length) {
-        const c = s.splice(0,1)[0];
-        if(c == '\x01' || c=='\x02')
-            𝚂[c=='\x02'?1:0] = [0,0,0].map(_=>Number(s.splice(0,3).join('')));
-        else
-            𝚁.push([c,...𝚂]); }
-    return 𝚁; }⦌
+ ⦋esc2clr = s => {
+     const TERM_RESET = "\x1b[0m";
+     if(s.includes(TERM_RESET))
+         return s.split(TERM_RESET).map(esc2clr).reduce((x,y)=>[...x,...y],[]);
+     s = s.replaceAll(/\x1b\[38;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x01${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
+     s = s.replaceAll(/\x1b\[48;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x02${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
+      󷹹
+     s = [...s];
+     𝚂 = [[255,255,255],[0,0,0]];
+     𝚁 = [];
+     while(s.length) {
+         const c = s.splice(0,1)[0];
+         if(c == '\x01' || c=='\x02')
+             𝚂[c=='\x02'?1:0] = [0,0,0].map(_=>Number(s.splice(0,3).join('')));
+         else
+             𝚁.push([c,...𝚂]); }
+     return 𝚁; }⦌
 © p2rc = ⥌s,   𝑝  ↦{ ⎉ r=0, c=0, i=0, S=[⠤s];
                      ∀(g=0; i < 🃌(S); g+=🃌(Sᵢ₊₊)) {
                          ¿( g ≡ 𝑝) ⇥;
@@ -89,14 +89,15 @@ except Exception as e:
     ε.setSelectionRange(p,p); };
 
 © reformt = ⥌s↦{
-    print(getv("split_text_colors")(s))
-    
-    s = s.replace(⦋/\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/g⦌, ᐦ);
-    ↪ 󱀝 text ⟦s⟧;
-    
-    © hex =  󰲡␛#+x􊾡(󰲡x.toString(16).padStart(2,␛0)).join(ᐦ);
-    © 𝙲 = esc2clr(s)􊾡(󰲡󱀝 text {𝑆 ‹color:⟦hex(x₁)⟧;background-color:⟦hex(x₂)⟧;›} ⟦x₀⟧);
+    © 𝘩 = 󰲡‹rgba(⟦x.join(␛,)⟧)›
+    © C = JSON.parse(getv("áÐÞ").get(getv("ÁÁ"))(getv("split_text_colors")(s)));
+    © 𝙲 = C􋅝(󰲥󱀝 text {𝑆 ‹color:⟦𝘩(x)⟧;background-color:⟦𝘩(y)⟧;›} ⟦z⟧);
     ↪ 󱀝 text ⟦𝙲⟧; };
+    
+     s = s.replace(⦋/\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/g⦌, ᐦ);
+     © hex =  󰲡␛#+x􊾡(󰲡x.toString(16).padStart(2,␛0)).join(ᐦ);
+     © 𝙲 = esc2clr(s)􊾡(󰲡󱀝 text {𝑆 ‹color:⟦hex(x₁)⟧;background-color:⟦hex(x₂)⟧;›} ⟦x₀⟧);
+     ↪ 󱀝 text ⟦𝙲⟧; };
      /\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/
      ↪ 🃌(𝙲)≡1 ⭜𝙲₀⭝ (󱀝 text ⟦𝙲⟧); };
 
@@ -140,7 +141,6 @@ except Exception as e:
         await (await pyfetch("moon_wasm.zip")).unpack_archive()
         shutil.move("moon_wasm_cache", "/tmp/moon_wasm_cache")
         await pyodide_js.loadPackage("regex")
-        print("Downloaded ☾")
         import moon
         𝑓 = moon.moon_cli(True,False,False)
         globals()['𝑓'] = 𝑓
