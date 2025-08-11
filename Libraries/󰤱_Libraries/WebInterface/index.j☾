@@ -101,7 +101,7 @@ except Exception as e:
      /\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/
      ↪ 🃌(𝙲)≡1 ⭜𝙲₀⭝ (󱀝 text ⟦𝙲⟧); };
 
-© log = 󰲡{
+log = 󰲡{
     ☾(‹Logging: "⟦x⟧"›);
     © ε = document.createElement("div");
     ε.className = "entry";
@@ -130,7 +130,7 @@ except Exception as e:
      log(‹Loaded WASM Python›);
      󰤱 the stupid stdout hook needs to exist within the python bc u cant go into python during the handler bc pyodide dumb or something reeeeeeeeeee
     󱫬 py.runPythonAsync(‹
-        import pyodide_js,shutil,sys,os
+        import js,pyodide_js,shutil,sys,os
         os.environ['MOON_TMPDIR'] = "/tmp"
         os.environ['MOON_CACHEDIR'] = "/tmp/moon_wasm_cache"
         os.environ['MOON_NO_FORK'] = "1"
@@ -142,10 +142,21 @@ except Exception as e:
         await (await pyfetch("moon_wasm.zip")).unpack_archive()
         shutil.move("moon_wasm_cache", "/tmp/moon_wasm_cache")
         await pyodide_js.loadPackage("regex")
+        
+        class OutOverride:
+            def __init__(𝕊,𝕠,f=None): 𝕊.𝕠,𝕊.f = 𝕠,f
+            def write(𝕊,t): return 𝕊.𝕠.write(t) if 𝕊.f is None else 𝕊.f(t)
+            def flush(𝕊): 𝕊.𝕠.flush()
+        sys.stdout = OutOverride(sys.stdout)
+        sys.stderr = OutOverride(sys.stderr)
+        
         import moon
         𝑓 = moon.moon_cli(True,False,False)
         globals()['𝑓'] = 𝑓
         𝑓(lambda:"⨡ text_format")
+        
+        sys.stdout.f = sys.stderr.f = js.log
+        
         print("☾ Ready!"                                        )
         print("ctrl + <enter> 󷺄 Run multiline code"             )
         print("alt  + <↑/↓>   󷺄 Cycle history"                  )

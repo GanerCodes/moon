@@ -14,6 +14,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
 
 𝜺,𝐸 = find_esc_seqs, ‹(?:⟦S⟧)+› re.compile
 ⊢ split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
+    x = ‹𝟭𝗯[38;2;⟦fg﹕₃⨝␛;⟧m⟦x⟧›
     r = x 𝐸.findall 􀠊 x 𝐸.split 􀀩 ᐵ₀𝜺.findall∖𝟬𝟭𝟬𝟮ᐵ₂﹕ᐸ,⟞₁ᐸ
     𝚏 = 󷺹₅﹕􍨄󷹎␛;ᴍ𝑖
     r=(rϜᶠᵍ􌾕ᵇᵍ󰲣y₀ſˣ󰲣y  ≡"39m"⭜ fg ⋄ bg ⭝␛
