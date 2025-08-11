@@ -13,27 +13,10 @@ try:
 except Exception as e:
     print("Error:", e)›));
 
- mfw "ℚ".length ¬≡ "𝕊".length
+ mfw "ℚ".length ≠ "𝕊".length
 © ᔐs = 󰲡[⠤x].slice(⠤𝔸).join(ᐦ);
 © ᔐ𝑙 = 󰲡[⠤x].length;
 
- ⦋esc2clr = s => {
-     const TERM_RESET = "\x1b[0m";
-     if(s.includes(TERM_RESET))
-         return s.split(TERM_RESET).map(esc2clr).reduce((x,y)=>[...x,...y],[]);
-     s = s.replaceAll(/\x1b\[38;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x01${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
-     s = s.replaceAll(/\x1b\[48;2;([0-9]+);([0-9]+);([0-9]+)m/g, (...𝔸)=>`\x02${𝔸.slice(1,4).map(x=>x.padStart(3,'0')).join('')}`);
-      󷹹
-     s = [...s];
-     𝚂 = [[255,255,255],[0,0,0]];
-     𝚁 = [];
-     while(s.length) {
-         const c = s.splice(0,1)[0];
-         if(c == '\x01' || c=='\x02')
-             𝚂[c=='\x02'?1:0] = [0,0,0].map(_=>Number(s.splice(0,3).join('')));
-         else
-             𝚁.push([c,...𝚂]); }
-     return 𝚁; }⦌
 © p2rc = ⥌s,   𝑝  ↦{ ⎉ r=0, c=0, i=0, S=[⠤s];
                      ∀(g=0; i < 🃌(S); g+=🃌(Sᵢ₊₊)) {
                          ¿( g ≡ 𝑝) ⇥;
@@ -93,13 +76,6 @@ except Exception as e:
     © C = JSON.parse(getv("áÐÞ").get(getv("ÁÁ"))(getv("split_text_colors")(s)));
     © 𝙲 = C􋅝(󰲥󱀝 text {𝑆 ‹color:⟦𝘩(x)⟧;background-color:⟦𝘩(y)⟧;›} ⟦z⟧);
     ↪ 󱀝 text ⟦𝙲⟧; };
-    
-     s = s.replace(⦋/\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/g⦌, ᐦ);
-     © hex =  󰲡␛#+x􊾡(󰲡x.toString(16).padStart(2,␛0)).join(ᐦ);
-     © 𝙲 = esc2clr(s)􊾡(󰲡󱀝 text {𝑆 ‹color:⟦hex(x₁)⟧;background-color:⟦hex(x₂)⟧;›} ⟦x₀⟧);
-     ↪ 󱀝 text ⟦𝙲⟧; };
-     /\x1b\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[\x01\x02]/
-     ↪ 🃌(𝙲)≡1 ⭜𝙲₀⭝ (󱀝 text ⟦𝙲⟧); };
 
 log = 󰲡{
     ☾(‹Logging: "⟦x⟧"›);
@@ -124,11 +100,10 @@ log = 󰲡{
                   ε.scrollIntoViewIfNeeded());
 
 © load_python = 󱟱 𝚲{
-     log(‹Loading WASM Python…›);
+    print(‹Loading WASM Python…›);
     © { loadPyodide } = 󱫬 import(‹https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.mjs›);
     py = 󱫬 loadPyodide({ stdin:prompt, stdout:print 🟑log🟑, stderr:print 🟑log🟑 });
-     log(‹Loaded WASM Python›);
-     󰤱 the stupid stdout hook needs to exist within the python bc u cant go into python during the handler bc pyodide dumb or something reeeeeeeeeee
+    print(‹Loaded WASM Python›);
     󱫬 py.runPythonAsync(‹
         import js,pyodide_js,shutil,sys,os
         os.environ['MOON_TMPDIR'] = "/tmp"
@@ -145,7 +120,7 @@ log = 󰲡{
         
         class OutOverride:
             def __init__(𝕊,𝕠,f=None): 𝕊.𝕠,𝕊.f = 𝕠,f
-            def write(𝕊,t): return 𝕊.𝕠.write(t) if 𝕊.f is None else 𝕊.f(t)
+            def write(𝕊,t): return 𝕊.𝕠.write(t) if 𝕊.f is None else 𝕊.f(t[:-1] if t and t[-1]=='\n' else t)
             def flush(𝕊): 𝕊.𝕠.flush()
         sys.stdout = OutOverride(sys.stdout)
         sys.stderr = OutOverride(sys.stderr)
@@ -166,7 +141,6 @@ log = 󰲡{
         print("alt  + <w/s/x> (mac: cmd+<,/./;>)"               )
         print("     󷺄 Superscript/subscript/normalize selection")
     ›);
-     extract_interactive=True ; highlight = cpy_get_highlighter(𝑐.ns)
 };
 
 (󱟱 𝚲{
@@ -184,9 +158,9 @@ log = 󰲡{
     });
     print(‹Loaded Symbol Table›);
     
-     ⎉ P = new URLSearchParams(window.location.search).get("code");
-     ¿(P) { log_as_user(P);
-            safeRunMoon(P); }
+    ⎉ P = new URLSearchParams(window.location.search).get("code");
+    ¿(P) { log_as_user(P);
+           safeRunMoon(P); }
 })();
 
 © ə = ⥌e↦(e.preventDefault(), auto_grow(cli));
