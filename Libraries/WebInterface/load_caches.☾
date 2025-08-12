@@ -16,6 +16,7 @@ TP_CACHE.clear
 ⨡􋀸Compiler/rewriters
 ⨡􋀸Compiler/to_ast
 ⨡􋀸Compiler/ast_to_py
+⨡􋀸Compiler/op_order_util
 ⨡􋀸Compiler
 
 ‹Generated cache!›☾

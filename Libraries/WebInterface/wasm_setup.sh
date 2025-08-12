@@ -24,7 +24,7 @@ pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins         \
                      pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py
                                              popd
                      popd
-[ $# -ge 1 ] && ☾ server.☾ || :
+[ $# -ge 1 ] && ☾ server.☾ 1984 || :
 exit 0
 }
 # rm -r /tmp/moon{,moon_wasm_cache} ; mkdir -p /tmp/moon ; cp ~/Projects/moon/Libraries/WebInterface/moon_wasm.zip /tmp/moon ; cd /tmp/moon ; unzip moon_wasm.zip ; mv moon_wasm_cache /tmp/moon_wasm_cache ; { export MOON_TMPDIR="/tmp"; export MOON_CACHEDIR="/tmp/moon_wasm_cache"; export MOON_NO_FORK="1"; export MOON_DISABLE_CUSTOM_ERRORS="1"; export MOON_LOG_IMPORTS="1"; python; }

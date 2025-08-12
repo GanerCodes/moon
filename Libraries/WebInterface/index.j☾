@@ -3,13 +3,14 @@ var py, hist=[ᐦ], hist_p=0;
 © getv      = 󰲡py.globals.get("moon")[x];
 © PEV       = 󰲡getv("PEV")(x);
 © [󷸔,󷸼,󷸓]   = [⠤"󷸔󷸼󷸓"]􊾡(⥌s↦󰲡getv(PEV(s))(x));
-© tofrac    = 󰲡getv("TOFRAC")                (x);
-© flippy    = 󰲡getv("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(x);
-© highlight = 󰲡getv("__highlighter__")       (x);
+© tofrac    = 𝚲getv("TOFRAC")                (⠤𝔸);
+© flippy    = 𝚲getv("UPSIDEDOWNSYNDROME")ᶠˡⁱᵖ(⠤𝔸);
+© highlight = 𝚲getv("__highlighter__")       (⠤𝔸);
+© trop      = 𝚲py.runPython("sys.modulate")  (⠤𝔸);
 
 © safeRunMoon = ⥌val↦py.runPython(☾(‹
 try:
-    𝑓(lambda:"⟦val.replaceAll(⦋/[\\"\n]/g⦌, 󰲡({"\\":"\\\\","\n":"\\n",'"':'\\"'})ₓ)⟧")
+    𝑓(lambda:"⟦val.replaceAll(⦋/[\\"\n]/g⦌,󰲡({"\\":"\\\\","\n":"\\n",'"':'\\"'})ₓ)⟧")
 except Exception as e:
     print("Error:", e)›));
 
@@ -128,7 +129,9 @@ log = 󰲡{
         import moon
         𝑓 = moon.moon_cli(True,False,False)
         globals()['𝑓'] = 𝑓
-        𝑓(lambda:"⨡ text_format")
+        𝑓(lambda:"""⨡ text_format
+                    ⨡ Compiler/op_order_util
+                    sys.modulate = modulate""")
         
         sys.stdout.f = sys.stderr.f = js.log
         
@@ -187,14 +190,16 @@ cli.addEventListener("keydown", 󱟱 ⥌e↦{
         © mac = navigator.platform.includes('Mac') ∧ e.metaKey;
         © oth = e.altKey;
         ¿(mac ∨ oth) {
-            © keys = [⠤mac ?"l.,;/=": "lwsx/="];
+            © keys = [⠤mac ?"l.,;/=<>": "lwsx/=,."];
             ⌾(e.key) {
                 ᐂ keys₀: QSA("div", ets)􋁃(󰲡x.remove()); ⇥;
-                ᐂ keys₁: replace_selection(cli, 󷸔     ); ⇥;
-                ᐂ keys₂: replace_selection(cli, 󷸓     ); ⇥;
-                ᐂ keys₃: replace_selection(cli, 󷸼     ); ⇥;
-                ᐂ keys₄: replace_selection(cli, tofrac); ⇥;
-                ᐂ keys₅: replace_selection(cli, flippy); ⇥;
+                ᐂ keys₁: replace_selection(cli,           󷸔); ⇥;
+                ᐂ keys₂: replace_selection(cli,           󷸓); ⇥;
+                ᐂ keys₃: replace_selection(cli,           󷸼); ⇥;
+                ᐂ keys₄: replace_selection(cli,      tofrac); ⇥;
+                ᐂ keys₅: replace_selection(cli,      flippy); ⇥;
+                ᐂ keys₆: replace_selection(cli, 󰲡trop(x,-3)); ⇥;
+                ᐂ keys₇: replace_selection(cli, 󰲡trop(x, 3)); ⇥;
                 ⊳      : ↪; }
             ↪ ə(e); }
         ¿(e.keyCode ≡ 9) {

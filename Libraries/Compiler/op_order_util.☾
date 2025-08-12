@@ -1,0 +1,10 @@
+⊢_: opords = moon_dir / ‹Builtins/Data/opord› → 
+    B,⠤opords = opords󷹎𝗻
+    mid = opords􀄭􀄻2
+    inv = ℵ(opordsᐵᐵ􀗉B􇴗􀍷ᑅ󷸀ᐸ􀡠 􁌇 Bᐵ􀗉⟞􀍷mid)
+    Bnv = B↨ℵ→􍮕
+    ⊢ modulate(s,t,Δ=✓):
+        ƒ = 󰲡x􀕿B􀟄Δ⭜opords[mid][Bnvₓ]⭝invₓᐒopords[(0􀪭opords􀍿􀗂1)(Δ􀮧⁰⟞₁+t)][Bnv􍪴􊬣]
+        ↪s􀖓􊽺⬤􀌭inv􀡌ᐦ
+    ↪modulate
+⭷ modulate=_
