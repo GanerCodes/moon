@@ -3,7 +3,7 @@ set -e && cd "$(dirname `realpath -s $0`)"
 
 REPO_DIR="../../"
 TMUX_SESSION_NAME="WASMoonHTTP"
-COMMAND="☾ gen.☾"
+COMMAND="sh ./wasm_setup.sh 1"
 
 check_for_updates() {
   cd "$REPO_DIR" || exit 1
