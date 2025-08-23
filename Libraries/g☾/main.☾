@@ -1,4 +1,7 @@
-⨡ cache,Ń,peggle2,peggle2/rgx_golfatron
+ 󰤱
+⨡ cache
+⨡ peggle2
+⨡ peggle2/rgx_golfatron
 HEADER = __dir__ / ‹header.g☾› ⭢ 
 flip = UPSIDEDOWNSYNDROME.flip
 
@@ -30,43 +33,50 @@ REPLACES = 󰦥󰦥󰦥󰦥󰦥
 ↺ continue ⇥ break
 􋐴 tan 􋐳 cos 􋐲 sin 􋑯 log
 ⤈ min ⤉ max ⸓ mod ⬓ floor ⬒ ceil 󷹄 clamp
-󰦥󰦥󰦥󰦥󰦥 󱖔􋋉􌿅􋂝􊿉→⍭󰈲→ᐵ󷹎¹𝘀ᐸ󱖔􋀙
+󰦥󰦥󰦥󰦥󰦥 􀀲􋋉􌿅􋂝􊿉􁀅􀽴ᐵ􀗾¹𝘀ᐸ􁁃􋀙
 
-REPLACES 󷸊| (ℵ(FRAC_CONV)ꟿ⁻󰲣x₀⋄x₁﹕ᴍ󷹜≺÷⭢󷹜)􍮕
+REPLACES 󷸊| (FRAC_CONV ℵ ꟿ⁻󰲣x₀􀊱x₁﹕􀓅􀁭≺􀝪􀠩)􍮕
 
 bp = (⠤*´󷸼,REPLACES⁻) ᴍ rgx_golfatron
 ll = ‹SCRIPTD SCRIPTU SPECIAL›⍭ᐵ⛶⟗␛%
 GRAM = ll 󰛔ᴳᴿᴬᴹ bp
-gram = peggle2(GRAM)
+gram = GRAM peggle2
 
 𝙲𝚂 = 🃌○󷺹󷹕󷺹≠𝘀
 ⊢ w2cb(𝚌): ƒ = ⟨⟨󷺹􍨄≡␛⇒⭜𝙲𝚂(⟞)󷹗∨✓⍮ 󷺻𝙲𝚂(⟞)>⍖⍮ ⍈ 󷺻‹⟦⟞₀ ﹕􍨄⟧{⟦ƒ(⟞₁﹕☾)⟕𝗻→☾⟧}›⟩ 󷸴 ⴳ⟩
            ↪ƒ(𝚌󷹎𝗻󰈲𝘀󰛔ᐦ)⨝𝗻
-⊢ a2c(𝚌): ƒ = ⨝○󰲡x󷹌¹␛⇒ᖘ􍨅󷺻‹𝗻⟦x󰑅ᔨ␛⇒+1⭢⋅𝘀⟧⟦⟞⟧›
-          ↪ (𝚌󷹎𝗻󰈲􊽺󷺹∋␛⇒ ∧ ⟞󰑅ᔨ␛⇒ ≠ ⟞🃌-1)⨝𝗻
-w2cb = w2cb○⊜a2c
+⊢ a2c (𝚌): ƒ = ⨝○󰲡x􀪤¹␛⇒􀥹􍨅󷺻‹𝗻⟦x􀋙ᔨ␛⇒􀓻1􁂇𝘀⟧⟦⟞⟧›
+           ↪𝚌󷹎𝗻󰈲􊽺󷺹∋␛⇒ ∧ ⟞󰑅ᔨ␛⇒ ≠ ⟞🃌-1ᐸ􁋳𝗻
+w2cb = w2cb􀖢􀍗a2c
 
-𝚃,𝔗,𝔗𝔗 = ℵ(T=✓),󷺻Ń(⟞,e=𝚃),󷺻𝔗(⟞.as_txt)
+w2cb(󰦥󰦥󰦥󰦥󰦥
+x ⇒ a
+    b
+c
+󰦥󰦥󰦥󰦥󰦥)☾
+exit
+
+𝚃,𝔗,𝔗𝔗 = ℵ(T=✓),󷺻Ń(⟞,e=𝚃),󷺻𝔗(⟞􋒷)
 mp = 󷺹󷹝ᐵ≤128 ⭜⟞󷹝⭝ ⟞󷹜¹⁶⁺³􍢉⭢+ᵜ‹_›ᐸ→⨝
-fmt_js_ᔐ = ␛\⋄␛$ ⭢󰛔⭠ ␛\␛\⋄␛\␛$
-mkexp, mkgrp = 𝚲Ń(‹expr›, ⠤𝔸), 󰲡Ń(‹grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
+fmt_js_ᔐ = ␛\􀗉␛$ 􀩼 ␛\␛\􀗉␛\␛$
+mkexp,mkgrp = 𝚲Ń(‹expr›,⠤𝔸), 󰲡Ń(‹grp›,𝔗(x₀),⠤𝔸,𝔗(x₁))
 mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
-𝚜 = Ń(␛𝘄, 𝔗(𝘀))
+𝚜 = Ń(␛𝘄,𝘀 𝔗)
 𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›󰌷⍭‹false ...›)ᴍmkopt
 
-⊢ (fcache) transpile_glsl(x,n=∞,comments=✓):
-    ¿comments: ↪transpile_glsl(w2cb(gram(x, ‹main_comments›, remove_trashes=✗).rm(‹comment›).as_txt), n, ✗)
-    󱁕 = gram(x)
+⊢ 🟑(fcache)🟑 transpile_glsl(x,n=∞,comments=✓):
+    ¿comments: ↪transpile_glsl(☾w2cb(gram(x,‹main_comments›,remove_trashes=✗).rm(‹comment›)􋒷), n, ✗)
+    󱁕 = x gram
     ¿n<0: ↪󱁕
     ⊢ (󱁕.ftrp(‹sub sup›⍭, ⬤)) ƒ(󱁕):
-        t = SCRIPT.nrm(󱁕.as_txt)
-        ¿󱁕ᵗ≡‹sub›: ↪ mkgrp(␛[␛], transpile_glsl(t,0))
-        ¡        : ↪ mkexp(𝚍𝚘𝚝, mkvar(t))
+        t = SCRIPT.nrm(󱁕􋒷)
+        ¿󱁕ᵗ≡‹sub›: ↪mkgrp(␛[␛], transpile_glsl(t,0))
+        ¡        : ↪mkexp(𝚍𝚘𝚝, mkvar(t))
     ¿n<1: ↪󱁕
     󱁕.ftrp(‹script󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕₀, pre=✓)
-    󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜, mknum(flip(󱁕.as_txt))))
-    󱁕.ftrp(‹var special›⍭, 󱁕↦󱁕.as_txt≕α∈REPLACES ⭜󱁕.copy(c=⛶𝔗(REPLACES󰃤))⭝ 𝔗(mp(α)))
-    ↪󱁕.as_txt
+    󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜, mknum(flip(󱁕􋒷))))
+    󱁕.ftrp(‹var special›⍭, 󱁕↦󱁕􋒷≕α∈REPLACES ⭜󱁕.copy(c=⛶𝔗(REPLACES󰃤))⭝ 𝔗(mp(α)))
+    ↪󱁕􋒷
 
-goon_header = transpile_glsl(HEADER)
+goon_header = HEADER transpile_glsl
 ⭷ transpile_glsl,goon_header
