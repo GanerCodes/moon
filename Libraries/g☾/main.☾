@@ -2,7 +2,7 @@
 ⨡ cache
 ⨡ peggle2
 ⨡ peggle2/rgx_golfatron
-HEADER = __dir__ / ‹header.g☾› ⭢ 
+HEADER = __dir__/‹header.g☾› → 
 flip = UPSIDEDOWNSYNDROME.flip
 
 GRAM=󰦥󰦥󰦥󰦥󰦥
@@ -43,7 +43,7 @@ GRAM = ll 󰛔ᴳᴿᴬᴹ bp
 gram = GRAM peggle2
 
 𝙲𝚂 = 🃌○󷺹󷹕󷺹≠𝘀
-⊢ w2cb(𝚌): ƒ = ⟨⟨󷺹􍨄≡␛⇒⭜𝙲𝚂(⟞)󷹗∨✓⍮ 󷺻𝙲𝚂(⟞)>⍖⍮ ⍈ 󷺻‹⟦⟞₀ ﹕􍨄⟧{⟦ƒ(⟞₁﹕☾)⟕𝗻→☾⟧}›⟩ 󷸴 ⴳ⟩
+⊢ w2cb(𝚌): ƒ = ⟨⟨󷺹􍨄≡␛⇒⭜𝙲𝚂(⟞)󷹗∨✓⍮ 󷺻𝙲𝚂(⟞)>⍖⍮ ⍈ 󷺻‹⟦⟞₀ ﹕􍨄⟧{⟦ƒ(⟞₁﹕)⟕𝗻⟧}›⟩ 󷸴 ⴳ⟩
            ↪ƒ(𝚌󷹎𝗻󰈲𝘀󰛔ᐦ)⨝𝗻
 ⊢ a2c (𝚌): ƒ = ⨝○󰲡x􀪤¹␛⇒􀥹􍨅󷺻‹𝗻⟦x􀋙ᔨ␛⇒􀓻1􁂇𝘀⟧⟦⟞⟧›
            ↪𝚌󷹎𝗻󰈲􊽺󷺹∋␛⇒ ∧ ⟞󰑅ᔨ␛⇒ ≠ ⟞🃌-1ᐸ􁋳𝗻
