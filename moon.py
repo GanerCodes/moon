@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='kr-vn_2zSFoJBAVu1ZoBbGj_WPzIm7Y67lo6QvVJmEw'
+BOOTSTRAP_HASH='d5tLC_VvQjeY8WUkAQkXzW43niMxp87AaZ-GgzuxaAs'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -331,7 +331,7 @@ def ÁØö(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ,TYPELIKE={áÓó,áÓõ,á�
 (ë:=(lambda x,y:x*y))
 (ð:=(lambda x,y:x/y))
 (ÄÔáô:=áÍä())
-(ÄÊPSH((gcd,lcm,log)),((ÄóÌÐ:=ÄÊPKE(0)[0]),(ÄóÌÑ:=ÄÊPKE(0)[1]),(ÄóÍÀ:=ÄÊPKE(0)[2])),ÄÊDEL(1))[1]
+(ÄÊPSH((gcd,lcm,log,sin,cos,tan)),((ÄóÌÐ:=ÄÊPKE(0)[0]),(ÄóÌÑ:=ÄÊPKE(0)[1]),(ÄóÍÀ:=ÄÊPKE(0)[2]),(ÄóÌÀ:=ÄÊPKE(0)[3]),(ÄóÌÁ:=ÄÊPKE(0)[4]),(ÄóÌÂ:=ÄÊPKE(0)[5])),ÄÊDEL(1))[1]
 class Holder:
     (__slots__:=(("x"),))
     def __init__(áÑÞ,x=ÂÞÅ):

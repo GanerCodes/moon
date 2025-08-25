@@ -26,7 +26,7 @@ comment = ~‹((|(//))[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\
 REPLACES = 󰦥󰦥󰦥󰦥󰦥
 ᗜ void 𝟙 float 𝟚 vec2 𝟛 vec3 𝟜 vec4
 ᖲ bool 𝑖 int ⫰ abs ⋅ *
-✓ true ✗ false ¯ -
+✓ true ✗ false ¯ - ≡ ==
 ÷ / ⭜ ? ⭝ : ↪ return ¿ if ¡ else ⸘ else if
 ≤ <= ≥ >= 􋐼 exp ⴵ sign ∀ for ➰ while
 ↺ continue ⇥ break

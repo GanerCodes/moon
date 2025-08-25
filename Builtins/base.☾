@@ -235,7 +235,7 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
 /´ = 󰲣⦃x/y⦄
 󰔛 = 𝑜()  󰤱 tmp
 
-􋑂,􋑃,􋑯 = gcd,lcm,log
+􋑂,􋑃,􋑯,􋐲,􋐳,􋐴 = gcd,lcm,log,sin,cos,tan
 
 󱀘 Holder: __slots__ = ␛x,
           ⊢__init__(𝕊,x=␀):  𝕊ˣ≔x
