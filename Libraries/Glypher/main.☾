@@ -298,6 +298,8 @@ scrpt_out 󱖔􍡩 script_map
 xcomp_out 󱖔􍡩 c conf_to_xcompose
 style_out 󱖔􍡩 {⠤cℵꟿ󷺹🃌≡1⭜􍭓⟞⋄⟝₁󷺿}𝔍󰄞  {⠤cℵꟿ󷺹,⟝₁󷺿⁺󷺹₁shaᐸᐵᐵ₀ᑀ🃌≡1⭜􍭓⟞ᐸᐸ⨝,⟞₀ ₁ᐸ}𝔍󰄞
 
+(𝚏,𝚙)󷸊ᴍmonospace_font
+
 ⊢ fex(𝚏,s): 𝚏.fontname   = ‹moonfont_⟦s⟧›
             𝚏.familyname = ‹Moon Font ⟦s⟧›
             𝚏.fullname   = ‹Moon Font ⟦s⟧ (based on JuliaMono)›
