@@ -448,7 +448,7 @@
     `[1,2,3] ⨝ 0 ≡ [1,0,2,0,3]`
     `[1,2,3] ⨝ ⋅´ ≡ [1,2,2,6,3]`
     󰤱 docs
-󷰭 󷹎󷹍󷹌 𝚡∨􊽨𝚡 cs⟦01s⟧ split keeping {0,1,∞} consecutive seperators
+󷰭 󷹎󷹍󷹌󷹑 𝚡∨􊽨𝚡 cs⟦01sg⟧ split keeping {0,1,∞,0 (keeping gaps)} consecutive seperators
     ❗ susceptible to change! ❗
     󰤱 docs
 󷰭 ⬓▢⬒ 𝚡󷺤􊽨𝚡 cr⟦aod⟧ round{ low,, high}
