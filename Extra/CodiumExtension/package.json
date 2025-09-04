@@ -1,7 +1,7 @@
 { "name": "moon",
   "displayName": "☾",
   "version": "0.0.1",
-  "publisher": "☾",
+  "publisher": "moon",
   "icon": "☾.png",
   "engines": { "vscode": "^1.50.0" },
   "main": "./main.js",
