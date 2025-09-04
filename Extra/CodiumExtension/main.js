@@ -14,7 +14,7 @@ const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.
 const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
 MOON_PATH = execSync(process.platform === 'win32'
-                        ? 'wsl -e bash -c "☾ --get-dir"'
+                        ? 'wsl -e /usr/bin/env bash -c "$HOME/.local/bin/☾ --get-dir"'
                         : '☾ --get-dir'
                     ).toString().trim();
 SCRP_PATH = `${MOON_PATH}/Builtins/Data/script.map`;
