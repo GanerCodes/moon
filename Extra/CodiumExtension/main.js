@@ -13,10 +13,11 @@ Number.prototype.mod = function(n) { return (this%n + n)%n; };
 const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.end.character];
 const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
-MOON_PATH = execSync(process.platform === 'win32'
-                        ? 'wsl -e /usr/bin/env bash -c "$HOME/.local/bin/☾ --get-dir"'
-                        : '☾ --get-dir'
+const isWin = process.platform === 'win32';
+MOON_PATH = execSync(isWin ? 'wsl -e /usr/bin/env bash -c "$HOME/.local/bin/☾ --get-dir"'
+                           : '☾ --get-dir'
                     ).toString().trim();
+if(isWin) MOON_PATH = MOON_PATH.replace(/^\/mnt\/([a-z])/, (_,d)=>`${d.toUpperCase()}:`);
 SCRP_PATH = `${MOON_PATH}/Builtins/Data/script.map`;
 ORDR_PATH = `${MOON_PATH}/Builtins/Data/opord`;
 
