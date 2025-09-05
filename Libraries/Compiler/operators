@@ -313,6 +313,8 @@
 󷰭 ☾ 𝚡󷺤􊽨𝚡 cp𝕊 print
     "‹hello›☾" ⟶ prints "hello" to stdout
     󰤱 docs
+󷰭 ? 𝚡.   do if valid attribute
+    󰤱 docs
 󷰭 🃌󷸑󷸒 𝚡󷺤􊽨𝚡 c⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆⟧ {cardinality (length),shape,depth}
     𝗜 🃌: Length of arg
         `‹egg›🃌 ≡ 3`

@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='CEM9dH277lPbLjvSJ3iQMbIyj8E06e0-XawI06ElNuc'
+BOOTSTRAP_HASH='5FeI3OJ6fMO-DzFbrl7YXMrfccNjlbkiOYsxjlNghrQ'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -934,7 +934,7 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=((- 1 ))):
                 if (áÑã == ("󷹎")):
                     (r).append(b)
                 elif ((áÑã in ("󷹌󷹑")) or ((áÑã == ("󷹍")) and (not last_v ))):
-                    (r).extend((([b])if(((áÑã == ("󷹑")) or (áÑÿ is ÄÔýò)))else([b,áÐÏ])))
+                    (r).extend((([b])if((áÑÿ is ÄÔýò))else([b,áÐÏ])))
                     (last_v:=True)
                 
             
@@ -1532,6 +1532,9 @@ class ÂÑÖ(áÍÙ):
         
         ÐâÄ(KeyError(("%s ∉ %s, and I have no default value!")%(x,áÑÞ,)))
     
+    def __contains__(áÑÞ,x):
+        return (super()).__contains__(x)
+    
     def __init__(áÑÞ,*áÑË,áØÁ=ÂÞÅ,**áÑÕ):
         (super()).__init__(*áÑË,**áÑÕ)
         if (áØÁ is not ÂÞÅ):
@@ -1781,6 +1784,40 @@ def â(áØÆ,áØÁ=ÂÞÅ):
         return MOD(ÂøÐ,áØÁ=1)(ÁØò((lambda ÂîÓ:((ÂîÓ * áØÁ[((- 1 ))]) + áØÆ)))(ÂÿÇ(áØÁ[0])))
     
     ÂùÆ(False,("what do you meeeeaaaaaannnnnn!?!?!?"))
+
+
+__dir__=(__file__:=áÌî(moon_dir/'Builtins/?.☾')).parent
+class qproxy:
+    (__slots__:=(("v"),("a")))
+    def __init__(áÑÞ,v,a=None):
+        (ÄÊPSH(áÑÞ),ÄÊPSH(("v")),ÄÊPSH(áÑÞ),ÄÊPSH(("a")),ÄÊPSH((v,a)),(setattr(ÄÊPKE(4),ÄÊPKE(3),ÄÊPKE(0)[0]),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)[1])),ÄÊDEL(5))[5]
+    
+    def __call__(áÑÞ,*áÑË,**áÑÕ):
+        return (((áÑÞ).v(*áÑË,**áÑÕ))if(áÓó((áÑÞ).v))else((áÑÞ).a))
+    
+    def __getattr__(áÑÞ,x):
+        return ((getattr((áÑÞ).v,x))if(getattr((áÑÞ).v,("__contains__"))(x))else((áÑÞ).a))
+    
+    def __getitem__(áÑÞ,x):
+        (v:=(áÑÞ).v)
+        if ÁØö(v,áÍÙ):
+            if (x in v):
+                return v[x]
+            
+        elif ÁØö(v,((áÍá | áÍé) | ÁÜÙ)):
+            try :
+                return v[x]
+            except áÍÚ:pass
+        elif hasattr(v,("__getitem__")):
+            try :
+                return v[x]
+            except áÍÚ:pass
+        
+        return (áÑÞ).a
+    
+
+def ÁÂ(áØÆ,áØÁ=ÂÞÅ):
+    return qproxy(áØÆ,((áØÁ)if((áØÁ is not ÂÞÅ))else(None)))
 
 
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/extra_globals.☾')).parent

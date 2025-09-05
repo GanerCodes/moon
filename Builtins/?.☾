@@ -1,0 +1,17 @@
+󱀘 qproxy:
+    __slots__ = ␛v,␛a
+    ⊢ __init__(𝕊,v,a=□):
+        𝕊ᵛ,𝕊ᵃ = v,a
+    ⊢ __call__(𝕊,⠤𝔸,⠶𝕂):
+        ↪𝗙(𝕊ᵛ) ⭜𝕊ᵛ(⠤𝔸,⠶𝕂)⭝ 𝕊ᵃ
+    ⊢ __getattr__(𝕊,x):
+        ↪getattr(𝕊ᵛ,‹__contains__›)(x) ⭜getattr(𝕊ᵛ,x)⭝ 𝕊ᵃ
+    ⊢ __getitem__(𝕊,x):
+        v = 𝕊ᵛ
+        ¿vᐹ𝑑    : ¿x∈v: ↪vₓ
+        ⸘vᐹ𝑙|𝑡|ᔐ:      ↪vₓ
+        ⸘hasattr(v,‹__getitem__›):
+             ↪vₓ
+        ↪𝕊ᵃ
+
+⊢?´(𝚡,𝚜=␀): ↪qproxy(𝚡,𝚜≇␀⭜𝚜)

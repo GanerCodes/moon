@@ -9,6 +9,7 @@
     ⊢ __getitem__(𝕊,x): ¿x∈𝕊: ↪𝑑.__getitem__(𝕊,x)
                         ¿𝕊.hasdef(): ↪𝕊.getdef(x)
                          KeyError(‹⟦x⟧ ∉ ⟦𝕊⟧, and I have no default value!›)
+    ⊢ __contains__(𝕊,x): ↪super().__contains__(x)
     ⊢ __init__(𝕊,⠤𝔸,𝚜=␀,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
                              ¿𝚜≇␀: 𝕊.setdef(𝚜)
     __repr__ = 𝕊↦‹⟦𝕊.__class__.𝐶𝑛⟧⟦0∈h≔𝕊.__dict__ ⭜‹[⟦h₀∨␛ᐦ⟧]›⭝ ᐦ⟧(⟦𝕊.itemsꟿ󰲣‹⟦x⟧=⟦y⟧›󰅂⭢⨝␛,𝘀⟧)›
