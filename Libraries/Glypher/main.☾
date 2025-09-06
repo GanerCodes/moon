@@ -111,7 +111,8 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ≺⊀≼⋠≾⋨⪱≻⊁≽⋡≿⋩⪲                          ⁆
       ⁅⟦⁅eq⟦aeft.q⁅i⟦<>⟧⁆⟧⁆⟧                    ⟶
             ≈󷸅≝≜󷹀≟   ⪟⪠                          ⁆
-      ⁅u⟦⁅⟦ad⟧⟦𝕊/.|o⟧⁆⟧ ⟶ ⊇⊉⪾⫐⟄ ⊆⊈⪽⫏⟃            ⁆
+      ⁅u⟦⁅⟦ad⟧⟦⁅_⟦𝕊/⟧⁆.|o⟧⁆⟧ ⟶ ⊇⊉⪾⫐⟄ ⊆⊈⪽⫏⟃       ⁆
+      
       ⁅⟦⁅<|⟦|ᐦ⟧⁆⁅-|⁆⁅~|⁆⁅|-⁆⁅⟦|ᐦ⟧|>⁆⟧𝕊 ⟶ ᗕᗏ⟞⦚⟝ᗌᗒ ⁆⟧
 
 ⟨3f4|3f412|3f4|1⟩⟦⁅NL⁆⁅SP⁆⁅HT⁆⁅DEL⁆⁅ESC⁆⁅NUL⁆⁅ENQ⁆⁅SOH⁆⁅STX⁆⁅ETX⁆⁅EOT⁆⁅ACK⁆⁅BEL⁆⁅BS⁆⁅LF⁆⁅VT⁆⁅FF⁆⁅CR⁆⁅SO⁆⁅SI⁆⁅DLE⁆⁅DC1⁆⁅DC2⁆⁅DC3⁆⁅DC4⁆⁅NAK⁆⁅SYN⁆⁅ETB⁆⁅CAN⁆⁅EM⁆⁅SUB⁆⁅F_S⁆⁅GS⁆⁅RS⁆⁅US⁆⁅ATM⁆⟧ ⟶ ␤␛␠␉␡␛␛␀␅␁␂␃␄␆␇␈␊␋␌␍␎␏␐␑␒␓␔␕␖␗␘␙␚␜␝␞␟󰵇
@@ -226,7 +227,7 @@ SCRIPT_DEPTH = 2
 CHECK_REPOS       = ✗
 NERDFONT          = ✗
 CUSTOM_SYMBOLS    = ✓
-COPY_OUT_XCOMPOSE = ✓ ⭜ ‹/c/X11_Configs/.XCompose›𝐩
+COPY_OUT_XCOMPOSE = ✓ ⭜ ‹/c/SystemConf/.XCompose›𝐩
 COPY_OUT_FONT_DIR = ✓ ⭜ ‹/c/Fonts›𝐩
 OUTPUT_EXTS       = ‹otf ttf woff2›⍭
 scrpt_out = moon_dir/‹Builtins/Data/script.map›𝐩

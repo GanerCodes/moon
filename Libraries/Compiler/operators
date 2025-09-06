@@ -47,13 +47,14 @@
     `2∈{1,2,3} →≡ ✓`
     `␛a ∈ ‹hia› →≡ ✓`
     `5 ∈ [2,3,2] →≡ ✗`
-󷰟 ⊂⊃⊄⊅󰁖 𝚡∧𝚢 u⟦⁅⟦da⟧𝕊⁆⁅⟦da⟧/⁆⟧ {,,not ,not }subset of or equal to {right,left,right,left}
-    𝗜 ⊂ 𝗜
+󷰟 ⊃⊅⊂⊄󰁖 𝚡∧𝚢 u⟦ad⟧⟦𝕊/⟧ {,not ,,not }subset of or equal to {left,left,right,right}
+    𝗜 ⊃ 𝗜
     `[4,2] ⊂ 10⭥ →≡ ✓`
     `[1,2] ⊂ [1,2] →≡ ✓`
     Works on non-set objects as well
     ❗ susceptible to change when some args aren't sets ❗
-󷰟 ⊊⊋󷹲󷹳󰁖 𝚡∧𝚢 n⟦⁅⟦da⟧𝕊⁆⁅⟦da⟧/⁆⟧ {,,not ,not }subset of {but not,but not,but possibly,but possibly} equal to {right,left,right,left}
+󷰟 ⊋⊊󷹳󷹲󰁖 𝚡∧𝚢 un⟦⁅⟦ad⟧𝕊⁆⁅⟦ad⟧/⁆⟧ {,,not ,not }proper subset of {left,right,left,right}
+    𝗜 ⊋ 𝗜
     `[1] ⊊ [1,2] →≡ ✓`
     `[1] 󷹲 [1,2] →≡ ✗`
     `[1,2] ⊊ [1,2] →≡ ✗`
