@@ -1,6 +1,6 @@
-⊢⫚´(x,y): ¿xᐹ𝑖∧yᐹ𝑖: ↪x!⁻ʸ ⹏←y!
-          ¿x󷹵𝗜∧yᐹ𝑖: ↪x!⁻ʸ / y!
-          ¿xᐹℂ∧yᐹℂ: ↪x!   / y!⋅(x-y)!
+⊢⫚´(x,y): ¿xᐹ𝑖∧yᐹ𝑖: ↪x􀌔⁻ʸ 􀝫 y􀌔
+          ¿x󷹵𝗜∧yᐹ𝑖: ↪x􀌔⁻ʸ 􀝪 y􀌔
+          ¿xᐹℂ∧yᐹℂ: ↪x􀞸   􀾿 y􀞸􀦾x􀊪y􀕦
           ¿xᐹ𝗜∧yᐹℂ: yᐹ𝑖∧y≥0 ⨳ ‹can't choose ⟦y⟧ things from a list›
                     ¿x🃌<y: ↪⍁
                     ¿¬y: ↪⍁􍨅
