@@ -76,6 +76,12 @@ const fileRun = 𝐸 => {
     exec(`forgor extrunner "${fpat}"`); };
 fileRun.manual = true;
 
+const wall = 𝐸 => {
+    𝐸.selections = 𝐸.selections.map(𝔖𝔏)
+                    .map(([αl,αc,βl,βc]) => [𝔏𝔖(αl,αc,αl,αc),𝔏𝔖(βl,βc,βl,βc)])
+                    .flat(1); };
+wall.manual = true;
+
 const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                   sub: s=>[...s].map(c=>SUB[c]??c).join(''),
                   nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
@@ -86,11 +92,11 @@ const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                  set3: s=>mapS(s, 0,- 3),
                 set10: s=>mapS(s, 0,-10),
                 set17: s=>mapS(s, 0,-17),
-                align, dirOpener, fileRun }
+                wall, align, dirOpener, fileRun }
 // 󰤱 generalized upper/lower/swapcase, switching alphabets
 
-const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])                ];
-const cf = (𝐸,l,c) => [l,   part([...𝐸.document.lineAt(l).text],c)[0] .join('').length];
+const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])               ];
+const cf = (𝐸,l,c) => [l,   part([...𝐸.document.lineAt(l).text],c)[0].join('').length];
 const tin = (𝐸,𝚜,ƒ) => { 𝚜 = ƒ( [...fc(𝐸,𝚜[0],𝚜[1]),...fc(𝐸,𝚜[2],𝚜[3])]);
                          return [...cf(𝐸,𝚜[0],𝚜[1]),...cf(𝐸,𝚜[2],𝚜[3]) ]; }
 const a1 = (𝐸,𝚜) => tin(𝐸,𝚜,𝚜=>[𝚜[0],𝚜[1],𝚜[2],𝚜[3]+1]);
