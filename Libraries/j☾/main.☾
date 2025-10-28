@@ -34,10 +34,10 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
     ᔐ_basic_sub = ~‹\\.›
     
     󱀝_inj   = str ∨ 󱀝_code
-    󱀝_pairk = ⠶󱀝_inj ∨ (fix:~‹[^⠤}\n\t :]+›)
-    󱀝_pairv = ⠶󱀝_inj ∨ (fix:~‹[^}⍮]+›      )
-    󱀝_ə_typ = ⠶󱀝_inj ∨ (fix:~‹[^[{\n\t: ]+›) ∨ ✓
-    󱀝_ə_nam = ⠶󱀝_inj ∨ (fix:~‹[^[{\n\t ]+› )
+    󱀝_pairk = ⠶󱀝_inj ∨ (fix:~‹[^⟧⠤}\n\t :]+›)
+    󱀝_pairv = ⠶󱀝_inj ∨ (fix:~‹[^⟧}⍮]+›      )
+    󱀝_ə_typ = ⠶󱀝_inj ∨ (fix:~‹[^⟧[{\n\t: ]+›) ∨ ✓
+    󱀝_ə_nam = ⠶󱀝_inj ∨ (fix:~‹[^⟧[{\n\t ]+› )
     󱀝_ə_val = ⠶󱀝_inj ∨ 󱀝_brack
     󱀝_kid   = ⠶󱀝_inj ∨ 󱀝
     󱀝_pair  = 󱀝_pairk 󰆴(CLN ∨ 𝗪) 󱀝_pairv ∨ (󱀝_pairm = 󰆴('⠤' 𝗪?) main)
@@ -51,7 +51,7 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
     
     𝘄 = ~‹[ \t]+›
     𝗪 = ~‹[ \t\n]+›
-    comment = ~‹((|(//))[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
+    comment = ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
 󰦥󰦥󰦥󰦥󰦥
 
 reps = 󰦥󰦥󰦥󰦥󰦥
@@ -168,15 +168,14 @@ joon_header = transpile(HEADER)
         transpile(x)☾
         ␛←⋅50→☾􋋉􋋉
     
-    test(󰦥󰦥󰦥󰦥󰦥
+    🟑 test(󰦥󰦥󰦥󰦥󰦥
     ↪ 󱀝 {𝐶 fr fas tac⍮ 𝑆 min-width:80%;max-width:97%} [
           󱀝 {𝐶 fc fjc w2 h} [
               󱀝 txt ‹Connected›
-              󱀝:α div {𝐶 ha⍮ 𝑆 min-height:30px;border:1pxsolid#FFF} []
+              󱀝:α div {𝐶 ha⍮ 𝑆 min-height:30px;border:1px solid #FFF} []
           ]
       ];
     󰦥󰦥󰦥󰦥󰦥)
-    exit
     
     test(󰦥󰦥󰦥󰦥󰦥
     f=
@@ -235,19 +234,6 @@ joon_header = transpile(HEADER)
     󰦥󰦥󰦥󰦥󰦥)
 
     test(󰦥󰦥󰦥󰦥󰦥
-        const myepicelement = 󱀝 div [
-            󱀝 h4 [
-                ‹sonic i have an announcement, 2 pluz 2 is ⟦2⋅2 ⎔ 222⟧›
-                󱀝 h6{𝑆:‹color:red;›} ‹hi im red im ¬blue›
-            ]
-            
-            󱀝 video{src:https://website.gov/cool.mp4 ⍮ 𝐶:coolvideo ⍮ 𝑆:width:1000px; height:1000px;}
-            
-            󱀝:joe div
-        ];
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
         󱀝 [
             󱀝 {𝐶 fieldEntry} [
                 󱀝:α input {𝑃𝐻 SSID}
@@ -257,4 +243,15 @@ joon_header = transpile(HEADER)
             ]
             󱀝:β button {𝐶 fieldButton⍮ onclick ⟦𝚲☾("hi", α, β)⟧} 󷺗
         ]
+    󰦥󰦥󰦥󰦥󰦥) 🟑
+    
+    test(󰦥󰦥󰦥󰦥󰦥
+        © myepicelement = 󱀝 div [
+            󱀝 h4 [
+                ‹sonic i have an announcement, 2 pluz 2 is ⟦2⋅2 - 222⟧›
+                󱀝 h6{𝑆:‹color:red;›} ‹hi im red im ¬blue›
+            ]
+            󱀝 video{src:https://website.gov/cool.mp4 ⍮ 𝐶:coolvideo ⍮ 𝑆:width:1000px; height:1000px;}
+            󱀝:joe div
+        ];
     󰦥󰦥󰦥󰦥󰦥)

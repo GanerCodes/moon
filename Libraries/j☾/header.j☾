@@ -46,16 +46,27 @@ QSA = ⥌x,e=document↦𝑙(e.querySelectorAll(x));
        ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
        ⸓: 󰲥𝔏𝔖􋀫(x, y(𝔏𝔖􋀭(x, z))) }
 
+isStr     = 󰲡typeof x ≅ "string"
+isArray   = 󰲡x instanceof Array
+isElement = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;  
+
  󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
+chainIntoElements = ⥌x,P↦{
+    ¿(¬(isArray(x) || isStr(x) || isElement(x)))
+        x = [];
+    ¡   ¿(¬isArray(x)) x = [x];
+        x = x􊾡(⥌𝚎↦isStr(𝚎) ⭜󰈙.createTextNode(𝚎)⭝ 𝚎);
+    ¿(P≅󱣩) ↪x
+    P􍪙(⠤x);
+    ↪P; }
+
 mkə = ⥌name, attrs, kids↦{
     © remaps = { NAME:"T", 𝑃𝐻:"placeholder", 𝑇:"type", 𝑆:"style", 𝐼:"id", 𝐶:"className" };
+    kids = chainIntoElements(kids);
+    ¿(𝗙(name)) ↪name(attrs, ⠤kids)
     ¿(name≅✗) name = "div";
-    ⎉ ə = document.createElement(name);
+    ⎉ ə = 󰈙.createElement(name);
+    ə􍪙(⠤kids)
     ¿(attrs) ∀(⎉ [k,v] ⎔ 𝒪(attrs)) əᵣₑₘₐₚₛ􊬶﹖﹖ₖ = v;
-    ¿(typeof kids ≅ "string") ə.innerText = kids; 
-    ⸘(kids instanceof Array) kids.forEach(⥌𝚎↦{
-        ¿(typeof 𝚎 ≅ "string") 𝚎 = document.createTextNode(𝚎);
-        ə.appendChild(𝚎);
-    });
      󰤱 htmlelements/function type/general objects/etc
-    ↪ ə; };
+    ↪ə; };
