@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='4wc6Jv5r4jP-goRwe0b6k-hiwLAgLjcZhWbW-30I1a0'
+BOOTSTRAP_HASH='NTQpl-6xVmN6Zb_q0eH2JnOwe0f-wL9tk5wyLBVVwc0'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -243,7 +243,7 @@ def ÂùÆ(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
         (ÄÊPSH((True,("Assertion failed"))),((áÓÔ:=ÄÊPKE(0)[0]),(áÓà:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     
     try :
-        (áÓà:=("%s ⟨%s⟩%s")%(áÓà,áØÆ,((((":") + ÂÞÅCAT(áØÇ,ÁÜÙ)))if((áØÇ is not ÂÞÅ))else(ÁØã)),))
+        (áÓà:=("%s ⟨%s⟩%s")%(áÓà,áØÆ,((((" - ") + ÂÞÅCAT(áØÇ,ÁÜÙ)))if((áØÇ is not ÂÞÅ))else(ÁØã)),))
         Âçß(termclr(áÓà,((("f22"))if(áÓÔ)else(("ff2")))))
     except áÍÚ:pass
     if áÓÔ:
