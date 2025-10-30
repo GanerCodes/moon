@@ -20,7 +20,8 @@
     __or__   = ⥌𝕊,x↦𝕊.copy()(x)
     ⊢ __and__(𝕊,y): r = ℵ
                     ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
-                    ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
+                    ¿y􀝀𝑠􀊤𝑙􀊤𝑡: ∀k  ⬠⦉⠤y⦊     ¿k∈𝕊: rₖ=𝕊ₖ
+                    ¡       : ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
                     ↪r
     __setattr__ = 𝑑.__setitem__
     __getattr__ =   __getitem__
