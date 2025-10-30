@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='uYRTEzFIWqR-wANDjsL7aD676PZeSfp6qG8wvjTtJfU'
+BOOTSTRAP_HASH='Mc8NFT6OcqTVX7WbhjNVNawK2bpsj_sOj5ITcQADaGU'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -2200,7 +2200,7 @@ def EXEC_NATIVE(áÖï,*áÑË,**áÑÕ):
     try :
         exec(áÖï,*áÑË,**áÑÕ)
     except áÍÚ as Ïã:
-        Âçß(("Exec failed! Writing to %s")%((o:=ÂÞÅCAT(("/tmp/dmp"),áÌî)),))
+        Âçß(("Exec failed! Writing to %s")%((o:=ÂÞÅCAT(("/tmp/%s")%(Âøî(ÐâÇ(abc,NULL)),),áÌî)),))
         MOD(ÄÕéý,áØÁ=ÐØì)(o,áÖï)
         raise Ïã
     
