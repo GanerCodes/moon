@@ -18,6 +18,10 @@
     __call__ = 𝕊↦𝑑.update(𝕊,⠤𝔸,⠶𝕂)►𝕊
     __bool__ = 𝕊↦𝕊🃌>0
     __or__   = ⥌𝕊,x↦𝕊.copy()(x)
+    ⊢ __and__(𝕊,y): r = ℵ
+                    ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
+                    ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
+                    ↪r
     __setattr__ = 𝑑.__setitem__
     __getattr__ =   __getitem__
     ⊢ __getstate__(𝕊): ¿𝕊.hasdef(): ↪𝑑(𝕊),𝕊.getdef()
