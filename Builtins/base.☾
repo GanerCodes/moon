@@ -185,10 +185,9 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
     ¿𝚜≅󰔛´: 𝖻,𝗆 = 𝚍,‹Deprecation ⟦𝚍⭜"Error"⭝"Warning"⟧›
     ⸘𝚜≅~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠⭜" [as Error]"⭝ᐦ⟧›
     ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›
-    𝗆 = ‹⟦𝗆⟧! ⟨𝓿=⟦𝚡 repr⟧⟩⟦𝚢≇␀⭜𝘀+𝚢⭝ᐦ⟧›
-     𝗆 = termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)
-    𝗆☾
-    ¿𝖻: ⦃raise AssertionError⦄
+     𝗆 = ‹⟦𝗆⟧ ⟨⟦𝚡⟧⟩⟦𝚢􀋒␀􇀦􊾖␛:􀊩𝚢 ᔐ⟧›
+      termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)☾
+    ¿𝖻: ⦃raise ⦃𝗆 AssertionError⦄⦄
     ↪𝚡
 
 ⊢ (OPWRAP_(⠤‹󰔶›)) (t,ƒ=␀,𝑔=␀,𝚜=𝑒):

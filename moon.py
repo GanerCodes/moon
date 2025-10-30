@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='uHo8FNxLg7ifumzQ5Ocb1KsohMh7ggBw9QM2Uiwu3s0'
+BOOTSTRAP_HASH='4wc6Jv5r4jP-goRwe0b6k-hiwLAgLjcZhWbW-30I1a0'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -242,13 +242,12 @@ def ÂùÆ(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     else :
         (ÄÊPSH((True,("Assertion failed"))),((áÓÔ:=ÄÊPKE(0)[0]),(áÓà:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     
-    (áÓà:=("%s! ⟨𝓿=%s⟩%s")%(áÓà,ÂÞÅCAT(áØÆ,repr),((((" ") + áØÇ))if((áØÇ is not ÂÞÅ))else(ÁØã)),))
     try :
-        (áÓà:=termclr(áÓà,((("f22"))if(áÓÔ)else(("ff2")))))
+        (áÓà:=("%s ⟨%s⟩%s")%(áÓà,áØÆ,((((":") + ÂÞÅCAT(áØÇ,ÁÜÙ)))if((áØÇ is not ÂÞÅ))else(ÁØã)),))
+        Âçß(termclr(áÓà,((("f22"))if(áÓÔ)else(("ff2")))))
     except áÍÚ:pass
-    Âçß(áÓà)
     if áÓÔ:
-        raise AssertionError
+        raise ÂÞÅCAT(áÓà,AssertionError)
     
     return áØÆ
 
