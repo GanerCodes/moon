@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='t8iEE1Gu4b9Rk7oEmH_rcWIW9NyiuP1WBUJHA5XP0bU'
+BOOTSTRAP_HASH='30wN84RTM0YSfv6WuuvKsvIYQg2b5W0vGa8PJ4NlFPA'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -2075,14 +2075,6 @@ class ÅÒ:
         
         return R
     
-    def flat(ÄÕÒü,Æå,áÑÂ=True):
-        (C:=[])
-        for c in(ÄÕÒü):
-            ((((C).append)if((((c).e).T or (not Æå((c:=(((c).flat(Æå))if(áÑÂ)else(c)))) )))else((C).extend)))(c)
-        
-        (ÄÊPSH(ÄÕÒü),ÄÊPSH(("c")),ÄÊPSH(C),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
-        return ÄÕÒü
-    
     def rm(ÄÕÒü,Æå,not_T=True):
         if ÁØö(Æå,ÁÜÙ):
             (Æå:=(lambda ÄÕÒü,t=Æå:((ÄÕÒü).t == t)))
@@ -2095,6 +2087,19 @@ class ÅÒ:
                 (ÄÕÒü[i]).rm(Æå,not_T)
             
         
+        return ÄÕÒü
+    
+    def sep(ÄÕÒü,*áÑË,**áÑÕ):
+        (M:=(ÄÕÒü).find(*áÑË,**áÑÕ))
+        (ÄÕÒü).rm(CURR((lambda ÂîÓ,ÂîÒ:(ÂÞÅCAT(ÂîÓ,id) in ÂîÒ)),frozenset(Áÿú(M,id))))
+        return M
+    
+    def flat(ÄÕÒü,Æå,áÑÂ=True):
+        (C:=[])
+        for c in(ÄÕÒü):
+            ((((C).append)if((((c).e).T or (not Æå((c:=(((c).flat(Æå))if(áÑÂ)else(c)))) )))else((C).extend)))(c)
+        
+        (ÄÊPSH(ÄÕÒü),ÄÊPSH(("c")),ÄÊPSH(C),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
         return ÄÕÒü
     
     def __pos__(ÄÕÒü):

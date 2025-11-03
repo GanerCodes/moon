@@ -50,15 +50,18 @@
                                     ¿do≔ƒ(󱁕)   : R.append(󱁕)
                                     ¿do∧¬pre   : ∀c⬠󱁕: c.find(ƒ,✗,not_T,R)
                                     ↪R
-     ⊢ flat(󱁕,ƒ,𝔯=✓): C = []
-                      ∀c⬠󱁕: (cᵉ ᵀ ∨ ¬ƒ(c≔⬅𝔯⭜c.flat(ƒ)⭝c) ⭜C.append⭝ C.extend)(c)
-                      󱁕ᶜ = C
-                      ↪󱁕
      ⊢ rm(󱁕,ƒ,not_T=✓): ¿ƒᐹᔐ: ƒ = ⥌󱁕,t=ƒ↦󱁕ᵗ≡t
                         ∀i,x⬠󱁕↨﹕﹕􍨄¿not_T󷺒xᵉ ᵀ:
                             ¿ƒ(x): 󰆴 󱁕ᵢ
                             ¡    : 󱁕ᵢ.rm(ƒ,not_T)
                         ↪󱁕
+     ⊢ sep(󱁕,⠤𝔸,⠶𝕂): M = 󱁕.find(⠤𝔸,⠶𝕂)
+                     󱁕.rm(󷺹id􀉧ᑅfrozenset(M􀉳id))
+                     ↪M
+     ⊢ flat(󱁕,ƒ,𝔯=✓): C = []
+                      ∀c⬠󱁕: (cᵉ ᵀ ∨ ¬ƒ(c≔⬅𝔯⭜c.flat(ƒ)⭝c) ⭜C.append⭝ C.extend)(c)
+                      󱁕ᶜ = C
+                      ↪󱁕
      ⊢ __pos__(󱁕): 𝚛 = 󷺗
                    ¿󱁕ᵉ ᵀ: ↪󱁕ᵗ
                    𝚀 = 𝔡𝔮(󱁕ᶜ)
