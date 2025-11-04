@@ -35,7 +35,7 @@ ipv4 = 󷺹 ᑀ􀗀8⟝ 􀠐 0xFFᐛ 4􀡈􁂁 􁋳␛.
             𝕊.wfile.flush
     ↪⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port),𝔖), 󷺹.serve_forever)
 
-⭷ ipv4,HTTP_Server,transpile,transpile_dir,joon_header
+⭷ ipv4,HTTP_Server,transpile_dir,transpile_joon,joon_header
 
 ¿__name__≡‹__main__›:
     ⊢ server(𝚖,𝚙,𝙷,𝚎):

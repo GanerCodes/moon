@@ -1,0 +1,118 @@
+⎊ᴾ 𝚍 display
+⎊ᴾ 𝚃 transition
+⎊ᴾ 𝚃𝚏 transform
+⎊ᴾ 𝚌 color
+⎊ᴾ 𝚌𝚋 background-color
+⎊ᴾ 𝚊𝚛 aspect-ratio
+⎊ᴾ 𝚖𝚙 cursor
+⎊ᴾ 𝚝𝚊 text-align
+⎊ᴾ 𝚋  border
+    ⎊ᴾ 𝚋𝚝 border-top
+    ⎊ᴾ 𝚋𝚋 border-bottom
+    ⎊ᴾ 𝚋𝚕 border-left
+    ⎊ᴾ 𝚋𝚛 border-right
+    ⎊ᴾ 𝚋𝚜 border-style
+    ⎊ᴾ 𝚋𝚛 border-radius
+⎊ᴾ 𝚠 width
+    ⎊ᴾ 𝚠≥ min-width
+    ⎊ᴾ 𝚠≤ max-width
+⎊ᴾ 𝚑 height
+    ⎊ᴾ 𝚑≥ min-height
+    ⎊ᴾ 𝚑≤ max-height
+⎊ᴾ 𝚖 margin
+    ⎊ᴾ 𝚖𝚝 margin-top
+    ⎊ᴾ 𝚖𝚋 margin-bottom
+    ⎊ᴾ 𝚖𝚕 margin-left
+    ⎊ᴾ 𝚖𝚛 margin-right
+⎊ᴾ 𝚙 padding
+    ⎊ᴾ 𝚙𝚝 padding-top
+    ⎊ᴾ 𝚙𝚋 padding-bottom
+    ⎊ᴾ 𝚙𝚕 padding-left
+    ⎊ᴾ 𝚙𝚛 padding-right
+⎊ᴾ 𝚏 flex
+    ⎊ᴾ 𝚏𝚍 flex-direction
+    ⎊ᴾ 𝚏𝚠 flex-wrap
+    ⎊ᴾ 𝚏𝚐 flex-grow
+    ⎊ᴾ 𝚏𝚜 flex-shink
+⎊ᴾ 𝚐 gap
+    ⎊ᴾ 𝚐x gap-row
+    ⎊ᴾ 𝚐y gap-col
+
+ aspect ratio
+    ⎊ 𝚊𝚛1 ∣ 𝚊𝚛 1
+ margin
+    ⎊ 𝚖0  ∣ 𝚖 0px
+    ⎊ 𝚖a  ∣ margin auto
+    ⎊ 𝚖𝚝a ∣ margin-top auto
+    ⎊ 𝚖𝚋a ∣ margin-bottom auto
+    ⎊ 𝚖𝚕a ∣ margin-left auto
+    ⎊ 𝚖𝚛a ∣ margin-right auto
+ padding
+    ⎊ 𝚙0 ∣ 𝚙 0px
+ width
+    ⎊ 𝚠a  ∣ 𝚠   auto
+    ⎊ 𝚠   ∣ 𝚠    100%
+    ⎊ 𝚠34 ∣ 𝚠     75%
+    ⎊ 𝚠23 ∣ 𝚠 66.665%
+    ⎊ 𝚠2  ∣ 𝚠     50%
+    ⎊ 𝚠3  ∣ 𝚠 33.333%
+    ⎊ 𝚠4  ∣ 𝚠     25%
+    ⎊ 𝚠5  ∣ 𝚠     20%
+ height
+    ⎊ 𝚑a  ∣ 𝚑   auto
+    ⎊ 𝚑   ∣ 𝚑    100%
+    ⎊ 𝚑34 ∣ 𝚑     75%
+    ⎊ 𝚑23 ∣ 𝚑 66.665%
+    ⎊ 𝚑2  ∣ 𝚑     50%
+    ⎊ 𝚑3  ∣ 𝚑 33.333%
+    ⎊ 𝚑4  ∣ 𝚑     25%
+    ⎊ 𝚑5  ∣ 𝚑     20%
+ flex
+    ⎊ 𝚏 ∣ 𝚍 flex
+     flex ordering
+        ⎊ 𝚏LR ∣ 𝚏; 𝚏𝚍 row
+        ⎊ 𝚏RL ∣ 𝚏; 𝚏𝚍 row-reverse
+        ⎊ 𝚏TB ∣ 𝚏; 𝚏𝚍 column
+        ⎊ 𝚏BT ∣ 𝚏; 𝚏𝚍 column-reverse
+     flex wrapping
+        ⎊ 𝚏𝚠  ∣ 𝚏; 𝚏𝚠 wrap
+        ⎊ 𝚏𝚠r ∣ 𝚏; 𝚏𝚠 wrap-reverse
+     size of individual item
+         flex grow
+            ⎊ 𝚏𝚐1 ∣ 𝚏𝚐 1
+            ⎊ 𝚏𝚐2 ∣ 𝚏𝚐 2
+            ⎊ 𝚏𝚐3 ∣ 𝚏𝚐 3
+         flex shrink
+            ⎊ 𝚏𝚜1 ∣ 𝚏𝚜 1
+            ⎊ 𝚏𝚜2 ∣ 𝚏𝚜 2
+            ⎊ 𝚏𝚜3 ∣ 𝚏𝚜 3
+ align primary axis
+    ⎊ 𝚊𝙿s ∣ justify-content flex-start
+    ⎊ 𝚊𝙿c ∣ justify-content center
+    ⎊ 𝚊𝙿e ∣ justify-content flex-end
+    ⎊ 𝚊𝙿b ∣ justify-content space-between
+    ⎊ 𝚊𝙿a ∣ justify-content space-around
+    ⎊ 𝚊𝙿e ∣ justify-content space-evenly
+ align per secondary axis
+    ⎊ 𝚊𝚜s  ∣ align-items flex-start
+    ⎊ 𝚊𝚜c  ∣ align-items center
+    ⎊ 𝚊𝚜e  ∣ align-items flex-end
+    ⎊ 𝚊𝚜st ∣ align-items stretch
+    ⎊ 𝚊𝚜bl ∣ align-items baseline
+     for an individual item
+        ⎊ 𝚊𝚒𝚜s  ∣ align-self flex-start
+        ⎊ 𝚊𝚒𝚜c  ∣ align-self center
+        ⎊ 𝚊𝚒𝚜e  ∣ align-self flex-end
+        ⎊ 𝚊𝚒𝚜st ∣ align-self stretch
+        ⎊ 𝚊𝚒𝚜bl ∣ align-self baseline
+ align entire secondary axis
+    ⎊ 𝚊𝚂s  ∣ align-content flex-start
+    ⎊ 𝚊𝚂c  ∣ align-content flex-center
+    ⎊ 𝚊𝚂e  ∣ align-content flex-end
+    ⎊ 𝚊𝚂b  ∣ justify-content space-between
+    ⎊ 𝚊𝚂st ∣ justify-content stretch
+    ⎊ 𝚊𝚂a  ∣ justify-content space-around
+ text align
+    ⎊ 𝚝𝚊l ∣ 𝚝𝚊 left
+    ⎊ 𝚝𝚊c ∣ 𝚝𝚊 center
+    ⎊ 𝚝𝚊r ∣ 𝚝𝚊 right

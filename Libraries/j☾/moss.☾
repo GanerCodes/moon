@@ -1,0 +1,98 @@
+⨡ cache
+⨡ peggle2
+⨡ peggle2/gram_tools
+
+gram = 󰦥󰦥󰦥󰦥󰦥
+main = (󰆴𝘄 ∨ 󰆴comment ∨ css_prop_key_alias ∨ rule_alias_header ∨ var_def ∨ line ∨ 󰆴(mark_nest ∨ mark))*
+
+css_prop_key_alias = 󰆴"⎊ᴾ" 󰆴𝘄? ⠶name 󰆴𝘄? ƨ(~‹[^\n]+›)
+rule_alias_header = 󰆴"⎊" 󰆴𝘄? ⠶name 󰆴𝘄? css_rule_header?
+general = ~‹[^;∣\n]+›
+
+line = (⠶general 󰆴(mark ~‹[ \t]*›))* ⠶general ∨ ⠶general
+var_def = ⠶name 󰆴(𝘄? '≔') str_strip
+css_rule_header = (⠶nrm_strip ∨ multi)+
+css_prop = (    (css_prop_key = ⠶name)
+                󰆴𝘄?
+                (css_prop_val = (interp ∨ ⠶nrm_strip)+))
+            ∨ 
+                (css_rule_alias_lookup = ⠶name 󰆴𝘄?)
+
+multi = 󰆴'«' 󰆴𝘄? ((⠶name) 󰆴𝘄?)* 󰆴'»'
+􋐎 multi = 󰆴'«' 󰆴𝘄? ((multi ∨ ⠶name) 󰆴𝘄?)* 󰆴'»'
+interp = 󰆴('⦑' 𝘄?) ⠶name 󰆴(𝘄? '⦒')
+
+str_strip = 󰆴𝘄? ƨ((¬(~‹[ \t]*(\n|\Z)›) (𝘄 ∨ ~‹[^ \t\n]+›))+) 󰆴𝘄?
+nrm_strip = ƨ((¬(~‹[ \t]*(\n|\Z)›) (𝘄 ∨ name))+) 󰆴𝘄?
+
+name = ƨ(~‹[^«»⦑⦒∣; ]+›)
+mark = (󰆴";" ✓ 󰆴~‹[ \t]*›)
+mark_nest = (󰆴"∣" ✓)
+
+𝘄 = ~‹[ \t\n]+›
+comment = 󰆴~‹[ \t]*› ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))› 󰆴~‹[ \t]*›
+󰦥󰦥󰦥󰦥󰦥 peggle2
+
+⊢ add_blocks(󱁕,start,scan=‹main›,new=‹blk›):
+    ƒ = ⟨⟨󷺹start⭜⟞ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖᑀ₁>⟝₁⭜⟞󷹗ᐘ⍖⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(new,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
+    󱁕.ftrp(scan,󱁕↦󱁕.set(c=󱁕 ƒ),✓)
+
+subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_positions(gram(󱁕􋒷,β≅□⭜󰁍α),󱁕􋒷), 󱁕ᵉ ᵖ))
+
+⊢ (fcache􀃅) transpile_moss(content,inline=✗,aliases=□):
+    aliases􇂾ᑀ≅□⭜􍪵{}
+    (alias_a,alias_p,alias_r)􇂼‹apr›ᐖaliases.setdefault(⟞,{})
+    
+    ¿inline: content = ‹_∣⟦content⟧›
+    
+    󱁕 = reform_positions(content gram, content)
+    add_blocks(󱁕, 󷺹ᵗ∈⍭‹line rule_alias_header›)
+    󱁕.ftrp(‹blk›,󷺻␛
+        ⟞₀ᵗ≡‹line›             ⭜⟞.set(t=‹rule›,c=[⟞ᶜ₀.set(t=‹css_rule_header_›),
+                                                           ⠤⟞ᶜ₁﹕󰌷ᐖ𝒩(‹css_prop›,⟞)])⭝␛
+        ⟞₀ᵗ≡‹rule_alias_header›⭜⟞.set(t=‹rule_alias›,c=[⟞₀,⠤⟞ᶜ₁﹕󰌷ᐖ𝒩(‹css_prop›,⟞)])⭝✗⨳)
+    
+    alias_a.update(󱁕.sep(󷺹ᵗ≡‹var_def󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›)􀉳²󷺹􋒷ᐸ􇀥𝑑)
+    alias_p.update(󱁕.sep(󷺹ᵗ≡‹css_prop_key_alias›)􀉳²󷺹􋒷ᐸ􇀥𝑑)
+    
+    subparse(gram,󱁕,‹css_rule_header_›,‹css_rule_header›)
+    subparse(gram,󱁕,‹css_prop›)
+    
+    󱁕.ftrp(‹css_prop_key›, 󷺹.set(c=[⟞₀ᑀ.set(t=⟞􋒷ᐒalias_p?􍪵􍪴)]))
+    󱁕.ftrp(‹interp󷺗󷺗󷺗󷺗󷺗󷺗›, 󷺹         ₀ .set(t=⟞􋒷ᐒalias_a?􍪵􍪴)  )
+    
+    ⊢ƒ(󱁕): ¿󱁕ᵉ ᵀ: ↪󱁕􋒷
+           ¿󱁕ᵗ≡‹main›: ↪󱁕􀉳ƒ􀞆𝗻
+           ¿󱁕ᵗ≡‹css_prop›: ↪‹⟦󱁕₀ƒ⟧: ⟦󱁕₁ƒ⟧;›
+           ¿󱁕ᵗ≡‹rule›: heads = 󱁕₀ᐵᵉ ᵀ􀯗􍪵􍪴ᐵ􋒷ᐸᐸ􀊵􀜗⨝
+                       props = 󷺹ᐵ₀ᵗ≡‹css_rule_alias_lookup›⭜􍫇alias_r􍪴􋤘ᐸ󰌷ᐸ􀊑􀟳󱁕₁﹕
+                       ¿inline: ↪props􀉳ƒ􀞆𝘀
+                       body = ‹{𝗻⟦propsᐖ‹𝘀𝘀𝘀𝘀⟦⟞ ƒ⟧›ᐸ􀋤𝗻⟧}›
+                       ↪‹⟦heads⨝␛,𝘀⟧ ⟦body⟧›
+           ↪󱁕􀉳ƒ􀞆
+    to_css = ƒ
+    
+    ⊢ (󱁕.ftrp(‹rule_alias›,⬤)) (󱁕):
+        alias_r[󱁕₀􋒷] = 󱁕₁﹕
+        ¿󱁕₀🃌≡2: x = 󱁕ᶜ.pop(0)
+                ↪󱁕.copy(t=‹rule›,c=[x₁,⠤󱁕])
+        ↪󱁕
+    󱁕.rm(‹rule_alias›)
+    
+    css = 󱁕 to_css
+    ↪ inline 􇀦css􇀧 css􀍷aliases
+
+⭷ transpile_moss
+
+⊢ test_moss: c = 󰦥󰦥󰦥󰦥󰦥
+             red ≔ #F00
+             ⎊ᴾ 𝚌 color
+             
+             ⎊ egglike «html body» > «div span»
+                 width  100%
+                 height 100%
+             eggos ∣ egglike
+                     weed 22
+             󰦥󰦥󰦥󰦥󰦥
+             transpile_moss(c,✗,𝔠≔{}) ☾
+             transpile_moss(‹𝚌 ⦑red⦒; eggos›,✓,𝔠) ☾

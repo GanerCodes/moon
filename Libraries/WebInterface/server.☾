@@ -5,7 +5,7 @@ __dir__ cd
  ucod = ℵ←(moon_dir / ‹Libraries/Glypher/UnicodeQuery/unicode.txt›)󷹎𝗻󰈲󷺹∧⟞∌␛#∧␛.∉⟞ᐸ ᐵ󷹎¹␛;ᐵ.lower⬄𝘀ᐸꟿ⁰󷺹󷹜¹⁶󷹝→⋄󷺽→ᴙ
 real_files = ‹moon_wasm.zip font.ttf index.j☾›⍭
 
-JS    = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile⟧›
+JS    = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile_joon⟧›
 DOCS  = ops to_docs 𝔍󰄞
 STYLE = moon_dir/‹Builtins/Data/style.json›                ⭢ ᵇ
 FONTA = moon_dir/‹Libraries/Glypher/Output/moonfont_A.ttf› ⭢ ᵇ
