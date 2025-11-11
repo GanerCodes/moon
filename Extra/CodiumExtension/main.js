@@ -82,6 +82,28 @@ const wall = 𝐸 => {
                     .flat(1); };
 wall.manual = true;
 
+const splitLineKeepCol = 𝐸 => { // chatGPT
+    if (!𝐸) return;
+    const ns = [];
+    𝐸.edit(𝑒𝑏 => {
+        𝐸.selections.forEach(sel => {
+            const l = sel.active.line;
+            const c = sel.active.character;
+            const lineText = 𝐸.document.lineAt(l).text;
+            const [before, after] = [lineText.slice(0,c), lineText.slice(c)];
+            𝑒𝑏.replace(new vs.Range(l,0,l,lineText.length), before);
+            const newLineText = ' '.repeat(c) + after + '\n';
+            𝑒𝑏.insert(new vs.Position(l+1, 0), newLineText);
+            ns.push(𝔏𝔖(l+1, c, l+1, c));
+        });
+    }).then(() => {
+        𝐸.selections = ns;
+        𝐸.revealRange(ns[0]);
+    });
+};
+splitLineKeepCol.manual = true;
+
+
 const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                   sub: s=>[...s].map(c=>SUB[c]??c).join(''),
                   nrm: s=>[...s].map(c=>NRM[c]??c).join(''),
@@ -92,7 +114,7 @@ const tools = {   sup: s=>[...s].map(c=>SUP[c]??c).join(''),
                  set3: s=>mapS(s, 0,- 3),
                 set10: s=>mapS(s, 0,-10),
                 set17: s=>mapS(s, 0,-17),
-                wall, align, dirOpener, fileRun }
+                wall, align, dirOpener, fileRun, splitLineKeepCol }
 // 󰤱 generalized upper/lower/swapcase, switching alphabets
 
 const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])               ];
