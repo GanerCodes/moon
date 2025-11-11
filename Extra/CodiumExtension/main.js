@@ -92,9 +92,9 @@ const splitLineKeepCol = 𝐸 => { // chatGPT
             const lineText = 𝐸.document.lineAt(l).text;
             const [before, after] = [lineText.slice(0,c), lineText.slice(c)];
             𝑒𝑏.replace(new vs.Range(l,0,l,lineText.length), before);
-            const newLineText = ' '.repeat(c) + after + '\n';
+            const newLineText = ' '.repeat(ᔐ𝑙(before)) + after + '\n';
             𝑒𝑏.insert(new vs.Position(l+1, 0), newLineText);
-            ns.push(𝔏𝔖(l+1, c, l+1, c));
+            ns.push(𝔏𝔖(l+1, ᔐ𝑙(before), l+1, ᔐ𝑙(before)));
         });
     }).then(() => {
         𝐸.selections = ns;
