@@ -23,7 +23,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
                     ✗􀌙󰅂󰅂 􁊲 rᐵ₁)
     ↪r𝌂󷺹₀ᐸᐖ⠤⟞₀ ₀ᐵ󰸷⁰ˣ󰀅󰀅4ᐸ,⟞ᐵ₁ᐸ⨝ᐸ
 
-⊢ slice_𝚕𝚌(𝚌,𝚙):
+⊢ slice_𝚕𝚌(𝚌,𝚙):  󰤱 bro what this is so incorrect
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
     ¿𝙻🃌≡1: 𝙻 = [𝙻₀ 􀲸􊬤﹕􀲸􊬦]
     ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]

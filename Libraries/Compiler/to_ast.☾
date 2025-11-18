@@ -6,27 +6,16 @@ gram_comm = gram_rp(gram,ℵ(M=‹comm›⛶,I=‹comment∨σscript∨›⛶),�
 gram_scrp = gram_rp(gram,ℵ(M=‹scrp›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗σscript∨›⛶),✓)
 gram_main = gram_rp(gram,ℵ(M=‹main›⛶,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⛶),✓)
 
-⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,trim_length_info=✓,force_full_match=✗,
-              dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
+⊢ to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,force_full_match=✗,dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
     𝚌𝚘𝚍𝚎 = +gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗).ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
      ↑ is weird ∵ we cannot change lengths here
     𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
-    󱁕 = gram_main(𝚌,DEBUG=dbg_parser,remove_trashes=✗)
-    ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Tracking scripts›)
-       ¿warn_short                    : warn_if_short(󱁕)
-        ¿force_full_match ∧ is_short(󱁕): ↪□
-        Ι(󱁕)
-        ⊢ ƒ(󱁕,Δ=0): ¿󱁕ᵉ ᵀ    : 󱁕ᵉ ᵖ=(Δ,Δ󷸊-⭠󱁕ᵉ ᵖ≺-)
-                    ⸘󱁕ᵗ∈‹󰜞󰜛󰜚›: 󱁕ᵉ ᵖ=(Δ,Δ         )
-                    ¡        : 󱁕ᵉ ᵖ=(Δ,Δ≔󱁕ſ󰀷∾ƒ   )
-                    ↪Δ
-        ƒ(󱁕)
-        󱁕.rm(󷺹ᵗ∈‹󰜞󰜛󰜚›)
+    󱁕 = gram_main(𝚌,DEBUG=dbg_parser) ,remove_trashes=✗)
+    ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Tracking scripts›)  󰤱 warn_short, force_full_match
+       Ι(󱁕)
         ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Descriptified›)
-        𝚌 = +󱁕
-        󱁕.rm(󷺹ᵗ∈␛󰆴␛𝘄␛𝗪)
-        reform_positions(󱁕,𝚌)
-        ¿trim_length_info: 󰆴 󱁕ᵉ􋕨ₚₐᵣₛₑ􋕞ₗₑₙ􋕨,󱁕ᵉ􋕨ᵢₙₚᵤₜ􋕞ₗₑₙ􋕨
+        󱁕.rm(󷺹ᵗ∈␛𝘄␛𝗪)
+        c_to_rc(󱁕,𝚌𝚘𝚍𝚎)
         add_blocks(󱁕)
         rewrite_ports(󱁕)
         󱁕.ftrp(␛𝐷,󱁕↦󱁕.set(c=󱁕ᐵᵗ≡‹𝐷_kv_nam› ⭜𝗂𝗍𝖾𝗆(⟞₀ᣆ􍪵􊿥􊾾􋁌􊿑ˢᵗʳ􊿒󷺹.set(t=‹str›),⟞₁)⭝␛

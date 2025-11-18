@@ -28,7 +28,7 @@ DEST=$([ "$(id -u)" -eq 0       ] && echo "/bin/☾"             || (\
 echo "Installing to \"$DEST\""
 
 (rm "$DEST" || :) >/dev/null 2>&1
-echo -e "#!/bin/sh\nexec \"$PYTHON\" -S -u \"$(realpath moon.py)\" \"\$@\"" > "$DEST"
+echo -e "#!/bin/sh\nulimit -s 65536\nexec \"$PYTHON\" -S -u \"$(realpath moon.py)\" \"\$@\"" > "$DEST"
 chmod a+x "$DEST"
 
 echo "Preloading cache…"

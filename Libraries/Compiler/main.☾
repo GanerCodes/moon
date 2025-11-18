@@ -10,7 +10,7 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 ⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
     ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
     󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
-    ¿show_ast          : ⨡ peggle2/gram_tools
+    ¿show_ast          : ⨡ peggle3/gram_tools
                          𝑩𝑩(󱁕,‹AST›)
     𝘤 = to_py(𝚌)(󱁕.cpr)
     ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
@@ -66,25 +66,24 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
 
 ⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): __þIMPORTS__.clear
                                   TP_CACHE.clear
-                                  ⨡􋀸text_format
-                                  ⨡􋀸cache
-                                  ⨡􋀸peggle2/rgx_golfatron
-                                  ⨡􋀸peggle2
-                                  ⨡􋀸peggle2/gram_tools
-                                  ⨡􋀸Compiler/gram.data
-                                  ⨡􋀸Compiler/generate_operators
-                                  ⨡􋀸Compiler/operator
-                                  ⨡􋀸Compiler/node_types
-                                  ⨡􋀸Compiler/tree
-                                  ⨡􋀸Compiler/tree_txt
-                                  ⨡􋀸Compiler/expr
-                                  ⨡􋀸Compiler/lambdas
-                                  ⨡􋀸Compiler/rewriters
-                                  ⨡􋀸Compiler/to_ast
-                                  ⨡􋀸Compiler/ast_to_py
-                                  c=⨡􋀸Compiler
+                                  ‹⨡􋀸text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸text_format
+                                  ‹⨡􋀸cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸cache
+                                  ‹⨡􋀸peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸peggle3/rgx_golfatron
+                                  ‹⨡􋀸peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸peggle3
+                                  ‹⨡􋀸peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸peggle3/gram_tools
+                                  ‹⨡􋀸Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/gram.data
+                                  ‹⨡􋀸Compiler/generate_operators›☾ ; ⨡􋀸Compiler/generate_operators
+                                  ‹⨡􋀸Compiler/operator󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/operator
+                                  ‹⨡􋀸Compiler/node_types󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/node_types
+                                  ‹⨡􋀸Compiler/tree󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/tree
+                                  ‹⨡􋀸Compiler/tree_txt󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/tree_txt
+                                  ‹⨡􋀸Compiler/expr󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/expr
+                                  ‹⨡􋀸Compiler/lambdas󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/lambdas
+                                  ‹⨡􋀸Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/rewriters
+                                  ‹⨡􋀸Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/to_ast
+                                  ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/ast_to_py
+                                  ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; c=⨡􋀸Compiler
                                   TRANSPILE_REF(c.moon_to_py)
-                                  ŧ𝼝(‹Re-imported compiler!›,‹f0f›)☾
                                   c.generate_bootstrap(𝔸 ⭜𝔸₀⭝ ‹bootstrap.py›)
                                   ŧ𝼝(‹Generated bootstrap!›,‹f0f›)☾
 

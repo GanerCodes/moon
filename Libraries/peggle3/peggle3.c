@@ -1,0 +1,340 @@
+#define Ƈ case
+#define 𝼝 break; Ƈ
+#define 𝼝 break; Ƈ
+#define Ɗ break; default
+#define Ⴝ switch
+#define ret return
+#define ᗜ NULL
+#define ⴳ true
+#define ⴴ false
+#define ႽƬ struct
+#define ƬƊ typedef
+#define i8   int8_t
+#define u8  uint8_t
+#define i32  int32_t
+#define u32 uint32_t
+#define i64  int64_t
+#define u64 uint64_t
+#define el else
+#define ef el if
+#define GET_MACRO(_1,_2,NAME,...) NAME
+#define _ARRSIZE2(x,ε) (sizeof(x)/sizeof(ε))
+#define _ARRSIZE1(x) _ARRSIZE2(x,(x)[0])
+#define ARRSIZE(...) GET_MACRO(__VA_ARGS__, _ARRSIZE2, _ARRSIZE1)(__VA_ARGS__)
+#define NEW(T) (T*) malloc(sizeof(T));
+#define MIN(x,y) ((x)<(y)?(x):(y))
+#define MAX(x,y) ((x)>(y)?(x):(y))
+#define ƨ "%.*s"
+#define Ƨ(x) (x).l, (x).s
+#include <vec.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#define PCRE2_CODE_UNIT_WIDTH 8
+#include <pcre2.h>
+ƬƊ ႽƬ ᔐ { u8 *s; u32 l; } ᔐ;
+ƬƊ ႽƬ Rule { u32 t; u32 cL; u32 cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
+ƬƊ ႽƬ Match { u32 id,p,l; ႽƬ Match *K; u32 nK; } Match;
+ƬƊ ႽƬ RuleQ { u32 id,p; } RuleQ;
+bool ᔐ_eq(ᔐ α,ᔐ β) 
+{
+    if(α.l != β.l) ret ⴴ;
+    for(u32 i=0; i<α.l; i++) if(α.s[i] != β.s[i]) ret ⴴ;
+    ret ⴳ;
+}
+ᔐ ᔐs_x (ᔐ α,u32 x      ) 
+{
+    ret (ᔐ){α.s+x,       α.l -x};
+}
+ᔐ ᔐs_xy(ᔐ α,u32 x,u32 y) 
+{
+    ret (ᔐ){α.s+x, MIN(y,α.l)-x};
+}
+ᔐ ᔐs_xl(ᔐ α,u32 x,u32 l) 
+{
+    ret (ᔐ){α.s+x, MIN(l,α.l-x)};
+}
+#define RULE_S 1  /* ᔐ */
+#define RULE_R 2  /* Ʀ */
+#define RULE_A 3  /* ∧ */
+#define RULE_O 4  /* ∨ */
+#define RULE_Q 5  /* ? */
+#define RULE_Y 6  /* ⮞ */
+#define RULE_N 7  /* ¬ */
+#define RULE_C 8  /* ✓ */
+#define RULE_F 9  /* ƨ */
+#define RULE_M 10 /* • */
+#define R_NAME (1<<10)
+#define R_TRSH (1<<11) /* 󰆴 */
+#define R_FLAG (R_NAME|R_TRSH)
+#define C_NONE (1<<30)
+#define C_FAIL (1<<29)
+#define C_GOOD (1<<28)
+#define C_ALTR (1<<27)
+#define C_FLAG (C_NONE|C_FAIL|C_GOOD|C_ALTR)
+void show_match(Rule* 𝚁, Match* 𝚖, ᔐ 𝚌, u32 tab)
+{
+    i8 ident[tab+1];
+    for(u32 i=0; i<tab; i++) ident[i]=' ';
+    ident[tab]=0;
+    if(𝚖==ᗜ) 
+    {
+        printf("%s␀\n",ident);
+        ret;
+    }
+    printf("%s%i\n",ident,𝚖->id);
+    if(𝚖->id==(u32)(-2))
+    {
+        printf("%s  ✓\n", ident);
+    }
+    ef(𝚖->id==(u32)(-1) || 𝚁[𝚖->id].t==RULE_S || 𝚁[𝚖->id].t==RULE_R)
+    {
+        printf("%s  \"%.*s\"\n", ident, 𝚖->l, &𝚌.s[𝚖->p]);
+    }
+    el
+    {
+        for(u32 i=0; i<𝚖->nK; i++) show_match(𝚁,𝚖->K+i,𝚌,tab+2);
+    }
+}
+pcre2_code* create_regex(ᔐ P)
+{
+    i32 errcode;
+    PCRE2_SIZE erroff;
+    pcre2_code* 𝚙 = pcre2_compile((PCRE2_SPTR)P.s, P.l, PCRE2_UTF|PCRE2_NO_UTF_CHECK|PCRE2_ANCHORED, &errcode, &erroff, ᗜ);
+    if(𝚙==ᗜ) 
+    {
+        PCRE2_UCHAR buf[256];
+        pcre2_get_error_message(errcode,buf,sizeof(buf));
+        printf("Error creating regex! offset %zu: %d: %s\n",erroff,errcode,buf);
+        ret ᗜ;
+    }
+    ret 𝚙;
+}
+i32 peggle3_regexec(pcre2_code* 𝚙, ᔐ 𝚌, u32 pos)
+{
+    pcre2_match_data* md = pcre2_match_data_create_from_pattern(𝚙,ᗜ);
+    i32 rc = pcre2_match(𝚙, (PCRE2_SPTR)(𝚌.s + pos), 𝚌.l - pos, 0, 0, md, ᗜ);
+    if(rc <= 0) 
+    {
+        pcre2_match_data_free(md);
+        ret -1;
+    }
+    PCRE2_SIZE* R = pcre2_get_ovector_pointer(md);
+    u32 end = pos+R[1];
+    pcre2_match_data_free(md);
+    ret end;
+}
+#define PUSH(𝙺,X) do{Match* V=(X); if(V!=ᗜ) { Match* _=vector_add_dst(&𝙺); _->id=V->id; _->p=V->p; _->l=V->l; _->K=V->K; _->nK=V->nK; }}while(0)
+Match* chain_cond(Rule* 𝚁, Match* 𝙺, u32 r, Match* 𝘮)
+{
+    bool append = r&R_NAME;
+    u32 𝘪 = 𝘮->id;
+    Rule 𝘳 = 𝚁[𝘪];
+    if(append || 𝘳.t==RULE_S || 𝘳.t==RULE_R || 𝘳.t==RULE_F || 𝘳.t==RULE_C)
+    {
+        if(!append) 
+        {
+            if(𝘳.t==RULE_C) 𝘮->id = (u32)(-2);
+            el              𝘮->id = (u32)(-1);
+        }
+        PUSH(𝙺,𝘮);
+    }
+    el if(𝘳.t==RULE_C)
+    {
+        PUSH(𝙺,𝘮);
+    }
+    el for(u32 i=0; i<𝘮->nK; i++)
+    {
+        PUSH(𝙺,𝘮->K+i);
+    }
+    ret 𝙺;
+}
+#undef PUSH
+Match* makeMatches(Rule* 𝚁, u32 𝚁𝚗, bool trash, u32 𝘱, u32 𝘪, u32 𝚌l, u32 𝙼[𝚌l][𝚁𝚗])
+{
+    Rule 𝘳 = 𝚁[𝘪];
+    u32 𝐜 = 𝙼[𝘱][𝘪];
+    Match *𝘮 = NEW(Match);
+    𝘮->id=𝘪; 𝘮->p=𝘱; 𝘮->l=(𝐜&~C_FLAG)-𝘱;
+    Match* 𝙺 = vector_create();
+    Ⴝ(𝘳.t) 
+    {
+        Ƈ RULE_S:
+        Ƈ RULE_R:
+        Ƈ RULE_Y:
+        𝼝 RULE_Q: 
+        {
+            if(𝐜&C_ALTR) break;
+        }
+        Ƈ RULE_M:
+        Ƈ RULE_F: 
+        {
+            if(trash && 𝘳.cL&R_TRSH) break;
+            𝙺  =chain_cond(𝚁,𝙺,𝘳.cL,makeMatches(𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
+        }
+        𝼝 RULE_O: 
+        {
+            u32 c = 𝐜&C_ALTR ?𝘳.cR: 𝘳.cL;
+            if(trash && c&R_TRSH) break;
+            𝙺  =chain_cond(𝚁,𝙺,   c,makeMatches(𝚁,𝚁𝚗,trash,𝘱,   c&~R_FLAG,𝚌l,𝙼));
+        }
+        𝼝 RULE_A: 
+        {
+            if(!(trash && 𝘳.cL&R_TRSH))
+            {
+                𝙺=chain_cond(𝚁,𝙺,𝘳.cL,makeMatches(𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
+            }
+            if(trash && 𝘳.cR&R_TRSH) break;
+            u32 𝘗 = 𝙼[𝘱][𝘳.cL&~R_FLAG]&~C_FLAG;
+            𝙺  =chain_cond(𝚁,𝙺,𝘳.cR,makeMatches(𝚁,𝚁𝚗,trash,𝘗,𝘳.cR&~R_FLAG,𝚌l,𝙼));
+        }
+    }
+    𝘮->K=𝙺; 𝘮->nK=vector_size(𝙺);
+    ret 𝘮;
+}
+#undef PUSH
+#define PUSH(x,y) do{RuleQ* _=vector_add_dst(&𝚂); _->id=(x); _->p=(y);}while(0)
+Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
+{
+    #ifdef DEBUG_PRINTS
+    printf("Parsing \""ƨ"\" with id=%i from rules:\n", Ƨ(𝚌), id);
+    for(u32 i=0; i<𝚁𝚗; i++)
+    {
+        printf("  %lu: %lu ⟨%lu %lu⟩\n", i, 𝚁[i].t, 𝚁[i].cL, 𝚁[i].cR);
+    }
+    #endif
+    u32 𝙼[𝚌.l+1][𝚁𝚗];
+    for(u32 p=0; p<ARRSIZE(𝙼,u32); p++) ((u32*)𝙼)[p] = C_NONE;
+    RuleQ* 𝚂 = vector_create();
+    PUSH(id,0);
+    while(vector_size(𝚂))
+    {
+        RuleQ 𝘲 = 𝚂[vector_size(𝚂)-1];
+        u32 𝘪=𝘲.id, 𝘱=𝘲.p;
+        Rule 𝘳 = 𝚁[𝘪];
+        u32 𝘵=𝘳.t;
+        Ⴝ(𝘵) 
+        {
+            Ƈ RULE_S: 
+            {
+                𝙼[𝘱][𝘪] = ᔐ_eq(ᔐs_xl(𝚌,𝘱,𝘳.dat.s.l),𝘳.dat.s) ?C_GOOD|𝘱+𝘳.dat.s.l: C_FAIL;
+            }
+            𝼝 RULE_R: 
+            {
+                i32 r = peggle3_regexec(𝘳.dat.r,𝚌,𝘱);
+                𝙼[𝘱][𝘪] = r==-1 ?C_FAIL: C_GOOD|r;
+            }
+            𝼝 RULE_C: 
+            {
+                𝙼[𝘱][𝘪] = C_GOOD|𝘱;
+            }
+            Ɗ: 
+            {
+                u32 cL = 𝘳.cL&~R_FLAG;
+                u32 cR = 𝘳.cR&~R_FLAG;
+                u32 𝐥  = 𝙼[𝘱][cL];
+                if(𝐥&C_NONE) 
+                {
+                    PUSH(cL,𝘱); continue;
+                }
+                u32 𝐥p = 𝐥&~C_FLAG;
+                Ⴝ(𝘵) 
+                {
+                    Ƈ RULE_M:
+                    Ƈ RULE_F: 
+                    {
+                        𝙼[𝘱][𝘪] = 𝐥 &~C_FAIL ?C_GOOD|𝐥p: C_FAIL  ;
+                    }
+                    𝼝 RULE_Q: 
+                    {
+                        𝙼[𝘱][𝘪] = 𝐥 &~C_FAIL ?C_GOOD|𝐥p: C_ALTR|𝘱;
+                    }
+                    𝼝 RULE_Y: 
+                    {
+                        𝙼[𝘱][𝘪] = 𝐥 &~C_FAIL ?C_GOOD| 𝘱: C_FAIL  ;
+                    }
+                    𝼝 RULE_N: 
+                    {
+                        𝙼[𝘱][𝘪] = 𝐥 &~C_FAIL ?C_FAIL   : C_GOOD|𝘱;
+                    }
+                    𝼝 RULE_O: 
+                    {
+                        u32 𝐫 = 𝙼[𝘱][cR];
+                        if(𝐥 &~C_FAIL) 
+                        {
+                            𝙼[𝘱][𝘪] = C_GOOD|𝐥p;
+                        }
+                        ef(𝐫 & C_NONE) 
+                        {
+                            PUSH(cR,𝘱); continue;
+                        }
+                        ef(𝐫 & C_FAIL) 
+                        {
+                            𝙼[𝘱][𝘪] = C_FAIL;
+                        }
+                        el             
+                        {
+                            𝙼[𝘱][𝘪] = C_ALTR|𝐫&~C_FLAG;
+                        }
+                    }
+                    𝼝 RULE_A: 
+                    {
+                        u32 𝐫 = 𝙼[𝐥p][cR];
+                        if(𝐥 & C_FAIL) 
+                        {
+                            𝙼[𝘱][𝘪] = C_FAIL;
+                        }
+                        ef(𝐫 & C_NONE) 
+                        {
+                            PUSH(cR,𝐥p); continue;
+                        }
+                        ef(𝐫 & C_FAIL) 
+                        {
+                            𝙼[𝘱][𝘪] = C_FAIL;
+                        }
+                        el             
+                        {
+                            𝙼[𝘱][𝘪] = C_GOOD|𝐫&~C_FLAG;
+                        }
+                    }
+                }
+            }
+        }
+        vector_pop(𝚂);
+    }
+    vector_free(𝚂);
+    #ifdef DEBUG_PRINTS
+    printf("Cache table:\n");
+    if(𝚁𝚗*(𝚌.l+1)>20000)
+    {
+        printf("  (Cache table too big to print)\n");
+    }
+    el for(u32 o=0; o<𝚁𝚗; o++)
+    {
+        for(u32 i=0; i<=𝚌.l; i++)
+        {
+            printf("%s%-3d%s", i?"":"  ", 𝙼[i][o]&~C_FLAG, i==𝚌.l?"\n":" ");
+        }
+    }
+    #endif
+    Match* r = 𝙼[0][id]&C_FAIL ?ᗜ: makeMatches(𝚁,𝚁𝚗,trash,0,id,𝚌.l+1,𝙼);
+    #ifdef DEBUG_PRINTS
+    printf("Raw tree:\n");
+    show_match(𝚁,r,𝚌,2);
+    #endif
+    ret r;
+}
+main() 
+{
+    printf("Testing "__FILE__"\n");
+    Rule rules[] = 
+    {
+        { RULE_A, 1, 2                      },
+        { RULE_S, 0, 0, {.s = {(u8*)"A",1}} },
+        { RULE_S, 0, 0, {.s = {(u8*)"B",1}} },
+    }
+    ;
+    ᔐ s = (ᔐ){"AB",2};
+    parse(rules,ARRSIZE(rules,Rule),s,0,ⴳ);
+}

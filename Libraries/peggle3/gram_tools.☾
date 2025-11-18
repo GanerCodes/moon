@@ -1,0 +1,126 @@
+P = ⨡ peggle3
+⨡ rgx_golfatron
+⨡ text_format
+𝑩𝑩,𝔗,n󱁕m,⊥,𝑬 = P􎀜􎀜,P􋈠,Pⁿ􋑻ᵐ,P􋔡,P􎀢
+
+𝒩 = 󰲡Ń(x,⠤𝔸,⠶𝕂)󱖔􋔡𝔸
+
+ 0 width, left of node
+⊢ ⟵(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
+          ¿𝒑 ᐹ ᔐ: ↪󱁕
+          ¿𝒑 󷹵 Ń: ¿𝒑🃌: 𝒑=𝒑₀
+                  ¡  : ↪󱁕
+          ¿𝒑ᵉ∌␛p: ↪󱁕
+          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ﹕₂ 2
+          ↪󱁕
+ 0 width, rght of node
+⊢ ⟶(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
+          ¿𝒑 ᐹ ᔐ: ↪󱁕
+          ¿𝒑 󷹵 Ń: ¿𝒑🃌: 𝒑=𝒑􍨄
+                  ¡  : ↪󱁕
+          ¿𝒑ᵉ∌␛p: ↪󱁕
+          󱁕ᵉ ᵖ = 𝒑ᵉ ᵖ₂﹕ 2
+          ↪󱁕
+ between nodes
+⊢ ⊤(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
+          󱁕ᵉ ᵖ = (⠤𝒑₀ᵉ ᵖ₂﹕,⠤𝒑􍨄ᵉ ᵖ﹕₂)
+          ↪󱁕
+
+ eᵖ format: (is,ie)
+⊢ offset_𝚌(󱁕,𝚙): ¿␛p∈󱁕ᵉ: 󱁕ᵉ ᵖ = (󱁕ᵉ ᵖ₀+𝚙, 󱁕ᵉ ᵖ₁+𝚙)
+                 ∀c⬠󱁕: offset_𝚌(c,𝚙)
+                 ↪󱁕
+ eᵖ format: (ls,cs,le,ce)
+⊢ offset_𝚕𝚌(󱁕,𝚙): ¿␛p∈󱁕ᵉ: 𝚋 = 󱁕ᵉ ᵖ
+                          󱁕ᵉ ᵖ=(𝚋₀+𝚙₀, 𝚋₀⭜𝚋₁⭝𝚋₁+𝚙₁, 𝚋₂+𝚙₀, 𝚋₂⭜𝚋₃⭝𝚋₃+𝚙₁)
+                  ∀c⬠󱁕: offset_𝚕𝚌(c,𝚙)
+                  ↪󱁕
+
+⊢line_ranges(𝚌,𝚙):  (ls,cs,le,ce) → [(l₀,cs₀,ce₀),…]
+  𝙻 = (𝚌 lines)􀲸􊬣﹕􀲸􊬥₊₁􀉳􀁧
+  ¿𝙻􀊹􀜂1: ↪[(𝚙₀,𝚙₁,𝚙₃)]
+  ¡    : ↪[(𝚙₀,𝚙₁,𝙻₀), ⠤𝙻₁﹕􍨄ᐖ𝚙₀+󷸀+1,0,⟞ᐸ, (𝙻🃌-1,0,𝚙₃)]
+⊢c_to_rc(󱁕,𝚌):  (is,ie)⟶(ls,cs,le,ce)
+    𝙼 = 𝚌 lines ᴍ🃌ᑀϜ⁰󷺹􀊩1􀊩󷺽⭢󱑼⟞
+    ↪󱁕.frp(ⴳ,󱁕↦󱁕ᵉ ᵖ􇀞􀉳󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x􀊪𝙼􍪴 ₀ᐸ󰅂􀎃 􁋁 󱁕,✓,not_T=✗)
+⊢tree_text_filled(󱁕,𝚌,p=𝘀):  position aware reconstruction
+  𝙼 = 𝚌 lines ᴍ🃌ᐖp⛶􍪵
+  ⊢ƒ(󱁕): 𝚝 = 󱁕ᵗlines
+         ∀l,s,e⬠line_ranges(𝙼,󱁕ᵉ ᵖ):
+           𝙼ₗ ₛ﹕ₑ = 𝚝ₗ₋􋑺􊫶􋘲􊫻􊬣 ﹕ₑ₋ₛ
+  󱁕.frp(󷺹ᵉ ᵀ,ƒ,✓,not_T=✗)
+  ↪𝙼􀉳􀂐􀎨𝗻
+
+ (is,ie)⟶(ls,cs,le,ce)
+ one day ☾ will be fast but for now this code is big and ugly 😭
+⊢ reform_positions(󱁕,𝚌): 𝙼 = 𝚌 lines ᴍ🃌ᑀϜ⁰󷺹+1+󷺽⭢󱑼⟞
+                          ↪ 󱁕.frp(ⴳ,󱁕↦󱁕ᵉ ᵖ󷸊ᴍ󰲡𝙼󰑅ᔨ󷺹⨁≥xᐸᑀ,x-𝙼􍪴 ₀ᐸ󰅂⭢󰆩 →► 󱁕,✓)
+                         
+                         s=0
+                         ⊢ ƒ(󱁕): ⦃nonlocal ⦃s⦄⦄
+                                 ∀𝙼ₛ ₀+𝙼ₛ ₁<󱁕ᵉ ᵖ₀: s󷸊+1
+                                 ∀i,x⬠enumerate(𝙼ₛ﹕):
+                                     ¿x₀+x₁≥󱁕ᵉ ᵖ₁: 󱁕ᵉ ᵖ=(s,󱁕ᵉ ᵖ₀-𝙼ₛ ₀,i+s,󱁕ᵉ ᵖ₁-x₀)
+                                                   ⇥
+                                 ∀z⬠󱁕:ƒ(z)
+                         ↪ƒ(󱁕)►󱁕
+
+ is_short = 󱁕↦󱁕ᵉ.parse_len≠󱁕ᵉ.input_len
+ warn_if_short = 󱁕↦is_short(󱁕)¬ ⨳˜ ‹Parse length warning ⟦󱁕ᵉ.parse_len⟧<⟦󱁕ᵉ.input_len⟧›
+
+⊢ fill_󱁕_holes_basic(󱁕): ¿␛p∉󱁕ᵉ: α,β = 󱁕.first_sides(󷺹ᵉ∋␛p)
+                                 ¿□≇α∧β≇□: 󱁕ᵉ ᵖ=(⠤αᵉ ᵖ﹕₂, ⠤βᵉ ᵖ₂﹕)
+                         ∀c⬠󱁕: fill_󱁕_holes_basic(c)
+                         ↪󱁕
+
+ basic gram const replacements
+gram_rp = ⥌𝚐,r,m=✓↦(rꟿ⁺rgx_golfatron○►ſ􀲧󰲣􊬣⟗␛%󰛔ˣy₁) ᣆᵐ peggle
+
+ holes: [(pos,size)]
+⊢remove_holes(󱁕,𝙷):
+    m=𝙷ᐵ₀ᑀ+ᑈ⟞₁⭥ᐵ,0ᐸᐸ󰌷→ℵ¹
+    Δ=󱁕ᵉ ᵖ₁⭥Ϝ⁰󷺹+m􍪸󷺿
+    󱁕.frp(ⴳ,󷺻(⟞ᵉ ᵖ󷸊ᐒΔ􍪴􊬣,Δ􍪴􊬤ᐸ)􀊰⟞,✓,✗)
+    ↪󱁕
+
+ I:insert [add stuff to make not ctx-sens]
+ R:remove [remove comments n stuff]
+⊢under_gram(󱁕): 𝙷,r = ⍁,0
+                ∀𝚌⬠󱁕.find(󷺹ᵉ ⁻∩␛I␛R,✓,✗):
+                    ¿𝚌ᵉ∋␛R: 𝙷.append((r+𝚌ᵉ ᵖ₀,𝚌􋒷🃌 ))
+                    ¡     : 𝙷.append((r+𝚌ᵉ ᵖ₁,𝚌􋒷🃌󷹒))
+                    r󷸊+𝚌􋒷🃌
+                󱁕.rm(󷺹ᵉ ⁻∩␛I␛Rᐸ)
+                ↪󱁕􋒷,remove_holes(⬤,𝙷)
+
+ use like ((t,Ι)≔gram_subsup(s,detector_gram?,rule?))₀your_gram t₁
+⊢gram_subsup(𝚜,𝘎=gram_rp(󰦥󰦥󰦥󰦥󰦥sup  = ~‹%SUP%+›
+                              sub  = ~‹%SUB%+›
+                              main = ((σscript = sup∨sub)∨~‹.|\n›)*󰦥󰦥󰦥󰦥󰦥,
+               ℵ(SUP=*´󷸔,SUB=*´󷸓)),r=‹main›):
+   ꬶ=󰲡𝘎(x,r,remove_trashes=✗)␛
+       .ftrp(‹σscript›,󱁕↦󱁕.set(t=󱁕₀ᵗ, c=[
+         𝔗(␛󰜞␛󰜚􋑺􊬣􊫼􍩬􊮢􊯛ₚ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₀,󱁕ᵉ ᵖ₀))),
+            ⠤ꬶ(󱁕􋒷󷸼)ᐖoffset_𝚌(⟞,󱁕ᵉ ᵖ₀),
+         𝔗(␛󰜛         ,e=ℵ􋄅(I=✓,p=(󱁕ᵉ ᵖ₁,󱁕ᵉ ᵖ₁)))]))
+   ↪𝚜 ꬶ under_gram
+
+⊢ peggrampeg(𝚌,ns={},𝘎=peggle(
+        󰦥󰦥󰦥󰦥󰦥
+           main = (brak∨~‹.|\n›)*
+           brak = 󰆴‹%⦃› ~‹((?!⦄%).)*› 󰆴‹⦄%›
+        󰦥󰦥󰦥󰦥󰦥), m=✓):
+    ↪ +𝘎(𝚌).ftrp(‹brak›, 󷺹.set(c=[𝔗(󱠨(⟞􋒷,ns=ns))])) ⭢ ᣆᵐ peggle
+⭷ peggle,Ń,𝑩𝑩,𝒩,𝔗,⟵,⟶,⊥,⊤,𝑬,offset_𝚕𝚌,offset_𝚌,reform_positions,gram_rp,under_gram,␛
+  gram_subsup,peggrampeg,fill_󱁕_holes_basic,line_ranges,c_to_rc,tree_text_filled
+
+⊢ test_gram_tools: g = peggrampeg(󰦥󰦥󰦥󰦥󰦥
+                      sub = 󰆴'󰜞' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+                      sup = 󰆴'󰜚' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+                      main = (sup ∨ sub ∨ (%⦃␛t+‹he›⦄%=~‹.›))*
+                   󰦥󰦥󰦥󰦥󰦥)
+                   s,Ι = gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾)
+                   󱁕 = g(s☾)ᴾ
+                   Ι(󱁕)ᴾ
+
+ 󰜚󰜙󰜝󰜙 󰜞󰜚󰜛

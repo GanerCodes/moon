@@ -1,0 +1,38 @@
+⨡􋀸 peggle3
+⨡􋀸 peggle3/gram_tools
+ ⨡ peggle3
+
+ gram = peggle(󰦥󰦥󰦥󰦥󰦥
+ x = andcheck andstarcheck redirstar
+ andcheck     = "χ"  z
+ andstarcheck = "χ" ⠶z
+ redirstar    = ⠶h
+ h = "γ"
+ z = ✓
+ 󰦥󰦥󰦥󰦥󰦥, DEBUG=✓)
+
+
+gram = peggle(󰦥󰦥󰦥󰦥󰦥
+_ = ⠶(a b+)
+a = "A"
+b = "B"
+󰦥󰦥󰦥󰦥󰦥, DEBUG=✓)
+c = 󰦥󰦥󰦥󰦥󰦥ABBB󰦥󰦥󰦥󰦥󰦥
+
+󱁕 = c gram 𝑩𝑩
+exit
+
+
+󱁕 = reform_positions(󱁕,c) 𝑩𝑩
+exit
+
+ ⠶(str_nsub1 ∨ str_nsub2) ITS ALWAYS SOMETYHING
+
+g = 󰦥󰦥󰦥󰦥󰦥
+sub = 󰆴'󰜞' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+sup = 󰆴'󰜚' (sub ∨ sup ∨ ~‹[^󰜛]›)* 󰆴'󰜛'
+main = (sup ∨ sub ∨ (the=~‹.›))*
+󰦥󰦥󰦥󰦥󰦥 peggle
+s,Ι = gram_subsup(‹someᶜᵒᵒˡ􊿾􊿵􊿶􊿾􊽾₂k›☾)
+󱁕 = g(s☾)ᴾ
+Ι(󱁕)ᴾ

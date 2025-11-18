@@ -1,0 +1,225 @@
+⦃from cffi import FFI⦄
+⨡ text_format
+⨡ cache
+
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ􋄅(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
+n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ ⭜􋑻 𝔗(󱁕)
+ between and including nodes as range
+⊢ ⊥(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
+          ¿𝒑ᐹᔐ∨𝗜󷹴𝒑: ↪󱁕
+          ¿𝒑󷹵Ń: 𝒑 = Ń(ᐦ,⠤𝒑)
+          l,r = 𝒑.first_sides(󷺹ᵉ∋␛p)
+          ¿l≅□: ↪󱁕
+          󱁕ᵉ ᵖ = (⠤lᵉ ᵖ﹕₂,⠤rᵉ ᵖ₂﹕)
+          ↪󱁕
+ copy e
+⊢ 𝑬(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
+          ¿𝒑ᐹᔐ: ↪󱁕
+          ¿𝒑􀓮𝑡􀊤𝑙: 󱁕ᵉ ᵖ = 𝒑 𝑡
+          ¡     : 󱁕ᵉ = 𝒑ᵉ.copy
+          ↪󱁕
+𝑩𝑩 = ⥌󱁕↦BOX(󱁕ᴾ∘✗≕d+ᵜ⭠𝔸ᐖpadc(􍪴⟗𝘀,d,␛─)+𝗻ᐸ⨝)☾►󱁕
+
+Ų = 󷺹ᐵ􀊾􀜈255􇁖􍪵␛v􀝍⟞􀊾􀊿¹⁶ᐸ􀋢
+
+ffi = FFI
+ffi.cdef(󰦥󰦥󰦥󰦥󰦥
+typedef unsigned char uint8_t;
+typedef unsigned int  uint32_t;
+typedef struct pcre2_code pcre2_code;
+typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
+typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
+typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
+Match* parse(Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
+pcre2_code* create_regex(ᔐ P);
+󰦥󰦥󰦥󰦥󰦥 Ų)
+lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
+
+N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
+⊢ cstr(s,mem=⦉⠤ᐦ⦊): s󷸊𝑀
+                    A = N("uint8_t[]",s🃌)
+                    ∀i,v⬠s↨: Aᵢ = ffi.cast("uint8_t",v)
+                    A mem.add
+                    ↪N("ᔐ*",(A,s🃌))
+ruleR = ⥌t,r        ↦{t=t, dat={r=lib.create_regex(r cstr→₀)},   }
+ruleS = ⥌t,s=ᐦ      ↦{t=t, dat={s=                 s cstr→₀ }, ⠶𝕂}
+ruleG = ⥌t,cL=0,cR=0↦{t=t, cL=cL, cR=cR                      , ⠶𝕂}
+
+R_NAME = 1􀊧10
+R_TRSH = 1􀊧11
+R_FLAG = R_NAME􀊤R_TRSH
+
+⊢(fcache)gram_rule_machine(𝚁,to_n):
+  ℜ=⍁􀳱􁗢; add = 󷺹≅□ 􇃆ℜ􀊹􀝓[⠤𝓐] ℜ.append􇃇 ⟞􀝓ℜ􍪴􀯍[⠤𝓐]
+  ⊢ƒ(𝚛,r=□): ¿𝚛􀊜𝑖: ↪[𝚛]
+             ¿𝚛􀊜ᔐ: ¿𝚛≡␛✓: ↪ƒ(␛✓⛶􋇡,r)  󰤱 AAAAA
+                   ¿r≇□: 𝚛=[␛•,𝚛]
+                   ¡   : ↪[𝚛 to_n]
+             𝘳,⠤𝘊 = 𝚛
+             ¿𝘳∈‹󰆴⠶󷺗󷺗󷺗›: ¿𝘳≡␛⠶∧r≇□:
+                           ↪ƒ((␛∧,(␛󰆴,(␛✓,)),𝚛),r)  󰤱 AAAAA
+                         𝘤 = 𝘊₀
+                         ¿𝘳≡␛󰆴: ↪[⠤ƒ(𝘤,r),𝘳]
+                         ⊢ꬶ(𝚛): ¿𝚛ᐹᔐ􀊤𝑖􀟀𝚛₀􀉧‹ᔐƦƨ›: ↪𝚛
+                                ↪(𝚛₀,⠤𝚛₁﹕ᐵ􀓮ᔐ􀊤𝑖􇀶(␛⠶,⟞)􇀷⟞ ꬶ)
+                         ↪[⠤ƒ(𝘤 ꬶ,r),𝘳]
+             ¿𝘳∈‹✓󷺗󷺗󷺗󷺗›: ↪[add(r,𝘳)]
+             ¿𝘳∈‹ᔐƦ󷺗󷺗󷺗›: ↪[add(r,𝘳,𝘊₀)]
+             ¿𝘳∈‹?⮞¬ƨ•›: ↪[add(r,𝘳,𝘊₀ƒ)]
+             ¿𝘳∈‹+󷺗󷺗󷺗󷺗›: ↪[add(add(r,□)≕n,␛∧,𝘊₀ƒ,(␛?,(␛⠶,n))ƒ)]
+             ¿𝘳∈‹*󷺗󷺗󷺗󷺗›: ↪[add(r,␛?,(␛+,𝘊₀)ƒ)]
+             ¿𝘳∈‹∧∨󷺗󷺗󷺗›: ꬶ = 󰲡𝔸 ⭜ˣ [add(𝔸􀊹􀗁1􀟈𝘊􀊹⭜r,𝘳,x,ꬶ(⠤𝔸))]
+                        ↪ꬶ(⠤𝘊􀉳ƒ)
+             ✗⨳
+  𝚁⁺􀋳􀓅􀁰􀖌ƒ
+  ∀i,(r,⠤v) ⬠ ℜ􀎹¿ℜᵢ ₀∉‹ᔐƦ›:  garb code but im tired
+      v􇂎􀉻󷺹􀊜ᔐ
+      ¿¬v: ↺
+      ∀𝘪,(𝘳,⠤𝘷)⬠ℜ↨¿𝘳∉‹ᔐƦ›:
+          ℜ􍺫=[𝘳,⠤𝘷ᐵ₀􀉞i 􇂖􍪵 ⟞􀊩v]
+  ↪ℜ
+
+⊢convert_gram(𝚁,DEBUG=✗):
+  𝚁󷸊ℵ
+  ¿DEBUG: ‹Pre󷺗-rules:›☾; 𝚁 ꟿ󰲣‹  ⟦x⟧: ⟦y⟧›☾
+  to_n = 𝚁⁻􀋳􀓅􀁰􇀵ℵᑀ􍪸󷺿
+  R = gram_rule_machine(𝚁,to_n) 
+  ¿DEBUG: ‹Post-rules:›☾; R↨ꟿ󰲣‹  ⟦x⟧: ⟦y⟧›☾
+  
+  ⊢ fmt(i,𝚛): mp = ‹ᔐƦ∧∨?⮞¬✓ƨ•›↨􀖋􀁰􇀵ℵ􀟞󷺹􀠛1􀊩󷺽
+              𝘴,⠤𝘳 = 𝚛
+              t = mp􍺿
+               ‹⟦i⟧⟦𝘴􀋕⟧ 𝘳=⟦𝘳⟧ t=⟦t⟧›☾
+              ¿𝘴≡␛ᔐ: ↪ruleS(t,𝘳₀)
+              ¿𝘴≡␛Ʀ: ↪ruleR(t,𝘳₀)
+              ↪ruleG(t,⠤𝘳ᐵ 􀉨␛󰆴       􇂖⟞₀􀊤R_TRSH􇂗 ␛
+                          ⟞􀉪␛⠶􀟄⟞₀􀕻𝚁􀊹 􇂖⟞₀􀊤R_NAME􇂗 ⟞₀)
+  rules = N(‹Rule[]›, R􀋳􀜘fmt)
+  names = 𝚁 ℵ􀯖⁻
+  ⊢ ƒ(c,id=‹main›􀌭names􇀶‹main›􇀷names₀,remove_trashes=✓,W_len=✓,E_len=✗,W_fail=✗,E_fail=✓,DEBUG=✗):
+      DEBUG􀌐􀞽˜‹DEBUG not implemented›
+      r = lib.parse(rules,rules🃌,cstr(c)₀,id to_n,remove_trashes)
+      W_len􀌢E_len􀕲W_fail􀌢E_fail􀞽
+      ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􀸩􍛏˜‹Failed to parse›
+           ↪
+      𝚌 = c 𝑀
+      ¿E_len􀉖W_len: rˡ􀒰𝚌􀊹􀞽ᵂ􋕟ˡᵉⁿ􀸩􍛏˜‹Short parse length ⟦𝚌﹕ᵣ􊫂𝑀􀍿⟧<⟦c􀊹⟧›
+      
+      to_c = c􀉳𝑀􀌾⁰󷺹􀓻􀊹󷺽􀎹􀌹􀁰􀯦ℵ
+      ⊢ dep(󱁕): 𝘒 = 󱁕↦󱁕ⁿᴷ􀋲ᐖ󱁕ᴷ􍪴dep  󰤱 code duplication and 0 efficiency found here
+                𝙿 = to_c􋑺􊫻,to_c􋑺􊫻􂕊􋑺􊫂
+                ¿󱁕ⁱᵈ􀟈2³²􀊪1: ↪𝑬(c􀳬􊬣﹕􀳬􊬤,𝙿)
+                ⸘󱁕ⁱᵈ􀟈2³²􀊪2: ↪𝑬(Ń(␛✓),𝙿)  ????
+                ¡         : t = 󱁕ⁱᵈ􀖾􀌈R_FLAG
+                            𝘴 = Rₜ ₀
+                            ¿t<𝚁🃌: ¿𝘴∈␛ᔐ␛Ʀ: ↪𝑬(Ń(namesₜ,𝑬(c􀳬􊬣﹕􀳬􊬤,𝙿)),𝙿)
+                                   ⸘𝘴≡␛✓  : ↪𝑬(Ń(namesₜ,𝑬(Ń(␛✓),𝙿)),𝙿)
+                                   ⸘𝘴≡␛ƨ  : ↪𝑬(Ń(namesₜ,𝑬(󱁕 𝘒ᐵ􋒷ᐸ􀖑􊾖􇀰t,𝙿₀􀝕𝙿₀􀓻t􀊹)),𝙿)
+                                   ¡      : ↪𝑬(Ń(namesₜ,⠤󱁕 𝘒),𝙿)
+                            ⸘𝘴∈␛ᔐ␛Ʀ: ↪𝑬(c􀳬􊬣﹕􀳬􊬤,𝙿)
+                            ⸘𝘴≡␛✓  : ↪𝑬(Ń(␛✓),𝙿)
+                            ⸘𝘴≡␛ƨ  : ↪𝑬(󱁕 𝘒ᐵ􋒷ᐸ􀖑􊾖􇀰t,𝙿₀􀝕𝙿₀􀓻t􀊹)
+                ✗⨳
+      ↪r 􀯗􋄅 r dep
+  ↪ƒ
+
+⊢ _: C = (␛✓,⍁)
+     s,r,P,S,Q,T,D,F = "ᔐƦ+*?󰆴⠶ƨ"ᐵᑀ,󷺽
+     A,O = "∧∨"ᐵᑀ,⟝,⠤𝓐󷺿
+     ↪ { statements =A('W'Q,A(O('comment','elm_o'),'W'Q)S),
+         elm_o      =A('elm_a',A('W'Q,‹∨›s,'W'Q,'elm_a')S),
+         elm_a      =A('elm_j',A(O(A('W'Q,‹∧›s,'W'Q),'w'Q),'elm_j')S),
+         elm_j      =O('_elm_j','elm'),
+         _elm_j     =A('elm','W'Q,‹[⯅⯆△▽↷]›r,'W'Q,O('_elm_j','elm')),
+         elm        =A(‹prefix›,O('assign_eql','group','str','rname'),'suffix'),
+         assign_eql =A('rname','W'Q,‹=›s,'W'Q,'elm_o'),
+         group      =A(‹(›s,'W'Q,'group_inner',‹)›s),
+         group_inner=A('elm_o','W'Q)S,
+         str        =O('str1','str2','str3'),
+         prefix     =O(A('w'Q,A(‹[󰆴❗⮞⠶ƨ~¬]›r,'W'Q)P),'w'Q),
+         suffix     =O(A(A('W'Q,‹[*+?]›r)P,'w'Q),'w'Q),
+         str1       =‹"([^"␛␛]|␛␛.)*"›r,
+         str2       =‹'([^'␛␛]|␛␛.)*'›r,
+         str3       =‹‹([^␛›␛␛]|␛␛.)*␛››r,
+         rname      =‹[^⯅⯆△▽↷󰆴()?❗⮞.:⠶ƨ✗+*=¬∨∧~#‹'"𝘀𝘁𝗻␛␛]+|✗›r,
+         comment    =‹[#][^𝗻]*›r,
+         w          =‹([𝘀𝘁]|␛␛𝗻)+›r,
+         W          =‹([𝘀𝘁𝗻]|␛␛𝗻)+›r } convert_gram
+gramgram = _
+
+⊢ peggle3(G,DEBUG=✗):
+    󱁕 = G gramgram
+    name_remaps = ℵ(‹elm_o elm_a group_inner group›⍭󱑼‹∨∧∧∧›)
+    TT = 󱁕↦󱁕ᵉ ᵀ ⭜+󱁕⭝ 󱁕ᵗ≡␛~ ⭜(␛Ʀ,+󱁕)⭝ (󱁕ᵗ,⠤󱁕ᵗ≡␛ᔐ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᴍTT)
+    escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)
+    ⊢ reduce_j(󱁕): α,o,β,⠤C = 󱁕
+                   ¿C: ✗⨳  β = reduce_j(󱁕.cp(c=[β,⠤C]))  ????????
+                   ¿oᵗ≡␛↷: ↪Ń(␛∧,α,β,α)
+                   ⸘oᵗ≡␛⯆: ↪Ń(␛∨,Ń(␛∧,β,Ń(␛+,Ń(␛∧,α,β))),β)
+                   ⸘oᵗ≡␛△: ↪Ń(␛∨,Ń(␛∧,Ń(␛*,Ń(␛∧,α,β)),α),α)
+                   ⸘oᵗ≡␛▽: ↪Ń(␛∨,Ń(␛∧,Ń(␛∧,β,Ń(␛*,Ń(␛∧,α,β)))),Ń(␛✓))
+                   ⸘oᵗ≡␛⯅: ↪Ń(␛∧,Ń(␛+,Ń(␛∧,α,β)),α)
+                   ✗⨳
+    ⊢ bad(󱁕): ¿󱁕ᵗ∈‹comment w W›⍭: ↪✓
+              ¿󱁕ᵗ¬ ∧ 󱁕🃌≡1 ∧ 󱁕ᶜ₀ᵉ ᵀ ∧ 󱁕ᶜ₀ᵗ∈‹()∧∨:=›: ↪✓
+    ⊢ collapse_ao(󱁕): ¿󱁕ᵉ ᵀ: ↪󱁕
+                      󱁕ᶜ 󷸊 ᴍ󰲡(x≔collapse_ao(x))ᵗ≡󱁕ᵗ∈␛∧␛∨ ⭜xᶜ⭝ [x]󰅂 ⨁􍸒
+                      ↪󱁕
+    ⊢ parse_elm(N): α,n,β = +N₀,N₁,+N₂
+                    l1,l2 = α 􀟠􋇐 􀉧‹❗⠶ƨ›
+                    ∀o⬠(⠤l1,⠤β,⠤l2): n = Ń(o,n)
+                    ↪n
+    rules = 󱁕.rm  (bad)                                                  ␛
+             .ftrp(‹prefix suffix›⍭, 󰲡Ń(xᵗ,𝔗(+x)))                       ␛
+             .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗› , 󰲡Ń(␛ᔐ,𝔗(escape((+x)₁﹕􍨄))))          ␛
+             .ftrp(name_remaps⁻    , 󰲡Ń(name_remapsₓ􊫼,⠤(y∀y⬠x¿yᵉ ᵀ¬)),✓) ␛
+             .flat(󰲡xᵗ≡‹_elm_j›)                                         ␛
+             .find(󰲡xᵗ≡‹assign_eql›)
+    rules = ℵ(rules ᴍ 󰲡+x₀,x₂󰅂)
+    
+    ∀k,󱁕⬠rules: 󱁕 = collapse_ao(
+                        󱁕.ftrp(‹assign_eql›⍭,󰲡x₀,✓)       ␛
+                         .flat(󰲡xᵗ∈‹∧ ∨ elm_j›⍭∧x🃌≡1))    ␛
+                    .ftrp(‹elm_j›,reduce_j , ✓)           ␛
+                    .ftrp(‹elm󷺗󷺗›,parse_elm, ✓)           ␛
+                    .ftrp(‹rname›,󰲡𝔗(x₀ᵗ))
+                ¿󱁕ᵗ∈␛∧␛∨ ∧ 󱁕🃌≡1: 󱁕=󱁕₀
+                rulesₖ = TT(󱁕)
+    
+    ↪convert_gram(rules,DEBUG=DEBUG)
+
+⭷ peggle3,peggle=peggle3
+
+ gram={ w=O(␛x,' 's) S,
+          x=A(␛y,'z'S),
+          y='A's P T,
+          z=A('B's P,␛x,'C's) }
+ c = "ABBABACC"􀋁²⁵􀞆𝘀
+
+ gram={ x=A('A's, ␛y, 'D's, ␛y D, 'Z's T),
+          y=A('B's, ␛z D),
+          z='C's }
+ c = "ABCDBCZ"
+
+ gram={
+     x=A(␛y,𝘀s,␛yD,𝘀s,␛yF,𝘀s,␛yT,␛w),
+     y=␛z P,
+     z='h's,
+     w='x's T
+ }
+ c = "hhh hhh hhh hhhx"
+
+ gram={
+     main=A(‹[a-z]+›r,‹[𝕊-𝕍]+|󰆴›r P)
+ }
+ c = 󰦥󰦥󰦥󰦥󰦥abc𝕍𝕊󰆴𝕊𝕋󰦥󰦥󰦥󰦥󰦥
+
+ gram={
+     main=A((␛⮞,‹abc›s),‹[a-z]+›r T,‹[𝕊-𝕍]+|󰆴›r P) F
+ }
+ c = 󰦥󰦥󰦥󰦥󰦥abcfff𝕍𝕊󰆴𝕊𝕋󰦥󰦥󰦥󰦥󰦥
+
+ gramgram = gramgram 𝒯(convert_gram,‹convert_gram›)
+
+ 󱁕 = c 𝒯(gramgram,‹gram›)
+ ¿󱁕: 󱁕 𝑩𝑩
