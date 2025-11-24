@@ -241,3 +241,16 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
           ⊢__pos__ (𝕊    ): ↪𝕊ˣ◄⬅𝕊ˣ≇␀⨳‹Holder value unset!›
           ⊢__call__(𝕊,x=␀):  𝕊ˣ≔x
           ⊢__bool__(𝕊    ): ↪𝕊ˣ≇␀
+
+ proxy_chained_calls_pure(x↦y↦x+y,1)(1)(10)  11
+⊢proxy_chained_calls_pure(ƒ,n=1):
+  ⊢j(⠤𝘈,_PAIRS=□,⠶𝘒):
+    ¿_PAIRS≅□: _PAIRS=⍁
+    _PAIRS=[⠤_PAIRS,(𝘈,𝘒)]
+    ¿_PAIRS🃌≡n:
+      G = ƒ(⠤_PAIRS₀ ₀,⠶_PAIRS₀ ₁)
+      ∀A,K⬠_PAIRS₁﹕:
+        G = G(⠤A,⠶K)
+      ↪G
+    ↪𝚲j(⠤𝔸,_PAIRS=_PAIRS,⠶𝕂)
+  ↪j

@@ -26,11 +26,10 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
                       ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶𝓚)
 þmoon_to_py.has_lazy_load = ✗
 
-þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
+þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹compiled_⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
 ⊢ moon_to_py(𝚌,𝙺={},𝓚={}):
-    ↪þmoon_to_py(𝚌,𝙺,𝓚)  󰤱
     ¿sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py􋈨: ↪cₕ
-    ↪cₕ≔(code_file_caching⭜þmoon_to_py_fcache(𝚌,𝙺,𝓚)⭝þmoon_to_py(𝚌,𝙺,𝓚))
+    ↪cₕ≔(code_file_caching ⭜þmoon_to_py_fcache⭝ þmoon_to_py)(𝚌,𝙺,𝓚)
 moon_to_py􋈨 = {}
 
 decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent𝗻⟦𝚌⟧›
@@ -82,6 +81,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                                   ‹⨡􋀸Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/rewriters
                                   ‹⨡􋀸Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/to_ast
                                   ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/ast_to_py
+                                  ‹⨡􋀸errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸errors
                                   ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; c=⨡􋀸Compiler
                                   TRANSPILE_REF(c.moon_to_py)
                                   c.generate_bootstrap(𝔸 ⭜𝔸₀⭝ ‹bootstrap.py›)

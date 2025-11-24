@@ -1,6 +1,5 @@
 ⨡ cache
-⨡ peggle2
-⨡ peggle2/gram_tools
+⨡ peggle3/gram_tools
 
 gram = 󰦥󰦥󰦥󰦥󰦥
 main = (󰆴𝘄 ∨ 󰆴comment ∨ css_prop_key_alias ∨ rule_alias_header ∨ var_def ∨ line ∨ 󰆴(mark_nest ∨ mark))*
@@ -31,7 +30,7 @@ mark_nest = (󰆴"∣" ✓)
 
 𝘄 = ~‹[ \t\n]+›
 comment = 󰆴~‹[ \t]*› ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))› 󰆴~‹[ \t]*›
-󰦥󰦥󰦥󰦥󰦥 peggle2
+󰦥󰦥󰦥󰦥󰦥 peggle
 
 ⊢ add_blocks(󱁕,start,scan=‹main›,new=‹blk›):
     ƒ = ⟨⟨󷺹start⭜⟞ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖᑀ₁>⟝₁⭜⟞󷹗ᐘ⍖⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(new,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
@@ -39,9 +38,10 @@ comment = 󰆴~‹[ \t]*› ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎
 
 subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_positions(gram(󱁕􋒷,β≅□⭜󰁍α),󱁕􋒷), 󱁕ᵉ ᵖ))
 
-⊢ (fcache􀃅) transpile_moss(content,inline=✗,aliases=□):
+⊢(fcache􀃅)transpile_moss(content,inline=✗,aliases=□):
     aliases􇂾ᑀ≅□⭜􍪵{}
     (alias_a,alias_p,alias_r)􇂼‹apr›ᐖaliases.setdefault(⟞,{})
+     ‹Got:𝗻𝘁alias_a=⟦alias_a⟧𝗻𝘁alias_p=⟦alias_p⟧𝗻𝘁alias_r=⟦alias_r⟧›☾
     
     ¿inline: content = ‹_∣⟦content⟧›
     
@@ -72,8 +72,8 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
            ↪󱁕􀉳ƒ􀞆
     to_css = ƒ
     
-    ⊢ (󱁕.ftrp(‹rule_alias›,⬤)) (󱁕):
-        alias_r[󱁕₀􋒷] = 󱁕₁﹕
+    ⊢(󱁕.ftrp(‹rule_alias›,⬤)) (󱁕):
+        alias_r[󱁕₀🃌≡2 ⭜󱁕₀ ₀􋒷⭝ 󱁕₀􋒷] = 󱁕₁﹕
         ¿󱁕₀🃌≡2: x = 󱁕ᶜ.pop(0)
                 ↪󱁕.copy(t=‹rule›,c=[x₁,⠤󱁕])
         ↪󱁕
@@ -94,5 +94,6 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
              eggos ∣ egglike
                      weed 22
              󰦥󰦥󰦥󰦥󰦥
-             transpile_moss(c,✗,𝔠≔{}) ☾
-             transpile_moss(‹𝚌 ⦑red⦒; eggos›,✓,𝔠) ☾
+             css,𝔠 = transpile_moss(c,✗)
+             css☾
+             transpile_moss(‹𝚌 ⦑red⦒; egglike›,✓,𝔠) ☾

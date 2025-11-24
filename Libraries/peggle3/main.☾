@@ -36,11 +36,12 @@ pcre2_code* create_regex(ᔐ P);
 lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
 
 N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
-⊢ cstr(s,mem=⦉⠤ᐦ⦊): s󷸊𝑀
-                    A = N("uint8_t[]",s🃌)
-                    ∀i,v⬠s↨: Aᵢ = ffi.cast("uint8_t",v)
-                    A mem.add
-                    ↪N("ᔐ*",(A,s🃌))
+⊢cstr(s,mem=⦉⠤ᐦ⦊,type="ᔐ*" Ų):
+  s = s.encode("utf-8")
+  A = ffi.new("uint8_t[]",s)
+  mem.add(A)
+  ↪ffi.new(type,(A,s🃌))
+
 ruleR = ⥌t,r        ↦{t=t, dat={r=lib.create_regex(r cstr→₀)},   }
 ruleS = ⥌t,s=ᐦ      ↦{t=t, dat={s=                 s cstr→₀ }, ⠶𝕂}
 ruleG = ⥌t,cL=0,cR=0↦{t=t, cL=cL, cR=cR                      , ⠶𝕂}
@@ -49,15 +50,15 @@ R_NAME = 1􀊧10
 R_TRSH = 1􀊧11
 R_FLAG = R_NAME􀊤R_TRSH
 
-⊢(fcache)gram_rule_machine(𝚁,to_n):
+⊢(fcache)gram_rule_machine(𝚁,nmap):  warning: little foresight
   ℜ=⍁􀳱􁗢; add = 󷺹≅□ 􇃆ℜ􀊹􀝓[⠤𝓐] ℜ.append􇃇 ⟞􀝓ℜ􍪴􀯍[⠤𝓐]
   ⊢ƒ(𝚛,r=□): ¿𝚛􀊜𝑖: ↪[𝚛]
-             ¿𝚛􀊜ᔐ: ¿𝚛≡␛✓: ↪ƒ(␛✓⛶􋇡,r)  󰤱 AAAAA
+             ¿𝚛􀊜ᔐ: ¿𝚛≡␛✓: ↪ƒ(␛✓⛶􋇡,r)  Weird!
                    ¿r≇□: 𝚛=[␛•,𝚛]
-                   ¡   : ↪[𝚛 to_n]
+                   ¡   : ↪[nmap􀲼]
              𝘳,⠤𝘊 = 𝚛
              ¿𝘳∈‹󰆴⠶󷺗󷺗󷺗›: ¿𝘳≡␛⠶∧r≇□:
-                           ↪ƒ((␛∧,(␛󰆴,(␛✓,)),𝚛),r)  󰤱 AAAAA
+                           ↪ƒ((␛∧,(␛󰆴,(␛✓,)),𝚛),r)  Weird!
                          𝘤 = 𝘊₀
                          ¿𝘳≡␛󰆴: ↪[⠤ƒ(𝘤,r),𝘳]
                          ⊢ꬶ(𝚛): ¿𝚛ᐹᔐ􀊤𝑖􀟀𝚛₀􀉧‹ᔐƦƨ›: ↪𝚛
@@ -82,8 +83,8 @@ R_FLAG = R_NAME􀊤R_TRSH
 ⊢convert_gram(𝚁,DEBUG=✗):
   𝚁󷸊ℵ
   ¿DEBUG: ‹Pre󷺗-rules:›☾; 𝚁 ꟿ󰲣‹  ⟦x⟧: ⟦y⟧›☾
-  to_n = 𝚁⁻􀋳􀓅􀁰􇀵ℵᑀ􍪸󷺿
-  R = gram_rule_machine(𝚁,to_n) 
+  to_n = 𝚁⁻􀋳􀓅􀁰􇀵ℵ􇂐nmapᑀ􍪸󷺿
+  R = gram_rule_machine(𝚁,nmap)
   ¿DEBUG: ‹Post-rules:›☾; R↨ꟿ󰲣‹  ⟦x⟧: ⟦y⟧›☾
   
   ⊢ fmt(i,𝚛): mp = ‹ᔐƦ∧∨?⮞¬✓ƨ•›↨􀖋􀁰􇀵ℵ􀟞󷺹􀠛1􀊩󷺽
@@ -123,7 +124,8 @@ R_FLAG = R_NAME􀊤R_TRSH
       ↪r 􀯗􋄅 r dep
   ↪ƒ
 
-⊢ _: C = (␛✓,⍁)
+⊢ generate_gramgram:
+     C = (␛✓,⍁)
      s,r,P,S,Q,T,D,F = "ᔐƦ+*?󰆴⠶ƨ"ᐵᑀ,󷺽
      A,O = "∧∨"ᐵᑀ,⟝,⠤𝓐󷺿
      ↪ { statements =A('W'Q,A(O('comment','elm_o'),'W'Q)S),
@@ -145,10 +147,12 @@ R_FLAG = R_NAME􀊤R_TRSH
          comment    =‹[#][^𝗻]*›r,
          w          =‹([𝘀𝘁]|␛␛𝗻)+›r,
          W          =‹([𝘀𝘁𝗻]|␛␛𝗻)+›r } convert_gram
-gramgram = _
+gramgram = □⛶
 
-⊢ peggle3(G,DEBUG=✗):
-    󱁕 = G gramgram
+⊢(proxy_chained_calls_pure(⬤))peggle3(G,DEBUG=✗):  󰤱 is this proxy thing a good idea?
+                                                   󰤱 do proxy for gram_rp and other stuff? idk man
+    ¿gramgram₀≅□: gramgram₀ = generate_gramgram
+    󱁕 = G gramgram₀
     name_remaps = ℵ(‹elm_o elm_a group_inner group›⍭󱑼‹∨∧∧∧›)
     TT = 󱁕↦󱁕ᵉ ᵀ ⭜+󱁕⭝ 󱁕ᵗ≡␛~ ⭜(␛Ʀ,+󱁕)⭝ (󱁕ᵗ,⠤󱁕ᵗ≡␛ᔐ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᴍTT)
     escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)

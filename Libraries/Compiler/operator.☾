@@ -27,7 +27,7 @@ n=𝙾𝚃🃌-5  ⭠⭢ n ←→
 ‹≔󷸉󷸊󷸋›ᐖOPS􍪴≔(␛B,0,n)ᐸ
 ‹≕󷸎󷸌󷸍›ᐖOPS􍪴≔(␛B,n,0)ᐸ
 
-OP_LIT = ⦉⠤OPS.keys󰈲󷺹🃌≡1ᐸ,⠤opf∖𝗻𝘀⭢⨝⦊⨝
+OP_LIT = ⦉⠤OPS.keys󰈲󷺹🃌≡1ᐸ,⠤opf∖𝗻𝘀⭢⨝⦊􀉽􁂡
 
 ⊢ OP(x): ¿xᐹŃ  : ↪␛´∉xᵉ ⭜􋄅 xᵉ.get(␛O)
          ¿x∈OPS: ↪OPSₓ

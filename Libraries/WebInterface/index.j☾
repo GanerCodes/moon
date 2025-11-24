@@ -118,6 +118,7 @@ log = 󰲡{
         await (await pyfetch("moon_wasm.zip")).unpack_archive()
         shutil.move("moon_wasm_cache", "/tmp/moon_wasm_cache")
         await pyodide_js.loadPackage("regex")
+        await pyodide_js.loadPackage("cffi")
         
         class OutOverride:
             def __init__(𝕊,𝕠,f=None): 𝕊.𝕠,𝕊.f = 𝕠,f

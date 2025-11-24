@@ -2,9 +2,7 @@
 ⨡ text_format
 ⨡ Compiler/ast_to_py
 ⨡ Compiler/to_ast
-⨡ Compiler/node_types ⭸ 𝑩𝑩
- ⨡ peggle3/gram_tools
-⨡ peggle2/gram_tools
+⨡ peggle3/gram_tools
 
 ⊢ find_section(󱁕,𝚜,a=␛p):
     ¿␛p∉󱁕ᵉ: ↪

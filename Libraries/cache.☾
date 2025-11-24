@@ -12,6 +12,14 @@
     ⊢ __init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=ᐦ,file_only=✗):
         super().__init__(ƒ,𝘩,𝘦,𝘥)
         𝕊􀲥􀲷,𝕊􀲥􀲹=file_only,mkd(fpᐹ𝐩∧fp.is_absolute ⭜fp⭝ CACHEDIR/fp)
+    ⊢ __call__(𝕊,⠤𝔸,⠶𝕂): log = ‹MOON_LOG_FCACHE›∈env
+                         𝚎=𝕊􍺪(fname≔getattr(𝕊􊽺,‹__name__›,󷺗),⠤𝔸,⠶𝕂)
+                         ¿𝕊.chk_cache(𝚎)≕v≇␀: ¿log: ‹Cache hit (⟦fname∨□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›☾
+                                              ↪𝕊􍺢(v)
+                         v=𝕊􊽺(⠤𝔸,⠶𝕂)
+                         𝕊.add_cache(𝚎,𝕊􍺤(v))
+                         ¿log: ‹Cache fail (⟦fname∨□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›☾
+                         ↪v
     ⊢ chk_cache(𝕊,x  ): ¿𝕊􀲥􀲷¬∧x∈𝕊􎀞: ↪𝕊􎀞ₓ
                         ¿(𝕊􀲥􀲹/x≕f).exists: v=ᵇ(f)
                                             ↪𝕊􀲥􀲷⭜𝕊􎀞ₓ≔v⭝v
@@ -23,6 +31,6 @@ cache,fcache = Cacher⋄FileCacher ᴍ mkmk_cache
 
 ⭷ Cacher,FileCacher,cache,fcache,mkmk_cache
 
- sqc = mk_fcache(fp="/tmp/weed")(☾○√)
+ sqc = fcache(fp="/tmp/weed")(☾○√)
  sqc(5)
  sqc(5)

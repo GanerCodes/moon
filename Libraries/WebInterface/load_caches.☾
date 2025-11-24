@@ -2,9 +2,9 @@ __þIMPORTS__.clear
 TP_CACHE.clear
 ⨡􋀸text_format
 ⨡􋀸cache
-⨡􋀸peggle2
-⨡􋀸peggle2/rgx_golfatron
-⨡􋀸peggle2/gram_tools
+⨡􋀸peggle3/rgx_golfatron
+⨡􋀸peggle3
+⨡􋀸peggle3/gram_tools
 ⨡􋀸Compiler/gram.data
 ⨡􋀸Compiler/generate_operators
 ⨡􋀸Compiler/operator

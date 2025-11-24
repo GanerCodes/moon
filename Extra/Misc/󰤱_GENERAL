@@ -1,5 +1,6 @@
 § TODOs ------------------------------------
     󰤱  BRUH ∅ and ⦉⦊ are BROKE
+    󰤱  what if strs be like ‹x is ‹x››
     󰤱  https://ganer.xyz/s/0b611515becc6c0f bruh
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
     󰤱  Webinterface
@@ -45,7 +46,6 @@
     󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
     󰤱  eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
     󰤱  implicit imports are jank
-    󰤱  rule named "ᔐ" in peggle2 doesn′t work
     󰤱  auto curry (fname)?
     󰤱  Font generator slow
     󰤱􊽨 Web/phone-app maker

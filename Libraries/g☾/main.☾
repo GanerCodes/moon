@@ -1,6 +1,7 @@
+ 󰤱 test/fix
 ⨡ cache
-⨡ peggle2
-⨡ peggle2/rgx_golfatron
+⨡ peggle3/rgx_golfatron
+⨡ peggle3
 HEADER = __dir__/‹header.g☾› → 
 flip = UPSIDEDOWNSYNDROME.flip
 
@@ -39,13 +40,13 @@ REPLACES 󷸊| (FRAC_CONV ℵ ꟿ⁻󰲣x₀􀊱x₁﹕􀓅􀁭≺􀝪􀠩)􍮕
 bp = (⠤*´󷸼,REPLACES⁻) ᴍ rgx_golfatron
 ll = ‹SCRIPTD SCRIPTU SPECIAL›⍭ᐵ⛶⟗␛%
 GRAM = ll 󰛔ᴳᴿᴬᴹ bp
-gram = GRAM peggle2
+gram = GRAM peggle
 
 𝙲𝚂 = 🃌○󷺹󷹕󷺹≠𝘀
-⊢ w2cb(𝚌): ƒ = ⟨⟨󷺹􍨄≡␛⇒⭜⟞ 𝙲𝚂󷹗∨✓⍮ 󷺻𝙲𝚂(⟞)>⍖⍮ ⍈ 󷺻‹⟦⟞₀ ﹕􍨄⟧{⟦⟞₁﹕ƒ⟕𝗻⟧}›⟩ 󷸴 ⴳ⟩
-           ↪ƒ(𝚌󷹎𝗻󰈲𝘀󰛔ᐦ)⨝𝗻
-⊢ a2c (𝚌): ƒ = 󰲡x􀪤¹␛⇒􀽼􍨅󷺻‹𝗻⟦x􀋙ᔨ␛⇒􀓻1􁂇𝘀⟧⟦⟞⟧›ᐸ􁂡
-           ↪𝚌󷹎𝗻󰈲􊽺󷺹∋␛⇒ ∧ ⟞󰑅ᔨ␛⇒ ≠ ⟞🃌-1ᐸ􁋳𝗻
+⊢w2cb(𝚌): ƒ = ⟨⟨󷺹􍨄≡␛⇒⭜⟞ 𝙲𝚂󷹗∨✓⍮ 󷺻𝙲𝚂(⟞)>⍖⍮ ⍈ 󷺻‹⟦⟞₀ ﹕􍨄⟧{⟦⟞₁﹕ƒ⟕𝗻⟧}›⟩ 󷸴 ⴳ⟩
+          ↪ƒ(𝚌󷹎𝗻󰈲𝘀󰛔ᐦ)⨝𝗻
+⊢a2c (𝚌): ƒ = 󰲡x􀪤¹␛⇒􀽼􍨅󷺻‹𝗻⟦x􀋙ᔨ␛⇒􀓻1􁂇𝘀⟧⟦⟞⟧›ᐸ􁂡
+          ↪𝚌󷹎𝗻󰈲􊽺󷺹∋␛⇒ ∧ ⟞󰑅ᔨ␛⇒ ≠ ⟞🃌-1ᐸ􁋳𝗻
 w2cb = w2cb􀖢􀍗a2c
 
 𝚃,𝔗,𝔗𝔗 = ℵ(T=✓),󷺻Ń(⟞,e=𝚃),󷺻𝔗(⟞􋒷)
@@ -56,7 +57,7 @@ mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
 𝚜 = Ń(␛𝘄,𝘀 𝔗)
 𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›󰌷⍭‹false ...›)ᴍmkopt
 
-⊢ (fcache) transpile_glsl(x,n=∞,comments=✓):
+⊢(fcache)transpile_glsl(x,n=∞,comments=✓):
     ¿comments: ↪transpile_glsl(w2cb(gram(x,‹main_comments›,remove_trashes=✗).rm(‹comment›)􋒷), n, ✗)
     󱁕 = x gram
     ¿n<0: ↪󱁕

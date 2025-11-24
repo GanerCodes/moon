@@ -1,5 +1,0 @@
-#!/bin/bash -e
-cd pcre2
-./configure --enable-utf --with-link-size=4 --disable-shared --enable-static --prefix="$(pwd)/local"
-make -j$(nproc)
-make install

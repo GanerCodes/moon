@@ -1,5 +1,4 @@
-⨡ peggle2
-⨡ peggle2/gram_tools
+⨡ peggle3/gram_tools
 ⨡ ☾ontgen
 ⨡ text_format
 
@@ -25,21 +24,22 @@ com       = ~‹[^\n]*›
 pfxd = 󷺹󰈲⭢󷺹₀ᐸꟿ⁺󰲣yᐵ₁﹕ᐸ⭢pfxd
 chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
 
-⊢ parse_config(conf,include_chars=ᐦ,ns=□):
+⊢parse_config(conf,include_chars=ᐦ,ns=□):
     ¿ns≅□: ns={}
-    gram = peggle2(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›)
-    󱁕 = gram(conf,remove_trashes=✗).ftrp(‹☾sub›,󷺻𝔗(󱠨(⟞.rm(󷺹ᵗ≡␛󰆴)􋒷,ns,ƒ=eval,ret=✓)))􋒷 gram
+    gram = peggle(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›)
+    󱁕 = gram(conf,remove_trashes=✗)
+    󱁕 = 󱁕.ftrp(‹☾sub›,󷺻𝔗(󱠨(⟞₁􋒷,ns,ƒ=eval,ret=✓)))􋒷 gram
     󱁕.rm(󷺹ᵗ∈␛𝘄␛𝗪).ftrp(‹concat›,󷺹.set(t=‹⨝›))
-    ⊢ parse_stmt(󱁕):
+    ⊢parse_stmt(󱁕):
         s=⍁
-        ⊢ do(󱁕): ¿󱁕ᵗ≡‹l󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪[[󱁕₀ᵗ≡‹l_s› ⭜‹(⟦󱁕􋒷⟧)›⭝ 󱁕􋒷]]
-                 ¿󱁕ᵗ≡‹style󷺗󷺗󷺗󷺗›: ↪do(󱁕₀)
-                 ¿󱁕ᵗ≡‹smol󷺗󷺗󷺗󷺗󷺗›: ↪[[                   {smol=✓}⭢ℵ]]
-                 ¿󱁕ᵗ≡‹style_reg›: ↪[[‹fg bg bc bw›⍭󱑼󱁕􋒷.split(␛|)⭢ℵ]]
-                 ¿󱁕ᵗ≡‹output󷺗󷺗󷺗›: s.extend(󱁕ᐵᵗ≡‹ignore›⭜□⭝⟞􋒷)
-                                  ↪[[□]]
-                 ¿󱁕ᵗ≡␛⨝: ↪󱁕ᴍdo⭢⨉⭢ᴍ󰌷
-                 ⸘󱁕ᵗ≡␛∀: ↪󱁕ᴍdo⭢󰌷
+        ⊢do(󱁕): ¿󱁕ᵗ≡‹l󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪[[󱁕₀ᵗ≡‹l_s› ⭜‹(⟦󱁕􋒷⟧)›⭝ 󱁕􋒷]]
+                ¿󱁕ᵗ≡‹style󷺗󷺗󷺗󷺗›: ↪do(󱁕₀)
+                ¿󱁕ᵗ≡‹smol󷺗󷺗󷺗󷺗󷺗›: ↪[[                   {smol=✓}⭢ℵ]]
+                ¿󱁕ᵗ≡‹style_reg›: ↪[[‹fg bg bc bw›⍭󱑼󱁕􋒷.split(␛|)⭢ℵ]]
+                ¿󱁕ᵗ≡‹output󷺗󷺗󷺗›: s.extend(󱁕ᐵᵗ≡‹ignore›⭜□⭝⟞􋒷)
+                                 ↪[[□]]
+                ¿󱁕ᵗ≡␛⨝: ↪󱁕ᴍdo⭢⨉⭢ᴍ󰌷
+                ⸘󱁕ᵗ≡␛∀: ↪󱁕ᴍdo⭢󰌷
         d=do(󱁕)
         ¿d🃌≡1 ∧← d₀ᑀ🃌≡2 ∧ ⟞₀ᐹ𝑑 ∧ ⟞₁≅□ᐸ:  JANK HACK
             ↪sᐖd₀ ₀⋄⟞ᐸ
@@ -54,7 +54,7 @@ chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
         (dest ≔⬅ r₁󰌷⭢⊂K⭜E⭝B)ᵣ􊬣=r₁
     E󷸊ꟿ⁺󰲣yᐵ∖􊬏₍􊫔₎􊬐󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
     ↪⦉⠤include_chars∖􊸇⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
-⊢ conf_to_xcompose(c):
+⊢conf_to_xcompose(c):
     t = chkp(cꟿ󰲣y₀󰅂⭢󰌷→pfxd,⬤)
     c󷸊ꟿ⁺󰲣y₀ᐵt⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱 doesn't add multiple spaces but eh
     ↪cꟿ󰲣x∧y⭜􍭓(y₀,ₓ)󰅂ᴍ⨉⭢󰌷⭢xcomp_seqs
