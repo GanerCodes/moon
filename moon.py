@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='RzTjm8sM1aA_aKgRRQI20LWw2ysdrw37spjHhIfp0gk'
+BOOTSTRAP_HASH='dsTAwDRD9ZWxGPT6Jn0pMJmEjXbKHuNpZLky4AIxIdw'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -1600,6 +1600,18 @@ class ÂÑÖ(áÍÙ):
                 if not((k in áÑÞ)):continue
                 (ÄÊPSH(r),ÄÊPSH(k),ÄÊPSH(v),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
             
+        
+        return r
+    
+    def __sub__(áÑÞ,y):
+        (r:=ÂÑÖ())
+        if (áÑÞ).hasdef():
+            (r).setdef((áÑÞ).getdef())
+        
+        ÂùÆ(áÓö(y))
+        for (k,v) in(áÑÞ):
+            if not((k not in y)):continue
+            (ÄÊPSH(r),ÄÊPSH(k),ÄÊPSH(v),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
         
         return r
     

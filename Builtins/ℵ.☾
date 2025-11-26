@@ -23,6 +23,11 @@
                     ¿y􀝀𝑠􀊤𝑙􀊤𝑡: ∀k  ⬠⦉⠤y⦊     ¿k∈𝕊: rₖ=𝕊ₖ
                     ¡       : ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
                     ↪r
+    ⊢ __sub__(𝕊,y): r = ℵ
+                    ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
+                    𝗜(y)􁀒
+                    ∀k,v⬠𝕊¿k􀉩y: rₖ=v
+                    ↪r
     __setattr__ = 𝑑.__setitem__
     __getattr__ =   __getitem__
     ⊢ __getstate__(𝕊): ¿𝕊.hasdef(): ↪𝑑(𝕊),𝕊.getdef()
