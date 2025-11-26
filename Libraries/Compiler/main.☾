@@ -33,10 +33,10 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 moon_to_py􋈨 = {}
 
 decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent𝗻⟦𝚌⟧›
-⊢ compile_code(𝚌,𝚙=□): ¿𝚙≅✓: 𝚌,𝚙=𝚌 ,𝚌
-                       𝘤=moon_to_py(𝚌)
-                       ¿𝚙≇□: 𝘤󷸊decorate_code(⬤,𝚙󷸊𝐩)
-                       ↪𝘤
+⊢compile_code(𝚌,𝚙=□): ¿𝚙≅✓: 𝚌,𝚙=𝚌 ,𝚌
+                      𝘤=moon_to_py(𝚌)
+                      ¿𝚙≇□: 𝘤󷸊decorate_code(⬤,𝚙󷸊𝐩)
+                      ↪𝘤
 compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Compiled ⟦⟞ ᔐ󱖔ᵈᵒᵗʳⁱᵐ25⟧ ⟦𝗻󰛔􀲟␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧ ⭢ ⟦𝗻󰛔􍺠␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧›☾ᐸ⭢⨝𝗻
 
 🟑
@@ -83,7 +83,7 @@ compile_files = ⥌F↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Comp
                                   ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸Compiler/ast_to_py
                                   ‹⨡􋀸errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; ⨡􋀸errors
                                   ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›☾ ; c=⨡􋀸Compiler
-                                  TRANSPILE_REF(c.moon_to_py)
+                                  TRANSPILE_REF(c.þmoon_to_py)  (c.moon_to_py)
                                   c.generate_bootstrap(𝔸 ⭜𝔸₀⭝ ‹bootstrap.py›)
                                   ŧ𝼝(‹Generated bootstrap!›,‹f0f›)☾
 

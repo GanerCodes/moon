@@ -5,13 +5,10 @@ Error handling:
   1. Format for sourcemaps
   2. Thing that concats trees so you can generate sourcemaps for multi-files
 
-󰤱 make some vars auto-rerefference globals like 𝔒𝔘𝔗
-󰤱 https://ganer.xyz/s/f112f31189ee31f8 fix unary/binary combos ; prob make it so if one or more orders higher then it can't be eaten?
+󰤱  make some vars auto-rerefference globals like 𝔒𝔘𝔗
 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  better errors
 󰤱  ⨡ a ⨡ b ⨡ c
-󰤱  `1+1 ≕ x y` ⟶ `(PSH((1 + 1)),(x:=PKE(0)),DEL(1))[1]` ???
-󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)`
 󰤱  whitespace involution lol
 󰤱  string ␛ before newline should not add it
 󰤱  with statements (prob ⓦ under or something)
@@ -22,7 +19,6 @@ Error handling:
 󰤱􊽨 deque for þSTK
 󰤱  "joe"󷹝¹⁶ should give the charcodes in the base iasdjia
       for 􋇙 maybe use a 𐞑 or somethingiadfsj
-󰤱  the random 󰤱′s all throughout the code
 
  🐈‍⬛‍⬛‍⬛‍⬛‍⬛
 All orders for all operators

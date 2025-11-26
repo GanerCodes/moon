@@ -66,6 +66,16 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
             ␛└ +␛─𝚠+␛┘⭢𝖼]⨝𝗻
     ↪𝚡 ᙡ 2₁ ꟿ󰲥Oₙ􊮝₁₋ₓ􊮚􊱃₊􊮚􊱃+y+Cₙ󰅂⭢⨝𝗻
 
+⊢grid(x,fg=□): chars = 􊸌􀠓[⠤‹╴╶─╵┘└┴╷┐┌┬│┤├┼›]􀓬ᶠᵍ􁗻􋄅⬤􀉳ŧ𝼝(⬤,fg)
+               x􇂎ᐵ􀉳ᔐ􀋭􊾖ᑅx􀉳􀁧􀘇⁰
+               L = xᴍ²𝼞𝼞
+               W = L⍉ᐵᐵ₀ᐸ⤉⁰
+               H = L ᐵᐵ₁ᐸ⤉⁰
+               L = L􀋲􍧱􀋶ᔨ􋅂􀖡󷺼pads(x􍪴􊬣 􍪴􊬤,W􍪴􊬤,H􍪴􊬣)ᐸ
+               w,h = x􇣒􊾖₀􀊹,x􀊹
+               S = h􀊩1􀕄􀦬w􀊩1􀕄􀨰²󰲣chars[y􀗉y􀉣w􀗉x􀗉x􀉣hᐵ𝑏⪡󷸀ᐸ⨁]􀠓␛─􀔚W􇣒⁰󰅂􀨯􀂐
+               ↪L􀉳􀁳􀋶ᔨ􍯓􁘎􋂝􋄄􀖋⬤􀋢𝗻􀠋􍭓S􀧬¹􀿛𝗻
+
 box,BOX = 2⭥ᐖ󰲡box_(xᐹ𝑙|𝑡⭜x⨝𝗻⭝x,⠤𝔸,⠶𝕂,big=⟞)
 padl      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
 padc      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=0)ᐘ𝼞𝼞(y)₀⭢⨝𝗻
@@ -98,23 +108,26 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
 ⭷ rm_esc,split_text_colors,lines,tspl,padl,padc,padr,pads,stackr,box,BOX,␛
-  linenum,linewnum,dotrim,show_code,title,slice_𝚕𝚌,𝼞ꬷ,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+  grid,linenum,linewnum,dotrim,show_code,title,slice_𝚕𝚌,𝼞ꬷ,𝼞𝼞,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
-⊢ test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
-                    linewrap(linenum(‹egg salad number twelve fortnite
-                                      the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
-                    a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-                    b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
-                    c = box(‹5⭥ᐵ²›)☾
-                    d = BOX(‹5⭥ᐵ²›)☾
-                    stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
-                    padl(‹egg›,11,␛─)☾
-                    padl(‹egg›,11,𝘀)☾
-                    padc(‹egg›,11,𝘀)☾
-                    padc(‹egg›,11,␛─)☾
-                    padc(‹lul›,10,␛─)☾
-                    padc(‹lads𝗻x›,10,␛─)☾
-                    padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
-                    padc(‹egg›,11,𝘀)☾
-                    padr(‹egg›,11,𝘀)☾
-                    padr(‹egg›,11,␛─)☾
+⊢test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
+                   linewrap(linenum(‹egg salad number twelve fortnite
+                                     the last thing you'd want on your burg›)☾,12,3⋅𝘀)☾
+                   a = box(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                   b = BOX(‹jo⭥∈ease𝗻asoidasdeeee›)☾
+                   c = box(‹5⭥ᐵ²›)☾
+                   d = BOX(‹5⭥ᐵ²›)☾
+                   stackr(a,‹a𝗻b𝗻c𝗻d𝗻e›,b,c,d)☾
+                   padl(‹egg›,11,␛─)☾
+                   padl(‹egg›,11,𝘀)☾
+                   padc(‹egg›,11,𝘀)☾
+                   padc(‹egg›,11,␛─)☾
+                   padc(‹lul›,10,␛─)☾
+                   padc(‹lads𝗻x›,10,␛─)☾
+                   padc(‹lads𝗻x›,‹jo𝗻aaa›,␛─)☾
+                   padc(‹egg›,11,𝘀)☾
+                   padr(‹egg›,11,𝘀)☾
+                   padr(‹egg›,11,␛─)☾
+                   h = 1􀌉²5􀉳􀂠≺􀍼􀟝²󰲡abc𝗻71􀌉10⨝
+                   h􀖋²𝗻􀋀␛𝗻ᐵ⨝𝘁☾
+                   h grid ☾

@@ -1,7 +1,17 @@
-§ TODOs ------------------------------------
-    󰤱  BRUH ∅ and ⦉⦊ are BROKE
-    󰤱  what if strs be like ‹x is ‹x››
+§ Bugs -------------------------------------
     󰤱  https://ganer.xyz/s/0b611515becc6c0f bruh
+    󰤱  `1+1 ≕ x y` ⟶ `(PSH((1 + 1)),(x:=PKE(0)),DEL(1))[1]` ???
+    󰤱  `a b c` ⟶ `␀CAT((a), ␀CAT(b, c))`, should be `␀C(␀C(␀C((a)),b),c)` ???
+    󰤱 https://ganer.xyz/s/f112f31189ee31f8 fix unary/binary combos
+        prob make it so if one or more orders higher then it cant be eaten?
+    󰤱  UGEX EMPTY LIST INPUT THING
+    󰤱  Web interface is broken cuz wasm hard
+
+§ TODOs ------------------------------------
+    󰤱  Documentation
+        󰤱  Make the stuff with peggle3 more clear
+    󰤱  what if strs be like ‹x is ‹x››
+    󰤱  the random 󰤱′s all throughout the code
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
     󰤱  Webinterface
         Update the intro print statement w new stuff
@@ -10,17 +20,14 @@
         Show groupings somehow
         Backend weird code bc globals or something
     󰤱˜ a?₂?.x?(x,y)
-    󰤱  replace 𝔍󰄞 𝔍󰄟 w 𝔍 and 𝔍󷹁 ?
     󰤱􊽨 󰶡 and 󰶣 for minus/plus one?
     󰤱  x􍪵 should be exp
     󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
-    󰤱  Documentation (oh gosh people are finding the project now)
-    󰤱  UGEX EMPTY LIST INPUT THING
     󰤱  heckin detect byte mode  to implicitly cast input to ᔐ
     󰤱  heckin [1,2,34,󷱂]⫰ᔨ
     󰤱  textwrap is cringe
     󰤱  versions of ⭜ ⭝ that foward the value like 󷸊
-    󰤱  fold with multiple prev vals
+    󰤱  version fold with multiple (optionally all) prev vals
     󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
@@ -382,7 +389,7 @@
      in_block
     out_block
 
-    𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞ ⟦h+=1 ; h+=2 ; h ⟧ ֎ rets h ֎
+    𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞ ⟦h󷸊+1 ; h󷸊+2 ; h⟧ ֎ rets h ֎
     𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞ ⟦
         h+=1 ; h+2 ⟧ ֎ rets h+2 ֎
     𝑓 = 󷺄x󰄎y󰄎z↦w,[h,i],v↦[w,x]⁞
@@ -394,7 +401,7 @@
 
     Actual AST tree
     Target llvm?
-        exec/eval would be impossible/inefficent but thats ok
+        exec/eval would be impossible/inefficent but thats ok i think
     
     Internal types:
         ᔐ: [graphemes: 𝑖]
