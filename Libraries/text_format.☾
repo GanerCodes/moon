@@ -1,35 +1,58 @@
-⦃import re⦄
+    ⦃import pcre2 as re⦄; REGEX_LIB = ‹pcre2›
+¡:  ⦃import regex as re⦄; REGEX_LIB = ‹regex›
+  ¡: ⦃import re    as re⦄; REGEX_LIB = ‹re󷺗󷺗󷺗›
+¿REGEX_LIB≡‹pcre2›: ⊢regex(P,⠤𝔸,⠶𝕂): r=re.compile(P,⠤𝔸,jit=✓,⠶𝕂)
+                                     r.jit_compile()
+                                     ↪r
+⸘REGEX_LIB≡‹regex›: ⊢regex(P,⠤𝔸,⠶𝕂): ↪re.compile(P,⠤𝔸,⠶𝕂)
+⸘REGEX_LIB≡‹re󷺗󷺗󷺗›: ⊢regex(P,⠤𝔸,⠶𝕂): ↪re.compile(P,⠤𝔸,⠶𝕂)
 
 𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
-H,ŧ𝼝 = 𝼞cache(__highlighter__),𝼞cache(termclr)  
-find_esc_seqs  = re.compile(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[𝟬𝟭𝟬𝟮]›)
-find_next_char = re.compile(‹((?:⟦S⟧)*.?)›)
-rm_esc         = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
-dotrim         = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
-lines          = 󷺹󷹵𝑙|𝑡⭜􍪵⟞ ᔐ⭢.split(𝗻)  𝚌󷹌𝗻󰈳𝗻  ∵ 󷹌 has autism
-tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
-𝼞ꬷ             = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
-𝼞𝼞             = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
+find_esc_seqs = 𝜺 = regex(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[𝟬𝟭𝟬𝟮]›)
+find_next_char    = regex(‹((?:⟦S⟧)*.?)›)
+𝐸                 = regex(‹(?:⟦S⟧)+›)
 
-𝜺,𝐸 = find_esc_seqs, ‹(?:⟦S⟧)+› re.compile
-⊢ split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
-    x = ‹𝟭𝗯[38;2;⟦fg﹕₃⨝␛;⟧m⟦x⟧›
+H      = 𝼞cache(__highlighter__)
+ŧ𝼝     = 𝼞cache(termclr)  󰤱􊽨  symbol
+rm_esc = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
+dotrim = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+guard  = 𝼞cache(󷺹split_text_colors􀉳󰲡x₂􀰎𝗻􀉳ŧ𝼝(⬤,⠤x﹕₂􀉳r2hl)􀋢𝗻󰅂􀋶¹􇁥􀋢)
+lines  = 󷺹􀓰𝑙􀊤𝑡 􇂖􍪵 (ᔐ(⟞)ᣆ􋋥􋕝ˢᵉᵃʳᶜʰguard).split(𝗻)
+tspl   = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
+𝼞ꬷ     = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
+𝼞𝼞     = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
+
+⊢split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
+    x = ‹𝟭𝗯[38;2;⟦fg﹕₃􀋢␛;⟧m⟦x⟧›
     r = x 𝐸.findall 􀠊 x 𝐸.split 􀀩 ᐵ₀𝜺.findall∖𝟬𝟭𝟬𝟮ᐵ₂﹕ᐸ,⟞₁ᐸ
-    𝚏 = 󷺹₅﹕􍨄󷹎␛;ᴍ𝑖
-    r=(rϜᶠᵍ􌾕ᵇᵍ󰲣y₀ſˣ󰲣y  ≡"39m"⭜ fg ⋄ bg ⭝␛
-                    y﹕₂≡"39󷺗"⭜ fg ⋄𝚏(y)⭝␛
-                    y﹕₂≡"38󷺗"⭜𝚏(y)⋄ bg ⭝␛
-                    ✗􀌙󰅂󰅂 􁊲 rᐵ₁)
+    ƒ = 󷺹₅﹕􍨄􀋦␛;􀉳𝑖
+    r=(rϜᶠᵍ􌾕ᵇᵍ󰲣y₀ſˣ󰲣y﹕₃􀉞‹49m› 􇂖x₀ 􀊱bg 􇂗␛
+                    y﹕₃􀉞‹39m› 􇂖fg 􀊱x₁ 􇂗␛
+                    y﹕₃􀉞‹󷺗0m› 􇂖fg 􀊱bg 􇂗␛
+                    y﹕₃􀉞‹38;› 􇂖y ƒ􀊱x₁ 􇂗␛
+                    y﹕₃􀉞‹48;› 􇂖x₀ 􀊱y ƒ􇂗␛
+                    ✗􀉓󰅂󰅂 􁊲 rᐵ₁)
     ↪r𝌂󷺹₀ᐸᐖ⠤⟞₀ ₀ᐵ󰸷⁰ˣ󰀅󰀅4ᐸ,⟞ᐵ₁ᐸ⨝ᐸ
 
-⊢ slice_𝚕𝚌(𝚌,𝚙):  󰤱 bro what this is so incorrect
+ lines          = 󷺹􀓰𝑙􀊤𝑡􇂖􍪵ᔐ(⟞).split(𝗻)  󷹑𝗻 is better but slower
+ ⊢split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
+     x = ‹𝟭𝗯[38;2;⟦fg﹕₃⨝␛;⟧m⟦x⟧›
+     r = x 𝐸.findall 􀠊 x 𝐸.split 􀀩 ᐵ₀𝜺.findall∖𝟬𝟭𝟬𝟮ᐵ₂﹕ᐸ,⟞₁ᐸ
+     𝚏 = 󷺹₅﹕􍨄󷹎␛;ᴍ𝑖
+     r=(rϜᶠᵍ􌾕ᵇᵍ󰲣y₀ſˣ󰲣y  ≡"39m"⭜ fg ⋄ bg ⭝␛
+                     y﹕₂≡"39󷺗"⭜ fg ⋄𝚏(y)⭝␛
+                     y﹕₂≡"38󷺗"⭜𝚏(y)⋄ bg ⭝␛
+                     ✗􀌙󰅂󰅂 􁊲 rᐵ₁)
+     ↪r𝌂󷺹₀ᐸᐖ⠤⟞₀ ₀ᐵ󰸷⁰ˣ󰀅󰀅4ᐸ,⟞ᐵ₁ᐸ⨝ᐸ
+
+⊢slice_𝚕𝚌(𝚌,𝚙):  󰤱 bro what this is so incorrect
     𝙻 = 𝚜􀲸􊬣﹕􀲸􊬥₊₁
     ¿𝙻🃌≡1: 𝙻 = [𝙻₀ 􀲸􊬤﹕􀲸􊬦]
     ¡    : 𝙻 = [𝙻₀ 􀲸􊬤﹕, ⠤𝙻₁﹕􍨄, 𝙻􍨄 ﹕􀲸􊬦]
     ↪𝙻⨝𝗻
 
-⊢ (𝼞cache) pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
+⊢(𝼞cache)pad(𝚡,𝚢,𝚣=𝘀,𝚘=󷰾):
     l,𝚢 = 𝼞ꬷ(𝚡),𝼞ꬷ(𝚢)
     ¿l≥𝚢: ↪𝚡
     Δ = 𝚢-l
@@ -38,7 +61,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
     ¿𝚘≡1: ↪Δ⋅𝚣+𝚡
     ✗⨳‹⟦𝚘⟧∉󷰾󷸻1›
 
-⊢ (𝼞cache) pads(𝚡,w=*,h=*):
+⊢(𝼞cache)pads(𝚡,w=*,h=*):
     ¿𝚡ᐹᔐ : 𝚡=lines(𝚡)
     ¿w≅*´: w = 𝚡ᴍ𝼞ꬷ⭢⤉⁰
     ¿h≅*´: h = 𝚡   ⭢🃌
@@ -46,7 +69,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
     ¿w≇□ : 𝚡󷸊ᐵ+𝘀⋅⭠w-𝼞ꬷ(⟞)
     ↪𝚡
 
-⊢ (𝼞cache) stackr(⠤𝚇):
+⊢(𝼞cache)stackr(⠤𝚇):
     ¿¬𝚇: ↪ᐦ
     𝚡,⠤𝚈 = 𝚇
     ¿𝚈🃌≡0: ↪𝚡
@@ -55,7 +78,7 @@ tspl           = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
     ¿🃌𝚡≡1≡𝚢🃌: ↪𝚡₀+𝚢₀  optimization
     ↪pads(𝚡,*,𝚢🃌)󱑼􊾖𝚢ꟿ+⭢⨝𝗻
 
-⊢ (𝼞cache) box_(𝚡,fg=‹05059f›,big=✗):
+⊢(𝼞cache)box_(𝚡,fg=‹05059f›,big=✗):
     𝚡 = pads(𝚡)
     𝚠 = 𝚡⭜𝼞ꬷ(𝚡₀)⭝0
     𝖼 = ŧ𝼝(⬤,fg)
@@ -83,8 +106,8 @@ padr      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸⭜𝔸₀⭝𝘀,𝚘=1)ᐘ𝼞𝼞(
 linewrap  = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
 linenum   = 𝼞cache(⥌𝚡,m=1,s=󰻾,Δ=0↦lines(𝚡)ᑀ🃌+Δ-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹+Δ⭢󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
 linewnum  = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))
-show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
-title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ🃌⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
+show_code = ⥌x,d=100↦BOX(linewnum(x,d=d,s=ŧ𝼝(⬤,fg=‹915›)))►x
+title     = ⥌x,⠤𝔸,c=␛─↦[⠤lines(𝔸⨝𝗻),x]ᴍ𝼞ꬷ⭢⤉⁰ᐒ[padc(𝘀+x+𝘀,⟞,c),⠤ᐳpadc(⟝,⟞)ᐛ𝔸]⨝𝗻
 
 fmp = {⠤[ᐦ,␀,⬤,󰮈,□,½,⅓,¼,⅕,⅙,⅐,⅛,⅑,⅒,⅔,⅖,󷶲,󷶷,¾,⅗,󷶳,⅜,󷷆,⅘,󷶴,󷷂,⅚,󷶵,⅝,󷶹,󷶶,⅞,󷶺,󷷇,󷶻,󷷈,󷷉,π,ℇ,∞,î,τ,󷺍,󷺎,󷺏,󷱩,󷱪,󷱬,󷱭,󷱮,󷱯,󷱰,󷱫,𝑒,𝑜,𝑑,𝑏,𝑙,𝑡,𝑠,ᔐ,𝑖,𝑓,𝑦]󱑼␛
         ‹ᐦ󷺗␀󷺗⬤󷺗󰮈󷺗□󷺗½󷺗⅓󷺗¼󷺗⅕󷺗⅙󷺗⅐󷺗⅛󷺗⅑󷺗⅒󷺗⅔󷺗⅖󷺗󷶲󷺗󷶷󷺗¾󷺗⅗󷺗󷶳󷺗⅜󷺗󷷆󷺗⅘󷺗󷶴󷺗󷷂󷺗⅚󷺗󷶵󷺗⅝󷺗󷶹󷺗󷶶󷺗⅞󷺗󷶺󷺗󷷇󷺗󷶻󷺗󷷈󷺗󷷉󷺗π󷺗ℇ󷺗∞󷺗î󷺗τ󷺗󷺍󷺗󷺎󷺗󷺏󷺗󷱩󷺗󷱪󷺗󷱬󷺗󷱭󷺗󷱮󷺗󷱯󷺗󷱰󷺗󷱫󷺗𝑒󷺗𝑜󷺗𝑑󷺗𝑏󷺗𝑙󷺗𝑡󷺗𝑠󷺗ᔐ󷺗𝑖󷺗𝑓󷺗𝑦›}
@@ -108,7 +131,8 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 Ƥ = 𝚲☾´(𝖿𝗆𝗍(𝔸∨􊫔≕k🃌≡1⭜k₀⭝k),⠶𝕂)►𝔸⭜𝔸₀⭝ᐦ
 
 ⭷ rm_esc,split_text_colors,lines,tspl,padl,padc,padr,pads,stackr,box,BOX,␛
-  grid,linenum,linewnum,dotrim,show_code,title,slice_𝚕𝚌,𝼞ꬷ,𝼞𝼞,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+  regex,REGEX_LIB,grid,linenum,linewnum,dotrim,show_code,title,slice_𝚕𝚌,␛
+  𝼞ꬷ,𝼞𝼞,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                    linewrap(linenum(‹egg salad number twelve fortnite

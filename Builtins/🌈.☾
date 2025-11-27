@@ -1,46 +1,46 @@
-⊢ h2r(c=ᐦ): ¿cᐹ𝑖: c󷸊󷹜¹⁶
-            c = c.strip().lstrip(␛#)
-            ¿c.startswith(‹0x›): c󷸊₂﹕
-            ℎ,n = 𝑖(⬤,16),c🃌
-            ¿n≡0: ↪0      ,0      ,0      ,255
-            ¿n≡1: ↪ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₀ 2),255
-            ¿n≡2: ↪ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₁ 2)
-            ¿n≡3: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),255
-            ¿n≡4: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),ℎ(c₃ 2)
-            ¿n≡5: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),ℎ(c₃﹕₅)
-            ¿n≡6: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),255
-            ¿n≡7: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),ℎ(c₆ 2)
-            ¿n≡8: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),ℎ(c₆﹕₈)
+⊢h2r(c=ᐦ): ¿cᐹ𝑖: c󷸊󷹜¹⁶
+           c = c.strip().lstrip(␛#)
+           ¿c.startswith(‹0x›): c󷸊₂﹕
+           ℎ,n = 𝑖(⬤,16),c🃌
+           ¿n≡0: ↪0      ,0      ,0      ,255
+           ¿n≡1: ↪ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₀ 2),255
+           ¿n≡2: ↪ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₀ 2),ℎ(c₁ 2)
+           ¿n≡3: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),255
+           ¿n≡4: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),ℎ(c₃ 2)
+           ¿n≡5: ↪ℎ(c₀ 2),ℎ(c₁ 2),ℎ(c₂ 2),ℎ(c₃﹕₅)
+           ¿n≡6: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),255
+           ¿n≡7: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),ℎ(c₆ 2)
+           ¿n≡8: ↪ℎ(c₀﹕₂),ℎ(c₂﹕₄),ℎ(c₄﹕₆),ℎ(c₆﹕₈)
 r2hl = 󰲡‹#⟦xᴍ󷹜¹⁶⁺²􍢉⭢⨝⟧›
 h2hl = r2hl○h2r
 
-⊢ rgb2hsv(r,g,b): m,v=r⋄g⋄b⭢⟷
-                  s=v⭜⁰(v-m≕Δ)⭢÷v
-                  h=v⭜⁰(v≡r⭜g-b⭢÷Δ%6⭝␛
-                        v≡g⭜b-r⭢÷Δ+2⭝␛
-                            r-g⭢÷Δ+4 )⋅60%360
-                  ↪h÷360,s,v
-⊢ hsv2rgb(h,s,v): h󷸊⋅360%360
-                  (s,v)󷸊ᴍ0󷹄1
-                  x = (c≔v⋅s)⋅(1-⫰⭠h÷60%2-1)
-                  ↪(h≤ 60 ⭜c⋄x⋄0⭝ h≤120⭜x⋄c⋄0⭝␛
-                    h≤180 ⭜0⋄c⋄x⭝ h≤240⭜0⋄x⋄c⭝␛
-                    h≤300 ⭜x⋄0⋄c⭝       c⋄0⋄x )ᐵ+ᑅv-c
+⊢rgb2hsv(r,g,b): m,v=r⋄g⋄b⭢⟷
+                 s=v⭜⁰(v-m≕Δ)⭢÷v
+                 h=v⭜⁰(v≡r⭜g-b⭢÷Δ%6⭝␛
+                       v≡g⭜b-r⭢÷Δ+2⭝␛
+                           r-g⭢÷Δ+4 )⋅60%360
+                 ↪h÷360,s,v
+⊢hsv2rgb(h,s,v): h󷸊⋅360%360
+                 (s,v)󷸊ᴍ0󷹄1
+                 x = (c≔v⋅s)⋅(1-⫰⭠h÷60%2-1)
+                 ↪(h≤ 60 ⭜c⋄x⋄0⭝ h≤120⭜x⋄c⋄0⭝␛
+                   h≤180 ⭜0⋄c⋄x⭝ h≤240⭜0⋄x⋄c⭝␛
+                   h≤300 ⭜x⋄0⋄c⭝       c⋄0⋄x )ᐵ+ᑅv-c
 
 TERM_RESET_B = ‹𝟭𝗯[49m›
 TERM_RESET_F = ‹𝟭𝗯[39m›
 TERM_RESET   = ‹𝟭𝗯[󷺗0m›
 styd = (moon_dir/‹Builtins/Data/style.json›)  𝔍󰄟 ℵ
 
-⊢ termclr(t,fg=□,bg=□,rst=✓,rl=✗):
-    rlw = 󰲡rl⭜ˣ‹𝟬𝟭⟦x⟧𝟬𝟮›
-    mkc = 󰲩‹𝟭𝗯[⟦x⟧;2;⟦y⟧;⟦z⟧;⟦w⟧m› rlw
-    R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
-    ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
+⊢termclr(t,fg=□,bg=□,rst=✓,rl=✗):
+  rlw = 󰲡rl⭜ˣ‹𝟬𝟭⟦x⟧𝟬𝟮›
+  mkc = 󰲩‹𝟭𝗯[⟦x⟧;2;⟦y⟧;⟦z⟧;⟦w⟧m› rlw
+  R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
+  ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
 
-⊢ (cache) sty(s,bg=0,def=‹bec›):
-    ∀k,v⬠styd¿s∈k ∧ v∋‹fg›: ↪termclr(s,v􊬏􊬐,bg)
-    ↪termclr(s,def,bg)
+⊢(cache)sty(s,bg=0,def=‹bec›):
+  ∀k,v⬠styd¿s∈k ∧ v∋‹fg›: ↪termclr(s,v􊬏􊬐,bg)
+  ↪termclr(s,def,bg)
 __highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝
 
-⊢ highlight_tester: ∀ℑ𝔑.readline≕l: 𝗻 l.rstrip __highlighter__ ☾
+⊢highlight_tester: ∀ℑ𝔑.readline≕l: 𝗻 l.rstrip __highlighter__ ☾

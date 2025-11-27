@@ -189,6 +189,7 @@
     󰤱 docs
 󷰡 󰔶 𝚡∨􊽨𝚡 c1⟦𝕊=-⟧ error handler{,,}
     𝑒 : raises 𝑒
+    (󷹵𝗙)  𝑒 : raises 𝑒 if left is falsy
     On left's error 𝑒:
         󰔶: return ƒ's arg / retries with right
         : returns right

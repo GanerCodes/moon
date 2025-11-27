@@ -4,68 +4,68 @@
 ⨡ Compiler/to_ast
 ⨡ peggle3/gram_tools
 
-⊢ find_section(󱁕,𝚜,a=␛p):
-    ¿␛p∉󱁕ᵉ: ↪
-    αl,αc,βl,βc=󱁕ᵉ ᵖ
-    ¿αl<𝚜₀ ∨ αl≡𝚜₀∧αc≤𝚜₁ ⭢󷺒⭠ βl>𝚜₂ ∨ βl≡𝚜₂∧βc≥𝚜₃: ↪
-    ∀c⬠󱁕¿find_section(c,𝚜,a)≕r≇□∧rᵉ ᵖ≠󱁕ᵉ ᵖ: ↪r
-    ¿a∈󱁕ᵉ: ↪󱁕
+⊢find_section(󱁕,𝚜,a=␛p):
+  ¿␛p∉󱁕ᵉ: ↪
+  αl,αc,βl,βc=󱁕ᵉ ᵖ
+  ¿αl<𝚜₀ ∨ αl≡𝚜₀∧αc≤𝚜₁ ⭢󷺒⭠ βl>𝚜₂ ∨ βl≡𝚜₂∧βc≥𝚜₃: ↪
+  ∀c⬠󱁕¿find_section(c,𝚜,a)≕r≇□∧rᵉ ᵖ≠󱁕ᵉ ᵖ: ↪r
+  ¿a∈󱁕ᵉ: ↪󱁕
 
-⊢ under_region(t,r,ƒ): t󷸊lines
-                       αl,αc,βl,βc=r
-                       ¿αl≡βl: 𝖺,ch,𝖻=tspl(t󰃤ₗ,αc⋄βc)
-                               ch = 𝖺+ƒ(ch)+𝖻
-                       ¡     : ch = t󰃤ₗ﹕󰃥ₗ₊₁
-                               (𝖺,ch₀),(ch􍨄,𝖻) = (ch₀⋄αc,ch􍨄⋄βc)ꟿtspl
-                               ch = 𝖺+ƒ(ch⨝𝗻)+𝖻
-                       ↪[⠤t﹕󰃤ₗ,ch,⠤t󰃥ₗ₊₁﹕]⨝𝗻
+⊢under_region(t,r,ƒ): t󷸊lines
+                      αl,αc,βl,βc=r
+                      ¿αl≡βl: 𝖺,ch,𝖻=tspl(t󰃤ₗ,αc⋄βc)
+                              ch = 𝖺+ƒ(ch)+𝖻
+                      ¡     : ch = t󰃤ₗ﹕󰃥ₗ₊₁
+                              (𝖺,ch₀),(ch􍨄,𝖻) = (ch₀⋄αc,ch􍨄⋄βc)ꟿtspl
+                              ch = 𝖺+ƒ(ch⨝𝗻)+𝖻
+                      ↪[⠤t﹕󰃤ₗ,ch,⠤t󰃥ₗ₊₁﹕]⨝𝗻
 
 expand_region = ⥌𝚌,r↦r₀⋄0⋄r₂⋄(𝚌 lines)ᵣ􊬥𝼞ꬷ
 color_regions = 󰲡𝔸ſˡⁱⁿᵉˢ􋁐ˣ󷺻under_region(⟞,⟝₀,ŧ𝼝(⬤,⠤⟝₁)🟑󷺹ᐖŧ𝼝(⟞,⠤⟝₁)ᐸ⨝ᐸ🟑)󷺿
 
-⊢ mapper(𝚌): 󱁕 = 𝚌 to_ast
-             𝒑 = ast_to_py(󱁕.cpr,𝚌,get_tree=✓)
-             reform_positions(𝒑,𝒑􋒷)
-             
-             𝚌󷸊lines
-             𝘵 = 󰲡find_section(󱁕,find_section(𝒑,x,␛ρ)ᵉ.␛ρ)ᵉ ᵖ
-             
-             ⊢ ƒ(⠤𝔸):
-                 𝔸󷸊ᐵ₀𝘵⋄⟞₁
-                 𝔸.insert(0,(expand_region(𝚌,𝔸ᐵ₀󷸻₀󰄎₂ᐸ󰆩⟷⭢󱑼₀󰄎₀⭢󰆩),□⋄□))
-                 r = color_regions(𝚌,⠤𝔸) lines
-                 fmtl,fmtw=ŧ𝼝(⬤,‹aaa›,‹050505›),ŧ𝼝(⬤,‹f5f›,‹050505›)
-                 α=r[𝔸₀ ₀ ₀-2:𝔸₀ ₀ ₀  ]⨝𝗻 ᣆ linenum(⬤,Δ=𝔸₀ ₀ ₀-2,s=fmtl)
-                 β=r[𝔸₀ ₀ ₀  :𝔸₀ ₀ ₂+1]⨝𝗻 ᣆ linenum(⬤,Δ=𝔸₀ ₀ ₀  ,s=fmtw)
-                 γ=r[𝔸₀ ₀ ₂+1:𝔸₀ ₀ ₂+3]⨝𝗻 ᣆ linenum(⬤,Δ=𝔸₀ ₀ ₂+1,s=fmtl)
-                 ↪α⋄β⋄γ󰈲⭢⨝𝗻
-             ↪ƒ
-find_esc_seqs = re.compile(S≔‹(𝟭𝗯\[(?:(?:[0-9]+;){4}[0-9]+|0|[34]9)m|[𝟬𝟭𝟬𝟮])›)
-⊢ under_esc(x,ƒ): c,s = find_esc_seqs.split(x)↨⁺󷺹₀%2ᐸᴍ󷺺₁
-                  ↪(c󰌷ᔨ􍯓􊽺⭢ᴍ⨝)󱑼􊾖s⭢󰌷⭢⨝
+⊢mapper(𝚌): 󱁕 = 𝚌 to_ast
+            𝒑 = ast_to_py(󱁕.cpr,𝚌,get_tree=✓)
+            reform_positions(𝒑,𝒑􋒷)
+             󰤱 have the upper 3 lines auto-generate and be cached at original compile time
+            
+            𝚌󷸊lines
+            𝘵 = 󰲡find_section(󱁕,find_section(𝒑,x,␛ρ)ᵉ.␛ρ)ᵉ ᵖ
+            
+            ⊢ƒ(⠤𝔸): 𝔸󷸊ᐵ₀𝘵⋄⟞₁
+                    𝔸.insert(0,(expand_region(𝚌,𝔸ᐵ₀󷸻₀󰄎₂ᐸ󰆩⟷⭢󱑼₀󰄎₀⭢󰆩),□⋄□))
+                    r = color_regions(𝚌,⠤𝔸) lines
+                    fmtl,fmtw=ŧ𝼝(⬤,‹aaa›,‹050505›),ŧ𝼝(⬤,‹f5f›,‹050505›)
+                    α=r[𝔸₀ ₀ ₀-2:𝔸₀ ₀ ₀  ]􀋢𝗻􀠄linenum(⬤,Δ=𝔸₀ ₀ ₀-2,s=fmtl)
+                    β=r[𝔸₀ ₀ ₀  :𝔸₀ ₀ ₂+1]􀋢𝗻􀠄linenum(⬤,Δ=𝔸₀ ₀ ₀  ,s=fmtw)
+                    γ=r[𝔸₀ ₀ ₂+1:𝔸₀ ₀ ₂+3]􀋢𝗻􀠄linenum(⬤,Δ=𝔸₀ ₀ ₂+1,s=fmtl)
+                    ↪α⋄β⋄γ󰈲⭢⨝𝗻
+            ↪ƒ
+find_esc_seqs = regex(‹(𝟭𝗯\[(?:(?:[0-9]+;){4}[0-9]+|0|[34]9)m|[𝟬𝟭𝟬𝟮])›)
+⊢under_esc(x,ƒ): c,s = find_esc_seqs.split(x)↨⁺󷺹₀%2ᐸᴍ󷺺₁
+                 ↪(c󰌷ᔨ􍯓􊽺⭢ᴍ⨝)󱑼􊾖s⭢󰌷⭢⨝
 
-⊢ show_error(ε,return_err=✗,exit_code=1):
-    hl_f = ŧ𝼝(⬤,‹fbf›,‹101›)
-    ə = ε.__traceback__
-    α = traceback.extract_tb(ə)ᐖ⟞.filename,⟞.name,⟞.lineno,⟞.colno,⟞.end_lineno,⟞.end_colnoᐸ
-    β = traceback.   walk_tb(ə)ᐵ₀.f_globalsᐸ
-    ∀(f,n,⠤r),G⬠α󱑼β:
-        r󷸊ᐵ-1⭢⤉0
-        ¿G.get(‹__moon_code__›)≕𝚌¬: ‹⟦f hl_f⟧ ⟦n VEP⟧›☾ ; ↺
-        𝘮=𝚌 mapper
-        ‹⟦G[‹__file__›] hl_f⟧
-         ⟦under_esc(𝘮((r,□⋄‹331133›)),__highlighter__(⬤,,))⟧›☾
-    ŧ𝼝(‹Error: ⟦ε⟧›,‹f33›)☾
-    ¿return_err: ↪ε
-    exit_code sys.exit
+⊢show_error(ε,return_err=✗,exit_code=1):
+  hl_f = ŧ𝼝(⬤,‹fbf›,‹101›)
+  ə = ε.__traceback__
+  α = traceback.extract_tb(ə)ᐖ⟞.filename,⟞.name,⟞.lineno,⟞.colno,⟞.end_lineno,⟞.end_colnoᐸ
+  β = traceback.   walk_tb(ə)ᐵ₀.f_globalsᐸ
+  ∀(f,n,⠤r),G⬠α󱑼β:
+    r󷸊ᐵ-1⭢⤉0
+    ¿G.get(‹__moon_code__›)≕𝚌¬: ‹⟦f hl_f⟧ ⟦n VEP⟧›☾ ; ↺
+    𝘮=𝚌 mapper
+    ‹⟦G[‹__file__›] hl_f⟧
+     ⟦under_esc(𝘮((r,□⋄‹331133›)),__highlighter__(⬤,,))⟧›☾
+  ŧ𝼝(‹⟦ε􀊜􁁙󰁐􁗅ᴮᵃˢᵉᴱˣᶜᵉᵖᵗⁱᵒⁿ󷺹.__name__⟧: ⟦ε⟧›,‹f33›)☾
+  ¿return_err: ↪ε
+  exit_code sys.exit
 
-⊢ run_fancy_errors(ƒ,𝘦=𝑒𝑒,return_err=✗,exit_code=1):
-         ↪ƒ()
-    ¡ε=𝘦: show_error(ε,return_err,exit_code)
+⊢run_fancy_errors(ƒ,𝘦=𝑒𝑒,return_err=✗,exit_code=1):
+       ↪ƒ()
+  ¡ε=𝘦: show_error(ε,return_err,exit_code)
 
 ⭷ show_error
 
-¿__name__≡‹__name__›:
+¿__name__≡‹__main__›:
     𝚌 = 󰦥󰦥󰦥󰦥󰦥
     ⊢ x(y): 1 ⨳
             2
