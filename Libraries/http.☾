@@ -7,44 +7,43 @@ TCPServer.allow_reuse_address = ✓
 
 ipv4 = 󷺹 ᑀ􀗀8⟝ 􀠐 0xFFᐛ 4􀡈􁂁 􁋳␛.
 
-⊢ HTTP_Server(ƒ):
-    ext_to_mime = 󰲡guess_type(x)₀∨‹text-plain›
-    󱀘 𝔖(StreamRequestHandler):
-        ⊢ handle(𝕊):
-            𝔯𝔟,𝔯,𝔴 = 𝚲𝕊.rfile.read(⠤𝔸ᴍ𝑖), 𝕊.rfile.readline, 𝕊.rfile.write
-            𝚛,⠤𝙷 = 1󷸹⭠󰲡𝔯≕𝚛→.strip.decode(‹utf-8›)󰅂⊛¬∘✓
-            𝚖,𝚙,𝚟 = 𝚛󷹎𝘀
-            𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x⫯
-            
-            𝐴 = 𝚖,𝚙,𝙷
-            𝚌,𝙷,𝚋 = 200,ℵ,0 𝑦
-                 V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯𝔟=𝔯𝔟, 𝔯=𝔯))
-            ¡ε=𝑒: ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
-                  ε show_error
-                  ␛-⋅🃌t☾
-                  V = 500
-            ∀r⬠Vᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅⛶: ¿rᐹ𝑑  : 𝙷=r.copy
-                               ⸘rᐹ𝑖  : 𝚌=r
-                               ⸘rᐹᔐ|𝑦: 𝚋=r
-            ¿‹𝙲𝚃›PEV≕a∈𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ₜₚₑ􍳌􍳌􍳌􍳌􍳌􍳌􍳌􊬐 = a 𝙷.pop≕v→󷸹≡␛. ⭜ext_to_mime(␛_+v)⭝ v
-            ¿‹𝙲𝙳›PEV≕a∈𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ᵢₛₚ󰂼ₛᵢₜᵢ󰂼ₙ􊬐 = a 𝙷.pop
-            ¿𝚋ᐹᔐ: ¿‹content-type›≕k∉𝙷: 𝙷ₖ≔‹text/plain›
-                  𝚋 = 𝚋 𝑀
-            ¿𝚋∧𝙷∌k≔‹content-length›: 𝙷ₖ≔𝚋🃌
-            𝕊.wfile.write(𝑀(‹HTTP/1.1 ⟦𝚌⟧ ⟦𝚌msgs.get(𝚌,␛?)⟧›+(𝙷ᐵ⨝␛:ᐸ⟗𝗿𝗻)+𝗿𝗻)+𝚋)
-            𝕊.wfile.flush
-    ↪⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port),𝔖), 󷺹.serve_forever)
+⊢HTTP_Server(ƒ):
+  ext_to_mime = 󰲡guess_type(x)₀∨‹text-plain›
+  󱀘 𝔖(StreamRequestHandler):
+    ⊢handle(𝕊):  󰤱 make this handle getting a path object as input
+        𝔯𝔟,𝔯,𝔴 = 𝚲𝕊.rfile.read(⠤𝔸ᴍ𝑖), 𝕊.rfile.readline, 𝕊.rfile.write
+        𝚛,⠤𝙷 = 1󷸹⭠󰲡𝔯≕𝚛→.strip.decode(‹utf-8›)󰅂⊛¬∘✓
+        𝚖,𝚙,𝚟 = 𝚛󷹎𝘀
+        𝙷=ℵ􊾖(𝙷ᐵ󷹎¹␛:ᐵ.strip)ꟿ⁻󰲣x⫯
+        
+        𝐴 = 𝚖,𝚙,𝙷
+        𝚌,𝙷,𝚋 = 200,ℵ,0 𝑦
+             V = ƒ(⠤𝐴,ℵ(ip=𝕊.client_address₀, 𝔯𝔟=𝔯𝔟, 𝔯=𝔯))
+        ¡ε=𝑒: ‹⟦␛-⋅20⟧HTTP Handler Error!⟦␛-⋅20⟧›≕t☾
+              ε show_error
+              ␛-⋅🃌t☾
+              V = 500
+        ∀r⬠Vᣆ􍯏􊾗􋇒􋕡􋇖􋕡􊾚􋕡􋇦􋕡􋄅⛶: ¿rᐹ𝑑  : 𝙷=r.copy
+                           ⸘rᐹ𝑖  : 𝚌=r
+                           ⸘rᐹᔐ|𝑦: 𝚋=r
+        ¿‹𝙲𝚃›PEV􀯑a􀉧𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ₜₚₑ􍳌􍳌􍳌􍳌􍳌􍳌􍳌􊬐 = a 𝙷.pop≕v􇣒􊾖₀􀉞␛. 􇂖ext_to_mime(␛_􀊩v)􇂗 v
+        ¿‹𝙲𝙳›PEV􀯑a􀉧𝙷: 𝙷􊬏󰂼ₙₜₑₙₜ₋ᵢₛₚ󰂼ₛᵢₜᵢ󰂼ₙ􊬐 = a 𝙷.pop
+        ¿𝚋ᐹᔐ: ¿‹content-type›≕k∉𝙷: 𝙷ₖ≔‹text/plain›
+              𝚋 = 𝚋 𝑀
+        ¿𝚋∧𝙷∌k≔‹content-length›: 𝙷ₖ≔𝚋🃌
+        𝕊.wfile.write(𝑀(‹HTTP/1.1 ⟦𝚌⟧ ⟦𝚌msgs.get(𝚌,␛?)⟧›+(𝙷ᐵ⨝␛:ᐸ⟗𝗿𝗻)+𝗿𝗻)+𝚋)
+        𝕊.wfile.flush
+  ↪⥌ip=ipv4(0x000000),port=8080↦ⓦ(TCPServer((ip,port),𝔖), 󷺹.serve_forever)
 
 ⭷ ipv4,HTTP_Server,transpile_dir,transpile_joon,joon_header
 
-¿__name__≡‹__main__›:
-    ⊢ server(𝚖,𝚙,𝙷,𝚎):
-        ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾
-        ¿␛a∈𝚙: ↪ "joe"
-        ¿␛b∈𝚙: ↪ "joe", 201
-        ¿␛c∈𝚙: ↪ ℵ(hand=22), "joe", 201
-        ¿␛d∈𝚙: ↪ ℵ(hand=22), b"joe", 201
-        ¿␛e∈𝚙: ↪ ℵ(hand=22)
-        ¿␛f∈𝚙: ↪ 201
-        ↪ 200
-    HTTP_Server(server)
+¿__name__≡‹__main__›: ⊢server(𝚖,𝚙,𝙷,𝚎):
+                          ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾
+                          ¿␛a∈𝚙: ↪ "joe"
+                          ¿␛b∈𝚙: ↪ "joe", 201
+                          ¿␛c∈𝚙: ↪ ℵ(hand=22), "joe", 201
+                          ¿␛d∈𝚙: ↪ ℵ(hand=22), b"joe", 201
+                          ¿␛e∈𝚙: ↪ ℵ(hand=22)
+                          ¿␛f∈𝚙: ↪ 201
+                          ↪ 200
+                      HTTP_Server(server)
