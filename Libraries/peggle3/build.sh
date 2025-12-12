@@ -2,11 +2,12 @@
 name="peggle3"
 ulimit -s unlimited
 
-# ☾ noparen.☾ "$name" || :
-# gcc -O3 c-vector/vec.c "${name}.c" -Ic-vector -lpcre2-8 -Wno-implicit-int \
-#     -fPIC -shared -o "lib${name}.so"
-# ☾ TEST.☾
+☾ noparen.☾ "$name" || :
+gcc -O3 c-vector/vec.c "${name}.c" -Ic-vector -lpcre2-8 -Wno-implicit-int \
+    -flto -fPIC -shared -o "lib${name}.so"
+☾ TEST.☾
 
+exit 0
 emcc -O3 -fPIC -Wno-implicit-int \
     peggle3.c \
     c-vector/vec.c \
