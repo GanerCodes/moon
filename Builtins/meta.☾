@@ -2,8 +2,6 @@ IMPSIMPS = ((␛ℍ, ‹ℍ󷸙󷸘󷸛󷸚󷸗󷸖󷸜󷸽󷸕ĵ󷺈󷱽󷱾›
             (␛⫚, ‹⫚›),
             (␛¶, ‹¶✿›))
 
-stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
-
 __þIMPORTS__,TP_CACHE = ℵ,{}
 TRANSPILE_REF = Holder
  EXEC_NATIVE = exec

@@ -1,32 +1,33 @@
-⊢ PL_CPU_COUNT: ⦃import multiprocessing⦄
-                ↪multiprocessing.cpu_count
-⊢ PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
-                      atom = []
-                      T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
-                      ↪𝚲t.join ► atom₀
-⊢ PL_WAIT_PID(p):   os.kill(p,0)
-                  ¡: ↪□
-                  os.waitpid(p,0)
-⊢ PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
+⦃from time import time,sleep⦄
+
+⊢PL_CPU_COUNT: ⦃import multiprocessing⦄
+               ↪multiprocessing.cpu_count
+⊢PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
+                     atom = []
+                     T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
+                     ↪𝚲t.join ► atom₀
+⊢PL_WAIT_PID(p):   os.kill(p,0)
+                 ¡: ↪□
+                 os.waitpid(p,0)
+⊢PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
  ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
  f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
-⊢ PL_FORK(ƒ,⠤𝔸,⠶𝕂): ¿env.get(‹MOON_NO_FORK›): ↪ƒ(⠤𝔸,⠶𝕂) pdump pload
-                    ⦃from multiprocessing import shared_memory⦄
-                    𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)
-                    𝔲 = 󷺹[4:4+struct.unpack(␛I,⟞﹕₄)₀]
-                    p = os.fork
-                    ¿p: ↪p, 𝚲p PL_WAIT_PID ► 𝔲(𝗆.buf) pload ◄ (𝗆.close►𝗆.unlink)
-                    v = ƒ(⠤𝔸,⠶𝕂) pdump
-                    𝗆.buf﹕₄ = struct.pack(␛I,v🃌)
-                    𝗆.buf₄﹕₄₊ᵥ􊹳 = v
-                    0 os._exit
-⊢ PL_SLEEP(x): ⦃from time import sleep⦄
-               x sleep
-⊢ PL_TIME: ⦃from time import time⦄
-           ↪time
-⊢ PL_TEXT_COPY(x):    ⦃from clipboard import copy⦄
-                       ↪copy(x)
-                   ‹WARNING: Failed to copy.›☾
-⊢ PL_TEXT_PASTE  :    ⦃from clipboard import paste⦄
-                       ↪paste()
-                   ‹WARNING: Failed to paste.›☾
+⊢PL_FORK(ƒ,⠤𝔸,⠶𝕂): ¿env.get(‹MOON_NO_FORK›): ↪ƒ(⠤𝔸,⠶𝕂) pdump pload
+                   ⦃from multiprocessing import shared_memory⦄
+                   𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)
+                   𝔲 = 󷺹[4:4+struct.unpack(␛I,⟞﹕₄)₀]
+                   p = os.fork
+                   ¿p: ↪p, 𝚲p PL_WAIT_PID ► 𝔲(𝗆.buf) pload ◄ (𝗆.close►𝗆.unlink)
+                   v = ƒ(⠤𝔸,⠶𝕂) pdump
+                   𝗆.buf﹕₄ = struct.pack(␛I,v🃌)
+                   𝗆.buf₄﹕₄₊ᵥ􊹳 = v
+                   0 os._exit
+⊢PL_SLEEP(x): sleep(x)
+⊢PL_TIME    : ↪time
+⊢PL_TEXT_COPY(x):  ⦃from clipboard import copy⦄
+                    ↪copy(x)
+                  ‹WARNING: Failed to copy.›☾
+⊢PL_TEXT_PASTE  :  ⦃from clipboard import paste⦄
+                    ↪paste()
+                  ‹WARNING: Failed to paste.›☾
+⊢PL_URANDOM(n): ↪os.urandom(n)

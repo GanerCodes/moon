@@ -3,8 +3,8 @@
 CACHEDIR = env.get(‹MOON_CACHEDIR›,     TMPDIR / ‹cache›) 𝐩
 mkd  = ⥌f,e=✓,p=✓↦    f 𝐩≕p           →.mkdir(exist_ok=e,parents=p) ► p
 mkf  = ⥌f,e=✓    ↦mkd(f 𝐩≕p→.parent)►p→.touch(exist_ok=e          ) ► p
-tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIRᑀᣆᵇ⬤/bᐸ/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
-tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIRᑀᣆᵇ⬤/bᐸ/(f≅␀ ⭜abcABC123¹n󰌷⭢⨝⭝ f))
+tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIRᑀ􀜾ᵇ⬤􀋋bᐸ􀋋(f􀋑␀ 􇂖n SR_str􇂗 f))
+tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIRᑀ􀜾ᵇ⬤􀋋bᐸ􀋋(f􀋑␀ 􇂖n SR_str􇂗 f))
 
 󱀘 suppar2: __init__ = ⥌𝕊,ƒ↦ƒ≕𝕊􊽺 ► □
            __call__ = ⥌𝕊,⠤𝔸,⠶𝕂↦𝕊􊽺(⠤𝔸,⠶𝕂)
@@ -34,10 +34,6 @@ pwd = 𝚲𝐩(os.getcwd)
                          ↪pwd
       ⊢ __getitem__(𝕊,d): ↪𝕊􋕟􋕟ᶜˡᵃˢˢ􋕟􋕟(d)
 cd = cd
-
-⊢ sha(⠤𝔸,⠶𝕂): ⦃from hashlib import sha256 as ⦃_sha256⦄⦄
-              ⦃from base64 import urlsafe_b64encode,urlsafe_b64decode⦄
-              ↪ 𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
 
 🟑
 mkd(‹/tmp/eggs›)

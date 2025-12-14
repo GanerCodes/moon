@@ -6,7 +6,6 @@
 ⦃from math import *⦄
 ⦃from site import getsitepackages⦄
 ⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
-⦃from time import time,sleep⦄
 ⦃from cmath import *⦄
 ⦃from types import UnionType⦄
 ⦃from random import shuffle,choice,uniform,randint⦄
@@ -16,14 +15,15 @@
 ⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 ⦃from functools import partial as ⦃MOD⦄,reduce,cache⦄
 ⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
+⦃from hashlib import sha256 as ⦃_sha256⦄⦄
+⦃from base64 import urlsafe_b64encode,urlsafe_b64decode,b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
 ⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
-⦃from base64 import b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
 syspath.extend(getsitepackages())
 setrecursionlimit(100000)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
-setattr = 󰲥setattr_(x,y,z) ∨ z
-setitem = 󰲥setitem_(x,y,z) ∨ z
+setattr = 󰲥setattr_(x,y,z)􀉖z
+setitem = 󰲥setitem_(x,y,z)􀉖z
 
 þSTK={}
 ⊢þPSH(x  ): ¿𝔗ℑ𝔇()≕t∈þSTK: ⦃⦃þSTK⦄[t].append(x)⦄

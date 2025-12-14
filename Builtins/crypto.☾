@@ -1,0 +1,45 @@
+🟑 § RNG §
+  󰤱 add versions with seeding 🟑
+⊢SR_int(x=□,y=□):  [x,y]
+  ¿x􀋑□: y􀋑□ 􁀒
+        ↪PL_URANDOM(1)₀
+  ¿y􀋑□: x,y=0,x
+  ¿x􀉤y: x,y=y,x
+  r = y􀊪x
+  l = r.bit_length􀃅
+  ∀(𝑖.from_bytes(PL_URANDOM(l􀋋8􀡕))􀝊2ˡ􀊪1)􇂐s 􀉤 r: □
+  ↪x􀊩s
+⊢SR_float(x=□,y=□):  [x,y]
+  ¿x􀋑□: y􀋑□ 􁀒
+        x,y=0,1
+  ¡: ¿y􀋑□: x,y=0,x
+     ¿x􀉤y: x,y=y,x
+  ↪x 􁁨 SR_int(2⁶⁴􀊪1)􀦾y􀊪x􀠰2⁶⁴􀊪1
+⊢SR_choice(x): ↪x[SR_int(x􀊹􀊪1)]
+⊢SR_shuffle(x,n=□):
+  ¿n􀋑□: n=x􀊹􀊪1
+  ⸘n􀯏𝑖􀜉x􀊹: ✗⨳‹Cannot shuffle (⟦n⟧ > ⟦x􀊹⟧)›
+  X,Y = [⠤x],⍁
+  ∀_⬠n􀋲: Y.append(X.pop(SR_int(X􀊹􀊪1)))
+  ↪Y
+⊢SR_str(n=24,chars=□):
+  ↪n􀋲ᐖSR_choice(chars􀋑□⭜ᶜʰᵃʳˢabcABC123)ᐸ􀋢ᐦ
+
+⊢(OPWRAP_(⠤‹󱅏›)) (𝕏,𝚡=␀,𝚢=␀,𝚜=␀):
+  ⊢ƒ: ¿𝕏􀉞␛: 𝗜(𝚡)􀉖𝗜(𝚢) 􁀒
+             𝒾,n = 𝗜(𝚡) 􇂖(𝚡,𝚢)􇂗 (𝚢,𝚡)
+             ¿n􀋑␀: ↪SR_shuffle(𝒾)
+             ↪n􀋲ᐖSR_choice(𝒾)
+      ¿𝚡􀋑␀􀋑𝚢: ↪SR_float(⠤𝕏􀉞␛􇂖􀊫1􇂗􀋲1)
+      ƒ = 𝕏􀉞␛ 􇂖SR_float􇂗 SR_int
+      ¿𝚡􀋒␀􀋒𝚢: ↪ƒ(𝚡,𝚢)
+      ¿𝗜(𝚡􀋑␀􀰇􀳉𝚢 􇀠 𝕩): ↪ƒ( ⠤𝕩)
+      ¡             : ↪ƒ(0,𝕩)
+      ✗􁀒
+  ↪𝚜􀋑␀ 􇂖ƒ􀃅􇂗 ⍁􀲿􀉴ƒ
+
+🟑 § Hashing § 🟑
+⊢sha(⠤𝔸,⠶𝕂): ↪𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
+
+🟑 § Encoding/Decoding § 🟑
+stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀

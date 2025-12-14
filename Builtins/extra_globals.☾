@@ -1,20 +1,20 @@
 FRAC_CONV = {⠤‹12 13 14 15 16 17 18 19 110 23 25 27 29 34 35 37 38 310 45 47 49 56 57 58 59 67 78 79 710 89 910 03 1100›⍭󱑼‹½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖󷶲󷶷¾⅗󷶳⅜󷷆⅘󷶴󷷂⅚󷶵⅝󷶹󷶶⅞󷶺󷷇󷶻󷷈↉󷷉›}
 TOFRAC = 󰲡FRAC_CONV.get(x,x)
 󱀘 UPSIDEDOWNSYNDROME:
-    NRM = ‹0123456789abcdefoxABCDEFOXîĵ󷺈ℇτπ󷺍󷺏∞›
-    USD = ‹󷰽󷰾󷰿󷱀󷱁󷱂󷱃󷱄󷱅󷱆󷱇󷱈󷱉󷱊󷱋󷱌󷱍󷱎󷱏󷱐󷱑󷱒󷱓󷱔󷱕󷱖󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱰󷱩›
-    MAP = {⠤NRM󱑼USD} | {⠤USD󱑼NRM}
-    flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ⨝ᐦ
+  NRM = ‹0123456789abcdefoxABCDEFOXîĵ󷺈ℇτπ󷺍󷺏∞›
+  USD = ‹󷰽󷰾󷰿󷱀󷱁󷱂󷱃󷱄󷱅󷱆󷱇󷱈󷱉󷱊󷱋󷱌󷱍󷱎󷱏󷱐󷱑󷱒󷱓󷱔󷱕󷱖󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱰󷱩›
+  MAP = {⠤NRM󱑼USD} | {⠤USD󱑼NRM}
+  flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ⨝ᐦ
 󱀘 SCRIPT:
-    SCRIPT_FILE_LOC = moon_dir/‹Builtins/Data/script.map›
-    CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip(𝗻)󷹎𝗻
-    SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
-    SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)
-    NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2 CHAR_NRM)
-    sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟ᴍ𝚃↦󰲡x.translate(𝚃)
+  SCRIPT_FILE_LOC = moon_dir/‹Builtins/Data/script.map›
+  CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip(𝗻)󷹎𝗻
+  SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
+  SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)
+  NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2 CHAR_NRM)
+  sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟ᴍ𝚃↦󰲡x.translate(𝚃)
 
-supscript, subscript, nrmscript = SCRIPTˢᵘᵖ, SCRIPTˢᵘᵇ, SCRIPTⁿʳᵐ
-SUPSCRIPT, SUBSCRIPT = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ, SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ
+supscript,subscript,nrmscript = SCRIPTˢᵘᵖ,SCRIPTˢᵘᵇ,SCRIPTⁿʳᵐ
+SUPSCRIPT,SUBSCRIPT = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ,SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ
 ALPHABETS = 󰦥󰦥󰦥󰦥󰦥
     abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
     𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫 𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ 𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡
@@ -47,6 +47,6 @@ TO_LOWERCASE = ᔐ.maketrans(UPPERCASE, LOWERCASE)ᐒ󰲡x.translate(⟞)ᐸᐒu
 TO_UPPERCASE = ᔐ.maketrans(LOWERCASE, UPPERCASE)ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝,⟞)󷺿
 REVERSE_CASE = ᔐ.maketrans(LETTERS  , TERLETS  )ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝,⟞)󷺿
 GET_CASE = 󰲡TO_UPPERCASE(x)≡x ⭢-⭠ x≡TO_LOWERCASE(x)
-⊢ under_script(𝚡,ƒ,𝘪=␀):
-    𝖼 = 󷺹∈SUPSCRIPT ⭜supscript⭝ ⟞∈SUBSCRIPT ⭜subscript
-    ↪ (𝘪≅␀⭜𝚡⭝𝘪)ᐖnrmscript⍟(¬○𝖼)∘⟞ᴍ𝖼ſ􋒍○ᐸ󱑼ƒ(nrmscript⊜∘𝚡)ꟿ∘→⨝
+⊢under_script(𝚡,ƒ,𝘪=␀):
+  𝖼 = 󷺹∈SUPSCRIPT ⭜supscript⭝ ⟞∈SUBSCRIPT ⭜subscript
+  ↪(𝘪≅␀⭜𝚡⭝𝘪)ᐖnrmscript⍟(¬○𝖼)∘⟞ᴍ𝖼ſ􋒍○ᐸ󱑼ƒ(nrmscript⊜∘𝚡)ꟿ∘→⨝
