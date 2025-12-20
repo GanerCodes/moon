@@ -11,6 +11,7 @@
     󰤱  Documentation
         󰤱  Make the stuff with peggle3 more clear
     󰤱  what if strs be like ‹x is ‹x››
+    󰤱  what if more overloads for rng ƒs like `[6,2,9]󱅏` being 0󱅏2?
     󰤱  the random 󰤱′s all throughout the code
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
     󰤱  Webinterface

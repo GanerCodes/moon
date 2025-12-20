@@ -17,8 +17,8 @@
   ↪x 􁁨 SR_int(2⁶⁴􀊪1)􀦾y􀊪x􀠰2⁶⁴􀊪1
 ⊢SR_choice(x): ↪x[SR_int(x􀊹􀊪1)]
 ⊢SR_shuffle(x,n=□):
-  ¿n􀋑□: n=x􀊹􀊪1
-  ⸘n􀯏𝑖􀜉x􀊹: ✗⨳‹Cannot shuffle (⟦n⟧ > ⟦x􀊹⟧)›
+  ¿n􀋑□: n=x􀊹
+  ⸘n􀯏𝑖􀟎x􀊹: ✗⨳‹Cannot shuffle (⟦n⟧ > ⟦x􀊹⟧)›
   X,Y = [⠤x],⍁
   ∀_⬠n􀋲: Y.append(X.pop(SR_int(X􀊹􀊪1)))
   ↪Y
