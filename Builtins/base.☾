@@ -162,8 +162,8 @@ enc = 󷺹ᐖ󷹜´(⟞󷹝,ENC🃌,C=ENC)ᐸ        􁂡␛þ
 dec = 󷺹􀡐␛þᐖ󷹜´(⟞,ENC🃌,C=ENC)󷹝ᐸ     􁂡
 PEV = 󷺹􀡞RCD􀨷ᵉⁿᶜRCD                􁂡
 VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒SPE 􁂡
-⊢ OPWRAP_(⠤𝚇): ⊢ R(ƒ): ∀x⬠𝚇: globals()[x∈tmp⭜tmpₓ⭝PEV(x)]≔MOD(ƒ,x)
-               ↪ R
+⊢OPWRAP_(⠤𝚇): ⊢R(ƒ): ∀x⬠𝚇: globals()[x􀉧tmp􇀦tmpₓ􇀧PEV(x)]􀯍MOD(ƒ,x)
+              ↪R
 
 𝗙,𝗜 = callable,󰲡hasattr(x,‹__iter__›)
 ⊢ 𝗛(x): ↪hash(x)
