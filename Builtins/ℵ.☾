@@ -6,51 +6,57 @@
 
 󱀘 ℵ´(𝑑):
     𝐶𝑛 = ␛ℵ
-    ⊢ __getitem__(𝕊,x): ¿x∈𝕊: ↪𝑑.__getitem__(𝕊,x)
-                        ¿𝕊.hasdef(): ↪𝕊.getdef(x)
-                         KeyError(‹⟦x⟧ ∉ ⟦𝕊⟧, and I have no default value!›)
-    ⊢ __contains__(𝕊,x): ↪super().__contains__(x)
-    ⊢ __init__(𝕊,⠤𝔸,𝚜=␀,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
-                             ¿𝚜≇␀: 𝕊.setdef(𝚜)
+    ⊢__getitem__(𝕊,x): ¿x∈𝕊: ↪𝑑.__getitem__(𝕊,x)
+                       ¿𝕊.hasdef(): ↪𝕊.getdef(x)
+                        KeyError(‹⟦x⟧ ∉ ⟦𝕊⟧, and I have no default value!›)
+    ⊢__contains__(𝕊,x): ↪super().__contains__(x)
+    ⊢__init__(𝕊,⠤𝔸,𝚜=␀,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
+                            ¿𝚜􀋒␀: 𝕊.setdef(𝚜)
     __repr__ = 𝕊↦‹⟦𝕊.__class__.𝐶𝑛⟧⟦0∈h≔𝕊.__dict__ ⭜‹[⟦h₀∨␛ᐦ⟧]›⭝ ᐦ⟧(⟦𝕊.itemsꟿ󰲣‹⟦x⟧=⟦y⟧›󰅂⭢⨝␛,𝘀⟧)›
     __json__ = ⥌𝕊,cb,⠤𝓐,⠶𝓚↦𝑑(𝕊) ꟿ⁺ 󰲣cb(y,⠤𝓐,⠶𝓚)
     __iter__ = 𝕊↦iter(𝕊.items())
-    __call__ = 𝕊↦𝑑.update(𝕊,⠤𝔸,⠶𝕂)►𝕊
+    __call__ = 𝕊↦𝑑.update(𝕊,⠤𝔸,⠶𝕂)►𝕊  󰤱􊽨 if x is 𝑠􀊤𝑙􀊤𝑡􀊤ᔐ we use as keys and set all to getdef?
     __bool__ = 𝕊↦𝕊🃌>0
     __or__   = ⥌𝕊,x↦𝕊.copy()(x)
-    ⊢ __and__(𝕊,y): r = ℵ
+    __ror__  = ⥌𝕊,x↦xℵ􀊤𝕊  󰤱􊽨 transfer over default?
+    ⊢__and__ (𝕊,y): r = ℵ
                     ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
-                    ¿y􀝀𝑠􀊤𝑙􀊤𝑡: ∀k  ⬠⦉⠤y⦊     ¿k∈𝕊: rₖ=𝕊ₖ
-                    ¡       : ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
+                    ¿y􀝀𝑠􀊤𝑙􀊤𝑡􀊤ᔐ: ∀k  ⬠⦉⠤y⦊     ¿k∈𝕊: rₖ=𝕊ₖ
+                    ¡         : ∀k,v⬠y.items()¿k∈𝕊: rₖ=v
                     ↪r
-    ⊢ __sub__(𝕊,y): r = ℵ
+    ⊢__rand__(𝕊,y): ¿y􀝀𝑠􀊤𝑙􀊤𝑡􀊤ᔐ: ↪𝕊􀊦y
+                    ¿y􀝀𝑑      : ↪yℵ􀊦𝕊
+                    ↪NotImplemented
+    ⊢__sub__ (𝕊,y): r = ℵ
                     ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
                     𝗜(y)􁀒
                     ∀k,v⬠𝕊¿k􀉩y: rₖ=v
                     ↪r
+    ⊢__rsub__(𝕊,y): ¿y􀝀𝑑: ↪yℵ􀊪𝕊  󰤱􊽨 transfer over default?
+                    ↪NotImplemented
     __setattr__ = 𝑑.__setitem__
     __getattr__ =   __getitem__
-    ⊢ __getstate__(𝕊): ¿𝕊.hasdef(): ↪𝑑(𝕊),𝕊.getdef()
-                       ¡          : ↪𝑑(𝕊),
-    ⊢ __setstate__(𝕊,s): 𝕊.__init__(s₀)
-                         ¿s🃌>1: 𝕊.setdef(s₁)
-    ⊢ __pow__(𝕊,x): ¿x≅-´: ↪[⠤𝕊.keys  ]
-                    ¿x≅+´: ↪[⠤𝕊.values]
-                    ¿x≅*´: ↪[⠤𝕊.items ]
-                    ¿x≅∾´: ↪𝕊ᴍᴙ
-                    ¿x≅^´: ↪𝕊.copy ᣆ􋉌􋕝ᵍᵉᵗᵈᵉᶠ􋅯􍪫ᵛ􀸳󰀂􋁟ᵃˡᵉᵖʰ􋕟ʷʳᵃᵖᵖᵉʳ 󰲡x.setdef(C(v))
-                    ✗⨳
+    ⊢__getstate__(𝕊): ¿𝕊.hasdef(): ↪𝑑(𝕊),𝕊.getdef()
+                      ¡          : ↪𝑑(𝕊),
+    ⊢__setstate__(𝕊,s): 𝕊.__init__(s₀)
+                        ¿s🃌>1: 𝕊.setdef(s₁)
+    ⊢__pow__(𝕊,x): ¿x􀋑􀁘´: ↪[⠤𝕊.keys  ]
+                   ¿x􀋑􀁗´: ↪[⠤𝕊.values]
+                   ¿x􀋑􀁸´: ↪[⠤𝕊.items ]
+                   ¿x􀋑􀃄´: ↪𝕊ᴍᴙ
+                   ¿x􀋑􀁓´: ↪𝕊.copy ᣆ􋉌􋕝ᵍᵉᵗᵈᵉᶠ􋅯􍪫ᵛ􀸳󰀂􋁟ᵃˡᵉᵖʰ􋕟ʷʳᵃᵖᵖᵉʳ 󰲡x.setdef(C(v))
+                   ✗⨳
     hasdef = ⥌𝕊↦0∈𝕊.__dict__
     setdef = ⥌𝕊,x↦𝕊.__dict__₀≔x →► 𝕊
-    ⊢ getdef(𝕊,k=␀): d = 𝕊.__dict__₀
-                     ¿dᐹaleph_wrapper:
-                         d󷸊
-                          󰤱 way to make setting self an option
-                         𝕊ₖ=d
-                     ↪d
-    ⊢ copy(𝕊): r = type(𝕊)(super().copy())
-               ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
-               ↪r
+    ⊢getdef(𝕊,k=␀): d = 𝕊.__dict__₀
+                    ¿dᐹaleph_wrapper:
+                        d󷸊
+                         󰤱 way to make setting self an option
+                        𝕊ₖ=d
+                    ↪d
+    ⊢copy(𝕊): r = type(𝕊)(super().copy())
+              ¿𝕊.hasdef(): r.setdef(𝕊.getdef())
+              ↪r
 
 󱀘 ℶ´(ℵ´):
     𝐶𝑛 = ␛ℶ

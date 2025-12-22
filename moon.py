@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='DtZ3wlm_SyT9TzWfCtHVLkkpEQe-UmVOUzq5wN_qTIE'
+BOOTSTRAP_HASH='35tea6mgnhGtUWG5_nlzZeSjLoasdRj7_Z60Rz6j9jM'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -1650,12 +1650,13 @@ class ÂÑÖ(áÍÙ):
     (__call__:=(lambda áÑÞ,*áÑË,**áÑÕ:ÂåÔ((áÍÙ).update(áÑÞ,*áÑË,**áÑÕ),áÑÞ)))
     (__bool__:=(lambda áÑÞ:(ãÊú(áÑÞ) > 0)))
     (__or__:=(lambda áÑÞ,x:(áÑÞ).copy()(x)))
+    (__ror__:=(lambda áÑÞ,x:(ÂÞÅCAT(x,ÂÑÖ()) | áÑÞ)))
     def __and__(áÑÞ,y):
         (r:=ÂÑÖ())
         if (áÑÞ).hasdef():
             (r).setdef((áÑÞ).getdef())
         
-        if ÁØö(y,((áÍè | áÍá) | áÍé)):
+        if ÁØö(y,(((áÍè | áÍá) | áÍé) | ÁÜÙ)):
             for k in({*y}):
                 if not((k in áÑÞ)):continue
                 (ÄÊPSH(r),ÄÊPSH(k),ÄÊPSH(áÑÞ[k]),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
@@ -1668,6 +1669,15 @@ class ÂÑÖ(áÍÙ):
         
         return r
     
+    def __rand__(áÑÞ,y):
+        if ÁØö(y,(((áÍè | áÍá) | áÍé) | ÁÜÙ)):
+            return (áÑÞ & y)
+        
+        if ÁØö(y,áÍÙ):
+            return (ÂÞÅCAT(y,ÂÑÖ()) & áÑÞ)
+        
+        return NotImplemented
+    
     def __sub__(áÑÞ,y):
         (r:=ÂÑÖ())
         if (áÑÞ).hasdef():
@@ -1679,6 +1689,12 @@ class ÂÑÖ(áÍÙ):
             (ÄÊPSH(r),ÄÊPSH(k),ÄÊPSH(v),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
         
         return r
+    
+    def __rsub__(áÑÞ,y):
+        if ÁØö(y,áÍÙ):
+            return (ÂÞÅCAT(y,ÂÑÖ()) - áÑÞ)
+        
+        return NotImplemented
     
     (__setattr__:=(áÍÙ).__setitem__)
     (__getattr__:=__getitem__)
