@@ -1,5 +1,5 @@
 󰤱  fix ⋄ᵜ
-󰤱  make some vars auto-rerefference globals like 𝔒𝔘𝔗
+󰤱  fix a, = [1] parsing as a,□ = ...
 󰤱  Error handling
     https://ganer.xyz/s/6493fd709262abc8
     1. Format for sourcemaps
@@ -8,6 +8,7 @@
 󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
 󰤱  ⨡ a ⨡ b ⨡ c
 󰤱  escaping keywords with _ is dumb, like `del≡del_`
+󰤱  make some vars auto-rerefference globals like 𝔒𝔘𝔗
 󰤱  whitespace involution lol
 󰤱  string ␛ before newline should not add it
 󰤱  with statements (prob ⓦ under or something)
