@@ -1,0 +1,175 @@
+⦃from threading import RLock⦄
+     ⦃import lmdb⦄
+¡ε=𝑒: ✗􀛷‹Cannot import lmbb, did you install it with pip? "⟦ε⟧"›
+⨡ text_format
+
+󱀘DatabaseError(𝑒): ⊢__init__(𝕊,⠤𝔸,⠶𝕂):
+                     super().__init__(𝔸₀)
+                     𝕊.__dict__.update(𝕂)
+󱀘DataBaseMalformedDataError(DatabaseError):□
+󱀘DatabaseBulkTransactionError(DatabaseError):□
+󱀘DatabaseRecordError(DatabaseError):□
+󱀘DatabaseRecordMissingError(DatabaseRecordError):□
+󱀘DatabaseRecordConflictError(DatabaseRecordError):□
+
+LMDB_et = 𝑀
+LMDB_ek,LMDB_dk = 𝑀,𝑀
+LMDB_ev,LMDB_dv = pdump,pload
+󱀘LMDB:
+  ⊢__init__(𝕊,𝚍,tables):
+    𝕊.db = lmdb.open(𝚍􀯏𝐩􀰆ᔐ,max_dbs=tables􀊹,map_size=1024³,sync=✓,metasync=✓,writemap=✓)
+    𝕊􀲡,𝕊ᵀ = 𝚍,□
+    𝕊.tables = tablesᐵᔐ,𝕊ᵈᵇ.open_db(⟞ LMDB_et)ᐸℵ
+    𝕊.lock = RLock
+  tx   = ⥌𝕊,ƒ,w=✓↦ⓦ(𝕊.lock, ⥌⠤_↦𝕊ᵀ􀋒□ ⭜ƒ(𝕊.T)⭝ ⓦ(𝕊ᵈᵇ.begin(write=w), ƒ))
+  iter = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.cursor(𝕊.tables󰂢)􀉴󰲣LMDB_dk(x)⋄LMDB_dv(y)                                                               , ✗)
+  len  = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.stat  (                      db=𝕊.tables󰂢)􋕨ₑₙₜᵣᵢₑₛ􋕨                                                    , ✗)
+  has  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀋒□                                                           , ✗)
+  get  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀯑v􀋒□􇀆LMDB_dv(v)􇀇KeyError(‹Table ⟦P⟧ does not contain ⟦k⟧!›) 􀊗, ✗)
+  set  = ⥌𝕊,P,k,v↦𝕊ᵗˣ(󷺹.put   (LMDB_ek(k),LMDB_ev(v),db=𝕊.tables󰂢)                                                             , ✓)
+  del  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.delete(LMDB_ek(k),           db=𝕊.tables󰂢)                                                             , ✓)
+  ⊢__enter__(𝕊):
+    𝕊.lock.acquire􀃅
+    𝕊ᵀ=𝕊ᵈᵇ.begin(write=✓).__enter__()
+    ↪𝕊
+  ⊢__exit__(𝕊,ε_type,ε,tb):
+    𝐸,r = ε􀋁󰁐􁗻􋄅,□
+          r = 𝕊ᵀ.__exit__(ε_type,ε,tb)
+    ¡𝜺=𝑒𝑒: 𝐸􀯿􀊩􊸣
+    𝕊ᵀ = □
+    𝕊.lock.release􀃅
+    ¿𝐸: DatabaseError(DatabaseBulkTransactionError(‹Error in bulk transaction!›)􀋁􀕈𝐸) 􀊗
+    ↪r
+
+⊢DB_WRAP(Ω):  Ω(𝐩,[ᔐ]) → iter,len,has,get,set,del
+  󱀘󰆼: 𝘥 = ⥌𝕊,k↦􀂽´􀋑k􀕮k􀋑□ 􇂖𝕊􀲯􇂗 k ᔐ
+      𝘵 = ⥌𝕊,p↦‹⟦𝕊􀲵⟧_⟦p⟧›
+      ⊢__init__(𝕊,𝚗,ω,𝚍,𝙿,𝙲):
+        𝕊􀲵,𝕊󰁤,𝕊􀲡,𝕊􀳭,𝕊􀳓,𝕊􀲯 = 𝚗,ω,𝚍,𝙿,𝙲,𝙿₀
+        𝕊.__dict__.update(𝙿ᐵ,󰆼_proxy(𝕊,⟞)ᐸ𝑑)
+      __pow__     = ⥌𝕊,x↦x􀋑􀂽´􀞽􇂖ƒ↦𝚲ⓦ(𝕊,󷺻ƒ(⠤𝔸,⠶𝕂))
+      __repr__    = 𝕊↦‹󰆼[⟦𝕊􀳭􀋢𝘀⟧](⟦𝕊􀳓􀋢𝘀⟧) with ⟦𝕊􀊹⟧ rows (⟦𝕊􀲡⟧)›
+      __enter__   = 𝕊↦𝕊󰁤.__enter__(⠤𝔸,⠶𝕂)
+      __exit__    = 𝕊↦𝕊󰁤.__exit__ (⠤𝔸,⠶𝕂)
+      __iter__    = 𝕊↦𝕊.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
+      __len__     = 𝕊↦𝕊.len (𝕊􀲯,⠤𝔸,⠶𝕂)
+      __contains__= 𝕊↦𝕊.has (𝕊􀲯,⠤𝔸,⠶𝕂)
+      __getitem__ = 𝕊↦𝕊.get (𝕊􀲯,⠤𝔸,⠶𝕂)
+      __setitem__ = 𝕊↦𝕊.set (𝕊􀲯,⠤𝔸,⠶𝕂)
+      __delitem__ = 𝕊↦𝕊.del (𝕊􀲯,⠤𝔸,⠶𝕂)
+      
+      ⊢show(𝕊,header=␀,print=✓):
+        r = grid([𝕊􀳭􀉳ŧ𝼝(⬤,,‹333›)􀠓𝕊􀳓􀉳ŧ𝼝(⬤,,‹111›)􀠓􊬏􊬐,⠤𝕊ᐖ[⠤⟞₁ᑀ.get(⟝,␛␀)ᔐᐛC􀯽𝕊􀳭􀊩𝕊􀳓,⟞₁􀊪C→ᔐ]])
+        ¿header􀋒□: ¿header􀋑␀: header=𝕊􀲡.stem
+                   ¡        : header􀯏ᔐ
+                   r􀯏title(header,⬤)
+        ↪r􀊚ᵖʳⁱⁿᵗ􀁦
+      
+      ⊢__or__(𝕊,⠤𝚁): ¿𝚁ᐹ𝑑: 𝚁􇀞􀋁
+                     ¡   : 𝚁􀊜𝗜 􁀒
+                      ∀𝚛⬠𝚁: 𝕊􀲯􀉧𝚛 􁁖 DataBaseMalformedDataError(‹Record ⟦𝚛⟧ has no superprimary key!›)
+                             𝕊󰁤.set(𝕊􀲯𝕊􍻂,𝚛􊶊􀵂,𝚛)
+                     ¡ε=𝑒: DatabaseError(DatabaseRecordError(‹Failed to update records: 𝚁=⟦𝚁⟧›) 􀝕 ε) 􁁖
+                     ↪𝕊
+      
+      ⊢iter(𝕊,P      ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        ¿P􀉞𝕊􀲯: ↪iter(𝕊󰁤.iter(P 𝕊􍻂))
+                        ↪iter(𝕊󰁤.iter(P 𝕊􍻂)􀉴󷺹,𝕊󰁤.get(𝕊􀲯𝕊􍻂,⟝)󷺿)
+      ⊢len (𝕊,P      ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        ↪𝕊󰁤.len(P 𝕊􍻂)
+      ⊢has (𝕊,P,k    ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        ↪𝕊󰁤.has(P 𝕊􍻂,k ᔐ)
+      ⊢get (𝕊,P,k,a=␀): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        ¿𝕊󰁤.has(P 𝕊􍻂,k􀯏ᔐ)􀌐:
+                          ↪a􀋒␀ 􇀦a􇀧 DatabaseRecordMissingError(‹⟦k⟧ ∉ ⟦d⟧›) 􀊗
+                        ↪P􀋑𝕊􀲯 􇀦𝕊󰁤.get(𝕊􀲯𝕊􍻂,k)􇀧 𝕊󰁤.get(𝕊􀲯𝕊􍻂,𝕊󰁤.get(P 𝕊􍻂,k)) 􇂕 ℵ
+      ⊢set (𝕊,P,k,v  ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        P􀕶𝕊􀲯 􁁖 DatabaseError(‹󰤱›)
+                        id,v = k ᔐ, vℵ􀓆􁎡󷺹􀯏ᔐ,⟞􀉧𝕊􀳭 􇂖􍪹 ᔐ􀊉󷺽
+                        ¿k∈v: v􊶊􀵂􀉞id 􁁖 DatabaseRecordConflictError(‹Superprimary record field "⟦𝕊􀲯⟧" ⟦v􊶊􀵂⟧ ≠ ⟦id⟧›)  󰤱􊽨 make this do .move() instead?
+                        ¡   : v􊶊􀵂=id
+                        
+                        ¿𝕊󰁤.has(𝕊􀲯𝕊􍻂,id): (𝕊󰁤.get(𝕊􀲯𝕊􍻂,id)􀊦𝕊􀳭)􁎡􀊷v􁎡 􀟞 󰲣𝕊󰁤.del(x 𝕊􍻂,y)
+                        
+                        ∀k,x⬠v􀖾𝕊􀳭􀗂􊶊􀵂:
+                          ¿𝕊󰁤.has(k 𝕊􍻂,x): 𝕊󰁤.get(k 𝕊􍻂,x)􀯑y􀒰id 􁁖 DatabaseRecordConflictError(‹⟦𝕊􀲯⟧=⟦id⟧ wants ⟦k⟧=⟦vₖ⟧, but ⟦k⟧ ⟦vₖ⟧ → ⟦𝕊􀲯⟧=⟦y⟧›)
+                          ¡              : 𝕊󰁤.set(k 𝕊􍻂,x,id)
+                        𝕊󰁤.set(𝕊􀲯𝕊􍻂,id,v)
+                        ↪v
+      ⊢del (𝕊,P,k    ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                        ¿𝕊󰁤.has(P 𝕊􍻂,k): 𝐱 = 𝕊󰁤.get(P 𝕊􍻂,k)
+                                         ∀k,v⬠𝕊􀳭􀖾𝐱: 𝕊󰁤.del(k 𝕊􍻂,v)
+                        ↪𝐱
+      ⊢move(𝕊,k,K    ): ✗⨳‹󰤱􊽨›
+  󱀘󰆼_proxy(󰆼):
+    ⊢__init__(𝕊,𝙿,𝚔): 𝕊􀳭,𝕊􀲯 = 𝙿,𝚔
+    __repr__ = 𝕊↦‹Proxy of primary column ⟦𝕊􀲯⟧ of ⟦𝕊􀳭⟧›
+    iter = __iter__     = 𝕊↦𝕊􀳭.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
+    len  = __len__      = 𝕊↦𝕊􀳭.len (𝕊􀲯,⠤𝔸,⠶𝕂)
+    has  = __contains__ = 𝕊↦𝕊􀳭.has (𝕊􀲯,⠤𝔸,⠶𝕂)
+    get  = __getitem__  = 𝕊↦𝕊􀳭.get (𝕊􀲯,⠤𝔸,⠶𝕂)
+    set  = __setitem__  = 𝕊↦𝕊􀳭.set (𝕊􀲯,⠤𝔸,⠶𝕂)
+    del  = __delitem__  = 𝕊↦𝕊􀳭.del (𝕊􀲯,⠤𝔸,⠶𝕂)
+  ⊢ƒ(𝚍,⠶𝕂): 𝕂􀯿􀉴⁺󰲣y􀉳²ᔐ󰅂􀯖ℵ
+            ω=Ω(𝚍􀯿𝐩,𝕂􀉴󰲣y₀ᐖ‹⟦x⟧_⟦⟞⟧›󰅂􀋶)
+            ↪𝕂􀉴󰲣󰆼(x,ω,𝚍,⠤y)
+  ↪ƒ
+󰆼 = DB_WRAP(LMDB)
+
+⭷ 󰆼
+
+⊢󰆼_test: db,⠤_ = 󰆼(‹/tmp/DB_TEST›,main="uname email hand"􀌌)
+         db.show
+         db["joe"] = {email="weed@google.gov",weeds=22,ohno=␀}ℵ
+         db["guywithoutanything"] = ℵ
+         db☾
+         db["joe"]☾
+         db.show
+         db["joe"] = {email="sand@google.gov"}ℵ
+         db["slambert"] = {guns=295,hand=␛h􀊱25}ℵ
+          db["badguy"] = {email="sand@google.gov"}ℵ
+           ✗⨳‹Wee›
+         ¡ε=DatabaseRecordConflictError:
+           ‹Error is expected here: "⟦ε⟧"›☾
+         db?􋕨ⱼ󰂼ₑ􋕨☾
+         db?􋕨ⱼ󰂼ₑₛ􋕨☾
+         db.show
+         󰆴 db["joe"]
+         db.show
+         db􀊹􀜂2 􁀒
+         ⊢(󰲡𝚲ⓦ(db,⥌⠤_↦x)) test: db["h"] = {email="yo@yo.yo"}ℵ
+                                 db["h"]☾
+                                 db["abc"] = {}ℵ
+                                 db.show
+                                 ✗􀉓‹Yay›
+               test
+         ¡ε=𝑒𝑒: ‹Error is expected here: ⟦ε⟧›􀊸
+         db.show
+         db􀊹􀜂2 􁀒
+         󰆴 db
+         
+         𝔇,𝔉 = 󰆼(‹/tmp/DB_TEST2›,main="p v"􀌌,sneed="p v sand"􀌌)
+         𝔇[‹x›] = {v=␛1}ℵ
+         𝔇
+         ⊢(ƒ↦𝚲ⓦ(𝔇,⥌⠤↦ƒ)) A: ‹A₀: x≡⟦𝔇[‹x›]⟧›􀊸
+                             ½ sleep
+                             ‹A₁: x≡⟦𝔇[‹x›]⟧›􀊸
+                             𝔇[‹x›] = ℵ(v=␛A)
+                             ‹A₂: x≡⟦𝔇[‹x›]⟧›􀊸
+                             ‹𝔇[␛x]=⟦𝔇[␛x]⟧𝗻𝔇.p[␛x]=⟦𝔇.p[␛x]⟧𝗻𝔇.get(␛p,␛x)=⟦𝔇.get(␛p,␛x)⟧𝗻𝔇.p.get(␛x)=⟦𝔇.p.get(␛x)⟧›☾
+                             𝔇[␛x]ᵛ 􀉞 𝔇.p[␛x]ᵛ 􀉞 𝔇.get(␛p,␛x)ᵛ 􀉞 𝔇.p.get(␛x)ᵛ 􀉞 ␛A 􁀒
+         ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤↦ƒ)) B: ‹B₀: x≡⟦𝔇[‹x›]⟧›􀊸
+                             ⅕ sleep
+                             ‹B₁: x≡⟦𝔇[‹x›]⟧›􀊸
+                             𝔇[‹x›] = ℵ(v=␛B)
+                             ‹B₂: x≡⟦𝔇[‹x›]⟧›􀊸
+         ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤↦ƒ)) C: 𝔉[‹x›] = ℵ(v=␛C)
+                             ‹C₁: x≡⟦𝔉.p.get(␛x)⟧›􀊸
+         PL_THREAD(A)
+         PL_THREAD(B)
+         PL_THREAD(C)
+         1 sleep
+         𝔇.show
+         𝔉.show
+
+¿__name__≡‹__main__›: 󰆼_test
