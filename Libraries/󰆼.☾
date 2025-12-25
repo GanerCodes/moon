@@ -1,6 +1,6 @@
 ⦃from threading import RLock⦄
      ⦃import lmdb⦄
-¡ε=𝑒: ✗􀛷‹Cannot import lmbb, did you install it with pip? "⟦ε⟧"›
+¡ε=𝑒: ✗􀛷‹Cannot import lmdb, did you install it with pip? "⟦ε⟧"›
 ⨡ text_format
 
 󱀘DatabaseError(𝑒): ⊢__init__(𝕊,⠤𝔸,⠶𝕂):
@@ -158,11 +158,11 @@ LMDB_ev,LMDB_dv = pdump,pload
                              ‹A₂: x≡⟦𝔇[‹x›]⟧›􀊸
                              ‹𝔇[␛x]=⟦𝔇[␛x]⟧𝗻𝔇.p[␛x]=⟦𝔇.p[␛x]⟧𝗻𝔇.get(␛p,␛x)=⟦𝔇.get(␛p,␛x)⟧𝗻𝔇.p.get(␛x)=⟦𝔇.p.get(␛x)⟧›☾
                              𝔇[␛x]ᵛ 􀉞 𝔇.p[␛x]ᵛ 􀉞 𝔇.get(␛p,␛x)ᵛ 􀉞 𝔇.p.get(␛x)ᵛ 􀉞 ␛A 􁀒
-         ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤↦ƒ)) B: ‹B₀: x≡⟦𝔇[‹x›]⟧›􀊸
-                             ⅕ sleep
-                             ‹B₁: x≡⟦𝔇[‹x›]⟧›􀊸
-                             𝔇[‹x›] = ℵ(v=␛B)
-                             ‹B₂: x≡⟦𝔇[‹x›]⟧›􀊸
+         ⊢(𝔉􁏦) B: ‹B₀: x≡⟦𝔇[‹x›]⟧›􀊸
+                  ⅕ sleep
+                  ‹B₁: x≡⟦𝔇[‹x›]⟧›􀊸
+                  𝔇[‹x›] = ℵ(v=␛B)
+                  ‹B₂: x≡⟦𝔇[‹x›]⟧›􀊸
          ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤↦ƒ)) C: 𝔉[‹x›] = ℵ(v=␛C)
                              ‹C₁: x≡⟦𝔉.p.get(␛x)⟧›􀊸
          PL_THREAD(A)
