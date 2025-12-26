@@ -81,7 +81,7 @@ LMDB_ev,LMDB_dv = pdump,pload
                         ↪𝕊󰁤.has(P 𝕊􍻂,k ᔐ)
       ⊢get (𝕊,P,k,a=␀): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
                         ¿𝕊󰁤.has(P 𝕊􍻂,k􀯏ᔐ)􀌐:
-                          ↪a􀋒␀ 􇀦a􇀧 DatabaseRecordMissingError(‹⟦k⟧ ∉ ⟦d⟧›) 􀊗
+                          ↪a􀋒␀ 􇀦a􇀧 DatabaseRecordMissingError(‹⟦k⟧∉⟦𝕊.‹⟦P⟧›⟧›) 􀊗
                         ↪P􀋑𝕊􀲯 􇀦𝕊󰁤.get(𝕊􀲯𝕊􍻂,k)􇀧 𝕊󰁤.get(𝕊􀲯𝕊􍻂,𝕊󰁤.get(P 𝕊􍻂,k)) 􇂕 ℵ
       ⊢set (𝕊,P,k,v  ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
                         P􀕶𝕊􀲯 􁁖 DatabaseError(‹󰤱›)
