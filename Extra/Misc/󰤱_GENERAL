@@ -18,6 +18,8 @@
     󰤱  the random 󰤱′s all throughout the code
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
     󰤱  Webinterface
+	    Emscripten compile peggle3 + lpcre
+	    	make it load libraries dynamically in peggle3/main.☾
         Update the intro print statement w new stuff
         Show colors in editor
         Mac keybinds
