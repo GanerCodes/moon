@@ -9,31 +9,33 @@
 
 § TODOs ------------------------------------
     󰤱  Documentation
-        󰤱  Make the stuff with peggle3 more clear
+    󰤱  The random 󰤱′s all throughout the code
+    󰤱  Make the stuff with peggle3 more clear
     󰤱  what if strs be like ‹x is ‹x››
     󰤱  what if more overloads for rng ƒs like `[6,2,9]󱅏` being 0󱅏2?
     󰤱  { x=ᶜᵒⁿᵈy, y, ¿y }
         y: y=y
         ¿y: y=y if y is defined
-    󰤱  the random 󰤱′s all throughout the code
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
+       what about like .items, this might be cooked
     󰤱  Webinterface
-	    Emscripten compile peggle3 + lpcre
-	    	make it load libraries dynamically in peggle3/main.☾
-        Update the intro print statement w new stuff
-        Show colors in editor
-        Mac keybinds
-        Show groupings somehow
-        Backend weird code bc globals or something
+	       It broke rn
+           Fix emscripten compile peggle3 + lpcre
+           Make it load libraries dynamically in peggle3/main.☾
+         Update the intro print statement w new stuff
+         Show colors in editor
+         Mac keybinds
+         Show groupings somehow
+         Backend weird code bc globals or something
     󰤱˜ a?₂?.x?(x,y)
-    󰤱􊽨 󰶡 and 󰶣 for minus/plus one?
     󰤱  x􍪵 should be exp
-    󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
-    󰤱  heckin detect byte mode  to implicitly cast input to ᔐ
     󰤱  heckin [1,2,34,󷱂]⫰ᔨ
-    󰤱  textwrap is cringe
+         what?
     󰤱  versions of ⭜ ⭝ that foward the value like 󷸊
     󰤱  version fold with multiple (optionally all) prev vals
+    󰤱􊽨 󰶡 and 󰶣 for minus/plus one?
+    󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
+    󰤱  heckin detect byte mode  to implicitly cast input to ᔐ
     󰤱  Under
     󰤱  Implicit shape  operator
         https://ganer.xyz/s/35253369382cfe6b
@@ -44,12 +46,38 @@
         100 items: shape 10⋄5 = 10⨯5⨯2…?
         100 items: shape ⬤⋄5 = 20⨯5
         124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
-    󰤱  finish sup/sub 󷸓󷸔
+    󰤱  Find glyph to convert number to array in bases (ⴲ is placeholder)
+         12345ⴲ⁷􌾕²⁴􌾕⁶⁰ ≡ 1⋄1⋄13⋄45 (inspired by https://aplwiki.com/wiki/Encode)
+         1⋄1⋄13⋄45ⴲ⁷􌾕²⁴􌾕⁶⁰ ≡ 12345
+         25ⴲ ≡ 25ⴲ² ≡ [1,1,0,0,1]
+         [1,1,0,0,1]ⴲ² ≡ 25
+         25ⴲ²⁺⁸ⁱ ≡ [0,0,0,1,1,0,0,1]
+         25ⴲ󰁺¹⁰󰁻 ≡ [2,5]  divmod trick
+         󰤱􊽨 25ⴲ󰁺¹⁰󰁻𐞑³ ≡ [0,2,5] for like padding instead of complex? idk
+    󰤱 ⵌ for counting stuff
+        L=1⋄5⋄2⋄1
+        Lⵌ1 ≡ Lⵌ󷺹≡1ᐸ ≡ 2
+        <dict>ⵌ􋀙<ƒ?󰻾> ≡ 󷺹􀓈ƒ􀓅⁺􀁞􀊊􀁧􀰆ℵ  first󷺗unique ↦ count
+              󰤱 ↑ with ᔨ does...
+                  ℵ: index               ↦ idx󷺗of󷺗first󷺗unique
+                  ℵ: count               ↦ first󷺗unique
+                  ℵ: first󷺗unique        ↦ idx󷺗of󷺗first󷺗unique
+                  ℵ: idx󷺗of󷺗first󷺗unique ↦ first󷺗unique
+                  󷹇  ƒ: ƒ(first󷺗unique) ↦ first󷺗unique󷺗equivs
+                  󷹇 ᔨƒ: ƒ(first󷺗unique) ↦ first󷺗unique󷺗equivs󷺗indicies
+                  󰤱 flag for  that uses first󷺗unique for the key rather than ƒ()
+        
+         🟑 unique bool vector 🟑 🟑as ᚤ􋇐 ?🟑 a = ⥌𝚡,𝚢=󰻾↦𝚡􀋲􀥩𝑖􀟴􀒹𝚡􀋵ᔨ𝚢
+         🟑 occurrence count   🟑 🟑as ᚤ􋅖 ?🟑 b = ⥌𝚡,𝚢=󰻾↦𝚡􀉶⁺ᔨ𝚢􀉳􀂡􀊽²􀉽􀁰ᐵ₀  󷺼󷷿﹕􇴗􀉻⟞􀊹
+         [5,2,0,1,0,0,2] a ☾
+         [5,2,0,1,0,0,2] b ☾
     󰤱  way to map over contingious truthy groups of 𝌂
+    󰤱  finish sup/sub 󷸓󷸔
     󰤱   for getting time/date? self calls + mod is format
+    󰤱  expose text_format stuff
     󰤱  Better window, multidimentional
-    󰤱  option for operator to ignore superscripts like →
-    󰤱  __setminus__, __crossprod__, __union__, __intersection__, __subset__ ; mutex
+    󰤱  easy mutexs
+    󰤱  __setminus__, __crossprod__, __union__, __intersection__, __subset__
     󰤱  normalize binds/stuff for edits/cross-plat ; vs ext find ☾ path
     󰤱  regex but better
     󰤱  add the edge cases for the new compose ops
@@ -57,13 +85,13 @@
     󰤱  Better ☾
     󰤱  proper cli for generating font
     󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
-    󰤱  eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
     󰤱  implicit imports are jank
     󰤱  auto curry (fname)?
     󰤱  Font generator slow
-    󰤱􊽨 Web/phone-app maker
     󰤱􊽨  option to print progress
-    󰤱􊽨 Make x⭜y⭝z store vals
+    󰤱􊽨 Make version of x⭜y⭝z that can auto-store vals?
+    󰤱􊽨 eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
+    󰤱􊽨 Web/phone-app maker
     󰤱􊽨 Star versions of: 󰈲󰈳󰒼󰒽
 
 § CoolCharBank™ ------------------------------------
@@ -101,6 +129,7 @@
     [2,3,0,1]
 
     ᖘᓕᕋᔨ need to be unified
+      Maybe window and 𝌂 and others as well
     xᓕ⁰⦢􊾢
 
     󰈲󰈳⦢􊽺 replace matched values

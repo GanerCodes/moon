@@ -1,8 +1,8 @@
 __dir__ cd
 
-⊢ cp(𝕊,t): ⦃import shutil⦄
-           𝕊.is_file⨳
-           shutil.copy(𝕊,t)
+⊢cp(𝕊,t): ⦃import shutil⦄
+          𝕊.is_file⨳
+          shutil.copy(𝕊,t)
 𝐩.cp = cp
 
 𝔭 = ⨡ config_parser
