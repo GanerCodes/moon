@@ -1,30 +1,30 @@
 ⨡ tree_txt ⭸ *
 
-⊢ denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
-                 󰤱 ´ ∵ neutral op needs apply specials like ꜠
-    l,o,r = 󱁕
-    𝚘,𝚕,𝚛 = OP(ℴ≔o􋒷)
-    𝙻,𝚁 = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
-    L,R = l⋄rᐵᐵᵗ≠␛𝚜 ⭜􍭓 ⟞₀ᵗᐸᐸᴍ𝑠
-    
-    ∀t⬠L: ¿t≡␛⟥: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,0     ,𝚛
-          ⸘t≡␛≺: 𝚘,𝚕,𝚛 = 𝚘∖‹PB›∪␛S,␛ᴍOP⭢₁,0
-    ∀t⬠R: ¿t≡␛≻: 𝚘,𝚕,𝚛 = 𝚘∖‹SB›∪␛P,0     ,␛ᴍOP⭢₂
-          ⸘t≡␛⟤: 𝚘,𝚕,𝚛 = 𝚘∖‹SB›∪␛P,𝚕     ,0
-          ⸘t≡␛ᵜ: □
-          ⸘t≡␛꜠: ¿𝚘∋␛B  : 𝚘󷸊∖CB
-                          ¿𝚘∩␛P␛S: ↺
-                          𝚘󷸊∪␛P␛S  bin? make unary
-                 ⸘𝚘∩␛P␛S: 𝚕=𝚛=𝚕⤉𝚛  unary? unify sides
-                          𝚘󷸊∪␛P␛S
-                 ¡      : ✗⨳
-    𝙾 = 𝚘,𝚕∨0,𝚛∨0
-    𝙧 = Ń(‹𝗈𝗉›,𝒩(‹op_⸓_l›,  ⠤𝙻)ᣆ􀳥􊽬󷺹󱖔􋄤󱁕₁ ₀ᐸ,
-               𝒩(‹op_lit›,󱁕₁ ₀),
-               𝒩(‹op_⸓_r›,  ⠤𝚁)ᣆ􀳱􊽬󷺹󱖔􋄥󱁕₁ ₀ᐸ,
-               e=ℵ􋄅(⠶󱁕ᵉ,O=𝙾))
-    ¿␛´∈R: 𝙧ᵉ[␛´]=␛´
-    ↪𝙧
+⊢denode_op(󱁕):  󰤱 this doesnt work if mod has newlines
+                󰤱 ´ ∵ neutral op needs apply specials like ꜠
+   l,o,r = 󱁕
+   𝚘,𝚕,𝚛 = OP(ℴ􇀜o􋒷)
+   𝙻,𝚁 = l􀊱rᐵᐵᵗ􀉟␛𝚜 􇀦􍪵 𝒩(⟞₀ᵗ,⠤⟞₁﹕)
+   L,R = l􀊱rᐵᐵᵗ􀉟␛𝚜 􇀦􍭓 ⟞₀ᵗᐸᐸ􀉳𝑠
+   
+   ∀t⬠L: ¿t􀉞␛⟥: 𝚘,𝚕,𝚛 = 𝚘􀊷‹PB›􀊳␛S,0      ,𝚛
+         ⸘t􀉞␛≺: 𝚘,𝚕,𝚛 = 𝚘􀊷‹PB›􀊳␛S,OP(␛ᴍ)₁,0
+   ∀t⬠R: ¿t􀉞␛≻: 𝚘,𝚕,𝚛 = 𝚘􀊷‹SB›􀊳␛P,0      ,OP(␛ᴍ)₂
+         ⸘t􀉞␛⟤: 𝚘,𝚕,𝚛 = 𝚘􀊷‹SB›􀊳␛P,𝚕      ,0
+         ⸘t􀉞␛ᵜ: □
+         ⸘t􀉞␛꜠: ¿𝚘􀉨␛B  : 𝚘􇀞􀊷‹CB›
+                         ¿𝚘􀊴␛P␛S: ↺
+                         𝚘􇀮􀊳␛P␛S  bin? make unary
+                ⸘𝚘􀊴␛P␛S: 𝚕=𝚛=𝚕􀋯𝚛  unary? unify sides
+                         𝚘􇀞􀊳␛P␛S
+                ¡      : ✗􀉓‹꜠ cannot modify op mode "⟦𝚘⟧"!›
+   𝙾 = 𝚘,𝚕􀉖0,𝚛􀉖0
+   𝙧 = Ń(‹𝗈𝗉›,𝒩(‹op_⸓_l›,  ⠤𝙻)􀊚􀳥􁘹󷺹􀊄􋄤󱁕₁ ₀ᐸ,
+              𝒩(‹op_lit›,󱁕₁ ₀),
+              𝒩(‹op_⸓_r›,  ⠤𝚁)􀊚􀳱􁘹󷺹􀊄􋄥󱁕₁ ₀ᐸ,
+              e=ℵ􋄅(⠶󱁕ᵉ,O=𝙾))
+   ¿␛´∈R: 𝙧ᵉ[␛´]=␛´
+   ↪𝙧
 
 ⊢ create_call(𝚘,𝙻,𝚁):
     t,(𝚖,𝚕,𝚛) = 𝚘₁􋒷,OP(𝚘)
