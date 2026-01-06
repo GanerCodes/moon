@@ -5,15 +5,15 @@
 
 w = 1200  󰤱 detect from font
 
-load_font = 󰲡shut(ℱℱ.open    ,x 𝐩⭢.resolve⭢ᔐ)
-save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
+load_font = 󰲡shut(ℱℱ.open    ,x 𝐩⭢.resolve􀃅⭢ᔐ)
+save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve􀃅⭢ᔐ)
 
 ⊢ monospace_char(ℊ): ¿ℊ.width≤0: ↪  based on monospacifier
                      ¿0≤(ℊ.unicode≕𝓾)≤sys.maxunicode ∧ 𝒰𝒟.category(𝓾󷹝)∈⍭‹Mn Mc Me›: ↪
                      ¿𝓾󷹜¹⁶≡0x10FFF7: ↪
                      ℊ.width = w
 
-⊢ monospace_font(𝒻): 𝒻.glyphs ᴍ monospace_char
+⊢ monospace_font(𝒻): 𝒻.glyphs􀃅 ᴍ monospace_char
                      ↪𝒻
 
 ⊢ remove_char(𝒻,c):      𝒻.removeGlyph(𝒻􍴖)
@@ -22,19 +22,19 @@ save_font = 󰲣shut( x.generate,y 𝐩⭢.resolve⭢ᔐ)
 ⊢ merge_into_font(𝓐,𝓑,log=✓):
     𝓐,𝓑 = 𝓐⋄𝓑ᐵᐹ(ᔐ|𝐩)⭜load_font(⟞)⭝⟞
     log ⭜ ‹Merging the following chars: ›☾􊾖
-    ∀𝚐⬠𝓐.glyphs: 𝚗,𝚞 = 𝚐.glyphname,𝚐.unicode
+    ∀𝚐⬠𝓐.glyphs􀃅: 𝚗,𝚞 = 𝚐.glyphname,𝚐.unicode
                   ¿𝚞<0: ↺
                   log⭜ 𝚞󷹝☾􊾖
                   ¿𝚞∉𝓑: 𝓑.createChar(𝚞,𝚗)
-                  𝓐.selection.select(𝚞); 𝓐.copy 
-                  𝓑.selection.select(𝚞); 𝓑.paste
+                  𝓐.selection.select(𝚞); 𝓐.copy 􀃅
+                  𝓑.selection.select(𝚞); 𝓑.paste􀃅
     log⭜ ᐦ☾
     ↪𝓑
 
 ⊢ addref(c,ℊ,𝒻,ℱ=□): c󷸊󷹝
                      ¿ℱ≅□∨ℱ≡𝒻: ℊ.addReference(𝒻.glyphname)
-                     ¡       : ℱ.selection.select(c        ); ℱ.copy     
-                               𝒻.selection.select(ℊ.unicode); 𝒻.pasteInto
+                     ¡       : ℱ.selection.select(c        ); ℱ.copy     􀃅
+                               𝒻.selection.select(ℊ.unicode); 𝒻.pasteInto􀃅
     
 
 𝔯,𝔰,𝔱 = ‹𝔯𝔰𝔱›

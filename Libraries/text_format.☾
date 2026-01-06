@@ -100,9 +100,9 @@ tspl   = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
                ↪L􀉳􀁳􀋶ᔨ􍯓􁘎􋂝􋄄􀖋⬤􀋢𝗻􀠋􍭓S􀧬¹􀿛𝗻
 
 box,BOX   = 2⭥ᐖ󰲡box_(xᐹ𝑙|𝑡⭜x⨝𝗻⭝x,⠤𝔸,⠶𝕂,big=⟞)
-padl      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀􇀵􀋢𝗻
-padc      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=0)ᐘ𝼞𝼞(y)₀􇀵􀋢𝗻
-padr      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=1)ᐘ𝼞𝼞(y)₀􇀵􀋢𝗻
+padl      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=󷰾)ᐘ𝼞𝼞(y)₀􁋳𝗻
+padc      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=0)ᐘ𝼞𝼞(y)₀􁋳𝗻
+padr      = 󰲣lines(x)ᐖpad(⟞,⟝,𝔸􀯗􋋎𝔸₀,𝚘=1)ᐘ𝼞𝼞(y)₀􁋳𝗻
 linewrap  = 𝼞cache(⥌𝚡,d=80,p=4⋅𝘀↦lines(𝚡)ᐵᣆ􍴇􍳽⁽􍪵⁾󰂁ᵈ󰲡󷺹+𝗻+linewrap(p+⟝,d,p)󷺿(⠤tspl(x,d))󰅂ᐸ⨝𝗻)
 linenum   = 𝼞cache(⥌𝚡,m=1,s=󰻾,Δ=0↦lines(𝚡)ᑀ🃌+Δ-1→󷹜🃌⤉m⋅î≕l►⟞↨ꟿ󷺹+Δ⭢󷹜ˡs+𝘀+󷺽⭢⨝𝗻)
 linewnum  = 𝼞cache(⥌𝚡,m=1,s=󰻾,d=80,p=6⋅𝘀↦linewrap(linenum(𝚡,m,s),d,p))

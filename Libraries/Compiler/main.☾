@@ -1,8 +1,8 @@
 ⨡ cache
 code_file_caching=✓
 
-TMP = mkd(TMPDIR/__file__  sha)
-header_com = moon_dir/‹Builtins›ᑀ/‹⟦⟝⟧.☾›⭢.resolve􀃅ᐛ(moon_dir/‹Builtins/builtins›)󷹎
+TMP = mkd(TMPDIR􀋋__file__  sha)
+header_com = moon_dir􀋋‹Builtins›ᑀ􀋋‹⟦⟝⟧.☾›􀯖.resolve􀃅ᐛ(moon_dir􀋋‹Builtins/builtins›)􀋦
 pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
                   moon_dir = ⟦PEV(␛𝐩)⟧(__file__).parent›
 

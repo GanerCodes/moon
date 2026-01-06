@@ -36,12 +36,8 @@ grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝑆 = 󰆴'⦉' (⠶𝑝𝑐 ∨ 𝖶) 󰆴'⦊'
 𝐷 = 󰆴'{' (𝖶 ⠶𝐷_item (󰆴',' 𝖶 ⠶𝐷_item)* (󰆴',' 𝖶)? ∨ 𝖶) 󰆴'}'
 𝐷_item   = ⠶𝔸𝕂 𝖶 ∨ 𝐷_kv_nrm ∨ 𝐷_kv_nam
-𝐷_kv_nrm =  𝑋↓↓ 𝖶 󰆴':' 𝖶 𝑋↓↑ 𝖶
- 𝐷_kv_nam = (𝑣 ∨ op_lit ∨ ⠶str) 𝖶 󰆴'=' 𝖶 𝑋↓↑ 𝖶
-𝐷_kv_nam = ("A B" ∨ 𝑣 ∨ op_lit ∨ ⠶str ∨ 𝐷_kv_nam_str) 𝖶 󰆴'=' 𝖶 𝑋↓↑ 𝖶
- 󰤱
-𝐷_kv_nam_str     = ((~‹[ \t]+›)? 𝐷_kv_nam_str_seg)+ 𝖶
-𝐷_kv_nam_str_seg = (¬𝗪 ~‹[^=}]›)+
+𝐷_kv_nrm = 𝑋↓↓ 𝖶 󰆴':' 𝖶 𝑋↓↑ 𝖶
+𝐷_kv_nam = 𝖶 ((𝑣 ∨ op_lit ∨ ⠶str) 𝖶 󰆴'=' ∨ str_𝐷nam 𝖶 󰆴'=') 𝖶 𝑋↓↑ 𝖶
 
 𝑝𝑐 = 𝖶 comp_∀ 𝖶 ∨ (𝖶 ⠶𝑎𝑝𝑐 𝖶 (󰆴',' 𝖶 (⠶𝑎𝑝𝑐 ∨ ᗜ) 𝖶)*)
 𝑎𝑝𝑐 = (kw_𝕒 = 𝑣 𝖶 󰆴'=' 𝖶 ⠶𝑎𝑝𝑐) ∨ 𝑋↓↑
@@ -98,7 +94,7 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝚜 = ⠶sup
 
 𝑣 = ((󰆴'´' ~‹[^´]+› ∨ ƨ(op_lit)) 󰆴'´') ∨ ƨ((¬𝑣_bad ~‹.›)+)
-𝑣_bad = (𝗪 ∨ ~‹󰦥{5}|[;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
+𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
            ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
 W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
@@ -107,12 +103,15 @@ W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
 sys_call_stupid_script_hack = '$' 𝗐 ⮞σsup σscript 𝗐 str_tsys
 sys_call = 󰆴'$' 𝗐 (󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝗐 str_tsys
 str = empty_str ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 𝗐)+
-str_t󰦥   = 󰆴(~‹󰦥{5}›) ~‹((?!󰦥{5})(.|\n))*› 󰆴(~‹󰦥{5}› ∨ ✓)
-str_tsys = (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
-str_tsub = 󰆴'‹'                   (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
+str_t󰦥   = 󰆴(~‹󰦥{4}[󰦥]›) ~‹((?!󰦥{4}[󰦥])(.|\n))*› 󰆴(~‹󰦥{4}[󰦥]› ∨ ✓)
+str_tsub = 󰆴'‹' (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
+str_tsys =      (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
+str_𝐷nam =      (⠶str_sub_inner ∨ str_𝐷nam_guts)*
 str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
 str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
 str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⨡⭸ \t\n]+"
+str_𝐷nam_guts = (~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦}= \t\n]+" ∨ ~‹[ \t\n]+› ¬'=')+
+
 str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*

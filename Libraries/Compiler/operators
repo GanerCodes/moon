@@ -30,7 +30,7 @@
     `"hi" ≡ "ih"ᴙ`
 󷰟  󷷼󰁖 𝚡∧𝚢 dia= diamond equals
     󷹇 Requested by Michael for future advanced math things
-󷰟 ∣∤󰁖 𝚡∧𝚢 |⟦𝕊/⟧  does{,n't} divide
+󷰟 ∣∤󰁖 𝚡∧𝚢 |⟦𝕊/⟧  does{,n′t} divide
     `4∣8 →≡ ✓`
     `4∣8∣16 →≡ ✓`
     `4∤8∣16 →≡ ✗`
@@ -52,14 +52,14 @@
     `[4,2] ⊂ 10⭥ →≡ ✓`
     `[1,2] ⊂ [1,2] →≡ ✓`
     Works on non-set objects as well
-    ❗ susceptible to change when some args aren't sets ❗
+    ❗ susceptible to change when some args aren′t sets ❗
 󷰟 ⊋⊊󷹳󷹲󰁖 𝚡∧𝚢 un⟦⁅⟦ad⟧𝕊⁆⁅⟦ad⟧/⁆⟧ {,,not ,not }proper subset of {left,right,left,right}
     𝗜 ⊋ 𝗜
     `[1] ⊊ [1,2] →≡ ✓`
     `[1] 󷹲 [1,2] →≡ ✗`
     `[1,2] ⊊ [1,2] →≡ ✗`
     `[1,2] 󷹲 [1,2] →≡ ✓`
-    ❗ susceptible to change when some args aren't sets ❗
+    ❗ susceptible to change when some args aren′t sets ❗
 󷰠 ᴍ 𝚡∧􊽨𝚢 cm𝕊 map
     𝗜 ᴍ 𝗙
         Maps an iterable with a function
@@ -145,7 +145,7 @@
     ᙧ: no sides, include middle
     ᙎ: include sides, no middle
     ᙡ: include sides, include middle
-    ❗ window operator's order & default window size may change ❗
+    ❗ window operator′s order & default window size may change ❗
     󰤱 docs
 󷰠 ᖘ 𝚡∧􋅂𝚡 can "candycane", apply to select
     𝗜≕𝕏 ᖘ􊽺 ꬶ
@@ -185,13 +185,13 @@
     󰤱 docs
     ⊛ is the same as ⍟ but includes the final failing iteration
 󷰡 🟕🟖 𝚡∨􊽨𝚡 coc⟦cᐦ⟧𝕊 find cycle with{,out} prefix
-    🟖 is the same as 🟕 but doesn't trim out the part before the cycle
+    🟖 is the same as 🟕 but doesn′t trim out the part before the cycle
     󰤱 docs
 󷰡 󰔶 𝚡∨􊽨𝚡 c1⟦𝕊=-⟧ error handler{,,}
     𝑒 : raises 𝑒
     (󷹵𝗙)  𝑒 : raises 𝑒 if left is falsy
-    On left's error 𝑒:
-        󰔶: return ƒ's arg / retries with right
+    On left′s error 𝑒:
+        󰔶: return ƒ′s arg / retries with right
         : returns right
         : return exception / calls right with 𝑒
     󰤱 docs
@@ -235,7 +235,7 @@
             `[1,2,3]󷹅􋅂[4,5] ≡ [[1,4],[2,4],[3,5]]`
             ❗ susceptible to change symbol! ❗
         
-    󷹇 if an arg isn't iterable, it's duplicated into
+    󷹇 if an arg isn′t iterable, it′s duplicated into
         a list with length of longest iterable arg
         `[5,3]󱑼2 ≡ [[5,2],[3,2]]`
    
@@ -317,6 +317,13 @@
     󰤱 docs
 󷰭 ? 𝚡.   do if valid attribute
     󰤱 docs
+󷰭 ⍰ 𝚡󷺤􊽨𝚡 quad? check if not □
+    `□⍰ ≡ ✗`
+    `0⍰ ≡ ✓`
+    `0⍰² ≡ ✓`
+    `□⍰² ≡ 2`
+    󰤱 finalize (ᔨ ⦢ etc)
+    󰤱 docs
 󷰭 🃌󷸑󷸒 𝚡󷺤􊽨𝚡 c⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆⟧ {cardinality (length),shape,depth}
     𝗜 🃌: Length of arg
         `‹egg›🃌 ≡ 3`
@@ -383,7 +390,7 @@
     󷹇 Requested by Michael for future advanced math things
 󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
     󰤱 docs
-󷰭 ≅≇󰁖 𝚡∧𝚡 eqi⟦𝕊/⟧ is{,n't} same object as
+󷰭 ≅≇󰁖 𝚡∧𝚡 eqi⟦𝕊/⟧ is{,n′t} same object as
     Works same as in python
 󷰭 󷸓󷸼󷸔 𝚡󷺤􊽨𝚡 sc⟦s𝕊w⟧ {sub,un,super}script text
     `‹joe›󷸓󷸔≡‹􋅎􋏛􊿵›`
@@ -675,7 +682,7 @@
 󷰱 󷹘⍖󰁘 􊽨 as⟦sp⟧ ugex {pop,peek}
     󷹘: Pops off last element from ugex stack
     󷹘ⁿ􋁉􋀉􋁗󰁸􋔛󰁹: Pops off last n elements from ugex stack
-    ⍖: Same as 󷹘 but doesn't remove from ugex stack
+    ⍖: Same as 󷹘 but doesn′t remove from ugex stack
     ❗ susceptible to change! ❗
 󷰱 󰁘   slf self
     󰤱 docs, might be removed
@@ -728,11 +735,12 @@
     `[1,2,3,4,5]ᐵ>2⭜⟞⭝󰮈ᐸ ≡ [3,4,5]`
     `[0,1,2,3,4,5,6]󰈲􍯏􊽮󷺹<4⭜✓⭝⟞>4⭜󰮈ᐸ ≡ [0,1,4,9,4]`
     󰤱˜ docs
-󷰾 󱣩   und a variable modifier is present but value isn't set
+󷰾 󱣩   und a variable modifier is present but value isn′t set
     󰤱 docs
 󷰾 ⬤   ooo𝕊 dummy variable for currying
 >  ⟨7c9⟩⟶⬤
-    See 
+    `(⥌x,y,z↦x􀊱y􀊱z)(⬤,2,⬤)(1,3) 􀕶 1􀊱2􀊱3`
+    󰤱 docs
 
 󷰾 ✗✓   he⟦xk⟧ {false,true}
     `✗≡0`
@@ -750,8 +758,9 @@
 
 󷰾 □   [] none
 󷰾 ᐦ   c" empty string
+  `ᐦ ≡ 󷺗 ≡ "" ≡ ‹› ≡ "󷺗" ≡ ‹󷺗›`
 󷰾 ∞   88 infinity
-󷰾 ℇ   eu𝕊 euler's number
+󷰾 ℇ   eu𝕊 euler′s number
 󷰾 îĵ󷺈   ⟦ijk⟧^ {imaginary,j,k} unit
     `ĵ+2î ≡ ℍ(0,2,1,0)`
 󷰾 τπ󷺍󷺎󷺏   ⟦⁅t𝕊⁆⁅p⟦𝕊234⟧⁆⟧ {tau,½τ,½π,½󷺍,½󷺎}
@@ -819,7 +828,7 @@
 󷰾 ␛   ESC escape character in string/1 char str
     `‹␛›␛⟦› ≡ "›⟦"`
     `␛a ≡ "a"`
-    `␛␛ ≡ "␛"`
+    `␛␛ ≡ "␛␛"`
 󷰾 𝗻𝗿𝘀𝘁   ws⟦nrst⟧ {newline,carriage return,space,tab} character
     `𝗻 ≡ "\n"`
     `𝗻𝘀𝘁␛h ≡ "\n \th"`
@@ -831,11 +840,12 @@
 󷰾 ⦃⦄   q⟦{}⟧ {begin,close} native code
     `⦃⦃𝑥⦄:=2+2⦄ ≡ 4 ≡ 𝑥`
 󷰾 ⦉⦊   ⟦{}⟧𝕊 {begin,close} set
-    `‹⦉1,5,2,2⦊ ≡ ⦉1,5,2⦊`
+    `⦉1,5,2,2⦊ ≡ ⦉1,5,2⦊`
 󷰾 󰦥   ST: hyperliteral star string
 >   ⟨7c9⟩⟶󰦥
     `󰦥󰦥󰦥󰦥󰦥s𝗻␛a\bc s\{/.}tring\󰦥󰦥󰦥󰦥󰦥 ≡ "s𝗻␛a\\bc s\\{/.}tring\\"`
     Matches everything including all whitespaces until it sees another five stars.
+    󷹇 󰦥󰦥󰦥󰦥 can also be used and is treated the same. this is for the very specific case of wanting your syntax highlighter to highlight a string bc that string has moon-like code inside of it
 
 󷰾    com Comment
 >  ⟨24f115|4f02⟩⟶␛

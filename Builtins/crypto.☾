@@ -44,5 +44,10 @@
 🟑 § Encoding/Decoding § 🟑
 stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
 
-𝔍 = {>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__}ℵ
-􇦇 = {>:urlsafe_b64encode,<:urlsafe_b64decode}ℵ
+󱀘Cmap(ℵ´): ⊢__init__(𝕊,d,⠤𝔸,⠶𝕂): super().__init__(⠤𝔸,⠶𝕂)
+                                 𝕊.__dict__₁ = d
+           __call__ = 𝕊↦𝕊[𝕊.__dict__₁](⠤𝔸,⠶𝕂)
+           __pow__  = 󰲣x
+􇦌 = 􇦎 = 𝔍 = Cmap(>,{>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__})
+􇦔 = Cmap(>,{>:urlsafe_b64encode,<:urlsafe_b64decode})
+ ⍰
