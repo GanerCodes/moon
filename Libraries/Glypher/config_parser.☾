@@ -21,9 +21,6 @@ esc       = 󰆴‹␛␛› ~‹.›
 com       = ~‹[^\n]*›
 󰦥󰦥󰦥󰦥󰦥
 
-pfxd = 󷺹󰈲⭢󷺹₀ᐸꟿ⁺󰲣yᐵ₁﹕ᐸ⭢pfxd
-chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
-
 ⊢parse_config(conf,include_chars=ᐦ,ns=□):
     ¿ns≅□: ns={}
     gram = peggle(‹𝗐 𝖶›⍭󰛔ᴳᴿᴬᴹ⍭‹␛𝘄? ␛𝗪?›)
@@ -55,9 +52,11 @@ chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
     E󷸊ꟿ⁺󰲣yᐵ∖􊬏₍􊫔₎􊬐󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
     ↪⦉⠤include_chars∖􊸇⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
 ⊢conf_to_xcompose(c):
-    t = chkp(cꟿ󰲣y₀󰅂⭢󰌷→pfxd,⬤)
-    c󷸊ꟿ⁺󰲣y₀ᐵt⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱 doesn't add multiple spaces but eh
-    ↪cꟿ󰲣x∧y⭜􍭓(y₀,ₓ)󰅂ᴍ⨉⭢󰌷⭢xcomp_seqs
+    pfxd = 󷺹󰈲⭢󷺹₀ᐸꟿ⁺󰲣yᐵ₁﹕ᐸ⭢pfxd
+    chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
+    𝚝 = chkp(c􀉴󰲣y₀󰅂􀋶􀯖pfxd,⬤)
+    c󷸊ꟿ⁺󰲣y₀ᐵ𝚝⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱􊽨 doesn't add multiple spaces but eh
+    ↪c􀉴󰲣x∧y⭜􍭓(y₀,ₓ)󰅂􀉳􀁣􀋶􀯖xcomp_seqs
 
 ⭷ parse_config,conf_to_xcompose
 

@@ -6,6 +6,8 @@
         prob make it so if one or more orders higher then it cant be eaten?
     󰤱  UGEX EMPTY LIST INPUT THING
     󰤱  Web interface is broken cuz wasm hard
+    󰤱  Idk if bug or if i just dont understand
+        "abc 123 4 5a234"𝌂󷺹∈num⭜􍭓✓
 
 § TODOs ------------------------------------
     󰤱  Documentation
@@ -13,11 +15,14 @@
     󰤱  Make the stuff with peggle3 more clear
     󰤱  what if strs be like ‹x is ‹x››
     󰤱  what if more overloads for rng ƒs like `[6,2,9]󱅏` being 0󱅏2?
-    󰤱  { x=ᶜᵒⁿᵈy, y, ¿y }
+    󰤱  ⍰ = 󰲡x􀋒□
+    󰤱  {}⦢􀲿 = 󷺹􀊜􁎨ℵ´􀯘⟞ℵᑀ􁎡𝚜􀯖􁎡
+    󰤱  { x=􊽺y, x=ᶜᵒⁿᵈy, y, ¿y }
+        ¿y ƒ: x
         y: y=y
         ¿y: y=y if y is defined
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
-       what about like .items, this might be cooked
+         what about like .items, this might be cooked
     󰤱  Webinterface
 	       It broke rn
            Fix emscripten compile peggle3 + lpcre

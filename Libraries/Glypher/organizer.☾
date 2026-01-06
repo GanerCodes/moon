@@ -59,6 +59,7 @@ native = KEYMAP⁻∖‹𝕄𝕊›
         t.pop(‹smol›,□)
         r󰂼=(S,{⠶t,mode=‹mul›,parents=[⠤c]})
         R.append(o)
+    conf.update(r)  󰤱 good?
     ↪R
 ⊢ add_scripts(conf,existing):
     ⊢ inherit(c,s,m): p=‹/\›[m≡‹sup›]

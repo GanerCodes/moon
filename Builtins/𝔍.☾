@@ -1,2 +1,0 @@
-  ⦃from orjson import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
-𝔍 = {>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__}ℵ

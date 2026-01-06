@@ -39,7 +39,10 @@
   ↪𝚜􀋑␀ 􇂖ƒ􀃅􇂗 ⍁􀲿􀉴ƒ
 
 🟑 § Hashing § 🟑
-⊢sha(⠤𝔸,⠶𝕂): ↪𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
+􇦆 = sha = 𝚲𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
 
 🟑 § Encoding/Decoding § 🟑
 stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
+
+𝔍 = {>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__}ℵ
+􇦇 = {>:urlsafe_b64encode,<:urlsafe_b64decode}ℵ

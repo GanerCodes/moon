@@ -239,10 +239,10 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
 􋑂,􋑃,􋑯,􋐲,􋐳,􋐴 = gcd,lcm,log,sin,cos,tan
 
 󱀘 Holder: __slots__ = ␛x,
-          ⊢__init__(𝕊,x=␀):  𝕊ˣ≔x
-          ⊢__pos__ (𝕊    ): ↪𝕊ˣ◄⬅𝕊ˣ≇␀⨳‹Holder value unset!›
-          ⊢__call__(𝕊,x=␀):  𝕊ˣ≔x
-          ⊢__bool__(𝕊    ): ↪𝕊ˣ≇␀
+          ⊢__init__(𝕊,x=␀):  𝕊ˣ􀯍x
+          ⊢__pos__ (𝕊    ): ↪𝕊ˣ􁁮𝕊ˣ􀋒␀􀒥‹Holder value unset!›
+          ⊢__call__(𝕊,x=␀):  𝕊ˣ􀯍x
+          ⊢__bool__(𝕊    ): ↪𝕊ˣ􀋒␀
 
  proxy_chained_calls_pure(x↦y↦x+y,1)(1)(10)  11
 ⊢proxy_chained_calls_pure(ƒ,n=1):

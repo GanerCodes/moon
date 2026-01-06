@@ -106,7 +106,7 @@
                      R.append(𝕧)
             ¿R: 𝑅.append(R)
             ↪𝑅
-    𝑟,R,𝑅 = y(𝟘≔x₀),[𝟘]⋅(𝟘≇󰮈),[]
+    𝑟,R,𝑅 = y(𝟘≔x₀),𝟘􀋒󰮈􇀦􍸒􊹩,[]
      ↓ supscript only matters at this point
     ∀𝕚,𝕧⬠(↨x)₁﹕: ¿y(𝕧)≕r≠𝑟: 𝑅.append(R)
                             𝑟,R = r,[]
