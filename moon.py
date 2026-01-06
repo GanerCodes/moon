@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='07jNGoUfDcvjHW3HB3Chg3p9Iff0LMvZjyyQceNWBGM'
+BOOTSTRAP_HASH='z4_XG8nv4ae0s2GfZCvONf4R-lA9ZiaLTihv6hc91ZE'
 from pathlib import Path as áÌî
 moon_dir = áÌî(__file__).parent
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
@@ -1968,6 +1968,9 @@ class qproxy:
 
 def ÁÂ(áØÆ,áØÁ=ÂÞÅ):
     return qproxy(áØÆ,((áØÁ)if((áØÁ is not ÂÞÅ))else(None)))
+
+def ÂÛí(áØÆ,áØÁ=ÂÞÅ):
+    return ((((áØÁ)if((áØÁ is not ÂÞÅ))else(False)))if((áØÆ is None))else(True))
 
 
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/extra_globals.☾')).parent
