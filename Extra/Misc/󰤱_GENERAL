@@ -11,16 +11,23 @@
 
 § TODOs ------------------------------------
     󰤱  Documentation
+    󰤱  Reduce the amount of operator orders
+       󰤱 COMPILER: make it so like x􀉻􀔋 evals like x􀉻→􀔋
+       󰤱 Cull orders
+          |􀀁􀃇􀆍􀉓􀌙􀏟􀒥􀕫􀘱􀛷􀞽􀢃􀥉􀨏􀫕􀽌􁀒􁃘􁆞􁉤
+         ✗| 􀃇􀆍 􀌙􀏟  􀘱 􀞽􀢃 􀨏 􀽌 􁃘􁆞
+         ✓|􀀁  􀉓  􀒥􀕫 􀛷  􀥉 􀫕 􁀒  􁉤
+       󰤱 prob change colors (like red at end?)
+    󰤱  󱑍 󰭧
+       self calls + mod is format?
     󰤱  The random 󰤱′s all throughout the code
     󰤱  Make the stuff with peggle3 more clear
     󰤱  what if strs be like ‹x is ‹x››
     󰤱  what if more overloads for rng ƒs like `[6,2,9]󱅏` being 0󱅏2?
-    󰤱  make ⍰/? more powerful 􋑎 syntax, sorta like js's ?? ?.stuff
+    󰤱  make ⍰/? more powerful 􋑎 syntax, sorta like the js ?? ?. type stuff
+       Ideas: a?₂?.x?(x,y)
     󰤱  {}⦢􀲿 = 󷺹􀊜􁎨ℵ´􀯘⟞ℵᑀ􁎡𝚜􀯖􁎡
-    󰤱  { x=􊽺y, x=ᶜᵒⁿᵈy, y, ¿y }
-        ¿y ƒ: x
-        y: y=y
-        ¿y: y=y if y is defined
+    󰤱  New dict/list syntax stuff (bottom)
     󰤱  Glypher
          Sections for making vertical and horizontal mirroring of chars
          Sections for easily duplicating characters
@@ -36,9 +43,8 @@
          Mac keybinds
          Show groupings somehow
          Backend weird code bc globals or something
-    󰤱˜ a?₂?.x?(x,y)
     󰤱  x􍪵 should be exp
-    󰤱  heckin [1,2,34,󷱂]⫰ᔨ
+    󰤱􊽨 heckin [1,2,34,󷱂]⫰ᔨ
          what?
     󰤱  versions of ⭜ ⭝ that foward the value like 󷸊
     󰤱  version fold with multiple (optionally all) prev vals
@@ -55,15 +61,15 @@
         100 items: shape 10⋄5 = 10⨯5⨯2…?
         100 items: shape ⬤⋄5 = 20⨯5
         124 items: shape ⬤⋄⬤ = 2⨯2⨯31…?
-    󰤱  Find glyph to convert number to array in bases (ⴲ is placeholder)
-         12345ⴲ⁷􌾕²⁴􌾕⁶⁰ ≡ 1⋄1⋄13⋄45 (inspired by https://aplwiki.com/wiki/Encode)
-         1⋄1⋄13⋄45ⴲ⁷􌾕²⁴􌾕⁶⁰ ≡ 12345
-         25ⴲ ≡ 25ⴲ² ≡ [1,1,0,0,1]
-         [1,1,0,0,1]ⴲ² ≡ 25
-         25ⴲ²⁺⁸ⁱ ≡ [0,0,0,1,1,0,0,1]
-         25ⴲ󰁺¹⁰󰁻 ≡ [2,5]  divmod trick
-         󰤱􊽨 25ⴲ󰁺¹⁰󰁻𐞑³ ≡ [0,2,5] for like padding instead of complex? idk
-    󰤱 ⵌ for counting stuff
+    󰤱 󷹤
+         12345󷹤⁷􌾕²⁴􌾕⁶⁰ ≡ 1⋄1⋄13⋄45 (inspired by https://aplwiki.com/wiki/Encode)
+         1⋄1⋄13⋄45󷹤⁷􌾕²⁴􌾕⁶⁰ ≡ 12345
+         25󷹤 ≡ 25󷹤² ≡ [1,1,0,0,1]
+         [1,1,0,0,1]󷹤² ≡ 25
+         25󷹤²⁺⁸ⁱ ≡ [0,0,0,1,1,0,0,1]
+         25󷹤󰁺¹⁰󰁻 ≡ [2,5]  divmod trick
+         󰤱􊽨 25󷹤󰁺¹⁰󰁻𐞑³ ≡ [0,2,5] for like padding instead of complex? idk
+    󰤱 counting stuff (􇭧 􇭨 􇭩)
         L=1⋄5⋄2⋄1
         Lⵌ1 ≡ Lⵌ󷺹≡1ᐸ ≡ 2
         <dict>ⵌ􋀙<ƒ?󰻾> ≡ 󷺹􀓈ƒ􀓅⁺􀁞􀊊􀁧􀰆ℵ  first󷺗unique ↦ count
@@ -82,7 +88,6 @@
          [5,2,0,1,0,0,2] b ☾
     󰤱  way to map over contingious truthy groups of 𝌂
     󰤱  finish sup/sub 󷸓󷸔
-    󰤱   for getting time/date? self calls + mod is format
     󰤱  expose text_format stuff
     󰤱  Better window, multidimentional
     󰤱  easy mutexs
@@ -95,8 +100,8 @@
     󰤱  proper cli for generating font
     󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
     󰤱  implicit imports are jank
-    󰤱  auto curry (fname)?
     󰤱  Font generator slow
+    󰤱􊽨 auto curry (fname)?
     󰤱􊽨  option to print progress
     󰤱􊽨 Make version of x⭜y⭝z that can auto-store vals?
     󰤱􊽨 eval bar: 󷺄x󰄎2󰄎3⁞, 󷺄x󰄎⬤󰄎⬤⁞
@@ -388,7 +393,7 @@
 
     $ ^ ? | + * [^-] ( ) {,} \
         ¿ ∨ ⨁ ⨀ ⁅⌐…⁆ ⟨ ⟩ ⟮…⟯ ␐ ⮞ ← → 𝘀 𝘁 𝘄 𝗻 𝗪
-
+    󷹹
     We remove space/tabs/newlines automatically
 
     ⟨stuff⭣󰮈⟩        removes this match
@@ -506,3 +511,50 @@ y = x%10 󰷔|  2| ∀c∈󱁕:ƒ(c)
 𝕏 ᖘ􍳳 ƒ
 𝕏 under ƒ indexed by ꬶ(𝕏)
 wherevowels = 𝕏󰈲ᔨV
+
+
+󷹇 { 󷷲K } is kinda redundent but ig weird dict types?
+󷷰 󷷱 󷷲
+
+󰦥󰦥󰦥󰦥
+
+𝐷_item   = ⠶𝔸𝕂 𝖶 ∨ 𝐷_kv_nrm ∨ 𝐷_kv_nam
+
+𝐷_𝕜_nrm_asgn = '󷷰' @cond ∨ ':'
+𝐷_𝕜_nam_asgn = '≟' @cond ∨ '='
+𝐷_𝕜_nrm = 𝖶 (                                          𝑋↓↓ 𝖶 𝐷_𝕜_nrm_asgn) 𝖶 𝑋↓↑ 𝖶
+𝐷_𝕜_nam = 𝖶 ((𝑣 ∨ op_lit ∨ ⠶str) 𝖶 𝐷_𝕜_nam_asgn ∨ str_𝐷nam 𝖶 𝐷_𝕜_nam_asgn) 𝖶 𝑋↓↑ 𝖶
+𝐷_𝕜_p = 𝐷_𝕜_nrm ∨ 𝐷_𝕜_nam
+𝐷_𝕜 = (𝑋↓↑ 󰆴'¿' @cond ⠶𝐷_𝕜_p) ∨ ⠶𝐷_𝕜_p
+
+𝔸_cond_typ = '󷷱' 𝗐 @cond ∨ '⠤'
+𝕂_cond_typ = '󷷲' 𝗐 @cond ∨ '⠶'
+
+cond_𝔸𝕂 = 𝑋↓↑ ⠶norm_𝔸𝕂
+norm_𝔸𝕂 = (𝔸 = 𝔸_cond_typ 𝖶 𝑋↓↑) ∨ (𝕂 = 𝕂_cond_typ 𝖶 𝑋↓↑)
+𝔸𝕂 = cond_𝔸𝕂 ∨ ⠶norm_𝔸𝕂
+
+@cond = sup ∨ ✓
+
+󰦥󰦥󰦥󰦥
+
+{ x¿ a= b }   x    ⇒ a=b ; **({a=b} if (x) else {})
+{  ¿􊽺a= b } ƒ(a,b) ⇒ a=b ; **(􀌍(a),􀌍(b),{󷹘(1):󷹘()} if ƒ(⍖(1),⍖()) else (󷹘(),󷹘(),{})[2])[2]
+{    a≟ b }   b    ⇒ a=b ; **(􀌍(a),􀌍(b),{󷹘(1):󷹘()} if        ⍖()  else (󷹘(),󷹘(),{})[2])[2]
+{    a≟􊽺b } ƒ(b)   ⇒ a=b ; **(􀌍(a),􀌍(b),{󷹘(1):󷹘()} if ƒ(     ⍖()) else (󷹘(),󷹘(),{})[2])[2]
+{    x⠶ K }   x    ⇒ ⠶K  ; **((K) if    (x)  else {})
+{     󷷲 K }   K    ⇒ ⠶K  ; **(󷹘() if   􀌍(K)  else (󷹘(),{})[1])
+{     󷷲􊽺K } ƒ(K)   ⇒ ⠶K  ; **(󷹘() if ƒ(􀌍(K)) else (󷹘(),{})[1])
+
+{ x¿􊽺a≟􍳳b } x ∧ ƒ(a,b) ∧ ꬶ(b) ⇒ a=b
+{    x󷷲􊽺K } x ∧ ƒ(K)          ⇒ ⠶K
+
+[y,x¿y,¿y,¿􊽺y,x¿􊽺y,⠤Y,x⠤Y,x󷷱􊽺Y]
+
+ƒ(y,x¿y,¿y,¿􊽺y,x¿􊽺y,⠤Y,x⠤Y,x󷷱􊽺Y,x¿􊽺a≟􍳳b)
+
+example:
+{ x=stuff,
+  hasAuth⠶{
+    username=username,
+    password=password } }

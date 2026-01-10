@@ -50,4 +50,3 @@ stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
            __pow__  = 󰲣x
 􇦌 = 􇦎 = 𝔍 = Cmap(>,{>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__})
 􇦔 = Cmap(>,{>:urlsafe_b64encode,<:urlsafe_b64decode})
- ⍰

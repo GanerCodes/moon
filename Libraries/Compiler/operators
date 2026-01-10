@@ -324,7 +324,9 @@
     `□⍰² ≡ 2`
     󰤱 finalize (ᔨ ⦢ etc)
     󰤱 docs
-󷰭 🃌󷸑󷸒 𝚡󷺤􊽨𝚡 c⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆⟧ {cardinality (length),shape,depth}
+󷰭 ⵌ 𝚡∨􊽨𝚢 cou𝕊 {count 󰤱}
+    󰤱 test that may or may not ever be used/implemented
+󷰭 🃌󷸑󷸒󷷨󷷫 𝚡󷺤􊽨𝚡 c⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆NU⟧ {cardinality (length),shape,depth,count 󰤱,unique count 󰤱}
     𝗜 🃌: Length of arg
         `‹egg›🃌 ≡ 3`
         `[1,2]🃌 ≡ 2`
@@ -342,6 +344,7 @@
     𝗜 󷸒: Depth of arg
         `[[["ab","cd"],["ef","gh"]]]󷸒 ≡ 4`
         󷹇 basically same as 🃌○󷸑
+    󷷨,󷷫: 󰤱, test that may or may not ever be used/implemented
 󷰭  𝚡∨􊽨𝚢 csr reshape
     `[1,2,3,4]₄󰄎₁ ≡ [[[1],[2],[3],[4]]]`
     `[1,2,3,4]₁󰄎₄ ≡ [[[1,2,3,4]]]`
@@ -351,6 +354,8 @@
     `[[1,2],[3,4]]󰆩 ≡ [1,2,3,4]`
     `[1,2,3,4]₂󰄎₁󰄎₂󰆩 ≡ [1,2,3,4]`
     󰤱˜ docs
+󷰭 󷹤 𝚡󷺤􊽨𝚡 CB 󰤱 base array⟷int involution
+    󰤱
 󷰭 󷹝 𝚡󷺤􊽨𝚡 CS str⟷int involution
     Gets ascii/unicode value(s) of string and vise versa
     󰤱 somehow make it not ugly to deal w/ ␛a󷹝ᐹ𝑖 ∧ ␛a␛aᐹ𝑙
@@ -388,6 +393,8 @@
     󰤱 docs
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 dia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
+󷰭 󱑍󰭧 𝚡∨􊽨𝚡 ⟦⁅time⁆⁅calq⁆⟧ {time 󰤱,date 󰤱}
+    󰤱
 󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 eqi⟦𝕊/⟧ is{,n′t} same object as
@@ -701,7 +708,7 @@
 󷰽 ↺⇥   c⟦cb⟧𝕊 Python "{continue,break}"
 󷰽 ∀➰   ⟦⁅AA⁆⁅cl𝕊⁆⟧ Python "{for,while}"
 󷰽 ⠤⠶   c⟦dD⟧𝕊 Python {*,**} for {vargs,kargs}
-󷰽 ⭜⭝   ce⟦nl⟧ ternary {if,else}
+󷰽 ⭜⭝   ce⟦nl⟧𝕊 ternary {if,else}
     "x ⭜ y ⭝ z" ⟶ y if x else z
     "x ⭜ y" ⟶ y if x else □
     `✓ ⭜5⭝ 0 ➡≡ 5`
@@ -709,6 +716,8 @@
     `✗⭜5 ➡≡ □`
     `✓⭜5 ➡≡ 5`
     `✗ ⭜5⭝ ✓ ⭜9⭝ 0 ➡≡ 9`
+󷰽 󷷩󷷪   ce⟦nl⟧d 󰤱 fowarding ternary {if,else}
+    󰤱
 󷰽 ⬅➡   a⟦⁅AA⁆⁅DD⁆⟧ push right into {left,right} (Strongest)
 󷰽 ←→   a⟦ad⟧𝕊 push {right,left} into {left,right} (Medium)
 󷰽  ⥉   csw swap right and left (Medium)
@@ -722,7 +731,7 @@
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
 󷰽 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
->⟨5fe⟩⟶⭸⭷=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘¡⭜⭝
+>⟨5fe⟩⟶⭸⭷=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶󷷰󷷲󷷱¿⸘¡⭜⭝󷷩󷷪
 >⟨e6b⟩⟶󷰚⬅➡←→⭠⭢⥉
 >⟨f0a⟩⟶󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
 

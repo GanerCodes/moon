@@ -1,4 +1,4 @@
-⭷ GRAM=󰦥󰦥󰦥󰦥󰦥
+⭷ GRAM=󰦥󰦥󰦥󰦥
 
 op_⸓_ln     = ~‹%OP_MOD_L_N%›
 op_⸓_ly     = ~‹%OP_MOD_L_Y%›
@@ -46,7 +46,7 @@ grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶𝔸𝕂 ∨ ⠶str ∨ sys_call ∨ native_code
+𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶𝔸𝕂 ∨ ⠶script ∨ ⠶str ∨ sys_call ∨ native_code
        ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ number_exp ∨ number ∨ op
        ∨ 𝑣_spec ∨ 𝑣)
 
@@ -94,7 +94,7 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝚜 = ⠶sup
 
 𝑣 = ((󰆴'´' ~‹[^´]+› ∨ ƨ(op_lit)) 󰆴'´') ∨ ƨ((¬𝑣_bad ~‹.›)+)
-𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
+𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[⠤⠶;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
            ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
 W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
@@ -110,7 +110,7 @@ str_𝐷nam =      (⠶str_sub_inner ∨ str_𝐷nam_guts)*
 str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
 str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
 str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⨡⭸ \t\n]+"
-str_𝐷nam_guts = (~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦}= \t\n]+" ∨ ~‹[ \t\n]+› ¬'=')+
+str_𝐷nam_guts = (~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦}=, \t\n]+" ∨ ~‹[ \t\n]+› ¬'=')+
 
 str_nsub = ⠶(str_nsub1 ∨ str_nsub2)
 str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛"]+›))*
@@ -144,4 +144,4 @@ ugx_brack = 󰆴'⟨' 𝖶 ⠶ugx_seq 󰆴'⟩' ⠶ugx_gtail
 𝗪 = 󰆴(~‹(␛␛\n|[ \t\n])+›)
 comment = ~‹((|#)[^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
 
-󰦥󰦥󰦥󰦥󰦥
+󰦥󰦥󰦥󰦥
