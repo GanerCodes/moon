@@ -7,14 +7,14 @@ gram_scrp = gram_rp(gram,ℵ(M=‹scrp›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
 gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀋁),✓)
 
 ⊢to_ast(𝚌𝚘𝚍𝚎,warn_short=✓,force_full_match=✗,dbg_parser=0,dbg_show_gram_tree=✗,⠶𝓚):
-  𝚌𝚘𝚍𝚎 = +gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗).ftrp(‹comment›,󷺹₀ᵗ≔⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ⨝→►⟞)
+  𝚌𝚘𝚍𝚎 = 􀊩gram_comm(𝚌𝚘𝚍𝚎,remove_trashes=✗).ftrp(‹comment›,󷺹₀ᵗ􀯍(⟞₀ᵗᐵᣆ􋅂􋁣􋋉󰻾􋋎ᐸ􀋢)􀝔⟞)
    ↑ is weird ∵ we cannot change lengths here
   𝚌,Ι = gram_subsup(𝚌𝚘𝚍𝚎,gram_scrp)
   󱁕 = gram_main(𝚌,DEBUG=dbg_parser) ,remove_trashes=✗)
   ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Tracking scripts›)  󰤱 warn_short, force_full_match
    Ι(󱁕)
     ¿dbg_show_gram_tree: 𝑩𝑩(󱁕,‹Descriptified›)
-    󱁕.rm(󷺹ᵗ∈␛𝘄␛𝗪)
+    󱁕.rm(󷺹ᵗ􀉧␛𝘄␛𝗪)
     c_to_rc(󱁕,𝚌𝚘𝚍𝚎)
     add_blocks(󱁕)
     rewrite_ports(󱁕)
@@ -23,8 +23,8 @@ gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
      .ftrp(‹str_tsub›,rewrite_str_indent,✓)                                      ␛
      .ftrp(‹⊢_dec󷺗󷺗󷺗›,󷺹ᶜ􍨄.set(t=‹ƒ_dec_params›)►⟞,✓)                             ␛
      .ftrp(‹whiskers›,preformat_whiskers,✓)                                      ␛
-     .ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓ 𝝀𝑎›⍭,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)                             ␛
-     .ftrp(‹𝑃 𝑇↑ 𝑇↓›              ⍭,󱁕↦Ń(␛𝑇,⠤󱁕)󱖔􋔡󱁕,✓)                             ␛
+     .ftrp(‹𝑋𝐶 𝑋↑↑ 𝑋↑↓ 𝑋↓↑ 𝑋↓↓ 𝝀𝑎 𝔸𝕂›􀌌,󱁕↦𝗑(   ⠤󱁕)󱖔􋔡󱁕,✓)                          ␛
+     .ftrp(‹𝑃 𝑇↑ 𝑇↓󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀌌,󱁕↦Ń(␛𝑇,⠤󱁕)󱖔􋔡󱁕,✓)                          ␛
      .ftrp(‹𝝀𝔸 𝝀𝕂›⍭,󱁕↦󱁕.set(t=󱁕ᵗ􍨄),✓)                                            ␛
      .frp (󷺹ᵗ≡‹𝑇›∧⟞🃌≡1∧⟞₀ᵗ≡‹comp_∀›,󱁕↦𝒩(␛𝐿,⠤󱁕)󱖔􋔡󱁕,✓)
     rewrite_lambs(󱁕)
@@ -32,17 +32,18 @@ gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
     ⊢(󱁕.frp(󷺹ᵗ≡‹op› ∧ OG_OP(⟞₁􋒷)∈‹󷸊󷸋󷸌󷸍⭠⭢←→⬅➡⥉›,□,✓)) (󱁕):
       𝚕,𝙾,𝚛 = 󱁕
       𝒏 = 𝗍𝗆𝗉(󱁕.copy(c=𝗈𝗉(𝙾)ᶜ))
-      ¿OG_OP(𝙾􋒷)∈‹󷸊󷸋󷸌󷸍›: 𝚟 = 𝗏(𝒏₀ᵉ 􀲵 ≔ ␛þ+󱁕ᵉ ᵖ⨝␛_)
-                         ¿OG_OP(𝙾􋒷)∈‹󷸊󷸋›: 𝒏ᶜ.append(𝚟󱖔􋄥𝙾)
-                         ¡              : 𝒏ᶜ.insert(0,𝚟󱖔􋄤𝙾)
+      ¿OG_OP(𝙾􋒷)􀉧‹󷸊󷸋󷸌󷸍›: 𝚟 = 𝗏(𝒏₀ᵉ 􀲵􇀜␛þ􀓻󱁕ᵉ ᵖ􀋢␛_)
+                         ¿OG_OP(𝙾􋒷)􀉧‹󷸊󷸋›: 𝒏ᶜ.append(𝚟􀊄􋄥𝙾)
+                         ¡              : 𝒏ᶜ.insert(0,𝚟􀊄􋄤𝙾)
       ¿𝚕􋒷: 𝒏ᶜ.insert(0,𝒩(‹sup›,𝚕₀ ₀))
       ¿𝚛􋒷: 𝒏ᶜ.append(  𝒩(‹sup›,𝚛₀ ₀))
       ↪𝒏
-    󱁕.ftrp(‹sup›,󱁕↦󱁕₀ᵗ≡␛x∧󱁕₀🃌≡1∧󱁕₀ ₀ᵗ≡␛𝑣 ⭜𝗍𝗆𝗉(𝗈𝗉(␛.󱖔􋄤󱁕),󱁕₀ ₀)⭝␛
+    󱁕.ftrp(‹sup›,󱁕↦󱁕₀ᵗ≡␛x∧󱁕₀🃌≡1∧󱁕₀ ₀ᵗ≡␛𝑣 ⭜𝗍𝗆𝗉(𝗈𝗉(␛.􀊄􋄤󱁕),󱁕₀ ₀)⭝␛
                                           𝗍𝗆𝗉(𝖾𝗑𝗉(󱁕),𝗑(⠤󱁕)),✓  )␛
      .flat(󷺹ᵗ≡‹tmp›)                                            ␛
      .ftrp(‹op›,denode_op,✓)                                    ␛
      .ftrp(‹x›,group_targets,✓)
+    rewrite_optionals(󱁕)
     rewrite_for(󱁕)
     grp_blks(󱁕)
     rewrite_strs(󱁕)
@@ -59,8 +60,8 @@ gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
     rewrite_cmp(󱁕)
     󱁕.frp(󷺹ᵗ≡‹opC› ∧ OG_OP(⟞₀􋒷)≡␛⋄, 󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)␛
      .frp(󷺹ᵗ≡‹opC› ∧    ⟞₀ ₁ ₀􋒷≡␛,, 󱁕↦𝒩(‹𝑇›, ⠤󱁕₁﹕))
-    squashcat = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝗈𝗉𝖢 (denode_op(𝗈𝗉(‹␀CAT›󱖔􋄥x)),x,y)
-    squashmul = 󱁕↦󱁕🃌≡1 ⭜󱁕₀⭝ 󱁕ᶜſ󰲣𝖼𝖺𝗅𝗅(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›󱖔􋄥x)),x,y)
+    squashcat = 󱁕↦󱁕􀊹􀉞1 􇀦󱁕₀􇀧 󱁕ᶜ􀉷󰲣𝗈𝗉𝖢 (denode_op(𝗈𝗉(‹␀CAT›􀊄􋄥x)),x,y)
+    squashmul = 󱁕↦󱁕􀊹􀉞1 􇀦󱁕₀􇀧 󱁕ᶜ􀉷󰲣𝖼𝖺𝗅𝗅(denode_op(𝗈𝗉(‹󷺗󷺗󷺗⋅›􀊄􋄥x)),x,y)
     󱁕.ftrp(‹x󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵗ∈‹𝐿 𝑇 str num›⍭, 󰲡𝒩(␛⋅,⠤x))(󱁕ᶜ)), ✓)␛
      .ftrp(‹x󷺗󷺗›,squashcat,✓)                                              ␛
      .ftrp(‹opC›,󷺹.set(t=␛∘),✓)                                            ␛

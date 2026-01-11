@@ -101,6 +101,9 @@
     󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
     󰤱  implicit imports are jank
     󰤱  Font generator slow
+    󰤱  Better AST
+         Lots of python-related manipulations happen in the to_ast phase
+           ᵉᵍ `[a¿ᵇc]` does a million ternary/stack things
     󰤱􊽨 auto curry (fname)?
     󰤱􊽨  option to print progress
     󰤱􊽨 Make version of x⭜y⭝z that can auto-store vals?
@@ -519,22 +522,21 @@ wherevowels = 𝕏󰈲ᔨV
 󰦥󰦥󰦥󰦥
 
 𝐷_item   = ⠶𝔸𝕂 𝖶 ∨ 𝐷_kv_nrm ∨ 𝐷_kv_nam
-
 𝐷_𝕜_nrm_asgn = '󷷰' @cond ∨ ':'
 𝐷_𝕜_nam_asgn = '≟' @cond ∨ '='
 𝐷_𝕜_nrm = 𝖶 (                                          𝑋↓↓ 𝖶 𝐷_𝕜_nrm_asgn) 𝖶 𝑋↓↑ 𝖶
 𝐷_𝕜_nam = 𝖶 ((𝑣 ∨ op_lit ∨ ⠶str) 𝖶 𝐷_𝕜_nam_asgn ∨ str_𝐷nam 𝖶 𝐷_𝕜_nam_asgn) 𝖶 𝑋↓↑ 𝖶
 𝐷_𝕜_p = 𝐷_𝕜_nrm ∨ 𝐷_𝕜_nam
-𝐷_𝕜 = (𝑋↓↑ 󰆴'¿' @cond ⠶𝐷_𝕜_p) ∨ ⠶𝐷_𝕜_p
+𝐷_𝕜 = (𝑋↓↓ 󰆴'¿' @cond ⠶𝐷_𝕜_p) ∨ ⠶𝐷_𝕜_p
 
-𝔸_cond_typ = '󷷱' 𝗐 @cond ∨ '⠤'
-𝕂_cond_typ = '󷷲' 𝗐 @cond ∨ '⠶'
+𝕒_cond = (𝑋↓↓ 󰆴'¿' 𝗐 (𝚜∨✓) ⠶𝐷_𝕜_p)
 
+𝔸𝕂 = cond_𝔸𝕂 ∨ ⠶norm_𝔸𝕂
 cond_𝔸𝕂 = 𝑋↓↑ ⠶norm_𝔸𝕂
 norm_𝔸𝕂 = (𝔸 = 𝔸_cond_typ 𝖶 𝑋↓↑) ∨ (𝕂 = 𝕂_cond_typ 𝖶 𝑋↓↑)
-𝔸𝕂 = cond_𝔸𝕂 ∨ ⠶norm_𝔸𝕂
-
-@cond = sup ∨ ✓
+𝔸_cond_typ = '󷷱' 𝗐 @cond ∨ '⠤'
+𝕂_cond_typ = '󷷲' 𝗐 @cond ∨ '⠶'
+@cond = 𝚜 ∨ ✓
 
 󰦥󰦥󰦥󰦥
 
@@ -558,3 +560,65 @@ example:
   hasAuth⠶{
     username=username,
     password=password } }
+
+
+
+􁉤 [0,¿1,¿􇪼2,1¿3,1¿􇪼4]        􀒰 5􀋲
+􁉤 [0,¿0,¿􇪼□,0¿4,α􀯍3¿􍯏􁖇󰁌5,α]  􀒰 [0,3]
+􁉤 [1,󷷱􍯏􁗢􁖍¹[2,3],󷷱􍯏􁗢􁖍¹[4],󷷱□] 􀒰 [1,2,3]
+􁉤 {a=0,󷷲􍯏􁗢􁖍¹{b=1,c=2}}       􀒰 {a=0,b=1,c=2}
+􁉤 {a=0,󷷲□}                   􀒰 {a=0}
+􁉤 (𝚲𝕂)(a=0,󷷲􍯏􁗢􁖍¹{b=1,c=2})   􀒰 {a=0,b=1,c=2}
+􁉤 (𝚲𝕂)(a=0,✓󷷲􍯏􁗢􁖍¹{b=1,c=2})  􀒰 {a=0,b=1,c=2}
+􁉤 (𝚲𝕂)(a=0,□󷷲􍯏􁗢􁖍¹{b=1,c=2})  􀒰 {a=0}
+􁉤 {a=0,1􁀣2󷷲􍯏􁗢􁖍¹{b=1,c=2}}    􀒰 {a=0}
+􁉤 {a=0,1􁉴2󷷲􍯏􁗢􁖍¹{b=1,c=2}}    􀒰 {a=0,b=1,c=2}
+􁉤 {a=0,1􁉴2󷷱􍯏􁗢􁖍¹␛b􀊱1􁋂␛c􀊱2}    􀒰 {a=0,b=1,c=2}
+􁉤 (𝚲[⠤𝔸]􀊱𝕂)(0,1¿􇪼4,3¿x=1,✗¿y=2) 􀒰 [[0,4],{x=1}]
+
+‹Yay!›􀊸
+
+ dict
+ {a=b,  ⠶ x}
+ {a=b,  󷷲 x}
+ {a=b,  ⠶􊽺x}
+ {a=b, x⠶ y}
+ {a=b, x󷷲 y}
+ {a=b, x󷷲􊽺y}
+ list
+ [1,⠤x]
+ [1,x⠤y]
+ [1, 󷷱y]
+ [1,x󷷱􊽺y]
+  set
+ ⦉1,⠤x⦊
+ ⦉1,x⠤y⦊
+ ⦉1, 󷷱y⦊
+ ⦉1,x󷷱􊽺y⦊
+  implicit tuple
+ 1,⠤x
+ 1,x⠤y
+ 1, 󷷱y
+ 1,x󷷱􊽺y
+  explicit tuple
+ (1,⠤x)
+ (1,x⠤y)
+ (1, 󷷱y)
+ (1,x󷷱􊽺y)
+  ƒ call
+ ꬶ(1,⠤x)
+ ꬶ(1,x⠤y)
+ ꬶ(1, 󷷱y)
+ ꬶ(1,x󷷱􊽺y)
+
+ creds = {
+   username = "john",
+   password = "weed"
+ }
+ hasCreds = True
+
+ api_request = {
+   url = "coolapi.com/generate_something",
+   hasCreds⠶creds
+   images≟ᴬ⁼󰂁ᴬ􋕝ˡᵉⁿᵍᵗʰ󰂁⁰images_array
+ }

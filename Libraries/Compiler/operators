@@ -665,7 +665,7 @@
     If object has __inverse__ property will call it w/ modifier as args
     ƒ󷹁􊽹: returns inverse multimap by computing ƒ(x)∀x∈Ɗ
     󰤱˜ docs
-󷰱 ® 􋅂 or roots of unity
+󷰱 ® 􊽨 or roots of unity
     "®² ≡ ®(2)" ⟶ ∓1  beware IEEE 754
 󷰱 󰻾 􊽨 id𝕊 identify
     󰻾􋇜
@@ -731,7 +731,7 @@
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
 󷰽 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
->⟨5fe⟩⟶⭸⭷=⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶󷷰󷷲󷷱¿⸘¡⭜⭝󷷩󷷪
+>⟨5fe⟩⟶⭸⭷⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰=≟⠤⠶󷷰󷷲󷷱¿⸘¡⭜⭝󷷩󷷪
 >⟨e6b⟩⟶󷰚⬅➡←→⭠⭢⥉
 >⟨f0a⟩⟶󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
 

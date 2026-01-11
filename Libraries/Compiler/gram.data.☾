@@ -22,56 +22,74 @@ stmt  = blk_head ∨ kwd_std ∨ asgn ∨ 𝑋𝐶
 𝑋𝐶 = comp_∀ ∨ ⠶𝑋↑↑
 
 blk_head = ⊢_dec ∨ cln_pfx ∨ std_pfx ∨ stmt_∀
-stmt_∀ =     󰆴'∀'𝖶 (𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↓ ∨ ✓ 𝑋↑↓ ∨ ✓ ✓) 𝖶 (󰆴'¿'𝖶 𝑋↑↓ ∨ ✓) 󰆴':'
-comp_∀ = 𝑋↑↑ 󰆴'∀'𝖶  𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↑                  (󰆴'¿'𝖶 𝑋↑↑ ∨ ✓)
-⊢_dec    = 󰆴'⊢' 𝖶 (wrap = ⠶𝑃 𝖶 ∨ ✓) (𝑣 ∨ op_lit ∨ ✓) 𝖶 (𝑃 ∨ ✓) 𝖶 󰆴':'
+stmt_∀   =     󰆴'∀'𝖶 (𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↓ ∨ ✓ 𝑋↑↓ ∨ ✓ ✓) 𝖶 (󰆴'¿'𝖶 𝑋↑↓ ∨ ✓) 󰆴':'
+comp_∀   = 𝑋↑↑ 󰆴'∀'𝖶  𝑋↑↑ 󰆴'⬠'𝖶 𝑋↑↑                  (󰆴'¿'𝖶 𝑋↑↑ ∨ ✓)
+⊢_dec    = 󰆴'⊢'𝖶 (wrap = ⠶𝑃 𝖶 ∨ ✓) (𝑣 ∨ op_lit ∨ ✓) 𝖶 (𝑃 ∨ ✓) 𝖶 󰆴':'
 kwd_std  = std_kwd 𝗐 (𝑋↑↑ ∨ ✓)
-cln_pfx  = (  ⮞'¡' blk_cln_kwd 𝖶 ((𝑣 ∨ 𝑣_spec ∨ op_lit) 𝖶 󰆴'=' 𝖶 𝑋↑↓ ∨ 𝑋↑↓ ∨ ✓)
-            ∨      blk_cln_kwd 𝖶 (                                     𝑋↑↓ ∨ ✓)) 𝖶 󰆴':'
-std_pfx  =     blk_kwd 𝖶
+cln_pfx  = (  ⮞'¡' blk_cln_kwd 𝖶 ((𝑣 ∨ 𝑣_spec ∨ op_lit) 𝖶 󰆴'='𝖶 𝑋↑↓ ∨ 𝑋↑↓ ∨ ✓)
+            ∨      blk_cln_kwd 𝖶 (                                    𝑋↑↓ ∨ ✓)) 𝖶 󰆴':'
+std_pfx  = blk_kwd 𝖶
 asgn     = 𝑋↑↑ 𝖶 󰆴'='𝗐 (asgn ∨ 𝑋↑↑)
 grp      = ~"[⁅⟦]" (⠶𝑝𝑐 ∨ 𝖶) ~"[⁆⟧]"
 𝐿 = 󰆴'[' (⠶𝑝𝑐 ∨ 𝖶) 󰆴']' ∨ 󰆴󰜞 (⠶𝑝𝑐 ∨ 𝖶) 󰆴󰜛
 𝑃 = 󰆴'(' (⠶𝑝𝑐 ∨ 𝖶) 󰆴')'
 𝑆 = 󰆴'⦉' (⠶𝑝𝑐 ∨ 𝖶) 󰆴'⦊'
-𝐷 = 󰆴'{' (𝖶 ⠶𝐷_item (󰆴',' 𝖶 ⠶𝐷_item)* (󰆴',' 𝖶)? ∨ 𝖶) 󰆴'}'
+𝐷 = 󰆴'{' (𝖶 ⠶𝐷_item (󰆴','𝖶 ⠶𝐷_item)* (󰆴','𝖶)? ∨ 𝖶) 󰆴'}'
+
 𝐷_item   = ⠶𝔸𝕂 𝖶 ∨ 𝐷_kv_nrm ∨ 𝐷_kv_nam
-𝐷_kv_nrm = 𝑋↓↓ 𝖶 󰆴':' 𝖶 𝑋↓↑ 𝖶
+𝐷_kv_nrm = 𝑋↓↓ 𝖶 󰆴':'𝖶 𝑋↓↑ 𝖶
 𝐷_kv_nam = 𝖶 ((𝑣 ∨ op_lit ∨ ⠶str) 𝖶 󰆴'=' ∨ str_𝐷nam 𝖶 󰆴'=') 𝖶 𝑋↓↑ 𝖶
 
-𝑝𝑐 = 𝖶 comp_∀ 𝖶 ∨ (𝖶 ⠶𝑎𝑝𝑐 𝖶 (󰆴',' 𝖶 (⠶𝑎𝑝𝑐 ∨ ᗜ) 𝖶)*)
-𝑎𝑝𝑐 = (kw_𝕒 = 𝑣 𝖶 󰆴'=' 𝖶 ⠶𝑎𝑝𝑐) ∨ 𝑋↓↑
-𝑋↑↑ = (𝑇↑ = (𝑋↓↑ ∨ ᗜ) (󰆴',' 𝗐 (𝑋↓↑ ∨ ᗜ))+) ∨ (⠶𝑋↓↑ 𝗐)+
-𝑋↑↓ = (𝑇↓ = (𝑋↓↓ ∨ ᗜ) (󰆴',' 𝗐 (𝑋↓↓ ∨ ᗜ))+) ∨ (⠶𝑋↓↓ 𝗐)+
+𝕒_cond = 𝕒𝕜_cond_pfx ⠶𝑎𝑝𝑐
+𝕒𝕜_cond_pfx = 𝑋↓↓ (𝕒𝕜_cond_ƒ ∨ 󰆴'¿' ✓) ∨ ✓ (𝕒𝕜_cond_ƒ ∨ 𝕒𝕜_cond_ƒ_id)
+𝕒𝕜_cond_ƒ    = 󰆴'¿' ⠶𝚜
+𝕒𝕜_cond_ƒ_id = 󰆴'¿' ✓
+
+kw_𝕒_cond = 𝑣 𝖶 󰆴'≟' (⠶𝚜 ∨ ✓) 𝖶 ⠶𝑎𝑝𝑐
+kw_𝕒_norm = 𝑣 𝖶 󰆴'='𝖶 ⠶𝑎𝑝𝑐
+ kw_𝕒 = ⠶kw_𝕒_norm ∨ kw_𝕒_cond
+kw_𝕒 = ⠶kw_𝕒_norm
+
+𝑝𝑐  = 𝖶 comp_∀ 𝖶 ∨ (𝖶 ⠶𝑎𝑝𝑐 𝖶 (󰆴','𝖶 (⠶𝑎𝑝𝑐 ∨ ᗜ) 𝖶)*)
+𝑎𝑝𝑐 = 𝔸𝕂 ∨ 𝕒_cond ∨ kw_𝕒 ∨ 𝑋↓↑
+𝑋↑↑ = 𝑇↑ ∨ (⠶𝑋↓↑ 𝗐)+
+𝑋↑↓ = 𝑇↓ ∨ (⠶𝑋↓↓ 𝗐)+
+𝑇↑  = (𝔸𝕂 ∨ 𝑋↓↑ ∨ ᗜ) (󰆴','𝗐 (𝔸𝕂 ∨ 𝑋↓↑ ∨ ᗜ))+
+𝑇↓  = (𝔸𝕂 ∨ 𝑋↓↓ ∨ ᗜ) (󰆴','𝗐 (𝔸𝕂 ∨ 𝑋↓↓ ∨ ᗜ))+
 𝑋↓↑ = (⠶𝑎↓↑ 𝗐)+
 𝑋↓↓ = (⠶𝑎↓↓ 𝗐)+
 𝑎↓↑ = slice ∨ ⠶𝑎↓↓
-𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶𝔸𝕂 ∨ ⠶script ∨ ⠶str ∨ sys_call ∨ native_code
+𝑎↓↓ = (%I% grp ∨ 𝑃 ∨ 𝐿 ∨ 𝐷 ∨ 𝑆 ∨ ⠶script ∨ ⠶str ∨ sys_call ∨ native_code
        ∨ import ∨ export ∨ ugx_x ∨ ⠶lambs ∨ number_exp ∨ number ∨ op
        ∨ 𝑣_spec ∨ 𝑣)
 
-𝝀𝑃 = ⠶𝝀𝕒 𝖶 (󰆴',' 𝖶 ⠶𝝀𝕒 𝖶)*
+𝔸𝕂 = cond_𝔸𝕂 ∨ ⠶norm_𝔸𝕂
+cond_𝔸𝕂 = 𝑋↓↓ ⠶norm_𝔸𝕂
+norm_𝔸𝕂 = 𝔸 ∨ 𝕂
+𝔸 = (󰆴'⠤' ∨ (cond_ƒ_𝔸 = (󰆴'󷷱') 𝗐 (𝚜∨✓))) 𝖶 𝑋↓↓
+𝕂 = (󰆴'⠶' ∨ (cond_ƒ_𝕂 = (󰆴'󷷲') 𝗐 (𝚜∨✓))) 𝖶 𝑋↓↓
+
+𝝀𝑃 = ⠶𝝀𝕒 𝖶 (󰆴','𝖶 ⠶𝝀𝕒 𝖶)*
 𝝀𝕒 = 𝝀eq ∨ ⠶𝝀𝑎
 𝝀𝑎 = ((¬lamb_h_implicit ¬𝔸𝕂 ⠶𝑎↓↑ ∨ ⠶𝝀𝔸𝕂 ∨ 𝑣) 𝗐)+
-𝝀eq = 𝑣 𝖶 󰆴'=' 𝖶 𝝀𝑎
-𝝀𝔸𝕂 = (𝝀𝔸 = 󰆴'⠤' 𝖶 𝑣) ∨ (𝝀𝕂 = 󰆴'⠶' 𝖶 𝑣)
+𝝀eq = 𝑣 𝖶 󰆴'='𝖶 𝝀𝑎
+𝝀𝔸𝕂 = (𝝀𝔸 = 󰆴'⠤'𝖶 𝑣) ∨ (𝝀𝕂 = 󰆴'⠶'𝖶 𝑣)
 lambs = (  (whiskers=(    (⠶W_L 𝖶 (𝑋𝐶  ∨ ✓) ⠶W_R)
                         ∨ (⠶W_L 𝖶 (𝑋↓↑ ∨ ✓) ✓ ✓)))
          ∨ (    lamb=((   (lamb_h_preset   = ~‹[𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱]›)
-                        ∨ (lamb_h_normal   = 󰆴'⥌' 𝖶 ⠶𝝀𝑃? 󰆴'↦' )
-                        ∨ (lamb_h_implicit =      𝑣  𝖶   󰆴'↦' )
+                        ∨ (lamb_h_normal   = 󰆴'⥌'𝖶 ⠶𝝀𝑃? 󰆴'↦' )
+                        ∨ (lamb_h_implicit =     𝑣  𝖶   󰆴'↦' )
                       ) 𝖶 (𝑋𝐶 󰆴'󰅂' ∨ 𝑋↓↑))))
 
-𝔸𝕂 = (𝔸 = 󰆴'⠤' 𝖶 𝑋↓↑) ∨ (𝕂 = 󰆴'⠶' 𝖶 𝑋↓↑)
-slice = (𝑋↓↓ ∨ ᗜ) (󰆴':' 𝗐 (𝑋↓↓ ∨ ᗜ))+
+slice = (𝑋↓↓ ∨ ᗜ) (󰆴':'𝗐 (𝑋↓↓ ∨ ᗜ))+
 
-pargs_i   = ((parg_i = 𝑋↓↑   𝗐 󰆴'=' 𝗐 ptarg) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_i?))?
-pargs_e   = ((parg_e = ptarg 𝗐 󰆴'=' 𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴',' 𝗐 ⠶(pargs_e?))?
+pargs_i   = ((parg_i = 𝑋↓↑   𝗐 󰆴'='𝗐 ptarg) ∨ ptarg) (𝗐 󰆴','𝗐 ⠶(pargs_i?))?
+pargs_e   = ((parg_e = ptarg 𝗐 󰆴'='𝗐 𝑋↓↑  ) ∨ ptarg) (𝗐 󰆴','𝗐 ⠶(pargs_e?))?
 ptarg     = '*' ∨ '@' ∨ 𝑣 ∨ 𝑣_spec ∨ op_lit
 import    = 󰆴'⨡' (((󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝖶      )
-                  (str_tsub ∨ str_nsub ∨ str_timp  )
-                  (𝖶 󰆴'⭸' 𝖶 pargs_i             ∨ ✓)
-                  (𝗐 󰆴';'         ✓ ∨ 𝗐 ⠶import ∨ ✓))
+                  (str_tsub ∨ str_nsub ∨ str_timp )
+                  (𝖶 󰆴'⭸'𝖶 pargs_i             ∨ ✓)
+                  (𝗐 󰆴';'        ✓ ∨ 𝗐 ⠶import ∨ ✓))
 export    = 󰆴'⭷' 𝖶 pargs_e
 str_timp  = ⠶timp_guts (𝘄 ⠶timp_guts)* 𝗐
 timp_guts = ⠶(str_sub_inner ∨ str_timp_guts)+
@@ -94,14 +112,14 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝚜 = ⠶sup
 
 𝑣 = ((󰆴'´' ~‹[^´]+› ∨ ƨ(op_lit)) 󰆴'´') ∨ ƨ((¬𝑣_bad ~‹.›)+)
-𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[⠤⠶;:,⬠=∀¿⍈󷸴⍮⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
+𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[⠤󷷱⠶󷷲:󷷰=≟;⍮,¿⬠∀⍈󷸴⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆󷷬󷷭⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
            ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
-W_L = (‹⟥›∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
-W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› (‹⟤›∨✓)
+W_L = ('⟥'∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
+W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› ('⟤'∨✓)
 
-sys_call_stupid_script_hack = '$' 𝗐 ⮞σsup σscript 𝗐 str_tsys
-sys_call = 󰆴'$' 𝗐 (󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝗐 str_tsys
+sys_call_stupid_script_hack = '$'𝗐 ⮞σsup σscript 𝗐 str_tsys
+sys_call = 󰆴'$'𝗐 (󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝗐 str_tsys
 str = empty_str ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 𝗐)+
 str_t󰦥   = 󰆴(~‹󰦥{4}[󰦥]›) ~‹((?!󰦥{4}[󰦥])(.|\n))*› 󰆴(~‹󰦥{4}[󰦥]› ∨ ✓)
 str_tsub = 󰆴'‹' (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'

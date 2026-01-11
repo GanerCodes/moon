@@ -3,41 +3,46 @@ code_file_caching=✓
 
 TMP = mkd(TMPDIR􀋋__file__  sha)
 header_com = moon_dir􀋋‹Builtins›ᑀ􀋋‹⟦⟝⟧.☾›􀯖.resolve􀃅ᐛ(moon_dir􀋋‹Builtins/builtins›)􀋦
-pathlib_import = ‹from pathlib import Path as ⟦PEV(␛𝐩)⟧
-                  moon_dir = ⟦PEV(␛𝐩)⟧(__file__).parent›
+pathlib_import = ‹from pathlib import Path as ⟦␛𝐩 PEV⟧
+                  moon_dir = ⟦␛𝐩 PEV⟧(__file__).parent›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
-⊢ moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
-    ¿show_in           : BOX(title(‹IN›,show_code(𝚌)))☾
-    󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
-    ¿show_ast          : ⨡ peggle3/gram_tools
-                         𝑩𝑩(󱁕,‹AST›)
-    𝘤 = to_py(𝚌)(󱁕.cpr􀃅)
-    ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))☾
-    ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr􀃅,no_rename_vars=✓))))☾
-    ↪𝘤
+⊢moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
+  ¿show_in           : BOX(title(‹IN›,𝚌 show_code))􀊸
+  󱁕 = to_ast(𝚌,dbg_show_gram_tree=show_preast,⠶𝕂)
+  ¿show_ast          : ⨡ peggle3/gram_tools
+                       𝑩𝑩(󱁕,‹AST›)
+  𝘤 = to_py(𝚌)(󱁕.cpr􀃅)
+  ¿show_out_no_rename: BOX(title(‹OUT›,show_code(𝘤                                )))􀊸
+  ¿show_out          : BOX(title(‹OUT›,show_code(to_py(𝚌)(󱁕.cpr􀃅,no_rename_vars=✓))))􀊸
+  ↪𝘤
 
-⊢ þdo_imps: ¿þmoon_to_py.has_lazy_load: ↪
-            ⨡ text_format
-            ⨡ Compiler/to_ast
-            ⨡ Compiler/ast_to_py
-            þmoon_to_py.has_lazy_load = ✓
-⊢ þmoon_to_py(𝚌,𝙺,𝓚): þdo_imps􀃅
-                      ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶𝓚)
+⊢þdo_imps: ¿þmoon_to_py.has_lazy_load: ↪
+           ⨡ text_format
+           ⨡ Compiler/to_ast
+           ⨡ Compiler/ast_to_py
+           þmoon_to_py.has_lazy_load = ✓
+⊢þmoon_to_py(𝚌,𝙺,𝓚): þdo_imps􀃅
+                     ↪to_py(𝚌)(to_ast(𝚌,⠶𝙺),⠶𝓚)
 þmoon_to_py.has_lazy_load = ✗
 
-þmoon_to_py_fcache = fcache(fp=CACHEDIR/‹compiled_⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
-⊢ moon_to_py(𝚌,𝙺={},𝓚={}):
-    ¿sha(𝚌,𝙺,𝓚)≕h∈c≔moon_to_py􋈨: ↪cₕ
-    ↪cₕ≔(code_file_caching ⭜þmoon_to_py_fcache⭝ þmoon_to_py)(𝚌,𝙺,𝓚)
+þmoon_to_py_fcache = fcache(fp=CACHEDIR􀋋‹compiled_⟦BOOTSTRAP_HASH﹕₁₆⟧›,file_only=✓)(þmoon_to_py)
+⊢moon_to_py(𝚌,𝙺={},𝓚={}):
+  ¿sha(𝚌,𝙺,𝓚)􀯑h􀜋c􀯍moon_to_py􋈨: ↪cₕ
+  ↪cₕ􀯍(code_file_caching 􀯗þmoon_to_py_fcache􀯘 þmoon_to_py)(𝚌,𝙺,𝓚)
 moon_to_py􋈨 = {}
 
-decorate_code = ⥌𝚌,𝚙↦‹__dir__=(__file__:=⟦PEV(␛𝐩)⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent𝗻⟦𝚌⟧›
-⊢compile_code(𝚌,𝚙=□): ¿𝚙≅✓: 𝚌,𝚙=𝚌 ,𝚌
-                      𝘤=moon_to_py(𝚌)
-                      ¿𝚙≇□: 𝘤󷸊decorate_code(⬤,𝚙󷸊𝐩)
-                      ↪𝘤
-compile_files = ⥌F,n=␀↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄‹Compiled ⟦⟞ ᔐ󱖔ᵈᵒᵗʳⁱᵐ25⟧ ⟦𝗻󰛔􀲟␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧ ⭢ ⟦𝗻󰛔􍺠␛𝗻󱖔ᵈᵒᵗʳⁱᵐ35⟧›☾ᐸ⭢⨝𝗻
+⊢compile_code(𝚌,𝚙=□,ƒ=moon_to_py,log=✗):
+  ¿𝚙􀋑✓: 𝚌,𝚙=𝚌 ,𝚌
+  𝘤=𝚌 ƒ
+  ¿𝚙􀋒□: 𝘤=‹#⟦𝚙.name⟧ (⟦𝚌􀊹⟧ ⟶ ⟦𝘤􀊹⟧)
+           __dir__=(__file__:=⟦␛𝐩 PEV⟧(moon_dir/⟦moon_dir 𝚙.relative_to ᔐ repr⟧)).parent
+           ⟦𝘤⟧›
+  ¿log: ‹Compiled ⟦𝚙 ᔐ􀜨ᵈᵒᵗʳⁱᵐ35⟧ ⟦𝗻􀋀􀲟␛𝗻􀜨ᵈᵒᵗʳⁱᵐ35⟧ → ⟦𝗻􀋀􍺠␛𝗻􀜨ᵈᵒᵗʳⁱᵐ35⟧›􀊸
+         󰤱 prefix version of dotrim
+         󰤱 unary operator that one-lines a multi-line ᔐ
+  ↪𝘤
+compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 
 🟑
 ⊢ refresh_cached_imports: TP_CACHE.clear􀃅
@@ -49,94 +54,97 @@ compile_files = ⥌F,n=␀↦F󷺻compile_code(⟞ ≕𝚌,⟞)≕𝘤◄�
                                 ꟿ󰲣moon_to_py.𝔠ₓ≔y
 🟑
 
-⊢ generate_bootstrap(dest=TMP/‹moon.py›):
-    file_canon = __file__.with_suffix(‹.☾›)
-    _,ƒ = PL_FORK(compile_code,file_canon,✓)
-    pyc = ‹⟦pathlib_import⟧
-           ⟦header_com compile_files⟧
-           ⟦dump_cached_imports􀃅⟧
-           ⟦ƒ􀃅⟧›ᐒ␛
-          ‹#!/bin/python
-           BOOTSTRAP_HASH=⟦⟞ sha repr⟧
-           ⟦⟞⟧›
-    ¿dest: (dest󷸊𝐩,pyc)
-           os.chmod(dest,0o775)  chmod(dest,‹+x›)  󰤱􊽨
-    ↪pyc
+⊢generate_bootstrap(dest=TMP􀋋‹moon.py›):
+  file_canon = __file__.with_suffix(‹.☾›)
+  _,ƒ = PL_FORK(compile_code,file_canon,✓,log=✓)
+  pyc = ‹⟦pathlib_import⟧
+         ⟦header_com compile_files⟧
+         ⟦dump_cached_imports􀃅⟧
+         ⟦ƒ􀃅⟧›ᐒ␛
+        ‹#!/bin/python
+         BOOTSTRAP_HASH=⟦⟞ sha repr⟧
+         ⟦⟞⟧›
+  ¿dest: (dest􀯏𝐩,pyc)
+         os.chmod(dest,0o775)  chmod(dest,‹+x›)  󰤱􊽨
+  ↪pyc
 
-⊢ generate_bootstrap_live(⠤𝔸,⠶𝕂): __þIMPORTS__.clear􀃅
-                                  TP_CACHE.clear􀃅
-                                  ‹⨡􋀸text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸text_format
-                                  ‹⨡􋀸cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸cache
-                                  ‹⨡􋀸peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/rgx_golfatron
-                                  ‹⨡􋀸peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3
-                                  ‹⨡􋀸peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/gram_tools
-                                  ‹⨡􋀸Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/gram.data
-                                  ‹⨡􋀸Compiler/generate_operators›􀊸 ; ⨡􋀸Compiler/generate_operators
-                                  ‹⨡􋀸Compiler/operator󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/operator
-                                  ‹⨡􋀸Compiler/node_types󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/node_types
-                                  ‹⨡􋀸Compiler/tree󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree
-                                  ‹⨡􋀸Compiler/tree_txt󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree_txt
-                                  ‹⨡􋀸Compiler/expr󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/expr
-                                  ‹⨡􋀸Compiler/lambdas󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/lambdas
-                                  ‹⨡􋀸Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/rewriters
-                                  ‹⨡􋀸Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/to_ast
-                                  ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/ast_to_py
-                                  ‹⨡􋀸errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸errors
-                                  ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; c=⨡􋀸Compiler
-                                  TRANSPILE_REF(c.þmoon_to_py)  (c.moon_to_py)
-                                  c.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›)
-                                  ŧ𝼝(‹Generated bootstrap!›,‹f0f›)􀊸
+⊢generate_bootstrap_live(⠤𝔸,⠶𝕂): __þIMPORTS__.clear􀃅
+                                 TP_CACHE.clear􀃅
+                                 ‹⨡􋀸text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸text_format
+                                 ‹⨡􋀸cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸cache
+                                 ‹⨡􋀸peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/rgx_golfatron
+                                 ‹⨡􋀸peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3
+                                 ‹⨡􋀸peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/gram_tools
+                                 ‹⨡􋀸Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/gram.data
+                                 ‹⨡􋀸Compiler/generate_operators›􀊸 ; ⨡􋀸Compiler/generate_operators
+                                 ‹⨡􋀸Compiler/operator󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/operator
+                                 ‹⨡􋀸Compiler/node_types󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/node_types
+                                 ‹⨡􋀸Compiler/tree󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree
+                                 ‹⨡􋀸Compiler/tree_txt󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree_txt
+                                 ‹⨡􋀸Compiler/expr󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/expr
+                                 ‹⨡􋀸Compiler/lambdas󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/lambdas
+                                 ‹⨡􋀸Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/rewriters
+                                 ‹⨡􋀸Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/to_ast
+                                 ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/ast_to_py
+                                 ‹⨡􋀸errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸errors
+                                 ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; c=⨡􋀸Compiler
+                                 TRANSPILE_REF(c.þmoon_to_py)  (c.moon_to_py)
+                                 c.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›)
+                                 ŧ𝼝(‹Generated bootstrap!›,‹f0f›)􀊸
 
-⊢ moon_cli(extract=✗,ia=✓,rl=✓):
-    ⦃import traceback⦄
-    ¿ia∧rl: ⦃import readline⦄
-            HIST_FILE = TMPDIR/‹☾_cli_history› ⭢ mkf
-            HIST_FILE ᔐ readline.read_history_file
-    pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=rl)
-    ns = 󱠨(ᐦ)
-    ⊢ ƒ(input): 𝚌 = ns[‹__moon_code__›] = input(⠤ia ⭜[pfx]⭝ ⍁)
-                ¿𝚌¬: ‹God is good!›☾
-                ¡  : ¿rl: readline.write_history_file(HIST_FILE)
-                     ¿𝚌≡‹clr›: os.system(‹clr›)  󰤱 ijiasdjiasd
-                     ¡       : ¿ia∧rl: ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›☾  󰤱 ?
-                               ¡     : 𝚌 __highlighter__ ☾
-                               𝘤 = 𝚌 compile_code
-                               𝘤 VEP __highlighter__ ☾  󰤱 ?
-                               s,errp = ✗,{return_err=✓}
-                                    ↪󱠨(𝘤,ns,native=✓,ƒ=eval,ret=✓,init_ns=✗,show_error_𝕂=errp)☾
-                                    ↪󱠨(𝘤,ns,native=✓,ƒ=EXEC_NATIVE,ret=✓,init_ns=✗,show_error_𝕂=errp)
-                               ¡ε=𝑒: ε traceback.format_exception⭢⨝ᐦ☾
-    ¿extract: ↪ƒ
-    ∀:ƒ(input)
+⊢moon_cli(extract=✗,ia=✓,rl=✓):
+  ⦃import traceback⦄
+  ¿ia∧rl: ⦃import readline⦄
+          HIST_FILE = TMPDIR􀋋‹☾_cli_history› 􀯖 mkf
+          HIST_FILE ᔐ readline.read_history_file
+  pfx = ŧ𝼝(␛✝𝘀,‹f0a›,rl=rl)
+  ns = 󱠨(ᐦ)
+  ⊢ƒ(input): 𝚌 = ns[‹__moon_code__›] = input(⠤ia ⭜[pfx]⭝ ⍁)
+             ¿𝚌􀌐: ‹God is good!›􀊸
+             ¡  : ¿rl: readline.write_history_file(HIST_FILE)
+                  ¿𝚌≡‹clr›: os.system(‹clr›)  󰤱 ijiasdjiasd
+                  ¡       : ¿ia∧rl: ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›􀊸  󰤱 ?
+                            ¡     : 𝚌 __highlighter__ 􀊸
+                            𝘤 = 𝚌 compile_code
+                            𝘤 VEP __highlighter__ 􀊸  󰤱 ?
+                            s,errp = ✗,{return_err=✓}
+                                 ↪󱠨(𝘤,ns,native=✓,ƒ=eval       ,ret=✓,init_ns=✗,show_error_𝕂=errp)􀊸
+                                 ↪󱠨(𝘤,ns,native=✓,ƒ=EXEC_NATIVE,ret=✓,init_ns=✗,show_error_𝕂=errp)
+                            ¡ε=𝑒: ε traceback.format_exception􀯖􀋢ᐦ􀊸
+  ¿extract: ↪ƒ
+  ∀:ƒ(input)
 
-⊢ transpiler_cli(⠤𝖠):
-    show_docs = 𝚲‹Usage: ∅                  (cli mode)
-                         <file_path>        (run ☾ file)
-                         -h                 (show this)
-                         -c <code_to_run>   (eval mode)
-                         -C <code_to_run>   (exec mode)
-                         -B <boostrap_dest>
-                         -e <str_to_encode>
-                         -d <str_to_decode>
-                         -o <file_in> <file_out?stdout>›☾
-    𝖠,f=[⠤𝖠],∅
-    ∀𝖠∧(𝖺≔𝖠₀)₀≡␛-¿ f󷸊∪(0 𝖠.pop ⭢₁﹕ᑀ₀≡␛-⭜􍪵􍪴􊬤􊲯) →►⭠ 𝖺≠2␛-:□
-    ƒ = ␛a␛A∩f⭢¬ ⭜moon_to_py⭝ þdo_imps􀃅►𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f∋␛A)
-    ¿f󷺥𝖠: þdo_imps􀃅; moon_cli􀃅
-    ⸘f󷺥𝖠🃌<1: 0 𝔸.pop; ↪󱠨(𝖠₀ ,ns={__file__=𝖠₀,__dir__=𝖠₀𝐩⭢.parent,__name__=‹__main__›},ƒ=󰲣EXEC_NATIVE(x,y,y))
-    ⸘f∋‹C󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ EXEC_NATIVE
-    ⸘f∋‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠⨝𝘀 ⭢ ƒ ⭢ eval ᑀᣆ􋁝􋄅☾􊾖
-    ⸘f∋‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
-    ⸘f∋‹get-dir›: moon_dir☾
-    ¡:
-    þdo_imps􀃅
-    ¿f∋‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input􀃅 ⭢ VEP ⭢ __highlighter__ ⭢ ☾
-    ⸘f∋‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍVEP⭢⨝𝘀        ⭢ __highlighter__ ⭢ ☾
-    ⸘f∋‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᴍPEV⭢⨝𝘀☾
-    ⸘f∋‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
-    ⸘f∋‹b󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap
-    ⸘f∋‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠ᙡ0⋄1⋄2󰲡compile_code(x₀ )⭢(x₁⭜(x₁,⬤)⭝☾)
-    ¡           : ‹Invalid mode(s): ⟦f⟧›☾ ► show_docs􀃅
+⊢transpiler_cli(⠤𝖠):
+  show_docs = 𝚲‹Usage: ∅                  (cli mode)
+                       <file_path>        (run ☾ file)
+                       -h                 (show this)
+                       -c <code_to_run>   (eval mode)
+                       -C <code_to_run>   (exec mode)
+                       -B <boostrap_dest>
+                       -e <str_to_encode>
+                       -d <str_to_decode>
+                       -o <file_in> <file_out?stdout>›􀊸
+  𝖠,f=[⠤𝖠],∅
+  ∀𝖠 􀛾 𝖠₀􀯑𝖺􀯖₀􀒰␛- ¿ f􇀞􀊳(0 𝖠.pop 􀯖₁﹕ᑀ₀􀉞␛-􇀶􍪵􍪴􊬤􊲯) 􁁯 𝖺􀉟2␛-: □
+  ƒ = ␛a␛A􀊴f􀞴 􇂖moon_to_py􇂗 þdo_imps􀃅􀊰𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f􀉨␛A)
+  
+  ¿f􀒪𝖠: þdo_imps􀃅 􀊰 moon_cli􀃅
+  ⸘f􀒪𝖠􀊹􀌐: 0 𝔸.pop
+          ↪󱠨(𝖠₀, ns={__file__=𝖠₀,__dir__=𝖠₀𝐩􀯖.parent,__name__=‹__main__›}, ƒ=󰲣EXEC_NATIVE(x,y,y))
+  ⸘f􀉨‹.󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval
+  ⸘f􀉨‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦
+  ⸘f􀉨‹󷱉󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦􊾖
+  ⸘f􀉨‹C󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 EXEC_NATIVE
+  ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
+  ⸘f􀉨‹get-dir›: moon_dir􀊸
+  ¡: þdo_imps􀃅
+     ¿f􀉨‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input􀃅 􀯖 VEP 􀯖 __highlighter__ 􀯖 􀊸
+     ⸘f􀉨‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀉳VEP􀋢𝘀         􀯖 __highlighter__ 􀯖 􀊸
+     ⸘f􀉨‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀉳PEV􀋢𝘀                           􀯖 􀊸
+     ⸘f􀉨‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
+     ⸘f􀉨‹b󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap
+     ⸘f􀉨‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀜦0􀊱1􀊱2􀜙󰲡compile_code(x₀,ƒ=ƒ)􀯖(x₁􀯗(x₁,⬤)􀯘􀁦)
+     ¡           : ‹Invalid mode(s): ⟦f⟧›􀊸 􀝔 show_docs􀃅
 
 ⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,transpiler_cli,moon_cli
 
