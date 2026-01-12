@@ -3,8 +3,10 @@ code_file_caching=✓
 
 TMP = mkd(TMPDIR􀋋__file__  sha)
 header_com = moon_dir􀋋‹Builtins›ᑀ􀋋‹⟦⟝⟧.☾›􀯖.resolve􀃅ᐛ(moon_dir􀋋‹Builtins/builtins›)􀋦
-pathlib_import = ‹from pathlib import Path as ⟦␛𝐩 PEV⟧
-                  moon_dir = ⟦␛𝐩 PEV⟧(__file__).parent›
+pathlib_import = ‹from pathlib import Path as ⟦␛𝐩PEV⟧
+                  from os import environ as ⟦‹env›PEV⟧
+                  moon_dir = env.get("MOON_BASE_DIR")
+                  moon_dir = ⟦␛𝐩PEV⟧(moon_dir) if moon_dir else ⟦␛𝐩PEV⟧(__file__).parent›
 
 to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
 ⊢moon_to_py_debug(𝚌,show_ast=✓,show_out=✓,show_out_no_rename=✗,show_preast=✗,show_in=✗,⠶𝕂):
@@ -44,16 +46,6 @@ moon_to_py􋈨 = {}
   ↪𝘤
 compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 
-🟑
-⊢ refresh_cached_imports: TP_CACHE.clear􀃅
-                          reimps = ⍁
-                          ∀k,v⬠[⠤__þIMPORTS__]¿v≇□∧(v.hardcoded∨v.name≡‹Compiler›):
-                              ¿v.__file__≕f⭢.is_file􀃅: reimps.append(f)
-                              __þIMPORTS__.pop(k)
-                          reimps󷺻(sha(⟞ ≕c,{},{}),c moon_to_py)◄‹Transpiled ⟦⟞⟧›☾ᐸ␛
-                                ꟿ󰲣moon_to_py.𝔠ₓ≔y
-🟑
-
 ⊢generate_bootstrap(dest=TMP􀋋‹moon.py›):
   file_canon = __file__.with_suffix(‹.☾›)
   _,ƒ = PL_FORK(compile_code,file_canon,✓,log=✓)
@@ -68,29 +60,33 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
          os.chmod(dest,0o775)  chmod(dest,‹+x›)  󰤱􊽨
   ↪pyc
 
-⊢generate_bootstrap_live(⠤𝔸,⠶𝕂): __þIMPORTS__.clear􀃅
-                                 TP_CACHE.clear􀃅
-                                 ‹⨡􋀸text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸text_format
-                                 ‹⨡􋀸cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸cache
-                                 ‹⨡􋀸peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/rgx_golfatron
-                                 ‹⨡􋀸peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3
-                                 ‹⨡􋀸peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸peggle3/gram_tools
-                                 ‹⨡􋀸Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/gram.data
-                                 ‹⨡􋀸Compiler/generate_operators›􀊸 ; ⨡􋀸Compiler/generate_operators
-                                 ‹⨡􋀸Compiler/operator󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/operator
-                                 ‹⨡􋀸Compiler/node_types󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/node_types
-                                 ‹⨡􋀸Compiler/tree󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree
-                                 ‹⨡􋀸Compiler/tree_txt󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/tree_txt
-                                 ‹⨡􋀸Compiler/expr󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/expr
-                                 ‹⨡􋀸Compiler/lambdas󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/lambdas
-                                 ‹⨡􋀸Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/rewriters
-                                 ‹⨡􋀸Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/to_ast
-                                 ‹⨡􋀸Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸Compiler/ast_to_py
-                                 ‹⨡􋀸errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; ⨡􋀸errors
-                                 ‹c=⨡􋀸Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; c=⨡􋀸Compiler
-                                 TRANSPILE_REF(c.þmoon_to_py)  (c.moon_to_py)
-                                 c.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›)
-                                 ŧ𝼝(‹Generated bootstrap!›,‹f0f›)􀊸
+⊢force_reimport_compiler:
+  __þIMPORTS__.clear􀃅
+  TP_CACHE.clear􀃅
+  ‹Importing text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸text_format
+  ‹Importing cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸cache
+  ‹Importing peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/rgx_golfatron
+  ‹Importing peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3
+  ‹Importing peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/gram_tools
+  ‹Importing Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/gram.data
+  ‹Importing Compiler/generate_operators›􀊸 ;   ⨡􋀸Compiler/generate_operators
+  ‹Importing Compiler/operator󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/operator
+  ‹Importing Compiler/node_types󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/node_types
+  ‹Importing Compiler/tree󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/tree
+  ‹Importing Compiler/tree_txt󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/tree_txt
+  ‹Importing Compiler/expr󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/expr
+  ‹Importing Compiler/lambdas󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/lambdas
+  ‹Importing Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/rewriters
+  ‹Importing Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/to_ast
+  ‹Importing Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/ast_to_py
+  ‹Importing errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸errors
+  ‹Importing Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; c=⨡􋀸Compiler
+  TRANSPILE_REF(c.þmoon_to_py)
+  show_imports􀃅
+  ↪c
+⊢generate_bootstrap_live(⠤𝔸,⠶𝕂):
+  force_reimport_compiler􀃅.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›)
+  ŧ𝼝(‹Generated bootstrap!›,‹f0f›)􀊸
 
 ⊢moon_cli(extract=✗,ia=✓,rl=✓):
   ⦃import traceback⦄
@@ -126,6 +122,8 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
                        -o <file_in> <file_out?stdout>›􀊸
   𝖠,f=[⠤𝖠],∅
   ∀𝖠 􀛾 𝖠₀􀯑𝖺􀯖₀􀒰␛- ¿ f􇀞􀊳(0 𝖠.pop 􀯖₁﹕ᑀ₀􀉞␛-􇀶􍪵􍪴􊬤􊲯) 􁁯 𝖺􀉟2␛-: □
+  ¿␛R􀉧f: þdo_imps􀃅
+         force_reimport_compiler􀃅
   ƒ = ␛a␛A􀊴f􀞴 􇂖moon_to_py􇂗 þdo_imps􀃅􀊰𝚲moon_to_py_debug(⠤𝔸,⠶𝕂,show_preast=f􀉨␛A)
   
   ¿f􀒪𝖠: þdo_imps􀃅 􀊰 moon_cli􀃅
