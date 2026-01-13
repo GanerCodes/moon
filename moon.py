@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='X_w6Qnf07-l9mWpfslaGcyd_WygMLvxmpoZtxa3UTrM'
+BOOTSTRAP_HASH='PvBnZUkbloSeOHv81jhrDiC_I9EonkHfhNSyCVHTECo'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
