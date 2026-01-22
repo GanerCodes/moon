@@ -6,6 +6,8 @@
 󱀘DatabaseError(𝑒): ⊢__init__(𝕊,⠤𝔸,⠶𝕂):
                      super().__init__(𝔸₀)
                      𝕊.__dict__.update(𝕂)
+                     ¿𝔸􀊹≥2: 𝕊.__context__ = 𝔸₁
+                            𝔸􀊹􀉞2􀉓
 󱀘DataBaseMalformedDataError(DatabaseError):□
 󱀘DatabaseBulkTransactionError(DatabaseError):□
 󱀘DatabaseRecordError(DatabaseError):□
@@ -21,24 +23,27 @@ LMDB_ev,LMDB_dv = pdump,pload
     𝕊􀲡,𝕊ᵀ = 𝚍,□
     𝕊.tables = tablesᐵᔐ,𝕊ᵈᵇ.open_db(⟞ LMDB_et)ᐸℵ
     𝕊.lock = RLock
-  tx   = ⥌𝕊,ƒ,w=✓↦ⓦ(𝕊.lock, ⥌⠤_↦𝕊ᵀ􀋒□ ⭜ƒ(𝕊.T)⭝ ⓦ(𝕊ᵈᵇ.begin(write=w), ƒ))
-  iter = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.cursor(𝕊.tables󰂢)􀉴󰲣LMDB_dk(x)⋄LMDB_dv(y)                                                               , ✗)
-  len  = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.stat  (                      db=𝕊.tables󰂢)􋕨ₑₙₜᵣᵢₑₛ􋕨                                                    , ✗)
-  has  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀋒□                                                           , ✗)
-  get  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀯑v􀋒□􇀆LMDB_dv(v)􇀇KeyError(‹Table ⟦P⟧ does not contain ⟦k⟧!›) 􀊗, ✗)
-  set  = ⥌𝕊,P,k,v↦𝕊ᵗˣ(󷺹.put   (LMDB_ek(k),LMDB_ev(v),db=𝕊.tables󰂢)                                                             , ✓)
-  del  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.delete(LMDB_ek(k),           db=𝕊.tables󰂢)                                                             , ✓)
+  tx   = ⥌𝕊,ƒ,w=✓↦ⓦ(𝕊.lock, ⥌⠤_↦𝕊ᵀ􇪨 􇀶ƒ(𝕊.T)􇀷 ⓦ(𝕊ᵈᵇ.begin(write=w), ƒ))
+  iter = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.cursor(𝕊.tables󰂢)􀉴󰲣LMDB_dk(x)⋄LMDB_dv(y)                                                              , ✗)
+  len  = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.stat  (                      db=𝕊.tables󰂢)􋕨ₑₙₜᵣᵢₑₛ􋕨                                                   , ✗)
+  has  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􇪨                                                           , ✗)
+  get  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀯑v􇪨􇀆LMDB_dv(v)􇀇KeyError(‹Table ⟦P⟧ does not contain ⟦k⟧!›) 􀊗, ✗)
+  set  = ⥌𝕊,P,k,v↦𝕊ᵗˣ(󷺹.put   (LMDB_ek(k),LMDB_ev(v),db=𝕊.tables󰂢)                                                            , ✓)
+  del  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.delete(LMDB_ek(k),           db=𝕊.tables󰂢)                                                            , ✓)
   ⊢__enter__(𝕊):
+    ¿‹MEASURE_DB›􀉧env: ‹DB Enter @ ⟦time􀃅⟧›􀊸
     𝕊.lock.acquire􀃅
     𝕊ᵀ=𝕊ᵈᵇ.begin(write=✓).__enter__()
     ↪𝕊
   ⊢__exit__(𝕊,ε_type,ε,tb):
-    𝐸,r = ε􀋁󰁐􁗻􋄅,□
+    r = □
           r = 𝕊ᵀ.__exit__(ε_type,ε,tb)
-    ¡𝜺=𝑒𝑒: 𝐸􀯿􀊩􊸣
+    ¡𝜺=𝑒𝑒: 𝜺.__context__ = ε
+           ε = 𝜺
     𝕊ᵀ = □
     𝕊.lock.release􀃅
-    ¿𝐸: DatabaseError(DatabaseBulkTransactionError(‹Error in bulk transaction!›)􀋁􀕈𝐸) 􀊗
+    ¿‹MEASURE_DB›􀉧env: ‹DB Exit @ ⟦time􀃅⟧›􀊸
+    ¿ε: DatabaseBulkTransactionError(‹Error in bulk transaction!›,ε)􀊗  󰤱 fix error tracebacks not working right reee
     ↪r
 
 ⊢DB_WRAP(Ω):  Ω(𝐩,[ᔐ]) → iter,len,has,get,set,del
@@ -60,7 +65,7 @@ LMDB_ev,LMDB_dv = pdump,pload
       
       ⊢show(𝕊,header=␀,print=✓):
         r = grid([𝕊􀳭􀉳ŧ𝼝(⬤,,‹333›)􀠓𝕊􀳓􀉳ŧ𝼝(⬤,,‹111›)􀠓􊬏􊬐,⠤𝕊ᐖ[⠤⟞₁ᑀ.get(⟝,␛␀)ᔐᐛC􀯽𝕊􀳭􀊩𝕊􀳓,⟞₁􀊪C→ᔐ]])
-        ¿header􀋒□: ¿header􀋑␀: header=𝕊􀲡.stem
+        ¿header􀋒□: ¿header􀋑␀: header=‹⟦𝕊􀲡.stem⟧ ─ ⟦𝕊􀲵⟧›
                    ¡        : header􀯏ᔐ
                    r􀯏title(header,⬤)
         ↪r􀊚ᵖʳⁱⁿᵗ􀁦
@@ -69,7 +74,7 @@ LMDB_ev,LMDB_dv = pdump,pload
                      ¡   : 𝚁􀊜𝗜 􁀒
                       ∀𝚛⬠𝚁: 𝕊􀲯􀉧𝚛 􁁖 DataBaseMalformedDataError(‹Record ⟦𝚛⟧ has no superprimary key!›)
                              𝕊󰁤.set(𝕊􀲯𝕊􍻂,𝚛􊶊􀵂,𝚛)
-                     ¡ε=𝑒: DatabaseError(DatabaseRecordError(‹Failed to update records: 𝚁=⟦𝚁⟧›) 􀝕 ε) 􁁖
+                     ¡ε=𝑒: DatabaseRecordError(‹Failed to update records: 𝚁=⟦𝚁⟧›,ε) 􁁖
                      ↪𝕊
       
       ⊢iter(𝕊,P      ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
@@ -140,7 +145,7 @@ LMDB_ev,LMDB_dv = pdump,pload
          ⊢(󰲡𝚲ⓦ(db,⥌⠤_↦x)) test: db["h"] = {email="yo@yo.yo"}ℵ
                                  db["h"]☾
                                  db["abc"] = {}ℵ
-                                 db.show
+                                 db.show􀃅
                                  ✗􀉓‹Yay›
                test
          ¡ε=𝑒𝑒: ‹Error is expected here: ⟦ε⟧›􀊸
@@ -151,7 +156,7 @@ LMDB_ev,LMDB_dv = pdump,pload
          𝔇,𝔉 = 󰆼(‹/tmp/DB_TEST2›,main="p v"􀌌,sneed="p v sand"􀌌)
          𝔇[‹x›] = {v=␛1}ℵ
          𝔇
-         ⊢(ƒ↦𝚲ⓦ(𝔇,⥌⠤↦ƒ)) A: ‹A₀: x≡⟦𝔇[‹x›]⟧›􀊸
+         ⊢(ƒ↦𝚲ⓦ(𝔇,⥌⠤_↦ƒ)) A: ‹A₀: x≡⟦𝔇[‹x›]⟧›􀊸
                              ½ sleep
                              ‹A₁: x≡⟦𝔇[‹x›]⟧›􀊸
                              𝔇[‹x›] = ℵ(v=␛A)
@@ -163,7 +168,7 @@ LMDB_ev,LMDB_dv = pdump,pload
                   ‹B₁: x≡⟦𝔇[‹x›]⟧›􀊸
                   𝔇[‹x›] = ℵ(v=␛B)
                   ‹B₂: x≡⟦𝔇[‹x›]⟧›􀊸
-         ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤↦ƒ)) C: 𝔉[‹x›] = ℵ(v=␛C)
+         ⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤_↦ƒ)) C: 𝔉[‹x›] = ℵ(v=␛C)
                              ‹C₁: x≡⟦𝔉.p.get(␛x)⟧›􀊸
          PL_THREAD(A)
          PL_THREAD(B)

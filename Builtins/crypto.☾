@@ -1,13 +1,19 @@
 🟑 § RNG §
   󰤱 add versions with seeding 🟑
+  
+⊢SR_bytes(x=□,y=□):  [x,y]
+  ¿x􀋑□􀋑y: ↪PL_URANDOM(1)₀  SR_bytes( ): 1 byte
+  ¿y􀋑□  : ↪PL_URANDOM(x)   SR_bytes(x): x bytes
+  ¿x􀋑□: x=0                SR_bytes(□,y): 0 to-or-eq y bytes
+  ↪SR_bytes(SR_int(x,y))   SR_bytes(x,y): x to-or-eq y bytes
 ⊢SR_int(x=□,y=□):  [x,y]
   ¿x􀋑□: y􀋑□ 􁀒
-        ↪PL_URANDOM(1)₀
+        ↪SR_bytes􀃅
   ¿y􀋑□: x,y=0,x
   ¿x􀉤y: x,y=y,x
   r = y􀊪x
   l = r.bit_length􀃅
-  ∀(𝑖.from_bytes(PL_URANDOM(l􀋋8􀡕))􀝊2ˡ􀊪1)􇂐s 􀉤 r: □
+  ∀(𝑖.from_bytes(SR_bytes(l􀋆8􀡕))􀝊2ˡ􀊪1)􇂐s 􀉤 r: □
   ↪x􀊩s
 ⊢SR_float(x=□,y=□):  [x,y]
   ¿x􀋑□: y􀋑□ 􁀒
@@ -38,9 +44,6 @@
       ✗􁀒
   ↪𝚜􀋑␀ 􇂖ƒ􀃅􇂗 ⍁􀲿􀉴ƒ
 
-🟑 § Hashing § 🟑
-􇦆 = sha = 𝚲𝑀(urlsafe_b64encode(_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest())).rstrip(␛=)
-
 🟑 § Encoding/Decoding § 🟑
 stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
 
@@ -49,4 +52,9 @@ stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
            __call__ = 𝕊↦𝕊[𝕊.__dict__₁](⠤𝔸,⠶𝕂)
            __pow__  = 󰲣x
 􇦌 = 􇦎 = 𝔍 = Cmap(>,{>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__})
-􇦔 = Cmap(>,{>:urlsafe_b64encode,<:urlsafe_b64decode})
+􇦔 = Cmap(>,{ >:󰲡𝑀(urlsafe_b64encode(x􀊚􋅂􁗇􋇦𝑀)).rstrip(␛=),
+             <:󰲡  urlsafe_b64decode(𝑀(x􀊚􋅂􁗅􋇦𝑀 􀾢 ␛=􀝬4􀓼x􀊹􀋉4)) })
+
+🟑 § Hashing § 🟑
+􇦆 = sha = Cmap(>,{ >: 𝚲_sha256(𝑀(ᔐ(𝔸)+ᔐ(𝕂))).digest() 􇦔,
+                   𝑦: 󰲡_sha256(x􀊚􋅂􁗇􋇦𝑀).digest() })

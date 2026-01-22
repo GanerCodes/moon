@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='PvBnZUkbloSeOHv81jhrDiC_I9EonkHfhNSyCVHTECo'
+BOOTSTRAP_HASH='E65ZaTOHElPaH296kjVe7pKVo6iFXfcNwQojMEPuA1A'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -1534,12 +1534,24 @@ class áÍáþáÍá(áÍá):
     None
 
 
-#crypto.☾ (1409 ⟶ 3361)
+#crypto.☾ (1752 ⟶ 3904)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/crypto.☾')).parent
+def SR_bytes(x=None,y=None):
+    if ((((x is ÄÊPSH(None)) and (ÄÊPOP() is ÄÊPSH(y))) and (ÄÊDEL(1) or True)) or (ÄÊDEL(1) or False)):
+        return PL_URANDOM(1)[0]
+    
+    if (y is None):
+        return PL_URANDOM(x)
+    
+    if (x is None):
+        (x:=0)
+    
+    return SR_bytes(SR_int(x,y))
+
 def SR_int(x=None,y=None):
     if (x is None):
         ÂùÆ((y is None))
-        return PL_URANDOM(1)[0]
+        return ÐÌü(SR_bytes)
     
     if (y is None):
         (ÄÊPSH((0,x)),((x:=ÄÊPKE(0)[0]),(y:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
@@ -1549,7 +1561,7 @@ def SR_int(x=None,y=None):
     
     (r:=(y - x))
     (l:=ÐÌü((r).bit_length))
-    while(((s:=(((áÍÞ).from_bytes(PL_URANDOM(Âüï(ð(l,8)))) & (((2 ** (l))) - 1)))) > r)):
+    while(((s:=(((áÍÞ).from_bytes(SR_bytes(Âüï((l / 8)))) & (((2 ** (l))) - 1)))) > r)):
         None
     
     return (x + s)
@@ -1613,7 +1625,6 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     
     return ((ÐÌü(Æå))if((áØÁ is ÂÞÅ))else(ËãÂ(MOD(ÂÚü,áØÁ=áØÁ)(),Æå)))
 
-(ÄïÉð:=(sha:=(lambda *áÑË,**áÑÕ:(áÍÇ(urlsafe_b64encode((_sha256(áÍÇ((ÁÜÙ(áÑË) + ÁÜÙ(áÑÕ))))).digest()))).rstrip(("=")))))
 (ÄÊPSH((MOD((lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),zibe),b85e),áÍÇ))),MOD((lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),b85d),zibd),áÍÇ))))),((stre:=ÄÊPKE(0)[0]),(strd:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 class Cmap(ÂÑÖ):
     def __init__(áÑÞ,d,*áÑË,**áÑÕ):
@@ -1624,7 +1635,8 @@ class Cmap(ÂÑÖ):
     (__pow__:=(lambda x,y:x[y]))
 
 (ÄïÉö:=(ÄïÉù:=(áÐÞ:=Cmap(ÁÁ,{ÁÁ:ÄÊCUR((1,),{"ensure_ascii":False,"indent":None,"separators":(",:")},jdumps__,ÂýÃ),ÿ:jloads__}))))
-(ÄïÊÀ:=Cmap(ÁÁ,{ÁÁ:urlsafe_b64encode,ÿ:urlsafe_b64decode}))
+(ÄïÊÀ:=Cmap(ÁÁ,{ÁÁ:(lambda x:(áÍÇ(urlsafe_b64encode(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ)))).rstrip(("="))),ÿ:(lambda x:urlsafe_b64decode(áÍÇ((MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÁØö,ÂýÃ,áÍî))(x,áÍÇ) + (("=") * (4 - (ãÊú(x) % 4)))))))}))
+(ÄïÉð:=(sha:=Cmap(ÁÁ,{ÁÁ:(lambda *áÑË,**áÑÕ:ÂÞÅCAT((_sha256(áÍÇ((ÁÜÙ(áÑË) + ÁÜÙ(áÑÕ))))).digest(),ÄïÊÀ)),áÍî:(lambda x:(_sha256(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ))).digest())})))
 
 #ugex.☾ (2460 ⟶ 4855)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/ugex.☾')).parent

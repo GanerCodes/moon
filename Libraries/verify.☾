@@ -1,0 +1,28 @@
+󱀘VerifyError(𝑒): ⊢__init__(𝕊,⠤𝔸,⠶𝕂):
+                   super().__init__(𝔸₀)
+                   𝕊.__dict__.update(𝕂)
+
+󱀘 Verifier:
+  ⊢__init__(𝕊,ƒ,k,e=✗): 𝕊􊽺,𝕊ᵏ,𝕊ᵉ = ƒ,k,e
+  ⊢__add__ (𝕊,x): ↪__class__(𝕊􀊱xᐵᵉ􀯗⟞􊽺􀯘􍪴ᐸ􀋶,␛Ѵ,✓)
+  ⊢__or__  (𝕊,x): ↪__class__(𝕊􊽺􀊤x􊽺,␛Ѵ,✗)
+  ⊢__call__(𝕊,𝚡):
+         𝓉,k,e = 𝕊􊽺,𝕊ᵏ,𝕊ᵉ
+          ¿k≡␛ⴲ: ↪𝚡 𝓉
+          ¿k≡␛Ɱ: ↪𝚡 𝓉
+          ¿k≡␛Ғ: 𝚡 𝓉 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ failed to pass filter›)
+                 ↪𝚡
+          ¿k≡␛Ͷ: 𝚡􀊜𝑙 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ is not a list›)
+                 ↪𝚡ᐵ𝓉
+          ¿e: ↪𝓉􀉷􀳉󷺹󷺽
+          ¿𝓉􀊜__class__: ↪𝚡 𝓉
+          ¿𝓉􀊜𝑙: 𝚡􀊜𝑙 􀛾 𝚡􀊹􀒰􀊹𝓉 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ is not a list or not of length ⟦𝓉􀊹⟧›)
+                ↪𝚡ᐵᑈ𝓉
+          ¿𝓉􀊜𝑑: 𝚡􀊜𝑑 􁁖 ‹⟨⟦𝚡⟧⟩ is not a dict›
+                ↪𝓉ꟿ󰲣x􀉧𝚡 􇁖x􀊱𝚡ₓy􇁗 yᵏ􀉞␛ⴲ 􀖯 VerifyError(‹⟨⟦𝚡⟧⟩ is missing property "⟦x⟧"›) 􀠚 󰮈
+          􁁖 VerifyError(‹⟦𝓉⟧ is an invalid template!›)
+    ¡ε=𝑒: 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ failed to pass ⟦𝕊⟧: ⟦ε⟧›,ε)
+  __repr__ = 𝕊↦‹⟦𝕊ᵏ⟧⟨⟦𝕊􊽺􀊜𝗙 􀰇␛ƒ􀰈 𝕊􊽺 ᔐ⟧⟩›
+Ғ,Ɱ,Ͷ,ⴲ,Ѵ = ‹ҒⱮͶⴲѴ›ᐖVerifier(⬤,⟞)
+
+⭷ Ғ,Ɱ,Ͷ,ⴲ,Ѵ
