@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='E65ZaTOHElPaH296kjVe7pKVo6iFXfcNwQojMEPuA1A'
+BOOTSTRAP_HASH='f5tFXP7aT-kW_ShBCptH0rQlu_WUAPDqkoxE13QMFAA'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -1534,8 +1534,16 @@ class áÍáþáÍá(áÍá):
     None
 
 
-#crypto.☾ (1752 ⟶ 3904)
+#crypto.☾ (2596 ⟶ 5006)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/crypto.☾')).parent
+class Cmap(ÂÑÖ):
+    def __init__(áÑÞ,d,*áÑË,**áÑÕ):
+        (super()).__init__(*áÑË,**áÑÕ)
+        (ÄÊPSH((áÑÞ).__dict__),ÄÊPSH(1),ÄÊPSH(d),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
+    
+    (__call__:=(lambda áÑÞ,*áÑË,**áÑÕ:áÑÞ[(áÑÞ).__dict__[1]](*áÑË,**áÑÕ)))
+    (__pow__:=(lambda x,y:x[y]))
+
 def SR_bytes(x=None,y=None):
     if ((((x is ÄÊPSH(None)) and (ÄÊPOP() is ÄÊPSH(y))) and (ÄÊDEL(1) or True)) or (ÄÊDEL(1) or False)):
         return PL_URANDOM(1)[0]
@@ -1625,18 +1633,37 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     
     return ((ÐÌü(Æå))if((áØÁ is ÂÞÅ))else(ËãÂ(MOD(ÂÚü,áØÁ=áØÁ)(),Æå)))
 
+(ÄïÉð:=(sha:=Cmap(ÁÁ,{ÁÁ:(lambda *áÑË,**áÑÕ:ÂÞÅCAT((_sha256(áÍÇ((ÁÜÙ(áÑË) + ÁÜÙ(áÑÕ))))).digest(),ÄïÊÀ)),áÍî:(lambda x:(_sha256(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ))).digest())})))
 (ÄÊPSH((MOD((lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),zibe),b85e),áÍÇ))),MOD((lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),b85d),zibd),áÍÇ))))),((stre:=ÄÊPKE(0)[0]),(strd:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
-class Cmap(ÂÑÖ):
-    def __init__(áÑÞ,d,*áÑË,**áÑÕ):
-        (super()).__init__(*áÑË,**áÑÕ)
-        (ÄÊPSH((áÑÞ).__dict__),ÄÊPSH(1),ÄÊPSH(d),setitem(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
-    
-    (__call__:=(lambda áÑÞ,*áÑË,**áÑÕ:áÑÞ[(áÑÞ).__dict__[1]](*áÑË,**áÑÕ)))
-    (__pow__:=(lambda x,y:x[y]))
-
 (ÄïÉö:=(ÄïÉù:=(áÐÞ:=Cmap(ÁÁ,{ÁÁ:ÄÊCUR((1,),{"ensure_ascii":False,"indent":None,"separators":(",:")},jdumps__,ÂýÃ),ÿ:jloads__}))))
 (ÄïÊÀ:=Cmap(ÁÁ,{ÁÁ:(lambda x:(áÍÇ(urlsafe_b64encode(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ)))).rstrip(("="))),ÿ:(lambda x:urlsafe_b64decode(áÍÇ((MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÁØö,ÂýÃ,áÍî))(x,áÍÇ) + (("=") * (4 - (ãÊú(x) % 4)))))))}))
-(ÄïÉð:=(sha:=Cmap(ÁÁ,{ÁÁ:(lambda *áÑË,**áÑÕ:ÂÞÅCAT((_sha256(áÍÇ((ÁÜÙ(áÑË) + ÁÜÙ(áÑÕ))))).digest(),ÄïÊÀ)),áÍî:(lambda x:(_sha256(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ))).digest())})))
+try :
+    from Crypto.Cipher import AES
+    from Crypto.Util.Padding import pad,unpad
+except áÍÚ as Ðáü:
+    Âçß(("Failed to import Crypto! Do you have pycryptodome installed?"))
+
+def AES_ENC_SIV(áÖú,k):
+    return ÂøÑ(((AES).new(k,(AES).MODE_SIV)).encrypt_and_digest(áÖú))
+
+def AES_DEC_SIV(m,k):
+    return ((AES).new(k,(AES).MODE_SIV)).decrypt_and_verify(*(áÇù(m,((- 16 )))))
+
+def ENC_BYTES(áÖú,k,áÕÎ=True):
+    if áÕÎ:
+        (áÖú:=(SR_bytes(8) + áÖú))
+    
+    (n:=((16 - ((ãÊú(áÖú) + 1) % 16)) % 16))
+    return AES_ENC_SIV(ÂÞÅCAT([((n + 1) + ((8)if(áÕÎ)else(0))),*(ÂÞÅCAT([0],n)),*áÖú],áÍî),(lambda ÂîÓ:(ÂîÓ + ÂÞÅCAT(ÂîÓ,ÄïÉð[áÍî])))(ÂÞÅCAT(k,ÄïÉð[áÍî])))
+
+def DEC_BYTES(m,k):
+    return (lambda ÂîÓ:ÂîÓ[slice(ÂîÓ[0],None)])(AES_DEC_SIV(m,(lambda ÂîÓ:(ÂîÓ + ÂÞÅCAT(ÂîÓ,ÄïÉð[áÍî])))(ÂÞÅCAT(k,ÄïÉð[áÍî]))))
+
+class ÄïÉï:
+    (__getitem__:=(lambda x,y:Cmap(ÁÁ,{ÁÁ:(lambda x:ENC_BYTES(ÂÞÅCAT(ÂÞÅCAT(x,ÄïÉù[ÁÁ]),áÍÇ),y,True)),Âúú:(lambda x:ENC_BYTES(ÂÞÅCAT(ÂÞÅCAT(x,ÄïÉù[ÁÁ]),áÍÇ),y,False)),ÿ:(lambda x:ÂÞÅCAT(ÂÞÅCAT(DEC_BYTES(x,y),áÍÇ),ÄïÉù[ÿ]))})))
+    (__getattr__:=__getitem__)
+
+(ÄïÉï:=ÐÌü(ÄïÉï))
 
 #ugex.☾ (2460 ⟶ 4855)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/ugex.☾')).parent
