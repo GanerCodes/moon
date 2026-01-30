@@ -1,4 +1,3 @@
-⨡ cache
 code_file_caching=✓
 
 TMP = mkd(TMPDIR􀋋__file__  sha)
@@ -64,7 +63,6 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   __þIMPORTS__.clear􀃅
   TP_CACHE.clear􀃅
   ‹Importing text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸text_format
-  ‹Importing cache󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸cache
   ‹Importing peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/rgx_golfatron
   ‹Importing peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3
   ‹Importing peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/gram_tools
