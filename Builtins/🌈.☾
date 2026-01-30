@@ -38,7 +38,7 @@ styd = (moon_dir/‹Builtins/Data/style.json›)  𝔍󰄟 ℵ
   R = [mkc(n,⠤h2r(c))∀c,n⬠fg⋄bg󱑼38⋄48¿c≇□]⨝
   ↪‹⟦R⟧⟦t⟧⟦rst⭜􊾖rlw(fg≅□∧bg≅□⭜ᐦ⭝fg≅□⭜TERM_RESET_B⭝bg≅□⭜TERM_RESET_F⭝TERM_RESET)⟧›
 
-⊢(cache)sty(s,bg=0,def=‹bec›):
+⊢(cache_)sty(s,bg=0,def=‹bec›):
   ∀k,v⬠styd¿s∈k ∧ v∋‹fg›: ↪termclr(s,v􊬏􊬐,bg)
   ↪termclr(s,def,bg)
 __highlighter__ = ⥌l,b=□,clr=‹bec›↦l ᔐ VEP ᴍ sty(⬤,b,clr) ⭢ ⨝

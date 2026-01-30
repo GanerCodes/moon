@@ -29,8 +29,6 @@
 mkmk_cache = Ƈ↦⥌𝘩=sha,𝘦=pdump,𝘥=pload,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
 cache,fcache = Cacher􀊱FileCacher 􀓅 mkmk_cache
 
-⭷ Cacher,FileCacher,cache,fcache,mkmk_cache
-
- sqc = fcache(fp="/tmp/weed")(☾○√)
- sqc(5)
- sqc(5)
+🟑 sqc = fcache(fp="/tmp/weed")(☾○√)
+  sqc(5)
+  sqc(5) 🟑

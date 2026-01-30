@@ -7,7 +7,7 @@
 ⸘REGEX_LIB≡‹regex›: ⊢regex(P,⠤𝔸,⠶𝕂): ↪re.compile(P,⠤𝔸,⠶𝕂)
 ⸘REGEX_LIB≡‹re󷺗󷺗󷺗›: ⊢regex(P,⠤𝔸,⠶𝕂): ↪re.compile(P,⠤𝔸,⠶𝕂)
 
-𝼞cache = ƒ↦cache(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
+𝼞cache = ƒ↦cache_(ƒ)≕ꬶ►𝚲(𝔸ᐵᐹ𝗜⭜⟞🃌⭝1ᐸ⨁<1024⭜ꬶ⭝ƒ)(⠤𝔸,⠶𝕂)
 
 find_esc_seqs = 𝜺 = regex(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[𝟬𝟭𝟬𝟮]›)
 find_next_char    = regex(‹((?:⟦S⟧)*.?)›)

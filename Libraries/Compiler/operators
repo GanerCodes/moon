@@ -317,8 +317,9 @@
     󰤱 docs
 󷰭 ? 𝚡.   do if valid attribute
     󰤱 docs
-󷰭 ⍰ 𝚡󷺤􊽨𝚡 quad? check if not □
+󷰭 ⍰󷸆 𝚡󷺤􊽨𝚡 Q?⟦𝕊/⟧ check value is{ not,} □
     `□⍰ ≡ ✗`
+    `□󷸆 ≡ ✓`
     `0⍰ ≡ ✓`
     `0⍰² ≡ ✓`
     `□⍰² ≡ 2`
@@ -377,11 +378,11 @@
 󷰭 ᴙ 𝚡󷺤􊽨𝚡 cR𝕊 reverse
     `"hello"ᴙ ≡ "olleh"`
     `3⭥ᴙ ≡ [2,1,0]`
-󷰭 ⋀ 𝚡󷺤􊽨𝚡 VW all
+󷰭 ⋀󷸇 𝚡󷺤􊽨𝚡 VW⟦𝕊/⟧ {,not}all
     returns first falsy value or last value
     󷹇 ⋀􋇜 sets default for empty iterable (✓ if excluded)
     󰤱 examples
-󷰭 ⋁ 𝚡󷺤􊽨𝚡 VS any
+󷰭 ⋁󷸈 𝚡󷺤􊽨𝚡 VS⟦𝕊/⟧ {,not}any
     returns first truthy value or last value
     󷹇 ⋁􋇜 sets default for empty iterable (✗ if excluded)
     󰤱 examples
@@ -636,6 +637,9 @@
     ❗ susceptible to change! ❗
 󷰭 @ 𝚡󷸐􊽨𝚡   custom operator
     󰤱 docs
+󷰭 󰶡󰶣 𝚡󷸐􊽨𝚡 CA⟦-+⟧ {add,subtract} 1
+    󰤱
+    ❗ susceptible to change! ❗
 󷰮 ¬ 𝚡󷺤𝚡 n𝕊 not
     Opposite of bool value of
 󷰮 ¯ .𝚡 _𝕊 negate
@@ -665,7 +669,7 @@
     If object has __inverse__ property will call it w/ modifier as args
     ƒ󷹁􊽹: returns inverse multimap by computing ƒ(x)∀x∈Ɗ
     󰤱˜ docs
-󷰱 ® 􊽨 or roots of unity
+󷰱 ® 􋅂 or roots of unity
     "®² ≡ ®(2)" ⟶ ∓1  beware IEEE 754
 󷰱 󰻾 􊽨 id𝕊 identify
     󰻾􋇜
