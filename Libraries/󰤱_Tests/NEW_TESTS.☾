@@ -1,0 +1,39 @@
+󱀘EEE(𝑒): □
+
+                ✗􀉓
+¡AssertionError: ✓
+                􀉓✗
+¡AssertionError: ✓
+                ✗􀉓‹joe›
+¡AssertionError: ✓
+
+𝘦 = ‹sand› EEE
+
+✓􀉓𝘦
+     􀉓𝘦
+¡EEE: ✓
+     𝘦􀉓 
+¡EEE: ✓
+     ✗􀉓𝘦
+¡EEE: ✓
+     1􀊪1􀉓𝘦
+¡EEE: ✓
+
+✗􀉓˜𝘦
+✗􀉓􎒢𝘦
+
+f ⛯ open(‹/tmp/joe›,␛w)
+  f.write("hi!")
+a ⛯ open(‹/tmp/joe›,␛r)
+  a.read()􀊸
+
+t = ␛H
+             hiidontexistlol
+              t = ␛X
+              ✗􀉓
+¡ε=NameError: ‹Expected NameError: "⟦ε⟧"›􀊸
+              t 􀯿􀊩␛A
+󰛕             t 􀯿􀊩␛B
+t􀉞‹HAB› 􀛷
+
+‹Passed tests!›􀊸

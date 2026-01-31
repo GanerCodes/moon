@@ -56,6 +56,7 @@ gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
     add_cmp_op_chains(󱁕)
     rewrite_ternary(󱁕)
     regroup_elements(󱁕)
+    rewrite_using(󱁕)
     rewrite_asgns(󱁕)
     rewrite_cmp(󱁕)
     󱁕.frp(󷺹ᵗ≡‹opC› ∧ OG_OP(⟞₀􋒷)≡␛⋄, 󱁕↦󱁕.set(t=␛𝐿,c=󱁕ᶜ₁﹕),pre=✓)␛

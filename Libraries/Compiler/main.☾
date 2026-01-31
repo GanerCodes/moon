@@ -77,7 +77,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   ‹Importing Compiler/rewriters󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/rewriters
   ‹Importing Compiler/to_ast󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/to_ast
   ‹Importing Compiler/ast_to_py󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/ast_to_py
-  ‹Importing errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸errors
+   ‹Importing errors󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸errors
   ‹Importing Compiler󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ; c=⨡􋀸Compiler
   TRANSPILE_REF(c.þmoon_to_py)
   show_imports􀃅

@@ -5,6 +5,7 @@
     "⨳􎒢": Deprecation warning
     󷹇 you can make the above errors by setting the following environment variables:
         MOON_WARNING_IS_ERR and MOON_DEPRECATION_IS_ERR
+    󰤱 DOCS/NEW MODES
 󷰝 󷺤󷺦  𝚡∧𝚡 vsx⟦𝕊/⟧ {XOR,NXOR}
     `✓󷺤✗ →≡ ✓ ≡← ✗󷺤✓`
     `✗󷺤✗ →≡ ✗ ≡← ✓󷺤✓`
@@ -396,7 +397,7 @@
     󷹇 Requested by Michael for future advanced math things
 󷰭 󱑍󰭧 𝚡∨􊽨𝚡 ⟦⁅time⁆⁅calq⁆⟧ {time 󰤱,date 󰤱}
     󰤱
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 tmr⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 eqi⟦𝕊/⟧ is{,n′t} same object as
     Works same as in python
@@ -702,11 +703,13 @@
 󷰽 ⨡   cim import
 󷰽 ⭸   cec extract
 󷰽 ⭷   cee export
+󷰽 ⛯   os𝕊 using
 󷰽 ↪   cr𝕊 return
 󷰽 ⊢   atd Python "def"
 󷰽 󱀘   ccl Python "class"
 󷰽 󰆴   cT𝕊 Python "del"
 󷰽    lb𝕊 Python "try"
+󷰽 󰛕   lb/ Python "finally"
 󷰽 ¿⸘¡   ⟦⁅?⟦?!⟧⁆⁅!!⁆⟧ {if,elif,else}
 󷰽 ⮂⮌   c⟦yf⟧𝕊 Python "{yield,from}"
 󷰽 ↺⇥   c⟦cb⟧𝕊 Python "{continue,break}"
@@ -735,7 +738,7 @@
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
 󷰽 󷸋󷸍   ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
->⟨5fe⟩⟶⭸⭷⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰=≟⠤⠶󷷰󷷲󷷱¿⸘¡⭜⭝󷷩󷷪
+>⟨5fe⟩⟶⭸⭷⛯󰛕⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰=≟⠤⠶󷷰󷷲󷷱¿⸘¡⭜⭝󷷩󷷪
 >⟨e6b⟩⟶󷰚⬅➡←→⭠⭢⥉
 >⟨f0a⟩⟶󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
 

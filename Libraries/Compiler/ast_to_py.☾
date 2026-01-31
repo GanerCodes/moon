@@ -5,7 +5,7 @@
 𝐌 = ℵ(𝑣_spec      = ‹✓ True ✗ False □ None›⍭ℵ,
       std_kwd     = ‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭ℵ,
       blk_cln_kwd = ‹¿ if ⸘ elif ¡ else ∀ for 󱀘 class›⍭ℵ,
-      blk_kwd     = ‹ try›⍭􋕩􊿖􊿉􋕩ℵ,
+      blk_kwd     = ‹ try 󰛕 finally›⍭ℵ,
       op          = ‹~~%%^^&&||>><<++¯---⋅*÷/›₂+‹⹏ // ⌃ ** ≥ >= ≤ <= ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›⍭⭢ℵ)
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
 RCD = 󷺹⊄ᑅabcABC123+␛_
@@ -69,10 +69,12 @@ py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜􍪵 ‹\u⟦⟞󷹝�
     ⸘󱁕ᵗ≡‹slice󷺗›: 󱁕.set(c=[𝖼𝖺𝗅𝗅(‹slice›,⠤󱁕ᶜ𝌂(ƒ≔󷺹ᵗ≡␛:)           ␛
                                          ᐖƒ(⟞₀)⭜𝗏𝗌(␛□)⛶􍪵􋌵⁻¹⭝⟞ᐸ⭢󰌷␛
                                          ᐒƒ(󱁕₀)⋅􍾕􍾏₍􊯛􊱃₎+⟞+􍾕􍾏₍􊯛􊱃₎⋅ƒ(󱁕􍨄))])  󰤱
-    ⸘󱁕ᵗ≡‹¡›: 󱁕₀ ₀ᶜ.append(𝔗(␛:))
-               ¿󱁕🃌>1: ∀c⬠󱁕₁﹕: h,⠤C = (c󷸊₀)₀ᶜ
-                              cᶜ = [𝔗(‹except ›), C∧C₀⭜C􍨄⭝𝗏(␛𝑒),
-                                    𝔗(‹ as󷺗󷺗󷺗 ›), C🃌>1⭜C₀⭝𝗏(␛), 𝔗(␛:)]
+    ⸘󱁕ᵗ≡‹⛯󷺗󷺗›: 󱁕.set(c=[𝔗(‹with ›),󱁕₀,𝔗(␛:),⠤󱁕􀊹􀉞2 􇂖􍸒 [𝔗(𝗻􀊩𝖫()),󱁕₁]])
+    ⸘󱁕ᵗ≡‹¡󰛕›: 󱁕₀ ₀ᶜ.append(𝔗(␛:))
+               ¿󱁕􀊹>1: 𝙲 = 󱁕ᶜ₁﹕
+                      ¿𝙲􍨄 ₀ ₀ ₀ ₀ᵗ􀉞␛󰛕: 𝙲.pop()ᶜ₀ᶜ.append(𝔗(␛:))
+                      ∀c⬠𝙲: h,⠤C = (c􀯏₀)₀ᶜ
+                            cᶜ = [𝔗(‹except ›), C􀉚C₀􇀦C􍨄􇀧𝗏(␛𝑒), 𝔗(‹ as ›), C􀊹􀉤1􇀦C₀􇀧𝗏(␛), 𝔗(␛:)]
                ¡    : 󱁕ᶜ.append(𝔗(‹except ⟦PEV(␛𝑒)⟧:pass›))
     ⸘󱁕ᵗ∈‹std_kwd blk_cln_kwd blk_kwd›⍭: 󱁕₀.set(t=𝐌􋑺􊫼.get(󱁕􋒷,󱁕􋒷))
                                         󱁕ᶜ.insert(1,𝔗(𝘀))
@@ -115,9 +117,10 @@ ast_swap_pos = ⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕.set(e=󱁕ᵉᐒ{ρ=⟞ᵖ,T=⟞
     ¿get_tree: ↪󱁕
     ¿reparse¬: ↪pyc
     ⦃import ast⦄
-         ↪ast.unparse(ast.parse(pyc))
-    ¡ε=𝑒: ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›☾
-          ✗⨳‹Error in python reparsing! ⟦ε⟧›
+          ↪ast.unparse(ast.parse(pyc))
+     ¡ε=𝑒: ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›􀊸
+           ✗􀉓‹Error in python reparsing! ⟦ε⟧›
+    ↪ast.unparse(ast.parse(pyc))
 
 ⭷ ast_to_py,PEV,VEP
 
