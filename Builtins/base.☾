@@ -189,17 +189,19 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
 ´ⴳ´ = ´ⴳ´()
 ´ⴴ´ = ´ⴴ´()
 
-⊢ ⨳´(𝚡=␀,𝚢=␀,𝚜=␀):
-    ¿𝚡:↪𝚡
-    𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›∈env
-    𝚍 = 𝚠∨‹MOON_DEPRECATION_IS_ERR›∈env
-    ¿𝚜≅󰔛´: 𝖻,𝗆 = 𝚍,‹Deprecation ⟦𝚍⭜"Error"⭝"Warning"⟧›
-    ⸘𝚜≅~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠⭜" [as Error]"⭝ᐦ⟧›
-    ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›
-     𝗆 = ‹⟦𝗆⟧ ⟨⟦𝚡⟧⟩⟦𝚢􀋒␀􇀦􊾖𝘀␛-𝘀􀊩𝚢 ᔐ⟧›
-      termclr(𝗆,𝖻⭜‹f22›⭝‹ff2›)☾
-    ¿𝖻: ⦃raise ⦃𝗆 AssertionError⦄⦄
-    ↪𝚡
+⊢⨳´(𝚡=␀,𝚢=␀,𝚜=␀):
+  ¿𝚡:↪𝚡
+  𝚠 =   ‹MOON_WARNING󷺗󷺗󷺗󷺗_IS_ERR›􀉧env
+  𝚍 = 𝚠􀛺‹MOON_DEPRECATION_IS_ERR›􀉧env
+  ¿𝚜􀋑󰔛´: 𝖻,𝗆 = 𝚍,‹Deprecation ⟦𝚍􀯗‹Error›􀯘‹Warning›⟧›
+  ⸘𝚜􀋑~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠􀯗‹ [as Error]›􀯘ᐦ⟧›
+  ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›
+  ex = ␀􀋒𝚢􀒬𝚢􀊞𝑒𝑒
+   𝗆 = ‹⟦𝗆⟧ ⟨⟦𝚡⟧⟩⟦ex 􇀦􊾖 ‹ - ⟦𝚢⟧›⟧›
+    termclr(𝗆,𝖻􀯗‹f22›􀯘‹ff2›)􀊸
+  ¿𝖻: ¿ex: ⦃raise ⦃𝚢⦄⦄
+      ⦃raise ⦃𝗆 AssertionError⦄⦄
+  ↪𝚡
 
 ⊢(OPWRAP_(⠤‹󰔶›))(𝕏,ƒ=␀,ꬶ=␀,𝚜=𝑒):
     𝑇,v = 𝚜,ƒ􀊱ꬶ􀗏􍍜

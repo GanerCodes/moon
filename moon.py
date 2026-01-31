@@ -1,10 +1,10 @@
 #!/bin/python
-BOOTSTRAP_HASH='I3SXCm_OIUXOOVKMLZ8FmmQq8r8z08_0K1DdGrUl4gk'
+BOOTSTRAP_HASH='Tft-ZHoZy2bepMIppYgd_wekJ3D-T_Evl0bS96hL6dU'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
 moon_dir = áÌî(moon_dir) if moon_dir else áÌî(__file__).parent
-#base.☾ (9640 ⟶ 20719)
+#base.☾ (9659 ⟶ 20791)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
 import os,sys,inspect,traceback,threading,errno,struct
 from threading import get_ident as áÐèþÂÐðþáÐØ
@@ -264,11 +264,15 @@ def ÂùÆ(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     else :
         (ÄÊPSH((True,("Assertion failed"))),((áÓÔ:=ÄÊPKE(0)[0]),(áÓà:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     
+    (ex:=((ÂÞÅ is not áØÇ) and ÄÝøÇ(áØÇ,áÍÚþáÍÚ)))
     try :
-        (áÓà:=("%s ⟨%s⟩%s")%(áÓà,áØÆ,((((" - ") + ÂÞÅCAT(áØÇ,ÁÜÙ)))if((áØÇ is not ÂÞÅ))else(ÁØã)),))
+        (áÓà:=("%s ⟨%s⟩%s")%(áÓà,áØÆ,(((" - %s")%(áØÇ,))if(ex)else(ÁØã)),))
         Âçß(termclr(áÓà,((("f22"))if(áÓÔ)else(("ff2")))))
     except áÍÚ:pass
     if áÓÔ:
+        if ex:
+            raise áØÇ
+        
         raise ÂÞÅCAT(áÓà,AssertionError)
     
     return áØÆ
