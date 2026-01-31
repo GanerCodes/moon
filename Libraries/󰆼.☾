@@ -22,7 +22,7 @@ LMDB_ev,LMDB_dv = pdump,pload
     𝕊.db = lmdb.open(𝚍􀯏𝐩􀰆ᔐ,max_dbs=tables􀊹,map_size=1024³,sync=✓,metasync=✓,writemap=✓)
     𝕊􀲡,𝕊ᵀ = 𝚍,□
     𝕊.tables = tablesᐵᔐ,𝕊ᵈᵇ.open_db(⟞ LMDB_et)ᐸℵ
-    𝕊.lock = RLock
+    𝕊.lock = RLock􀃅
   tx   = ⥌𝕊,ƒ,w=✓↦ⓦ(𝕊.lock, ⥌⠤_↦𝕊ᵀ􇪨 􇀶ƒ(𝕊.T)􇀷 ⓦ(𝕊ᵈᵇ.begin(write=w), ƒ))
   iter = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.cursor(𝕊.tables󰂢)􀉴󰲣LMDB_dk(x)⋄LMDB_dv(y)                                                              , ✗)
   len  = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.stat  (                      db=𝕊.tables󰂢)􋕨ₑₙₜᵣᵢₑₛ􋕨                                                   , ✗)
@@ -33,15 +33,15 @@ LMDB_ev,LMDB_dv = pdump,pload
   ⊢__enter__(𝕊):
     ¿‹MEASURE_DB›􀉧env: ‹DB Enter @ ⟦time􀃅⟧›􀊸
     𝕊.lock.acquire􀃅
-    𝕊ᵀ=𝕊ᵈᵇ.begin(write=✓).__enter__()
+    ¿𝕊ᵀ􈇇: 𝕊ᵀ=𝕊ᵈᵇ.begin(write=✓).__enter__()
     ↪𝕊
   ⊢__exit__(𝕊,ε_type,ε,tb):
     r = □
-          r = 𝕊ᵀ.__exit__(ε_type,ε,tb)
-    ¡𝜺=𝑒𝑒: ‹󰤱 FIX THIS HOW DID THIS OCCUR?›􀊸
-           1 exit
-            𝜺.__context__ = ε
-            ε = 𝜺
+    ¿𝕊ᵀ􇪨:        r = 𝕊ᵀ.__exit__(ε_type,ε,tb)
+          ¡𝜺=𝑒𝑒: ‹Strange and unusual database bruh moment error exception!›􀊸
+                 􀛷 𝜺
+                 1 exit
+                  𝜺.__context__ = ε
     𝕊ᵀ = □
     𝕊.lock.release􀃅
     ¿‹MEASURE_DB›􀉧env: ‹DB Exit @ ⟦time􀃅⟧›􀊸
