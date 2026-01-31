@@ -58,7 +58,7 @@ LMDB_ev,LMDB_dv = pdump,pload
         𝕊.__dict__.update(𝙿ᐵ,󰆼_proxy(𝕊,⟞)ᐸ𝑑)
       __pow__     = ⥌𝕊,x↦x􀋑􀂽´􀞽􇂖ƒ↦𝚲ⓦ(𝕊,󷺻ƒ(⠤𝔸,⠶𝕂))
       __repr__    = 𝕊↦‹󰆼[⟦𝕊􀳭􀋢𝘀⟧](⟦𝕊􀳓􀋢𝘀⟧) with ⟦𝕊􀊹⟧ rows (⟦𝕊􀲡⟧)›
-      __enter__   = 𝕊↦𝕊󰁤.__enter__(⠤𝔸,⠶𝕂)
+      __enter__   = 𝕊↦𝕊󰁤.__enter__(⠤𝔸,⠶𝕂)􀊰𝕊
       __exit__    = 𝕊↦𝕊󰁤.__exit__ (⠤𝔸,⠶𝕂)
       __iter__    = 𝕊↦𝕊.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
       __len__     = 𝕊↦𝕊.len (𝕊􀲯,⠤𝔸,⠶𝕂)
@@ -112,7 +112,9 @@ LMDB_ev,LMDB_dv = pdump,pload
       ⊢move(𝕊,k,K    ): ✗⨳‹󰤱􊽨›
   󱀘󰆼_proxy(󰆼):
     ⊢__init__(𝕊,𝙿,𝚔): 𝕊􀳭,𝕊􀲯 = 𝙿,𝚔
-    __repr__ = 𝕊↦‹Proxy of primary column ⟦𝕊􀲯⟧ of ⟦𝕊􀳭⟧›
+    __repr__  = 𝕊↦‹Proxy of primary column ⟦𝕊􀲯⟧ of ⟦𝕊􀳭⟧›
+    __enter__ = 𝕊↦𝕊􀳭.__enter__(⠤𝔸,⠶𝕂)􀊰𝕊
+    __exit__  = 𝕊↦𝕊􀳭.__exit__ (⠤𝔸,⠶𝕂)
     iter = __iter__     = 𝕊↦𝕊􀳭.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
     len  = __len__      = 𝕊↦𝕊􀳭.len (𝕊􀲯,⠤𝔸,⠶𝕂)
     has  = __contains__ = 𝕊↦𝕊􀳭.has (𝕊􀲯,⠤𝔸,⠶𝕂)
