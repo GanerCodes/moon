@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='Dn_mSDA9dlZbYv0vIZlW7DY-sxPET3ll0p5p8sYG9hM'
+BOOTSTRAP_HASH='MgrSl0-rKG4jEnmuuDT-MmSjK_IG7OexHZI84IgCzw8'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -674,9 +674,11 @@ def ÁÞç(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
 (ÂÔð:=(lambda áØÁ=ÂÞÅ:(({*''})if((áØÁ is ÂÞÅ))else(ÁØò((lambda ÂîÓ:{*''}))(ÂÿÇ(áØÁ))))))
 (ÂÚü:=(lambda áØÁ=ÂÞÅ:(([])if((áØÁ is ÂÞÅ))else(((ÁØò((lambda ÂîÓ:[]))(ÂÿÇ(áØÁ)))if((áØÁ > 0))else((ÂØÍ(Âêà,(- áØÁ )))([])))))))
 
-#ops_B.☾ (6307 ⟶ 17004)
+#ops_B.☾ (6368 ⟶ 17252)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/ops_B.☾')).parent
 (ÃÆí:=(lambda áØÆ,áØÁ=ÂÞÅ:((((GET_CASE(áØÆ))if(ÁØö(áØÆ,ÁÜÙ))else((((1)if((áØÆ > 0))else(((((- 1 )))if((áØÆ < 0))else(None)))))))) or (((0)if((áØÁ is ÂÞÅ))else(áØÁ))))))
+(ÄÕÇè:=(lambda áØÆ,áØÁ=ÂÞÅ:ÂåÔ(((ÄÊPOP(0))if(ÄÊPSH((ÁØö(áØÆ,ÂÐá) and (áØÁ is ÂÞÅ))))else(ÂùÆ(ÄÊPOP(0),("󰤱")))),(áØÆ + 1))))
+(ÄÕÇæ:=(lambda áØÆ,áØÁ=ÂÞÅ:ÂåÔ(((ÄÊPOP(0))if(ÄÊPSH((ÁØö(áØÆ,ÂÐá) and (áØÁ is ÂÞÅ))))else(ÂùÆ(ÄÊPOP(0),("󰤱")))),(áØÆ - 1))))
 @OPWRAP_(*(("⤉⤈⟷")))
 def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ,ÁÜñ=False):
     if (áÑã == ("⟷")):
