@@ -3,54 +3,54 @@ OP_FILE = __dir__/‹operators›
 
 blks = ‹󷰜󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰥󷰦󷰧󷰨󷰪󷰬󷰭󷰮󷰯󷰷󷰰󷰱›
 ords = ‹󷰽⟦blks⟧󷰾›
-clrs = ‹0 ⟦blksᐖ󷸀􀗞􀗑󷷿􀗠󷷈􀠓.45,1,1ᐸ􀖌hsv2rgb􀖋²⬤􀑔255􀖋r2hl􀧘␛ ⟧ 0›􀘤
+clrs = ‹0 ⟦blksᐖ󷸀􀝪󷷿􀊹􀝬󷷈􁁨.45,1,1ᐸ􀉴hsv2rgb􀉳²⬤􀁶255􀉳r2hl􀋢␛ ⟧ 0›􀌌
 
  ⨡ text_format;; clrsᴍŧ𝼝(␛#,⬤)⭢⨝⭢☾
-dummy_ords = ⦉0,ords🃌-1⦊
+dummy_ords = ⦉0,ords􀊹􀊪1⦊
 
  α: include self in group (right asoc.)
  ν: calls self when sitting alone (i.e. )
  ς: collapses chains (i.e. ⋄)
  λ: works as a chainable comparison function
-minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ≡␛⨝ ⭜⟝⨉ᴍ⨝⭝ 󰌷ᑅ⟞ᴍƒᐸ≕ƒ○peggle("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧')∨󰆴'⁅'⨝󰆴'⁆'∨~'[^⟦⟧⁅⁆]')*")
-⊢ (fcache) parse_operator_file(contents):
-    p = ⟨⟨󷺹󷹕󷺹≠𝘀ᐸ🃌≡0⍮(¬○⬄ 󷸴 󷺹󷹕󷺹≠𝘀ᐸ🃌→󷹗 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
-    g_order  = ᐳords󰑅ᔨ󷺽
-    g_symbs  = 󷺹𝌂󷺹∈‹αλςν›󷸔ᐸ󰸷􊾖2 → 󷺺⋄󷺽
-    g_sig    = 󰻾
-    g_combos = minigram
-    g_desc   = 󰲡⟨⟨ 󷺹≡␛{⭜󰮈⍮ 󷺹≠␛}⍮ 󷺹≡␛}⭜󰮈 ⍈ 󷺹󷹌␛,󰈳␛,⟩ 󷸴 ⟨󷺹≠␛{ ⍈ ⛶○⨝⟩⟩(x)⨉ᴍ⨝
-    ƒs = g_order⋄g_symbs⋄g_sig⋄g_combos⋄g_desc
-    𝚌 = contents󷹎𝗻
-    𝚌,𝚂 = 𝚌􋇐󷺹₀≡␛>
-    𝚌 = p(𝚌)
-    ops = 𝚌ᐵ₀󷹎³␛ ᴍ⬄ᖘ􊽧¹󷺹₀󷹎ᐸ  ᖘ􊽧⁴󷺼𝘀󰛔􍪵ᐦᐸ       ␛
-                   →󱑼ƒs ꟿ󰲣y(x)󰅂 →󷸻₀󰄎₂󰄎₃󰄎₁󰄎₄ ␛
-                   →𝌂2ꟿ⁰󰲣x󰌷⛶(1󷸻⟞⨝𝗻)ᑀ󰌷ᑈy󱑼ᐸ   ␛
-                   →󰒼ᓕ⁰󰁱⁰
-    ops = 𝑙𝑙(ops)
-    ops.style = 𝚂ᴍᕋ⁰
-    ↪ops
+minigram = 󷺹ᵉ ᵀ ⭜⟞ᵗ⭝ ⟞ᵗᑀ􀉞␛⨝ ⭜⟝􀊵􀓅􀂐⭝ 􀋶ᑅ⟞􀉳ƒᐸ􀯑ƒ􀊊peggle("main=⨝=((∀=󰆴'⟦'⠶⨝󰆴'⟧')∨󰆴'⁅'⨝󰆴'⁆'∨~'[^⟦⟧⁅⁆]')*")
+⊢(fcache􀃅) parse_operator_file(contents):
+  p = ⟨⟨󷺹􀋚󷺹􀉟𝘀ᐸ􀊹􀉞0⍮(􀂾􀊊􀂼 󷸴 󷺹􀋚󷺹􀉟𝘀ᐸ􀊹􀌍 ⍈ 󷺺􎔉􌖬􊬣﹕) 󷸴 ⴳ⟩⟩
+  g_order  = ᐳords􀋙ᔨ󷺽
+  g_symbs  = 󷺹􀋴󷺹􀜋‹αλςν›􀋕ᐸ􀋭􊾖2 􇀥 󷺺􀊱󷺽
+  g_sig    = 󰻾
+  g_combos = minigram
+  g_desc   = 󰲡⟨⟨ 󷺹􀉞␛{􇀦󰮈⍮ 󷺹􀉟␛}⍮ 󷺹􀉞␛}􇀦󰮈 ⍈ 󷺹􀋨␛,􀉼␛,⟩ 󷸴 ⟨󷺹􀉟␛{ ⍈ 􀁯􀊊􀂐⟩⟩(x)􀊵􀜗􀂐
+  ƒs = g_order􀊱g_symbs􀊱g_sig􀊱g_combos􀊱g_desc
+  𝚌 = contents􀋦𝗻
+  𝚌,𝚂 = 𝚌􀉶􋇐󷺹₀􀉞␛>
+  𝚌 = p(𝚌)
+  ops = 𝚌ᐵ₀􀋦³␛ 􀉳􀂼􀊃􊽧¹󷺹₀􀋦ᐸ  􀊃􊽧⁴󷺼𝘀􀋀􍪵ᐦᐸ    ␛
+                 􇂕􀊠ƒs􀉴󰲣y(x)󰅂􀋠₀󰄎₂󰄎₃󰄎₁󰄎₄ ␛
+                 􇂕􀋴2􀉴⁰󰲣x􀋶[1􀋠⟞􀋢𝗻]ᑀ􀋶ᑈy􀊠  ␛
+         ᐸ􀉽􀁐⁰󰁱⁰
+  ops = 𝑙𝑙(ops)
+  ops.style = 𝚂􀉳􀁑⁰
+  ↪ops
 
-⊢ get_operator_table(parsed_ops,do_join=✗):
-    infer = 󷺹∋␛∧   ⭜‹󷺗󷺗ᴮ󷺗󷺗›      ⭝ ␛
-            ⟞∋␛󷺤   ⭜‹ᴾ󰀒󷺗󷺗󷺗›      ⭝ ␛
-            ⟞∋␛󷸏   ⭜‹ᴾ󷺗ᴮ󷺗ʳ›      ⭝ ␛
-            ⟞∋␛󷸐   ⭜‹󷺗󰀒ᴮˡ󷺗›      ⭝ ␛
-            ⟞∩␛∨␛⩚ ⭜‹ᴾ󰀒ᴮ󷺗󷺗›      ⭝ ␛
-            ⟞∋␛.   ⭜(⟞₀≡␛.⭜␛ᴾ⭝␛󰀒)⭝ ␛
-            ᐦ ➡+␛ᴺ+(⟞∩‹󷺤󷸏󷸐∨⩚›∧⟞₀≠⟞􍨄⭜␛󰀷⭝ᐦ)ᐸ
-    𝚛 = ℵ(parsed_ops󰌷⭢󰈳󷺹₀∈dummy_ordsᐸᓕ⁰)ꟿ󷺻⟝ᐵ₄ᖘ􍨅󷺹+ᑅinfer(⟞₁)ᐸ󷺿
-    ↪ do_join ⭜𝚛ᐵᐵ⨝ᐸ⨝𝘀ᐸ⨝𝗻⭝ 𝚛
-⊢ generate_fontcompose_conf(parsed_ops):
-    style = parsed_ops.style
-    esc = ␛›󰛔␛␛␛›
-    ↪ℵ(parsed_ops󰌷⭢ᓕ⁰)ꟿ␛
-        󷺻‹⟦⟞∈dummy_ords ⭜ᐦ⭝ ‹⟨⟦clrs􍪴⟧⟩›⟧␛⟦⁅ORD⟦⟞⟧⟶␛‹ORD⟞:⟦ords􍪴⟧␛›⁆⟦⟝ᐖ‹⁅⟦⟞₃esc⟧⟶‹⟦⟞₄ ₀ ᣆ􍯏􋁤􋂝􋂝 󷺹2ᐸ ⭢ esc⟧␛›⁆›ᐸ⨝⟧␛⟧›󷺿␛
-        →⨝𝗻→+style⟕𝗻
-⊢ to_docs(parsed_ops):
-    ↪ parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛
-                         ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
+⊢get_operator_table(parsed_ops,do_join=✗):
+  infer = 󷺹􀉨␛∧   􇂖‹󷺗󷺗ᴮ󷺗󷺗›    􇂗 ␛
+          ⟞􀉨␛󷺤   􇂖‹ᴾ󰀒󷺗󷺗󷺗›    􇂗 ␛
+          ⟞􀉨␛󷸏   􇂖‹ᴾ󷺗ᴮ󷺗ʳ›    􇂗 ␛
+          ⟞􀉨␛󷸐   􇂖‹󷺗󰀒ᴮˡ󷺗›    􇂗 ␛
+          ⟞􀊴␛∨␛⩚ 􇂖‹ᴾ󰀒ᴮ󷺗󷺗›    􇂗 ␛
+          ⟞􀉨␛.   􇂖⟞₀􀉞␛.􇀦␛ᴾ􇀧␛󰀒􇂗 ␛
+          ᐦ 􇃅􀊩␛ᴺ􀊩(⟞􀊴‹󷺤󷸏󷸐∨⩚›􀛾⟞₀􀉟⟞􍨄􇂖􊾖␛󰀷)ᐸ
+  𝚛 = ℵ(parsed_ops􀋶⭢􀉼󷺹₀􀉧dummy_ordsᐸ􀉶􀁐⁰)􀉴󷺻⟝ᐵ₄􀊃􍨅󷺹􀊩ᑅinfer(⟞₁)ᐸ󷺿
+  ↪do_join 􇀦􀲽 (𝚛ᐵᐵ􀋢ᐸ􀋢𝘀ᐸ􀋢𝗻)
+⊢generate_fontcompose_conf(parsed_ops):
+  style = parsed_ops.style
+  esc = ␛›􀋀␛␛␛›
+  ↪ℵ(parsed_ops􀋶􀯖􀉶􀁐⁰)␛
+      􀜘󷺻‹⟦⟞􀉩dummy_ords 􇂖􊾖 ‹⟨⟦clrs􍪴⟧⟩›⟧␛⟦⁅ORD⟦⟞⟧⟶␛‹⟦ords􍪴⟧␛›⁆⟦⟝ᐖ‹⁅⟦⟞₃esc⟧⟶‹⟦⟞₄ ₀ 􀊚􍯏􁖇􋂝􋂝 󷺹2ᐸ 􀯖 esc⟧␛›⁆›ᐸ􀋢⟧␛⟧›󷺿␛
+      􀞆𝗻􀝍style􀋣𝗻
+⊢to_docs(parsed_ops):
+  ↪parsed_ops ᓕ􊽧󰁱􊽧󰁱¹􊽧 ꟿ² 󰲩w₀,v,‹Sig:⟦x∨␛□⟧𝗻⟦y⟧›󰅂 ␛
+                      ᴍ  󱑼ᐵᖘ􍨅ᓕ⁰
 
 ops = OP_FILE  parse_operator_file
 

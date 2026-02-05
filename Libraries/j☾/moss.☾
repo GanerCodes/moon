@@ -83,7 +83,7 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
 
 ⭷ transpile_moss
 
-⊢ test_moss: c = 󰦥󰦥󰦥󰦥󰦥
+⊢ test_moss: c = 󰦥󰦥󰦥󰦥
              red ≔ #F00
              ⎊ᴾ 𝚌 color
              
@@ -92,7 +92,7 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
                  height 100%
              eggos ∣ egglike
                      weed 22
-             󰦥󰦥󰦥󰦥󰦥
+             󰦥󰦥󰦥󰦥
              css,𝔠 = transpile_moss(c,✗)
              css☾
              transpile_moss(‹𝚌 ⦑red⦒; egglike›,✓,𝔠) ☾

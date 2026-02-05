@@ -26,8 +26,8 @@
 ⊢PL_TIME    : ↪time
 ⊢PL_TEXT_COPY(x):  ⦃from clipboard import copy⦄
                     ↪copy(x)
-                  ‹WARNING: Failed to copy.›☾
+                  ✗ 􁀒˜ ‹Failed to copy󷺗! Do you have clipboard installed?›
 ⊢PL_TEXT_PASTE  :  ⦃from clipboard import paste⦄
                     ↪paste()
-                  ‹WARNING: Failed to paste.›☾
+                  ✗ 􁀒˜ ‹Failed to paste! Do you have clipboard installed?›
 ⊢PL_URANDOM(n): ↪os.urandom(n)

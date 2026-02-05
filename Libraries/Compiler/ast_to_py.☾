@@ -2,11 +2,12 @@
 ⦃from keyword import kwlist⦄
 ⨡ rewriters ⭸ *
 
-𝐌 = ℵ(𝑣_spec      = ‹✓ True ✗ False □ None›⍭ℵ,
-      std_kwd     = ‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›⍭ℵ,
-      blk_cln_kwd = ‹¿ if ⸘ elif ¡ else ∀ for 󱀘 class›⍭ℵ,
-      blk_kwd     = ‹ try 󰛕 finally›⍭ℵ,
-      op          = ‹~~%%^^&&||>><<++¯---⋅*÷/›₂+‹⹏ // ⌃ ** ≥ >= ≤ <= ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›⍭⭢ℵ)
+𝐌 = ℵ(𝑣_spec      = ‹✓ True ✗ False □ None›􀌌ℵ,
+      std_kwd     = ‹↪ return ⮂ yield 󰆴 del ↺ continue ⇥ break›􀌌ℵ,
+      blk_cln_kwd = ‹¿ if ⸘ elif ¡ else ∀ for 󱀘 class›􀌌ℵ,
+      blk_kwd     = ‹ try 󰛕 finally›􀌌ℵ,
+      op          = ‹~~%%^^&&||>><<++¯---⋅*÷/›􀊼₂􀝍␛
+                    ‹⹏ // ⌃ ** ≥ >= ≤ <= ≡ == ≠ != ∨ or ∧ and ∨ or ¬ not ∈ in ∉ not in ≅ is ≇ is not›􀌌􇀥ℵ)
 ENC = ‹ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ›
 RCD = 󷺹⊄ᑅabcABC123+␛_
 SPE = 󷺹⊂ᑅENC+␛þ
@@ -14,7 +15,7 @@ enc = 󷺹ᐖ󷹜´(⟞󷹝,ENC🃌,C=ENC)ᐸ        􁂡␛þ
 dec = 󷺹􀡐␛þᐖ󷹜´(⟞,ENC🃌,C=ENC)󷹝ᐸ     􁂡
 PEV = 󷺹􀡞RCD􀨷ᵉⁿᶜRCD                􁂡
 VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡􊽨􊿒SPE 􁂡
-py_esc_str = ⨝○󷺺∈⦉⠤‹𝗻𝘁\'"{}›⦊ ⭜􍪵 ‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›
+py_esc_str = ⨝○󷺺􀉧⦉⠤‹𝗻𝘁\'"{}›⦊ 􇂖􍪵 ‹\u⟦⟞󷹝󷹜¹⁶⁺⁴􍢉⟧›
 𝖫 = ⥌x=ᐦ,y=4⋅𝘀↦lines(x)ᴍy+⬤⭢⨝𝗻
 
 ⊢ expand_ast_py(󱁕,PEV=PEV):

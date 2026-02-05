@@ -5,11 +5,11 @@
 ⨡ peggle3/gram_tools
 ""  󰤱 fix
 ⊢find_section(󱁕,𝚜,a=␛p):
-  ¿␛p∉󱁕ᵉ: ↪
+  ¿␛p􀉩󱁕ᵉ: ↪
   αl,αc,βl,βc=󱁕ᵉ ᵖ
   ¿αl<𝚜₀ ∨ αl≡𝚜₀∧αc≤𝚜₁ ⭢󷺒⭠ βl>𝚜₂ ∨ βl≡𝚜₂∧βc≥𝚜₃: ↪
-  ∀c⬠󱁕¿find_section(c,𝚜,a)≕r≇□∧rᵉ ᵖ≠󱁕ᵉ ᵖ: ↪r
-  ¿a∈󱁕ᵉ: ↪󱁕
+  ∀c⬠󱁕¿find_section(c,𝚜,a)􀯑r􇪨􀛾rᵉ ᵖ􀉟󱁕ᵉ ᵖ: ↪r
+  ¿a􀉧󱁕ᵉ: ↪󱁕
 
 ⊢under_region(t,r,ƒ): t󷸊lines
                       αl,αc,βl,βc=r
@@ -50,7 +50,7 @@ find_esc_seqs = regex(‹(𝟭𝗯\[(?:(?:[0-9]+;){4}[0-9]+|0|[34]9)m|[𝟬𝟭�
   α = traceback.extract_tb(ə)ᐖ⟞.filename,⟞.name,⟞.lineno,⟞.colno,⟞.end_lineno,⟞.end_colnoᐸ
   β = traceback.   walk_tb(ə)ᐵ₀.f_globalsᐸ
   ∀(f,n,⠤r),G⬠α󱑼β:
-    r󷸊ᐵ-1⭢⤉0
+    r=rᐵ-1⭢⤉0
     ¿G.get(‹__moon_code__›)≕𝚌¬: ‹⟦f hl_f⟧ ⟦n VEP⟧›☾ ; ↺
     𝘮=𝚌 mapper
     ‹⟦G[‹__file__›] hl_f⟧

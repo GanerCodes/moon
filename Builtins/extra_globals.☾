@@ -1,17 +1,17 @@
-FRAC_CONV = {⠤‹12 13 14 15 16 17 18 19 110 23 25 27 29 34 35 37 38 310 45 47 49 56 57 58 59 67 78 79 710 89 910 03 1100›⍭󱑼‹½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖󷶲󷶷¾⅗󷶳⅜󷷆⅘󷶴󷷂⅚󷶵⅝󷶹󷶶⅞󷶺󷷇󷶻󷷈↉󷷉›}
+FRAC_CONV = {⠤‹12 13 14 15 16 17 18 19 110 23 25 27 29 34 35 37 38 310 45 47 49 56 57 58 59 67 78 79 710 89 910 03 1100›􀌌􀝄‹½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖󷶲󷶷¾⅗󷶳⅜󷷆⅘󷶴󷷂⅚󷶵⅝󷶹󷶶⅞󷶺󷷇󷶻󷷈↉󷷉›}
 TOFRAC = 󰲡FRAC_CONV.get(x,x)
 󱀘 UPSIDEDOWNSYNDROME:
   NRM = ‹0123456789abcdefoxABCDEFOXîĵ󷺈ℇτπ󷺍󷺏∞›
   USD = ‹󷰽󷰾󷰿󷱀󷱁󷱂󷱃󷱄󷱅󷱆󷱇󷱈󷱉󷱊󷱋󷱌󷱍󷱎󷱏󷱐󷱑󷱒󷱓󷱔󷱕󷱖󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱰󷱩›
-  MAP = {⠤NRM󱑼USD} | {⠤USD󱑼NRM}
-  flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ⨝ᐦ
+  MAP = {⠤NRM􀊠USD} 􀊤 {⠤USD􀊠NRM}
+  flip = ⥌x,m=MAP↦xᐖm.get(⟞,⟞)ᐸ􀋢ᐦ
 󱀘 SCRIPT:
-  SCRIPT_FILE_LOC = moon_dir/‹Builtins/Data/script.map›
-  CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip(𝗻)󷹎𝗻
+  SCRIPT_FILE_LOC = moon_dir􀋋‹Builtins/Data/script.map›
+  CHAR_NRM,CHAR_SUP,CHAR_SUB = (SCRIPT_FILE_LOC).strip(𝗻)􀋦𝗻
   SUP = ᔐ.maketrans(CHAR_NRM, CHAR_SUP)
   SUB = ᔐ.maketrans(CHAR_NRM, CHAR_SUB)
-  NRM = ᔐ.maketrans(CHAR_SUP+CHAR_SUB, 2 CHAR_NRM)
-  sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟ᴍ𝚃↦󰲡x.translate(𝚃)
+  NRM = ᔐ.maketrans(CHAR_SUP􀊩CHAR_SUB, 2 CHAR_NRM)
+  sup,sub,nrm = 󰂥󰂧󰂢󰄎󰂥󰂧󰂔󰄎󰂠󰂤󰂟􀉳𝚃↦󰲡x.translate(𝚃)
 
 supscript,subscript,nrmscript = SCRIPTˢᵘᵖ,SCRIPTˢᵘᵇ,SCRIPTⁿʳᵐ
 SUPSCRIPT,SUBSCRIPT = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ,SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ
@@ -35,14 +35,14 @@ ALPHABETS = 󰦥󰦥󰦥󰦥󰦥
     𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷 𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ ◌◌◌◌◌◌◌◌◌◌
     𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟 𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅 ◌◌◌◌◌◌◌◌◌◌
     𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯 𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕 ◌◌◌◌◌◌◌◌◌◌
-󰦥󰦥󰦥󰦥󰦥⬄⭢󷹎𝗻ᴍ⍭○⬄
+󰦥󰦥󰦥󰦥󰦥􀌎􀯖􀋦𝗻􀜗􀂺􀊊􀂼
 
-LOWERCASE = ALPHABETSᴍᓕ⁰→⨝
-UPPERCASE = ALPHABETSᴍᓕ¹→⨝
-LETTERS = LOWERCASE+UPPERCASE
-TERLETS = UPPERCASE+LOWERCASE
+LOWERCASE = ALPHABETS􀉳􀁐⁰􀋢
+UPPERCASE = ALPHABETS􀉳􀁐¹􀋢
+LETTERS = LOWERCASE􀊩UPPERCASE
+TERLETS = UPPERCASE􀊩LOWERCASE
 abc,ABC,num = ALPHABETS₀ ﹕₃
-abcABC,abc123,ABC123,abcABC123 = abc+ABC,abc+num,ABC+num,abc+ABC+num
+abcABC,abc123,ABC123,abcABC123 = abc􀊩ABC,abc􀊩num,ABC􀊩num,abc􀊩ABC􀊩num
 TO_LOWERCASE = ᔐ.maketrans(UPPERCASE, LOWERCASE)ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝,⟞)󷺿
 TO_UPPERCASE = ᔐ.maketrans(LOWERCASE, UPPERCASE)ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝,⟞)󷺿
 REVERSE_CASE = ᔐ.maketrans(LETTERS  , TERLETS  )ᐒ󰲡x.translate(⟞)ᐸᐒunder_script(⟝,⟞)󷺿

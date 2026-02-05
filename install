@@ -11,6 +11,7 @@ chk_py_pip() { "$PYTHON" -c "import pip" 2>/dev/null; }
 
 [ -z "$PYTHON" ] && chk_py_ver "python"     || :
 [ -z "$PYTHON" ] && chk_py_ver "python3"    || :
+[ -z "$PYTHON" ] && chk_py_ver "python3.14" || :
 [ -z "$PYTHON" ] && chk_py_ver "python3.13" || :
 [ -z "$PYTHON" ] && chk_py_ver "python3.12" || :
 [ -z "$PYTHON" ] && { echo "Unable to find a valid python install!"
@@ -18,12 +19,12 @@ chk_py_pip() { "$PYTHON" -c "import pip" 2>/dev/null; }
 
 chk_py_pip || { echo "pip is not installed. Running ensurepip."
                 "$PYTHON" -m ensurepip || echo "Failed to run ensurepip ⎺⟍_⟨⍩⟩_⟋⎺"; }
-chk_py_pip && "$PYTHON" -m pip install --break-system-packages pycryptodome cffi line_profiler regex orjson json5 clipboard \
+chk_py_pip && "$PYTHON" -m pip install --break-system-packages pycryptodome cffi regex orjson json5 clipboard \
            || echo "Failed to run pip ⎺⟍_⟨⍩⟩_⟋⎺"
 
 DEST=$([ "$(id -u)" -eq 0       ] && echo "/bin/☾"             || (\
        [ "$(uname)" == "Darwin" ] && echo "/usr/local/bin/☾"   || (\
-                				     echo "$HOME/.local/bin/☾"    )))
+                				             echo "$HOME/.local/bin/☾"    )))
 echo "Installing to \"$DEST\""
 
 (rm "$DEST" || :) >/dev/null 2>&1

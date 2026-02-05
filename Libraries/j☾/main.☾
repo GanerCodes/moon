@@ -76,9 +76,9 @@ reps = 󰦥󰦥󰦥󰦥󰦥
 󰦥󰦥󰦥󰦥󰦥.strip󷺻𝗻󰛔􍪵␛ ᐸ⍭ᐵ.strip󷹎¹𝘀ᐸ→ℵ
 
 specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
-attr_repl = ‹󰊄 󰿨  󱇙 󰌷 ⨝ + - ∀ ᴍ ꟿ 󰈲 ſ @ : ¶›⍭ 󰛔 ⍭‹innerText children disabled classList append join .add .remove forEach map starmap filter reduce at slice style›
+attr_repl = ‹󰊄 󰿨  󱇙 󰌷 ⨝ + - ∀ ᴍ ꟿ 󰈲 ſ @ : ¶›􀌌􀝤􀌌‹innerText children disabled classList append join .add .remove forEach map starmap filter reduce at slice style›
 CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
-OPERATORS = ‹!== === == => // /= *= -= += ++ -- && ?? ||›⍭󰌷‹󰆴󱟱󱫬𝚲󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󱣩🆕⎉©⎔!%&*/+-,.:;?<=>@^|¡¬¯±¿÷ſϜᐴᐹᗢᙎᙡᙧᚤᣆᴙℵℶ↨↪↺⇥∀∅∈∉∋∌∓∖∘√∣∤∧∨∩∪∾≅≇≔≕≠≡≤≥⊂⊃⊄⊅⊊⊋⊚⊛⊜⊞⋀⋁⋄⋅⌃⍁⍉⍜⍟⍭▢►◄○☾⛶➰⟕⟖⟗⠤⠶⤈⤉⨀⨁⨉⨝⨡⨳⩓⩔⪡⪢⫯⫰⬄⬒⬓⭜⭝⭥⮂⮌ⴵ⸘⹏ꟿ𝌂🃌🟕🟖󰈲󰈳󰌷󰑅󰒼󰒽󰔶󰛔󰬩󰬫󰸵󰸷󰻾󱅏󱑼󱖘󱖚󷸉󷸊󷸋󷸌󷸍󷸎󷸕󷸖󷸗󷸘󷸙󷸚󷸛󷸜󷸸󷸹󷸺󷸻󷹄󷹅󷹌󷹍󷹎󷹓󷹔󷹕󷹖󷹜󷹝󷹴󷹵󷺒󷺤󷺥󷺦󷺫󷺬›
+OPERATORS = ‹!== === == => // /= *= -= += ++ -- && ?? ||›􀌌􀞚‹󰆴󱟱󱫬𝚲󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󱣩🆕⎉©⎔!%&*/+-,.:;?<=>@^|¡¬¯±¿÷ſϜᐴᐹᗢᙎᙡᙧᚤᣆᴙℵℶ↨↪↺⇥∀∅∈∉∋∌∓∖∘√∣∤∧∨∩∪∾≅≇≔≕≠≡≤≥⊂⊃⊄⊅⊊⊋⊚⊛⊜⊞⋀⋁⋄⋅⌃⍁⍉⍜⍟⍭▢►◄○☾⛶➰⟕⟖⟗⠤⠶⤈⤉⨀⨁⨉⨝⨡⨳⩓⩔⪡⪢⫯⫰⬄⬒⬓⭜⭝⭥⮂⮌ⴵ⸘⹏ꟿ𝌂🃌🟕🟖󰈲󰈳󰌷󰑅󰒼󰒽󰔶󰛔󰬩󰬫󰸵󰸷󰻾󱅏󱑼󱖘󱖚󷸉󷸊󷸋󷸌󷸍󷸎󷸕󷸖󷸗󷸘󷸙󷸚󷸛󷸜󷸸󷸹󷸺󷸻󷹄󷹅󷹌󷹍󷹎󷹓󷹔󷹕󷹖󷹜󷹝󷹴󷹵󷺒󷺤󷺥󷺦󷺫󷺬›
 
 flip = UPSIDEDOWNSYNDROME.flip
 bp = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ⋄SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ⋄CONSTANTS⋄OPERATORS ᴍ rgx_golfatron
@@ -95,7 +95,7 @@ fmt_js_ᔐ = ␛\⋄␛$ 􁁿 ␛\␛\⋄␛\␛$
 mkexp = 𝚲Ń(‹󷺗expr›, ⠤𝔸)
 mkgrp = 󰲡Ń(‹󷺗󷺗grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
 mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
-𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›󰌷⍭‹false ...›)ᴍmkopt
+𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›􀞚􀌌‹false ...›)ᴍmkopt
 
 ⊢proc(x,n=∞,comments=✓,moss_aliases=□):
     ¿comments: ↪proc(gram(x,‹main_comments›,remove_trashes=✗).rm(‹comment›)􋒷,
