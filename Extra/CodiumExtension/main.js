@@ -65,8 +65,9 @@ try{
                                                  c<=0 ? -c:
                                                  (x[1]+Δ-1)%N];
       
-      return (S,...𝔸)=>[...S].ᴍ(x => x in contract ?col(loc(x),...𝔸):
-                                     x in expand   ?expand[x][Math.floor(expand[x].length/2)]:
+      const the = (x,𝔸) => col(loc(x),...𝔸);
+      return (S,...𝔸)=>[...S].ᴍ(x => x in contract ?the(x,𝔸):
+                                     x in expand   ?the(expand[x][Math.floor(expand[x].length/2)],𝔸):
                                      x).join(''); })();
 
   for(const [n,p,b] of ζ(...rmat(SCRP_PATH))) {
@@ -86,7 +87,9 @@ const align = 𝐸 => {
   H = cursᐵ₀ᐸ􀠊O􀋅􋄅
   H􀉴􀁦
   */
-  let [𝔩,𝔠] = [x=>x.start.line,x=>x.start.character];
+  
+  // let [𝔩,𝔠] = [x=>x.start.line,x=>x.start.character];
+  let [𝔩,𝔠] = [x=>x.start.line,x=>ᔐ𝑙(𝐸.document.lineAt(x.start.line).text.slice(0,x.start.character))];
   let 𝔫 = ([x,...y])=>[+x,...y]
   let S = 𝒪ℒ(𝐸.selections.G(𝔩)).ᴍ(𝔫)
           .s(x=>x[0])
