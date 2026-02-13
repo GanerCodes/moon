@@ -62,7 +62,7 @@ chainIntoElements  =  (x , P) => {
      return P ;  }
 
 mkə  =  (name ,  attrs ,  kids) => {
-     const  remaps  =  { NAME : "T" ,  𝑃𝐻 : "placeholder" ,  𝑇 : "type" ,  𝑆 : "style" ,  𝐼 : "id" ,  𝐶 : "className" } ; 
+     const  remaps  =  { NAME : "T" ,  𝑇𝐼 : "tabIndex" ,  𝑃𝐻 : "placeholder" ,  𝑇 : "type" ,  𝑆 : "style" ,  𝐼 : "id" ,  𝐶 : "className" } ; 
     kids  =  chainIntoElements(kids) ; 
      if (𝗙(name))  return name(attrs ,   ... kids)
      if (name ===  false ) name  =  "div" ; 

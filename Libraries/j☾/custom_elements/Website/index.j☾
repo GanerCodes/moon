@@ -1,5 +1,45 @@
+© notab = 󰲡((x.tabIndex = -1),x)
+© domswap = 󰲣y.parentNode.insertBefore(y,x);
+
+© textButton = ⥌x,ƒ,𝕂↦{ © ə = 󱀝 button {⠤𝕂||{}} ‹⟦x⟧›
+                        ə.onclick = ƒ;
+                        ↪ə; };
+© toggleButton = ⥌ƒ,N,Y,S=✗,set_init=✓↦{
+  S = +¬¬S;
+  ¿(isStr(N)) [N,Y] = [N,Y]􊾡(󰲡 󱀝 button {⦅𝚑; 𝚙𝚕 6px; 𝚙𝚛 6px; 𝚋 none⦆} ‹⟦x⟧›);
+  ⎉ n = 󱀝{};
+  ⎉ ə = S⭜Y⭝N;
+  n.replaceWith(ə);
+  © ꬶ = ə.onclick = 𝚲{ n.replaceWith(ə);
+                       ə.replaceWith(n = (S=¬S)⭜Y⭝N);
+                       n.onclick = ꬶ;
+                       ↪ƒ(S); }
+  ¿(set_init) ƒ(S);
+  ↪ə; };
+© textField = ⥌Ѧ↦{  󰤱 󰿄
+  ⎉ ə;
+  ⎉ fld = 󱀝 input {⦅𝚙 2px; 𝚏𝚐1; 𝚑; 𝚋 none⦆⍮ ⠤Ѧ};
+  ¿(Ѧ􇦝∨Ѧ􇦫) { ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} [
+                   ⟦fld⟧
+                   ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"",""))⟧ ]; }
+  ¡{ ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
+  ↪ə; }
+© box = ⥌Ѧ,⠤C↦{  󰤱
+  ↪ 󱀝 div {𝐶 box⍮⦅zoom 2;𝚏TB;𝚊𝚜c⦆} ⟦C⟧
+};
+
 󰈙.body􍪙(
-  󱀝 div {} [
-    󱀝 T ‹test›
-    󱀝:myinput input {𝑃𝐻 Username}]
-);
+  box({},
+    󱀝 T ⦅font-size 48px⦆ ‹Sign up›,
+    textField({id:‹email›   , 𝑃𝐻:‹Email›        }),
+    textField({id:‹username›, 𝑃𝐻:‹Username›     }),
+    textField({id:‹password›, 𝑃𝐻:‹Password›, :✓}),
+    textButton("Submit", 𝚲☾(email,username,password))
+  ),
+  toggleButton(☾,"✗","✓",✗),
+  textField({𝑃𝐻:‹weeee›})
+)
+   󱀝 div {} [
+     󱀝 T ‹test›
+     󱀝:myinput input {𝑃𝐻 Username}]
+ );

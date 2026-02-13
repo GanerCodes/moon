@@ -3,14 +3,14 @@
 ⨡ peggle3/gram_tools
 ⨡ moss
 
-⦃import jsbeautifier⦄
+🟑 ⦃import jsbeautifier⦄
 ⊢prettify_js(𝚌): O = jsbeautifier.default_options()
                  O.indent_size = 2
                  O.indent_char = 𝘀
                  O.preserve_newlines = ✓
                  O.max_preserve_newlines = 2
-                 ↪jsbeautifier.beautify(𝚌,O)
-
+                 ↪jsbeautifier.beautify(𝚌,O) 🟑
+prettify_js = 󰻾  epic broken package moment
 
 JOON_HEADER = __dir__􀋋‹header.j☾󷺗› 􇀥 
 MOSS_HEADER = __dir__􀋋‹header.☾ss› 􇀥 
@@ -183,16 +183,17 @@ joon_header = JOON_HEADER transpile_joon
 ⭷ transpile_joon,joon_header,transpile_dir
 
 ¿__name__ ≡ ‹__main__›:
-  ¿𝔸􀊹􀉞2: proc(𝔸₁)􋒷􀊸
-         exit􀌗
-  ¿𝔸􀊹􀉞3: transpile_dir(𝔸₁,𝔸₂)
-         exit􀌗
+  ⊢test(x): x􀊸
+            ␛→50􀊸
+            r = proc(x)􋒷􀊸
+            ␛─3􀊸
+            r prettify_js 􀊸
+            ␛←50􀊸􋋉􋋉
   
-  ⊢ test(x):
-      x􀊸
-      ␛→50􀊸
-      proc(x)􋒷􀊸
-      ␛←50􀊸􋋉􋋉
+  ¿𝔸􀊹􀉞2: 𝔸₁ test
+         exit􀃅
+  ¿𝔸􀊹􀉞3: transpile_dir(𝔸₁,𝔸₂)
+         exit􀃅
   
   🟑 test(󰦥󰦥󰦥󰦥󰦥
   ↪ 󱀝 {𝐶 fr fas tac⍮ 𝑆 min-width:80%;max-width:97%} [

@@ -2,12 +2,13 @@
 ⨡ http
 ⨡ j☾
 
-PORT         = 4029
+WEBSITE_PORT = 4029
 SITE_SOURCE  = __dir__􀋋‹Website›
 SITE_COMPILE = __dir__􀋋‹website_compiled›
 
-¿SITE_COMPILE.is_dir􀃅: SITE_COMPILE rmtree
-transpile_dir(SITE_SOURCE,SITE_COMPILE)
+⊢transpile: ¿SITE_COMPILE.is_dir􀃅: SITE_COMPILE rmtree
+            transpile_dir(SITE_SOURCE,SITE_COMPILE)
+            ‹Transpiled!›􀊸
 
 ⊢(HTTP_Server)server(𝚖,𝚙,𝙷,𝚎):
   𝙿,𝚀 = parse_path(𝚙)
@@ -17,6 +18,13 @@ transpile_dir(SITE_SOURCE,SITE_COMPILE)
             ¿p􇪨: ↪p ᵇ,ℵ(𝙲𝚃=p.suffix)({ Cache-Control=‹public, max-age=0, must-revalidate› })
   ↪404,‹Not found!›,ℵ(𝙲𝚃=‹text/plain›)
 
-‹Running server on port ⟦PORT⟧›􀊸
-: server(port=PORT)
-¡: exit􀃅
+transpile􀌗
+‹Running server on port ⟦WEBSITE_PORT⟧›􀊸
+
+      PL_THREAD(𝚲server(port=WEBSITE_PORT))
+       ∀: input􀃅
+                transpile􀃅
+          ¡ε=𝑒𝑒: ‹Transpile failed: ⟦ε⟧›􀊸
+¡ε=𝑒𝑒: ε􀊸
+󰛕      ⦃import signal as ⦃signal⦄⦄
+       os.kill(os.getpid􀃅,signal.SIGTERM)

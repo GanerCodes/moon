@@ -1,3 +1,42 @@
-input ∣ 𝚋𝚌 #000
-        𝚋𝚛 5px
-        
+b0 ≔ #000
+b1 ≔ #222
+b2 ≔ #444
+f0 ≔ #FFF
+f1 ≔ #DDD
+f2 ≔ #AAA
+
+* ∣ box-sizing border-box
+button,input,span ∣ 𝚃 all 0.1s ease-in-out
+
+html ∣ 𝚌  ⦑f0⦒
+       𝚌𝚋 ⦑b0⦒
+body ∣ 𝚏TB; 𝚊𝚜c
+
+.box ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+       𝚙 1em
+.box>* ∣ 𝚖 0.25em
+
+«button input»
+  𝚙0;𝚖0
+  outline none
+  𝚌  ⦑f0⦒; 𝚌𝚋 transparent
+button        ∣ 𝚋 unset
+button:hover  ∣ 𝚖𝚙 pointer
+                𝚌𝚋 ⦑f2⦒3
+button:active ∣ 𝚌𝚋 ⦑f1⦒3
+
+.boxInput ∣ 𝚏LR; 𝚊𝚜c; 𝚙0
+            𝚌  ⦑f0⦒; 𝚌𝚋 ⦑b0⦒
+            𝚋  1px solid ⦑f2⦒; 𝚋𝚛 5px
+.boxInput * ∣ font-size 24px
+.boxInput>:first-child ∣ 𝚙𝚕 2px; 𝚙𝚛 2px
+                         border-top-left-radius 4px
+                         border-bottom-left-radius 4px
+.boxInput>:last-child  ∣ 𝚙𝚕 2px; 𝚙𝚛 2px
+                         border-top-right-radius 4px
+                         border-bottom-right-radius 4px
+.boxInput:focus-within
+  𝚌𝚋 ⦑b1⦒
+  𝚋  1px solid ⦑f0⦒
+.boxInput:has(input:invalid)
+  𝚋  1px solid #f00
