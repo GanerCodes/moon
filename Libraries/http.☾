@@ -1,11 +1,27 @@
 ⦃from socketserver import TCPServer,StreamRequestHandler,ThreadingMixIn⦄
 ⦃from http.client import responses as ⦃𝚌msgs⦄⦄
 ⦃from mimetypes import guess_type⦄
+⦃import urllib.parse⦄
 TCPServer.allow_reuse_address = ✓
-⨡ j☾
 ⨡ errors
 
 ipv4 = 󷺹 ᑀ􀗀8⟝ 􀠐 0xFFᐛ 4􀡈􁂁 􁋳␛.
+
+relpath = ∾󷺹.relative_to􀊉󷺽  (dir,path)↦path_from_dir_view
+⊢safej(x,y): x,y = x 􁁰 y􀊚􋅂􁣟􋆪􁗍􊾚⬤􀂐␛/ 􁀲 𝐩
+             ¿x􀋋y􇀰r􇀵.is_relative_to(x): ↪r
+⊢parse_path(𝚞): 𝔢 = urllib.parse.unquote
+                𝚙,𝚚 = 𝚞􀋦¹␛?􀋭􊾖2
+                𝙿 = 𝚙􀋦␛/􀉳𝔢􀉷􍸒󰲣y􀉞␛.􇂗ˣy􀉞‹..›􇀦x􊬋􍨄􇀧x􀞚
+                𝚀 = 𝚚􀋦␛&ᐵ􀋦¹␛=􀉳𝔢ᑀ􀊹􀉞1􇀶􍪵⟞₀􀊱✓ᐸᐸℵ
+                ↪𝙿,𝚀
+⊢intended_path(base,𝙿): p = safej(base,𝙿)
+                        ¿p􈇇: ↪
+                        ¿p.is_file􀃅: ↪p
+                        ¿p.is_dir 􀃅: p􇀞􀋋‹index.html›
+                                     ¿p.is_file􀃅: ↪p
+                        p = safej(base,[⠤𝙿􊬋􍨄,𝙿¿𝙿􍨄‹.html›])
+                        ¿p.is_file􀃅: ↪p
 
 󱀘TCPServerThreaded(ThreadingMixIn,TCPServer): □
 
@@ -43,7 +59,7 @@ ipv4 = 󷺹 ᑀ􀗀8⟝ 􀠐 0xFFᐛ 4􀡈􁂁 􁋳␛.
   ↪⥌ip=ipv4(0x000000),port=8080,threaded=✓↦␛
     ⓦ((threaded􀯗TCPServerThreaded􀯘TCPServer)((ip,port),𝔖), 󷺹.serve_forever􀃅)
 
-⭷ ipv4,HTTP_Server,transpile_dir,transpile_joon,joon_header
+⭷ ipv4,relpath,safej,parse_path,intended_path,HTTP_Server
 
 ¿__name__≡‹__main__›: ⊢server(𝚖,𝚙,𝙷,𝚎):
                           ‹⟦𝚎ⁱᵖ⟧ ⟦𝚖⟧ ⟦𝚙⟧›☾

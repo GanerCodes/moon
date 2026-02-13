@@ -1,6 +1,6 @@
 ⨡ peggle3/gram_tools
 
-gram = 󰦥󰦥󰦥󰦥󰦥
+gram = 󰦥󰦥󰦥󰦥
 main = (󰆴𝘄 ∨ 󰆴comment ∨ css_prop_key_alias ∨ rule_alias_header ∨ var_def ∨ line ∨ 󰆴(mark_nest ∨ mark))*
 
 css_prop_key_alias = 󰆴"⎊ᴾ" 󰆴𝘄? ⠶name 󰆴𝘄? ƨ(~‹[^\n]+›)
@@ -29,11 +29,13 @@ mark_nest = (󰆴"∣" ✓)
 
 𝘄 = ~‹[ \t\n]+›
 comment = 󰆴~‹[ \t]*› ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))› 󰆴~‹[ \t]*›
-󰦥󰦥󰦥󰦥󰦥 peggle
+󰦥󰦥󰦥󰦥 peggle
 
-⊢ add_blocks(󱁕,start,scan=‹main›,new=‹blk›):
-    ƒ = ⟨⟨󷺹start⭜⟞ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖᑀ₁>⟝₁⭜⟞󷹗ᐘ⍖⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(new,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
-    󱁕.ftrp(scan,󱁕↦󱁕.set(c=󱁕 ƒ),✓)
+MOSS_HEADER = __dir__􀋋‹header.☾ss› 􇀥 
+
+⊢add_blocks(󱁕,start,scan=‹main›,new=‹blk›):
+  ƒ = ⟨⟨󷺹start⭜⟞ᵉ ᵖ󷹗⍮ 󷺹ᵉ ᵖᑀ₁>⟝₁⭜⟞󷹗ᐘ⍖⍮ 󷺹ᵉ ᵖ₁≥⍖₁⍮ ⍈ C↦𝒩(new,C₀,⠤C₁﹕ᣆƒ)⟩ 󷸴 ⴳ⟩○𝑙
+  󱁕.ftrp(scan,󱁕↦󱁕.set(c=󱁕 ƒ),✓)
 
 subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_positions(gram(󱁕􋒷,β≅□⭜󰁍α),󱁕􋒷), 󱁕ᵉ ᵖ))
 
@@ -81,18 +83,21 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
     css = 󱁕 to_css
     ↪ inline 􇀦css􇀧 css􀍷aliases
 
-⭷ transpile_moss
+⭷ transpile_moss,MOSS_HEADER
 
 ⊢ test_moss: c = 󰦥󰦥󰦥󰦥
-             red ≔ #F00
-             ⎊ᴾ 𝚌 color
-             
-             ⎊ egglike «html body» > «div span»
-                 width  100%
-                 height 100%
-             eggos ∣ egglike
-                     weed 22
+               red ≔ #F00
+               ⎊ᴾ 𝚜𝚞𝚜 color
+               
+               ⎊ egglike «html body» > «div span»
+                   𝚠 100%
+                   𝚑 100%
+               eggos ∣ egglike
+                       weed 22
+                       𝚜𝚞𝚜 420
              󰦥󰦥󰦥󰦥
-             css,𝔠 = transpile_moss(c,✗)
+             _,ma = transpile_moss(MOSS_HEADER,✗)
+             css,𝔠 = transpile_moss(c,✗,ma)
              css☾
-             transpile_moss(‹𝚌 ⦑red⦒; egglike›,✓,𝔠) ☾
+             transpile_moss(‹𝚌 ⦑red⦒; egglike; 𝚏›,✓,𝔠) ☾
+¿__name__ ≡ ‹__main__›: test_moss􀃅

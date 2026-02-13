@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/Assets/favicon.ico"> -->
+    <link rel="stylesheet" href="/index.css">
+    <!-- <link rel="stylesheet" href="/Styles/elms.css"> -->
+  </head>
+  <body>
+    <script type="module">
+      (1,eval)(await (await fetch("/header.js")).text());
+      (1,eval)(await (await fetch("/index.js")).text());
+    </script>
+  </body>
+</html>

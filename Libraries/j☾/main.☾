@@ -3,14 +3,25 @@
 ⨡ peggle3/gram_tools
 ⨡ moss
 
+⦃import jsbeautifier⦄
+⊢prettify_js(𝚌): O = jsbeautifier.default_options()
+                 O.indent_size = 2
+                 O.indent_char = 𝘀
+                 O.preserve_newlines = ✓
+                 O.max_preserve_newlines = 2
+                 ↪jsbeautifier.beautify(𝚌,O)
+
+
 JOON_HEADER = __dir__􀋋‹header.j☾󷺗› 􇀥 
 MOSS_HEADER = __dir__􀋋‹header.☾ss› 􇀥 
+
+_,MOSS_HEAD_ALIASES = transpile_moss(MOSS_HEADER,✗)
 
 GRAM=󰦥󰦥󰦥󰦥󰦥
     main = (keeper ∨ str ∨ script ∨ 󱀝 ∨ λ_head ∨ special ∨ grp ∨ num ∨ var ∨ 𝗪)*
     main_comments = (str ∨ comment ∨ ~‹.|\n›)*
     script  = (sub   = ~‹%SCRIPTD%+› ) ∨ (sup   = ~‹%SCRIPTU%+› )
-    special = (opert = ~‹%CONSTANTS%›) ∨ (const = ~‹%OPERATORS%›)
+    special = (const = ~‹%CONSTANTS%›) ∨ (opert = ~‹%OPERATORS%›)
 
     keeper = 󰆴'⦋' ~‹([^⦌]|\Z)*› 󰆴'⦌'
 
@@ -43,11 +54,12 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
     󱀝_ə_val = ⠶󱀝_inj ∨ 󱀝_brack
     󱀝_kid   = ⠶󱀝_inj ∨ 󱀝
     󱀝_pair  = 󱀝_pairk 󰆴(CLN ∨ 𝗪) 󱀝_pairv ∨ (󱀝_pairm = 󰆴('⠤' 𝗪?) main)
-    󱀝_brack = 󰆴('[' 𝗪?) (󱀝_kid          󰆴𝗪?)* 󰆴(𝗪? ']')
-    󱀝_attrs = 󰆴('{' 𝗪?)  󱀝_pair? (󰆴⍮ 󱀝_pair)* 󰆴(𝗪? '}')
+    󱀝_attr  = 󱀝_pair ∨ ᔐ_moss
+    󱀝_brack = 󰆴('[' 𝗪?) ( 󱀝_kid           󰆴𝗪?)* 󰆴(𝗪? ']')
+    󱀝_attrs = 󰆴('{' 𝗪?)  ⠶󱀝_attr? (󰆴⍮ ⠶󱀝_attr)* 󰆴(𝗪? '}') ∨ (󱀝_alt_attrs = ᔐ_moss)
     󱀝_code  = 󰆴'⟦' main 󰆴'⟧'
     󱀝 = 󰆴('󱀝' 𝗪?) (󰆴CLN 󱀝_ə_nam 󰆴𝗪? ∨ ✓) 󱀝_ə_typ (󰆴𝗪? 󱀝_attrs ∨ ✓) (󰆴𝗪? 󱀝_ə_val ∨ ✓)
-
+    
     CLN = (𝗪?) ↷ ':'
     ⍮   = (𝗪?) ↷ '⍮'
     
@@ -55,8 +67,7 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
     𝗪 = ~‹[ \t\n]+›
     comment = ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
 󰦥󰦥󰦥󰦥󰦥
-
-reps = 󰦥󰦥󰦥󰦥󰦥
+reps = 󰦥󰦥󰦥󰦥
     𝑖 Number © const ⎉ let
     ↦ => ⠤ ... ᐦ ""
     𝚲 (...𝔸)=>
@@ -73,193 +84,203 @@ reps = 󰦥󰦥󰦥󰦥󰦥
     ⎔ of ∈ in ☾ print
     ¬ ! ⭜ ? ⭝ : ⋅ * ∧ && ∨ || ⪢ >> ⪡ << ≠ != ≥ >= ≤ <=
     ≡ == ≅ === ≇ !== 🆕 new 󱣩 undefined
-󰦥󰦥󰦥󰦥󰦥.strip󷺻𝗻󰛔􍪵␛ ᐸ⍭ᐵ.strip󷹎¹𝘀ᐸ→ℵ
+󰦥󰦥󰦥󰦥.strip󷺻𝗻󰛔􍪵␛ ᐸ⍭ᐵ.strip󷹎¹𝘀ᐸ→ℵ
 
 specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
-attr_repl = ‹󰊄 󰿨  󱇙 󰌷 ⨝ + - ∀ ᴍ ꟿ 󰈲 ſ @ : ¶›􀌌􀝤􀌌‹innerText children disabled classList append join .add .remove forEach map starmap filter reduce at slice style›
+attr_repl = ‹⫰ ⫯ 󰊄 󰿨  󱇙 󰌷 ⨝ + - ∀ ᴍ ꟿ 󰈲 ſ @ : ¶›􀌌􀝤􀌌‹toUpperCase toLowerCase innerText children disabled classList append join .add .remove forEach map starmap filter reduce at slice style›
 CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
 OPERATORS = ‹!== === == => // /= *= -= += ++ -- && ?? ||›􀌌􀞚‹󰆴󱟱󱫬𝚲󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󱣩🆕⎉©⎔!%&*/+-,.:;?<=>@^|¡¬¯±¿÷ſϜᐴᐹᗢᙎᙡᙧᚤᣆᴙℵℶ↨↪↺⇥∀∅∈∉∋∌∓∖∘√∣∤∧∨∩∪∾≅≇≔≕≠≡≤≥⊂⊃⊄⊅⊊⊋⊚⊛⊜⊞⋀⋁⋄⋅⌃⍁⍉⍜⍟⍭▢►◄○☾⛶➰⟕⟖⟗⠤⠶⤈⤉⨀⨁⨉⨝⨡⨳⩓⩔⪡⪢⫯⫰⬄⬒⬓⭜⭝⭥⮂⮌ⴵ⸘⹏ꟿ𝌂🃌🟕🟖󰈲󰈳󰌷󰑅󰒼󰒽󰔶󰛔󰬩󰬫󰸵󰸷󰻾󱅏󱑼󱖘󱖚󷸉󷸊󷸋󷸌󷸍󷸎󷸕󷸖󷸗󷸘󷸙󷸚󷸛󷸜󷸸󷸹󷸺󷸻󷹄󷹅󷹌󷹍󷹎󷹓󷹔󷹕󷹖󷹜󷹝󷹴󷹵󷺒󷺤󷺥󷺦󷺫󷺬›
 
 flip = UPSIDEDOWNSYNDROME.flip
-bp = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ⋄SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ⋄CONSTANTS⋄OPERATORS ᴍ rgx_golfatron
-ll = ‹SCRIPTD SCRIPTU CONSTANTS OPERATORS›⍭ᐵ⛶⟗␛%
-GRAM = ll 󰛔ᴳᴿᴬᴹ bp
+bp = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ􀊱SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ􀊱CONSTANTS􀊱OPERATORS 􀉳 rgx_golfatron
+ll = ‹SCRIPTD SCRIPTU CONSTANTS OPERATORS›􀌌ᐵ􀋁􀋥␛%
+GRAM = ll 􀋀ᴳᴿᴬᴹ bp
+
 gram = GRAM peggle
 
 𝚃 = ℵ(T=✓)
 𝔗𝔗 = 󷺻𝔗(⟞􋒷)
 𝚜 = Ń(␛𝘄, 𝘀 𝔗)
 mp = 󷺹≕h󷹝ᑀ≤128∨h.isidentifier() ⭜h⭝ ⟞󷹜¹⁶⁺⁵􍢉⭢+ᵜ␛þ
-fmt_js_ᔐ = ␛\⋄␛$ 􁁿 ␛\␛\⋄␛\␛$
+fmt_js_ᔐ = ␛􀋌􀊱␛$ 􀝤 ␛􀋌␛􀋌􀊱␛􀋌␛$
 
 mkexp = 𝚲Ń(‹󷺗expr›, ⠤𝔸)
 mkgrp = 󰲡Ń(‹󷺗󷺗grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
 mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
-𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›􀞚􀌌‹false ...›)ᴍmkopt
+𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›􀞚􀌌‹false ...›)􀉳mkopt
 
-⊢proc(x,n=∞,comments=✓,moss_aliases=□):
-    ¿comments: ↪proc(gram(x,‹main_comments›,remove_trashes=✗).rm(‹comment›)􋒷,
-                     n,✗,moss_aliases)
-    󱁕 = gram(x)
-    ¿n<0: ↪󱁕
-    
-    ⊢(󱁕.ftrp(‹sub sup›⍭,⬤))(󱁕):
-       t = SCRIPT.nrm(󱁕􋒷)
-       ¿󱁕ᵗ≡‹sub›: ↪ mkgrp(␛[␛], proc(t,0))
-       ¡        : ↪ mkexp(𝚍𝚘𝚝, mkvar(attr_repl(t)))
-    ¿n<1: ↪󱁕
-    
-    󱁕.ftrp("script"⍭, 󱁕↦󱁕₀, pre=✓)
-    󱁕.ftrp("λ_head"⍭, 󱁕↦mkexp(mkgrp(␛(␛), 󱁕), 𝚊𝚖𝚛), pre=✓)
-    
-    ⊢(󱁕.ftrp(‹󱀝_pairk 󱀝_pairv 󱀝_ə_typ›⍭,⬤,pre=✓))(󱁕):
-         ¿‹fix›∈󱁕ᵉ:
-        ¿󱁕🃌≡1∧󱁕₀ᵉ ᵀ:
-            󱁕ᶜ = Ń(‹str›, Ń(‹ᔐ_☾›, Ń(‹ᔐ_guts›, 𝔗𝔗(󱁕)))) ⛶
-        ⸘󱁕ᵗ≡‹󱀝_ə_typ› ∧ ¬󱁕􋒷: 󱁕ᶜ = 𝚏𝚕𝚜⛶
-        ¿󱁕ᵗ≡‹󱀝_pairk›: 󱁕ᶜ = mkgrp(␛[␛], ⠤󱁕)⛶
-        ↪ 󱁕
-    
-    󱁕.ftrp(‹󱀝_brack›⍭, 󱁕↦󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕ᐖmkgrp(␛(␛), ⟞)ᐸ ⨝𝚌𝚘𝚖)]), pre=✓)
-    󱁕.ftrp(‹󱀝_pair󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕⨝𝚌𝚕𝚗), pre=✓)
-    󱁕.ftrp(‹󱀝_attrs›⍭, 󱁕↦󱁕.copy(c=mkgrp(␛{␛}, ⠤󱁕⨝𝚌𝚘𝚖)), pre=✓)
-    󱁕.ftrp(‹󱀝_pairm›⍭, 󱁕↦󱁕.copy(c=mkexp(𝚍𝚘𝚝𝚜, mkgrp(␛(␛), 󱁕))), pre=✓)
-    
-    ⊢(󱁕.ftrp(‹󱀝›⍭, ⬤, pre=✓))(󱁕):
-       𝚛 = mkexp(mkvar(‹mkə›), mkgrp(␛(␛), ⠤󱁕₁﹕ᐵᵗ≡␛✓ ⭜𝚏𝚕𝚜⭝ ⟞ᐸ ⨝𝚌𝚘𝚖))
-       ↪ 󱁕₀ᵗ≠␛✓ ⭜mkgrp(␛(␛), mkvar(󱁕₀􋒷), 𝚎𝚚𝚕, 𝚛)⭝ 𝚛
-    
-    󱁕.ftrp(‹const opert󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(𝘀𝘀, 󱁕))
-    󱁕.ftrp(‹ᔐ_sub󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=⛶mkgrp(‹${ }›⍭, ⠤󱁕)), pre=✓)
-    󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜, mknum(flip(󱁕􋒷))))
-    󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕􋒷≕α∈reps ⭜󱁕.copy(c=⛶𝔗(reps󰃤))⭝ 󱁕)
-    󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕.copy(c=[Ń(󱁕₀ᵗ􀉳mp􀞆ᐦ, e=𝚃)]))
-    
-    gs = 󷺹ᐖspecials.get(⟞,⟞)ᐸ⨝ᐦ
-    󱁕.ftrp(‹ᔐ_☾󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵᵗ≡‹ᔐ_spec_char› ⭜⟞􋒷 gs 𝔗⭝ ⟞), pre=✓)
-    󱁕.ftrp(‹ᔐ_guts󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕􋒷 fmt_js_ᔐ gs 𝔗 ⛶))
-    󱁕.ftrp(‹ᔐ_moss ᔐ_☾󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵᵗ≡‹ᔐ_escape› ⭜󱁕 𝔗𝔗⭝ ⟞), pre=✓)
-    󱁕.ftrp(‹ᔐ_moss󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, transpile_moss(󱁕􋒷,✓,aliases=moss_aliases) 𝔗), pre=✓)
-    󱁕.ftrp(‹ᔐ_☾󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕), pre=✓)
-    󱁕.ftrp(‹ᔐ_spec_char›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 gs 𝔗))  
-    󱁕.ftrp(‹ᔐ_escape󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 fmt_js_ᔐ 𝔗))
-    
+⊢proc(x,n=∞,comments=✓,moss_aliases=□,merge_moss_head=✓):
+  ¿merge_moss_head: moss_aliases=MOSS_HEAD_ALIASES􀝈moss_aliases􇪨󰁸󰁹
+  ¿comments: ↪proc(gram(x,‹main_comments›,remove_trashes=✗).rm(‹comment›)􋒷,
+                   n,✗,moss_aliases,✗)
+  󱁕 = gram(x)
+  ¿n<0: ↪󱁕
+  
+  ⊢(󱁕.ftrp(‹sub sup›⍭,⬤))(󱁕):
+     t = SCRIPT.nrm(󱁕􋒷)
+     ¿󱁕ᵗ≡‹sub›: ↪ mkgrp(␛[␛], proc(t,0,moss_aliases,merge_moss_head=✗))
+     ¡        : ↪ mkexp(𝚍𝚘𝚝, mkvar(attr_repl(t)))
+  ¿n<1: ↪󱁕
+  
+  󱁕.ftrp("script"⍭, 󱁕↦󱁕₀, pre=✓)
+  󱁕.ftrp("λ_head"⍭, 󱁕↦mkexp(mkgrp(␛(␛), 󱁕), 𝚊𝚖𝚛), pre=✓)
+  
+  ⊢(󱁕.ftrp(‹󱀝_attrs›􀌌,□,pre=✓))(󱁕):
+    ¿󱁕􀊹􀉞1 􀉚 󱁕₀ᵗ􀉞‹󱀝_alt_attrs›: 󱁕ᶜ=Ń(‹󱀝_pair›,⠤󱁕₀)
+    make_pair = 󰲣Ń(‹󱀝_pair›,Ń(‹󱀝_pairk›,x 𝔗),Ń(‹󱀝_pairv›,y))
+    󱁕ᶜ􇀞􀉳󰲡xᵗ􀉞‹ᔐ_moss›􇀦ˣmake_pair(␛𝑆,x)
     ↪󱁕
+  
+  ⊢(󱁕.ftrp(‹󱀝_pairk 󱀝_pairv 󱀝_ə_typ›⍭,⬤,pre=✓))(󱁕):
+       ¿‹fix›∈󱁕ᵉ:
+      ¿󱁕🃌≡1∧󱁕₀ᵉ ᵀ:
+          󱁕ᶜ = Ń(‹str›, Ń(‹ᔐ_☾›, Ń(‹ᔐ_guts›, 𝔗𝔗(󱁕)))) ⛶
+      ⸘󱁕ᵗ≡‹󱀝_ə_typ› ∧ ¬󱁕􋒷: 󱁕ᶜ = 𝚏𝚕𝚜⛶
+      ¿󱁕ᵗ≡‹󱀝_pairk›: 󱁕ᶜ = mkgrp(␛[␛], ⠤󱁕)⛶
+      ↪ 󱁕
+  
+  󱁕.ftrp(‹󱀝_brack›⍭, 󱁕↦󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕ᐖmkgrp(␛(␛), ⟞)ᐸ ⨝𝚌𝚘𝚖)]), pre=✓)
+  󱁕.ftrp(‹󱀝_pair󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕⨝𝚌𝚕𝚗), pre=✓)
 
-⊢(fcache􀃅)transpile_joon(x,moss_aliases=□): ↪proc(x,moss_aliases=moss_aliases)􋒷
+  󱁕.ftrp(‹󱀝_attrs›⍭, 󱁕↦󱁕.copy(c=mkgrp(␛{␛}, ⠤󱁕⨝𝚌𝚘𝚖)), pre=✓)
+  󱁕.ftrp(‹󱀝_pairm›⍭, 󱁕↦󱁕.copy(c=mkexp(𝚍𝚘𝚝𝚜, mkgrp(␛(␛), 󱁕))), pre=✓)
+  
+  ⊢(󱁕.ftrp(‹󱀝›⍭, ⬤, pre=✓))(󱁕):
+     𝚛 = mkexp(mkvar(‹mkə›), mkgrp(␛(␛), ⠤󱁕₁﹕ᐵᵗ≡␛✓ ⭜𝚏𝚕𝚜⭝ ⟞ᐸ ⨝𝚌𝚘𝚖))
+     ↪ 󱁕₀ᵗ≠␛✓ ⭜mkgrp(␛(␛), mkvar(󱁕₀􋒷), 𝚎𝚚𝚕, 𝚛)⭝ 𝚛
+  
+  󱁕.ftrp(‹const opert󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(𝘀𝘀, 󱁕))
+  󱁕.ftrp(‹ᔐ_sub󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=⛶mkgrp(‹${ }›⍭, ⠤󱁕)), pre=✓)
+  󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜, mknum(flip(󱁕􋒷))))
+  󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕􋒷≕α∈reps ⭜󱁕.copy(c=⛶𝔗(reps󰃤))⭝ 󱁕)
+  󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕.copy(c=[Ń(󱁕₀ᵗ􀉳mp􀞆ᐦ, e=𝚃)]))
+  
+  gs = 󷺹ᐖspecials.get(⟞,⟞)ᐸ⨝ᐦ
+  󱁕.ftrp(‹ᔐ_☾󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵᵗ≡‹ᔐ_spec_char› ⭜⟞􋒷 gs 𝔗⭝ ⟞), pre=✓)
+  󱁕.ftrp(‹ᔐ_guts󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕􋒷 fmt_js_ᔐ gs 𝔗 ⛶))
+  󱁕.ftrp(‹ᔐ_moss ᔐ_☾󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕ᐵᵗ≡‹ᔐ_escape› ⭜󱁕 𝔗𝔗⭝ ⟞), pre=✓)
+  󱁕.ftrp(‹ᔐ_moss󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, transpile_moss(󱁕􋒷,✓,aliases=moss_aliases) 𝔗), pre=✓)
+  󱁕.ftrp(‹ᔐ_☾󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕), pre=✓)
+  󱁕.ftrp(‹ᔐ_spec_char›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 gs 𝔗))  
+  󱁕.ftrp(‹ᔐ_escape󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 fmt_js_ᔐ 𝔗))
+  
+  ↪󱁕
+
+⊢(fcache􀃅)transpile_joon(x,moss_aliases=□,⠶𝕂): ↪prettify_js(proc(x,moss_aliases=moss_aliases,⠶𝕂)􋒷)
 
 transpile_type = ⥌dir,α,β,ƒ↦‹**/*.⟦α⟧› dir.globᐖ(⟞.parent/‹⟦⟞.stem⟧.⟦β⟧›, ⟞  ƒ) ► ⟞.unlink
 
 joon_header = JOON_HEADER transpile_joon
 ⊢transpile_dir(idir,odir,fhead=‹/* AUTOGENERATED, DO NOT EDIT */𝗻›):
-    (idir,odir)􇀞􀉳𝐩
-    odir.exists ¬ ⨳
-    shutil.copytree(idir,odir)
-    (odir/‹header.js›, fhead+joon_header)
-    _,ma = transpile_moss(MOSS_HEADER,✗)
-    transpile_type(odir,‹☾ss›,‹css›,󰲡transpile_moss(x,✗,ma) ᑀ₀ 􀊯 ⟞₁ma.update)
-    transpile_type(odir,‹j☾󷺗›,‹js󷺗›,󰲡fhead+transpile_joon(x,ma))
+  (idir,odir)􇀞􀉳𝐩
+  odir.exists􀃅􀌐 􁀒
+  shutil.copytree(idir,odir)
+  (odir􀋋‹header.js›, fhead􀊩joon_header)
+  ma = MOSS_HEAD_ALIASES.copy􀌗
+  transpile_type(odir,‹☾ss›,‹css›,󰲡transpile_moss(x,✗,ma) ᑀ₀ 􀊯 ⟞₁ma.update)
+  transpile_type(odir,‹j☾󷺗›,‹js󷺗›,󰲡fhead􀊩transpile_joon(x,ma,merge_moss_head=✗))
 
 ⭷ transpile_joon,joon_header,transpile_dir
 
 ¿__name__ ≡ ‹__main__›:
-    ¿𝔸🃌≡2: transpile_joon(𝔸₁)☾
-           exit
-    ¿𝔸🃌≡3: transpile_dir(𝔸₁, 𝔸₂)
-           exit
-
-    ⊢ test(x):
-        x☾
-        ␛→⋅50→☾
-        transpile_joon(x)☾
-        ␛←⋅50→☾􋋉􋋉
-    
-    🟑 test(󰦥󰦥󰦥󰦥󰦥
-    ↪ 󱀝 {𝐶 fr fas tac⍮ 𝑆 min-width:80%;max-width:97%} [
-          󱀝 {𝐶 fc fjc w2 h} [
-              󱀝 txt ‹Connected›
-              󱀝:α div {𝐶 ha⍮ 𝑆 min-height:30px;border:1px solid #FFF} []
-          ]
-      ];
-    󰦥󰦥󰦥󰦥󰦥)
-    
-    test(󰦥󰦥󰦥󰦥󰦥
-    f=
-    𝚲(
-    𝑙(
-    ‹h
-    el
-    lo
-     w
-    or
-    ld
-    ›)
-    􋐉(
-    󰲡x
-    ≠𝗻
-    ))
-    􌿑(
-    ᐦ)
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-    © ə_dev_mode_selector = ⥌ƒ↦
-        󱀝 {𝐶 vcentered margKids2}[
-            󱀝 button {onclick ⟦𝚲ƒ('B')⟧} ‹Connect via Bluetooth›
-            󱀝 button {onclick ⟦𝚲ƒ('I')⟧} ‹Connect via Internet›
-        ];
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-        A=␛h
-        B=𝗻
-        C=‹␛A›
-        D=‹𝗻›
-        E=‹\a›
-        F="\x"
-        G=␛\
-        H=␛𝗻
-        I=‹␛𝗻𝘁𝘀(󷺗)abc␛a␛𝗻␛›a␛␛›
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-        joe=⥌x,y↦x+y
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-        ble_dev_to_str = ⥌𝐒↦𝒪(𝐒).map(⥌[𝐬,𝐂]↦‹⟦𝐬⟧⟦𝐂.map(⥌𝐜↦‹𝗻    ⟦𝐜⟧›).join(ᐦ)⟧›).join(𝗻);
-        joe
-        󱀝:ə div
-
-        󱀝:ə div {𝑆 asdad} [‹hi› ⟦2+2⟧]
-                asdasdasd
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-        󱀝 ‹a›{‹b›:‹c›}‹d›
-    󰦥󰦥󰦥󰦥󰦥)
-
-    test(󰦥󰦥󰦥󰦥󰦥
-        󱀝 [
-            󱀝 {𝐶 fieldEntry} [
-                󱀝:α input {𝑃𝐻 SSID}
-            ]
-            󱀝 {𝐶 fieldEntry} [
-                󱀝 input {𝑇 password⍮ 𝑃𝐻 ‹Password›}
-            ]
-            󱀝:β button {𝐶 fieldButton⍮ onclick ⟦𝚲☾("hi", α, β)⟧} 󷺗
+  ¿𝔸􀊹􀉞2: proc(𝔸₁)􋒷􀊸
+         exit􀌗
+  ¿𝔸􀊹􀉞3: transpile_dir(𝔸₁,𝔸₂)
+         exit􀌗
+  
+  ⊢ test(x):
+      x􀊸
+      ␛→50􀊸
+      proc(x)􋒷􀊸
+      ␛←50􀊸􋋉􋋉
+  
+  🟑 test(󰦥󰦥󰦥󰦥󰦥
+  ↪ 󱀝 {𝐶 fr fas tac⍮ 𝑆 min-width:80%;max-width:97%} [
+        󱀝 {𝐶 fc fjc w2 h} [
+            󱀝 txt ‹Connected›
+            󱀝:α div {𝐶 ha⍮ 𝑆 min-height:30px;border:1px solid #FFF} []
         ]
-    󰦥󰦥󰦥󰦥󰦥) 🟑
-    
-    test(󰦥󰦥󰦥󰦥󰦥
-        © myepicelement = 󱀝 div [
-            󱀝 h4 [
-                ‹sonic i have an announcement, 2 pluz 2 is ⟦2⋅2 - 222⟧›
-                󱀝 h6{𝑆:‹color:red;›} ‹hi im red im ¬blue›
-            ]
-            󱀝 video{src:https://website.gov/cool.mp4 ⍮ 𝐶:coolvideo ⍮ 𝑆:width:1000px; height:1000px;}
-            󱀝:joe div
-        ];
-    󰦥󰦥󰦥󰦥󰦥)
-    
-    test(󰦥󰦥󰦥󰦥󰦥[‹𝚌 def⟦2+2⟧›, ⦅𝚌 def⟦2+2⟧⦆]󰦥󰦥󰦥󰦥󰦥)
+    ];
+  󰦥󰦥󰦥󰦥󰦥)
+  
+  test(󰦥󰦥󰦥󰦥󰦥
+  f=
+  𝚲(
+  𝑙(
+  ‹h
+  el
+  lo
+   w
+  or
+  ld
+  ›)
+  􋐉(
+  󰲡x
+  ≠𝗻
+  ))
+  􌿑(
+  ᐦ)
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+  © ə_dev_mode_selector = ⥌ƒ↦
+      󱀝 {𝐶 vcentered margKids2}[
+          󱀝 button {onclick ⟦𝚲ƒ('B')⟧} ‹Connect via Bluetooth›
+          󱀝 button {onclick ⟦𝚲ƒ('I')⟧} ‹Connect via Internet›
+      ];
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      A=␛h
+      B=𝗻
+      C=‹␛A›
+      D=‹𝗻›
+      E=‹\a›
+      F="\x"
+      G=␛\
+      H=␛𝗻
+      I=‹␛𝗻𝘁𝘀(󷺗)abc␛a␛𝗻␛›a␛␛›
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      joe=⥌x,y↦x+y
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      ble_dev_to_str = ⥌𝐒↦𝒪(𝐒).map(⥌[𝐬,𝐂]↦‹⟦𝐬⟧⟦𝐂.map(⥌𝐜↦‹𝗻    ⟦𝐜⟧›).join(ᐦ)⟧›).join(𝗻);
+      joe
+      󱀝:ə div
+
+      󱀝:ə div {𝑆 asdad} [‹hi› ⟦2+2⟧]
+              asdasdasd
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      󱀝 ‹a›{‹b›:‹c›}‹d›
+  󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      󱀝 [
+          󱀝 {𝐶 fieldEntry} [
+              󱀝:α input {𝑃𝐻 SSID}
+          ]
+          󱀝 {𝐶 fieldEntry} [
+              󱀝 input {𝑇 password⍮ 𝑃𝐻 ‹Password›}
+          ]
+          󱀝:β button {𝐶 fieldButton⍮ onclick ⟦𝚲☾("hi", α, β)⟧} 󷺗
+      ]
+  󰦥󰦥󰦥󰦥󰦥) 🟑
+  
+  
+   test(󰦥󰦥󰦥󰦥󰦥[‹𝚌 def⟦2+2⟧›, ⦅𝚌 def⟦2+2⟧⦆]󰦥󰦥󰦥󰦥󰦥)
+
+  test(󰦥󰦥󰦥󰦥󰦥
+      © my_awesome_element = 󱀝 div ⦅𝚏 𝚏LR 𝚊𝙿c⦆ [
+          󱀝 h4 [
+              ‹sonic i have an announcement, ⟦‹your Gay›􋄽()⟧›
+              󱀝 h6 ⦅𝚌 red⦆ ‹hi im red!!›
+          ]
+          󱀝 video{src https://website.gov/cool.mp4⍮ 𝐶 coolvideo⍮ ⦅𝚠 1000px; 𝚑 1000px;⦆}
+          󱀝:joe div
+      ];
+  󰦥󰦥󰦥󰦥󰦥)
