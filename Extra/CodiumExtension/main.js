@@ -97,7 +97,7 @@ const align = 𝐸 => {
   let X = S.ꟿ((l,C)=>[l,C.ᴍ(𝔠)]);
   let N = getSpacing(X);
   𝐸.edit(𝑒𝑏=>ζ(N.ζ()[1],S.ζ()[1]).ᴍ(x=>x.ζ())
-             .flat().ꟿ((c,s) => 𝑒𝑏.replace(s,' '.repeat(c)))); };
+             .flat().ꟿ((c,s) => 𝑒𝑏.replace(s,' '.repeat(c)+𝐸.document.getText(s)))); };
 align.manual = true;
 
 const dirOpener = 𝐸 => { 
