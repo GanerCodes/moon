@@ -146,7 +146,7 @@ const tools = { sup  : s=>[...s].ᴍ(c=>SUP[c]??c).join(''),
                 set16: s=>mapS(s, 0,-16),
                 set19: s=>mapS(s, 0,-19),
                 wall, align, dirOpener, fileRun, splitLineKeepCol }
-// 󰤱 generalized upper/lower/swapcase, switching alphabets
+// 󰤱 generalized upper/lower/swapcase, switching alphabets, ctrl+shift+k replacement
 
 const fc = (𝐸,l,c) => [l,ᔐ𝑙(part(    𝐸.document.lineAt(l).text, c)[0])               ];
 const cf = (𝐸,l,c) => [l,   part([...𝐸.document.lineAt(l).text],c)[0].join('').length];
