@@ -89,15 +89,23 @@ subparse = ⥌gram,󱁕,α,β=□↦󱁕.ftrp(α,󱁕↦offset_𝚕𝚌(reform_p
                red ≔ #F00
                ⎊ᴾ 𝚜𝚞𝚜 color
                
+               ⎊ᴾ 𝙳 display
+               ⎊ᴾ 𝙵 flex
+               ⎊ 𝙵 ∣ 𝙳 flex
+               ⎊ᴾ 𝙵𝙳 flex-direction
+                 ⎊ 𝙵→ ∣ 𝙵; 𝙵𝙳 row
+               
                ⎊ egglike «html body» > «div span»
-                   𝚠 100%
-                   𝚑 100%
+                 𝚠 100%
+                 𝚑 100%
                eggos ∣ egglike
                        weed 22
                        𝚜𝚞𝚜 420
              󰦥󰦥󰦥󰦥
              _,ma = transpile_moss(MOSS_HEADER,✗)
              css,𝔠 = transpile_moss(c,✗,ma)
-             css☾
-             transpile_moss(‹𝚌 ⦑red⦒; egglike; 𝚏›,✓,𝔠) ☾
+             css􀊸
+             transpile_moss(‹𝚌 ⦑red⦒; egglike; 𝚏›,✓,𝔠)􀊸
+             ᐦ􀊸
+             transpile_moss(‹𝙵→›,✓,𝔠)􀊸
 ¿__name__ ≡ ‹__main__›: test_moss􀃅

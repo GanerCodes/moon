@@ -713,7 +713,7 @@
 󷰽 ¿⸘¡   ⟦⁅?⟦?!⟧⁆⁅!!⁆⟧ {if,elif,else}
 󷰽 ⮂⮌   c⟦yf⟧𝕊 Python "{yield,from}"
 󷰽 ↺⇥   c⟦cb⟧𝕊 Python "{continue,break}"
-󷰽 ∀➰   ⟦⁅AA⁆⁅cl𝕊⁆⟧ Python "{for,while}"
+󷰽 ∀   AA𝕊 for
 󷰽 ⠤⠶   c⟦dD⟧𝕊 Python {*,**} for {vargs,kargs}
 󷰽 ⭜⭝   ce⟦nl⟧𝕊 ternary {if,else}
     "x ⭜ y ⭝ z" ⟶ y if x else z

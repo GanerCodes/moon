@@ -122,7 +122,7 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ⁅ ⟦⁅WW⁆⁅SS⁆⁅AA⁆⁅DD⁆⟧  ⟶ ⬆⬇⬅➡            ⁆
          ⁅ ⟦lxyw⟧⟦ad⟧          ⟶ ⟵␛⟶⇜⇝↢↣⬿⤳       ⁆
          ⁅ b⫾d4⫾⫾d4⫾           ⟶ ◌◌⮢⮣◌↯⮠⮡⮤⮦↜↭⮥⮧◌↝⁆
-         ⁅ bb⟦⁅w𝕊⁆⁅s𝕊⁆⁅ws⁆⟧    ⟶ 󰘣󰘡󰡏             ⁆
+         ⁅ bb⟦⁅⟦ad⟧𝕊⁆⁅ad⁆⁅⟦ws⟧𝕊⁆⁅ws⁆⟧ ⟶ 󷹠󷹟󷹡󰘣󰘡󰡏   ⁆
          ⁅ c⫾c4⫾               ⟶ ⌜⌝⌞⌟            ⁆
          ⁅ d⟦⫾d4⫾/⟧            ⟶ ↟↡↞↠↮           ⁆
          ⁅ f⫾c4⫾               ⟶ ⌈⌉⌊⌋            ⁆
@@ -134,20 +134,24 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ⁅ .⫾d4⫾               ⟶ ⋮⋯⋰⋱            ⁆
          ⁅ ⫾d8⫾𝕊               ⟶ ↑↓←→↖↗↙↘        ⁆ ⟧⁆
       ⁅A⟦⁅ R⫾D8⫾𝕊              ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾        ⁆
-         ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧  ⟶ ↶↷↩↪            ⁆ ⟧⁆ ⟧
+         ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧  ⟶ ↶↷↩↪            ⁆
+         ⁅ ⟦⁅AD⁆⁅DA⁆⁅WS⁆⁅SW⁆⟧  ⟶ 󷷢󷷣󷷤󷷥            ⁆ ⟧⁆ ⟧
 
 ⟨d7d⟩⟦⁅vt⟶⨃⁆⁅ic⟶⯈⁆⁅IC⟶⮞⁆⁅st⟶✣⁆⁅sps⟶ᔲ⁆
       ⁅⟦sS⟧r  ⟶ ƨƧ⁆⁅FF⟦𝕊R⟧ ⟶ ᖵᖶ⁆
       ⁅.⟦tb⟧  ⟶ ∴∵⁆⁅ai⟦AD⟧ ⟶ 󷹛󷹚⁆
       ⁅i⟦ᐦ/⟧s ⟶ ⫢󷹈⁆⁅s⟦ᐦ/⟧i ⟶ 󷹉󷹊⁆
-      ⁅E⟦𝕊/⟧  ⟶ ∃∄⁆⟧
+      ⁅E⟦𝕊/⟧  ⟶ ∃∄⁆⁅cl𝕊    ⟶ ➰ ⁆⟧
 
-DD⟶∆ ␠ ee⟶ə ␠ ix⟶🝤 ␠ th⟶þ ␠ TH⟶Þ ␠ O-⟶␛◌
+DD⟶∆ ␠ ee⟶ə ␠ ix⟶🝤 ␠ th⟶þ ␠ O-⟶␛◌
+CM⟶⚇ ␠ 0x⟶󱊧 ␠ OX⟶☠ ␠ TH⟶Þ
 sec⟶§ ␠ to𝕊⟶󰤱 ␠ nt𝕊⟶󷹇 ␠ mod⟶⸓
 asy⟶󱟱 ␠ lgq⟶ȹ ␠ cll⟶󱇙 ␠ ccn⟶ᗜ
 ref⟶ꔧ ␠ doc⟶󰈙 ␠ awt⟶󱫬 ␠ cir⟶󱖈
 wre⟶≀ ␠ NEW⟶🆕 ␠ und⟶󱣩 ␠ act⟶⮎
-cod⟶ ␠ sun⟶꥟ ␠ ..𝕊⟶…
+..𝕊⟶… ␠ cp!⟶󷸿
+dot⟦-+⟧ ⟶ 
+⁅o:⁆⁅:o⁆ ⟶ 󷹋󷹞
 ⁅⟦:⁅c⟦dD⟧⁆⟧?⟶󷷰󷷱󷷲⁆
 C⟦[]⟧⟶󷷬󷷭
 c⟦JjoW⟧𝕊 ⟶ ᒍ🝇⩫
@@ -157,10 +161,8 @@ cp⟦r⁅t⫾d4⫾⁆⟧ ⟶ ☽⯟◌⯝⚸
 ⟦nNs⟧' ⟶ ńŃś
 ./⟦/.⟧ ⟶ ╱⁒
 F⟦*-|⟧ ⟶ ꘎─│
-t⟦⁅ex⁆⁅xt⁆⟧   ⟶ 󰊄
 l⟦⁅ae⁆⁅AE⁆⟧   ⟶ æÆ
 star⟦𝕊-d⟧     ⟶ ⭐✪✡
-w/⟦𝕊o⟧        ⟶ 󰇚󱂰
 pl⟦[]𝕊⟧       ⟶ փ
 ⟦'"⁅𝕄⟦αωι⟧⁆⟧_ ⟶ ⍘󷹆⍶⍹⍸
 q⟦|<>()  []⟧  ⟶ ␛⫾⟬⟭⦅⦆␛⟦␛⟧
@@ -190,29 +192,28 @@ heh⟶😏 ␠ cool⟶😎 ␠ blush⟶🤭 ␠ overjoy⟶🥹
 hmm⟶🤔 ␠ kiss⟶😚 ␠ chill⟶😌 ␠ muscle⟶💪
 hot⟶🥵 ␠ love⟶🥰 ␠ heyes⟶😍 ␠ imdead⟶💀
 joy⟶😂 ␠ need⟶🤤 ␠ hkiss⟶😘 ␠ praise⟶🙌
-lol⟶😆 ␠ rofl⟶🤣 ␠ shock⟶😳 ␠ pray⟶🙏
-mad⟶😤 ␠ eye𝕊⟶👁️ ␠ peace⟶✌ ␠ rainb⟶🌈
-yum⟶😋 ␠ eyes⟶👀 ␠ write⟶✍ ␠ snowman⟶☃
-hug⟶🫂 ␠ wave⟶👋 ␠ spark⟶✨ ␠ pirate⟶󰨈
-lit⟶🔥 ␠ clap⟶👏 ␠ cheer⟶🎉 ␠ dagger⟶†
-sob⟶😭 ␠ fist⟶✊ ␠ wheel⟶✇  ␠ expand⟶󰘖 
-ok ⟶👌 ␠ dino⟶󱍢  ␠ spin ⟶߷  ␠ contract⟶
-say?⟶󱜻 ␠ calc⟶󰭧  ␠ color⟶  ␠ piece⟶☮
-fire⟶󱐚 ␠ grid⟶󰋁  ␠ stack⟶
-⟨cf7⟩⟦
-  ⁅mail⟶󰇮⁆⁅database⟶󰆼⁆
-  ⁅user⟶󰢏⁆⁅package ⟶⁆⁅USPS  ⟶⁆
-  ⁅card⟶⁆⁅store   ⟶⁆⁅paypal⟶⁆
-⟧
+lol⟶😆 ␠ rofl⟶🤣 ␠ shock⟶😳 ␠ pray  ⟶🙏
+mad⟶😤 ␠ wave⟶👋 ␠ peace⟶✌ ␠ ok    ⟶👌
+yum⟶😋 ␠ clap⟶👏 ␠ write⟶✍
+sob⟶😭 ␠ fist⟶✊ ␠ spark⟶✨
+hug⟶🫂 ␠ eye𝕊⟶👁️ ␠ cheer⟶🎉
+lit⟶🔥 ␠ eyes⟶👀 ␠ rainb⟶🌈
 
-pen⟦ᐦ⁅cil⁆⟧ ⟶ 
-
-⟦⁅dot⁆⁅Vis⁆⟧⟦-+⟧ ⟶ 
-⁅o:⁆⁅:o⁆ ⟶ 󷹋󷹞
-gear⟦𝕊+us⟧ ⟶ 
-⟦⁅Vis⁆⁅weed⁆⟧⟦𝕊/⟧ ⟶ 󰞦󱙮
-⟦⁅up⁆⁅down⁆⟧load ⟶ 
-CM⟶⚇ ␠ 0x⟶󱊧 ␠ OX⟶☠ ␠ cp!⟶󷸿
+⟨fb2⟩⟦⁅cod⟶⁆⁅sun⟶꥟⁆
+      ⁅spin⟶߷⁆⁅wheel⟶✇⁆⁅dagger⟶†⁆⁅snowman⟶☃⁆
+      ⁅dino⟶󱍢⁆⁅piece⟶☮⁆⁅expand⟶󰘖⁆⁅contract⟶⁆
+      ⁅say?⟶󱜻⁆⁅color⟶⁆⁅pirate⟶󰨈⁆
+      ⁅fire⟶󱐚⁆⁅stack⟶⁆
+      ⁅grid⟶󰋁⁆⁅piece⟶☮⁆
+      ⁅calc⟶󰭧⁆⁅enter⟶󰿄⁆
+      ⁅pen⟦ᐦ⁅cil⁆⟧ ⟶ ⁆⁅ver⟦-+⟧ ⟶ ⁆
+      ⁅t⟦⁅ex⁆⁅xt⁆⟧ ⟶ 󰊄⁆⁅w/⟦𝕊o⟧  ⟶ 󰇚󱂰⁆
+      ⁅⟦⁅up⁆⁅down⁆⟧load  ⟶   ⁆
+      ⁅gear⟦𝕊+us⟧        ⟶ ⁆
+      ⁅⟦⁅vis⁆⁅weed⁆⟧⟦𝕊/⟧ ⟶ 󰞦󱙮⁆⟧
+⟨cf7⟩⟦⁅mail⟶󰇮⁆⁅database⟶󰆼⁆
+      ⁅user⟶󰢏⁆⁅package ⟶⁆⁅USPS  ⟶⁆
+      ⁅card⟶⁆⁅store   ⟶⁆⁅paypal⟶⁆⟧
 
 𝕄deso⟶‹\overline{}›
 shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
@@ -232,7 +233,7 @@ shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
 ⟨|fc02|ff63|1⟩⟶‹ ›
 ⟨|0fc2|55de|1⟩⟶‹ ›
 
- 󷰙󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰰󷰱󷰲󷰳󷰴󷰵󷰶󷰷󷰸󷰹󷰺󷰻󷰼󷹏󷹐󷹑󰠷󱐝ᒍ󷹙󷸵󷸶󷸝󷸞󷸟󷸠󷸡󷸢󷸣󷸤󷸥󷸨󷸩󷸪󷸫󷸬󷸭󷸮󷸯󷸰󷸱󷸲󷸳󷹥󷹧󷹦󰇘󰑁󰑃󷹟󷹠󷹡󷹽󷹾󷹿󷺀｜＋／＼＃＞＜⅄ɹԀ˥ʞƆʎʍʌʇɯʞᴉɥƃɟɔɐ𝝤𝝦𝝧𝝩𝝪𝝬𝝾𝞊𝞌𝞎𝞏𝞐𝞑𝞒𝞓𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ХхΑΒΕΗΚΜΝΟΡΤΥ⥜⥠⥝⥡֍∥⨆⨲⋎⋏⩄⩅ᖯᐊᐅᕦᗐᗑᓎẞᖇⵗⵐ
+ 󷰙󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰰󷰱󷰲󷰳󷰴󷰵󷰶󷰷󷰸󷰹󷰺󷰻󷰼󷹏󷹐󷹑󰠷󱐝ᒍ󷹙󷸵󷸶󷸝󷸞󷸟󷸠󷸡󷸢󷸣󷸤󷸥󷸨󷸩󷸪󷸫󷸬󷸭󷸮󷸯󷸰󷸱󷸲󷸳󷹥󷹧󷹦󰇘󰑁󰑃󷹽󷹾󷹿󷺀｜＋／＼＃＞＜⅄ɹԀ˥ʞƆʎʍʌʇɯʞᴉɥƃɟɔɐ𝝤𝝦𝝧𝝩𝝪𝝬𝝾𝞊𝞌𝞎𝞏𝞐𝞑𝞒𝞓𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ХхΑΒΕΗΚΜΝΟΡΤΥ⥜⥠⥝⥡֍∥⨆⨲⋎⋏⩄⩅ᖯᐊᐅᕦᗐᗑᓎẞᖇⵗⵐ
 󰦥󰦥󰦥󰦥󰦥
 
 REMOVES      = 󰦥󰦥󰦥󰦥󰦥 ☝✋✌✍✨✊❣☺☹ 󰦥󰦥󰦥󰦥󰦥

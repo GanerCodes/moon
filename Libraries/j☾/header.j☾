@@ -60,8 +60,8 @@ chainIntoElements = ⥌x,P↦{
     P􍪙(⠤x);
     ↪P; }
 
-mkə = ⥌name, attrs, kids↦{
-    © remaps = { NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝑆:"style", 𝐼:"id", 𝐶:"className" };
+mkə = ⥌name,attrs,kids↦{
+    © remaps = { closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝑆:"style", 𝐼:"id", 𝐶:"className" };
     kids = chainIntoElements(kids);
     ¿(𝗙(name)) ↪name(attrs, ⠤kids)
     ¿(name≅✗) name = "div";

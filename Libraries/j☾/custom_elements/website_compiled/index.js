@@ -7,7 +7,7 @@
                          return ə ;  } ; 
  const  toggleButton  =  (ƒ , N , Y , S =  false  , set_init =  true ) => {
   S  =   +  !  ! S ; 
-   if (isStr(N)) [N , Y]  =  [N , Y] . map( (x,...𝔸)=>  mkə(`button` , {[`𝑆`] : `height: 100%; padding-left: 6px; padding-right: 6px; border: none;`} , `${x}`)) ; 
+   if (isStr(N)) [N , Y]  =  [N , Y] . map( (x,...𝔸)=>  mkə(`button` , {[`𝑆`] : `height: 100%; 𝚙𝚕: 6px; 𝚙𝚛: 6px; border: none;`} , `${x}`)) ; 
    let  n  =  mkə( false  , {} ,  false ) ; 
    let  ə  =  S ? Y : N ; 
   n . replaceWith(ə) ; 
@@ -24,7 +24,21 @@
    else { ə  =  mkə(`span` , {[`𝐶`] : `boxInput` , [`𝑆`] : `width: 100%;`} , fld) ;  }
    return ə ;  }
  const  box  =  (Ѧ ,  ... C) => { 
-   return  mkə(`div` , {[`𝐶`] : `box` , [`𝑆`] : `zoom: 2; display: flex; flex-direction: column; align-items: center;`} , C)
+   return  mkə(`div` , {[`𝐶`] : `box` , [`𝑆`] : `zoom: 2; display: flex; flex-direction: column; display: flex; align-content: center;`} , C)
+} ; 
+
+
+
+ const  popup  =  (Ѧ ,  ... C) => { 
+   let  ə , btn ; 
+  (ə = mkə(`dialog` , {[`closedby`] : Ѧ . þ0F2D4 ? `any` : `none`} , [(Ѧ . þF0159  ? ((btn = mkə(`button` , {[`𝐶`] : `dialogCloseBtn`} , `✗`))) :  []) , (C)]))
+  
+  ə . addEventListener(`close` ,   (...𝔸)=> (Ѧ . onclose ?. () , ə . remove())) ; 
+  (btn ?? {}) . onclick  =   (...𝔸)=> ə . close() ; 
+   if ( ! Ѧ . noAppend) {
+    þF0219 . body . append(ə) ; 
+    ə . showModal() ;  }
+   return ə
 } ; 
 
 þF0219 . body . append(
@@ -36,8 +50,9 @@
     textButton("Submit" ,   (...𝔸)=>  print (email , username , password))
   ) , 
   toggleButton( print  , "✗" , "✓" ,  false ) , 
-  textField({𝑃𝐻 : `weeee`})
-)
+  textField({𝑃𝐻 : `weeee`}))
+popup({þ0F2D4 :  true  , þF0159 :  false } , `hi`)
+
 
 
 

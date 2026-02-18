@@ -25,20 +25,34 @@
   ¡{ ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
   ↪ə; }
 © box = ⥌Ѧ,⠤C↦{  󰤱
-  ↪ 󱀝 div {𝐶 box⍮⦅zoom 2;𝚏TB;𝚊𝚜c⦆} ⟦C⟧
+  ↪ 󱀝 div {𝐶 box⍮⦅zoom 2;𝚏↓;𝚊𝚜󷷣⦆} ⟦C⟧
 };
+
+ : clicking external
+ 󰅙: has an x to close
+© popup = ⥌Ѧ,⠤C↦{  󰤱
+  ⎉ ə,btn;
+  󱀝:ə dialog {closedby ⟦Ѧ.⭜‹any›⭝‹none›⟧} [
+    ⟦Ѧ.󰅙 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
+    ⟦C⟧ ]
+  ə.addEventListener(‹close›, 𝚲(Ѧ.onclose⸮(),ə.remove()));
+  (btn??{}).onclick = 𝚲ə.close();
+  ¿(¬Ѧ.noAppend) { 󰈙.body􍪙(ə);
+                   ə.showModal(); }
+  ↪ə };
 
 󰈙.body􍪙(
   box({},
-    󱀝 T ⦅font-size 48px⦆ ‹Sign up›,
+    󱀝 T ⦅󰊄𝚜 48px⦆ ‹Sign up›,
     textField({id:‹email›   , 𝑃𝐻:‹Email›        }),
     textField({id:‹username›, 𝑃𝐻:‹Username›     }),
     textField({id:‹password›, 𝑃𝐻:‹Password›, :✓}),
     textButton("Submit", 𝚲☾(email,username,password))
   ),
   toggleButton(☾,"✗","✓",✗),
-  textField({𝑃𝐻:‹weeee›})
-)
+  textField({𝑃𝐻:‹weeee›}))
+popup({:✓,󰅙:✓},‹hi›)
+
    󱀝 div {} [
      󱀝 T ‹test›
      󱀝:myinput input {𝑃𝐻 Username}]

@@ -1,16 +1,17 @@
-b0 ≔ #000
-b1 ≔ #222
-b2 ≔ #444
-f0 ≔ #FFF
-f1 ≔ #DDD
-f2 ≔ #AAA
-
+b0 ≔ #000000
+b1 ≔ #111111
+b2 ≔ #222222
+b3 ≔ #333333
+f0 ≔ #FFFFFF
+f1 ≔ #EEEEEE
+f2 ≔ #DDDDDD
+f3 ≔ #CCCCCC
+f4 ≔ #BBBBBB
 * ∣ box-sizing border-box
 button,input,span ∣ 𝚃 all 0.1s ease-in-out
 
-html ∣ 𝚌  ⦑f0⦒
-       𝚌𝚋 ⦑b0⦒
-body ∣ 𝚏TB; 𝚊𝚜c
+html ∣  ⦑f0⦒; 𝚋 ⦑b0⦒
+body ∣ 𝚏↓; 𝚊𝚂󷷣
 
 .box ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
        𝚙 1em
@@ -18,25 +19,33 @@ body ∣ 𝚏TB; 𝚊𝚜c
 
 «button input»
   𝚙0;𝚖0
-  outline none
-  𝚌  ⦑f0⦒; 𝚌𝚋 transparent
+  𝚘𝚕 none
+   ⦑f0⦒; 𝚋 transparent
 button        ∣ 𝚋 unset
 button:hover  ∣ 𝚖𝚙 pointer
-                𝚌𝚋 ⦑f2⦒3
-button:active ∣ 𝚌𝚋 ⦑f1⦒3
+                𝚋 ⦑f2⦒33
+button:active ∣ 𝚋 ⦑f1⦒33
 
-.boxInput ∣ 𝚏LR; 𝚊𝚜c; 𝚙0
-            𝚌  ⦑f0⦒; 𝚌𝚋 ⦑b0⦒
-            𝚋  1px solid ⦑f2⦒; 𝚋𝚛 5px
-.boxInput * ∣ font-size 24px
-.boxInput>:first-child ∣ 𝚙𝚕 2px; 𝚙𝚛 2px
-                         border-top-left-radius 4px
-                         border-bottom-left-radius 4px
-.boxInput>:last-child  ∣ 𝚙𝚕 2px; 𝚙𝚛 2px
-                         border-top-right-radius 4px
-                         border-bottom-right-radius 4px
+.boxInput ∣ 𝚏→; 𝚊𝚂󷷣; 𝚙0
+             ⦑f0⦒; 𝚋 ⦑b0⦒
+            𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+.boxInput * ∣ 󰊄𝚜 24px
+.boxInput>:first-child ∣ 𝚙𝚕 2px; 𝚙𝚛 2px; 𝚋𝚛↖ 4px; 𝚋𝚛↙ 4px; 
+.boxInput>:last-child  ∣ 𝚙𝚕 2px; 𝚙𝚛 2px; 𝚋𝚛↙ 4px; 𝚋𝚛↘ 4px;
 .boxInput:focus-within
-  𝚌𝚋 ⦑b1⦒
+  𝚋 ⦑b1⦒
   𝚋  1px solid ⦑f0⦒
 .boxInput:has(input:invalid)
   𝚋  1px solid #f00
+
+::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
+dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
+              𝚙 30px
+               ⦑f0⦒; 𝚋 ⦑b0⦒DD
+              𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
+              𝚜 ⦑f0⦒33 0px 0px 20px 0px
+
+.dialogCloseBtn ∣ 𝚙𝚘𝚜a; → 0.333em; ↑ 0px
+                   ⦑f4⦒; 󰊄𝚜 35px;
+.dialogCloseBtn:hover  ∣  ⦑f2⦒; 𝚋𝚐 none
+.dialogCloseBtn:active ∣  ⦑f1⦒; 𝚋𝚐 none

@@ -136,7 +136,10 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
   ⸘f􀉨‹get-dir›: moon_dir􀊸
   ¡: þdo_imps􀃅
-     ¿f􀉨‹D󷺗󷺗󷺗󷺗󷺗󷺗›: ∀: input􀃅 􀯖 VEP 􀯖 __highlighter__ 􀯖 􀊸
+     ¿f􀉨‹D󷺗󷺗󷺗󷺗󷺗󷺗›: x = ⍁
+                   ∀:           input􀃅 x.append
+                      ¡EOFError: ⇥
+                   x􀜗__highlighter__􀊊VEP􀞆𝗻􀝜
      ⸘f􀉨‹d󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀉳VEP􀋢𝘀         􀯖 __highlighter__ 􀯖 􀊸
      ⸘f􀉨‹e󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀉳PEV􀋢𝘀                           􀯖 􀊸
      ⸘f􀉨‹B󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠₀𝐩 generate_bootstrap_live
