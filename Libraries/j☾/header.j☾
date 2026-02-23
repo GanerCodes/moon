@@ -1,42 +1,45 @@
 BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
+󰈙 = document;
+[𝐴,𝐸,𝑜] = [Array,Element,Object];
+[𝒪,𝒟,𝒪k,𝒪v] = [𝑜.entries,𝑜.fromEntries,𝑜.keys,𝑜.values];
+𝔓 = 󰲡x.prototype;
 𝔍 = {↑:JSON.stringify, ↓:JSON.parse};
 󷹝 = String.fromCharCode;
-󰈙 = document;
-𝑜 = Object;
-𝗙 = 󰲡x instanceof Function;
 🃌 = 󰲡x.length;
+𝗙 = 󰲡x instanceof Function;
 𝑙 = 󰲡[⠤x];
 󰻾 = 󰲡x;
-⋀ = 󰲡x.every(󰻾);
 󱑼 = 󰲣𝑙(x)􊾡(⥌k,i↦[k,yᵢ]);
-ꟿ  = 󰲣𝑙(x)􊾡(󰲡y(⠤x));
-ᴍ  = 󰲣𝑙(x)􊾡(y);
 ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v)]));
 ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k),v]));
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;
-[󱅏, ⬓] = [Math.random, Math.floor];
-[𝒪, 𝒟, 𝒪k, 𝒪v] = [𝑜.entries, 𝑜.fromEntries, 𝑜.keys, 𝑜.values];
+[󱅏,⬓] = [Math.random, Math.floor];
 ☾     = ⥌⠤x↦(console.log  (⠤x),x₀);
 table = ⥌⠤x↦(console.table(⠤x),x₀);
 ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
 sort  = ⥌A,f,r=𝔽↦ A.sort(⥌a,b↦(r ⭜1⭝ 󷰾)⋅(b>a ⭜1⭝ 󷰾));  what?
 range = ⥌a,b↦b≅󱣩⭜𝑙(Array(a).keys())⭝𝑙(Array(b-a).keys())􊾡(󰲡x+a);
-merge = ⥌ ⠤o↦𝑜.assign({}, ⠤o);
+merge = ⥌ ⠤o↦𝑜.assign({},⠤o);
 sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r, 1000⋅s));
 mk_id = ⥌l,chars=BASE_CHARSET↦range(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
-groups = ⥌l,𝑓↦{
-    O = {};
-    l􋁃(󰲡𝒮(O, 𝑓(x), []).push(x));
-    ↪ O; }
 
-© 𝐸 = Element
-Array.prototype.starmap = function(x){↪ꟿ(this,x)}
-𝐸.prototype.map     = function(x  ){this􋑱=Array.from(this􋑱)􊾡(x  ); ↪this};
-𝐸.prototype.starmap = function(x  ){this􋑱=Array.from(this􋑱)􋅝(x  ); ↪this};
-𝐸.prototype.filter  = function(x  ){this􋑱=Array.from(this􋑱)􋐉(x  ); ↪this};
-𝐸.prototype.reduce  = function(x,y){↪     Array.from(this􋑱)􋔩(x,y);      };
-    
+𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
+
+© arrayLike = {: ⥌x,ƒ↦{ O = {};
+                         x.forEach(⥌x↦(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
+                         ↪O; },
+               ᴍ: 󰲣x.map(y),
+               ꟿ: 󰲣x.map(󰲡y(⠤x)),
+               ſ: 󰲣x.reduce(y),
+               󰈲: 󰲣x.filter(y),
+               ⋀: 󰲡x.every(x,󰻾),
+               ⋁: 󰲡x.some (x,󰻾) }
+𝒪(arrayLike).forEach(⥌[s,ƒ]↦{
+  windowₛ = 󰲡ƒ(isElement(x)⭜𝐴.from(x)⭝x,⠤𝔸);
+  𝔓(𝐴)ₛ = function(⠤𝔸){ ↪ƒ(       this ,⠤𝔸);};
+  𝔓(𝐸)ₛ = function(⠤𝔸){ ↪ƒ(𝐴.from(this),⠤𝔸);}; });
+
 GID = 󰲡document.getElementById(x);
 VAL = 󰲡GID(x).value;
 SAT = 󰲥x.setAttribute(y,z);

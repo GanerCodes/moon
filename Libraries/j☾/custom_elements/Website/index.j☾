@@ -25,12 +25,12 @@
   ¡{ ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
   ↪ə; }
 © box = ⥌Ѧ,⠤C↦{  󰤱
-  ↪ 󱀝 div {𝐶 box⍮⦅zoom 2;𝚏↓;𝚊𝚜󷷣⦆} ⟦C⟧
+  ↪ 󱀝 div {𝐶 box⍮⦅𝚏↓;𝚊𝚂󷷣⦆} ⟦C⟧
 };
 
  : clicking external
  󰅙: has an x to close
-© popup = ⥌Ѧ,⠤C↦{  󰤱
+© popup = ⥌Ѧ,⠤C↦{
   ⎉ ə,btn;
   󱀝:ə dialog {closedby ⟦Ѧ.⭜‹any›⭝‹none›⟧} [
     ⟦Ѧ.󰅙 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
@@ -41,16 +41,23 @@
                    ə.showModal(); }
   ↪ə };
 
+© table = ⥌Ѧ,rows↦{
+  ⎉ ə;
+  󱀝:ə {𝐶 table⍮⦅grid-template-columns repeat(⟦🃌(rows₀)⟧,minmax(max-content, 1fr))⦆⍮⠤Ѧ}
+        ⟦rows.flat()􊾡(󰲡󱀝 div {𝐶 tableItem} ⟦x⟧)⟧
+  ↪ə; };
+
 󰈙.body􍪙(
   box({},
     󱀝 T ⦅󰊄𝚜 48px⦆ ‹Sign up›,
     textField({id:‹email›   , 𝑃𝐻:‹Email›        }),
     textField({id:‹username›, 𝑃𝐻:‹Username›     }),
     textField({id:‹password›, 𝑃𝐻:‹Password›, :✓}),
-    textButton("Submit", 𝚲☾(email,username,password))
+    textButton("Submit", 𝚲☾(email,username,password), {𝐶:"roundBtn"})
   ),
   toggleButton(☾,"✗","✓",✗),
-  textField({𝑃𝐻:‹weeee›}))
+  textField({𝑃𝐻:‹weeee›}),
+  table({},[[textField({𝑃𝐻:"test", :✓}),"b","c"],["d",󱀝 div ⦅𝚏↓⦆ [󱀝 t ‹eee› 󱀝 t ‹EEE›],"f"],["g","h","i"]]))
 popup({:✓,󰅙:✓},‹hi›)
 
    󱀝 div {} [

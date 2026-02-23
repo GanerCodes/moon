@@ -88,6 +88,10 @@ reps = 󰦥󰦥󰦥󰦥
 
 specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
 attr_repl = ‹⫰ ⫯ 󰊄 󰿨  󱇙 󰌷 ⨝ + - ∀ ᴍ ꟿ 󰈲 ſ @ : ¶›􀌌􀝤􀌌‹toUpperCase toLowerCase innerText children disabled classList append join .add .remove forEach map starmap filter reduce at slice style›
+
+attr_repl = ‹⫰ toUpperCase ⫯ toLowerCase 󰊄 innerText 󰿨 children  disabled
+             󱇙 classList 󰌷 append + .add - .remove ∀ forEach
+             @ at : slice ¶ style›ᐒ𝗻􀋀􍪵␛ 􀌌􀋅≺􀋀
 CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
 OPERATORS = ‹!== === == => // /= *= -= += ++ -- && ?? ?. ||›􀌌􀞚‹󰆴󱟱󱫬𝚲󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󱣩🆕⎉©⎔!%&*/+-,.:;?<=>@^|¡¬¯±¿÷ſϜᐴᐹᗢᙎᙡᙧᚤᣆᴙℵℶ↨↪↺⇥∀∅∈∉∋∌∓∖∘√∣∤∧∨∩∪∾≅≇≔≕≠≡≤≥⊂⊃⊄⊅⊊⊋⊚⊛⊜⊞⋀⋁⋄⋅⌃⍁⍉⍜⍟⍭▢►◄○☾⛶➰⟕⟖⟗⠤⠶⤈⤉⨀⨁⨉⨝⨡⨳⩓⩔⪡⪢⫯⫰⬄⬒⬓⭜⭝⭥⮂⮌ⴵ⸘⹏ꟿ𝌂🃌🟕🟖󰈲󰈳󰌷󰑅󰒼󰒽󰔶󰛔󰬩󰬫󰸵󰸷󰻾󱅏󱑼󱖘󱖚󷸉󷸊󷸋󷸌󷸍󷸎󷸕󷸖󷸗󷸘󷸙󷸚󷸛󷸜󷸸󷸹󷸺󷸻󷹄󷹅󷹌󷹍󷹎󷹓󷹔󷹕󷹖󷹜󷹝󷹴󷹵󷺒󷺤󷺥󷺦󷺫󷺬⸮›
 
