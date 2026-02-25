@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="/index.css">
   </head>
   <body>
-    <script type="module">
-      (1,eval)(await (await fetch("/header.js")).text());
-      (1,eval)(await (await fetch("/index.js")).text());
-    </script>
+    <script defer src="/header.js"></script>
+    <script defer src="/index.js"></script>
   </body>
 </html>

@@ -10,19 +10,21 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 𝗙 = 󰲡x instanceof Function;
 𝑙 = 󰲡[⠤x];
 󰻾 = 󰲡x;
-󱑼 = 󰲣𝑙(x)􊾡(⥌k,i↦[k,yᵢ]);
+↨ = 󰲡[⠤x].map(⥌x,i↦[i,x])
+⭥ = 󰲣isArray(x) ⭜[⠤x.keys()]⭝ ⭥(𝐴(y≅󱣩⭜x⭝y-x))􊾡(⥌v↦v+(y≅󱣩⭜0⭝x));
+󷸻 = 󰲣isArray(x) ⭜⭥(a􋌵+1)⭝ y≅󱣩 ⭜⭥(x+1)⭝ ⭥(x,y+1);
+[⤉,⤈] = [Math.max,Math.min];
+[󱅏,⬓] = [Math.random, Math.floor];
+󱑼 = ⥌⠤𝙰↦⭥(⤉(⠤𝙰􊾡(🃌)))􊾡(⥌i↦𝙰􊾡(󰲡xᵢ));
 ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v)]));
 ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k),v]));
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;
-[󱅏,⬓] = [Math.random, Math.floor];
 ☾     = ⥌⠤x↦(console.log  (⠤x),x₀);
 table = ⥌⠤x↦(console.table(⠤x),x₀);
 ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
-sort  = ⥌A,f,r=𝔽↦ A.sort(⥌a,b↦(r ⭜1⭝ 󷰾)⋅(b>a ⭜1⭝ 󷰾));  what?
-range = ⥌a,b↦b≅󱣩⭜𝑙(Array(a).keys())⭝𝑙(Array(b-a).keys())􊾡(󰲡x+a);
-merge = ⥌ ⠤o↦𝑜.assign({},⠤o);
-sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r, 1000⋅s));
-mk_id = ⥌l,chars=BASE_CHARSET↦range(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
+merge = 𝚲𝑜.assign({},⠤𝔸);
+sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
+mk_id = ⥌l,chars=BASE_CHARSET↦⭥    (l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
 
 𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 
@@ -43,8 +45,8 @@ mk_id = ⥌l,chars=BASE_CHARSET↦range(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(
 GID = 󰲡document.getElementById(x);
 VAL = 󰲡GID(x).value;
 SAT = 󰲥x.setAttribute(y,z);
-QS  = ⥌x,e=document↦e.querySelector(x);
-QSA = ⥌x,e=document↦𝑙(e.querySelectorAll(x));
+QS  = ⥌x,ε=document↦ε.querySelector(x);
+QSA = ⥌x,ε=document↦[⠤ε.querySelectorAll(x)];
 𝔏𝔖 = { ↑: 󰲣localStorageₓ = 𝔍􋀫(y),
        ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
        ⸓: 󰲥𝔏𝔖􋀫(x, y(𝔏𝔖􋀭(x, z))) }

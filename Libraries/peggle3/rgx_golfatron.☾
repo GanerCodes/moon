@@ -1,38 +1,74 @@
-ch1, ch2 = ‹𝗻\^$.|?*+()[]{}›, ‹\]-›
-ST = 0x10FF50
-CF≔(CT≔ℵ(ch1+ch2→ᚤ→↨ꟿ∾󷺹⋄←󷹝←        ST+󷺽))􍮕
-IF≔(IT≔ℵ(ch1+ch2→ᚤ→↨ꟿ∾󷺹⋄←󷹝←    🃌CF+ST+󷺽))􍮕
-OF≔(OT≔ℵ(ch1    →ᚤ→↨ꟿ∾󷺹⋄←󷹝←🃌IF+🃌CF+ST+󷺽))􍮕
-CT, IT, OT = CT⋄IT⋄OT ᐵ􀉴⁻󰲣x󷹝
-CF, IF, OF = CF⋄IF⋄OF ᐵ􀉴⁻󰲣x󷹝
-ch2ᐖIF􍴖󰂛󰂦􍶢􍫆≔␛\+⟞
-OF = OF􀉴⁺󰲣␛\+y
-DASH = CT􍴖􊯛₋
-BL,BR = CT􍴖􊯛󰄗, CT􍴖􊯛󰄘
-PL,PR = CT􍴖􊯛₍, CT􍴖􊯛₎
-Q,BAR = CT􍴖􊯛﹖, CT􍴖􊯛􋕠
-⊢ rgx_rans(x): x􇀞􀉽𝜶􀯍󰲡ord(x₀)
-               r = []
-               ∀⟞⬠x􀊂􋂝ꜝ:
-                   h = ⟞ᴍ𝜶
-                   r.append(h₀+h₁+h₂≡3h₀+3 ⭜DASH⭝ ⟞₁)
-               ↪(r ſ 󰲣x+y⋅⭠y􍨄≠x􍨄).translate(IT)
+⨡ peggle3 ⭸ 𝔗
 
-⊢ (fcache) rgx_golfatron(𝕏):
-    ⊢ (cache_) 𝼝(x): t,χ = x􀉶􋇐
-                     ↪ ℵ(χ󰲡x₀)􀉴󰲣x,𝼝(H􀯍𝑡(y􀉳󰲡x₁﹕)),ᐦ∈H∧H⋁⭜1⭝0󰅂
-    ⊢ ϙ(x): s,m = x 􀉶􋇐 󰲡x􀊹􀉟1
-            m􇀞􀉳󰲡ᐦ.join(x.translate(OT))
-            ¿s􀯍ᐦ.join(s): m.append(s􀊹􀉞1 􇀦s.translate(OT)􇀧 BL􀊩rgx_rans(s)􀊩BR)
-            ↪m
-    ⊢ ŧ(x): α,β,γ=x
-            r = α
-            ¿β∧β􀯍ϙ(βᴍŧ):
-                h = BAR.join(β)
-                ¿α∧β🃌>1: h = PL+h+PR
-                r􇀞􀊩h
-            ↪γ∧α ⭜r+Q⭝ r
-    𝕏 = 𝼝(𝑡(sorted(𝕏,key=󰲡􀊹x􀋗,x󰅂)))
-    ↪ŧ((ᐦ,𝕏,✗)).translate(CF).translate(IF).translate(OF)
+ dict pop but you can also replace the value:
+⊢𝓅(𝙳,k=□,d=␀,r=␀): ¿k􀉩𝙳: ¿d􀋑␀: ↪✗􁀒
+                         𝐫=d
+                   ¡   : 𝐫=𝙳.pop(k)
+                   ¿r􀋒␀: 𝙳ₖ=r
+                   ↪𝐫
 
+ group list of strs by their disjoint subgraphs
+⊢disjoin_groups_ᔐ(𝚇): 𝚇 = ⦉⠤𝚇⦊
+                      ¿ᐦ∈𝚇: 𝚇.remove(ᐦ)
+                      ¿𝚇􀌐: ↪⍁
+                      𝙳 = ⦉⠤𝚇􀋶⦊ᐵ􀊱∅ᐸℵ
+                      ⊢loc(x): ∀𝙳ₓ􀊜ᔐ: x=𝙳ₓ
+                               ↪x
+                      ∀𝚡⬠𝚇: l = loc(𝚂􀯍⦉⠤𝚡⦊􀯖.pop􀃅)
+                            𝙳ₗ = ⦉𝚡,⠤𝙳ₗ,⠤⦉⠤𝚂􀉳loc⦊ᐖ𝓅(𝙳,⟞,r=l)ᐸ􀋶⦊
+                      ↪𝙳⁺􀉻⬤􀁌ᔐ􀉳􀀫
+
+ᗴnrm,ᗴran = ‹[*+?(){}|$. ^:-]›􀌌􀉳󷺹ᐵ,␛\⟞ᐸℵᑀ.get(⟝,⟝)󷺿
+
+ match 1 char from a group:
+⊢rgx_rans(x,m=3): ¿x􀊹􀜂1􀜇m: ↪x₀ᗴnrm
+                  x = x􀉳ord􀉽􀯖⟨⟨󷺹􀌍􀊰✓⍮ ᐳ󷹘􈇋􀜂􀌍󷺽⍮⟩ 󷸴 ⴳ⟩􀉳²chr􀉳􀂐􀉽􀁧
+                  ↪‹[⟦xᐵ􀊹􀉥m􇀦‹⟦⟞₀ᗴran⟧-⟦⟞􍨄ᗴran⟧›􇀧⟞􀉳ᗴran􀋢ᐸ􀋢⟧]›
+ regex that combines ors and ranges; not very optimized
+rgx_basic = ⥌x,j=✓↦[⠤⦉⠤x⦊]􀉶􋇐󷺹􀊹􀉤1ᐸᐒ[⟞₀¿rgx_rans(⟞₀􀋢),⠤⟞₁􀉳ᗴnrm]􀊚ʲ⬤􀂐␛|
+
+ longest prefix/suffix for a list of strs
+⊢longest_fix(x,suf=✗): ¿x􈇈􋄒 : ↪0
+                       ¿x􀊹􀉞1: ↪x₀􀊹
+                       ∀I⬠x􀉳􀁧􀋮􀋲: i = I􀊚ˢᵘᶠ􀂶
+                                 ¿(x₁﹕􀋙󷺹ᵢ≠ᑅx₀ ᵢ): ↪I
+                       ↪I􈇋
+
+⊢parse_and_chop(𝚇):
+  ¿𝚇􀌐: ↪ᐦ
+  ⊢to_tree(𝚇): p,s = longest_fix(𝚇)􀉖1, longest_fix(𝚇,✓)
+               S = s􀉤p 􇀦(􀌑s…,…􀌑s)􇀧 (…p,p…)
+               ↪𝚇􀉶󷺹󰂥􊬣ᐸ􀉴󰲣yᐵ󰂥􊬤ᐸᐒ(󷺗􀉧⟞,⠤[x󰂥􊬣,⟞􇀞􀉻􇂖􍸒to_tree(⟞)]􀊚ˢ􁖍ᵖ􀁰)
+  ⊢𝙿(x,p=ᐦ): r = ⍁
+             ∀a,b,c⬠x:
+               q = c􀉚a􇀦􊾖␛?
+               x,y = b􀊜ᔐ􀯑n 􇀦b􀊱c􇀧 c􀊱b
+               x,y = 𝔗(x),[y¿𝙿(y)􀊚Ń(␛?,⬤)]
+               rᵃᵖᵖᵉⁿᵈ([x,⠤y]􀊚ⁿ􁘹􀁰􀜾􍯏􁗢􁖍¹󷺹₀ᐸ􀊱󰲡Ń(␛∧,⠤x)󰅂)
+             ↪r􀊹􀉤1 􇀦Ń(␛∨,⠤r)􇀧 r₀
+  󱁕 = 𝚇 to_tree 𝙿
+  𝼝 = 󷺹ᵉ􊯛􊲓􇀦⟞􋒷􇀧rgx_basic(⟞􋒷􀋁)
+  ⴽ = 󰲣Ń(x,e={T=✓,ⴽ=✓,n=y}ℵ􋄅)
+   𝚘 = 󰲣x 𝼝 􀊚􍮿ˣ􊾸􇣦􊿗􌘃􊿻􁖍ʸ􁨧􍪵􁗢􁖎³␛(␛)􀂐⬤  ᵉᵍ ∧(a?,b) = a?b not (a?)(b)
+  𝚘 = 󰲣x 𝼝 􀊚􍮿ˣ􊾸􇣦􍫉􃓒􃑾􊽮􌘃􊿻􁖍ʸ␛(␛)􀂐⬤  ᵉᵍ ∧(a?,b) = a?b not (a?)(b)
+  ⊢(󱁕.ftrp(‹∧ ∨ ?›􀌌,□,✓)) (󱁕):
+    ¿󱁕ᵗ􀉞␛?: ↪ⴽ(‹⟦𝚘(󱁕₀,0)⟧?›,0) 󱁕ᶠʳᵒᵐ
+    ¿󱁕􀊹􀉞1 : ↪󱁕₀                󱁕ᶠʳᵒᵐ
+    ¿󱁕ᵗ􀉞␛∧: ↪ⴽ(󱁕􀉳𝚘(⬤,1)􀋢,1)    󱁕ᶠʳᵒᵐ
+    ¿󱁕ᵗ􀉞␛∨: n,o = 󱁕ᶜ􀉶􋇐󷺹ᵉ􊯛􊲓𝑏
+            ¿n: n=rgx_basic(nᐵ􋒷,✗)
+                a=□
+                ¿n₀ ₀􀉞␛[: a,⠤n = n
+                n = [a􇪨¿ⴽ(a,0),⠤n􀉳ⴽ(⬤,1)]
+            󱁕ᶜ = n􀊩o
+            ↪󱁕ᶠʳᵒᵐ(󱁕􀊹􀉞1 􇀦󱁕₀􇀧 ⴽ(󱁕􀉳𝼝􀋢␛|,∞))
+  ↪󱁕􋒷
+
+rgx_golfatron = fcache􀃅􀊉󷺹disjoin_groups_ᔐ 􀉶􋇐󷺹􀊹􀜂1􀜂􀊹⟞₀ᐸ ᐒ[⠤⟞₀,¿⟞₁􀋶]ᐸ 􀉵³ parse_and_chop 􀉻 􀋢 ␛|
 ⭷ rgx_golfatron
+
+¿__name__􀉞‹__main__›: rgx_golfatron(𝔸₁﹕)􀊸
+ c = ‹a abc abcdef za zx qqq v ha== hb== hc==›
+ c = ‹aX ab abb  cY  dcYcdY YcddY α β γ›
+ c = ‹* *= ** **= | |= || ||= & &= && &&= = == === ? ?= ?? ??= >> >>= >>> >>>= << <<= <<< <<<= != !== => // /= %= -= += -- ++ ?. ∧= ∨= ! % + , - . / : ; < > @ ^ ~ ¿ ⸮ 󰆴 󱟱 󱫬 𝚲 󰲡 󰲣 󰲥 󰲧 󰲩 󰲫 󰲭 󰲯 󰲱 󱣩 🆕 ⎉ © ⎔ ¡ ¬ ¯ ± ÷ ſ Ϝ ᐴ ᐹ ᗢ ᙎ ᙡ ᙧ ᚤ ᣆ ᴙ ℵ ℶ ↨ ↪ ↺ ⇥ ∀ ∅ ∈ ∉ ∋ ∌ ∓ ∖ ∘ √ ∣ ∤ ∧ ∨ ∩ ∪ ∾ ≅ ≇ ≔ ≕ ≠ ≡ ≤ ≥ ⊂ ⊃ ⊄ ⊅ ⊊ ⊋ ⊚ ⊛ ⊜ ⊞ ⋀ ⋁ ⋄ ⋅ ⌃ ⍁ ⍉ ⍜ ⍟ ⍭ ▢ ► ◄ ○ ☾ ⛶ ➰ ⟕ ⟖ ⟗ ⠤ ⠶ ⤈ ⤉ ⨀ ⨁ ⨉ ⨝ ⨡ ⨳ ⩓ ⩔ ⪡ ⪢ ⫯ ⫰ ⬄ ⬒ ⬓ ⭜ ⭝ ⭥ ⮂ ⮌ ⴵ ⸘ ⹏ ꟿ          𝌂 🃌 🟕 🟖 󰈲 󰈳 󰌷 󰑅 󰒼 󰒽 󰔶 󰛔 󰬩 󰬫 󰸵 󰸷 󰻾 󱅏 󱑼 󱖘 󱖚 󷸉 󷸊 󷸋 󷸌 󷸍 󷸎 󷸕 󷸖 󷸗 󷸘 󷸙 󷸚 󷸛 󷸜 󷸸 󷸹 󷸺 󷸻 󷹄 󷹅 󷹌 󷹍 󷹎 󷹓 󷹔 󷹕 󷹖 󷹜 󷹝 󷹴 󷹵 󷺒 󷺤 󷺥 󷺦 󷺫 󷺬›
+ rgx_golfatron(c􀌌)􀊸

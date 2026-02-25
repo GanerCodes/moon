@@ -47,6 +47,38 @@
         ⟦rows.flat()􊾡(󰲡󱀝 div {𝐶 tableItem} ⟦x⟧)⟧
   ↪ə; };
 
+⎉ 󷹄 = 󰲥⤈(⤉(x,y),z)
+© pageNumBar = ⥌Ѧ,N,n=0↦{
+  ⎉ ə,𝙱,𝚕,𝚛;
+  Ѧᴺ     ??= N;
+  Ѧʷ     ??= 1; 
+  Ѧᵈ􋕟ᵒᶠᶠ ??= 0;1;
+  Ѧⁿ     ??= n;
+  󱀝:ə span {𝐶 pageNumBar} ⟦[
+    󱀝:𝚕 button {𝐶 pageNumPrev} ‹←›,
+    ⠤𝙱=⭥(⤈(2⋅Ѧʷ+1,Ѧᴺ))􊾡(󰲡󱀝 button {𝐶 pageNumButton}),
+    󱀝:𝚛 button {𝐶 pageNumNext} ‹→› ]⟧
+  ↨(𝙱)􋅝(󰲣y.onclick=𝚲Ѧˢᵉᵗᴺ(󱣩,x));
+  𝚕.onclick = 𝚲Ѧˢᵉᵗᴺ(Ѧⁿ-1);
+  𝚛.onclick = 𝚲Ѧˢᵉᵗᴺ(Ѧⁿ+1);
+  Ѧˢᵉᵗᴺ = ⥌n=Ѧⁿ,i=󱣩,activate=✓↦{
+    ¿(i≇󱣩) n = 󷹄(⤉(Ѧⁿ-Ѧʷ,0)+i,0,Ѧᴺ);  󰤱
+    n = Ѧⁿ = 󷹄(n,0,Ѧᴺ);
+    ⎉ l = ⤉(n-Ѧʷ,0);
+    ⎉ r = l+2⋅Ѧʷ;
+    ¿(r>Ѧᴺ) [l,r] = [l-Ѧᴺ+r,Ѧᴺ];
+     ☾([l,r],[𝐥,𝐫],n,i,Ѧ)
+    [𝚕􋒗,𝚛􋒗] = [l≡0,r≡Ѧᴺ];
+    ∀(©[i,σ]⎔↨(󷸻(l,r))) {
+      [𝙱ᵢⁿ,𝙱ᵢ􋒷] = [σ,σ+Ѧᵈ􋕟ᵒᶠᶠ];
+      ¿(σ≡Ѧᴺ) 𝙱ᵢ􋒅 ⁺(‹selectedPageNum›);
+      ¡       𝙱ᵢ􋒅 ⁻(‹selectedPageNum›); }
+    ¿(activate) Ѧ.updatePage⸮(Ѧⁿ);
+    ☾(Ѧ); }
+  Ѧˢᵉᵗᴺ();
+  ə􀴗 = Ѧ;
+  ↪ə; };
+
 󰈙.body􍪙(
   box({},
     󱀝 T ⦅󰊄𝚜 48px⦆ ‹Sign up›,
@@ -58,7 +90,9 @@
   toggleButton(☾,"✗","✓",✗),
   textField({𝑃𝐻:‹weeee›}),
   table({},[[textField({𝑃𝐻:"test", :✓}),"b","c"],["d",󱀝 div ⦅𝚏↓⦆ [󱀝 t ‹eee› 󱀝 t ‹EEE›],"f"],["g","h","i"]]))
-popup({:✓,󰅙:✓},‹hi›)
+popup({:✓,󰅙:✓,noAppend:✓},‹hi›)
+
+󰈙.body􍪙(pageNumBar({},10));
 
    󱀝 div {} [
      󱀝 T ‹test›

@@ -11,19 +11,21 @@ BASE_CHARSET  =  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 𝗙  =   (x,...𝔸)=> x instanceof Function ; 
 𝑙  =   (x,...𝔸)=> [ ... x] ; 
  þF0EFE   =   (x,...𝔸)=> x ; 
- þF147C   =   (x,y,...𝔸)=> 𝑙(x) . ᴍ((k , i) => [k , y[i]]) ; 
+ þ021A8   =   (x,...𝔸)=> [ ... x] . map((x , i) => [i , x])
+ þ02B65   =   (x,y,...𝔸)=> isArray(x)  ? [ ... x . keys()] :   þ02B65 (𝐴(y ===  undefined  ? x : y - x)) . ᴍ((v) => v + (y ===  undefined  ? 0 : x)) ; 
+ þF7E3B   =   (x,y,...𝔸)=> isArray(x)  ?  þ02B65 (a . length + 1) :  y ===  undefined   ?  þ02B65 (x + 1) :   þ02B65 (x , y + 1) ; 
+[ (Math.max)  ,  (Math.min) ]  =  [Math . max , Math . min] ; 
+[ þF114F  ,  þ02B13 ]  =  [Math . random ,  Math . floor] ; 
+ þF147C   =  ( ... 𝙰) =>  þ02B65 ( (Math.max) ( ... 𝙰 . ᴍ( þ1F0CC ))) . ᴍ((i) => 𝙰 . ᴍ( (x,...𝔸)=> x[i])) ; 
 ᴍv  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [k , y(v)])) ; 
 ᴍk  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [y(k) , v])) ; 
 𝒮  =  (d , k , v) => ( ! (k in d)  ||  d[k] === null)  ? (d[k] = v) :  d[k] ; 
-[ þF114F  ,  þ02B13 ]  =  [Math . random ,  Math . floor] ; 
  print       =  ( ... x) => (console . log  ( ... x) , x[0]) ; 
 table  =  ( ... x) => (console . table( ... x) , x[0]) ; 
 ends   =  (l) => l . map((𝑥 , i) => [i == 0 , 𝑥 , i ==  þ1F0CC (l) - 1]) ; 
-sort   =  (A , f , r = 𝔽) =>  A . sort((a , b) => (r  ? 1 :  -1) * (b > a  ? 1 :  -1)) ;  
-range  =  (a , b) => b ===  undefined  ? 𝑙(Array(a) . keys()) : 𝑙(Array(b - a) . keys()) . ᴍ( (x,...𝔸)=> x + a) ; 
-merge  =  (  ... o) => 𝑜 . assign({} ,  ... o) ; 
-sleep  =  (s) =>  new Promise((r) => setTimeout(r ,  1000 * s)) ; 
-mk_id  =  (l , chars = BASE_CHARSET) => range(l) . ᴍ( (...𝔸)=> chars . at(Number( þF114F () *  þ1F0CC (chars)))) . ſ( (x,y,...𝔸)=> x + y ,   "" ) ; 
+merge  =   (...𝔸)=> 𝑜 . assign({} ,  ... 𝔸) ; 
+sleep  =  (s) =>  new Promise((r) => setTimeout(r , 1000 * s)) ; 
+mk_id  =  (l , chars = BASE_CHARSET) =>  þ02B65     (l) . ᴍ( (...𝔸)=> chars . at(Number( þF114F () *  þ1F0CC (chars)))) . ſ( (x,y,...𝔸)=> x + y ,   "" ) ; 
 
 𝔓(Number) . mod  =  function(n){  return (this % n + n) % n ;  } ; 
 
@@ -44,8 +46,8 @@ mk_id  =  (l , chars = BASE_CHARSET) => range(l) . ᴍ( (...𝔸)=> chars . at(N
 GID  =   (x,...𝔸)=> document . getElementById(x) ; 
 VAL  =   (x,...𝔸)=> GID(x) . value ; 
 SAT  =   (x,y,z,...𝔸)=> x . setAttribute(y , z) ; 
-QS   =  (x , e = document) => e . querySelector(x) ; 
-QSA  =  (x , e = document) => 𝑙(e . querySelectorAll(x)) ; 
+QS   =  (x , ε = document) => ε . querySelector(x) ; 
+QSA  =  (x , ε = document) => [ ... ε . querySelectorAll(x)] ; 
 𝔏𝔖  =  { þ02191 :   (x,y,...𝔸)=> localStorage[x]  =  𝔍 . þ02191(y) , 
        þ02193 :   (x,y,...𝔸)=> x in localStorage ? 𝔍 . þ02193(localStorage[x]) : y , 
        þ02E13 :   (x,y,z,...𝔸)=> 𝔏𝔖 . þ02191(x ,  y(𝔏𝔖 . þ02193(x ,  z))) }

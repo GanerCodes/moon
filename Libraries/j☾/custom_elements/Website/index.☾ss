@@ -76,7 +76,6 @@ dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑�
  .tableRow ∣ 𝚏→
  .tableRow>* ∣ 𝚏g 1
 
-
  .table
    𝚍 grid
    grid-template-columns repeat(2,1fr)
