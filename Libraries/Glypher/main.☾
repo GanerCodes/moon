@@ -250,8 +250,8 @@ MULTICHARS   = 󰦥󰦥󰦥󰦥󰦥
   st 𝘀𝘁       USB 𝗨𝗦𝗕 arg 𝗮𝗿𝗴 WTS 𝗪𝗧𝗦 tor 𝘁𝗼𝗿 int 𝗶𝗻𝘁 ker 𝗸𝗲𝗿 obj 𝗼𝗯𝗷 B85 𝔅𝟖𝟓 cot 𝗰𝗼𝘁 coth 𝗰𝗼𝘁𝗵 COTH 𝗖𝗢𝗧𝗛 WLOG 𝗪𝗟𝗢𝗚 CORR 𝗖𝗢𝗥𝗥 SIn  𝗦In󷺗
 󰦥󰦥󰦥󰦥󰦥
 SCRIPT_DEPTH      = 2  you'd be cooked to increase this
-CHECK_REPOS       = ✗
-NERDFONT          = ✗
+CHECK_REPOS       = ✓
+NERDFONT          = ✓
 CUSTOM_SYMBOLS    = ✓
 COPY_OUT_XCOMPOSE = ✓ 􀯗 ‹/c/SystemConf/.XCompose›𝐩
 COPY_OUT_FONT_DIR = ✓ 􀯗 ‹/c/Fonts›𝐩
