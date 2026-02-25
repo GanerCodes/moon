@@ -99,8 +99,6 @@ OPERATORS = ‹* | & = ? >> <<›􀌌ᐵ􀝕⟞􀊩⟞₀ᐵ􀝕⟞�
 
 flip = UPSIDEDOWNSYNDROME.flip
 bp = SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴮ􀊱SCRIPT󰀂ᴴᴬᴿ􋕟󰀒ᵁᴾ􀊱CONSTANTS􀊱OPERATORS 􀉳 rgx_golfatron
-OPERATORSᐖ‹'⟦⟞⟧'›ᐸ􀋢𝘀􀊸
-bp₃☾
 
 ll = ‹SCRIPTD SCRIPTU CONSTANTS OPERATORS›􀌌ᐵ􀋁􀋥␛%
 GRAM = ll 􀋀ᴳᴿᴬᴹ bp
