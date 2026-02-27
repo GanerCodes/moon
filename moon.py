@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='wa7UnKffu1waaiEjVoff8rlaLMo_BU8U6GLhli9cUtE'
+BOOTSTRAP_HASH='p0HvICpFMMzv_lz9BWPq2OQrNLhwZM1eLCPtAB9IZIo'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -1347,7 +1347,7 @@ def _(áÑã,Æå=ÂÞÅ,áÍÜ=ÂÞÅ,áØÁ=ÂÕË):
     return r
 
 
-#ops_.☾ (1307 ⟶ 3190)
+#ops_.☾ (1379 ⟶ 3476)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/ops_\uea8c.☾')).parent
 (áÍù:=áÓö)
 def adjust_depth(áØÆ,áØÁ,áÍù=áÓö):
@@ -1427,11 +1427,16 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=1,áØÁ=ÂÞÅ):
     if ÁØö(áØÆ,ÂÑÅ):
         return ((áØÆ>>áØÇ)if((áÑã == ("⪢")))else(áØÆ<<áØÇ))
     
+    if (((ÁØö(áØÆ,ÄÊPSH(((ÁÜÙ | áÍá) | áÍé))) and ÁØñ(ÄÊPOP(0),ÄÊPSH(áØÇ))) and (ÄÊDEL(1) or True)) or (ÄÊDEL(1) or False)):
+        ((ÄÊPOP(0))if(ÄÊPSH((áØÁ is ÂÞÅ)))else(ÂùÆ(ÄÊPOP(0),("󰤱 idk what this should do"))))
+        return (((áØÆ + áØÇ))if((áÑã == ("⪢")))else((áØÇ + áØÆ)))
+    
+    ÂùÆ(ÁØö(áØÇ,ÂÑÅ))
     if (áÑã == ("⪡")):
         (ÄÊPSH(áØÇ),ÄÊPSH(ÄÝöâ(ÄÊPKE(0))),(áØÇ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
     
     if (áØÁ is ÂÞÅ):
-        return (áØÆ and (áØÆ[slice((i:=ÂÞÅCAT(ãÊú(ÄÊCUR((2,),{},æ,(- áØÇ ),ÂýÃ)),áØÆ)),None)] + áØÆ[slice(None,i)]))
+        return (áØÆ and (áØÆ[slice((i:=((- áØÇ ) % ãÊú(áØÆ))),None)] + áØÆ[slice(None,i)]))
     
     return ÐÈÔ(MOD(ÄÔÒØ,áØÁ=áØÁ)(áØÆ),Âúú(MOD(ÄÝõÞ,áØÁ=áØÁ)(áØÆ),áØÇ))
 
