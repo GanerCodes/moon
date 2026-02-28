@@ -21,16 +21,14 @@ body ∣ 𝚏↓; 𝚊𝚂󷷣
   𝚘𝚕 none
    ⦑f0⦒; 𝚋 transparent
 
-sel ≔ ⦑􍳗⦒⦑􊽬⦒(⦑􋒗⦒)
+ sel ≔ 􍳗􊽬(􋒗)
 button
   𝚋 unset
   &􍳗􊽬(􋒗)     ∣ 𝚖𝚙 pointer
                𝚃𝚏 scale(1.02)
                𝚋 ⦑f2⦒33
-  &⦑sel⦒ ∣ 𝚃𝚏 scale(1.03)
-           𝚋 ⦑f1⦒33
-   &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚃𝚏 scale(1.03)
-                𝚋 ⦑f1⦒33
+  &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚃𝚏 scale(1.03)
+               𝚋 ⦑f1⦒33
 
 .boxInput
   𝚏→; 𝚊𝚂󷷣; 𝚙0
