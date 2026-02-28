@@ -19,6 +19,7 @@ to_py = 𝚌↦𝚲ast_to_py(⠤𝔸,𝚌=𝚌,⠶𝕂)
   ↪𝘤
 
 ⊢þdo_imps: ¿þmoon_to_py.has_lazy_load: ↪
+           ⨡ peggle3/rgx_golfatron
            ⨡ text_format
            ⨡ Compiler/to_ast
            ⨡ Compiler/ast_to_py
@@ -62,8 +63,8 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 ⊢force_reimport_compiler:
   __þIMPORTS__.clear􀃅
   TP_CACHE.clear􀃅
-  ‹Importing text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸text_format
   ‹Importing peggle3/rgx_golfatron󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/rgx_golfatron
+  ‹Importing text_format󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸text_format
   ‹Importing peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3
   ‹Importing peggle3/gram_tools󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸peggle3/gram_tools
   ‹Importing Compiler/gram.data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›􀊸 ;   ⨡􋀸Compiler/gram.data

@@ -1,4 +1,5 @@
-⨡ peggle3 ⭸ 𝔗
+ ⨡ peggle3 ⭸ 𝔗
+𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ􋄅(T=✓,⠶𝕂.get(␛e,{})))
 
  dict pop but you can also replace the value:
 ⊢𝓅(𝙳,k=□,d=␀,r=␀): ¿k􀉩𝙳: ¿d􀋑␀: ↪✗􁀒
@@ -65,6 +66,7 @@ rgx_basic = ⥌x,j=✓↦[⠤⦉⠤x⦊]􀉶􋇐󷺹􀊹􀉤1ᐸᐒ[⟞₀¿rgx_
   ↪󱁕􋒷
 
 rgx_golfatron = fcache􀃅􀊉󷺹disjoin_groups_ᔐ 􀉶􋇐󷺹􀊹􀜂1􀜂􀊹⟞₀ᐸ ᐒ[⠤⟞₀,¿⟞₁􀋶]ᐸ 􀉵³ parse_and_chop 􀉻 􀋢 ␛|
+
 ⭷ rgx_golfatron
 
 ¿__name__􀉞‹__main__›: rgx_golfatron(𝔸₁﹕)􀊸

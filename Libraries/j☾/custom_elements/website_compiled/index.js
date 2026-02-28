@@ -43,12 +43,11 @@
   (ə = mkə( false  , {[`𝐶`] : `table` , [`𝑆`] : `grid-template-columns: repeat(${ þ1F0CC (rows[0])},minmax(max-content, 1fr));` ,  ... (Ѧ)} , rows . flat() . ᴍ( (x,...𝔸)=> mkə(`div` , {[`𝐶`] : `tableItem`} , x))))
    return ə ;  } ; 
 
- let   þF7E44   =   (x,y,z,...𝔸)=>  (Math.min) ( (Math.max) (x , y) , z)
  const  pageNumBar  =  (Ѧ , N , n = 0) => {
    let  ə , 𝙱 , 𝚕 , 𝚛 ; 
   Ѧ . N      ??=  N ; 
   Ѧ . w      ??=  1 ;  
-  Ѧ . d_off  ??=  0 ; 
+  Ѧ . d_off  ??=  1 ; 
   Ѧ . n      ??=  n ; 
   (ə = mkə(`span` , {[`𝐶`] : `pageNumBar`} , [
     (𝚕 = mkə(`button` , {[`𝐶`] : `pageNumPrev`} , `←`)) , 
@@ -57,20 +56,21 @@
    þ021A8 (𝙱) . ꟿ( (x,y,...𝔸)=> y . onclick =  (...𝔸)=> Ѧ . setN( undefined  , x)) ; 
   𝚕 . onclick  =   (...𝔸)=> Ѧ . setN(Ѧ . n - 1) ; 
   𝚛 . onclick  =   (...𝔸)=> Ѧ . setN(Ѧ . n + 1) ; 
+   const  G  =  (n) => {  const  [L , R]  =  [0 , Ѧ . N - 1] ; 
+             n  =   þF7E44 (n , 0 , R) ; 
+              if (Ѧ . N <= 1 + 2 * Ѧ . w)  return [L , n , R] ; 
+              let  [l , r]  =  [ (Math.max) (n - Ѧ . w , L) ,  (Math.min) (n + Ѧ . w , R)] ; 
+              if (l < L + Ѧ . w)  return [l ,  n ,   (Math.min) (l + 2 * Ѧ . w , R)] ; 
+              if (r > R - Ѧ . w)  return [ (Math.max) (r - 2 * Ѧ . w , L) ,  n ,  r] ; 
+              return [l , n , r] ;  } ; 
   Ѧ . setN  =  (n = Ѧ . n , i =  undefined  , activate =  true ) => {
-     if (i !==  undefined ) n  =   þF7E44 ( (Math.max) (Ѧ . n - Ѧ . w , 0) + i , 0 , Ѧ . N) ;  
-    n  =  Ѧ . n  =   þF7E44 (n , 0 , Ѧ . N) ; 
-     let  l  =   (Math.max) (n - Ѧ . w , 0) ; 
-     let  r  =  l + 2 * Ѧ . w ; 
-     if (r > Ѧ . N) [l , r]  =  [l - Ѧ . N + r , Ѧ . N] ; 
-    
-    [𝚕 . disabled , 𝚛 . disabled]  =  [l == 0 , r == Ѧ . N] ; 
+     let  l , r ;  [l , Ѧ . n , r]  =  G(i ===  undefined   ? n :  G(Ѧ . n)[0] + i) ; 
+    [𝚕 . disabled , 𝚛 . disabled]  =  [n == 0 ,  n == Ѧ . N - 1] ; 
      for ( const [i , σ] of  þ021A8 ( þF7E3B (l , r))) {
       [𝙱[i] . n , 𝙱[i] . innerText]  =  [σ , σ + Ѧ . d_off] ; 
-       if (σ == Ѧ . N) 𝙱[i] . classList  . add(`selectedPageNum`) ; 
-       else        𝙱[i] . classList  . remove(`selectedPageNum`) ;  }
-     if (activate) Ѧ . updatePage ?. (Ѧ . n) ; 
-     print (Ѧ) ;  }
+       if (σ == Ѧ . n) { 𝙱[i] . classList  . add(`selectedPageNum`) ;  𝙱[i] . disabled  =   true  ;  }
+       else        { 𝙱[i] . classList  . remove(`selectedPageNum`) ;  𝙱[i] . disabled  =   false  ;  } }
+     if (activate) Ѧ . updatePage ?. (Ѧ . n) ;  }
   Ѧ . setN() ; 
   ə . Ѧ  =  Ѧ ; 
    return ə ;  } ; 
@@ -88,7 +88,7 @@
   table({} , [[textField({𝑃𝐻 : "test" ,  þ0F070 :  true }) , "b" , "c"] , ["d" , mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: column;`} , [(mkə(`t` ,  false  , `eee`)) , (mkə(`t` ,  false  , `EEE`))]) , "f"] , ["g" , "h" , "i"]]))
 popup({þ0F2D4 :  true  , þF0159 :  true  , noAppend :  true } , `hi`)
 
-þF0219 . body . append(pageNumBar({} , 10)) ; 
+þF0219 . body . append(pageNumBar({w : 1} , 13)) ; 
 
 
 

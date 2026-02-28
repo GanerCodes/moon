@@ -47,12 +47,11 @@
         ⟦rows.flat()􊾡(󰲡󱀝 div {𝐶 tableItem} ⟦x⟧)⟧
   ↪ə; };
 
-⎉ 󷹄 = 󰲥⤈(⤉(x,y),z)
 © pageNumBar = ⥌Ѧ,N,n=0↦{
   ⎉ ə,𝙱,𝚕,𝚛;
   Ѧᴺ     ??= N;
   Ѧʷ     ??= 1; 
-  Ѧᵈ􋕟ᵒᶠᶠ ??= 0;1;
+  Ѧᵈ􋕟ᵒᶠᶠ ??= 1;
   Ѧⁿ     ??= n;
   󱀝:ə span {𝐶 pageNumBar} ⟦[
     󱀝:𝚕 button {𝐶 pageNumPrev} ‹←›,
@@ -61,20 +60,21 @@
   ↨(𝙱)􋅝(󰲣y.onclick=𝚲Ѧˢᵉᵗᴺ(󱣩,x));
   𝚕.onclick = 𝚲Ѧˢᵉᵗᴺ(Ѧⁿ-1);
   𝚛.onclick = 𝚲Ѧˢᵉᵗᴺ(Ѧⁿ+1);
+  © G = ⥌n↦{ © [L,R] = [0,Ѧᴺ-1];
+             n = 󷹄(n,0,R);
+             ¿(Ѧᴺ≤1+2⋅Ѧʷ) ↪[L,n,R];
+             ⎉ [l,r] = [⤉(n-Ѧʷ,L),⤈(n+Ѧʷ,R)];
+             ¿(l<L+Ѧʷ) ↪[l, n, ⤈(l+2⋅Ѧʷ,R)];
+             ¿(r>R-Ѧʷ) ↪[⤉(r-2⋅Ѧʷ,L), n, r];
+             ↪[l,n,r]; };
   Ѧˢᵉᵗᴺ = ⥌n=Ѧⁿ,i=󱣩,activate=✓↦{
-    ¿(i≇󱣩) n = 󷹄(⤉(Ѧⁿ-Ѧʷ,0)+i,0,Ѧᴺ);  󰤱
-    n = Ѧⁿ = 󷹄(n,0,Ѧᴺ);
-    ⎉ l = ⤉(n-Ѧʷ,0);
-    ⎉ r = l+2⋅Ѧʷ;
-    ¿(r>Ѧᴺ) [l,r] = [l-Ѧᴺ+r,Ѧᴺ];
-     ☾([l,r],[𝐥,𝐫],n,i,Ѧ)
-    [𝚕􋒗,𝚛􋒗] = [l≡0,r≡Ѧᴺ];
+    ⎉ l,r; [l,Ѧⁿ,r] = G(i≅󱣩 ⭜n⭝ G(Ѧⁿ)₀+i);
+    [𝚕􋒗,𝚛􋒗] = [n≡0, n≡Ѧᴺ-1];
     ∀(©[i,σ]⎔↨(󷸻(l,r))) {
       [𝙱ᵢⁿ,𝙱ᵢ􋒷] = [σ,σ+Ѧᵈ􋕟ᵒᶠᶠ];
-      ¿(σ≡Ѧᴺ) 𝙱ᵢ􋒅 ⁺(‹selectedPageNum›);
-      ¡       𝙱ᵢ􋒅 ⁻(‹selectedPageNum›); }
-    ¿(activate) Ѧ.updatePage⸮(Ѧⁿ);
-    ☾(Ѧ); }
+      ¿(σ≡Ѧⁿ) { 𝙱ᵢ􋒅 ⁺(‹selectedPageNum›); 𝙱ᵢ􋒗 = ✓; }
+      ¡       { 𝙱ᵢ􋒅 ⁻(‹selectedPageNum›); 𝙱ᵢ􋒗 = ✗; } }
+    ¿(activate) Ѧ.updatePage⸮(Ѧⁿ); }
   Ѧˢᵉᵗᴺ();
   ə􀴗 = Ѧ;
   ↪ə; };
@@ -92,7 +92,7 @@
   table({},[[textField({𝑃𝐻:"test", :✓}),"b","c"],["d",󱀝 div ⦅𝚏↓⦆ [󱀝 t ‹eee› 󱀝 t ‹EEE›],"f"],["g","h","i"]]))
 popup({:✓,󰅙:✓,noAppend:✓},‹hi›)
 
-󰈙.body􍪙(pageNumBar({},10));
+󰈙.body􍪙(pageNumBar({w:1},13));
 
    󱀝 div {} [
      󱀝 T ‹test›

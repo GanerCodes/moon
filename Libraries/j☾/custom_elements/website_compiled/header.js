@@ -11,11 +11,12 @@ BASE_CHARSET  =  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 𝗙  =   (x,...𝔸)=> x instanceof Function ; 
 𝑙  =   (x,...𝔸)=> [ ... x] ; 
  þF0EFE   =   (x,...𝔸)=> x ; 
+[ þF114F  ,  þ02B13 ]  =  [Math . random ,  Math . floor] ; 
+[ (Math.max)  ,  (Math.min) ]  =  [Math . max , Math . min] ; 
+ þF7E44       =   (x,y,z,...𝔸)=>  (Math.min) ( (Math.max) (x , y) , z)
  þ021A8   =   (x,...𝔸)=> [ ... x] . map((x , i) => [i , x])
  þ02B65   =   (x,y,...𝔸)=> isArray(x)  ? [ ... x . keys()] :   þ02B65 (𝐴(y ===  undefined  ? x : y - x)) . ᴍ((v) => v + (y ===  undefined  ? 0 : x)) ; 
  þF7E3B   =   (x,y,...𝔸)=> isArray(x)  ?  þ02B65 (a . length + 1) :  y ===  undefined   ?  þ02B65 (x + 1) :   þ02B65 (x , y + 1) ; 
-[ (Math.max)  ,  (Math.min) ]  =  [Math . max , Math . min] ; 
-[ þF114F  ,  þ02B13 ]  =  [Math . random ,  Math . floor] ; 
  þF147C   =  ( ... 𝙰) =>  þ02B65 ( (Math.max) ( ... 𝙰 . ᴍ( þ1F0CC ))) . ᴍ((i) => 𝙰 . ᴍ( (x,...𝔸)=> x[i])) ; 
 ᴍv  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [k , y(v)])) ; 
 ᴍk  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [y(k) , v])) ; 

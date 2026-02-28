@@ -1,3 +1,15 @@
+􊽬 ≔ :not
+􀴗 ≔ :active
+􊾍 ≔ :focus
+􊾌 ≔ :focus-visible
+􍳧 ≔ :focus-within
+􍳗 ≔ :hover
+􋝽 ≔ :invalid
+􋒗 ≔ :disabled
+⁰ ≔ :first-child
+􍨅 ≔ :last-child
+􋁋 ≔ :has
+
 ⎊ᴾ 𝚙𝚘𝚜 position
   ⎊ 𝚙𝚘𝚜f  ∣ 𝚙𝚘𝚜 fixed
   ⎊ 𝚙𝚘𝚜s  ∣ 𝚙𝚘𝚜 static

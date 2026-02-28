@@ -1,12 +1,11 @@
-b0 ≔ #000000
-b1 ≔ #111111
-b2 ≔ #222222
-b3 ≔ #333333
-f0 ≔ #FFFFFF
-f1 ≔ #EEEEEE
-f2 ≔ #DDDDDD
-f3 ≔ #CCCCCC
-f4 ≔ #BBBBBB
+【
+  c = 8􀋠􀝕15􀋠8
+   c􇀞􀋂
+  ↪‹𝔟b 𝔣f›􀌌􀊠c 􀉴␛
+    󰲣yᐖ‹⟦x₀⟧⟦󷸀⟧ ≔ ⟦⟞􀊿¹⁶2􇀠h⟧
+        ⟦x₁⟧⟦󷸀⟧ ≔ #⟦3h⟧›󰅂􀋶􀋢𝗻􀊸
+】
+
 * ∣ box-sizing border-box
 button,input,span ∣ 𝚃 all 0.1s ease-in-out
 
@@ -15,31 +14,34 @@ body ∣ 𝚏↓; 𝚊𝚂󷷣
 
 .box ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
        𝚙 1em
-.box>* ∣ 𝚖 0.25em
+       &>* ∣ 𝚖 0.25em
 
 «button input»
   𝚙0;𝚖0
   𝚘𝚕 none
    ⦑f0⦒; 𝚋 transparent
-button       ∣ 𝚋 unset
-button:hover ∣ 𝚖𝚙 pointer
+
+sel ≔ ⦑􍳗⦒⦑􊽬⦒(⦑􋒗⦒)
+button
+  𝚋 unset
+  &􍳗􊽬(􋒗)     ∣ 𝚖𝚙 pointer
                𝚃𝚏 scale(1.02)
                𝚋 ⦑f2⦒33
-button:«active focus-visible»
-  𝚃𝚏 scale(1.03)
-  𝚋 ⦑f1⦒33
+  &⦑sel⦒ ∣ 𝚃𝚏 scale(1.03)
+           𝚋 ⦑f1⦒33
+   &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚃𝚏 scale(1.03)
+                𝚋 ⦑f1⦒33
 
-.boxInput ∣ 𝚏→; 𝚊𝚂󷷣; 𝚙0
-             ⦑f0⦒; 𝚋 ⦑b0⦒
-            𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-.boxInput * ∣ 󰊄𝚜 24px
-.boxInput>:first-child ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↖ 4px; 𝚋𝚛↙ 4px
-.boxInput>:last-child  ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↙ 4px; 𝚋𝚛↘ 4px
-.boxInput:focus-within
-  𝚋 ⦑b1⦒
-  𝚋  1px solid ⦑f0⦒
-.boxInput:has(input:invalid)
-  𝚋  1px solid #f00
+.boxInput
+  𝚏→; 𝚊𝚂󷷣; 𝚙0
+   ⦑f0⦒; 𝚋 ⦑b0⦒
+  𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+  & * ∣ 󰊄𝚜 24px
+  &>⁰ ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↖ 4px; 𝚋𝚛↙ 4px
+  &>􍨅 ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↙ 4px; 𝚋𝚛↘ 4px
+  &􍳧         ∣ 𝚋 ⦑b1⦒
+               𝚋  1px solid ⦑f0⦒
+  &􋁋(input􋝽) ∣ 𝚋  1px solid #f00
 
 ::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
 dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
@@ -47,36 +49,30 @@ dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑�
                ⦑f0⦒; 𝚋 ⦑b0⦒DD
               𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
               𝚜 ⦑f0⦒33 0px 0px 20px 0px
-
-.dialogCloseBtn ∣ 𝚙𝚘𝚜a; → 0.333em; ↑ 0px
-                   ⦑f4⦒; 󰊄𝚜 35px;
-.dialogCloseBtn:hover
-   ⦑f2⦒; 𝚋𝚐 none
-.dialogCloseBtn:«active focus-visible»
-   ⦑f1⦒; 𝚋𝚐 none
-
+.dialogCloseBtn
+  𝚙𝚘𝚜a; → 0.333em; ↑ 0px
+   ⦑f4⦒; 󰊄𝚜 35px
+  &􍳗􊽬(􋒗)     ∣  ⦑f2⦒; 𝚋𝚐 none
+  &«􀴗 􊾌»􊽬(􋒗) ∣  ⦑f1⦒; 𝚋𝚐 none
 .roundBtn
   𝚙 4px
   𝚋 2px solid ⦑f4⦒; 𝚋𝚛 4px
-.roundBtn:hover
-  𝚋 2px solid ⦑f1⦒
-.roundBtn:«active focus-visible»
-  𝚋 2px solid ⦑f0⦒
+  &􍳗􊽬(􋒗)     ∣ 𝚋 2px solid ⦑f1⦒
+  &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚋 2px solid ⦑f0⦒
 
-.table ∣ 𝚠
-         𝚍 grid
+.table ∣ 𝚍 grid; 𝚠
          grid-auto-rows max-content
          gap 0
 .tableItem ∣ 𝚋 1px solid ⦑f2⦒
              𝚙 3px
 
- .tableRow ∣ 𝚍 grid
-             grid-template-columns repeat(auto-fill, minmax(0,1fr))
+.pageNumBar ∣ 𝚏→; 𝚙0
 
- .tableRow ∣ 𝚏→
- .tableRow>* ∣ 𝚏g 1
-
- .table
-   𝚍 grid
-   grid-template-columns repeat(2,1fr)
-   grid-auto-rows 1fr
+.«pageNumButton pageNumPrev pageNumNext»
+  𝚊𝙿󷷣; 𝚊𝚂󷷣; 𝚖0; 𝚙0
+  𝚠 40px; 𝚑 40px
+  𝚋 1px solid ⦑f4⦒
+  𝚋𝚛 5px
+  𝚖← 3px; 𝚖→ 3px
+.selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
+.«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒

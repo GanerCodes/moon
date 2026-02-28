@@ -83,9 +83,11 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
                ¿name≡␛Ń: sys.modulesₙₐₘₑ = __þIMPORTS__󰂘.Ń
                ¡       : sys.modulesₙₐₘₑ = __þIMPORTS__󰂘
         ¡ε=𝑒: __þIMPORTS__.pop(F,□)
+              ‹Error importing "⟦F⟧"!›􀊸
               ⦃raise ⦃ε⦄⦄
     mod = __þIMPORTS__󰂘
-    mod􊬏􋕞􋕞󰂗󰂪󰂢󰂡󰂤󰂦󰂥􋕞􋕞􊬐 𝖦.update
+    ¿‹__EXPORTS__›􀯑k􀉧mod: modₖ 𝖦.update
+    ¡                   : ✗􀉓˜‹⟦mod⟧ has no "⟦k⟧" symbol! This is strange!›
     ↪mod
 ⊢ __þADD_EXPORTS__(𝖦,⠤𝔸): E = 𝖦.setdefault(‹__EXPORTS__›,{})
                           E.update({⠤𝔸})

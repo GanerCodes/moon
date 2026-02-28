@@ -1,132 +1,157 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 button,input,span {
-    transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 html {
-    color: #FFFFFF;
-    background-color: #000000;
+  color: #FFFFFF;
+  background-color: #000000;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 .box {
-    border: 1px solid #DDDDDD;
-    border-radius: 5px;
-    padding: 1em;
-}
-.box>* {
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  padding: 1em;
+  &>* {
     margin: 0.25em;
+  }
 }
 button, input {
-    padding: 0px;
-    margin: 0px;
-    outline: none;
-    color: #FFFFFF;
-    background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  color: #FFFFFF;
+  background-color: transparent;
 }
 button {
-    border: unset;
-}
-button:hover {
+  border: unset;
+  &:hover:not(:disabled) {
     cursor: pointer;
     transform: scale(1.02);
     background-color: #DDDDDD33;
-}
-button:active, button:focus-visible {
+  }
+  &:hover:not(:disabled) {
     transform: scale(1.03);
     background-color: #EEEEEE33;
+  }
 }
 .boxInput {
-    display: flex;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    color: #FFFFFF;
-    background-color: #000000;
-    border: 1px solid #DDDDDD;
-    border-radius: 5px;
-}
-.boxInput * {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  & * {
     font-size: 24px;
-}
-.boxInput>:first-child {
+  }
+  &>:first-child {
     padding-left: 8px;
     padding-right: 8px;
     border-top-left-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-.boxInput>:last-child {
+  }
+  &>:last-child {
     padding-left: 8px;
     padding-right: 8px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-}
-.boxInput:focus-within {
+  }
+  &:focus-within {
     background-color: #111111;
     border: 1px solid #FFFFFF;
-}
-.boxInput:has(input:invalid) {
+  }
+  &:has(input:invalid) {
     border: 1px solid #f00;
+  }
 }
 ::backdrop {
-    background-color: #00000080;
-    backdrop-filter: blur(5px);
+  background-color: #00000080;
+  backdrop-filter: blur(5px);
 }
 dialog:open {
-    display: flex;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 50%;
-    min-width: 400px;
-    height: 66.665%;
-    min-height: 650px;
-    padding: 30px;
-    color: #FFFFFF;
-    background-color: #000000DD;
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
-    box-shadow: #FFFFFF33 0px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  min-width: 400px;
+  height: 66.665%;
+  min-height: 650px;
+  padding: 30px;
+  color: #FFFFFF;
+  background-color: #000000DD;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  box-shadow: #FFFFFF33 0px 0px 20px 0px;
 }
 .dialogCloseBtn {
-    position: absolute;
-    right: 0.333em;
-    top: 0px;
-    color: #BBBBBB;
-    font-size: 35px;
-}
-.dialogCloseBtn:hover {
+  position: absolute;
+  right: 0.333em;
+  top: 0px;
+  color: #BBBBBB;
+  font-size: 35px;
+  &:hover:not(:disabled) {
     color: #DDDDDD;
     background: none;
-}
-.dialogCloseBtn:active, .dialogCloseBtn:focus-visible {
+  }
+  &:active:not(:disabled), &:focus-visible:not(:disabled) {
     color: #EEEEEE;
     background: none;
+  }
 }
 .roundBtn {
-    padding: 4px;
-    border: 2px solid #BBBBBB;
-    border-radius: 4px;
-}
-.roundBtn:hover {
+  padding: 4px;
+  border: 2px solid #BBBBBB;
+  border-radius: 4px;
+  &:hover:not(:disabled) {
     border: 2px solid #EEEEEE;
-}
-.roundBtn:active, .roundBtn:focus-visible {
+  }
+  &:active:not(:disabled), &:focus-visible:not(:disabled) {
     border: 2px solid #FFFFFF;
+  }
 }
 .table {
-    width: 100%;
-    display: grid;
-    grid-auto-rows: max-content;
-    gap: 0;
+  display: grid;
+  width: 100%;
+  grid-auto-rows: max-content;
+  gap: 0;
 }
 .tableItem {
-    border: 1px solid #DDDDDD;
-    padding: 3px;
+  border: 1px solid #DDDDDD;
+  padding: 3px;
+}
+.pageNumBar {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+}
+.pageNumButton, .pageNumPrev, .pageNumNext {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.selectedPageNum {
+  background-color: #224422;
+}
+.pageNumPrev:disabled, .pageNumNext:disabled {
+  background-color: #222222;
 }
