@@ -4,26 +4,26 @@
  <Ń>.e.T is used as a flag to determine if it is a text node.
  <Ń>.e.p is used as a (start_pos, end_pos) map to source-code when dealing ⓦ transpilers
 󱀘 Ń: __slots__ = ␛t,␛c,␛e
-     ⊢ __init__(󱁕,t,⠤c,e=␀): 󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e≅␀ ⭜ℵ􋄅⭝ e
-                             ∀z⬠󱁕ᶜ¿z󷹵Ń: ✗⨳‹⟦t⟧; ⟦z⟧; ⟦c⟧›
-     __contains__ = ⥌󱁕,x↦xᐹᔐ ⭜x∈󱁕ᵉ⭝ x∈󱁕ᶜ
-     __repr__     = ⥌󱁕↦‹Ń(⟦󱁕ᵗ∨␛∅⟧│⟦󱁕ᵉ∨␛∅⟧)⟨⟦󱁕⨝␛,𝘀⟧⟩›
-     __setitem__  = ⥌󱁕,x,y↦󱁕ᶜₓ≔y
-     __and__      = ⥌󱁕,x↦󱁕ᵗ≡xᵗ
-     __len__      = ⥌󱁕↦󱁕ᶜ🃌
+     ⊢ __init__(󱁕,t,⠤c,e=␀): 󱁕ᵗ,󱁕ᶜ,󱁕ᵉ = t, c ⭜[⠤c]⭝ [], e􀋑␀ 􇀦ℵ􋄅􇀧 e
+                             ∀z⬠󱁕ᶜ¿z􀊞Ń: ✗⨳‹Cannot construct Ń(⟦t⟧,⟦c􀉳ᔐ􀋢␛,𝘀⟧), ⟨⟦z⟧⟩ 􀊞 Ń›
+     __contains__ = ⥌󱁕,x↦x􀊜ᔐ 􇀦x􀉧󱁕ᵉ􇀧 x􀉧󱁕ᶜ
+     __repr__     = ⥌󱁕↦‹Ń(⟦󱁕ᵗ􀉖␛∅⟧│⟦󱁕ᵉ􀉖␛∅⟧)⟨⟦󱁕􀋢␛,𝘀⟧⟩›
+     __setitem__  = ⥌󱁕,x,y↦󱁕ᶜₓ􀯍y
+     __and__      = ⥌󱁕,x↦󱁕ᵗ􀉞xᵗ
+     __len__      = ⥌󱁕↦󱁕ᶜ􀊹
      __iter__     = ⥌󱁕↦iter(󱁕ᶜ)
      ⊢ __getitem__(󱁕,i): ↪󱁕ᶜᵢ
      ⊢ __delitem__(󱁕,i): 󰆴󱁕ᶜᵢ
-     ⊢ set(󱁕,t=□,c=□,e=□): ¿t≇□: 󱁕ᵗ=t
-                           ¿c≇□: 󱁕ᶜ=c
-                           ¿e≇□: 󱁕ᵉ=e
+     ⊢ set(󱁕,t=□,c=□,e=□): ¿t􀋒□: 󱁕ᵗ=t
+                           ¿c􀋒□: 󱁕ᶜ=c
+                           ¿e􀋒□: 󱁕ᵉ=e
                            ↪󱁕
      ⊢ from(󱁕,R): 󱁕ᵗ=Rᵗ
                   󱁕ᶜ=Rᶜ
                   󱁕ᵉ=Rᵉ
                   ↪󱁕
-     cp =copy = ⥌󱁕,t=□,c=□,e=␀↦Ń(t≅□ ⭜󱁕ᵗ⭝ t, ⠤c≅□ ⭜󱁕ᶜ⭝ c, e=e≅␀ ⭜󱁕ᵉ.copy()⭝ e)
-     cpr=rcopy= ⥌󱁕            ↦Ń(     󱁕ᵗ   , ⠤󱁕ᶜᴍŃ.cpr  , e=     󱁕ᵉ.copy()   )
+     cp =copy = ⥌󱁕,t=□,c=□,e=␀↦Ń(t􀋑□ 􇀦󱁕ᵗ􇀧 t, ⠤c􀋑□ 􇀦󱁕ᶜ􇀧 c, e=e􀋑␀ 􇀦󱁕ᵉ.copy()􇀧 e)
+     cpr=rcopy= ⥌󱁕            ↦Ń(     󱁕ᵗ   , ⠤󱁕ᶜ􀉳Ń.cpr  , e=     󱁕ᵉ.copy()   )
      ⊢ part(󱁕): 󱁕ᶜ = 󱁕ᶜ∖󱁕ᵉ ⁺
                 ↪󱁕,󱁕ᵉ
      ⊢ frp(󱁕,ƒ,r,pre=✗,not_T=✓):
@@ -62,7 +62,7 @@
      ⊢ sep(󱁕,⠤𝔸,⠶𝕂): M = 󱁕.find(⠤𝔸,⠶𝕂)
                      󱁕.rm(󷺹id􀉧ᑅfrozenset(M􀉳id))
                      ↪M
-     ⊢ flat(󱁕,ƒ,𝔯=✓): C = []
+     ⊢ flat(󱁕,ƒ,𝔯=✓): C = []  󰤱 JANK??
                       ∀c⬠󱁕: (cᵉ ᵀ ∨ ¬ƒ(c≔⬅𝔯⭜c.flat(ƒ)⭝c) ⭜C.append⭝ C.extend)(c)
                       󱁕ᶜ = C
                       ↪󱁕

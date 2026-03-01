@@ -1,55 +1,70 @@
-􊽬 ≔ :not
-􀴗 ≔ :active
-􊾍 ≔ :focus
-􊾌 ≔ :focus-visible
-􍳧 ≔ :focus-within
-􍳗 ≔ :hover
-􋝽 ≔ :invalid
-􋒗 ≔ :disabled
-⁰ ≔ :first-child
-􍨅 ≔ :last-child
-􋁋 ≔ :has
+⎉ ( (
+⎉ ) )
+⎉ , ,
+⎉ ∨ :is
+⎉ ∋ :has
+⎉ ¬ :not
+⎉ 0 :first-child
+⎉ 󷰾 :last-child
+⎉  :disabled
+⎉ ї :invalid
+⎉ ꬵ :focus-visible
+⎉ ꭐ :focus-within
+⎉ ҕ :hover
+⎉ ɒ :active
+⎉ ᗴ :enabled
+⎉ Ⴝ 􍳕􋁕⁽􍳵󰁱􍳱⁾
+⎉ Ѧ 􍳕􍳫
 
-⎊ᴾ 𝚙𝚘𝚜 position
+⊖ □ none
+⊖ ␀ unset
+
+⌾ 𝚙𝚘𝚜 position
   ⎊ 𝚙𝚘𝚜f  ∣ 𝚙𝚘𝚜 fixed
   ⎊ 𝚙𝚘𝚜s  ∣ 𝚙𝚘𝚜 static
   ⎊ 𝚙𝚘𝚜sy ∣ 𝚙𝚘𝚜 sticky
   ⎊ 𝚙𝚘𝚜r  ∣ 𝚙𝚘𝚜 relative
   ⎊ 𝚙𝚘𝚜a  ∣ 𝚙𝚘𝚜 absolute
-⎊ᴾ ←   left
-⎊ᴾ →   right
-⎊ᴾ ↑   top
-⎊ᴾ ↓   bottom
-⎊ᴾ 𝚍   display
-⎊ᴾ 𝚃   transition
-⎊ᴾ 𝚃𝚏  transform
-⎊ᴾ 󰊄𝚜  font-size
-⎊ᴾ    color
-  ⎊ᴾ 𝚌   color
-⎊ᴾ 𝚜   box-shadow
-⎊ᴾ 𝚋  background-color
-  ⎊ᴾ 𝚌𝚋  background-color
-⎊ᴾ 𝚋𝚐  background
-⎊ᴾ 𝚋𝚐𝚏 backdrop-filter
-⎊ᴾ 𝚖𝚙  cursor
-⎊ᴾ 𝚘𝚕  outline
-⎊ᴾ 𝚝𝚊  text-align
-⎊ᴾ 𝚊𝚛  aspect-ratio
+⌾ ←   left
+⌾ →   right
+⌾ ↑   top
+⌾ ↓   bottom
+⌾ 𝚍   display
+⌾ 𝚃   transition
+⌾ 𝚃𝚏  transform
+⌾ 󰊄𝚜  font-size
+⌾ «   𝚌» color
+⌾ «𝚋 𝚌𝚋» background-color
+⌾ 𝚜   box-shadow
+⌾ 𝚋𝚐  background
+⌾ 𝚋𝚐𝚏 backdrop-filter
+⌾ 𝚖𝚙  cursor
+⌾ 𝚘𝚕  outline
+⌾ 𝚝𝚊  text-align
+⌾ 𝚊𝚛  aspect-ratio
   ⎊ 𝚊𝚛1 ∣ 𝚊𝚛 1
-⎊ᴾ 𝚋 border
-  ⎊ᴾ 𝚋↑ border-top
-  ⎊ᴾ 𝚋↓ border-bottom
-  ⎊ᴾ 𝚋← border-left
-  ⎊ᴾ 𝚋→ border-right
-  ⎊ᴾ 𝚋𝚜 border-style
-  ⎊ᴾ 𝚋𝚛 border-radius
-    ⎊ᴾ 𝚋𝚛↖ border-top-left-radius
-    ⎊ᴾ 𝚋𝚛↗ border-top-right-radius
-    ⎊ᴾ 𝚋𝚛↘ border-bottom-left-radius
-    ⎊ᴾ 𝚋𝚛↙ border-bottom-right-radius
-⎊ᴾ 𝚠 width
-  ⎊ᴾ 𝚠≥ min-width
-  ⎊ᴾ 𝚠≤ max-width
+⌾ 𝚋 border
+  ⌾ 𝚋𝚜 border-style
+  ⌾ 𝚋↑ border-top
+  ⌾ 𝚋↓ border-bottom
+  ⌾ 𝚋← border-left
+  ⌾ 𝚋→ border-right
+  ⌾ 𝚋↖ ⦑«𝚋↑ 𝚋←»⦒
+  ⌾ 𝚋↗ ⦑«𝚋↑ 𝚋→»⦒
+  ⌾ 𝚋↘ ⦑«𝚋↓ 𝚋→»⦒
+  ⌾ 𝚋↙ ⦑«𝚋↓ 𝚋←»⦒
+  ⌾ 𝚋𝚛 border-radius
+    ⌾ 𝚋𝚛↖ border-top-left-radius
+    ⌾ 𝚋𝚛↗ border-top-right-radius
+    ⌾ 𝚋𝚛↘ border-bottom-left-radius
+    ⌾ 𝚋𝚛↙ border-bottom-right-radius
+    ⌾ 𝚋𝚛↑ ⦑«𝚋𝚛↖ 𝚋𝚛↗»⦒
+    ⌾ 𝚋𝚛↓ ⦑«𝚋𝚛↙ 𝚋𝚛↘»⦒
+    ⌾ 𝚋𝚛← ⦑«𝚋𝚛↖ 𝚋𝚛↙»⦒
+    ⌾ 𝚋𝚛→ ⦑«𝚋𝚛↗ 𝚋𝚛↘»⦒
+⌾ 𝚠 width
+  ⌾ 𝚠≥ min-width
+  ⌾ 𝚠≤ max-width
   ⎊ 𝚠a ∣ 𝚠   auto
   ⎊ 𝚠  ∣ 𝚠    100%
   ⎊ 𝚠¾ ∣ 𝚠     75%
@@ -58,9 +73,9 @@
   ⎊ 𝚠⅓ ∣ 𝚠 33.333%
   ⎊ 𝚠¼ ∣ 𝚠     25%
   ⎊ 𝚠⅕ ∣ 𝚠     20%
-⎊ᴾ 𝚑 height
-  ⎊ᴾ 𝚑≥ min-height
-  ⎊ᴾ 𝚑≤ max-height
+⌾ 𝚑 height
+  ⌾ 𝚑≥ min-height
+  ⌾ 𝚑≤ max-height
   ⎊ 𝚑a ∣ 𝚑    auto
   ⎊ 𝚑  ∣ 𝚑    100%
   ⎊ 𝚑¾ ∣ 𝚑     75%
@@ -69,47 +84,53 @@
   ⎊ 𝚑⅓ ∣ 𝚑 33.333%
   ⎊ 𝚑¼ ∣ 𝚑     25%
   ⎊ 𝚑⅕ ∣ 𝚑     20%
-⎊ᴾ 𝚖 margin
-  ⎊ᴾ 𝚖↑ margin-top
+⌾ 𝚖 margin
+  ⌾ 𝚖↑ margin-top
     ⎊ 𝚖↑a ∣ 𝚖↑ auto
-  ⎊ᴾ 𝚖↓ margin-bottom
+  ⌾ 𝚖↓ margin-bottom
     ⎊ 𝚖↓a ∣ 𝚖↓ auto
-  ⎊ᴾ 𝚖← margin-left
+  ⌾ 𝚖← margin-left
     ⎊ 𝚖←a ∣ 𝚖← auto
-  ⎊ᴾ 𝚖→ margin-right
+  ⌾ 𝚖→ margin-right
     ⎊ 𝚖→a ∣ 𝚖→ auto
+  ⌾ 𝚖󷷤 ⦑«𝚖↑ 𝚖↓»⦒
+    ⎊ 𝚖󷷤a ∣ 𝚖󷷤 auto
+  ⌾ 𝚖󷷢 ⦑«𝚖← 𝚖→»⦒
+    ⎊ 𝚖󷷢a ∣ 𝚖󷷢 auto
   ⎊ 𝚖0 ∣ 𝚖 0px
   ⎊ 𝚖a ∣ 𝚖 auto
-⎊ᴾ 𝚙 padding
-  ⎊ᴾ 𝚙↑ padding-top
-  ⎊ᴾ 𝚙↓ padding-bottom
-  ⎊ᴾ 𝚙← padding-left
-  ⎊ᴾ 𝚙→ padding-right
+⌾ 𝚙 padding
+  ⌾ 𝚙↑ padding-top
+  ⌾ 𝚙↓ padding-bottom
+  ⌾ 𝚙← padding-left
+  ⌾ 𝚙→ padding-right
+  ⌾ 𝚙󷷤 ⦑«𝚙↑ 𝚙↓»⦒
+  ⌾ 𝚙󷷢 ⦑«𝚙← 𝚙→»⦒
   ⎊  𝚙0 ∣ 𝚙 0px
   ⎊  𝚙¼ ∣ 𝚙 25%
   ⎊  𝚙⅕ ∣ 𝚙 20%
   ⎊  𝚙⅒ ∣ 𝚙 10%
-⎊ᴾ 𝚏 flex
+⌾ 𝚏 flex
   ⎊ 𝚏 ∣ 𝚍 flex
-  ⎊ᴾ 𝚏𝚍 flex-direction
+  ⌾ 𝚏𝚍 flex-direction
     ⎊ 𝚏→ ∣ 𝚏; 𝚏𝚍 row
     ⎊ 𝚏← ∣ 𝚏; 𝚏𝚍 row-reverse
     ⎊ 𝚏↓ ∣ 𝚏; 𝚏𝚍 column
     ⎊ 𝚏↑ ∣ 𝚏; 𝚏𝚍 column-reverse
-  ⎊ᴾ 𝚏𝚠 flex-wrap
+  ⌾ 𝚏𝚠 flex-wrap
     ⎊ 𝚏𝚠  ∣ 𝚏; 𝚏𝚠 wrap
     ⎊ 𝚏𝚠r ∣ 𝚏; 𝚏𝚠 wrap-reverse
-  ⎊ᴾ 𝚏𝚐 flex-grow
+  ⌾ 𝚏𝚐 flex-grow
     ⎊ 𝚏𝚐1 ∣ 𝚏𝚐 1
     ⎊ 𝚏𝚐2 ∣ 𝚏𝚐 2
     ⎊ 𝚏𝚐3 ∣ 𝚏𝚐 3
-  ⎊ᴾ 𝚏𝚜 flex-shink
+  ⌾ 𝚏𝚜 flex-shink
     ⎊ 𝚏𝚜1 ∣ 𝚏𝚜 1
     ⎊ 𝚏𝚜2 ∣ 𝚏𝚜 2
     ⎊ 𝚏𝚜3 ∣ 𝚏𝚜 3
-⎊ᴾ 𝚐 gap
-  ⎊ᴾ 𝚐x gap-row
-  ⎊ᴾ 𝚐y gap-col
+⌾ 𝚐 gap
+  ⌾ 𝚐x gap-row
+  ⌾ 𝚐y gap-col
 
  align primary axis
   ⎊ 𝚊𝙿← ∣ 𝚏; justify-content flex-start

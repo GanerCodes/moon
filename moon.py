@@ -1,10 +1,10 @@
 #!/bin/python
-BOOTSTRAP_HASH='ZXQUp4XMseuik8OZJSTo2wCKV7-GHI3kK-me0fCWKgc'
+BOOTSTRAP_HASH='pK0svXf6hUlD2Eld7UGBj77rw4CSW5wRuB4tMh08G6U'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
 moon_dir = áÌî(moon_dir) if moon_dir else áÌî(__file__).parent
-#base.☾ (9704 ⟶ 21098)
+#base.☾ (9706 ⟶ 21110)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
 import os,sys,inspect,traceback,threading,errno,struct
 from threading import get_ident as áÐèþÂÐðþáÐØ
@@ -267,7 +267,7 @@ def ÂùÆ(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     else :
         (ÄÊPSH((True,("Assertion failed"))),((áÓÔ:=ÄÊPKE(0)[0]),(áÓà:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     
-    (ÄÊPSH(áÓà),ÄÊPSH((ÄÊPKE(0) + (" ⟨%s⟩%s")%(áØÆ,((((" ") + ((("%s(%s)")%((ÁØö(áØÇ)).__name__,Âøî(getattr(áØÇ,("args"),ÂÚü()),(",")),))if(E)else(áØÇ))))if((áØÇ is not ÂÞÅ))else(ÁØã)),))),(áÓà:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+    (ÄÊPSH(áÓà),ÄÊPSH((ÄÊPKE(0) + (" ⟨%s⟩%s")%(áØÆ,((((" ") + ((("%s(%s)")%((ÁØö(áØÇ)).__name__,Âøî(getattr(áØÇ,("args"),ÂÚü()),(",")),))if(E)else(ÂÞÅCAT(áØÇ,ÁÜÙ)))))if((áØÇ is not ÂÞÅ))else(ÁØã)),))),(áÓà:=ÄÊPKE(0)),ÄÊDEL(2))[2]
     Âçß(termclr(áÓà,((("f22"))if(áÓÔ)else(("ff2")))))
     if áÓÔ:
         if E:
@@ -2175,7 +2175,7 @@ def ÄÊSUBPROCA(cmd,áÏÃ=ÁØã):
     return MOD(Áëý,áØÁ=(not áÏí ))(ÂÞÅCAT(p,Popen_Proxy),ÐÌü)
 
 
-#Ń.☾ (4885 ⟶ 9928)
+#Ń.☾ (4927 ⟶ 9974)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/Ń.☾')).parent
 from collections import deque as áÐòþáÑÁ
 class ÅÒ:
@@ -2184,7 +2184,7 @@ class ÅÒ:
         (ÄÊPSH(ÄÕÒü),ÄÊPSH(("t")),ÄÊPSH(ÄÕÒü),ÄÊPSH(("c")),ÄÊPSH(ÄÕÒü),ÄÊPSH(("e")),ÄÊPSH((t,(([*c])if(c)else([])),((MOD(ÂÑÖ,áØÁ=None)())if((e is ÂÞÅ))else(e)))),(setattr(ÄÊPKE(6),ÄÊPKE(5),ÄÊPKE(0)[0]),setattr(ÄÊPKE(4),ÄÊPKE(3),ÄÊPKE(0)[1]),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)[2])),ÄÊDEL(7))[7]
         for z in((ÄÕÒü).c):
             if not(ÄÝøÇ(z,ÅÒ)):continue
-            ((ÄÊPOP(0))if(ÄÊPSH(False))else(ÂùÆ(ÄÊPOP(0),("%s; %s; %s")%(t,z,c,))))
+            ((ÄÊPOP(0))if(ÄÊPSH(False))else(ÂùÆ(ÄÊPOP(0),("Cannot construct Ń(%s,%s), ⟨%s⟩ 􀊞 Ń")%(t,Âøî(Áÿú(c,ÁÜÙ),(", ")),z,))))
         
     
     (__contains__:=(lambda ÄÕÒü,x:(((x in (ÄÕÒü).e))if(ÁØö(x,ÁÜÙ))else((x in (ÄÕÒü).c)))))

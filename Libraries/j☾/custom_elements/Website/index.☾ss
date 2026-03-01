@@ -2,47 +2,45 @@
   c = 8􀋠􀝕15􀋠8
    c􇀞􀋂
   ↪‹𝔟b 𝔣f›􀌌􀊠c 􀉴␛
-    󰲣yᐖ‹⟦x₀⟧⟦󷸀⟧ ≔ ⟦⟞􀊿¹⁶2􇀠h⟧
-        ⟦x₁⟧⟦󷸀⟧ ≔ #⟦3h⟧›󰅂􀋶􀋢𝗻􀊸
+    󰲣yᐖ‹⊖ ⟦x₀⟧⟦󷸀⟧ ⟦⟞􀊿¹⁶2􇀠h⟧
+        ⊖ ⟦x₁⟧⟦󷸀⟧ #⟦3h⟧›󰅂􀋶􀋢𝗻
 】
 
 * ∣ box-sizing border-box
 button,input,span ∣ 𝚃 all 0.1s ease-in-out
 
 html ∣  ⦑f0⦒; 𝚋 ⦑b0⦒
-body ∣ 𝚏↓; 𝚊𝚂󷷣
+body ∣ 𝚏↓;𝚊𝚂󷷣
+
+«button input»
+  «𝚙 𝚖»0
+  𝚘𝚕 􋄅
+   ⦑f0⦒; 𝚋 transparent
+
+button
+  𝚋 􍍝
+  􎁎 ∣ 𝚖𝚙 pointer
+       𝚃𝚏 scale(1.02)
+       𝚋 ⦑f2⦒33
+  􀴗 ∣ 𝚃𝚏 scale(1.03)
+       𝚋 ⦑f1⦒33
 
 .box ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
        𝚙 1em
-       &>* ∣ 𝚖 0.25em
-
-«button input»
-  𝚙0;𝚖0
-  𝚘𝚕 none
-   ⦑f0⦒; 𝚋 transparent
-
- sel ≔ 􍳗􊽬(􋒗)
-button
-  𝚋 unset
-  &􍳗􊽬(􋒗)     ∣ 𝚖𝚙 pointer
-               𝚃𝚏 scale(1.02)
-               𝚋 ⦑f2⦒33
-  &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚃𝚏 scale(1.03)
-               𝚋 ⦑f1⦒33
-
+       >* ∣ 𝚖 0.25em
 .boxInput
   𝚏→; 𝚊𝚂󷷣; 𝚙0
    ⦑f0⦒; 𝚋 ⦑b0⦒
   𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-  & * ∣ 󰊄𝚜 24px
-  &>⁰ ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↖ 4px; 𝚋𝚛↙ 4px
-  &>􍨅 ∣ 𝚙← 8px; 𝚙→ 8px; 𝚋𝚛↙ 4px; 𝚋𝚛↘ 4px
-  &􍳧         ∣ 𝚋 ⦑b1⦒
-               𝚋  1px solid ⦑f0⦒
-  &􋁋(input􋝽) ∣ 𝚋  1px solid #f00
+  􍴍         ∣ 𝚋 ⦑b1⦒
+               𝚋 1px solid ⦑f0⦒
+  􋁋(input􍳷) ∣ 𝚋 1px solid #f00
+   * ∣ 󰊄𝚜 24px
+  >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
+  >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
 
 ::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
-dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
+dialog:open ∣ 𝚊«𝙿 𝚂»󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
               𝚙 30px
                ⦑f0⦒; 𝚋 ⦑b0⦒DD
               𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
@@ -50,13 +48,13 @@ dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑�
 .dialogCloseBtn
   𝚙𝚘𝚜a; → 0.333em; ↑ 0px
    ⦑f4⦒; 󰊄𝚜 35px
-  &􍳗􊽬(􋒗)     ∣  ⦑f2⦒; 𝚋𝚐 none
-  &«􀴗 􊾌»􊽬(􋒗) ∣  ⦑f1⦒; 𝚋𝚐 none
+  􎁎 ∣  ⦑f2⦒; 𝚋𝚐 􋄅
+  􀴗 ∣  ⦑f1⦒; 𝚋𝚐 􋄅
 .roundBtn
   𝚙 4px
   𝚋 2px solid ⦑f4⦒; 𝚋𝚛 4px
-  &􍳗􊽬(􋒗)     ∣ 𝚋 2px solid ⦑f1⦒
-  &«􀴗 􊾌»􊽬(􋒗) ∣ 𝚋 2px solid ⦑f0⦒
+  􎁎 ∣ 𝚋 2px solid ⦑f1⦒
+  􀴗 ∣ 𝚋 2px solid ⦑f0⦒
 
 .table ∣ 𝚍 grid; 𝚠
          grid-auto-rows max-content
@@ -67,10 +65,10 @@ dialog:open ∣ 𝚊𝙿󷷣;𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑�
 .pageNumBar ∣ 𝚏→; 𝚙0
 
 .«pageNumButton pageNumPrev pageNumNext»
-  𝚊𝙿󷷣; 𝚊𝚂󷷣; 𝚖0; 𝚙0
-  𝚠 40px; 𝚑 40px
+  𝚊«𝙿 𝚂»󷷣; «𝚖 𝚙»0
+  «𝚠 𝚑» 40px
   𝚋 1px solid ⦑f4⦒
   𝚋𝚛 5px
-  𝚖← 3px; 𝚖→ 3px
+  𝚖󷷢 3px
 .selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
 .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒

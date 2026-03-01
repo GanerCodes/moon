@@ -65,12 +65,13 @@
               return [l , n , r] ;  } ; 
   Ѧ . setN  =  (n = Ѧ . n , i =  undefined  , activate =  true ) => {
      let  l , r ;  [l , Ѧ . n , r]  =  G(i ===  undefined   ? n :  G(Ѧ . n)[0] + i) ; 
-    [𝚕 . disabled , 𝚛 . disabled]  =  [n == 0 ,  n == Ѧ . N - 1] ; 
+    [𝚕 . disabled , 𝚛 . disabled]  =  [Ѧ . n == 0 ,  Ѧ . n == Ѧ . N - 1] ; 
      for ( const [i , σ] of  þ021A8 ( þF7E3B (l , r))) {
       [𝙱[i] . n , 𝙱[i] . innerText]  =  [σ , σ + Ѧ . d_off] ; 
        if (σ == Ѧ . n) { 𝙱[i] . classList  . add(`selectedPageNum`) ;  𝙱[i] . disabled  =   true  ;  }
        else        { 𝙱[i] . classList  . remove(`selectedPageNum`) ;  𝙱[i] . disabled  =   false  ;  } }
-     if (activate) Ѧ . updatePage ?. (Ѧ . n) ;  }
+     if (activate) Ѧ . updatePage ?. (Ѧ . n) ; 
+     print (Ѧ) ;  }
   Ѧ . setN() ; 
   ə . Ѧ  =  Ѧ ; 
    return ə ;  } ; 
