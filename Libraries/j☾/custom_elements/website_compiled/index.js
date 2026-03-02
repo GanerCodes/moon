@@ -87,7 +87,8 @@
   toggleButton( print  , "✗" , "✓" ,  false ) , 
   textField({𝑃𝐻 : `weeee`}) , 
   table({} , [[textField({𝑃𝐻 : "test" ,  þ0F070 :  true }) , "b" , "c"] , ["d" , mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: column;`} , [(mkə(`t` ,  false  , `eee`)) , (mkə(`t` ,  false  , `EEE`))]) , "f"] , ["g" , "h" , "i"]]))
-popup({þ0F2D4 :  true  , þF0159 :  true  , noAppend :  true } , `hi`)
+
+popup({þ0F2D4 :  true  , þF0159 :  true } , `hi`)
 
 þF0219 . body . append(pageNumBar({w : 1} , 13)) ; 
 
