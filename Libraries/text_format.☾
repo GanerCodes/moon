@@ -13,16 +13,19 @@ find_esc_seqs = 𝜺 = regex(S≔‹𝟭𝗯\[(?:\d+;2;\d+;\d+;\d+|0|[34]9)m|[�
 find_next_char    = regex(‹((?:⟦S⟧)*.?)›)
 𝐸                 = regex(‹(?:⟦S⟧)+›)
 
-H      = 𝼞cache(__highlighter__)
-ŧ𝼝     = 𝼞cache(termclr)  󰤱􊽨  symbol
-rm_esc = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
-dotrim = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
-guard  = 𝼞cache(󷺹split_text_colors􀉳󰲡x₂􀰎𝗻􀉳ŧ𝼝(⬤,⠤x﹕₂􀉳r2hl)􀋢𝗻󰅂􀋶¹􇁥􀋢)
-lines  = 󷺹􀝂𝑙􀊤𝑡 􇂖􍪵 (ᔐ(⟞)􀊚􋋥􋕝ˢᵉᵃʳᶜʰguard).split(𝗻)
-indent = ⥌x,i=2↦(lines(x)ᐵ⪡ᑅi􀊜ℤ􇀦ⁱi􀋈𝘀)􀋢𝗻
-tspl   = 󰲣re.findall(find_next_char,x)𝌂yᴍ⨝
-𝼞ꬷ     = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
-𝼞𝼞     = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
+H           = 𝼞cache(__highlighter__)
+ŧ𝼝          = 𝼞cache(termclr)  󰤱􊽨  symbol
+rm_esc      = 𝼞cache(re.sub(find_esc_seqs,ᐦ,⬤))
+dotrim      = 𝼞cache(⥌x,y=50↦𝼞ꬷ(x≔ᔐ(x))>y ⭜x﹕₋₁+␛…⭝ x)
+guard       = 𝼞cache(󷺹split_text_colors􀉳󰲡x₂􀰎𝗻􀉳ŧ𝼝(⬤,⠤x﹕₂􀉳r2hl)􀋢𝗻󰅂􀋶¹􇁥􀋢)
+lines       = 󷺹􀝂𝑙􀊤𝑡 􇂖􍪵 (ᔐ(⟞)􀊚􋋥􋕝ˢᵉᵃʳᶜʰguard).split(𝗻)
+indent      = ⥌x,i=2↦x linesᑀᐵ⪡ᑅi􀊜ℤ􇀦ⁱi􀋈𝘀ᐸ􀋢𝗻
+tspl        = 󰲣re.findall(find_next_char,x)􀋴y􀉳􀂐
+𝼞ꬷ          = 󰲡xᐹᔐ⭜rm_esc(x)🃌⭝x
+𝼞𝼞          = 󰲡xᐹᔐ⭜lines(x)ᑀᴍ𝼞ꬷ⭢⤉⁰,⟞🃌ᐸ⭝(x,□)
+dedent      = ⥌x,m=ↀ↦x linesᑀᐵ􍪸􊬋ᐘ(⟞ᐵ􀋴󰻾􇣒􊾖₀􀉻𝘀􀊹ᐸ􀋮􀋮m)ᐸ􀋢𝗻  󰤱 handle a charset not just space
+                                                      󰤱 mode for applying per-line
+rm_ws_lines = 󷺹lines􀉻􀂼􀋢𝗻  delete lines only containing whitespace
 
 ⊢split_text_colors(x,fg=4₀ₓ󰂘󰂘,bg=4₀ₓ₀₀):
   x = ‹𝟭𝗯[38;2;⟦fg﹕₃􀋢␛;⟧m⟦x⟧›
@@ -130,7 +133,7 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
 
 ⭷ rm_esc,split_text_colors,lines,indent,tspl,padl,padc,padr,pads,␛
   stackr,box,BOX,regex,REGEX_LIB,grid,linenum,linewnum,dotrim,␛
-  show_code,title,𝼞ꬷ,𝼞𝼞,ŧ𝼝,𝖿𝗆𝗍,Ƥ
+  show_code,title,dedent,rm_ws_lines,𝼞ꬷ,𝼞𝼞,ŧ𝼝,𝖿𝗆𝗍,Ƥ
 
 ⊢test_text_format: tspl(ŧ𝼝(‹egg›,‹f00›)+ŧ𝼝(‹weeee›,‹0f0›),5)⨝␛│☾
                    linewrap(linenum(‹egg salad number twelve fortnite
@@ -155,4 +158,11 @@ COM,BL,BR,CL,CR,ARW = ‹,[]{}⟶›ᐖŧ𝼝(⟞,‹ff3›)
                    g = h grid 􀊸
                    indent(g) 􀊸
                    indent(g,‹weee ›) 􀊸
+                   󰦥󰦥󰦥󰦥󰦥dedent(‹  hello𝗻  there›)󰦥󰦥󰦥󰦥󰦥 􀊸
+                   dedent(‹  hello𝗻  there›)􀊸
+                   󰦥󰦥󰦥󰦥󰦥dedent(‹  hello𝗻  there›,1)󰦥󰦥󰦥󰦥󰦥 􀊸
+                   dedent(‹  hello𝗻  there›,1)􀊸
+                   󰦥󰦥󰦥󰦥󰦥rm_ws_lines(‹  𝗻joe𝗻𝗻 hii 𝗻›)󰦥󰦥󰦥󰦥󰦥 􀊸
+                   rm_ws_lines(‹  𝗻joe𝗻𝗻 hii 𝗻›)􀊸
+                   
 ¿__name__􀉞‹__main__›: test_text_format􀃅
