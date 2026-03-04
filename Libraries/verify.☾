@@ -16,11 +16,11 @@
                  ↪𝚡ᐵ𝓉
           ¿e: ↪𝓉􀉷􀳉󷺹󷺽
           ¿𝓉􀊜__class__: ↪𝚡 𝓉
-          ¿𝓉􀊜𝑙: lo = 𝓉􀉻󷺹ᵏ􀉟␛ⴲᐸ􀊹  󷹇 we assume optionals are all at end
-                𝚡􀊜𝑙 􀛾 lo􀒸𝚡􀊹􀒸􀊹𝓉 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ is not a list or length 􀜍 ⟦lo⟧􀋠⟦𝓉􀊹⟧›)
-                ↪𝚡ᐵᑈ𝓉
           ¿𝓉􀊜𝑑: 𝚡􀊜𝑑 􁁖 ‹⟨⟦𝚡⟧⟩ is not a dict›
                 ↪𝓉􀉴󰲣x􀉧𝚡 􇁖x􀊱𝚡ₓy􇁗 yᵏ􀉞␛ⴲ 􀖯 VerifyError(‹⟨⟦𝚡⟧⟩ is missing property "⟦x⟧"›) 􀠚 󰮈
+          ¿𝓉􀝀𝑙􀊤𝑡: lo = 𝓉􀉻󷺹ᵏ􀉟␛ⴲᐸ􀊹  󷹇 we assume optionals are all at end
+                  𝚡􀝀𝑙􀊤𝑡 􀛾 lo􀒸𝚡􀊹􀒸􀊹𝓉 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ 􀝂 𝑙􀊤𝑡 or length 􀜍 ⟦lo⟧􀋠⟦𝓉􀊹⟧›)
+                  ↪(𝚡ᐵᑈ𝓉) 􀊚􋈊􁗅􋇡 𝑡
           􁁖 VerifyError(‹⟦𝓉⟧ is an invalid template!›)
     ¡ε=𝑒: 􁁖 VerifyError(‹⟨⟦𝚡⟧⟩ failed to pass ⟦𝕊⟧: ⟦ε⟧›,ε)
   __repr__ = 𝕊↦‹⟦𝕊ᵏ⟧⟨⟦𝕊􊽺􀊜𝗙 􇀦␛ƒ􇀧 𝕊ᵉ 􇀦𝕊􊽺􀋢␛+􇀧 𝕊ᵏ􀉞␛Ѵ 􇀦𝕊􊽺􀋢␛,􇀧 𝕊􊽺ᔐ⟧⟩›
