@@ -1,4 +1,4 @@
-⦃import traceback,re⦄
+⦃import traceback⦄
 ⨡ text_format
 ⨡ Compiler/ast_to_py
 ⨡ Compiler/to_ast

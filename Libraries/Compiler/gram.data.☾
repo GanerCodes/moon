@@ -14,7 +14,7 @@ main = gram_%M%
 
 gram_main = stmts ∨ 𝖶
 gram_comm = (⠶(str ∨ native_code) ∨ comment ∨ ~‹.|\n›)*
-gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ sys_call_stupid_script_hack ∨ str ∨ ~‹.|\n›)*
+gram_scrp = ((σscript = (σsup=~‹%SUP%+›)∨(σsub=~‹%SUB%+›)) ∨ sys_call_script_hack ∨ str ∨ ~‹.|\n›)*
 
 stmts = (stmt ∨ 𝗪 ∨ 󰆴';')+
 stmt  = blk_head ∨ kwd_std ∨ asgn ∨ 𝑋𝐶
@@ -112,21 +112,21 @@ op_⸓_r =                       ((op_⸓_rn ∨ op⸓r_g ∨ 𝚜) 𝗐)*
 𝚜 = ⠶sup
 
 𝑣 = ((󰆴'´' ~‹[^´]+› ∨ ƨ(op_lit)) 󰆴'´') ∨ ƨ((¬𝑣_bad ~‹.›)+)
-𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[…⠤󷷱⠶󷷲:󷷰=≟;⍮,⊢¿⬠⛯∀⍈󷸴⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆󷷬󷷭⟦⟧⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
+𝑣_bad = (𝗪 ∨ ~‹(󰦥{4}[󰦥])|[…⠤󷷱⠶󷷲:󷷰=≟;⍮,⊢¿⬠⛯∀⍈󷸴⨡⭸⭷⟥⟤⭡⭣𝗮-𝘇𝟬-𝟵󷺗ᐸᐳᑅᑀᐘᐒᑈᐵᐛᐖ󷺹-󷻀⥌↦𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱󰅂$"'\[\](){}⦉⦊⁅⁆󷷬󷷭⟦⟧〔〕⟨⟩⦃⦄󰜞󰜚󰜛‹ ␛␛␛›]›
            ∨ σscript ∨ op_⸓_ln ∨ op_⸓_ly ∨ op_lit ∨ script ∨ 𝑣_spec ∨ std_kwd ∨ blk_cln_kwd ∨ blk_kwd)
 
 W_L = ('⟥'∨✓) ~‹[ᐳᑀᐒᐵᐖ󷺹󷺻󷺺󷺼]›
 W_R =         ~‹[ᐸᑅᐘᑈᐛ󷺽󷺿󷺾󷻀]› ('⟤'∨✓)
 
-sys_call_stupid_script_hack = '$'𝗐 ⮞σsup σscript 𝗐 str_tsys
+sys_call_script_hack = '$'𝗐 ⮞σsup σscript 𝗐 str_tsys
 sys_call = 󰆴'$'𝗐 (󰆴󰜚 ~‹[^󰜛]+› 󰆴󰜛 ∨ ✓) 𝗐 str_tsys
 str = empty_str ∨ ((str_t󰦥 ∨ str_tsub ∨ str_nsub ∨ ⠶str_gen_inner) 𝗐)+
 str_t󰦥   = 󰆴(~‹󰦥{4}[󰦥]›) ~‹((?!󰦥{4}[󰦥])(.|\n))*› 󰆴(~‹󰦥{4}[󰦥]› ∨ ✓)
 str_tsub = 󰆴'‹' (⠶str_sub_inner ∨ str_tsub_guts)* 󰆴'›'
 str_tsys =      (⠶str_sub_inner ∨ str_tsys_guts)* 󰆴'󷹹'
 str_𝐷nam =      (⠶str_sub_inner ∨ str_𝐷nam_guts)*
-str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦󷹹]+"
-str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦␛›]+"
+str_tsys_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⬤〔⟦󷹹]+"
+str_tsub_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⬤〔⟦␛›]+"
 str_timp_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦;⨡⭸ \t\n]+"
 str_𝐷nam_guts = (~"[^𝗮-𝘇𝟬-𝟵󷺗␛␛⟦}=, \t\n]+" ∨ ~‹[ \t\n]+› ¬'=')+
 
@@ -135,12 +135,13 @@ str_nsub1 = 󰆴‹"› ↷ (⠶str_gen_inner ∨ (str_nsub1_guts = ~‹[^𝗮-�
 str_nsub2 = 󰆴‹'› ↷ (⠶str_gen_inner ∨ (str_nsub2_guts = ~‹[^𝗮-𝘇𝟬-𝟵󷺗␛␛']+›))*
 
 empty_str = 󰆴'󷺗' ""
-str_sub_inner = ⠶str_gen_inner ∨ str_sub
+str_sub_inner = ⠶str_gen_inner ∨ str_sub ∨ str_sub_ƒ
 str_gen_inner = (str_escape ∨ 󰆴'󷺗' ∨ str_spec_char)+
-str_sub = 󰆴'⟦' 𝖶 𝑋𝐶? 󰆴'⟧'
+str_sub   = 󰆴'⟦'𝖶 𝑋𝐶? 󰆴'⟧'
+str_sub_ƒ = 󰆴'〔'𝗐 (⠶sup∨✓) 𝖶 𝑋𝐶? 󰆴'〕' ∨ ✓ (str_sub_ƒ_ball=󰆴'⬤')
 str_spec_char = ~‹[𝟬-𝟵𝗮-𝗳]{2}|[𝗮-𝘇󷺗]›
 str_escape = 󰆴"␛␛" ~‹.›
-str_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗⟦␛␛›'␛"󷹹]+"
+str_guts = ~"[^𝗮-𝘇𝟬-𝟵󷺗⟦〔␛␛›'␛"󷹹]+"
 
 ugx_x     = ugx_brack
 ugx_mod   = 󰆴󰜚 ~‹[?*+⮞¬]› 󰆴󰜛

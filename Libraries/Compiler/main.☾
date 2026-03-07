@@ -44,11 +44,13 @@ moon_to_py􋈨 = {}
          󰤱 prefix version of dotrim
          󰤱 unary operator that one-lines a multi-line ᔐ
   ↪𝘤
-compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
+ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
+compile_files = 󷺹􀉳compile_code(⬤,✓,log=✓)􀋢𝗻
 
 ⊢generate_bootstrap(dest=TMP􀋋‹moon.py›):
   file_canon = __file__.with_suffix(‹.☾›)
-  _,ƒ = PL_FORK(compile_code,file_canon,✓,log=✓)
+   _,ƒ = PL_FORK(compile_code,file_canon,✓,log=✓)
+  ƒ = compile_code(file_canon,✓,log=✓)ᐒ󰲟⟞
   pyc = ‹⟦pathlib_import⟧
          ⟦header_com compile_files⟧
          ⟦dump_cached_imports􀃅⟧

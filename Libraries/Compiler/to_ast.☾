@@ -75,6 +75,7 @@ gram_main = gram_rp(gram,ℵ(M=‹main›􀋁,I=‹󷺗󷺗󷺗󷺗󷺗󷺗󷺗�
     add_short_circuits(󱁕)
     curry_ops(󱁕)
     rewrite_ugex(󱁕)
+    rewrite_str_sub_ƒ(󱁕)
     󱁕.ftrp(‹𝗈𝗉›,desaturate_op,✓) ␛
      .ftrp(␛∘,󱁕↦󱁕.set(c=[󱁕₀,⠤󱁕₁﹕ᐵᵗ≡␛𝑃∧⟞₀🃌≡1∧⟞₀ᵗ≡␛𝔸⭜⟞₀⭝⟞]),✓)  󰤱 dumb hack
   ¡ε=𝑒:

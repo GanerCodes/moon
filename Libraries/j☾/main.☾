@@ -90,7 +90,7 @@ specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
 attr_repl = ‹⫰ toUpperCase ⫯ toLowerCase 󰊄 innerText 󰿨 children  disabled
              󱇙 classList 󰌷 append + add - remove ∀ forEach
              🃌 length @ at : slice ¶ style›ᐒ𝗻􀋀􍪵␛ 􀌌􀋅≺􀋀
-CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
+CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈␛⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
 OPERATORS = ‹* | & = ? >> <<›􀌌ᐵ􀝕⟞􀊩⟞₀ᐵ􀝕⟞␛=ᐸᐸ􀋶²   􀞚␛
             ‹!= !== => // /= %= -= += -- ++ ?.›􀌌􀞚␛
             ‹∧= ∨=›                            􀌌􀞚␛

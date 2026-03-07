@@ -63,13 +63,25 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
 ⊢rewrite_strs(󱁕):
    󰤱 normalize newlines and stuff from literals so we get the same string output
   str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys str_𝐷nam str_tsys_guts str_tsub_guts str_timp_guts str_𝐷nam_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
-  󱁕.ftrp(‹str_spec_char›,󱁕↦map_special(+󱁕,󱁕))                                          ␛
-   .ftrp( str_types     ,󱁕↦󱁕.set(t=‹str›),✓)                                           ␛
-   .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                              ␛
-   .ftrp(‹x󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)         ␛
-   .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
+  󱁕.ftrp(‹str_sub_ƒ_ball›,󱁕↦𝖮𝖯(␛󰻾)􀊄􋔡󱁕)                                                  ␛
+   .ftrp(‹str_spec_char󷺗›,󱁕↦map_special(󱁕􋒷,󱁕))                                          ␛
+   .ftrp( str_types      ,󱁕↦󱁕.set(t=‹str›),✓)                                           ␛
+   .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                              ␛
+   .ftrp(‹x󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)         ␛
+   .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ, 󰲡𝔗(ᐳ+ᑈx⭢⨝⭢󱖔􋔡x))(󱁕)),✓)
+⊢rewrite_str_sub_ƒ(󱁕):  ‹hello 〔²󰲣x+y〕 there›(5,2)
+   𝑩𝑩(󱁕,‹rewrite_str_sub_ƒ›)
+  ⊢(󱁕.ftrp(‹str›,□,✓)) (󱁕):
+    ¿󱁕ᐵᵉ ᵀ􀌐􀛾⟞ᵗ􀉞‹str_sub_ƒ›ᐸ􈇉: ↪󱁕
+    n=0
+    ∀i,c⬠󱁕􀋳¿cᵗ􀉞‹str_sub_ƒ›: 
+      ¿c₀ᵗ􀉞␛✓: α=n 𝗇
+               n􇀞􀊩1
+      ¡      : α=c₀
+      󱁕ᵢ = 𝒩(‹str_sub›,𝖼𝖺𝗅𝗅(c₁,𝗂(␛𝔸 𝗏,α)))􀊄􋔡c
+    ↪𝗅𝖺𝗆𝖻(𝒩(‹lamb_h_normal›,𝒩(␛𝔸,␛𝔸 𝗏),𝒩(␛𝕂,␛𝕂 𝗏)),󱁕)􀊄􋔡󱁕
 ⊢rewrite_numbers(󱁕):
-  󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(+󱁕)󱖔􋔡󱁕)))␛
+  󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(󱁕􋒷)󱖔􋔡󱁕)))␛
    .ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)                                                      ␛
    .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
    .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
