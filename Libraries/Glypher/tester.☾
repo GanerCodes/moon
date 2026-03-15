@@ -11,12 +11,12 @@ has_symb = 󰲣y􇣒ₓ􂕟
   ∀p⬠‹weight ascent descent em encoding italicangle›􀌌: 𝙵.(p) = bases₀.(p)
   ∀c⬠chars: ∀𝚏⬠bases¿has_symb(c,𝚏): copy_into(c,𝚏,𝙵)
                                     ⇥
-  save_font(𝙵,dest)
-
+  𝙵.generate(dest)
+   save_font(𝙵,dest)
 ⊢font_from_dir(dir,dest,bases=□):
   ¿bases􈇇: bases=moon_dir􀋋‹Libraries/Glypher/Output›ᑀ􀋋ᑈ􀌌‹moonfont_A.ttf moonfont_B.ttf›
   loc = ‹/tmp/☾_chars_unique›
-  $󰀒/c/Scripts/Path/unique_chars_rec > ⟦loc⟧󷹹
-  font_from_chars(bases,loc ,dest)
+  $󰀒/c/Scripts/Path/unique_chars_rec ⟦dir⟧ > ⟦loc⟧󷹹
+  font_from_chars(bases,open(loc,errors=‹ignore›).read􀃅,dest)
 
-font_from_dir(moon_dir, ‹/home/ganer/Projects/Store›)
+font_from_dir(‹/home/ganer/Projects/Store›,‹/tmp/test_font.ttf›)
