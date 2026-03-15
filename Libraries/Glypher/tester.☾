@@ -1,0 +1,22 @@
+⦃import fontforge as ⦃ℱℱ⦄⦄
+⨡ multisupersubscriptify
+
+has_symb = 󰲣y􇣒ₓ􂕟
+⊢copy_into(c,α,β): α.selection.select(c􀊾); α.copy     􀃅
+                   β.selection.select(c􀊾); β.pasteInto􀃅
+⊢font_from_chars(bases,chars,dest):
+  bases􇀞􀉳load_font
+  chars􀯏𝑠
+  𝙵 = ℱℱ.font􀃅
+  ∀p⬠‹weight ascent descent em encoding italicangle›􀌌: 𝙵.(p) = bases₀.(p)
+  ∀c⬠chars: ∀𝚏⬠bases¿has_symb(c,𝚏): copy_into(c,𝚏,𝙵)
+                                    ⇥
+  save_font(𝙵,dest)
+
+⊢font_from_dir(dir,dest,bases=□):
+  ¿bases􈇇: bases=moon_dir􀋋‹Libraries/Glypher/Output›ᑀ􀋋ᑈ􀌌‹moonfont_A.ttf moonfont_B.ttf›
+  loc = ‹/tmp/☾_chars_unique›
+  $󰀒/c/Scripts/Path/unique_chars_rec > ⟦loc⟧󷹹
+  font_from_chars(bases,loc ,dest)
+
+font_from_dir(moon_dir, ‹/home/ganer/Projects/Store›)

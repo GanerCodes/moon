@@ -291,16 +291,16 @@ c = parse_config(CONFIG,CONFIG􀊩MULTICHARS ᔐ,𝔭)
 𝚏 = load_font(fo)
 
 ‹Removing pre-existing scripts & bad chars: ›􀊸􊾖
-SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᐖremove_char(𝚏,⟞☾􊾖)
-ᐦ☾
+SCRIPT_EXIST⁺󰆩∖␛◌⭢⨝⭢+REMOVESᐖremove_char(𝚏,⟞􀊸􊾖)
+ᐦ􀊸
 
 ‹Generating Multichars: ›􀊸􊾖
-MC = MULTICHARS􀊠c addm􀉴󰲣add_multichar(𝚏,y☾􊾖,‹⟦x⟧_mul›,x)􀔂x􀊱y󰅂􀯖ℵ  󰤱􊽨 why did add_multichar not edit conf before??
+MC = MULTICHARS􀊠c addm􀉴󰲣add_multichar(𝚏,y􀊸􊾖,‹⟦x⟧_mul›,x)􀔂x􀊱y󰅂􀯖ℵ  󰤱􊽨 why did add_multichar not edit conf before??
 ∀x,y⬠mchar_extra_seqs􀉴󷺹􀊱MC􍪸󷺿:
    c ₀.append(␛,x)  󰤱 doesn't recurse key-sequences outside keymap
-ᐦ☾
+ᐦ􀊸
 
-‹Copying operators: ›☾􊾖
+‹Copying operators: ›􀊸􊾖
 N,clrs = go.blks🃌,go.clrs₁﹕􍨄
 op_chars = ops󰌷ᐖ0<⟞₀<N⭜􍭓⟞₄ ₀ᐸ󰆩⨝
 op_chars 􇀞􀊩 ‹⭠⭢≔󷸉󷸊󷸋≕󷸎󷸌󷸍←→⭜⭝󷷩󷷪⬅➡›
@@ -308,21 +308,21 @@ C = add_copies(c,op_chars,N)
 ord_its = [⠤C]⁺󷺹₁ ₁ 􊯛ₙ
 ord_its󱑼clrsꟿ󰲣xᐵ₁ ₁ 􊬏􊬐≔y
 c􇀞􀊤C
-ord_itsᐵᐖadd_copy(⠤[𝚏,⟞₀☾􊾖,‹⟦⟞₀⟧_cpy⟦⟝⟧›,⟞₁ ₁[‹parents›]₀])ᐘ󷸀
+ord_itsᐵᐖadd_copy(⠤[𝚏,⟞₀􀊸􊾖,‹⟦⟞₀⟧_cpy⟦⟝⟧›,⟞₁ ₁[‹parents›]₀])ᐘ󷸀
 opord_out 󱖔􍡩 [op_chars,⠤ord_itsᐵᐵ₀ᐸ⨝ᐸ]⨝𝗻
-ᐦ☾
+ᐦ􀊸
 
 𝚙 = ℱℱ.font􀃅
 params = ⍭‹weight ascent descent em encoding italicangle›
 ∀p⬠params: 𝚙.(p) = 𝚏.(p)
 
-‹Generating scripts: ›☾􊾖
+‹Generating scripts: ›􀊸􊾖
 S=c
-∀i⬠SCRIPT_DEPTH⭥: c󷸊|(S󷸊adds)
-                  gen_script = 󰲣add_script(𝚙,x☾􊾖,‹⟦y₁[‹parents›]⨝≕p⟧_⟦y₁[‹mode›]⟧›,
+∀i⬠SCRIPT_DEPTH􀋲: c󷸊|(S󷸊adds)
+                  gen_script = 󰲣add_script(𝚙,x􀊸􊾖,‹⟦y₁[‹parents›]⨝≕p⟧_⟦y₁[‹mode›]⟧›,
                                            p,y₁[‹mode›]􍨄,‹smol›∉y₁,ℱ=i⭜􀲥𝚙)
                   Sꟿgen_script
-ᐦ☾
+ᐦ􀊸
 script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t[‹parents›] ₀,⟞₀,□]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
              ⁺󷺹₀ᐸ󰒼󷺹₀ᐸᐵ⍉ꟿ􀀄ᐸ⭢⍉ᴍ⨝⭢⨝𝗻
 save_pua􀃅
