@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='-CqXvAbT_EstbEzTHKY5T_OY9xkNk52ZQkP9HAK8-sE'
+BOOTSTRAP_HASH='cq-s5a_Dc5fKXRqxgthKVq1_bbSXUVubufulqfgmjxI'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -2175,11 +2175,12 @@ def ÄÊSUBPROCA(cmd,áÏÃ=ÁØã):
     return MOD(Áëý,áØÁ=(not áÏí ))(ÂÞÅCAT(p,Popen_Proxy),ÐÌü)
 
 
-#Ń.☾ (4927 ⟶ 9974)
+#Ń.☾ (4955 ⟶ 10623)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/Ń.☾')).parent
 from collections import deque as áÐòþáÑÁ
 class ÅÒ:
     (__slots__:=(("t"),("c"),("e")))
+    (MCH:=(lambda Æå:(((CURR((lambda ÂîÓ,ÂîÒ:((ÂîÓ).t in ÂîÒ)),frozenset(Æå))))if(ÁØö(Æå,(áÍé | áÍá)))else((((CURR((lambda ÂîÓ,ÂîÒ:((ÂîÓ).t == ÂîÒ)),Æå)))if(ÁØö(Æå,ÁÜÙ))else(Æå))))))
     def __init__(ÄÕÒü,t,*c,e=ÂÞÅ):
         (ÄÊPSH(ÄÕÒü),ÄÊPSH(("t")),ÄÊPSH(ÄÕÒü),ÄÊPSH(("c")),ÄÊPSH(ÄÕÒü),ÄÊPSH(("e")),ÄÊPSH((t,(([*c])if(c)else([])),((MOD(ÂÑÖ,áØÁ=None)())if((e is ÂÞÅ))else(e)))),(setattr(ÄÊPKE(6),ÄÊPKE(5),ÄÊPKE(0)[0]),setattr(ÄÊPKE(4),ÄÊPKE(3),ÄÊPKE(0)[1]),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)[2])),ÄÊDEL(7))[7]
         for z in((ÄÕÒü).c):
@@ -2225,8 +2226,9 @@ class ÅÒ:
     
     def frp(ÄÕÒü,Æå,r,pre=False,not_T=True):
         if (r is None):
-            return (lambda r:(ÄÕÒü).frp(Æå,r,pre,not_T))
+            return (lambda x:(ÄÕÒü).frp(Æå,x,pre,not_T))
         
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         if not_T:
             (Æå:=(lambda ÄÕÒü,Æå=Æå:((not ((ÄÕÒü).e).T ) and Æå(ÄÕÒü))))
         
@@ -2263,26 +2265,19 @@ class ÅÒ:
     
     def ftrp(ÄÕÒü,fs,Æå,pre=False,not_T=True,**áÏè):
         if (Æå is None):
-            return (lambda Æå:(ÄÕÒü).ftrp(fs,Æå,pre,not_T,**áÏè))
+            return (lambda x:(ÄÕÒü).ftrp(fs,x,pre,not_T,**áÏè))
         
-        if ÄÝøÇ(fs,ÁÜÙ):
-            (fs:=frozenset(fs))
-        
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         return ((ÄÕÒü)if((not_T and ((ÄÕÒü).e).T))else((ÄÕÒü).frp((((lambda x:((x).t == fs)))if(ÁØö(fs,ÁÜÙ))else((lambda x:((x).t in fs)))),Æå,pre,not_T,**áÏè)))
     
     def gets(ÄÕÒü,Æå,not_T=True):
-        if (not áÓó(Æå) ):
-            if ÁØö(Æå,ÁÜÙ):
-                (Æå:=(lambda ÄÕÒü,t=Æå:((ÄÕÒü).t == t)))
-            else :
-                (Æå:=(lambda ÄÕÒü,t=Æå:((ÄÕÒü).t in t)))
-            
-        
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         return [(c)for c in(ÄÕÒü)if((((((((ÄÊDEL(1),False)[1])if(((c).e).T)else(ÄÊPOP(0))))if(ÄÊPSH(not_T))else((ÄÊDEL(1),True)[1]))) and Æå(c)))]
     
     def find(ÄÕÒü,Æå,pre=True,not_T=True,R=None):
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         if (R is None):
-            (R:=[])
+            (R:=ÂÚü())
         
         if (not_T and ((ÄÕÒü).e).T):
             return R
@@ -2303,9 +2298,7 @@ class ÅÒ:
         return R
     
     def rm(ÄÕÒü,Æå,not_T=True):
-        if ÁØö(Æå,ÁÜÙ):
-            (Æå:=(lambda ÄÕÒü,t=Æå:((ÄÕÒü).t == t)))
-        
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         for (i,x) in(ÂÓÏ(ÄÕÒü)[slice(None,None,((- 1 )))]):
             if not((((((ÄÊDEL(1),False)[1])if(((x).e).T)else(ÄÊPOP(0))))if(ÄÊPSH(not_T))else((ÄÊDEL(1),True)[1]))):continue
             if Æå(x):
@@ -2322,6 +2315,7 @@ class ÅÒ:
         return M
     
     def flat(ÄÕÒü,Æå,áÑÂ=True):
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         (C:=[])
         for c in(ÄÕÒü):
             ((((C).append)if((((c).e).T or (not Æå((c:=(((c).flat(Æå))if(áÑÂ)else(c)))) )))else((C).extend)))(c)
@@ -2366,6 +2360,7 @@ class ÅÒ:
         return ("")
     
     def farnodes(ÄÕÒü,Æå=MOD((lambda ÂîÓ:(not ((ÂîÓ).e).T )))):
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         (Ïß:=(Ïà:=ÄÕÒü))
         while((Æå(Ïß) and ãÊú(Ïß))):
             (Ïß:=Ïß[0])
@@ -2376,6 +2371,7 @@ class ÅÒ:
         return (Ïß,Ïà)
     
     def first_l(ÄÕÒü,Æå):
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         if Æå(ÄÕÒü):
             return ÄÕÒü
         
@@ -2385,6 +2381,7 @@ class ÅÒ:
         
     
     def first_r(ÄÕÒü,Æå):
+        (ÄÊPSH(Æå),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),(ÅÒ).MCH)),(Æå:=ÄÊPKE(0)),ÄÊDEL(2))[2]
         if Æå(ÄÕÒü):
             return ÄÕÒü
         
@@ -2400,7 +2397,8 @@ class ÅÒ:
         return (+ áÑÞ )
     
     def P(ÄÕÒü,fs=True):
-        if (not hasattr(ÅÒ,(attr:=("txt_format_imported"))) ):
+        if (not hasattr(ÅÒ,("txt_format_imported")) ):
+            (ÄÊPSH(ÅÒ),ÄÊPSH(("txt_format_imported")),ÄÊPSH(True),setattr(ÄÊPKE(2),ÄÊPKE(1),ÄÊPKE(0)),ÄÊDEL(3))[3]
             (ÄÊPSH(__ÄÊIMPORT__(("text_format"),globals(),(""))),ÄÊPOP(0))[((- 1 ))]
         
         (ÄÊPSH(ËãÂ(ÂÛê(("∅ f00 → 00f 󰅁 ff0 󰅂 ff0")),Åøþáüì)),((NA:=ÄÊPKE(0)[0]),(AR:=ÄÊPKE(0)[1]),(yl:=ÄÊPKE(0)[2]),(yr:=ÄÊPKE(0)[3])),ÄÊDEL(1))[1]
