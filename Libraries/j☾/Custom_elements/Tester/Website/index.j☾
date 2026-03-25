@@ -1,0 +1,19 @@
+ 󱀝 div {} [
+     󱀝 T ‹test›
+     󱀝:myinput input {𝑃𝐻 Username}]
+ );
+
+󰈙.body􍪙(
+  box({},
+    󱀝 T ⦅󰊄𝚜 48px⦆ ‹Sign up›,
+    textField({id:‹email›   , 𝑃𝐻:‹Email›        }),
+    textField({id:‹username›, 𝑃𝐻:‹Username›     }),
+    textField({id:‹password›, 𝑃𝐻:‹Password›, :✓}),
+    textButton("Submit", 𝚲☾(email,username,password), {𝐶:"roundBtn"})
+  ),
+  toggleButton(☾,"✗","✓",✗),
+  textField({𝑃𝐻:‹weeee›}),
+  table({},[[textField({𝑃𝐻:"test", :✓}),"b","c"],["d",󱀝 div ⦅𝚏↓⦆ [󱀝 t ‹eee› 󱀝 t ‹EEE›],"f"],["g","h","i"]]))
+popup({:✓,󰅙:✓,noAppend:✓},‹hi›)
+
+󰈙.body􍪙(pageNumBar({w:1},13));

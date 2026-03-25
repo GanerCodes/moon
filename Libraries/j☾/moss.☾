@@ -58,7 +58,7 @@ gram_meta = 󰦥󰦥󰦥󰦥󰦥
 main = ((☾ = 󰆴'【' ~‹([^】]+|\n)*› 󰆴'】') ∨ ~‹([^【]+|\n)+›)*
 󰦥󰦥󰦥󰦥󰦥 peggle
 
-MOSS_head = __dir__􀋋‹header.☾ss› 􀯖 
+MOSS_head = __dir__􀋋‹Include/header.☾ss› 􀯖 
 
 ⊢show_aliases(Ѧ):
   ∀K,V⬠‹CKVSR›ᐵ􀊱Ѧ􍪴ᐸ:
