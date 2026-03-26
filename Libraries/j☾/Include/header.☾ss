@@ -1,6 +1,12 @@
 ⎉ ( (
 ⎉ ) )
+⎉ [ [
+⎉ ] ]
 ⎉ , ,
+⎉ > >
+⎉ ~ ~
+⎉ + +
+⎉ | |
 ⎉ ∨ :is
 ⎉ ∋ :has
 ⎉ ¬ :not
@@ -12,7 +18,7 @@
 ⎉ ꭐ :focus-within
 ⎉ ҕ :hover
 ⎉ ɒ :active
-⎉ ᗴ :enabled
+⎉ ᗴ 􊽬⁽􋒗⁾
 ⎉ Ⴝ 􍳕􋁕⁽􍳵󰁱􍳱⁾
 ⎉ Ѧ 􍳕􍳫
 
@@ -41,6 +47,9 @@
 ⌾ 𝚖𝚙  cursor
 ⌾ 𝚘𝚕  outline
 ⌾ 𝚝𝚊  text-align
+⌾ 𝚘𝚏  overflow
+  ⌾ 𝚘𝚏x overflow-x
+  ⌾ 𝚘𝚏y overflow-y
 ⌾ 𝚊𝚛  aspect-ratio
   ⎊ 𝚊𝚛1 ∣ 𝚊𝚛 1
 ⌾ 𝚋 border
@@ -67,12 +76,19 @@
   ⌾ 𝚠≤ max-width
   ⎊ 𝚠a ∣ 𝚠   auto
   ⎊ 𝚠  ∣ 𝚠    100%
-  ⎊ 𝚠¾ ∣ 𝚠     75%
-  ⎊ 𝚠⅔ ∣ 𝚠 66.665%
   ⎊ 𝚠½ ∣ 𝚠     50%
   ⎊ 𝚠⅓ ∣ 𝚠 33.333%
   ⎊ 𝚠¼ ∣ 𝚠     25%
   ⎊ 𝚠⅕ ∣ 𝚠     20%
+  ⎊ 𝚠⅒ ∣ 𝚠     10%
+  ⎊ 𝚠⅔ ∣ 𝚠 66.665%
+  ⎊ 𝚠⅖ ∣ 𝚠     40%
+  ⎊ 𝚠¾ ∣ 𝚠     75%
+  ⎊ 𝚠⅗ ∣ 𝚠     60%
+  ⎊ 𝚠󷷆 ∣ 𝚠     30%
+  ⎊ 𝚠⅘ ∣ 𝚠     80%
+  ⎊ 𝚠󷷇 ∣ 𝚠     70%
+  ⎊ 𝚠󷷈 ∣ 𝚠     90%
 ⌾ 𝚑 height
   ⌾ 𝚑≥ min-height
   ⌾ 𝚑≤ max-height
@@ -133,31 +149,31 @@
   ⌾ 𝚐y gap-col
 
  align primary axis
-  ⎊ 𝚊𝙿← ∣ 𝚏; justify-content flex-start
-  ⎊ 𝚊𝙿󷷣 ∣ 𝚏; justify-content center
-  ⎊ 𝚊𝙿→ ∣ 𝚏; justify-content flex-end
-  ⎊ 𝚊𝙿b ∣ 𝚏; justify-content space-between
-  ⎊ 𝚊𝙿a ∣ 𝚏; justify-content space-around
-  ⎊ 𝚊𝙿e ∣ 𝚏; justify-content space-evenly
+  ⎊ 𝚊𝙿← ∣ justify-content flex-start
+  ⎊ 𝚊𝙿󷷣 ∣ justify-content center
+  ⎊ 𝚊𝙿→ ∣ justify-content flex-end
+  ⎊ 𝚊𝙿b ∣ justify-content space-between
+  ⎊ 𝚊𝙿a ∣ justify-content space-around
+  ⎊ 𝚊𝙿e ∣ justify-content space-evenly
  align secondary axis
-  ⎊ 𝚊𝚂← ∣ 𝚏; align-items flex-start
-  ⎊ 𝚊𝚂󷷣 ∣ 𝚏; align-items center
-  ⎊ 𝚊𝚂→ ∣ 𝚏; align-items flex-end
-  ⎊ 𝚊𝚂s ∣ 𝚏; align-items stretch
-  ⎊ 𝚊𝚂b ∣ 𝚏; align-items baseline
+  ⎊ 𝚊𝚂← ∣ align-items flex-start
+  ⎊ 𝚊𝚂󷷣 ∣ align-items center
+  ⎊ 𝚊𝚂→ ∣ align-items flex-end
+  ⎊ 𝚊𝚂s ∣ align-items stretch
+  ⎊ 𝚊𝚂b ∣ align-items baseline
    for an individual item
-    ⎊ 𝚊𝚒𝚜← ∣ 𝚏; align-self flex-start
-    ⎊ 𝚊𝚒𝚜󷷣 ∣ 𝚏; align-self center
-    ⎊ 𝚊𝚒𝚜→ ∣ 𝚏; align-self flex-end
-    ⎊ 𝚊𝚒𝚜s ∣ 𝚏; align-self stretch
-    ⎊ 𝚊𝚒𝚜b ∣ 𝚏; align-self baseline
+    ⎊ 𝚊𝚒𝚜← ∣ align-self flex-start
+    ⎊ 𝚊𝚒𝚜󷷣 ∣ align-self center
+    ⎊ 𝚊𝚒𝚜→ ∣ align-self flex-end
+    ⎊ 𝚊𝚒𝚜s ∣ align-self stretch
+    ⎊ 𝚊𝚒𝚜b ∣ align-self baseline
  align per secondary axis
-  ⎊ 𝚊𝚜← ∣ 𝚏; align-content flex-start
-  ⎊ 𝚊𝚜󷷣 ∣ 𝚏; align-content center
-  ⎊ 𝚊𝚜→ ∣ 𝚏; align-content flex-end
-  ⎊ 𝚊𝚜b ∣ 𝚏; align-content space-between
-  ⎊ 𝚊𝚜s ∣ 𝚏; align-content stretch
-  ⎊ 𝚊𝚜a ∣ 𝚏; align-content space-around
+  ⎊ 𝚊𝚜← ∣ align-content flex-start
+  ⎊ 𝚊𝚜󷷣 ∣ align-content center
+  ⎊ 𝚊𝚜→ ∣ align-content flex-end
+  ⎊ 𝚊𝚜b ∣ align-content space-between
+  ⎊ 𝚊𝚜s ∣ align-content stretch
+  ⎊ 𝚊𝚜a ∣ align-content space-around
  text align
   ⎊ 𝚝𝚊← ∣ 𝚝𝚊 left
   ⎊ 𝚝𝚊󷷣 ∣ 𝚝𝚊 center

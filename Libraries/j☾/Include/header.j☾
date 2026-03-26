@@ -67,12 +67,15 @@ chainIntoElements = ⥌x,P↦{
     ↪P; }
 
 mkə = ⥌name,attrs,kids↦{
-    © remaps = { closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝑆:"style", 𝐼:"id", 𝐶:"className" };
+    © remaps = { closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
     kids = chainIntoElements(kids);
     ¿(𝗙(name)) ↪name(attrs, ⠤kids)
     ¿(name≅✗) name = "div";
     ⎉ ə = 󰈙.createElement(name);
     ə􍪙(⠤kids)
-    ¿(attrs) ∀(⎉ [k,v] ⎔ 𝒪(attrs)) əᵣₑₘₐₚₛ􊬶﹖﹖ₖ = v;
+    ¿(attrs) ∀(⎉ [k,v] ⎔ 𝒪(attrs)) {
+      ¿(k≡‹𝑆›) əˢᵗʸˡᵉ.cssText = v;
+      ¡        əᵣₑₘₐₚₛ􊬶﹖﹖ₖ = v;
+    }
      󰤱 htmlelements/function type/general objects/etc
     ↪ə; };

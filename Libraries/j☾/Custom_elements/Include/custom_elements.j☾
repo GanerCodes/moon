@@ -25,6 +25,7 @@
                    ⟦fld⟧
                    ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"",""))⟧ ]; }
   ¡{ ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
+  ə􀲫 = fld;
   ↪ə; }
 Ϣ.box = ⥌Ѧ,⠤C↦{  󰤱
   ↪ 󱀝 div {𝐶 box⍮⦅𝚏↓;𝚊𝚂󷷣⦆} ⟦C⟧
@@ -32,11 +33,11 @@
 
  : clicking external
  󰅙: has an x to close
-Ϣ.popup = ⥌Ѧ,⠤C↦{
+Ϣ.popup = ⥌Ѧ,c↦{
   ⎉ ə,btn;
   󱀝:ə dialog {closedby ⟦Ѧ.⭜‹any›⭝‹none›⟧} [
     ⟦Ѧ.󰅙 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
-    ⟦C⟧ ]
+    ⟦c⟧ ]
   ə.addEventListener(‹close›, 𝚲(Ѧ.onclose⸮(),ə.remove()));
   (btn??{}).onclick = 𝚲ə.close();
   ¿(¬Ѧ.noAppend) { 󰈙.body􍪙(ə);

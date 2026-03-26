@@ -25,7 +25,8 @@ button
   􀴗 ∣ 𝚃𝚏 scale(1.03)
        𝚋 ⦑f1⦒33
 
-.box ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+.box ∣ 𝚠
+       𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
        𝚙 1em
        >* ∣ 𝚖 0.25em
 .boxInput
