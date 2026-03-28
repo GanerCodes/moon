@@ -3,6 +3,7 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 󰈙 = document;
 [𝐴,𝐸,𝑜] = [Array,Element,Object];
 [𝒪,𝒟,𝒪k,𝒪v] = [𝑜.entries,𝑜.fromEntries,𝑜.keys,𝑜.values];
+𝒪ℳ = 󰲡x.ſ(󰲣({⠤x,⠤y}));
 𝔓 = 󰲡x.prototype;
 𝔍 = {↑:JSON.stringify, ↓:JSON.parse};
 󷹝 = String.fromCharCode;
@@ -21,11 +22,12 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k),v]));
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;
 ☾     = ⥌⠤x↦(console.log  (⠤x),x₀);
+pairs = 󰲡x.toSpliced(-1,1)􊾡(⥌x,i↦[x,vᵢ₊₁]);
 table = ⥌⠤x↦(console.table(⠤x),x₀);
 ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
 merge = 𝚲𝑜.assign({},⠤𝔸);
 sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
-mk_id = ⥌l,chars=BASE_CHARSET↦⭥    (l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
+mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
 
 𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 
