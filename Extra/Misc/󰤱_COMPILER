@@ -5,7 +5,7 @@
     1. Format for sourcemaps
     2. Thing that concats trees so you can generate sourcemaps for multi-files
 󰤱  add back the thing that did auto-imports on certain symbols like ¶
-󰤱  ‹the ⟦⬤⟧›, ⬤>1>2
+󰤱  ⬤>1>2
 󰤱  ⨡ a ⨡ b ⨡ c
 󰤱  escaping keywords with _ is dumb, like `del≡del_`
 󰤱  make some vars auto-rerefference globals like 𝔒𝔘𝔗

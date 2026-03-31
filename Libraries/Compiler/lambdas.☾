@@ -64,8 +64,8 @@ tl,tr = ‹ᑀᐵᐒᐖ 󷺹󷺺󷺻󷺼 ᑅᑈᐘᐛ 󷺽󷺾󷺿󷻀›�
     ⸘𝚕􀉔𝚛􀛾α􀉘β    : ↪𝒩(␛∘,𝗏(‹MOD󷺗›),λ)  󰤱 temp
     ✗⨳
 
-⊢rewrite_lambs(󱁕):
-  󱁕.ftrp(‹whiskers󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, format_whiskers, ✓)                                                              ␛
-   .ftrp(‹lamb_h_preset󷺗󷺗›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›􀞂‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›􀋙ᔨ󱁕₀􋒷􀊩󷰾􀋯0ᐖ𝗏(⟞􀊄􋄥󱁕₀))􀊄􋄥󱁕₀ᑀ􀊚􋑻􊿥􋤙􁖇􋂝􋋖󷺹􀝓⟞ᵉ ⱽᴿ􀯍✓, ✓) ␛
-   .ftrp(‹lamb_h_implicit›, 󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝗏(󱁕₀)), ✓)                                                             ␛
-   .ftrp(‹lamb󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›, λ_add_vk, ✓)
+rewrite_lambs_𝘛 = [
+  [‹whiskers󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,format_whiskers                                                             ],
+  [‹lamb_h_preset󷺗󷺗›,󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(⠤‹xyzwvutsr›􀞂‹𝚲󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱›􀋙ᔨ󱁕₀􋒷􀊩󷰾􀋯0ᐖ𝗏(⟞􀊄􋄥󱁕₀))􀊄􋄥󱁕₀ᑀ􀊚􋑻􊿥􋤙􁖇􋂝􋋖󷺹􀝓⟞ᵉ ⱽᴿ􀯍✓],
+  [‹lamb_h_implicit›,󱁕↦𝖿𝗉𝖺𝗋𝖺𝗆𝗌(𝗏(󱁕₀))                                                            ],
+  [‹lamb󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,λ_add_vk                                                                    ]]

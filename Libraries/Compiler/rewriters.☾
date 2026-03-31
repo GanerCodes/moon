@@ -45,16 +45,18 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
           𝕒.append(n)
   󱁕ᶜ = 𝕒
   ↪󱁕
-⊢rewrite_for(󱁕):
-  󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)␛
-   .ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
-⊢grp_blks(󱁕):  ¿⸘¡󰛕∀
-  𝒎 = 󰲡󱁕↦󱁕ᵗ≡‹blk›∧󱁕₀ᵗ≡‹stmt›∧󱁕₀ ₀ᵗ≡‹blk_head›∧(󱁕₀ ₀ ₀ᐒx≡␛∀ ⭜⟞ᵗ≡‹stmt_∀›⭝ ⟞₀ ₀ᵗ≡x)
-  ⊢(󱁕.ftrp(‹stmts blk›⍭,□,✓)) (󱁕):
-    ↪󱁕.set(c=⟨  ⟨𝒎(␛¿)⍮ 𝒎(␛⸘)⍮ 𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹¿⸘¡›,⠤⟞)⟩
-              󷸴 ⟨𝒎(␛)⍮ 𝒎(␛¡)⍮ 𝒎(␛󰛕)⍮􊽨 ⍈ 󷺻𝒩(‹¡󰛕›,⠤⟞)⟩
-              󷸴 ⟨𝒎(␛∀)⍮         𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹∀¡󷺗›,⠤⟞)⟩
-              󷸴 ⴳ⟩(󱁕ᶜ))
+rewrite_for_𝘛 = [
+  [‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕])],
+  [‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕])]]
+ 󱁕.ftrp(‹comp_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(󱁕₀,󱁕₁  ,󱁕₂       ,󱁕₃∨𝖹)󱖔􋔡󱁕]),✓)␛
+  .ftrp(‹stmt_∀›,󱁕↦󱁕.set(c=[𝖿𝗈𝗋(𝖹 ,󱁕₀∨𝖹,󱁕₁∨𝗏𝗌(␛✓),󱁕₂∨𝖹)󱖔􋔡󱁕]),✓)
+
+𝒎 = 󰲡󱁕↦󱁕ᵗ≡‹blk›∧󱁕₀ᵗ≡‹stmt›∧󱁕₀ ₀ᵗ≡‹blk_head›∧(󱁕₀ ₀ ₀ᐒx≡␛∀ ⭜⟞ᵗ≡‹stmt_∀›⭝ ⟞₀ ₀ᵗ≡x)
+grp_blks_𝘛 = [
+  [‹stmts blk›􀌌, 󱁕↦󱁕.set(c=⟨  ⟨𝒎(␛¿)⍮ 𝒎(␛⸘)⍮ 𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹¿⸘¡›,⠤⟞)⟩
+                            󷸴 ⟨𝒎(␛)⍮ 𝒎(␛¡)⍮ 𝒎(␛󰛕)⍮􊽨 ⍈ 󷺻𝒩(‹¡󰛕›,⠤⟞)⟩
+                            󷸴 ⟨𝒎(␛∀)⍮         𝒎(␛¡)⍮􊽨 ⍈ 󷺻𝒩(‹∀¡󷺗›,⠤⟞)⟩
+                            󷸴 ⴳ⟩(󱁕ᶜ))]]
 ⊢map_special(x,󱁕=⍁):
   T1 = ℵ􋄅(󰦥󰦥󰦥󰦥󰦥𝗮𝗯𝗳𝗻𝗿𝘁𝘃󰦥󰦥󰦥󰦥󰦥󱑼7⋄8⋄12⋄10⋄13⋄9⋄11)
   T2 = ᔐ.maketrans(𝑑(󰦥󰦥󰦥󰦥󰦥𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵𝗮𝗯𝗰𝗱𝗲𝗳󰦥󰦥󰦥󰦥󰦥󱑼‹0123456789abcdef›))
@@ -63,8 +65,10 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
 ⊢rewrite_strs(󱁕):
    󰤱 normalize newlines and stuff from literals so we get the same string output
   str_types = ‹empty_str str_t󰦥 str_timp str_tsub str_nsub str_tsys str_𝐷nam str_tsys_guts str_tsub_guts str_timp_guts str_𝐷nam_guts str_nsub1_guts str_nsub2_guts str_escape›⍭
-  󱁕.ftrp(‹str_sub_ƒ_ball›,󱁕↦𝖮𝖯(␛󰻾)􀊄􋔡󱁕)                                                  ␛
-   .ftrp(‹str_spec_char󷺗›,󱁕↦map_special(󱁕􋒷,󱁕))                                          ␛
+   󱁕.ftrp(‹str_sub_ƒ_ball›,󱁕↦𝖮𝖯(␛󰻾)􀊄􋔡󱁕        )                                          ␛
+    .ftrp(‹str_spec_char󷺗›,󱁕↦map_special(󱁕􋒷,󱁕))                                          ␛
+  󱁕.ftrpm([‹str_sub_ƒ_ball›,󱁕↦𝖮𝖯(␛󰻾)􀊄􋔡󱁕        ],
+          [‹str_spec_char󷺗›,󱁕↦map_special(󱁕􋒷,󱁕)])                                       ␛
    .ftrp( str_types      ,󱁕↦󱁕.set(t=‹str›),✓)                                           ␛
    .ftrp(‹str󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦𝗌𝗍𝗋(⠤󱁕ᐵ ᣆ􍯏􊾸􋘳􊾲􋁕􍪵􊾾􋁣􊿑ˢᵗʳ􊿒 ⛶ᐸ󰌷),✓)                              ␛
    .ftrp(‹x󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›,󱁕↦󱁕.set(c=part_cont(󷺹ᵉ ᵀ¬∧⟞ᵗ≡‹str›, 󰲡𝗌𝗍𝗋(⠤x󰌷))(󱁕)),✓)         ␛
@@ -80,11 +84,17 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
       ¡      : α=c₀
       󱁕ᵢ = 𝒩(‹str_sub›,𝖼𝖺𝗅𝗅(c₁,𝗂(␛𝔸 𝗏,α)))􀊄􋔡c
     ↪𝗅𝖺𝗆𝖻(𝒩(‹lamb_h_normal›,𝒩(␛𝔸,␛𝔸 𝗏),𝒩(␛𝕂,␛𝕂 𝗏)),󱁕)􀊄􋔡󱁕
-⊢rewrite_numbers(󱁕):
+rewrite_numbers_𝘛 = [
+  [‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯􀊄􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(󱁕􋒷)􀊄􋔡󱁕))],
+  [‹pos_num󷺗󷺗󷺗›,𝗇                                                      ],
+  [‹number󷺗󷺗󷺗󷺗›,􀁐⁰                                                     ],
+  [‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃􀊄􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁))               ]]
+  🟑
   󱁕.ftrp(‹neg_num󷺗󷺗󷺗›,󱁕↦𝗀𝗋𝗉(‹()›,𝗈𝗉(␛¯󱖔􋄤󱁕),𝗇(UPSIDEDOWNSYNDROME.flip(󱁕􋒷)󱖔􋔡󱁕)))␛
    .ftrp(‹pos_num󷺗󷺗󷺗›,𝗇)                                                      ␛
    .ftrp(‹number󷺗󷺗󷺗󷺗›,ᓕ⁰)                                                     ␛
    .ftrp(‹number_exp›,󱁕↦𝗀𝗋𝗉(‹()›,󱁕₀,𝗈𝗉(␛⌃󱖔􋄥󱁕₀),𝗀𝗋𝗉(‹()›, ⠤󱁕₁)), ✓)
+  🟑
 ⊢rewrite_ternary(󱁕):  󰤱󰤱󰤱
   is_xpr_atom = 󱁕↦󱁕ᵗ≡␛x  🟑∧ 󱁕🃌≡1🟑 why was this checking for atoms? mixing supscripts?
   ⊢(󱁕.ftrp(‹opC›,□,✓)) (󱁕): 𝚘,⠤α = 󱁕  x⭜y⭝z
@@ -119,17 +129,17 @@ part_cont = ⥌𝼝,ƒ↦󰲡⟨⟨𝼝 ⍈ ƒ⟩ 󷸴 ⴳ⟩(x)∨⍁ 
   󱁕ᶜ = R
   ↪󱁕
 ⊢regroup_elements(󱁕):  󰤱 treat (some) 𝑣_specs as num
- 𝼝 = 􀂤􀊊󷺺ᵗ􀉞␛𝑇 􇀦[𝗆𝖼𝖺𝗅(⟞)]􇀧 ⟞ᵗ􀉞‹target_rhs› 􇀦⟞􇀧 [⟞]
- 󱁕.ftrp(‹x›, 󱁕↦󱁕.set(c=⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ∈‹𝑇 target_rhs›⍮⁺
-                           ⍈ 󰲡𝒩(‹applier›, ⠤𝼝(x))⟩ 󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), ✓)
- 󱁕.ftrp(‹target_rhs›,󱁕↦𝒩(‹applier›,⠤󱁕),✓)􀊄􋔡󱁕
- ⊢𝙁(𝚙,󱁕): ¿󱁕ᵗ􀉞‹mcal›: ↪𝒩(␛∘,𝚙,⠤󱁕₀)
-          ¿󱁕ᵗ􀉞‹𝐿󷺗󷺗󷺗›: ↪𝗂(𝚙,⠤󱁕 )  󰤱 weird!
-          ¿󱁕ᵗ􀉞‹attr›: ↪𝖺(𝚙, 󱁕₀)
-          ¿󱁕ᵗ􀉞‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
-          𝑩𝑩(󱁕); ✗􀉓‹Invalid element type found in target rhs!›
- 󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕􀉷􍾚⁽􋑻􊿥⁾𝙁]),✓)
-⊢add_cmp_op_chains(󱁕):
+  𝼝 = 􀂤􀊊󷺺ᵗ􀉞␛𝑇 􇀦[𝗆𝖼𝖺𝗅(⟞)]􇀧 ⟞ᵗ􀉞‹target_rhs› 􇀦⟞􇀧 [⟞]
+  󱁕.ftrp(‹x›, 󱁕↦󱁕.set(c=⟨ ⟨󷺹ᵗ≠‹num›⍮ 󷺹ᵗ∈‹𝑇 target_rhs›⍮⁺
+                            ⍈ 󰲡𝒩(‹applier›, ⠤𝼝(x))⟩ 󷸴 ⴳ ⟩∘󱁕ᶜ∨⍁), ✓)
+  󱁕.ftrp(‹target_rhs›,󱁕↦𝒩(‹applier›,⠤󱁕),✓)􀊄􋔡󱁕
+  ⊢𝙁(𝚙,󱁕): ¿󱁕ᵗ􀉞‹mcal›: ↪𝒩(␛∘,𝚙,⠤󱁕₀)
+           ¿󱁕ᵗ􀉞‹𝐿󷺗󷺗󷺗›: ↪𝗂(𝚙,⠤󱁕 )  󰤱 weird!
+           ¿󱁕ᵗ􀉞‹attr›: ↪𝖺(𝚙, 󱁕₀)
+           ¿󱁕ᵗ􀉞‹exp󷺗›: ↪𝒩(‹opC›,𝖮𝖯(␛⌃),𝚙,󱁕₀)
+           𝑩𝑩(󱁕); ✗􀉓‹Invalid element type found in target rhs!›
+  󱁕.ftrp(‹applier›,󱁕↦󱁕.set(c=[󱁕ᶜ₁﹕􀉷􍾚⁽􋑻􊿥⁾𝙁]),✓)
+⊢add_cmp_op_chains(󱁕):  󰤱 fix this stuff with ⬤
   relv = 󷺹ᵗ≡‹opC› ⭜ ⟞₀ᵉ ᴼᑀ₀∋␛λ⭜⟞  󰤱 check for invalid modifiers like ≺≻꜠´⟥⟤
   ⊢(󱁕.ftrp(‹opC›,□,✓)) (󱁕):
     ¿relv(󱁕)≕𝚘¬: ↪󱁕

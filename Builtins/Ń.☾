@@ -47,6 +47,21 @@
        ¿ƒ􀋑□: ↪󰲡󱁕.ftrp(fs,x,pre,not_T,⠶𝓚)
        ƒ 􀯏 Ńᴹ󰀂ᴴ
        ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(fsᐹᔐ ⭜󰲡xᵗ≡fs󰅂⭝ 󰲡xᵗ∈fs󰅂,ƒ,pre,not_T,⠶𝓚)
+    ⊢ftrpm(󱁕,⠤𝔸,not_T=✓):
+      M = {}
+      ∀k,v⬠𝔸: ¿k􀝀𝑡􀊤𝑙: ∀κ⬠k: M󰃭=v
+              ¡     :       Mₖ=v
+      
+      𝚂,𝚃 = 𝔡𝔮(􋑺),𝔡𝔮()
+      pl,ex,al = 𝚂.popleft,𝚂.extend,𝚃.appendleft
+      ∀𝚂: C = pl()
+          ex([c∀c⬠C¿cᶜ])
+          al(C)
+      𝚃.append(holder 􀯍 Ń(ᐦ,󱁕))
+      ∀C⬠𝚃:
+        ∀i,c⬠enumerate(C)¿not_T􀉜cᵉ ᵀ:
+          ¿cᵗ􀉧M: Cᵢ = M􊫼(c)
+      ↪󱁕.from(holder₀)
     ⊢gets(󱁕,ƒ,not_T=✓): ƒ 􀯏 Ńᴹ󰀂ᴴ 
                         ↪[c∀c⬠󱁕¿(not_T󷺒cᵉ ᵀ)∧ƒ(c)]
     ⊢find(󱁕,ƒ,pre=✓,not_T=✓,R=□): ƒ 􀯏 Ńᴹ󰀂ᴴ
