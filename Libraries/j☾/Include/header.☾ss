@@ -38,7 +38,10 @@
 ⌾ 𝚍   display
 ⌾ 𝚃   transition
 ⌾ 𝚃𝚏  transform
+⌾ 󰊄   font
+⌾ 󰊄𝚏  font-family
 ⌾ 󰊄𝚜  font-size
+⌾ «󰊄𝚊 𝚝𝚊»  text-align
 ⌾ «   𝚌» color
 ⌾ «𝚋 𝚌𝚋» background-color
 ⌾ 𝚜   box-shadow
@@ -46,7 +49,6 @@
 ⌾ 𝚋𝚐𝚏 backdrop-filter
 ⌾ 𝚖𝚙  cursor
 ⌾ 𝚘𝚕  outline
-⌾ 𝚝𝚊  text-align
 ⌾ 𝚘𝚏  overflow
   ⌾ 𝚘𝚏x overflow-x
   ⌾ 𝚘𝚏y overflow-y
@@ -175,6 +177,6 @@
   ⎊ 𝚊𝚜s ∣ align-content stretch
   ⎊ 𝚊𝚜a ∣ align-content space-around
  text align
-  ⎊ 𝚝𝚊← ∣ 𝚝𝚊 left
-  ⎊ 𝚝𝚊󷷣 ∣ 𝚝𝚊 center
-  ⎊ 𝚝𝚊→ ∣ 𝚝𝚊 right
+  ⎊ «𝚝 󰊄»𝚊← ∣ 𝚝𝚊 left
+  ⎊ «𝚝 󰊄»𝚊󷷣 ∣ 𝚝𝚊 center
+  ⎊ «𝚝 󰊄»𝚊→ ∣ 𝚝𝚊 right
