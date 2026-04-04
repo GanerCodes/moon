@@ -43,7 +43,7 @@ button
   >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
 
 ::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
-dialog:open ∣ 𝚊«𝙿 𝚂»󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
+dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 650px
               𝚙 30px
                ⦑f0⦒; 𝚋 ⦑b0⦒DD
               𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
