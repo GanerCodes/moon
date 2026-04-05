@@ -75,3 +75,6 @@ dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 65
   𝚖󷷢 3px
 .selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
 .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒
+
+*[draggable] ∣ 𝚃 all 0.1s ease-in-out
+*[dragging]  ∣ 𝚃𝚏 scale(0.5)

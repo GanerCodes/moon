@@ -4,6 +4,7 @@ BASE_CHARSET  =  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 þF0219  =  document ; 
 [𝐴 , 𝐸 , 𝑜]  =  [Array , Element , Object] ; 
 [𝒪 , 𝒟 , 𝒪k , 𝒪v]  =  [𝑜 . entries , 𝑜 . fromEntries , 𝑜 . keys , 𝑜 . values] ; 
+𝒪ℳ  =   (x,...𝔸)=> x .  ſ ( (x,y,...𝔸)=> ({ ... x ,  ... y})) ; 
 𝔓  =   (x,...𝔸)=> x . prototype ; 
 𝔍  =  {þ02191 : JSON . stringify ,  þ02193 : JSON . parse} ; 
  þF7E5D   =  String . fromCharCode ; 
@@ -15,18 +16,19 @@ BASE_CHARSET  =  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 [ (Math.max)  ,  (Math.min) ]  =  [Math . max , Math . min] ; 
  þF7E44       =   (x,y,z,...𝔸)=>  (Math.min) ( (Math.max) (x , y) , z)
  þ021A8   =   (x,...𝔸)=> [ ... x] . map((x , i) => [i , x])
- þ02B65   =   (x,y,...𝔸)=> isArray(x)  ? [ ... x . keys()] :   þ02B65 (𝐴(y ===  undefined  ? x : y - x)) . ᴍ((v) => v + (y ===  undefined  ? 0 : x)) ; 
+ þ02B65   =   (x,y,...𝔸)=> isArray(x)  ? [ ... x . keys()] :   þ02B65 (Array(y ===  undefined  ? x : y - x)) . ᴍ((v) => v + (y ===  undefined  ? 0 : x)) ; 
  þF7E3B   =   (x,y,...𝔸)=> isArray(x)  ?  þ02B65 (a . length + 1) :  y ===  undefined   ?  þ02B65 (x + 1) :   þ02B65 (x , y + 1) ; 
  þF147C   =  ( ... 𝙰) =>  þ02B65 ( (Math.max) ( ... 𝙰 . ᴍ( þ1F0CC ))) . ᴍ((i) => 𝙰 . ᴍ( (x,...𝔸)=> x[i])) ; 
 ᴍv  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [k , y(v)])) ; 
 ᴍk  =   (x,y,...𝔸)=> 𝒟(𝒪(x) . ᴍ(([k , v]) => [y(k) , v])) ; 
 𝒮  =  (d , k , v) => ( ! (k in d)  ||  d[k] === null)  ? (d[k] = v) :  d[k] ; 
  print       =  ( ... x) => (console . log  ( ... x) , x[0]) ; 
+pairs  =   (x,...𝔸)=> x . toSpliced( - 1 , 1) . ᴍ((x , i) => [x , v[i + 1]]) ; 
 table  =  ( ... x) => (console . table( ... x) , x[0]) ; 
 ends   =  (l) => l . map((𝑥 , i) => [i == 0 , 𝑥 , i ==  þ1F0CC (l) - 1]) ; 
 merge  =   (...𝔸)=> 𝑜 . assign({} ,  ... 𝔸) ; 
 sleep  =  (s) =>  new Promise((r) => setTimeout(r , 1000 * s)) ; 
-mk_id  =  (l , chars = BASE_CHARSET) =>  þ02B65     (l) . ᴍ( (...𝔸)=> chars . at(Number( þF114F () *  þ1F0CC (chars)))) . ſ( (x,y,...𝔸)=> x + y ,   "" ) ; 
+mk_id  =  (l , chars = BASE_CHARSET) =>  þ02B65 (l) . ᴍ( (...𝔸)=> chars . at(Number( þF114F () *  þ1F0CC (chars)))) . ſ( (x,y,...𝔸)=> x + y ,   "" ) ; 
 
 𝔓(Number) . mod  =  function(n){  return (this % n + n) % n ;  } ; 
 

@@ -21,9 +21,10 @@
    return ə ;  } ; 
 Ϣ . textField  =  (Ѧ) => { 
    let  ə ; 
-   let  fld  =  mkə(`input` , {[`𝑆`] : `padding: 2px; flex-grow: 1; height: 100%; border: none;` ,  ... (Ѧ)} ,  false ) ; 
+   let  fld  =  mkə(`input` , {[`𝑆`] : `min-width: 0; padding: 2px; flex-grow: 1; height: 100%; border: none;` ,  ... (Ѧ)} ,  false ) ; 
    if (Ѧ . þ0F070 || Ѧ . þ0F06E) { ə  =  mkə(`span` , {[`𝐶`] : `boxInput` , [`𝑆`] : `width: 100%;`} , [(fld) , (notab(toggleButton( (x,...𝔸)=> (fld . type  =  ["password" , "text"][ + x]) , "" , "")))]) ;  }
    else { ə  =  mkə(`span` , {[`𝐶`] : `boxInput` , [`𝑆`] : `width: 100%;`} , fld) ;  }
+  ə . 𝚒  =  fld ; 
    return ə ;  }
 Ϣ . box  =  (Ѧ ,  ... C) => { 
    return  mkə(`div` , {[`𝐶`] : `box` , [`𝑆`] : `display: flex; flex-direction: column; align-items: center;`} , C)
@@ -31,9 +32,9 @@
 
 
 
-Ϣ . popup  =  (Ѧ ,  ... C) => {
+Ϣ . popup  =  (Ѧ , c) => {
    let  ə , btn ; 
-  (ə = mkə(`dialog` , {[`closedby`] : Ѧ . þ0F2D4 ? `any` : `none`} , [(Ѧ . þF0159  ? ((btn = mkə(`button` , {[`𝐶`] : `dialogCloseBtn`} , `✗`))) :  []) , (C)]))
+  (ə = mkə(`dialog` , {[`closedby`] : Ѧ . þ0F2D4 ? `any` : `none`} , [(Ѧ . þF0159  ? ((btn = mkə(`button` , {[`𝐶`] : `dialogCloseBtn`} , `✗`))) :  []) , (c)]))
   ə . addEventListener(`close` ,   (...𝔸)=> (Ѧ . onclose ?. () , ə . remove())) ; 
   (btn ?? {}) . onclick  =   (...𝔸)=> ə . close() ; 
    if ( ! Ѧ . noAppend) { þF0219 . body . append(ə) ; 
@@ -77,3 +78,20 @@
   Ѧ . setN() ; 
   ə . Ѧ  =  Ѧ ; 
    return ə ;  } ; 
+
+ const  AEL  =   (x,...𝔸)=> x . addEventListener( ... 𝔸) ; 
+ const  RAT  =   (x,...𝔸)=> x . removeAttribute ( ... 𝔸) ; 
+
+Ϣ . dragItem  =  (þ0E27F , 𝚒) => {
+  SAT(þ0E27F , `draggable` , `true`) ; 
+  SAT(þ0E27F , `dragItem`  , 𝚒) ; 
+  AEL(þ0E27F , `dragstart` ,  (...𝔸)=> SAT(þ0E27F , `dragging` , ``)) ; 
+  AEL(þ0E27F , `dragend`   ,  (...𝔸)=> RAT(þ0E27F , `dragging`   )) ; 
+   print (þ0E27F) ; 
+   return þ0E27F ; 
+} ; 
+Ϣ . dragHold  =  (þ0E27F , 𝚒) => {
+  SAT(þ0E27F , `dragHold` , 𝚒) ; 
+   print (þ0E27F) ; 
+   return þ0E27F ; 
+} ; 

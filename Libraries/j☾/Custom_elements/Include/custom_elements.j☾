@@ -82,3 +82,18 @@
   Ѧˢᵉᵗᴺ();
   ə􀴗 = Ѧ;
   ↪ə; };
+
+© AEL = 󰲡x.addEventListener(⠤𝔸);
+© RAT = 󰲡x.removeAttribute (⠤𝔸);
+
+Ϣ.dragItem = ⥌,𝚒↦{
+  SAT(,‹draggable›,‹true›);
+  SAT(,‹dragItem› ,𝚒);
+  AEL(,‹dragstart›,󰲟SAT(,‹dragging›,‹›));
+  AEL(,‹dragend›  ,󰲟RAT(,‹dragging›   ));
+  ↪;
+};
+Ϣ.dragHold = ⥌,𝚒↦{
+  SAT(,‹dragHold›,𝚒);
+  ↪;
+};

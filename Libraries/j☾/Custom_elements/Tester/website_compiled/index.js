@@ -4,17 +4,9 @@
 
 
 
-þF0219 . body . append(
-  box({} , 
-    mkə(`T` , {[`𝑆`] : `font-size: 48px;`} , `Sign up`) , 
-    textField({id : `email`    ,  𝑃𝐻 : `Email`        }) , 
-    textField({id : `username` ,  𝑃𝐻 : `Username`     }) , 
-    textField({id : `password` ,  𝑃𝐻 : `Password` ,  þ0F070 :  true }) , 
-    textButton("Submit" ,   (...𝔸)=>  print (email , username , password) ,  {𝐶 : "roundBtn"})
-  ) , 
-  toggleButton( print  , "✗" , "✓" ,  false ) , 
-  textField({𝑃𝐻 : `weeee`}) , 
-  table({} , [[textField({𝑃𝐻 : "test" ,  þ0F070 :  true }) , "b" , "c"] , ["d" , mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: column;`} , [(mkə(`t` ,  false  , `eee`)) , (mkə(`t` ,  false  , `EEE`))]) , "f"] , ["g" , "h" , "i"]]))
-popup({þ0F2D4 :  true  , þF0159 :  true  , noAppend :  true } , `hi`)
 
-þF0219 . body . append(pageNumBar({w : 1} , 13)) ; 
+
+ const  boxy  =   (...𝔸)=> dragItem(mkə(`div` , {[`𝑆`] : `width: 25px; height: 25px; margin: 5px; background-color: #808;`} , ``) ,  `1`) ; 
+þF0219 . body . append(
+   print (dragHold(mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: column;`} ,  þ02B65 (5) . ᴍ(boxy)) ,  `1`))
+) ; 

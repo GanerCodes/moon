@@ -2,8 +2,11 @@
 * {
   box-sizing: border-box;
 }
-button,input,span {
+button,input,span,select,textarea {
   transition: all 0.1s ease-in-out;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 html {
   color: #FFFFFF;
@@ -35,9 +38,14 @@ button {
 }
 .box {
   width: 100%;
-  border: 1px solid #DDDDDD;
-  border-radius: 5px;
   padding: 1em;
+  &:not(.noOutline) {
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+  }
+  &.noOutline {
+    border: 1px solid #0000;
+  }
   &>* {
     margin: 0.25em;
   }
@@ -79,7 +87,8 @@ button {
   backdrop-filter: blur(5px);
 }
 dialog:open {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 50%;
   min-width: 400px;
@@ -150,4 +159,10 @@ dialog:open {
 }
 .pageNumPrev:disabled, .pageNumNext:disabled {
   background-color: #222222;
+}
+*[draggable] {
+  transition: all 0.1s ease-in-out;
+}
+*[dragging] {
+  transform: scale(0.5);
 }
