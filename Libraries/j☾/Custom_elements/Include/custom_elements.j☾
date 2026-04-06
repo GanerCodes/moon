@@ -104,10 +104,11 @@
   𝚒 = ᐦ+𝚒;
   SAT(,‹dragItem› ,𝚒     );
   SAT(,‹draggable›,‹true›);
-  AEL(,‹dragstart›,󰲟{ SAT(,‹dragging›,ᐦ); 𝘥=; });
-  AEL(,‹dragend›  ,󰲟{ RAT(,‹dragging›  );
-                       αoverβ(𝘥,𝘵,✗); 𝘥=␀; });
-  AEL(,‹drop›     ,󰲟≅𝘵 ∧ swapə(𝘥,𝘵));
+  AEL(,‹dragstart›,⥌𝜺↦{ SAT(,‹dragging›,ᐦ); 𝘥=; });
+  AEL(,‹dragend›  ,⥌𝜺↦{ RAT(,‹dragging›  );
+                         αoverβ(𝘥,𝘵,✗); 𝘥=␀; });
+  AEL(,‹drop›     ,⥌𝜺↦{ 𝜺.preventDefault();
+                         ≅𝘵 ∧ swapə(𝘥,𝘵); });
   ↪confDrag(,𝚒); };
 Ϣ.dragHold = ⥌,𝚒=0↦{
   𝚒 = ᐦ+𝚒;
