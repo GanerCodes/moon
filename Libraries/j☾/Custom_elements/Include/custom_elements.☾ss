@@ -77,4 +77,16 @@ dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠½;𝚠≥ 400px ; 𝚑⅔;𝚑≥ 65
 .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒
 
 *[draggable] ∣ 𝚃 all 0.1s ease-in-out
+               𝚖𝚙 pointer
 *[dragging]  ∣ 𝚃𝚏 scale(0.5)
+               𝚖𝚙 grabbing
+*􋁕⁽󰁺dragItem󰁻󰁱󰁺dragHold󰁻⁾
+               𝚋 2px dashed #0000
+*[maydrop]   ∣ 𝚋 2px dashed #FF0
+
+ *[dragHold][maydrop]::after
+   content ''
+   𝚍 block
+   «𝚠 𝚑» 21px
+   𝚋 2px dashed #FF0
+   𝚖 5px

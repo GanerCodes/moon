@@ -20,7 +20,8 @@ popup({:✓,󰅙:✓,noAppend:✓},‹hi›)
 󰈙.body􍪙(pageNumBar({w:1},13));
 🟑
 
-© boxy = 󰲟dragItem(󱀝 div ⦅𝚠 25px;𝚑 25px;𝚖 5px;𝚋 #808⦆ ‹›, ‹1›);
+© boxy = 󰲣dragItem(󱀝 div ⦅𝚠 25px;𝚑 25px;𝚋 #⟦x⟧⟦y⟧⟦9-x⟧⦆ ‹›);
 󰈙.body􍪙(
-  ☾(dragHold(󱀝 div ⦅𝚏↓⦆ ⟦⭥(5)􊾡(boxy)⟧, ‹1›))
-);
+  󱀝 div ⦅𝚏→⦆ ⟦[
+    dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛4))⟧),
+    dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛F))⟧) ]⟧);

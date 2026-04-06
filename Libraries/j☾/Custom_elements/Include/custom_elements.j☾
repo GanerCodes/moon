@@ -86,14 +86,31 @@
 © AEL = 󰲡x.addEventListener(⠤𝔸);
 © RAT = 󰲡x.removeAttribute (⠤𝔸);
 
-Ϣ.dragItem = ⥌,𝚒↦{
+⎉ [𝘥,𝘵] = [␀,␀];
+© αoverβ = ⥌α,β,s↦{
+  ¿(α≅β ∨ ¬(α∧β)) ↪;
+  © [v,A] = [α.attributes.dragItem.value,β.attributes];
+  ¿(¬(v≡A.dragItem⸮value ∨ v≡A.dragHold⸮value)) ↪;
+  ¿(s) { SAT(β,‹maydrop›,ᐦ);
+         ¿(𝘵 ∧ 𝘵≇β) RAT(𝘵,‹maydrop›,ᐦ);
+         𝘵 = β; }
+  ¡ RAT(β,‹maydrop›,ᐦ); };
+© confDrag = ⥌,𝚒↦{
+  AEL(,‹dragenter›,⥌𝜺↦αoverβ(𝘥,𝜺ᵗᵃʳᵍᵉᵗ,✓));
+  AEL(,‹dragleave›,⥌𝜺↦αoverβ(𝘥,𝜺ᵗᵃʳᵍᵉᵗ,✗));
+  AEL(,‹dragover› ,⥌𝜺↦𝜺.preventDefault());
+  ↪; };
+Ϣ.dragItem = ⥌,𝚒=0↦{
+  𝚒 = ᐦ+𝚒;
+  SAT(,‹dragItem› ,𝚒     );
   SAT(,‹draggable›,‹true›);
-  SAT(,‹dragItem› ,𝚒);
-  AEL(,‹dragstart›,󰲟SAT(,‹dragging›,‹›));
-  AEL(,‹dragend›  ,󰲟RAT(,‹dragging›   ));
-  ↪;
-};
-Ϣ.dragHold = ⥌,𝚒↦{
-  SAT(,‹dragHold›,𝚒);
-  ↪;
-};
+  AEL(,‹dragstart›,󰲟{ SAT(,‹dragging›,ᐦ); 𝘥=; });
+  AEL(,‹dragend›  ,󰲟{ RAT(,‹dragging›  );
+                       αoverβ(𝘥,𝘵,✗); 𝘥=␀; });
+  AEL(,‹drop›     ,󰲟≅𝘵 ∧ swapə(𝘥,𝘵));
+  ↪confDrag(,𝚒); };
+Ϣ.dragHold = ⥌,𝚒=0↦{
+  𝚒 = ᐦ+𝚒;
+  SAT(,‹dragHold›, 𝚒    );
+  AEL(,‹drop›    ,󰲟≅𝘵 ∧ 􍪙(𝘥));
+  ↪confDrag(,𝚒); };

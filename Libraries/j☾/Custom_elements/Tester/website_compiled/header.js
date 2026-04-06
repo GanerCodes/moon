@@ -82,3 +82,8 @@ mkə  =  (name , attrs , kids) => {
     }
     
      return ə ;  } ; 
+
+swapə  =   (x,y,...𝔸)=> {  let  χ  =  mkə(`div;` ,  false  ,  false )
+           x . parentNode . insertBefore(χ , x) ; 
+           y . parentNode . insertBefore(x , y) ; 
+           χ . parentNode . insertBefore(y , χ) ;  } ; 

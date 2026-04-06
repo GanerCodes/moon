@@ -162,7 +162,15 @@ dialog:open {
 }
 *[draggable] {
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 *[dragging] {
   transform: scale(0.5);
+  cursor: grabbing;
+}
+*:is([dragItem],[dragHold]) {
+  border: 2px dashed #0000;
+}
+*[maydrop] {
+  border: 2px dashed #FF0;
 }

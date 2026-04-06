@@ -82,16 +82,31 @@
  const  AEL  =   (x,...𝔸)=> x . addEventListener( ... 𝔸) ; 
  const  RAT  =   (x,...𝔸)=> x . removeAttribute ( ... 𝔸) ; 
 
-Ϣ . dragItem  =  (þ0E27F , 𝚒) => {
+ let  [𝘥 , 𝘵]  =  [null , null] ; 
+ const  αoverβ  =  (α , β , s) => {
+   if (α === β  ||   ! (α && β))  return  ; 
+   const  [v , A]  =  [α . attributes . dragItem . value , β . attributes] ; 
+   if ( ! (v == A . dragItem ?. value  ||  v == A . dragHold ?. value))  return  ; 
+   if (s) { SAT(β , `maydrop` ,  "" ) ; 
+          if (𝘵  &&  𝘵 !== β) RAT(𝘵 , `maydrop` ,  "" ) ; 
+         𝘵  =  β ;  }
+   else  RAT(β , `maydrop` ,  "" ) ;  } ; 
+ const  confDrag  =  (þ0E27F , 𝚒) => {
+  AEL(þ0E27F , `dragenter` , (𝜺) => αoverβ(𝘥 , 𝜺 . target ,  true )) ; 
+  AEL(þ0E27F , `dragleave` , (𝜺) => αoverβ(𝘥 , 𝜺 . target ,  false )) ; 
+  AEL(þ0E27F , `dragover`  , (𝜺) => 𝜺 . preventDefault()) ; 
+   return þ0E27F ;  } ; 
+Ϣ . dragItem  =  (þ0E27F , 𝚒 = 0) => {
+  𝚒  =   ""  + 𝚒 ; 
+  SAT(þ0E27F , `dragItem`  , 𝚒     ) ; 
   SAT(þ0E27F , `draggable` , `true`) ; 
-  SAT(þ0E27F , `dragItem`  , 𝚒) ; 
-  AEL(þ0E27F , `dragstart` ,  (...𝔸)=> SAT(þ0E27F , `dragging` , ``)) ; 
-  AEL(þ0E27F , `dragend`   ,  (...𝔸)=> RAT(þ0E27F , `dragging`   )) ; 
-   print (þ0E27F) ; 
-   return þ0E27F ; 
-} ; 
-Ϣ . dragHold  =  (þ0E27F , 𝚒) => {
-  SAT(þ0E27F , `dragHold` , 𝚒) ; 
-   print (þ0E27F) ; 
-   return þ0E27F ; 
-} ; 
+  AEL(þ0E27F , `dragstart` ,  (...𝔸)=> { SAT(þ0E27F , `dragging` ,  "" ) ;  𝘥 = þ0E27F ;  }) ; 
+  AEL(þ0E27F , `dragend`   ,  (...𝔸)=> { RAT(þ0E27F , `dragging`  ) ; 
+                       αoverβ(𝘥 , 𝘵 ,  false ) ;  𝘥 = null ;  }) ; 
+  AEL(þ0E27F , `drop`      ,  (...𝔸)=> þ0E27F === 𝘵  &&  swapə(𝘥 , 𝘵)) ; 
+   return confDrag(þ0E27F , 𝚒) ;  } ; 
+Ϣ . dragHold  =  (þ0E27F , 𝚒 = 0) => {
+  𝚒  =   ""  + 𝚒 ; 
+  SAT(þ0E27F , `dragHold` ,  𝚒    ) ; 
+  AEL(þ0E27F , `drop`     ,  (...𝔸)=> þ0E27F === 𝘵  &&  þ0E27F . append(𝘥)) ; 
+   return confDrag(þ0E27F , 𝚒) ;  } ; 

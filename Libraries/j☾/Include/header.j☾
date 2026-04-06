@@ -81,3 +81,8 @@ mkə = ⥌name,attrs,kids↦{
     }
      󰤱 htmlelements/function type/general objects/etc
     ↪ə; };
+
+swapə = 󰲣{ ⎉ χ = 󱀝 div;
+           x.parentNode.insertBefore(χ,x);
+           y.parentNode.insertBefore(x,y);
+           χ.parentNode.insertBefore(y,χ); };

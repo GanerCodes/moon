@@ -6,7 +6,8 @@
 
 
 
- const  boxy  =   (...𝔸)=> dragItem(mkə(`div` , {[`𝑆`] : `width: 25px; height: 25px; margin: 5px; background-color: #808;`} , ``) ,  `1`) ; 
+ const  boxy  =   (x,y,...𝔸)=> dragItem(mkə(`div` , {[`𝑆`] : `width: 25px; height: 25px; background-color: #${x}${y}${9 - x};`} , ``)) ; 
 þF0219 . body . append(
-   print (dragHold(mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: column;`} ,  þ02B65 (5) . ᴍ(boxy)) ,  `1`))
-) ; 
+  mkə(`div` , {[`𝑆`] : `display: flex; flex-direction: row;`} , [
+    dragHold(mkə(`div` , {[`𝐶`] : `bruh`} ,  þ02B65 (5) . ᴍ( (x,...𝔸)=> boxy(x , `4`)))) , 
+    dragHold(mkə(`div` , {[`𝐶`] : `bruh`} ,  þ02B65 (5) . ᴍ( (x,...𝔸)=> boxy(x , `F`)))) ])) ; 
