@@ -45,9 +45,11 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
   𝔓(𝐴)ₛ = function(⠤𝔸){ ↪ƒ(       this ,⠤𝔸);};
   𝔓(𝐸)ₛ = function(⠤𝔸){ ↪ƒ(𝐴.from(this),⠤𝔸);}; });
 
+AEL = 󰲡x.addEventListener(⠤𝔸);
+SAT = ⥌x,y,z=ᐦ↦x.setAttribute(y,z);
+RAT = 󰲡𝔸􋁃(⥌a↦x.removeAttribute(a));
 GID = 󰲡document.getElementById(x);
 VAL = 󰲡GID(x).value;
-SAT = 󰲥x.setAttribute(y,z);
 QS  = ⥌x,ε=document↦ε.querySelector(x);
 QSA = ⥌x,ε=document↦[⠤ε.querySelectorAll(x)];
 𝔏𝔖 = { ↑: 󰲣localStorageₓ = 𝔍􋀫(y),

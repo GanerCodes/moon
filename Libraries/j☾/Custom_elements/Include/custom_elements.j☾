@@ -20,7 +20,7 @@
   ↪ə; };
 Ϣ.textField = ⥌Ѧ↦{  󰤱 󰿄
   ⎉ ə;
-  ⎉ fld = 󱀝 input {⦅𝚠≥ 0; 𝚙 2px; 𝚏𝚐1; 𝚑; 𝚋 􋄅⦆⍮ ⠤Ѧ};
+  ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮ ⠤Ѧ};
   ¿(Ѧ􇦝∨Ѧ􇦫) { ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} [
                    ⟦fld⟧
                    ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"",""))⟧ ]; }
@@ -82,9 +82,6 @@
   Ѧˢᵉᵗᴺ();
   ə􀴗 = Ѧ;
   ↪ə; };
-
-© AEL = 󰲡x.addEventListener(⠤𝔸);
-© RAT = 󰲡x.removeAttribute (⠤𝔸);
 
 ⎉ [𝘥,𝘵] = [␀,␀];
 © αoverβ = ⥌α,β,s↦{
