@@ -34,12 +34,16 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
 © arrayLike = {: ⥌x,ƒ↦{ O = {};
                          x.forEach(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
                          ↪O; },
-               ᴍ: 󰲣x.map(y),
-               ꟿ: 󰲣x.map(󰲡y(⠤x)),
-               ſ: 󰲣x.reduce(y),
-               󰈲: 󰲣x.filter(y),
-               ⋀: 󰲡x.every(x,󰻾),
-               ⋁: 󰲡x.some (x,󰻾) }
+               ᴍ: 󰲡x.map    (       ⠤𝔸),
+               󰆩: 󰲡x.flat   (       ⠤𝔸),
+              ᴍ󰆩: 󰲡x.flatMap(       ⠤𝔸),
+               ſ: 󰲡x.reduce (       ⠤𝔸),
+               󰈲: 󰲡x.filter (       ⠤𝔸),
+               󷸻: 󰲡x.slice  (       ⠤𝔸),
+               ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
+               ⋀: 󰲡x.every  (x,󰻾      ),
+               ⋁: 󰲡x.some   (x,󰻾      ) };
+arrayLike􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁),xᵢ₊₁])];
 𝒪(arrayLike).forEach(⥌[s,ƒ]↦{
   windowₛ = 󰲡ƒ(isElement(x)⭜𝐴.from(x)⭝x,⠤𝔸);
   𝔓(𝐴)ₛ = function(⠤𝔸){ ↪ƒ(       this ,⠤𝔸);};

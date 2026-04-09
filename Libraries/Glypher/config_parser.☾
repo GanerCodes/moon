@@ -40,7 +40,7 @@ com       = ~‹[^\n]*›
     d=do(󱁕)
     ¿d􀊹􀉞1 􀛾 (d₀ᑀ􀊹􀉞2 􀛾 ⟞₀􀊜𝑑 􀛾 ⟞₁􈇇ᐸ):  JANK HACK
       ↪sᐖd₀ ₀􀊱⟞ᐸ
-    ↪dᐵᐵ􈇇􇀦􍪵0 s.pop
+    ↪dᐵᐵ􈇇􇀦􍪵0 s.pop  󰤱 useful error message for if the .pop fails
   symbs = 󱁕ᴍparse_stmt 🟑⭢ᴍ☾🟑⭢󰌷⭢ᐵ􍨄􈇇 ⭜󰮈⭝ ⟞􍨄⋄[⠤⟞﹕􍨄󰈳(⬤ᐹ𝑙)􋇐(⬤ᐹ𝑑)ᑀ₀,⟞₁ſ󰁸󰁹|ᐸ]ᐸ␛
            󷺹₀ᐸꟿ⁺󰲣yᐵ₁ᐸᑀᐵ₀ᐸ󰈲,⟞ᐵ₁ᐸſ󰁸󰁹|ᐸ󰅂 ⭢ ℵ
   seq,sty = 2⭥ᐖsymbsꟿ⁺󰲣y􍪴󰅂
@@ -51,14 +51,15 @@ com       = ~‹[^\n]*›
       (dest ≔⬅ r₁󰌷⭢⊂K⭜E⭝B)ᵣ􊬣=r₁
   E󷸊ꟿ⁺󰲣yᐵ∖􊬏₍􊫔₎􊬐󰈲􍯏􊿦󷺹🃌≡3ᐸ⭢⨝ᐸ󰈲
   ↪⦉⠤include_chars∖􊸇⦊ᐵ,⍁⋄{}ᐸℵ⭢|⭠symbsꟿ⁺󰲣x∈K∖‹𝕄𝕊›⭜⍁⭝Eₓ,y₁󰅂
-⊢conf_to_xcompose(c):
+⊢conf_to_seqs(c):
   pfxd = 󷺹󰈲⭢󷺹₀ᐸꟿ⁺󰲣yᐵ₁﹕ᐸ⭢pfxd
   chkp = 󰲣yſˣ󷺹􍪸󷺿󰅂󰲡{}
   𝚝 = chkp(c􀉴󰲣y₀󰅂􀋶􀯖pfxd,⬤)
   c󷸊ꟿ⁺󰲣y₀ᐵ𝚝⭜⟞+␛𝕊⭝⟞ᐸ,y₁󰅂  󰤱􊽨 doesn't add multiple spaces but eh
-  ↪c􀉴󰲣x∧y⭜􍭓(y₀,ₓ)󰅂􀉳􀁣􀋶􀯖xcomp_seqs
+  ↪c􀉴󰲣x􀉚y􇀦􍭓(y₀,ₓ)󰅂􀉳􀁣􀋶􀉽󷺹₀􀊹
+conf_to_xcompose = xcomp_seqs􀊊conf_to_seqs
 
-⭷ parse_config,conf_to_xcompose
+⭷ parse_config,conf_to_seqs,conf_to_xcompose
 
 ¿__name__≡‹__main__›:
     parse_config(󰦥󰦥󰦥󰦥󰦥

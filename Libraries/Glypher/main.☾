@@ -15,8 +15,8 @@ __dir__ cd
 go = ⨡􋀸 Compiler/generate_operators
 ⦃import fontforge as ⦃ℱℱ⦄⦄
 
-𝔭.d4,𝔭.c4,𝔭.d8 = ‹wsad qezc wsadqezc›􀌌ᐖ‹␛⟦⟦⟞⟧␛⟧›
-𝔭.D4,𝔭.C4,𝔭.D8 = ‹WSAD QEZC WSADQEZC›􀌌ᐖ‹␛⟦⟦⟞⟧␛⟧›
+𝔭.d4,𝔭.c4,𝔭.d8 = ‹wsad qezc wsadqezc›􀌌􀉳‹␛⟦⬤␛⟧›
+𝔭.D4,𝔭.C4,𝔭.D8 = ‹WSAD QEZC WSADQEZC›􀌌􀉳‹␛⟦⬤␛⟧›
 𝔭.letnum = abcABC123
 𝔭.greek  = ‹ςΘθϑαβδ∇∂ΔεηφϕΦικλΛμπΨΠψρσΣτυνωΩΞχγΓζξ›
 𝔭.lngeek = ‹␛⟦⟦𝔭.letnum⟧⁅𝕄␛⟦⟦𝔭.greek⟧␛⟧⁆␛⟧›
@@ -81,13 +81,13 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ⋅≖⊖⨸©⎊⎉⌾⨂⎔⭔⬠  •   ↀ             ⁆
       ⁅⟦⁅O⟦:⁅⟦+x⟧𝕊⁆⁅o𝕊⁆⟧⁆⁅⟦:_⟧O⁆⟧       ⟶
           ⍥  ⊕⊗     ⊙      󷸧󷸦            ⁆
-      ⁅⟦⁅[⟦-|⟧]⁆⁅#⟦R𝕊\⟧⁆⟧               ⟶
-                 ⵌ⌗♯                   ⁆
+      ⁅⟦⁅[⟦-|⟧]⁆⁅#⟦bR𝕊\⟧⁆⟧              ⟶
+                 ⵌ⌗♯                  ⁆
       ⁅⟦⁅⟦<>⟧⟦<>⟧⁆⁅<.>⁆⟧𝕊    ⟶ «◌♢»⟐     ⁆
       ⁅ST⟦+⁅A⟦𝕊-d⟧⁆⟧         ⟶ ⭐✪✡      ⁆
       ⁅<>R                   ⟶ 󱀝         ⁆
       ⁅⟦56⟧-                 ⟶ ⬠⎔        ⁆
-      ⁅T⟦⫾d4⫾⫾D4⫾⟧𝕊          ⟶ △▽▷◁⯅⯆⯇⯈  ⁆
+      ⁅T⟦⫾d4⫾⫾D4⫾⟧𝕊          ⟶ △▽◁▷⯅⯆⯇⯈  ⁆
       ⁅'⟦\1234⟧              ⟶ ¨′″‴⁗       ⁆
       ⁅?⟦rR⟧                 ⟶ ⸮␦        ⁆
       ⁅⟦⁅!⟦𝕊@?⟧⁆⁅ !⁆⟧        ⟶ ❗‼‽󱈸      ⁆
@@ -135,11 +135,14 @@ WC⟦⫾num⫾⁅1⟦⫾num⫾⟧⁆⁅20⁆⟧          ⟨fd4⟩𝕟 ⟶ ⓪�
          ⁅ o⟦ad⟧               ⟶ ⬰⇴              ⁆
          ⁅ t⫾d4⫾               ⟶ ⊥⊤⊣⊢            ⁆
          ⁅ u⟦⁅w+⁆⁅s⟦.s⟧⁆⟧      ⟶ ⨄⩀⋒             ⁆
+         ⁅ v⟦12⟧⟦ᐦ|⟧⟦ad⟧       ⟶ ◌◌        ⁆
          ⁅ .⫾d4⫾               ⟶ ⋮⋯⋰⋱            ⁆
          ⁅ ⫾d8⫾𝕊               ⟶ ↑↓←→↖↗↙↘        ⁆ ⟧⁆
       ⁅A⟦⁅ R⫾D8⫾𝕊              ⟶ 🡹🡻🡸🡺🡼🡽🡿🡾        ⁆
          ⁅ C⟦⁅W⟦AD⟧S⁆⁅H⟦AD⟧⁆⟧  ⟶ ↶↷↩↪            ⁆
-         ⁅ ⟦⁅AD⁆⁅DA⁆⁅WS⁆⁅SW⁆⟧  ⟶ 󷷢󷷣󷷤󷷥            ⁆ ⟧⁆ ⟧
+         ⁅ P⟦⫾D8⫾⁅AD⁆⁅WS⁆𝕊⟧    ⟶ 󰮽󰮷󰮹󰮺󰮻󰮼󰮵󰮶󰮸󰮾󰮴     ⁆
+         ⁅ ⟦⁅AD⁆⁅DA⁆⁅WS⁆⁅SW⁆⟧  ⟶ 󷷢󷷣󷷤󷷥            ⁆ ⟧⁆⟧
+
 
 ⟨d7d⟩⟦⁅vt⟶⨃⁆⁅ic⟶⯈⁆⁅IC⟶⮞⁆⁅st⟶✣⁆⁅sps⟶ᔲ⁆
       ⁅⟦sS⟧r  ⟶ ƨƧ⁆⁅FF⟦𝕊R⟧ ⟶ ᖵᖶ⁆
@@ -166,7 +169,7 @@ cp⟦r⁅t⫾d4⫾⁆⟧ ⟶ ☽⯟◌⯝⚸
 ./⟦/.⟧ ⟶ ╱⁒
 F⟦*-|⟧ ⟶ ꘎─│
 l⟦⁅ae⁆⁅AE⁆⟧   ⟶ æÆ
-star⟦𝕊-d⟧     ⟶ ⭐✪✡
+star⟦𝕊-d%⟧     ⟶ ⭐✪✡󰳲
 pl⟦[]𝕊⟧       ⟶ փ
 ⟦'"⁅𝕄⟦αωι⟧⁆⟧_ ⟶ ⍘󷹆⍶⍹⍸
 q⟦|<>()  []⟧  ⟶ ␛⫾⟬⟭⦅⦆␛⟦␛⟧
@@ -203,20 +206,23 @@ sob⟶😭 ␠ fist⟶✊ ␠ spark⟶✨
 hug⟶🫂 ␠ eye𝕊⟶👁️ ␠ cheer⟶🎉
 lit⟶🔥 ␠ eyes⟶👀 ␠ rainb⟶🌈
 
-⟨fb2⟩⟦⁅cod⟶⁆⁅sun⟶꥟⁆
-      ⁅spin⟶߷⁆⁅wheel⟶✇⁆⁅dagger⟶†⁆⁅snowman⟶☃⁆
-      ⁅dino⟶󱍢⁆⁅piece⟶☮⁆⁅expand⟶󰘖⁆⁅contract⟶⁆
-      ⁅say?⟶󱜻⁆⁅color⟶⁆⁅pirate⟶󰨈⁆
-      ⁅fire⟶󱐚⁆⁅stack⟶⁆
-      ⁅grid⟶󰋁⁆⁅piece⟶☮⁆
-      ⁅calc⟶󰭧⁆⁅enter⟶󰿄⁆
-      ⁅pen⟦ᐦ⁅cil⁆⟧ ⟶ ⁆⁅ver⟦-+⟧ ⟶ ⁆
-      ⁅t⟦⁅ex⁆⁅xt⁆⟧ ⟶ 󰊄⁆⁅w/⟦𝕊o⟧  ⟶ 󰇚󱂰⁆
+⟨fb2⟩⟦⁅m⟦DMRX-⁅m⟦⫾d4⫾⁅ws⁆⫾D4⫾⁅WS⁆⟧⁆⁅win⟦𝕊dmMrRxXyY2+⟧⁆⟧⟶
+         󰦛   󰚷󰚶󰨂󰨃  󰩥 󰍠󰍝󰍞󰍟  󰩤        󱂬󰖯󰖲󰅚󰅙    ⁆
+      ⁅cod⟶⁆⁅sun⟶꥟⁆⁅ham⟶󰍜⁆⁅HAM⟶󰹯⁆
+      ⁅spin⟶߷⁆⁅wheel⟶✇⁆⁅dagger⟶†⁆⁅snowman ⟶☃⁆
+      ⁅dino⟶󱍢⁆⁅enter⟶󰿄⁆⁅expand⟶󰘖⁆⁅contract⟶⁆
+      ⁅grid⟶󰋁⁆⁅piece⟶☮⁆⁅EXPAND⟶⁆⁅CONTRACT⟶⁆
+      ⁅say?⟶󱜻⁆⁅color⟶⁆⁅colors⟶󷸾⁆⁅sliders ⟶⁆
+      ⁅fire⟶󱐚⁆⁅stack⟶⁆⁅pirate⟶󰨈⁆
+      ⁅calc⟶󰭧⁆⁅power⟶󰐥⁆⁅raing⟶⁆
+      ⁅dock⫾d4⫾    ⟶ 󱔓󱂩󱂪󱂫  ⁆⁅ver⟦-+⟧     ⟶ ⁆
+      ⁅pen⟦eE-+⟧   ⟶   ⁆⁅w/⟦𝕊o⟧      ⟶ 󰇚󱂰⁆
+      ⁅rot⟦3rcCdD⟧ ⟶ 󱦙󰑧󰑥⁆⁅t⟦⁅ex⁆⁅xt⁆⟧ ⟶ 󰊄⁆
       ⁅⟦⁅up⁆⁅down⁆⟧load  ⟶   ⁆
       ⁅gear⟦𝕊+us⟧        ⟶ ⁆
       ⁅lock⟦ᐦ+⟧⟦𝕊/⟧      ⟶ 󰍁󰍀󰌾󰌿⁆
       ⁅⟦⁅vis⁆⁅weed⁆⟧⟦/𝕊⟧ ⟶ 󰞦󱙮⁆⟧
-⟨cf7⟩⟦⁅mail⟶󰇮⁆⁅database⟶󰆼⁆
+⟨cf7⟩⟦⁅mail⟶󰇮⁆⁅database⟶󰆼⁆⁅stats ⟶⁆
       ⁅user⟶󰢏⁆⁅package ⟶⁆⁅USPS  ⟶⁆
       ⁅card⟶⁆⁅store   ⟶⁆⁅paypal⟶⁆⟧
 
@@ -237,8 +243,7 @@ shrug⟶‹⎺⟍_⟨⍩⟩_⟋⎺›
 ⟨2e5⟩⟶󷰶󰤱§🝇⎊␛◌
 ⟨|fc02|ff63|1⟩⟶‹ ›
 ⟨|0fc2|55de|1⟩⟶‹ ›
-
- 󷰙󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰰󷰱󷰲󷰳󷰴󷰵󷰶󷰷󷰸󷰹󷰺󷰻󷰼󷹏󷹐󷹑󰠷󱐝ᒍ󷹙󷸵󷸶󷸝󷸞󷸟󷸠󷸡󷸢󷸣󷸤󷸥󷸨󷸩󷸪󷸫󷸬󷸭󷸮󷸯󷸰󷸱󷸲󷸳󷹥󷹧󷹦󰇘󰑁󰑃󷹽󷹾󷹿󷺀｜＋／＼＃＞＜⅄ɹԀ˥ʞƆʎʍʌʇɯʞᴉɥƃɟɔɐ𝝤𝝦𝝧𝝩𝝪𝝬𝝾𝞊𝞌𝞎𝞏𝞐𝞑𝞒𝞓𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ХхΑΒΕΗΚΜΝΟΡΤΥ⥜⥠⥝⥡֍∥⨆⨲⋎⋏⩄⩅ᖯᐊᐅᕦᗐᗑᓎẞᖇⵗⵐ
+ 󷰙󷰝󷰞󷰟󷰠󷰡󷰢󷰣󷰤󷰥󷰦󷰧󷰨󷰩󷰪󷰫󷰬󷰭󷰮󷰯󷰰󷰱󷰲󷰳󷰴󷰵󷰶󷰷󷰸󷰹󷰺󷰻󷰼󰕔󰕕󰀽󰀿󰀾󰁀󰃇󰃈󰃊󰃋󰃌󰃍󰃎󰃏󰃑󰃒󷹏󷹐󷹑󰠷󱐝ᒍ󷹙󷸵󷸶󷸝󷸞󷸟󷸠󷸡󷸢󷸣󷸤󷸥󷸨󷸩󷸪󷸫󷸬󷸭󷸮󷸯󷸰󷸱󷸲󷸳󷹥󷹧󷹦󰇘󰑁󰑃󷹽󷹾󷹿󷺀｜＋／＼＃＞＜⅄ɹԀ˥ʞƆʎʍʌʇɯʞᴉɥƃɟɔɐ𝝤𝝦𝝧𝝩𝝪𝝬𝝾𝞊𝞌𝞎𝞏𝞐𝞑𝞒𝞓𝞕𝞖𝞗𝞘𝞙𝞚𝞛𝞜𝞝𝞞𝞟𝞠𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃𝟄𝟅𝟆𝟇𝟈𝟉ХхΑΒΕΗΚΜΝΟΡΤΥ⥜⥠⥝⥡֍∥⨆⨲⋎⋏⩄⩅ᖯᐊᐅᕦᗐᗑᓎẞᖇⵗⵐ
 󰦥󰦥󰦥󰦥󰦥
 
 REMOVES      = 󰦥󰦥󰦥󰦥󰦥 ☝✋✌✍✨✊❣☺☹ 󰦥󰦥󰦥󰦥󰦥
@@ -263,6 +268,7 @@ OUTPUT_EXTS       = ‹otf ttf woff2›􀌌
 scrpt_out = moon_dir􀋋‹Builtins/Data/script.map›𝐩
 style_out = moon_dir􀋋‹Builtins/Data/style.json›𝐩
 opord_out = moon_dir􀋋‹Builtins/Data/opord󷺗󷺗󷺗󷺗󷺗›𝐩
+binds_out =          ‹Output/.bindings󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
 xcomp_out =          ‹Output/.XCompose󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
 fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/FontNerd.ttf›􀌌􀉳𝐩
 
@@ -326,9 +332,10 @@ S=c
 script_map = cᐵ₁ ₁≕t⭢.get(‹mode›,ᐦ)≕m∈‹sup sub›⍭⭜􍭓([t[‹parents›] ₀,⟞₀,□]ᣆᵐ􋁤􊿑ˢᵘᵇ􊿒⬤󷸻₀󰄎₂󰄎₁)ᐸ␛
              ⁺󷺹₀ᐸ󰒼󷺹₀ᐸᐵ⍉ꟿ􀀄ᐸ⭢⍉ᴍ⨝⭢⨝𝗻
 save_pua􀃅
-scrpt_out 󱖔􍡩 script_map
-xcomp_out 󱖔􍡩 c conf_to_xcompose
-style_out 󱖔􍡩 {⠤cℵ􀉴󷺹􀊹􀉞1􇀦􍭓⟞􀊱⟝₁󷺿}𝔍󰄞  {⠤cℵꟿ󷺹,⟝₁󷺿⁺󷺹₁shaᐸᐵᐵ₀ᑀ🃌≡1⭜􍭓⟞ᐸᐸ⨝,⟞₀ ₁ᐸ}𝔍󰄞
+scrpt_out 􀜨􍡩 script_map
+binds_out 􀜨􍡩 c conf_to_seqs􀉴󷺹𝘀󷺽􀉽󷺹􀊹􀝕⟞ᐸ􀋵􀋢𝗻
+xcomp_out 􀜨􍡩 c conf_to_xcompose
+style_out 􀜨􍡩 {⠤cℵ􀉴󷺹􀊹􀉞1􇀦􍭓⟞􀊱⟝₁󷺿}𝔍󰄞  {⠤cℵꟿ󷺹,⟝₁󷺿⁺󷺹₁shaᐸᐵᐵ₀ᑀ🃌≡1⭜􍭓⟞ᐸᐸ⨝,⟞₀ ₁ᐸ}𝔍󰄞
 
 (𝚏,𝚙)􇀞􀉳monospace_font
 

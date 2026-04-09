@@ -71,8 +71,8 @@
   ⌾ 𝚋𝚛 border-radius
     ⌾ 𝚋𝚛↖ border-top-left-radius
     ⌾ 𝚋𝚛↗ border-top-right-radius
-    ⌾ 𝚋𝚛↘ border-bottom-left-radius
-    ⌾ 𝚋𝚛↙ border-bottom-right-radius
+    ⌾ 𝚋𝚛↙ border-bottom-left-radius
+    ⌾ 𝚋𝚛↘ border-bottom-right-radius
     ⌾ 𝚋𝚛↑ ⦑«𝚋𝚛↖ 𝚋𝚛↗»⦒
     ⌾ 𝚋𝚛↓ ⦑«𝚋𝚛↙ 𝚋𝚛↘»⦒
     ⌾ 𝚋𝚛← ⦑«𝚋𝚛↖ 𝚋𝚛↙»⦒
