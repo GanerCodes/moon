@@ -12,6 +12,8 @@
 ⎉ ¬ :not
 ⎉ 0 :first-child
 ⎉ 󷰾 :last-child
+⎉ ⪢ :nth-child
+⎉ ⪡ :nth-last-child
 ⎉  :disabled
 ⎉ ї :invalid
 ⎉ ꬵ :focus-visible

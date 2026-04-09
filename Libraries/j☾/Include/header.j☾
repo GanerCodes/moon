@@ -32,7 +32,7 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
 𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 
 © arrayLike = {: ⥌x,ƒ↦{ O = {};
-                         x.forEach(⥌x↦(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
+                         x.forEach(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
                          ↪O; },
                ᴍ: 󰲣x.map(y),
                ꟿ: 󰲣x.map(󰲡y(⠤x)),
@@ -56,9 +56,11 @@ QSA = ⥌x,ε=document↦[⠤ε.querySelectorAll(x)];
        ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
        ⸓: 󰲥𝔏𝔖􋀫(x, y(𝔏𝔖􋀭(x, z))) }
 
-isStr     = 󰲡typeof x ≅ "string"
-isArray   = 󰲡x instanceof Array
-isElement = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;  
+isStr = 󰲡typeof x ≅ "string";
+isNum = 󰲡typeof x ≅ "number";
+isArr = 󰲡x instanceof Array;
+isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;  
+[isArray,isElement] = [isArr,isElm];
 
  󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
 chainIntoElements = ⥌x,P↦{
@@ -71,20 +73,25 @@ chainIntoElements = ⥌x,P↦{
     ↪P; }
 
 mkə = ⥌name,attrs,kids↦{
-    © remaps = { closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
+    © remaps = { onclick:"onclick", closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
     kids = chainIntoElements(kids);
-    ¿(𝗙(name)) ↪name(attrs, ⠤kids)
+    ¿(𝗙(name)) ↪name(attrs,⠤kids)
     ¿(name≅✗) name = "div";
-    ⎉ ə = 󰈙.createElement(name);
-    ə􍪙(⠤kids)
-    ¿(attrs) ∀(⎉ [k,v] ⎔ 𝒪(attrs)) {
-      ¿(k≡‹𝑆›) əˢᵗʸˡᵉ.cssText = v;
-      ¡        əᵣₑₘₐₚₛ􊬶﹖﹖ₖ = v;
-    }
+    ⎉  = ‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›
+            .split(𝘀).includes(name)
+              ⭜󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
+              ⭝󰈙.createElement(name);
+    􍪙(⠤kids)
+    ¿(attrs)
+      𝒪(attrs)􋁃(⥌[k,v]↦{
+        ¿(k≡␛𝑆    ) 􋛟.cssText = v;
+        ⸘(k∈remaps) ᵣₑₘₐₚₛ􊬶 = v;
+        ¡            SAT(,k,v); });
      󰤱 htmlelements/function type/general objects/etc
-    ↪ə; };
+    ↪; };
 
 swapə = 󰲣{ ⎉ χ = 󱀝 div;
            x.parentNode.insertBefore(χ,x);
            y.parentNode.insertBefore(x,y);
-           χ.parentNode.insertBefore(y,χ); };
+           χ.parentNode.insertBefore(y,χ);
+           χ.remove(); };
