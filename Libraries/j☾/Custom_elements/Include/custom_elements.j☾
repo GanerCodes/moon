@@ -9,15 +9,16 @@
 Ϣ.toggleButton = ⥌ƒ,N,Y,S=✗,set_init=✓↦{
   S = +¬¬S;
   ¿(isStr(N)) [N,Y] = [N,Y]􊾡(󰲡 󱀝 button {⦅𝚑; 𝚙𝚕 6px; 𝚙𝚛 6px; 𝚋 none⦆} ‹⟦x⟧›);
-  ⎉ n = 󱀝{};
-  ⎉ ə = S⭜Y⭝N;
-  n.replaceWith(ə);
-  © ꬶ = ə.onclick = 𝚲{ n.replaceWith(ə);
-                       ə.replaceWith(n = (S=¬S)⭜Y⭝N);
-                       n.onclick = ꬶ;
-                       ↪ƒ(S); }
-  ¿(set_init) ƒ(S);
-  ↪ə; };
+  
+  SAT(N,‹off›); N.onclick = 󰲟Ѧˢᵉᵗ(✓);
+  SAT(Y,‹on󷺗›); Y.onclick = 󰲟Ѧˢᵉᵗ(✗);
+  
+  © Ѧ = { S,Y,N,:S⭜Y⭝N,
+          set: ⥌s=󱣩↦{ Ѧ󰀒 = s≅󱣩 ⭜¬Ѧ󰀒⭝ +s;
+                      swapə(Ѧ􋑵,Ѧ􋑵=Ѧ󰀒⭜Ѧ󰀘⭝Ѧᴺ);
+                      ↪ƒ(Ѧ󰀒); } };
+  ¿(set_init) Ѧˢᵉᵗ(Ѧ󰀒);
+  ↪Ѧ; };
 Ϣ.textField = ⥌Ѧ↦{  󰤱 󰿄
   ⎉ ə;
   ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮ ⠤Ѧ};

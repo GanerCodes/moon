@@ -41,8 +41,8 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
                󰈲: 󰲡x.filter (       ⠤𝔸),
                󷸻: 󰲡x.slice  (       ⠤𝔸),
                ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
-               ⋀: 󰲡x.every  (x,󰻾      ),
-               ⋁: 󰲡x.some   (x,󰻾      ) };
+               ⋀: 󰲡x.every  (󰻾        ),
+               ⋁: 󰲡x.some   (󰻾        ) };
 arrayLike􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁),xᵢ₊₁])];
 𝒪(arrayLike).forEach(⥌[s,ƒ]↦{
   windowₛ = 󰲡ƒ(isElement(x)⭜𝐴.from(x)⭝x,⠤𝔸);
@@ -94,8 +94,12 @@ mkə = ⥌name,attrs,kids↦{
      󰤱 htmlelements/function type/general objects/etc
     ↪; };
 
-swapə = 󰲣{ ⎉ χ = 󱀝 div;
-           x.parentNode.insertBefore(χ,x);
-           y.parentNode.insertBefore(x,y);
-           χ.parentNode.insertBefore(y,χ);
-           χ.remove(); };
+swapə = 󰲣{ ¿(x≅y) ↪;
+           © p = [x.parentNode,y.parentNode];
+           ¿(p􋂃()) { ⎉ χ = 󱀝 div;
+                     p₀.insertBefore(χ,x);
+                     y₁.insertBefore(x,y);
+                     χ.parentNode.insertBefore(y,χ);
+                     χ.remove(); }
+           ⸘(p₀) p₀.replaceChild(y,x);
+           ⸘(p₁) p₀.replaceChild(x,y); };
