@@ -51,6 +51,7 @@ arrayLike􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁)
 
 AEL = 󰲡x.addEventListener(⠤𝔸);
 SAT = ⥌x,y,z=ᐦ↦x.setAttribute(y,z);
+HAT = 󰲡𝔸􊾡(⥌a↦x.hasAttribute(a))􋂃();
 RAT = 󰲡𝔸􋁃(⥌a↦x.removeAttribute(a));
 GID = 󰲡document.getElementById(x);
 VAL = 󰲡GID(x).value;

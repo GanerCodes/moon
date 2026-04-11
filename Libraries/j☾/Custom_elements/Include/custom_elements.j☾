@@ -6,18 +6,19 @@
 Ϣ.textButton = ⥌x,ƒ,𝕂↦{ © ə = 󱀝 button {⠤𝕂||{}} ‹⟦x⟧›
                         ə.onclick = ƒ;
                         ↪ə; };
-Ϣ.toggleButton = ⥌ƒ,N,Y,S=✗,set_init=✓↦{
+Ϣ.toggleButton = ⥌ƒ,N,Y,S=✗,Ѧ={}↦{
+  Ѧ = {init:✓,polar:✓,⠤Ѧ};
   S = +¬¬S;
-  ¿(isStr(N)) [N,Y] = [N,Y]􊾡(󰲡 󱀝 button {⦅𝚑; 𝚙𝚕 6px; 𝚙𝚛 6px; 𝚋 none⦆} ‹⟦x⟧›);
+  ¿(isStr(N)) [N,Y] = [N,Y]􊾡(󰲡 󱀝 button ‹⟦x⟧›);
   
-  SAT(N,‹off›); N.onclick = 󰲟Ѧˢᵉᵗ(✓);
-  SAT(Y,‹on󷺗›); Y.onclick = 󰲟Ѧˢᵉᵗ(✗);
+  Ѧ = { ⠤Ѧ,S,Y,N,:S⭜Y⭝N,
+           set: ⥌s=󱣩↦{ Ѧ󰀒 = s≅󱣩 ⭜¬Ѧ󰀒⭝ +s;
+                       swapə(Ѧ􋑵,Ѧ􋑵=Ѧ󰀒⭜Ѧ󰀘⭝Ѧᴺ);
+                       ↪ƒ(Ѧ󰀒); } };
+  Ѧᵖᵒˡᵃʳ ∧ SAT(N,‹off›); N.onclick = 󰲟Ѧˢᵉᵗ(✓);
+  Ѧᵖᵒˡᵃʳ ∧ SAT(Y,‹on󷺗›); Y.onclick = 󰲟Ѧˢᵉᵗ(✗);
   
-  © Ѧ = { S,Y,N,:S⭜Y⭝N,
-          set: ⥌s=󱣩↦{ Ѧ󰀒 = s≅󱣩 ⭜¬Ѧ󰀒⭝ +s;
-                      swapə(Ѧ􋑵,Ѧ􋑵=Ѧ󰀒⭜Ѧ󰀘⭝Ѧᴺ);
-                      ↪ƒ(Ѧ󰀒); } };
-  ¿(set_init) Ѧˢᵉᵗ(Ѧ󰀒);
+  ¿(Ѧⁱⁿⁱᵗ) Ѧˢᵉᵗ(Ѧ󰀒);
   ↪Ѧ; };
 Ϣ.textField = ⥌Ѧ↦{  󰤱 󰿄
   ⎉ ə;

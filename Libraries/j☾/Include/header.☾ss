@@ -23,6 +23,10 @@
 ⎉ ᗴ 􊽬⁽􋒗⁾
 ⎉ Ⴝ 􍳕􋁕⁽􍳵󰁱􍳱⁾
 ⎉ Ѧ 􍳕􍳫
+⎉ 𝚝𝚛𝚊𝚌𝚔wk input[type=range]::-webkit-slider-runnable-track
+⎉ 𝚝𝚛𝚊𝚌𝚔mz input[type=range]::-moz-range-track
+⎉ 𝚝𝚑𝚞𝚖𝚋wk input[type=range]::-webkit-slider-thumb
+⎉ 𝚝𝚑𝚞𝚖𝚋mz input[type=range]::-moz-range-thumb
 
 ⊖ □ none
 ⊖ ␀ unset
