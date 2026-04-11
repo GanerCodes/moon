@@ -95,11 +95,11 @@ mkə = ⥌name,attrs,kids↦{
     ↪; };
 
 swapə = 󰲣{ ¿(x≅y) ↪;
-           © p = [x.parentNode,y.parentNode];
-           ¿(p􋂃()) { ⎉ χ = 󱀝 div;
-                     p₀.insertBefore(χ,x);
-                     y₁.insertBefore(x,y);
-                     χ.parentNode.insertBefore(y,χ);
-                     χ.remove(); }
-           ⸘(p₀) p₀.replaceChild(y,x);
-           ⸘(p₁) p₀.replaceChild(x,y); };
+           © [α,β] = [x.parentNode,y.parentNode];
+           ¿(α∧β) { ⎉ χ = 󱀝 {}
+                    α.insertBefore(χ,x);
+                    β.insertBefore(x,y);
+                    χ.parentNode.insertBefore(y,χ);
+                    χ.remove(); }
+           ⸘(α) α.replaceChild(y,x);
+           ⸘(β) α.replaceChild(x,y); };
