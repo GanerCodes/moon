@@ -52,7 +52,8 @@
 ⌾ «𝚋 𝚌𝚋» background-color
 ⌾ 𝚜   box-shadow
 ⌾ 𝚋𝚐  background
-⌾ 𝚋𝚐𝚏 backdrop-filter
+⌾ 󰈲   filter
+⌾ «𝚋𝚐𝚏 𝚋𝚐󰈲» backdrop-filter
 ⌾ 𝚖𝚙  cursor
 ⌾ 𝚘𝚕  outline
 ⌾ 𝚘𝚏  overflow
