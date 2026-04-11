@@ -157,6 +157,8 @@
 ⌾ 𝚐 gap
   ⌾ 𝚐x gap-row
   ⌾ 𝚐y gap-col
+⌾ 𝚠𝚔𝚊 -webkit-appearance
+  ⎊ 𝚠𝚔𝚊□ ∣ 𝚠𝚔𝚊 􋄅
 
  align primary axis
   ⎊ 𝚊𝙿← ∣ justify-content flex-start

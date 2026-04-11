@@ -1,7 +1,7 @@
 BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
 󰈙 = document;
-[𝐴,𝐸,𝑜] = [Array,Element,Object];
+[𝐴,𝐸,𝑜,∞] = [Array,Element,Object,Infinity];
 [𝒪,𝒟,𝒪k,𝒪v] = [𝑜.entries,𝑜.fromEntries,𝑜.keys,𝑜.values];
 𝒪ℳ = 󰲡x.ſ(󰲣({⠤x,⠤y}));
 𝔓 = 󰲡x.prototype;
@@ -15,8 +15,8 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 [⤉,⤈] = [Math.max,Math.min];
 󷹄     = 󰲥⤈(⤉(x,y),z)
 ↨ = 󰲡[⠤x].map(⥌x,i↦[i,x])
-⭥ = 󰲣isArray(x) ⭜[⠤x.keys()]⭝ ⭥(Array(y≅󱣩⭜x⭝y-x))􊾡(⥌v↦v+(y≅󱣩⭜0⭝x));
-󷸻 = 󰲣isArray(x) ⭜⭥(a􋌵+1)⭝ y≅󱣩 ⭜⭥(x+1)⭝ ⭥(x,y+1);
+⭥ = 󰲣isArr(x) ⭜[⠤x.keys()]⭝ ⭥(Array(y≅󱣩⭜x⭝y-x))􊾡(⥌v↦v+(y≅󱣩⭜0⭝x));
+󷸻 = 󰲣isArr(x) ⭜⭥(a􋌵+1)⭝ y≅󱣩 ⭜⭥(x+1)⭝ ⭥(x,y+1);
 󱑼 = ⥌⠤𝙰↦⭥(⤉(⠤𝙰􊾡(🃌)))􊾡(⥌i↦𝙰􊾡(󰲡xᵢ));
 ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v)]));
 ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k),v]));
@@ -69,24 +69,23 @@ isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;
 
  󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
 chainIntoElements = ⥌x,P↦{
-    ¿(¬(isArray(x) || isStr(x) || isElement(x)))
+    ¿(¬(isArr(x) || isStr(x) || isElm(x)))
         x = [];
-    ¡   ¿(¬isArray(x)) x = [x];
-        x = x􊾡(⥌𝚎↦isStr(𝚎) ⭜󰈙.createTextNode(𝚎)⭝ 𝚎);
+    ¡   x = (isArr(x)⭜x􎘌(∞)⭝[x])
+              􊾡(⥌𝚎↦isStr(𝚎) ⭜󰈙.createTextNode(𝚎)⭝ 𝚎);
     ¿(P≅󱣩) ↪x
     P􍪙(⠤x);
     ↪P; }
 
+© NSElmNames = 🆕 Set(‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›.split(𝘀));
 mkə = ⥌name,attrs,kids↦{
     © remaps = { onclick:"onclick", closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
     kids = chainIntoElements(kids);
-    ¿(𝗙(name)) ↪name(attrs,⠤kids)
+    ¿(𝗙(name)) ↪name(attrs,⠤kids);
     ¿(name≅✗) name = "div";
-    ⎉  = ‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›
-            .split(𝘀).includes(name)
-              ⭜󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
-              ⭝󰈙.createElement(name);
-    􍪙(⠤kids)
+    ⎉  = NSElmNames.has(name) ⭜ 󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
+                               ⭝ 󰈙.createElement(name);
+    􍪙(⠤kids);
     ¿(attrs)
       𝒪(attrs)􋁃(⥌[k,v]↦{
         ¿(k≡␛𝑆    ) 􋛟.cssText = v;
