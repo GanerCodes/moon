@@ -30,6 +30,10 @@
 
 ⊖ □ none
 ⊖ ␀ unset
+⊖ ν var
+⊖ ƒ calc
+⊖ 􋐿 deg
+⊖ 𝚕∇ linear-gradient
 
 ⌾ 𝚙𝚘𝚜 position
   ⎊ 𝚙𝚘𝚜f  ∣ 𝚙𝚘𝚜 fixed
@@ -37,25 +41,31 @@
   ⎊ 𝚙𝚘𝚜sy ∣ 𝚙𝚘𝚜 sticky
   ⎊ 𝚙𝚘𝚜r  ∣ 𝚙𝚘𝚜 relative
   ⎊ 𝚙𝚘𝚜a  ∣ 𝚙𝚘𝚜 absolute
-⌾ ←   left
-⌾ →   right
-⌾ ↑   top
-⌾ ↓   bottom
-⌾ 𝚍   display
-⌾ 𝚃   transition
-⌾ 𝚃𝚏  transform
-⌾ 󰊄   font
-⌾ 󰊄𝚏  font-family
-⌾ 󰊄𝚜  font-size
+⌾ ←    left
+⌾ →    right
+⌾ ↑    top
+⌾ ↓    bottom
+⌾ 𝚋𝚐   background
+⌾ 𝚍    display
+⌾ 𝚍𝚒𝚛  direction
+⌾ 𝚜    box-shadow
+⌾ 𝚃    transition
+⌾ 𝚃𝚏   transform
+⌾ 𝚣    z-index
+⌾ 𝚣𝚘𝚘𝚖 zoom
+⌾ 󰊄    font
+⌾ 󰊄𝚏   font-family
+⌾ 󰊄𝚜   font-size
 ⌾ «󰊄𝚊 𝚝𝚊»  text-align
 ⌾ «   𝚌» color
 ⌾ «𝚋 𝚌𝚋» background-color
-⌾ 𝚜   box-shadow
-⌾ 𝚋𝚐  background
-⌾ 󰈲   filter
+⌾ 󰈲    filter
 ⌾ «𝚋𝚐𝚏 𝚋𝚐󰈲» backdrop-filter
 ⌾ 𝚖𝚙  cursor
 ⌾ 𝚘𝚕  outline
+⌾ 𝚋𝚘𝚡𝚜 box-sizing
+  ⎊ 𝚋𝚘𝚡𝚜c ∣ 𝚋𝚘𝚡𝚜 content-box
+  ⎊ 𝚋𝚘𝚡𝚜b ∣ 𝚋𝚘𝚡𝚜 border-box
 ⌾ 𝚘𝚏  overflow
   ⌾ 𝚘𝚏x overflow-x
   ⌾ 𝚘𝚏y overflow-y
@@ -83,6 +93,7 @@
     ⌾ 𝚋𝚛← ⦑«𝚋𝚛↖ 𝚋𝚛↙»⦒
     ⌾ 𝚋𝚛→ ⦑«𝚋𝚛↗ 𝚋𝚛↘»⦒
 ⌾ 𝚠 width
+  ⌾ 𝚆 ⦑«𝚠≤ 𝚠 𝚠≥»⦒
   ⌾ 𝚠≥ min-width
   ⌾ 𝚠≤ max-width
   ⎊ 𝚠a ∣ 𝚠   auto
@@ -101,16 +112,24 @@
   ⎊ 𝚠󷷇 ∣ 𝚠     70%
   ⎊ 𝚠󷷈 ∣ 𝚠     90%
 ⌾ 𝚑 height
+  ⌾ 𝙷 ⦑«𝚑≤ 𝚑 𝚑≥»⦒
   ⌾ 𝚑≥ min-height
   ⌾ 𝚑≤ max-height
   ⎊ 𝚑a ∣ 𝚑    auto
   ⎊ 𝚑  ∣ 𝚑    100%
-  ⎊ 𝚑¾ ∣ 𝚑     75%
-  ⎊ 𝚑⅔ ∣ 𝚑 66.665%
   ⎊ 𝚑½ ∣ 𝚑     50%
   ⎊ 𝚑⅓ ∣ 𝚑 33.333%
   ⎊ 𝚑¼ ∣ 𝚑     25%
   ⎊ 𝚑⅕ ∣ 𝚑     20%
+  ⎊ 𝚑⅒ ∣ 𝚑     10%
+  ⎊ 𝚑⅔ ∣ 𝚑 66.665%
+  ⎊ 𝚑⅖ ∣ 𝚑     40%
+  ⎊ 𝚑¾ ∣ 𝚑     75%
+  ⎊ 𝚑⅗ ∣ 𝚑     60%
+  ⎊ 𝚑󷷆 ∣ 𝚑     30%
+  ⎊ 𝚑⅘ ∣ 𝚑     80%
+  ⎊ 𝚑󷷇 ∣ 𝚑     70%
+  ⎊ 𝚑󷷈 ∣ 𝚑     90%
 ⌾ 𝚖 margin
   ⌾ 𝚖↑ margin-top
     ⎊ 𝚖↑a ∣ 𝚖↑ auto
@@ -161,6 +180,7 @@
 ⌾ 𝚠𝚔𝚊 -webkit-appearance
   ⎊ 𝚠𝚔𝚊□ ∣ 𝚠𝚔𝚊 􋄅
 
+⌾ 𝚟𝚊 vertical-align
  align primary axis
   ⎊ 𝚊𝙿← ∣ justify-content flex-start
   ⎊ 𝚊𝙿󷷣 ∣ justify-content center
