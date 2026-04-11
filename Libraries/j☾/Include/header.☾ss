@@ -33,6 +33,7 @@
 ⊖ ν var
 ⊖ ƒ calc
 ⊖ 􋐿 deg
+⊖ ∞ 9999
 ⊖ 𝚕∇ linear-gradient
 
 ⌾ 𝚙𝚘𝚜 position
@@ -48,6 +49,9 @@
 ⌾ 𝚋𝚐   background
 ⌾ 𝚍    display
 ⌾ 𝚍𝚒𝚛  direction
+⌾ 𝚖𝚙   cursor
+⌾ 𝚘𝚕   outline
+⌾ 𝚘𝚙   opacity
 ⌾ 𝚜    box-shadow
 ⌾ 𝚃    transition
 ⌾ 𝚃𝚏   transform
@@ -56,13 +60,25 @@
 ⌾ 󰊄    font
 ⌾ 󰊄𝚏   font-family
 ⌾ 󰊄𝚜   font-size
-⌾ «󰊄𝚊 𝚝𝚊»  text-align
+⌾ 󰊄𝚠   text-wrap
+  ⎊ 󰊄𝚠w ∣ 󰊄𝚠 wrap
+  ⎊ 󰊄𝚠n ∣ 󰊄𝚠 nowrap
+  ⎊ 󰊄𝚠b ∣ 󰊄𝚠 balance
+  ⎊ 󰊄𝚠p ∣ 󰊄𝚠 pretty
+  ⎊ 󰊄𝚠s ∣ 󰊄𝚠 stable
+⌾ 󰊄𝚘   text-overflow
+  ⎊ 󰊄𝚘c ∣ 󰊄𝚘 clip
+  ⎊ 󰊄𝚘… ∣ 󰊄𝚘 ellipsis
+⌾ 󰊄𝚘𝚠  overflow-wrap
+  ⎊ 󰊄𝚘𝚠n ∣ 󰊄𝚘𝚠 normal
+  ⎊ 󰊄𝚘𝚠w ∣ 󰊄𝚘𝚠 break-word
+  ⎊ 󰊄𝚘𝚠* ∣ 󰊄𝚘𝚠 anywhere
+⌾ 𝚟𝚊   vertical-align
+⌾ «󰊄𝚊 𝚝𝚊» text-align
 ⌾ «   𝚌» color
 ⌾ «𝚋 𝚌𝚋» background-color
-⌾ 󰈲    filter
+⌾ 󰈲                  filter
 ⌾ «𝚋𝚐𝚏 𝚋𝚐󰈲» backdrop-filter
-⌾ 𝚖𝚙  cursor
-⌾ 𝚘𝚕  outline
 ⌾ 𝚋𝚘𝚡𝚜 box-sizing
   ⎊ 𝚋𝚘𝚡𝚜c ∣ 𝚋𝚘𝚡𝚜 content-box
   ⎊ 𝚋𝚘𝚡𝚜b ∣ 𝚋𝚘𝚡𝚜 border-box
@@ -180,7 +196,6 @@
 ⌾ 𝚠𝚔𝚊 -webkit-appearance
   ⎊ 𝚠𝚔𝚊□ ∣ 𝚠𝚔𝚊 􋄅
 
-⌾ 𝚟𝚊 vertical-align
  align primary axis
   ⎊ 𝚊𝙿← ∣ justify-content flex-start
   ⎊ 𝚊𝙿󷷣 ∣ justify-content center
