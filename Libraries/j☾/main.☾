@@ -70,7 +70,7 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
 reps = 󰦥󰦥󰦥󰦥
     𝑖 Number © const ⎉ let
     ↦ => ⠤ ... ᐦ ""
-    𝚲 (...𝔸)=>
+    𝚲 ()=>
     󰲟 (...𝔸)=>
     󰲡 (x,...𝔸)=>
     󰲣 (x,y,...𝔸)=>
@@ -118,7 +118,7 @@ gram = GRAM peggle
 mp = 󷺹≕h󷹝ᑀ≤128∨h.isidentifier() ⭜h⭝ ⟞󷹜¹⁶⁺⁵􍢉⭢+ᵜ␛þ
 fmt_js_ᔐ = ␛􀋌􀊱␛$ 􀝤 ␛􀋌␛􀋌􀊱␛􀋌␛$
 
-mkexp = 𝚲Ń(‹󷺗expr›, ⠤𝔸)
+mkexp = 󰲟Ń(‹󷺗expr›, ⠤𝔸)
 mkgrp = 󰲡Ń(‹󷺗󷺗grp›, 𝔗(x₀), ⠤𝔸, 𝔗(x₁))
 mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
 𝚍𝚘𝚝,𝚌𝚘𝚖,𝚌𝚕𝚗,𝚖𝚗𝚜,𝚎𝚚𝚕,𝚊𝚖𝚛,𝚏𝚕𝚜,𝚍𝚘𝚝𝚜 = (‹.,:-=↦›􀞚􀌌‹false ...›)􀉳mkopt

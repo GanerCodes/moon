@@ -36,15 +36,15 @@
  : clicking external
  󰅙: has an x to close
 Ϣ.popup = ⥌Ѧ,c↦{
-  ⎉ ə,btn;
-  󱀝:ə dialog {closedby ⟦Ѧ.⭜‹any›⭝‹none›⟧} [
-    ⟦Ѧ.󰅙 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
+  ⎉ ,btn;
+  󱀝: dialog {closedby ⟦Ѧ􈓯⭜‹any›⭝‹none›⟧} [
+    ⟦Ѧ􈓡 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
     ⟦c⟧ ]
-  ə.addEventListener(‹close›, 𝚲(Ѧ.onclose⸮(),ə.remove()));
-  (btn??{}).onclick = 𝚲ə.close();
-  ¿(¬Ѧ.noAppend) { 󰈙.body􍪙(ə);
-                   ə.showModal(); }
-  ↪ə };
+  AEL(,‹close›,𝚲(Ѧᵒⁿᶜˡᵒˢᵉ⸮(),.remove()));
+  ¿(btn) btn.onclick = 𝚲.close();
+  ¿(¬Ѧⁿᵒᴬᵖᵖᵉⁿᵈ) { 󰈙.body􍪙();
+                  .showModal(); }
+  ↪ };
 
 Ϣ.table = ⥌Ѧ,rows↦{
   ⎉ ə;

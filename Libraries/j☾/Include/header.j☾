@@ -25,31 +25,38 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 pairs = 󰲡x.toSpliced(-1,1)􊾡(⥌x,i↦[x,vᵢ₊₁]);
 table = ⥌⠤x↦(console.table(⠤x),x₀);
 ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
-merge = 𝚲𝑜.assign({},⠤𝔸);
+merge = 󰲟𝑜.assign({},⠤𝔸);
 sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
 mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
 
 𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 
-© arrayLike = {: ⥌x,ƒ↦{ O = {};
-                         x.forEach(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
-                         ↪O; },
-               ᴍ: 󰲡x.map    (       ⠤𝔸),
-               󰆩: 󰲡x.flat   (       ⠤𝔸),
-              ᴍ󰆩: 󰲡x.flatMap(       ⠤𝔸),
-               ſ: 󰲡x.reduce (       ⠤𝔸),
-               󰈲: 󰲡x.filter (       ⠤𝔸),
-               󷸻: 󰲡x.slice  (       ⠤𝔸),
-               ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
-               ⋀: 󰲡x.every  (󰻾        ),
-               ⋁: 󰲡x.some   (󰻾        ) };
+ = ⥌x,ƒ   ↦{ O = {};
+              x.forEach(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
+              ↪O; };
+Ϝ = ⥌x,ƒ,⠤𝔸↦{ 𝚁 = [⠤𝔸,⠤x];
+              ∀(⎉ i=𝔸􋌵∨1; i<𝚁􋌵; i++)
+                𝚁ᵢ = ƒ(𝚁ᵢ₋₁,𝚁ᵢ,i)
+              𝚁.pop()
+              ↪𝚁; };
+© arrayLike = {  ,Ϝ,
+                 ᴍ: 󰲡x.map    (       ⠤𝔸),
+                 󰆩: 󰲡x.flat   (       ⠤𝔸),
+                ᴍ󰆩: 󰲡x.flatMap(       ⠤𝔸),
+                 ſ: 󰲡x.reduce (       ⠤𝔸),
+                 󰈲: 󰲡x.filter (       ⠤𝔸),
+                 󷸻: 󰲡x.slice  (       ⠤𝔸),
+                 ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
+                 ⋀: 󰲡x.every  (󰻾        ),
+                 ⋁: 󰲡x.some   (󰻾        ) };
 arrayLike􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁),xᵢ₊₁])];
 𝒪(arrayLike).forEach(⥌[s,ƒ]↦{
   windowₛ = 󰲡ƒ(isElement(x)⭜𝐴.from(x)⭝x,⠤𝔸);
   𝔓(𝐴)ₛ = function(⠤𝔸){ ↪ƒ(       this ,⠤𝔸);};
   𝔓(𝐸)ₛ = function(⠤𝔸){ ↪ƒ(𝐴.from(this),⠤𝔸);}; });
 
-AEL = 󰲡x.addEventListener(⠤𝔸);
+AEL = ⥌,⠤𝔸↦(.addEventListener(⠤𝔸),𝚲REL(,⠤𝔸));
+REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
 SAT = ⥌x,y,z=ᐦ↦x.setAttribute(y,z);
 HAT = 󰲡𝔸􊾡(⥌a↦x.hasAttribute(a))􋂃();
 RAT = 󰲡𝔸􋁃(⥌a↦x.removeAttribute(a));
