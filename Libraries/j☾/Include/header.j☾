@@ -18,9 +18,10 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 ⭥ = 󰲣isArr(x) ⭜[⠤x.keys()]⭝ ⭥(Array(y≅󱣩⭜x⭝y-x))􊾡(⥌v↦v+(y≅󱣩⭜0⭝x));
 󷸻 = 󰲣isArr(x) ⭜⭥(a􋌵+1)⭝ y≅󱣩 ⭜⭥(x+1)⭝ ⭥(x,y+1);
 󱑼 = ⥌⠤𝙰↦⭥(⤉(⠤𝙰􊾡(🃌)))􊾡(⥌i↦𝙰􊾡(󰲡xᵢ));
-ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v)]));
-ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k),v]));
-𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;
+ᴍk = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[y(k,v),v]));
+ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v,k)]));
+ᴍd = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦y(k,v)));
+𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;  get-setdefault
 ☾     = ⥌⠤x↦(console.log  (⠤x),x₀);
 pairs = 󰲡x.toSpliced(-1,1)􊾡(⥌x,i↦[x,vᵢ₊₁]);
 table = ⥌⠤x↦(console.table(⠤x),x₀);
@@ -28,6 +29,10 @@ ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
 merge = 󰲟𝑜.assign({},⠤𝔸);
 sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
 mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
+ƒdbg  = ⥌ƒ↦󰲟{ ☾(‹ƒ: Calling with:›,⠤𝔸);
+              © r = ƒ(⠤𝔸);
+              ☾(‹f: Returning›, r);
+              ↪r };
 
 𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 
