@@ -30,6 +30,7 @@
 
 ⊖ □ none
 ⊖ ␀ unset
+⊖ 𝔸 auto
 ⊖ ν var
 ⊖ ƒ calc
 ⊖ 􋐿 deg
@@ -57,6 +58,7 @@
 ⌾ 𝚃𝚏   transform
 ⌾ 𝚣    z-index
 ⌾ 𝚣𝚘𝚘𝚖 zoom
+⌾ 󰍽    pointer-events
 ⌾ 󰊄    font
 ⌾ 󰊄𝚏   font-family
 ⌾ 󰊄𝚜   font-size
@@ -74,7 +76,6 @@
   ⎊ 󰊄𝚘𝚠w ∣ 󰊄𝚘𝚠 break-word
   ⎊ 󰊄𝚘𝚠* ∣ 󰊄𝚘𝚠 anywhere
 ⌾ 𝚟𝚊   vertical-align
-⌾ «󰊄𝚊 𝚝𝚊» text-align
 ⌾ «   𝚌» color
 ⌾ «𝚋 𝚌𝚋» background-color
 ⌾ 󰈲                  filter
@@ -197,32 +198,37 @@
   ⎊ 𝚠𝚔𝚊□ ∣ 𝚠𝚔𝚊 􋄅
 
  align primary axis
-  ⎊ 𝚊𝙿← ∣ justify-content flex-start
-  ⎊ 𝚊𝙿󷷣 ∣ justify-content center
-  ⎊ 𝚊𝙿→ ∣ justify-content flex-end
-  ⎊ 𝚊𝙿b ∣ justify-content space-between
-  ⎊ 𝚊𝙿a ∣ justify-content space-around
-  ⎊ 𝚊𝙿e ∣ justify-content space-evenly
+⌾ 𝚊𝙿 justify-content
+  ⎊ 𝚊𝙿← ∣ 𝚊𝙿 flex-start
+  ⎊ 𝚊𝙿󷷣 ∣ 𝚊𝙿 center
+  ⎊ 𝚊𝙿→ ∣ 𝚊𝙿 flex-end
+  ⎊ 𝚊𝙿b ∣ 𝚊𝙿 space-between
+  ⎊ 𝚊𝙿a ∣ 𝚊𝙿 space-around
+  ⎊ 𝚊𝙿e ∣ 𝚊𝙿 space-evenly
  align secondary axis
-  ⎊ 𝚊𝚂← ∣ align-items flex-start
-  ⎊ 𝚊𝚂󷷣 ∣ align-items center
-  ⎊ 𝚊𝚂→ ∣ align-items flex-end
-  ⎊ 𝚊𝚂s ∣ align-items stretch
-  ⎊ 𝚊𝚂b ∣ align-items baseline
+⌾ 𝚊𝚂 align-items
+  ⎊ 𝚊𝚂← ∣ 𝚊𝚂 flex-start
+  ⎊ 𝚊𝚂󷷣 ∣ 𝚊𝚂 center
+  ⎊ 𝚊𝚂→ ∣ 𝚊𝚂 flex-end
+  ⎊ 𝚊𝚂s ∣ 𝚊𝚂 stretch
+  ⎊ 𝚊𝚂b ∣ 𝚊𝚂 baseline
    for an individual item
-    ⎊ 𝚊𝚒𝚜← ∣ align-self flex-start
-    ⎊ 𝚊𝚒𝚜󷷣 ∣ align-self center
-    ⎊ 𝚊𝚒𝚜→ ∣ align-self flex-end
-    ⎊ 𝚊𝚒𝚜s ∣ align-self stretch
-    ⎊ 𝚊𝚒𝚜b ∣ align-self baseline
+  ⌾ 𝚊𝚒𝚜 align-self
+    ⎊ 𝚊𝚒𝚜← ∣ 𝚊𝚒𝚜 flex-start
+    ⎊ 𝚊𝚒𝚜󷷣 ∣ 𝚊𝚒𝚜 center
+    ⎊ 𝚊𝚒𝚜→ ∣ 𝚊𝚒𝚜 flex-end
+    ⎊ 𝚊𝚒𝚜s ∣ 𝚊𝚒𝚜 stretch
+    ⎊ 𝚊𝚒𝚜b ∣ 𝚊𝚒𝚜 baseline
  align per secondary axis
-  ⎊ 𝚊𝚜← ∣ align-content flex-start
-  ⎊ 𝚊𝚜󷷣 ∣ align-content center
-  ⎊ 𝚊𝚜→ ∣ align-content flex-end
-  ⎊ 𝚊𝚜b ∣ align-content space-between
-  ⎊ 𝚊𝚜s ∣ align-content stretch
-  ⎊ 𝚊𝚜a ∣ align-content space-around
+⌾ 𝚊𝚜 align-content
+  ⎊ 𝚊𝚜← ∣ 𝚊𝚜 flex-start
+  ⎊ 𝚊𝚜󷷣 ∣ 𝚊𝚜 center
+  ⎊ 𝚊𝚜→ ∣ 𝚊𝚜 flex-end
+  ⎊ 𝚊𝚜b ∣ 𝚊𝚜 space-between
+  ⎊ 𝚊𝚜s ∣ 𝚊𝚜 stretch
+  ⎊ 𝚊𝚜a ∣ 𝚊𝚜 space-around
  text align
-  ⎊ «𝚝 󰊄»𝚊← ∣ 𝚝𝚊 left
-  ⎊ «𝚝 󰊄»𝚊󷷣 ∣ 𝚝𝚊 center
-  ⎊ «𝚝 󰊄»𝚊→ ∣ 𝚝𝚊 right
+⌾ «󰊄𝚊 𝚝𝚊» text-align
+  ⎊ «󰊄 𝚝»𝚊← ∣ 󰊄𝚊 left
+  ⎊ «󰊄 𝚝»𝚊󷷣 ∣ 󰊄𝚊 center
+  ⎊ «󰊄 𝚝»𝚊→ ∣ 󰊄𝚊 right
