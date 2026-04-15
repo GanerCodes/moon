@@ -83,7 +83,7 @@ reps = 󰦥󰦥󰦥󰦥
     ⌾ switch ᐂ case ⊳ default
     ⇥ break ↺ continue 󰆴 delete
     󱟱 async 󱫬 await ➰ while ∀ for ↪ return
-    ⎔ of ∈ in ☾ print
+    ∈ in ⎔ of ☾ print
     ¬ ! ⭜ ? ⭝ : ⸮ ?. ⋅ * ÷ / ⌃ ** ∧ && ∨ || ⪢ >> ⪡ << ≠ != ≥ >= ≤ <=
     ≡ == ≅ === ≇ !== 🆕 new 󱣩 undefined ∧= &&= ∨= ||=
 󰦥󰦥󰦥󰦥.strip󷺻𝗻󰛔􍪵␛ ᐸ⍭ᐵ.strip󷹎¹𝘀ᐸ→ℵ
@@ -93,10 +93,10 @@ attr_repl = ‹
   🃌 length @ at : slice ¶ style
   ⫰ toUpperCase ⫯ toLowerCase 󰊄 innerText 󰿨 children
    disabled 󱇙 classList 󰌷 append + add - remove ∀ forEach
-  󱗠 classList.remove 󰆂 classList.toggle 󰆃 classList.add
-  󱗟 removeAttribute󷺗 󰅺 toggleAttribute󷺗 󰧥 setAttribute
+  󱗠 classList.remove 󰆂 classList.toggle 󰆃 classList.add 󰆆 classList.contains
    querySelector  querySelectorAll
 ›ᐒ𝗻􀋀􍪵􁘷␛ 􀌌􀋅≺􀋀
+
 CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈␛⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
 OPERATORS = ‹* | & = ? >> <<›􀌌ᐵ􀝕⟞􀊩⟞₀ᐵ􀝕⟞␛=ᐸᐸ􀋶²   􀞚␛
             ‹!= !== => // /= %= -= += -- ++ ?.›􀌌􀞚␛
