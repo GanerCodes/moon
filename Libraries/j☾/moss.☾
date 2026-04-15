@@ -40,11 +40,11 @@ intrp = ⠶SC↑ ∨ 󰆴('⦑' 𝗪?) (⠶meta ∨ ⠶text ∨ 󰆴𝗪)* 󰆴(
 prop_k      = (⠶meta  ∨ ⠶text     )+
 prop_v      = ( intrp ∨ ⠶nrm_strip)+
 prop        = (prop_k 󰆴𝘄? prop_v ∨ rule_lookup) 󰆴𝗪?
-rule_lookup = (⠶meta  ∨  text     )+
+rule_lookup = (⠶meta  ∨ ⠶text     )+
 
-nrm_strip = ƨ((text ∨ ꭐ)+) 󰆴𝗪?
-text      = ƨ((⠶ESC ∨ ¬SC↑ ~‹[^«»⦑⦒∣;≔ \n\t]›)+)
-general   = ~‹([^;∣\n]|␛␛.)+›
+nrm_strip = (󰊄0__ = (⠶text ∨ ꭐ)+) 󰆴𝗪?
+text      = (󰊄1__ = (ESC ∨ ¬SC↑ ~‹[^␛␛«»⦑⦒∣;≔ \n\t]›)+)
+general   = ~‹([^␛␛;∣\n]+|␛␛.)+›
 mark      = 󰆴";" ✓ 󰆴𝘄?
 mark_nest = 󰆴"∣" ✓
 ESC       = 󰆴"␛␛" ~‹.›
@@ -75,6 +75,8 @@ sups = ⦉⠤*´􀋕⦊
   content 􇂎 gram_meta 􀯖 .ftrp(␛☾,󱁕↦󱠨(‹⊢f:𝗻⟦󱁕􋒷indent⟧›,ns􀯍ℵ)[␛f]􀃅􀯖𝔗)􋒷
   ¿inline: content = ‹_𝗻⟦content indent⟧›
   󱁕 = reform_positions(content gram, content)
+  fix_broken_trash = 𝚲󱁕.ftrp(‹󰊄0__ 󰊄1__›􀌌,󷺹􋒷𝔗)  󰤱 Fix peggle so 󰆴 works inside ƨ 
+  fix_broken_trash􀃅
   add_blocks(󱁕,󷺹ᵗ􀜋􀌌‹line alias_r›)
   
   󱁕.ftrp(‹blk›,
@@ -83,7 +85,9 @@ sups = ⦉⠤*´􀋕⦊
      􇂗✗⨳, ✓)
   
   subparse(gram,󱁕,‹rh›,‹rule_head›)
+  fix_broken_trash􀃅
   subparse(gram,󱁕,‹prop›)
+  fix_broken_trash􀃅
   󱁕.ftrp(‹intrp›,󷺹􀊹􀜂1􀜂􀊹⟞₀ᵗ􀛾⟞₀ᵗ􀉧sups􇂖􍪵⟞.set(c=𝔗(⟞􋒷􀋔)􀋁),✓)
   
   ⊢󰯱(󱁕,󰰞): ¿󱁕ᵉ ᵀ: ↪󱁕􋒷􀊚􁌵􋂝􋁇󰻾􊾖􀋁
@@ -140,34 +144,36 @@ sups = ⦉⠤*´􀋕⦊
 
 ⭷ transpile_moss,MOSS_head
 
-⊢test_moss:
-  󰦥󰦥󰦥󰦥
-    © red  #F00
-    © what ⦑red⦒222
-    【↪‹⊖ yeag ⦑what⦒›】
-    ⌾ 𝚜𝚞𝚜 color
-    ⎊ egglike ∣ 𝚠 100%; 𝚑 100%
-    «html body» > «div span» ∣ egglike
-    
-    ⎉ sel 􎁎􊽬⁽􋒗⁾
-    eggos􊽬⁽􋒗⁾ «⦑red⦒ 􊽬⁽􀴗⁾ joe»
-      egglike
-      𝚜𝚞𝚜 #420
-      􊽬⁽􋒗⁾ test
-        color  ⦑what⦒
-        cooler ⦑yeag⦒
-      &⦑sel⦒ ∣ 𝚃𝚏 scale(2)
-    .selectedPageNum            ∣ 𝚋 #111
-    .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 #222
-    
-    .testing
-      𝚊«𝙿 𝚂»󷷣
-      >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
-      >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
-  󰦥󰦥󰦥󰦥 􀯑 c
+BOXT = ⥌𝚝↦BOX(padc(􀳀􀋥𝘀,𝔸􇀞􀋢𝗻,␛─)􀊩𝗻􀊩𝔸)
+⊢test_moss(⠤𝔸):
   _,Ѧ = transpile_moss(MOSS_head,✗)
-  css,𝔠 = transpile_moss(c,✗,Ѧ)
-  css􀊸²􋋉
-  transpile_moss(‹𝚙󷷢 8px; 𝚌 ⦑red⦒; egglike; 𝚏›,✓,𝔠)􀊸
+  α = 𝔸􀯗𝔸₀􀯘󰦥󰦥󰦥󰦥
+             © red  #F00
+             © what ⦑red⦒222
+             【↪‹⊖ yeag ⦑what⦒›】
+             ⌾ 𝚜𝚞𝚜 color
+             ⎊ egglike ∣ 𝚠 100%; 𝚑 100%
+             «html body» > «div span» ∣ egglike
+             
+             ⎉ sel 􎁎􊽬⁽􋒗⁾
+             eggos􊽬⁽􋒗⁾ «⦑red⦒ 􊽬⁽􀴗⁾ joe»
+               egglike
+               𝚜𝚞𝚜 #420
+               􊽬⁽􋒗⁾ test
+                 color  ⦑what⦒
+                 cooler ⦑yeag⦒
+               &⦑sel⦒ ∣ 𝚃𝚏 scale(2)
+             .selectedPageNum            ∣ 𝚋 #111
+             .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 #222
+             
+             .testing
+               𝚊«𝙿 𝚂»󷷣
+               >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
+               >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
+           󰦥󰦥󰦥󰦥
+  β = 𝔸􀊹􀉤1 􀯗𝔸₁􀯘 󰦥󰦥󰦥󰦥𝚙󷷢 8px; 𝚌 ⦑red⦒; egglike; 𝚏; shoutout joe␛;simitruck󰦥󰦥󰦥󰦥
+  css,𝔠 = transpile_moss(α,✗,Ѧ)
+  BOXT(‹Normal›,css)􀊸
+  BOXT(‹Inline›,transpile_moss(β,✓,𝔠))􀊸
 
-¿__name__ ≡ ‹__main__›: test_moss􀃅
+¿__name__≡‹__main__›: test_moss(⠤𝔸₁􊬋)

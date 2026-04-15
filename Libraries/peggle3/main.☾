@@ -154,7 +154,7 @@ gramgram = □⛶
     󱁕 = G gramgram₀
     name_remaps = ℵ(‹elm_o elm_a group_inner group›⍭󱑼‹∨∧∧∧›)
     TT = 󱁕↦󱁕ᵉ ᵀ ⭜+󱁕⭝ 󱁕ᵗ≡␛~ ⭜(␛Ʀ,+󱁕)⭝ (󱁕ᵗ,⠤󱁕ᵗ≡␛ᔐ ⭜(󱁕₀ᵗ,)⭝ 󱁕ᴍTT)
-    escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)
+    escape = ⥌x,t=␛ݺ↦x.replace(2␛␛,t).replace(␛␛,ᐦ).replace(t,␛␛)  󰤱 REALLY STUPID LOL
     ⊢ reduce_j(󱁕): α,o,β,⠤C = 󱁕
                    ¿C: ✗⨳  β = reduce_j(󱁕.cp(c=[β,⠤C]))  ????????
                    ¿oᵗ≡␛↷: ↪Ń(␛∧,α,β,α)
