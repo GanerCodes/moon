@@ -32,7 +32,7 @@ sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
 mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y, ᐦ);
 ƒdbg  = ⥌ƒ↦󰲟{ ☾(‹ƒ: Calling with:›,⠤𝔸);
               © r = ƒ(⠤𝔸);
-              ☾(‹f: Returning›, r);
+              ☾(‹ƒ: Returning›, r);
               ↪r };
 
 𝔍 = {↑:JSONˢᵗʳⁱⁿᵍⁱᶠʸ, ↓:JSONᵖᵃʳˢᵉ};
@@ -71,7 +71,7 @@ arrayLikeƒ􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊�
   )􋁃(⥌[𝚔,ƒ]↦Type􋁃(⥌𝑇↦{ Ϣ􀲮 = ƒ;
                         𝔓(𝑇)􀲮 = function(⠤𝔸) { ↪ƒ(this,⠤𝔸); }; } ));
 𝒪({ 󷷽: QSM  = ⥌𝚚,=󰈙↦.matches(𝚚)??,
-    󷸁: QS   = ⥌𝚚,=󰈙↦.querySelector(x),
+    󷸁: QS   = ⥌𝚚,=󰈙↦.querySelector(𝚚),
     󷸃: QSS  = ⥌𝚚,=󰈙↦􈞝(𝚚)⭜⭝􈞢(𝚚),
     󷸂: QSA  = ⥌𝚚,=󰈙↦[⠤.querySelectorAll(𝚚)],
     󷸄: QSSA = ⥌𝚚,=󰈙↦[⠤􈞝(𝚚)⭜[]⭝[],⠤􈞣(𝚚)] }
