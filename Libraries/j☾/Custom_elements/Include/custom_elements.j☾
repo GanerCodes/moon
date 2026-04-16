@@ -85,34 +85,101 @@
   ə􀴗 = Ѧ;
   ↪ə; };
 
-⎉ [𝘥,𝘵] = [␀,␀];
-© αoverβ = ⥌α,β,s↦{
-  ¿(α≅β ∨ ¬(α∧β)) ↪;
-  © [v,A] = [α.attributes.dragItem.value,β.attributes];
-  ¿(¬(v≡A.dragItem⸮value ∨ v≡A.dragHold⸮value)) ↪;
-  ¿(s) { SAT(β,‹maydrop›,ᐦ);
-         ¿(𝘵 ∧ 𝘵≇β) RAT(𝘵,‹maydrop›,ᐦ);
-         𝘵 = β; }
-  ¡ RAT(β,‹maydrop›,ᐦ); };
+🟑
 © confDrag = ⥌,𝚒↦{
-  AEL(,‹dragenter›,⥌𝜺↦αoverβ(𝘥,𝜺ᵗᵃʳᵍᵉᵗ,✓));
-  AEL(,‹dragleave›,⥌𝜺↦αoverβ(𝘥,𝜺ᵗᵃʳᵍᵉᵗ,✗));
+  AEL(,‹dragenter›,⥌𝜺↦αoverβ(𝘥,EFP(𝜺ˣ,𝜺ʸ),✓));
+  AEL(,‹dragleave›,⥌𝜺↦αoverβ(𝘥,EFP(𝜺ˣ,𝜺ʸ),✗));
   AEL(,‹dragover› ,⥌𝜺↦𝜺.preventDefault());
   ↪; };
 Ϣ.dragItem = ⥌,𝚒=0,ƒ=swapə↦{
   𝚒 = ᐦ+𝚒;
   SAT(,‹dragItem› ,𝚒     );
   SAT(,‹draggable›,‹true›);
-  AEL(,‹dragstart›,⥌𝜺↦{ SAT(,‹dragging›,ᐦ); 𝘥=; });
-  AEL(,‹dragend›  ,⥌𝜺↦{ RAT(,‹dragging›  );
-                         αoverβ(𝘥,𝘵,✗); 𝘥=␀; });
-  AEL(,‹drop›     ,⥌𝜺↦{ 𝜺.preventDefault();
-                         ¿(≇𝘵) ↪;
-                         ¿(𝘥≅𝘵) ↪;
-                         ƒ(𝘥,𝘵); });
+  AEL(,‹dragstart›,󰲟{ SAT(,‹dragging›,ᐦ); 𝘥=; });
+  AEL(,‹dragend›  ,󰲟{ RAT(,‹dragging›  );
+                       αoverβ(𝘥,𝘵,✗); 𝘥=␀; });
+  AEL(,‹drop›     ,󰲟{ ¿(𝘥≅𝘵 ∨ 𝘵≇) ↪;
+                       ƒ(𝘥,𝘵); });
   ↪confDrag(,𝚒); };
 Ϣ.dragHold = ⥌,𝚒=0,ƒ=󰲣x􍪙(y)↦{
   𝚒 = ᐦ+𝚒;
   SAT(,‹dragHold›, 𝚒);
   AEL(,‹drop›    ,󰲟≅𝘵 ∧ ƒ(,𝘥));
   ↪confDrag(,𝚒); };
+🟑
+
+© 𝐍 = ⥌𝜺↦{ ⎉ 𝐞;
+           ¿(𝜺ᵗᵒᵘᶜʰᵉˢ) {
+             © t = 𝜺ᵗᵒᵘᶜʰᵉˢ₀ ∨ 𝜺ᶜʰᵃⁿᵍᵉᵈᵀᵒᵘᶜʰᵉˢ₀;
+             𝐞 = { x:tᶜˡⁱᵉⁿᵗ󰀗, y:tᶜˡⁱᵉⁿᵗ󰀘 }; }
+           ¡ 𝐞 = { x:𝜺ᶜˡⁱᵉⁿᵗ󰀗, y:𝜺ᶜˡⁱᵉⁿᵗ󰀘 };
+           𝐞􋑵 = EFP(𝐞ˣ,𝐞ʸ)∨󱣩;
+           𝐞ᴾᴰ = 𝚲𝜺.preventDefault();
+           𝐞􋋥 = 𝜺;
+           ↪𝐞; };
+
+Ϣ.makeDraggable = ⥌↦{  jarvis ive gone insane
+  ⎉ 𝚂,𝚍,𝚙,󰨂;
+   © WHAT = 󰲟☾(⠤𝔸,󰨂,‹𝚍=⟦𝚍⭜␛✓⭝␛✗⟧ 𝚙=⟦𝚙⟧ 𝚂=⟦𝚂⟧›);
+  © exit = 𝚲{  WHAT(‹EXIT›);
+               .releasePointerCapture(𝚙);
+              𝚂 = 𝚍 = 𝚙 = 󰨂 = 󱣩; };
+  © 𝔖 = ⥌𝜺   ↦{ 𝜺 = 𝐍(𝜺);
+                 WHAT(‹𝔖›,𝜺);
+                .setPointerCapture(𝚙 = 𝜺􋋥.pointerId);
+                𝚂 = [𝜺ˣ,𝜺ʸ]; }
+  © 𝔈 = ⥌𝜺,ok↦{ 𝜺 = 𝐍(𝜺);
+                 WHAT(‹𝔈 ok=⟦ok⭜␛✓⭝␛✗⟧›,𝜺);
+                ¿(¬𝚂) ↪;
+                ¿(¬𝚍) ↪.click();
+                ¿(ok ∧ 󰨂⸮) .dropped⸮(󰨂);
+                .dragend⸮(󰨂);
+                exit(); }
+  © 𝔐 = ⥌𝜺   ↦{ 𝜺 = 𝐍(𝜺);
+                 WHAT(‹𝔐›,𝜺);
+                ¿(¬𝚂) ↪;
+                ¿(¬𝚍) { ¿((𝜺ˣ-𝚂₀)⌃2+(𝜺ʸ-𝚂₁)⌃2 ≤ 25) ↪;
+                        𝚍=✓;
+                        .dragstart⸮(𝜺); }
+                .drag⸮(𝜺);
+                ¿(󰨂⸮≅𝜺⸮) ↪;
+                ¿(󰨂⸮) .dragleave⸮({⠤𝜺,:󰨂􋑵});
+                ¿(𝜺⸮) .dragenter⸮(𝜺);
+                󰨂 = 𝜺; }
+  AEL(,‹pointerdown󷺗󷺗›,󰲡𝔖(x  ));
+  AEL(,‹pointerup󷺗󷺗󷺗󷺗›,󰲡𝔈(x,✓));
+  AEL(,‹pointercancel›,󰲡𝔈(x,✗));
+  AEL(,‹pointermove󷺗󷺗›,󰲡𝔐(x  ));
+  AEL(,‹touchstart󷺗󷺗󷺗›,󰲡x.cancelable ∧ x.preventDefault());
+  AEL(,‹dragstart󷺗󷺗󷺗󷺗›,󰲡x.cancelable ∧ x.preventDefault());
+  ↪; };
+
+⎉ 𝘵 = ␀;
+© αoverβ = ⥌α,β,s↦{
+  ¿(α≅β ∨ ¬(α∧β)) ↪;
+  © v = α􈞠(‹dragItem›);
+  ¿(¬(v≡β􈞠(‹dragItem›) ∨ v≡β􈞠(‹dragHold›))) ↪;
+  ¿(s) { 𝘵⸮󱗟(‹maydrop›);
+         β.󰧥(‹maydrop›);
+         𝘵 = β; }
+  ¡ β􈛑(‹maydrop›); };
+
+Ϣ.dragItem = ⥌,𝚒=0,ƒ=swapə↦{
+  𝚒 = ᐦ+𝚒;
+  􈛘(‹dragItem›,𝚒     );
+  􈛘(‹canDrag› ,‹true›);
+  makeDraggable();
+  .dragstart = ⥌𝜺↦{ 􈛘(‹dragging›); };
+  .dragend   = ⥌𝜺↦{ 􈛑(‹dragging›); };
+  .dragenter = ⥌𝜺↦αoverβ(,𝜺􋑵,✓);
+  .dragleave = ⥌𝜺↦αoverβ(,𝜺􋑵,✗);
+  .dropped   = ⥌𝜺↦{ ¿(≅𝜺􋑵 ∨ ¬𝜺􋑵) ↪;
+                     ¿(𝜺􋑵 􈞠(‹dragItem›)≡𝚒) ƒ(,𝜺􋑵);
+                     ¿(𝜺􋑵 􈞠(‹dragHold›)≡𝚒) 𝜺􋑵.dropInto();
+                     𝜺􋑵 􈛑(‹maydrop›); };
+  ↪; };
+Ϣ.dragHold = ⥌,𝚒=0,ƒ=󰲣x􍪙(y)↦{
+  𝚒 = ᐦ+𝚒;
+  􈛘(‹dragHold›,𝚒);
+  .dropInto = ⥌𝓮↦ƒ(,𝓮);
+  ↪; };

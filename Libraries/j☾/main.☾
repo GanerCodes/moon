@@ -68,7 +68,7 @@ GRAM=󰦥󰦥󰦥󰦥󰦥
     comment = ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
 󰦥󰦥󰦥󰦥󰦥
 reps = 󰦥󰦥󰦥󰦥
-    𝑖 Number © const ⎉ let
+    © const ⎉ let
     ↦ => ⠤ ... ᐦ ""
     𝚲 ()=>
     󰲟 (...𝔸)=>
@@ -79,8 +79,8 @@ reps = 󰦥󰦥󰦥󰦥
     󰲩 (x,y,z,w,v,...𝔸)=>
     ✓ true ✗ false ␀ null
     ¿ if ⸘ else if ¡ else
-    ⤉ (Math.max) ⤈ (Math.min)
     ⌾ switch ᐂ case ⊳ default
+     try 󰛕 finally
     ⇥ break ↺ continue 󰆴 delete
     󱟱 async 󱫬 await ➰ while ∀ for ↪ return
     ∈ in ⎔ of ☾ print
