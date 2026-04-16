@@ -76,13 +76,9 @@ dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠≥ 400px; 𝚑≥ 650px
 .selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
 .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒
 
- *[dragItem]􊽬⁽󰁺maydrop󰁻⁾
-                𝚋 2px dashed #0000
 *[draggable] ∣ 𝚃 all 0.1s ease-in-out
                𝚖𝚙 pointer
 *[dragging]  ∣ 𝚃𝚏 scale(0.5)
-               𝚖𝚙 grabbing
-                pointer-events 􋄅
  *[maydrop]   ∣ 𝚋 2px dashed #FF0
 
  *[dragHold][maydrop]::after

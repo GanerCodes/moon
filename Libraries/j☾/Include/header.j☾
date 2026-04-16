@@ -12,6 +12,7 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 𝑙 = 󰲡[⠤x];
 󰻾 = 󰲡x;
 󱅏 = Math.random;
+􋑯 = ⥌x,b=Math.E↦Math.log(x)÷Math.log(b);
 [⬓,▢,⬒] = [Mathᶠˡᵒᵒʳ,Mathʳᵒᵘⁿᵈ,Mathᶜᵉⁱˡ];
 [⤉,⤈] = [Mathᵐᵃˣ,Mathᵐⁱⁿ];
 󷹄     = 󰲥⤈(⤉(x,y),z)
