@@ -98,39 +98,6 @@ REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
   ⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
   ⥌p,v=ᐦ,=󰈙↦󰈙􋛟.setProperty(‹--⟦p⟧›,v))
 
-isStr = 󰲡typeof x ≅ ‹string›;
-isNum = 󰲡typeof x ≅ ‹number›;
-isArr = 󰲡x instanceof Array;
-isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;
-[isArray,isElement] = [isArr,isElm];
-
- 󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
-chainIntoElements = ⥌x,P↦{
-    ¿(¬(isArr(x) || isStr(x) || isElm(x)))
-        x = [];
-    ¡   x = (isArr(x)⭜x􎘌(∞)⭝[x])
-              􊾡(⥌𝚎↦isStr(𝚎) ⭜󰈙.createTextNode(𝚎)⭝ 𝚎);
-    ¿(P≅󱣩) ↪x
-    P􍪙(⠤x);
-    ↪P; }
-
-© attrMap = { "":"onclick", onclick:"onclick", closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
-© NSNames = 🆕 Set(‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›.split(𝘀));
-mkə = ⥌name,attrs,kids↦{
-    kids = chainIntoElements(kids);
-    ¿(𝗙(name)) ↪name(𝒟(attrs),⠤kids);
-    ¿(name≅✗) name = "div";
-    ⎉  = NSNames.has(name) ⭜ 󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
-                             ⭝ 󰈙.createElement(name);
-    􍪙(⠤kids);
-    ¿(attrs)
-      (attrs)􋁃(⥌[k,v]↦{
-        ¿(k≡␛𝑆      ) 􋛟.cssText   = v;
-        ⸘(k∈attrMap) [attrMapₖ] = v;
-        ¡            SAT(,k,v); });
-     󰤱 htmlelements/function type/general objects/etc
-    ↪; };
-
 swapə = 󰲣{ ¿(x≅y) ↪;
            © [α,β] = [x.parentNode,y.parentNode];
            ¿(α∧β) { ⎉ χ = 󱀝 {}
@@ -140,3 +107,36 @@ swapə = 󰲣{ ¿(x≅y) ↪;
                     χ.remove(); }
            ⸘(α) α.replaceChild(y,x);
            ⸘(β) α.replaceChild(x,y); };
+
+is𝑏   = 󰲡typeof x ≅ "boolean";
+isStr = 󰲡typeof x ≅ ‹string›;
+isNum = 󰲡typeof x ≅ ‹number›;
+isArr = 󰲡x instanceof Array;
+isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;
+[isArray,isElement] = [isArr,isElm];
+
+ 󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
+© attrMap = { "":"onclick", onclick:"onclick", closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };
+© NSNames = 🆕 Set(‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›.split(𝘀));
+chainIntoElements = ⥌x,↦{
+  © 󰊄 = 󰲡󰈙.createTextNode(x);
+  x = isNum(x) ∨ isArr(x) ∨ isStr(x) ∨ isElm(x)
+        ⭜ boxᴍ(x,󰲡isElm(x)⭜x⭝󰊄(x))
+        ⭝ [];
+  ¿(≅󱣩) ↪x;
+  􍪙(⠤x);
+  ↪; }
+mkə = ⥌name,attrs,kids↦{
+  kids = chainIntoElements(kids);
+  ¿(𝗙(name)) ↪name(𝒟(attrs),⠤kids);
+  ¿(name≅✗) name = "div";
+  ⎉  = NSNames.has(name) ⭜ 󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
+                           ⭝ 󰈙.createElement(name);
+  􍪙(⠤kids);
+  ¿(attrs)
+    (attrs)􋁃(⥌[k,v]↦{
+      ¿(k≡␛𝑆      ) 􋛟.cssText   = v;
+      ⸘(k∈attrMap) [attrMapₖ] = v;
+      ¡            SAT(,k,v); });
+   󰤱 htmlelements/function type/general objects/etc
+  ↪; };

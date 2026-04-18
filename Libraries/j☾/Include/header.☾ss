@@ -43,14 +43,9 @@
   ⎊ 𝚙𝚘𝚜sy ∣ 𝚙𝚘𝚜 sticky
   ⎊ 𝚙𝚘𝚜r  ∣ 𝚙𝚘𝚜 relative
   ⎊ 𝚙𝚘𝚜a  ∣ 𝚙𝚘𝚜 absolute
-⌾ ←    left
-⌾ →    right
-⌾ ↑    top
-⌾ ↓    bottom
 ⌾ 𝚋𝚐   background
 ⌾ 𝚍    display
 ⌾ 𝚍𝚒𝚛  direction
-⌾ 𝚖𝚙   cursor
 ⌾ 𝚘𝚕   outline
 ⌾ 𝚘𝚙   opacity
 ⌾ 𝚜    box-shadow
@@ -58,10 +53,13 @@
 ⌾ 𝚃𝚏   transform
 ⌾ 𝚣    z-index
 ⌾ 𝚣𝚘𝚘𝚖 zoom
-⌾ 󰍽    pointer-events
 ⌾ 󰊄    font
 ⌾ 󰊄𝚏   font-family
 ⌾ 󰊄𝚜   font-size
+⌾ 󰍽    pointer-events
+⌾ «𝚖𝚙 » cursor
+  ⎊ p ∣  pointer
+  ⎊ g ∣  grab
 ⌾ 󰊄𝚠   text-wrap
   ⎊ 󰊄𝚠w ∣ 󰊄𝚠 wrap
   ⎊ 󰊄𝚠n ∣ 󰊄𝚠 nowrap
@@ -147,6 +145,16 @@
   ⎊ 𝚑⅘ ∣ 𝚑     80%
   ⎊ 𝚑󷷇 ∣ 𝚑     70%
   ⎊ 𝚑󷷈 ∣ 𝚑     90%
+ directions
+  ⌾ ← left
+  ⌾ → right
+  ⌾ ↑ top
+  ⌾ ↓ bottom
+  【
+    V = ‹↖ ←↑ ↗ →↑ ↙ ←↓ ↘ →↓ 󷷢 ←→ 󷷤 ↑↓  󷷢󷷤›􀌌
+    ↪V􀉴󰲣‹⌾ ⟦x₀⟧ «⟦y􀋢𝘀⟧»
+         ⎊ ⟦x₀⟧a ∣ ⟦x₀⟧ auto›󰅂􀋢𝗻
+  】
 ⌾ 𝚖 margin
   ⌾ 𝚖↑ margin-top
     ⎊ 𝚖↑a ∣ 𝚖↑ auto
