@@ -98,9 +98,8 @@ REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
   ⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
   ⥌p,v=ᐦ,=󰈙↦󰈙􋛟.setProperty(‹--⟦p⟧›,v))
 
-
-isStr = 󰲡typeof x ≅ "string";
-isNum = 󰲡typeof x ≅ "number";
+isStr = 󰲡typeof x ≅ ‹string›;
+isNum = 󰲡typeof x ≅ ‹number›;
 isArr = 󰲡x instanceof Array;
 isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;
 [isArray,isElement] = [isArr,isElm];
