@@ -3,8 +3,10 @@ BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 [Ϣ,󰈙] = [window,document];
 [𝐴,𝐸,𝑜,𝑖,∞] = [Array,Element,Object,Number,Infinity];
 [𝒪,𝒟,𝒪k,𝒪v] = [𝑜ᵉⁿᵗʳⁱᵉˢ,𝑜ᶠʳᵒᵐᴱⁿᵗʳⁱᵉˢ,𝑜ᵏᵉʸˢ,𝑜ᵛᵃˡᵘᵉˢ];
-© Type = [HTMLDocument,ShadowRoot,Element];
 𝒪ℳ = 󰲡x􋔩(󰲣({⠤x,⠤y}));
+𝒪𝑏 = ⥌o,n=✗,y=o↦{ ∀(©_∈o) ↪y;
+                  ↪n; };
+© Type = [HTMLDocument,ShadowRoot,Element];
 𝔓 = 󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ;
 󷹝 = Stringᶠʳᵒᵐ󰀂ʰᵃʳ󰀂ᵒᵈᵉ;
 🃌 = 󰲡xˡᵉⁿᵍᵗʰ;
@@ -38,33 +40,36 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
               ☾(‹ƒ: Returning›, r);
               ↪r };
 
+© makeProxy = ⥌𝚐,𝚜↦
+  🆕 Proxy({},{ get(_,k  ) { ↪𝚐(k  ); },
+               set(_,k,v) { ↪𝚜(k,v); }});
+
 𝔍 = {↑:JSONˢᵗʳⁱⁿᵍⁱᶠʸ, ↓:JSONᵖᵃʳˢᵉ};
 𝔏𝔖 = { ↑: 󰲣localStorageₓ = 𝔍􋀫(y),
        ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
-       ⸓: 󰲥𝔏𝔖􋀫(x,y(𝔏𝔖􋀭(x, z))) };
-
-© arrayLikeƒ = {  : ⥌x,ƒ   ↦{ O = {};
-                               x􋁃(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
-                               ↪O; },
-                  Ϝ: ⥌x,ƒ,⠤𝔸↦{ 𝚁 = [⠤𝔸,⠤x];
-                               ∀(⎉ i=𝔸􋌵∨1; i<𝚁􋌵; i++)
-                                 𝚁ᵢ = ƒ(𝚁ᵢ₋₁,𝚁ᵢ,i,x)
-                               𝚁.pop()
-                               ↪𝚁; },
-                  󰆩: 󰲡isArr(x)⭜x.flat   (⠤𝔸)⭝x,
-                 ᴍ󰆩: 󰲡isArr(x)⭜x.flatMap(⠤𝔸)⭝x,
-                  ᴍ: 󰲡x.map    (       ⠤𝔸),
-                  ſ: 󰲡x.reduce (       ⠤𝔸),
-                  󰈲: 󰲡x.filter (       ⠤𝔸),
-                  󷸻: 󰲡x.slice  (       ⠤𝔸),
-                  ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
-                  ⋀: 󰲡x.every  (󰻾        ),
-                  ⋁: 󰲡x.some   (󰻾        ) };
-arrayLikeƒ􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁),xᵢ₊₁])];
-𝒪(arrayLikeƒ)􋁃(⥌[𝚔,ƒ]↦{
-  Ϣ􀲮 = 󰲡ƒ(isElm(x)⭜𝐴.from(x)⭝x,⠤𝔸);
-  𝔓(𝐴)􀲮 = function(⠤𝔸){ ↪ƒ(this,⠤𝔸);};
-  Type􋁃(⥌𝑇↦𝔓(𝑇)􀲮 = function(⠤𝔸){ ↪ƒ(𝐴.from(this􋑱),⠤𝔸); }); });
+       ⸓: 󰲥𝔏𝔖􋀫(x,y(𝔏𝔖􋀭(x,z))) };
+{ © arrayLikeƒ = {  : ⥌x,ƒ   ↦{ O = {};
+                                 x􋁃(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
+                                 ↪O; },
+                    Ϝ: ⥌x,ƒ,⠤𝔸↦{ 𝚁 = [⠤𝔸,⠤x];
+                                 ∀(⎉ i=𝔸􋌵∨1; i<𝚁􋌵; i++)
+                                   𝚁ᵢ = ƒ(𝚁ᵢ₋₁,𝚁ᵢ,i,x)
+                                 𝚁.pop()
+                                 ↪𝚁; },
+                    󰆩: 󰲡isArr(x)⭜x.flat   (⠤𝔸)⭝x,
+                   ᴍ󰆩: 󰲡isArr(x)⭜x.flatMap(⠤𝔸)⭝x,
+                    ᴍ: 󰲡x.map    (       ⠤𝔸),
+                    ſ: 󰲡x.reduce (       ⠤𝔸),
+                    󰈲: 󰲡x.filter (       ⠤𝔸),
+                    󷸻: 󰲡x.slice  (       ⠤𝔸),
+                    ꟿ: 󰲣x.map    (󰲡y(⠤x),⠤𝔸),
+                    ⋀: 󰲡x.every  (󰻾        ),
+                    ⋁: 󰲡x.some   (󰻾        ) };
+  arrayLikeƒ􌿑􋇙 = 󰲣[x₀,⠤x􍦛(0,󷰾)􊾡􎘌(⥌c,i↦[y(c,xᵢ₊₁),xᵢ₊₁])];
+  𝒪(arrayLikeƒ)􋁃(⥌[𝚔,ƒ]↦{
+    Ϣ􀲮 = 󰲡ƒ(isElm(x)⭜𝐴.from(x)⭝x,⠤𝔸);
+    𝔓(𝐴)􀲮 = function(⠤𝔸){ ↪ƒ(this,⠤𝔸);};
+    Type􋁃(⥌𝑇↦𝔓(𝑇)􀲮 = function(⠤𝔸){ ↪ƒ(𝐴.from(this􋑱),⠤𝔸); }); }); };
 
 𝒪({ 󰠗: HAT = 󰲡boxᴍ(𝔸,⥌a↦x.hasAttribute(a))􋂃(),
     󱀡: GAT = 󰲣y≇󱣩 ⭜x.getAttribute(y)⭝ x.attributes,
@@ -87,6 +92,12 @@ GID = 󰲡󰈙.getElementById(x);
 EFP = 󰲟󰈙.elementFromPoint(⠤𝔸􎘌(∞));
 AEL = ⥌,⠤𝔸↦(.addEventListener(⠤𝔸),𝚲REL(,⠤𝔸));
 REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
+
+󰈙 = 󰈙ᵈᵒᶜᵘᵐᵉⁿᵗᴱˡᵉᵐᵉⁿᵗ;
+𝚟 = makeProxy(
+  ⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
+  ⥌p,v=ᐦ,=󰈙↦󰈙􋛟.setProperty(‹--⟦p⟧›,v))
+
 
 isStr = 󰲡typeof x ≅ "string";
 isNum = 󰲡typeof x ≅ "number";
