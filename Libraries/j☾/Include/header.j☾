@@ -108,13 +108,13 @@ chainIntoElements = ⥌x,P↦{
 © NSNames = 🆕 Set(‹svg g defs symbol use path rect circle ellipse line polyline polygon text tspan textPath linearGradient radialGradient stop pattern clipPath mask animate animateMotion animateTransform set metadata title desc view image foreignObject marker switch style›.split(𝘀));
 mkə = ⥌name,attrs,kids↦{
     kids = chainIntoElements(kids);
-    ¿(𝗙(name)) ↪name(attrs,⠤kids);
+    ¿(𝗙(name)) ↪name(𝒟(attrs),⠤kids);
     ¿(name≅✗) name = "div";
     ⎉  = NSNames.has(name) ⭜ 󰈙.createElementNS(‹http://www.w3.org/2000/svg›,name)
                              ⭝ 󰈙.createElement(name);
     􍪙(⠤kids);
     ¿(attrs)
-      𝒪(attrs)􋁃(⥌[k,v]↦{
+      (attrs)􋁃(⥌[k,v]↦{
         ¿(k≡␛𝑆      ) 􋛟.cssText   = v;
         ⸘(k∈attrMap) [attrMapₖ] = v;
         ¡            SAT(,k,v); });

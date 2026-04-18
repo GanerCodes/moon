@@ -146,26 +146,25 @@ mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
     ↪󱁕
   
   ⊢(󱁕.ftrp(‹󱀝_pairk 󱀝_pairv 󱀝_ə_typ›⍭,⬤,pre=✓))(󱁕):
-       ¿‹fix›∈󱁕ᵉ:
-      ¿󱁕🃌≡1∧󱁕₀ᵉ ᵀ:
-          󱁕ᶜ = Ń(‹str›, Ń(‹ᔐ_☾›, Ń(‹ᔐ_guts›, 𝔗𝔗(󱁕)))) ⛶
-      ⸘󱁕ᵗ≡‹󱀝_ə_typ› ∧ ¬󱁕􋒷: 󱁕ᶜ = 𝚏𝚕𝚜⛶
-      ¿󱁕ᵗ≡‹󱀝_pairk›: 󱁕ᶜ = mkgrp(␛[␛], ⠤󱁕)⛶
-      ↪ 󱁕
+     ¿‹fix›∈󱁕ᵉ:
+    ¿󱁕🃌≡1∧󱁕₀ᵉ ᵀ:
+        󱁕ᶜ = Ń(‹str›, Ń(‹ᔐ_☾›, Ń(‹ᔐ_guts›, 𝔗𝔗(󱁕)))) ⛶
+    ⸘󱁕ᵗ≡‹󱀝_ə_typ› ∧ ¬󱁕􋒷: 󱁕ᶜ = 𝚏𝚕𝚜⛶
+     ¿󱁕ᵗ≡‹󱀝_pairk›: 󱁕ᶜ = mkgrp(␛[␛], ⠤󱁕)⛶
+    ↪󱁕
   
-  󱁕.ftrp(‹󱀝_brack›⍭, 󱁕↦󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕ᐖmkgrp(␛(␛), ⟞)ᐸ ⨝𝚌𝚘𝚖)]), pre=✓)
-  󱁕.ftrp(‹󱀝_pair󷺗›⍭, 󱁕↦󱁕.copy(c=󱁕⨝𝚌𝚕𝚗), pre=✓)
-
-  󱁕.ftrp(‹󱀝_attrs›⍭, 󱁕↦󱁕.copy(c=mkgrp(␛{␛}, ⠤󱁕⨝𝚌𝚘𝚖)), pre=✓)
-  󱁕.ftrp(‹󱀝_pairm›⍭, 󱁕↦󱁕.copy(c=mkexp(𝚍𝚘𝚝𝚜, mkgrp(␛(␛), 󱁕))), pre=✓)
+  󱁕.ftrp(‹󱀝_brack›􀌌, 󱁕↦󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕ᐖmkgrp(␛(␛), ⟞)ᐸ ⨝𝚌𝚘𝚖)]), pre=✓)
+  󱁕.ftrp(‹󱀝_pairm›􀌌, 󱁕↦󱁕.copy(c=mkexp(𝚍𝚘𝚝𝚜, mkvar(␛𝒪), mkgrp(␛(␛), 󱁕))), pre=✓)
+  󱁕.ftrp(‹󱀝_pair󷺗›􀌌, 󱁕↦󱁕􀊹􀉞1􀛾󱁕₀ᵗ􀉞‹󱀝_pairm›􇂖󱁕􇂗󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕􀋢𝚌𝚘𝚖)]), pre=✓)
+  󱁕.ftrp(‹󱀝_attrs›􀌌, 󱁕↦󱁕.copy(c=[mkgrp(␛[␛], ⠤󱁕⨝𝚌𝚘𝚖)]), pre=✓)
   
   ⊢(󱁕.ftrp(‹󱀝›⍭, ⬤, pre=✓))(󱁕):
      𝚛 = mkexp(mkvar(‹mkə›), mkgrp(␛(␛), ⠤󱁕₁﹕ᐵᵗ≡␛✓ ⭜𝚏𝚕𝚜⭝ ⟞ᐸ ⨝𝚌𝚘𝚖))
      ↪ 󱁕₀ᵗ≠␛✓ ⭜mkgrp(␛(␛), mkvar(󱁕₀􋒷), 𝚎𝚚𝚕, 𝚛)⭝ 𝚛
   
-  󱁕.ftrp(‹const opert󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(𝘀𝘀, 󱁕))
+  󱁕.ftrp(‹const opert󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(𝘀𝘀,󱁕))
   󱁕.ftrp(‹ᔐ_sub󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦󱁕.copy(c=⛶mkgrp(‹${ }›⍭, ⠤󱁕)), pre=✓)
-  󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜, mknum(flip(󱁕􋒷))))
+  󱁕.ftrp(‹neg_num󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkexp(𝚖𝚗𝚜,mknum(flip(󱁕􋒷))))
   󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕􋒷≕α∈reps ⭜󱁕.copy(c=⛶𝔗(reps󰃤))⭝ 󱁕)
   󱁕.ftrp(‹const opert var›⍭, 󱁕↦󱁕.copy(c=[Ń(󱁕₀ᵗ􀉳mp􀞆ᐦ, e=𝚃)]))
   
@@ -176,7 +175,7 @@ mkvar,mkopt,mknum = ‹var opert number›⍭ᐖ󰲡Ń(⟞,𝔗(x))
   󱁕.ftrp(‹ᔐ_moss󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, transpile_moss(󱁕􋒷,✓,Ѧ=moss_aliases) 𝔗), pre=✓)
   󱁕.ftrp(‹ᔐ_☾󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕), pre=✓)
   󱁕.ftrp(‹ᔐ_spec_char›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 gs 𝔗))  
-  󱁕.ftrp(‹ᔐ_escape󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛`␛`, 󱁕􋒷 fmt_js_ᔐ 𝔗))
+  󱁕.ftrp(‹ᔐ_escape󷺗󷺗󷺗›⍭, 󱁕↦mkgrp(␛"␛", 󱁕􋒷 fmt_js_ᔐ 𝔗))
   
   ↪󱁕
 
