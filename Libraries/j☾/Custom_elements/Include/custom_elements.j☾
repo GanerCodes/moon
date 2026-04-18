@@ -123,12 +123,12 @@
                   ¿(󰨂⸮) .dragleave⸮({⠤𝜺,:󰨂􋑵});
                   ¿(𝜺⸮) .dragenter⸮(𝜺);
                   󰨂 = 𝜺; }
-    AEL(,‹pointerdown󷺗󷺗›,󰲡𝔖(x  ));
-    AEL(,‹pointerup󷺗󷺗󷺗󷺗›,󰲡𝔈(x,✓));
-    AEL(,‹pointercancel›,󰲡𝔈(x,✗));
-    AEL(,‹pointermove󷺗󷺗›,󰲡𝔐(x  ));
-    AEL(,‹touchstart󷺗󷺗󷺗›,󰲡x.cancelable ∧ x.preventDefault());
-    AEL(,‹dragstart󷺗󷺗󷺗󷺗›,󰲡x.cancelable ∧ x.preventDefault());
+    AEL(,‹pointerdown󷺗󷺗›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (𝔖(x  )));
+    AEL(,‹pointerup󷺗󷺗󷺗󷺗›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (𝔈(x,✓)));
+    AEL(,‹pointercancel›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (𝔈(x,✗)));
+    AEL(,‹pointermove󷺗󷺗›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (𝔐(x  )));
+    AEL(,‹touchstart󷺗󷺗󷺗›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (x.cancelable ∧ x.preventDefault()));
+    AEL(,‹dragstart󷺗󷺗󷺗󷺗›,󰲡ᵈⁱˢᵃᵇˡᵉᴰʳᵃᵍ ∨ (x.cancelable ∧ x.preventDefault()));
     ↪; };
 
   ⎉ 𝘵 = ␀;
