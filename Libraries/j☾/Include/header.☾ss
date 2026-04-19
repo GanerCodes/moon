@@ -233,8 +233,9 @@
   ⎊ 𝚊𝚜󷷣 ∣ 𝚊𝚜 center
   ⎊ 𝚊𝚜→ ∣ 𝚊𝚜 flex-end
   ⎊ 𝚊𝚜b ∣ 𝚊𝚜 space-between
-  ⎊ 𝚊𝚜s ∣ 𝚊𝚜 stretch
   ⎊ 𝚊𝚜a ∣ 𝚊𝚜 space-around
+  ⎊ 𝚊𝚜e ∣ 𝚊𝚜 space-evenly
+  ⎊ 𝚊𝚜s ∣ 𝚊𝚜 stretch
  text align
 ⌾ «󰊄𝚊 𝚝𝚊» text-align
   ⎊ «󰊄 𝚝»𝚊← ∣ 󰊄𝚊 left
