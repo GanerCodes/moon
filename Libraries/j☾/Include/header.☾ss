@@ -53,26 +53,42 @@
 ⌾ 𝚃𝚏   transform
 ⌾ 𝚣    z-index
 ⌾ 𝚣𝚘𝚘𝚖 zoom
-⌾ 󰊄    font
-⌾ 󰊄𝚏   font-family
-⌾ 󰊄𝚜   font-size
-⌾ 󰍽    pointer-events
-⌾ «𝚖𝚙 » cursor
-  ⎊ p ∣  pointer
-  ⎊ g ∣  grab
-⌾ 󰊄𝚠   text-wrap
+
+⌾ 󰊄  font
+⌾ 󰊄𝚏 font-family
+⌾ 󰊄𝚜 font-size
+⌾ «󰊄𝚊 𝚝𝚊» text-align
+  ⎊ «󰊄 𝚝»𝚊← ∣ 󰊄𝚊 left
+  ⎊ «󰊄 𝚝»𝚊󷷣 ∣ 󰊄𝚊 center
+  ⎊ «󰊄 𝚝»𝚊→ ∣ 󰊄𝚊 right
+⌾ 󰊄𝚠 text-wrap
   ⎊ 󰊄𝚠w ∣ 󰊄𝚠 wrap
   ⎊ 󰊄𝚠n ∣ 󰊄𝚠 nowrap
   ⎊ 󰊄𝚠b ∣ 󰊄𝚠 balance
   ⎊ 󰊄𝚠p ∣ 󰊄𝚠 pretty
   ⎊ 󰊄𝚠s ∣ 󰊄𝚠 stable
 ⌾ 󰊄𝚘   text-overflow
-  ⎊ 󰊄𝚘c ∣ 󰊄𝚘 clip
-  ⎊ 󰊄𝚘… ∣ 󰊄𝚘 ellipsis
+  ⎊ 󰊄𝚘c     ∣ 󰊄𝚘 clip
+  ⎊ 󰊄𝚘«… e» ∣ 󰊄𝚘 ellipsis
 ⌾ 󰊄𝚘𝚠  overflow-wrap
   ⎊ 󰊄𝚘𝚠n ∣ 󰊄𝚘𝚠 normal
   ⎊ 󰊄𝚘𝚠w ∣ 󰊄𝚘𝚠 break-word
   ⎊ 󰊄𝚘𝚠* ∣ 󰊄𝚘𝚠 anywhere
+⌾ 󰊄𝚍 font-display
+  ⎊ 󰊄𝚍a ∣ 󰊄𝚍 auto
+  ⎊ 󰊄𝚍b ∣ 󰊄𝚍 block
+  ⎊ 󰊄𝚍f ∣ 󰊄𝚍 fallback
+  ⎊ 󰊄𝚍o ∣ 󰊄𝚍 optional
+  ⎊ 󰊄𝚍s ∣ 󰊄𝚍 swap
+⌾ 󰊄𝚋 font-weight
+  ⎊ 󰊄𝚋n ∣ 󰊄𝚋 400
+  ⎊ 󰊄𝚋l ∣ 󰊄𝚋 100
+  ⎊ 󰊄𝚋b ∣ 󰊄𝚋 700
+
+⌾ 󰍽    pointer-events
+⌾ «𝚖𝚙 » cursor
+  ⎊ p ∣  pointer
+  ⎊ g ∣  grab
 ⌾ 𝚟𝚊   vertical-align
 ⌾ «   𝚌» color
 ⌾ «𝚋 𝚌𝚋» background-color
@@ -236,8 +252,3 @@
   ⎊ 𝚊𝚜a ∣ 𝚊𝚜 space-around
   ⎊ 𝚊𝚜e ∣ 𝚊𝚜 space-evenly
   ⎊ 𝚊𝚜s ∣ 𝚊𝚜 stretch
- text align
-⌾ «󰊄𝚊 𝚝𝚊» text-align
-  ⎊ «󰊄 𝚝»𝚊← ∣ 󰊄𝚊 left
-  ⎊ «󰊄 𝚝»𝚊󷷣 ∣ 󰊄𝚊 center
-  ⎊ «󰊄 𝚝»𝚊→ ∣ 󰊄𝚊 right
