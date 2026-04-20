@@ -14,6 +14,7 @@ makeProxy = ⥌𝚐,𝚜,o={}↦
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;  get-setdefault
 𝒫 = (⥌ƒ↦makeProxy(⥌𝚔↦󰲡ƒ(x,𝚔,⠤𝔸),󰻾,ƒ))
     (⥌d,k,v=󱣩↦k∈d⭜(d=dₖ,󰆴dₖ,d)⭝v);
+𝓟 = 󰲣[x,ᴍv(y,⥌v,k↦𝒫ₖ(x,v))];
 
 © Type = [HTMLDocument,ShadowRoot,Element];
 𝔓 = 󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ;
@@ -101,7 +102,7 @@ REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
   ⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
   ⥌p,v=ᐦ,=󰈙↦󰈙􋛟.setProperty(‹--⟦p⟧›,v))
 
-showə = ⥌,y=󱣩↦􈛣(‹hidden›,⠤y≅󱣩⭜[]⭝[y]);
+showə = ⥌,y=󱣩↦􈛣(‹hidden›,⠤y≅󱣩⭜[]⭝[¬y]);
 swapə = 󰲣{ ¿(x≅y) ↪;
            © [α,β] = [x.parentNode,y.parentNode];
            ¿(α∧β) { ⎉ χ = 󱀝 {}

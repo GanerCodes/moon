@@ -9,7 +9,7 @@
 Ϣ.toggleButton = ⥌ƒ,N,Y,S=✗,Ѧ={}↦{
   Ѧ = {init:✓,polar:✓,⠤Ѧ};
   S = +¬¬S;
-  ¿(isStr(N)) [N,Y] = [N,Y]􊾡(󰲡 󱀝 button ‹⟦x⟧›);
+  [N,Y] = [N,Y]􊾡(󰲡isStr(x)⭜󱀝 button ‹⟦x⟧›⭝x);
   
   Ѧ = { ⠤Ѧ,S,Y,N,:S⭜Y⭝N,
            set: ⥌s=󱣩↦{ Ѧ󰀒 = s≅󱣩 ⭜¬Ѧ󰀒⭝ +s;
