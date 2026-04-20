@@ -6,86 +6,83 @@
         ⊖ ⟦x₁⟧⟦󷸀⟧ #⟦3h⟧›󰅂􀋶􀋢𝗻
 】
 
-* ∣ box-sizing border-box
-button,input,span,select,textarea,.dragItem,.dragHold
-  𝚃 all 0.1s ease-in-out
-  font-«family size weight» inherit
+@layer base
+  button,input,span,select,textarea,.dragItem,.dragHold
+    𝚃 all 0.1s ease-in-out
+    font-«family size weight» inherit
 
-html ∣  ⦑f0⦒; 𝚋 ⦑b0⦒
-body ∣ 𝚏↓;𝚊𝚂󷷣
+  html ∣  ⦑f0⦒; 𝚋 ⦑b0⦒
+  body ∣ 𝚏↓;𝚊𝚂󷷣
+  «button input»
+    «𝚙 𝚖»0
+    𝚘𝚕 􋄅
+     ⦑f0⦒; 𝚋 transparent
+  button
+    𝚋 􍍝
+    􎁎 ∣ 𝚖𝚙 pointer
+         𝚃𝚏 scale(1.02)
+         𝚋 ⦑f2⦒33
+    􀴗 ∣ 𝚃𝚏 scale(1.03)
+         𝚋 ⦑f1⦒33
+  .box ∣ 𝚠;𝚙 1em
+         􊽬(.noOutline) ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+         .noOutline    ∣ 𝚋 1px solid #0000
+         >* ∣ 𝚖 0.25em
+  .boxInput
+    𝚏→; 𝚊𝚂󷷣; 𝚙0
+     ⦑f0⦒; 𝚋 ⦑b0⦒
+    𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
+    􍴍         ∣ 𝚋 ⦑b1⦒
+                 𝚋 1px solid ⦑f0⦒
+    􋁋(input􍳷) ∣ 𝚋 1px solid #f00
+     * ∣ 󰊄𝚜 24px
+    >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
+    >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
 
-«button input»
-  «𝚙 𝚖»0
-  𝚘𝚕 􋄅
-   ⦑f0⦒; 𝚋 transparent
+  dialog::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
+  dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠≥ 400px; 𝚑≥ 650px
+                𝚙 30px
+                 ⦑f0⦒; 𝚋 ⦑b0⦒DD
+                𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
+                𝚜 ⦑f0⦒33 0px 0px 20px 0px
+  .dialogCloseBtn
+    𝚙𝚘𝚜a; → 0.333em; ↑ 0px
+     ⦑f4⦒; 󰊄𝚜 35px
+    􎁎 ∣  ⦑f2⦒; 𝚋𝚐 􋄅
+    􀴗 ∣  ⦑f1⦒; 𝚋𝚐 􋄅
+  .roundBtn
+    𝚙 4px
+    𝚋 2px solid ⦑f4⦒; 𝚋𝚛 4px
+    􎁎 ∣ 𝚋 2px solid ⦑f1⦒
+    􀴗 ∣ 𝚋 2px solid ⦑f0⦒
 
-button
-  𝚋 􍍝
-  􎁎 ∣ 𝚖𝚙 pointer
-       𝚃𝚏 scale(1.02)
-       𝚋 ⦑f2⦒33
-  􀴗 ∣ 𝚃𝚏 scale(1.03)
-       𝚋 ⦑f1⦒33
+  .table ∣ 𝚍 grid; 𝚠
+           grid-auto-rows max-content
+           gap 0
+  .tableItem ∣ 𝚋 1px solid ⦑f2⦒
+               𝚙 3px
 
-.box ∣ 𝚠;𝚙 1em
-       􊽬(.noOutline) ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-       .noOutline    ∣ 𝚋 1px solid #0000
-       >* ∣ 𝚖 0.25em
-.boxInput
-  𝚏→; 𝚊𝚂󷷣; 𝚙0
-   ⦑f0⦒; 𝚋 ⦑b0⦒
-  𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-  􍴍         ∣ 𝚋 ⦑b1⦒
-               𝚋 1px solid ⦑f0⦒
-  􋁋(input􍳷) ∣ 𝚋 1px solid #f00
-   * ∣ 󰊄𝚜 24px
-  >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
-  >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
+  .pageNumBar ∣ 𝚏→; 𝚙0
 
-dialog::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
-dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠≥ 400px; 𝚑≥ 650px
-              𝚙 30px
-               ⦑f0⦒; 𝚋 ⦑b0⦒DD
-              𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
-              𝚜 ⦑f0⦒33 0px 0px 20px 0px
-.dialogCloseBtn
-  𝚙𝚘𝚜a; → 0.333em; ↑ 0px
-   ⦑f4⦒; 󰊄𝚜 35px
-  􎁎 ∣  ⦑f2⦒; 𝚋𝚐 􋄅
-  􀴗 ∣  ⦑f1⦒; 𝚋𝚐 􋄅
-.roundBtn
-  𝚙 4px
-  𝚋 2px solid ⦑f4⦒; 𝚋𝚛 4px
-  􎁎 ∣ 𝚋 2px solid ⦑f1⦒
-  􀴗 ∣ 𝚋 2px solid ⦑f0⦒
+  .«pageNumButton pageNumPrev pageNumNext»
+    𝚊«𝙿 𝚂»󷷣; «𝚖 𝚙»0
+    «𝚠 𝚑» 40px
+    𝚋 1px solid ⦑f4⦒
+    𝚋𝚛 5px
+    𝚖󷷢 3px
+  .selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
+  .«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒
 
-.table ∣ 𝚍 grid; 𝚠
-         grid-auto-rows max-content
-         gap 0
-.tableItem ∣ 𝚋 1px solid ⦑f2⦒
-             𝚙 3px
+  *[canDrag] ∣ 𝚃 all 0.1s ease-in-out
+               𝚖𝚙 pointer
+  *[dragging]  ∣ 𝚃𝚏 scale(0.5)
+                 user-select 􋄅
+                  touch-action 􋄅
+   *[maydrop]   ∣ 𝚋 2px dashed #FF0
 
-.pageNumBar ∣ 𝚏→; 𝚙0
-
-.«pageNumButton pageNumPrev pageNumNext»
-  𝚊«𝙿 𝚂»󷷣; «𝚖 𝚙»0
-  «𝚠 𝚑» 40px
-  𝚋 1px solid ⦑f4⦒
-  𝚋𝚛 5px
-  𝚖󷷢 3px
-.selectedPageNum            ∣ 𝚋 #⦑𝔟2⦒⦑𝔟4⦒⦑𝔟2⦒
-.«pageNumPrev pageNumNext»􋒗 ∣ 𝚋 ⦑b2⦒
-
-*[canDrag] ∣ 𝚃 all 0.1s ease-in-out
-             𝚖𝚙 pointer
-*[dragging]  ∣ 𝚃𝚏 scale(0.5)
-               user-select 􋄅
-                touch-action 􋄅
- *[maydrop]   ∣ 𝚋 2px dashed #FF0
-
- *[dragHold][maydrop]::after
-   content ''
-   𝚍 block
-   «𝚠 𝚑» 21px
-   𝚋 2px dashed #FF0
-   𝚖 5px
+   *[dragHold][maydrop]::after
+     content ''
+     𝚍 block
+     «𝚠 𝚑» 21px
+     𝚋 2px dashed #FF0
+     𝚖 5px
