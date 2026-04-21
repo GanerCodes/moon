@@ -90,11 +90,10 @@ reps = 󰦥󰦥󰦥󰦥
 
 specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
 attr_repl = ‹
-  🃌 length @ at : slice ¶ style
+  🃌 length @ at : slice ¶ style ∋ includes
   ⫰ toUpperCase ⫯ toLowerCase 󰊄 innerText 󰿨 children
    disabled 󱇙 classList 󰌷 append + add - remove ∀ forEach
   󱗠 classList.remove 󰆂 classList.toggle 󰆃 classList.add 󰆆 classList.contains
-   querySelector  querySelectorAll
 ›ᐒ𝗻􀋀􍪵􁘷␛ 􀌌􀋅≺􀋀
 
 CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈␛⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
