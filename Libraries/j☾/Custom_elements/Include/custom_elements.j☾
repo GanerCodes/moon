@@ -23,7 +23,7 @@
   ↪Ѧ; };
 Ϣ.textField = ⥌Ѧ↦{  󰤱 󰿄
   ⎉ ə;
-  ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮ ⠤Ѧ};
+  ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮autocomplete off⍮ ⠤Ѧ};
   ¿(Ѧ􇦝∨Ѧ􇦫) { ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} [
                    ⟦fld⟧
                    ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"","",✓,{polar:✓})􋑵)⟧ ]; }
