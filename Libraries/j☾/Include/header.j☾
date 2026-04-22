@@ -5,18 +5,24 @@ makeProxy = ⥌𝚐,𝚜,o={}↦
               set(_,k,v) { ↪𝚜(k,v); }});
 󰻾 = 󰲡x;
 [Ϣ,󰈙] = [window,document];
-[𝐴,𝐸,𝑜,𝑖,∞] = [Array,Element,Object,Number,Infinity];
+[𝐴,𝐸,𝑜,ᔐ,𝑖,∞] = [Array,Element,Object,String,Number,Infinity];
+Type = [HTMLDocument,ShadowRoot,Element];
 [𝒪,𝒟,𝒪k,𝒪v] = [𝑜ᵉⁿᵗʳⁱᵉˢ,𝑜ᶠʳᵒᵐᴱⁿᵗʳⁱᵉˢ,𝑜ᵏᵉʸˢ,𝑜ᵛᵃˡᵘᵉˢ];
 𝒪ℳ = 󰲡x􋔩(󰲣({⠤x,⠤y}));
-𝒪𝑏 = ⥌o,n=✗,y=o↦{ ∀(©_∈o) ↪y;
-                  ↪n; };
+𝒪𝑏 = ⥌o,n=✗,y=o↦{ ∀(©_∈o) ↪y; ↪n; };
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;  get-setdefault
 𝒫 = (⥌ƒ↦makeProxy(⥌𝚔↦󰲡ƒ(x,𝚔,⠤𝔸),󰻾,ƒ))
     (⥌d,k,v=󱣩↦k∈d⭜(v=dₖ,󰆴dₖ,v)⭝v);
-𝓟 = 󰲣[x,ᴍv(y,⥌v,k↦𝒫ₖ(x,v))];
+𝓟 = 󰲣[x,ᴍv(y,⥌v,k↦𝒫ₖ(x,v))];  partition 𝒪 with default
 
-© Type = [HTMLDocument,ShadowRoot,Element];
+is𝑏   = 󰲡typeof x ≅ ‹boolean›;
+isStr = 󰲡typeof x ≅ ‹string›;
+isNum = 󰲡typeof x ≅ ‹number›;
+isArr = 󰲡x instanceof Array;
+isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument ∨ x instanceof ShadowRoot;
+
 𝔓 = 󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ;
+☾ = 󰲟(console.log(⠤𝔸),𝔸₀);
 󷹝 = Stringᶠʳᵒᵐ󰀂ʰᵃʳ󰀂ᵒᵈᵉ;
 🃌 = 󰲡xˡᵉⁿᵍᵗʰ;
 𝗙 = 󰲡x instanceof Function;
@@ -37,17 +43,16 @@ makeProxy = ⥌𝚐,𝚜,o={}↦
 ᴍv = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦[k,y(v,k)]));
 ᴍd = 󰲣𝒟(𝒪(x)􊾡(⥌[k,v]↦y(k,v)));
 boxᴍ = 󰲣(isArr(x)⭜x􎘌(∞)⭝[x])􊾡(y);
-☾     = 󰲟(console.log  (⠤𝔸),𝔸₀);
 table = 󰲟(console.table(⠤𝔸),𝔸₀);
 pairs = 󰲡x.toSpliced(-1,1)􊾡(⥌x,i↦[x,vᵢ₊₁]);
 ends  = ⥌l↦l.map(⥌𝑥,i↦[i≡0,𝑥,i≡🃌(l)-1]);
 merge = 󰲟𝑜.assign({},⠤𝔸);
 sleep = ⥌s↦🆕Promise(⥌r↦setTimeout(r,1000⋅s));
-mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y,ᐦ);
+mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars))))􋔩(󰲣x+y,ᐦ);
 ƒdbg  = ⥌ƒ↦󰲟{ ☾(‹ƒ: Calling with:›,⠤𝔸);
-              © r = ƒ(⠤𝔸);
-              ☾(‹ƒ: Returning›, r);
-              ↪r };
+                  © r = ƒ(⠤𝔸);
+                  ☾(‹ƒ: Returning›, r);
+                  ↪r };
 
 © 𝑙Replace = 󰲣(x.splice(0,∞,⠤y),x);
 © 𝑜Replace = 󰲣{ y = structuredClone(y);  replace x with copy of y
@@ -93,6 +98,9 @@ mk_id = ⥌l,chars=BASE_CHARSET↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(ch
     𝔓(𝐴)􀲮 = function(⠤𝔸){ ↪ƒ(this,⠤𝔸);};
     Type􋁃(⥌𝑇↦𝔓(𝑇)􀲮 = function(⠤𝔸){ ↪ƒ(𝐴.from(this􋑱),⠤𝔸); }); }); };
 
+abcABC123 = 󷹝(⠤⭥(97,123),⠤⭥(65,91),⠤⭥(48,58));
+ Pretty much dom stuff from here on
+
 𝒪({ 󰠗: HAT = 󰲡boxᴍ(𝔸,⥌a↦x.hasAttribute(a))􋂃(),
     󱀡: GAT = 󰲣y≇󱣩 ⭜x.getAttribute(y)⭝ x.attributes,
     󰧥: SAT = ⥌x,y,z=ᐦ↦boxᴍ(y,⥌a↦x.setAttribute(a,z)),
@@ -131,13 +139,6 @@ swapə = 󰲣{ ¿(x≅y) ↪;
                     χ.remove(); }
            ⸘(α) α.replaceChild(y,x);
            ⸘(β) α.replaceChild(x,y); };
-
-is𝑏   = 󰲡typeof x ≅ "boolean";
-isStr = 󰲡typeof x ≅ ‹string›;
-isNum = 󰲡typeof x ≅ ‹number›;
-isArr = 󰲡x instanceof Array;
-isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument;
-[isArray,isElement] = [isArr,isElm];
 
  󱀝✨󱀝✨󱀝 topaz notation 󱀝✨󱀝✨󱀝
 © attrMap = { "":"onclick", onclick:"onclick", closedby:"closedBy", NAME:"T", 𝑇𝐼:"tabIndex", 𝑃𝐻:"placeholder", 𝑇:"type", 𝐼:"id", 𝐶:"className" };

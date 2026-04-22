@@ -1,5 +1,5 @@
 #!/bin/bash -e
-{ cd "$(dirname $(realpath -s $0))"
+{ cd "$(dirname $(realpath $0))" # realpath -s $0
 
 chk_py_ver() {
     command -v "$1" >/dev/null 2>&1 && {
@@ -32,6 +32,6 @@ echo -e "#!/bin/sh\nulimit -s unlimited\nexec \"$PYTHON\" -S -u \"$(realpath moo
 chmod a+x "$DEST"
 
 echo "Preloading cache…"
-"$DEST" -c '󷺹⪢1󱅏3⋅ⴵ⭠ᐸ⍟⬓←π⹏ᵜ🃌x≔‹Welcome to ☾! ›⋅3→∘xᑀ+⟞ᴙᐸ⟖𝗻'
+"$DEST" -c '󷺹􁁧1􀌉3􀝬􀌊􀌇ᐸ􀊒󷺹􍨄􀉞␛!ᐸ􀜭‹Welcome to ☾!  ›3􀞆𝗻'
 
 exit 0; }
