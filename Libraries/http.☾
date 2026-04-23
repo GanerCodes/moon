@@ -56,7 +56,7 @@ relpath = ∾󷺹.relative_to􀊉󷺽  (dir,path)↦path_from_dir_view
       𝕊.wfile.flush􀃅
       ¿‹MEASURE_HTTP›􀉧env: ‹HTTP Handle end @ ⟦time􀃅⟧›􀊸
   
-  ↪⥌ip=ipv4(0x000000),port=8080,threaded=✓↦␛
+  ↪⥌ip=ipv4(0x00000000),port=8080,threaded=✓↦␛
     ⓦ((threaded􀯗TCPServerThreaded􀯘TCPServer)((ip,port),𝔖), 󷺹.serve_forever􀃅)
 
 ⭷ ipv4,relpath,safej,parse_path,intended_path,HTTP_Server
