@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='j3RBX1atuDINjgbcaSVxrezWSg2tvtEtDzE7RafAZSQ'
+BOOTSTRAP_HASH='pzD7CWEGUiZEhHQE_OsJ06mk9JFYrIUW1yeavb6D1Ic'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -1152,11 +1152,14 @@ def _(áÑã,áØÆ,áØÁ=ÂÞÅ,ÁÜñ=ÂÞÅ):
     
 
 
-#ops_C.☾ (3099 ⟶ 8895)
+#ops_C.☾ (3110 ⟶ 8945)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/ops_C.☾')).parent
 @OPWRAP_(*(("󱑼󷹅")))
 def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
     (áÖÒ:=((áØÆ)if((áØÇ is ÂÞÅ))else((áØÆ,áØÇ))))
+    if (not ãÊú(áÖÒ) ):
+        return ÂÚü()
+    
     (ÄÊPSH(MOD(ÐÌÛ,áØÁ=áÍÖ,ÁÜñ=ÄÕøü)(áÖÒ,áÓö)),((N:=ÄÊPKE(0)[0]),(I:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     (ÄÊPSH(Âîí(Áÿú(ÄÝöÊ(áÖÒ,I),ãÊú))),((l:=ÄÊPKE(0)[0]),(h:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
     if N:
