@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='2DYkpscWam9YVcBgbFvmgqAGU_DqLCGbzps1ORCkXeY'
+BOOTSTRAP_HASH='vh7yim_04eyiMPXjn65Rz-ni1PS541PZNXjF335MXu4'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -1930,7 +1930,7 @@ class cd:
 
 (cd:=ÐÌü(cd))
 
-#🌈.☾ (1631 ⟶ 3281)
+#🌈.☾ (1629 ⟶ 3281)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/🌈.☾')).parent
 def h2r(c=ÁØã):
     if ÁØö(c,áÍÞ):
