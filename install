@@ -19,7 +19,7 @@ chk_py_pip() { "$PYTHON" -c "import pip" 2>/dev/null; }
 
 chk_py_pip || { echo "pip is not installed. Running ensurepip."
                 "$PYTHON" -m ensurepip || echo "Failed to run ensurepip ⎺⟍_⟨⍩⟩_⟋⎺"; }
-chk_py_pip && "$PYTHON" -m pip install --break-system-packages pycryptodome cffi regex orjson json5 clipboard \
+chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U pycryptodome cffi regex clipboard \
            || echo "Failed to run pip ⎺⟍_⟨⍩⟩_⟋⎺"
 
 DEST=$([ "$(id -u)" -eq 0       ] && echo "/bin/☾"             || (\

@@ -1,0 +1,20 @@
+{
+  "search.exclude": {
+    "Builtins/Data/*": true,
+    "Libraries/Glypher/PuaMaps/*": true,
+    "Libraries/Glypher/External/*/*": true,
+    "Libraries/Glypher/Output/.XCompose": true,
+    "Libraries/Glypher/Output/*.json": true,
+    "Libraries/Glypher/.SCRIPT_MAP": true,
+    "Libraries/j☾/Custom_elements/Tester/website_compiled/*": true,
+    "Libraries/peggle3/wasm_build/src/*": true,
+    "Extra/CodiumExtension/themes/theme.json": true,
+    "Extra/CodiumExtension/color_basis.json": true,
+  },
+  "files.exclude": {
+    "Libraries/Glypher/PuaMaps/Old/*": true,
+    "Libraries/Glypher/External/*/*": true,
+    "Libraries/j☾/Custom_elements/Tester/website_compiled/*": true,
+    "Libraries/peggle3/wasm_build/src/*": true,
+  }
+}

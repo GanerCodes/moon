@@ -1,9 +1,9 @@
-Check if palindrome       ; 𝕩ᑀᴙ≡⟞
-Check if int palindrome   ; 𝕩⥉󷺹ᴙ≡⟞ᐸ○ᔐ  now just 𝕩ᑀ≡⟞ᴙ
-n-dim hypot               ; 𝕩ᑀᐵ²ᐸ⨁⥉√
-n-dim hypot but golf      ; 𝕩ᴍ√􊽲⨁⥉√
-val count map             ; 𝕩󰻾ꟿⱽ󷺻🃌󷺽
-digits of base-𝕪 𝕩 to int ; 𝕩ſ⁰󷺹⋅𝕪+󷺽
+Check if palindrome       ; 󷺹􀋂􀜂⟞
+Check if int palindrome   ; 󷺹􀜂⟞􀋂
+n-dim hypot               ; 󷺹ᐵ²ᐸ􀉹􀌀
+val count map             ; 󷺹􀉶󰻾􀉴􁎀󷺻􀊹󷺽
+digits of base-𝕪 𝕩 to int ; 󷺹􀉷⁰󷺹􀋈𝕪􀊩󷺽
+ ok so below is old ☾ code and prob wont work
 generate subgroup of Sₙ   ; 𝕩ᑀ⥉🟕ᐳ⟞󷸻ᵜ󷺽
 primes up to 𝕩            ; 𝕩ᐒ1󷸺⟞󰈲⋀○󷺹ᑀ%ᑈ1󷸸⟞
 𝕩 rows of pascal triangle ; 𝕩ᐒ󷺹ᙧ0⋄1ᴍ⨁→⛶⟗⛶1󰌷ᐸ⍟⟞∘⛶1
