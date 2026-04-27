@@ -1,3 +1,5 @@
+ 󷹇 this is 99% broken due to be tailoring all of it for the LWMP project.
+
 Ϣ = window;
 
 Ϣ.notab = 󰲡((x.tabIndex = -1),x)
@@ -21,15 +23,27 @@
   Y􀴗 = N􀴗 = Ѧ;
   ¿(Ѧⁱⁿⁱᵗ) Ѧˢᵉᵗ(Ѧ󰀒);
   ↪Ѧ; };
-Ϣ.textField = ⥌Ѧ↦{  󰤱 󰿄
-  ⎉ ə;
-  ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮autocomplete off⍮ ⠤Ѧ};
-  ¿(Ѧ􇦝∨Ѧ􇦫) { ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} [
-                   ⟦fld⟧
-                   ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"","",✓,{polar:✓})􋑵)⟧ ]; }
-  ¡{ ə = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
-  ə􀲫 = fld;
-  ↪ə; }
+Ϣ.textField = ⥌Ѧ={},ɒ={}↦{  󰤱 󰿄
+  Ѧ = {init:✗,valid:✗,⠤Ѧ}
+  ⎉ ;
+  ⎉ fld = 󱀝 input {⦅𝚏𝚐 2; 𝚠≥ 0; 𝚙 2px; 𝚑; 𝚋 􋄅⦆⍮autocomplete off⍮⠤ɒ};
+  ¿(Ѧ􇦝∨Ѧ􇦫) {  = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} [
+                   ⟦fld⟧
+                   ⟦notab(toggleButton(󰲡(fld.type = ["password","text"]₊ₓ),"","",✓,{polar:✓})􋑵)⟧ ]; }
+  ¡        {  = 󱀝 span {𝐶 boxInput⍮ ⦅𝚠⦆} ⟦fld⟧; }
+  􀲫 = fld;  󰤱 remove this
+  􀴗=Ѧ; Ѧ􋑵=;
+  
+  Ѧᵘᵖᵈᵃᵗᵉ = 󰲟{ Ѧᵛ = fldᵛᵃˡᵘᵉ
+               Ѧᵒⁿⁱⁿᵖᵘᵗ⸮(Ѧᵛ);  󰤱 move this?
+               ¿(¬Ѧ􇦭) ↪;
+               Ѧᵛᵃˡⁱᵈ = Ѧ􇦭(Ѧᵛ);
+               fld.setCustomValidity(Ѧᵛᵃˡⁱᵈ⭜ᐦ⭝␛✗);
+               fld.reportValidity(); };
+  AEL(fld,‹input›,Ѧᵘᵖᵈᵃᵗᵉ);
+  Ѧᵛ=fldᵛᵃˡᵘᵉ;
+  ¿(Ѧⁱⁿⁱᵗ) Ѧᵘᵖᵈᵃᵗᵉ();
+  ↪; }
 Ϣ.box = ⥌Ѧ,⠤C↦{  󰤱
   ↪ 󱀝 div {𝐶 box⍮⦅𝚏↓;𝚊𝚂󷷣⦆} ⟦C⟧
 };
@@ -150,12 +164,12 @@
     .dragenter = ⥌𝜺↦αoverβ(,𝜺􋑵,✓);
     .dragleave = ⥌𝜺↦αoverβ(,𝜺􋑵,✗);
     .dropped   = ⥌𝜺↦{ ¿(≅𝜺􋑵 ∨ ¬𝜺􋑵) ↪;
-                       ¿(𝜺􋑵 􈞠(‹dragItem›)≡𝚒) ƒ(,𝜺􋑵);
-                       ¿(𝜺􋑵 􈞠(‹dragHold›)≡𝚒) 𝜺􋑵.dropInto();
+                       ¿(𝜺􋑵 􈞠(‹dragItem›)≡𝚒) ƒ(,𝜺􋑵,𝜺);
+                       ¿(𝜺􋑵 􈞠(‹dragHold›)≡𝚒) 𝜺􋑵.dropInto(,𝜺);
                        𝜺􋑵 􈛑(‹maydrop›); };
     ↪; };
   Ϣ.dragHold = ⥌,𝚒=0,ƒ=󰲣x􍪙(y)↦{
     𝚒 = ᐦ+𝚒;
     􈛘(‹dragHold›,𝚒);
-    .dropInto = ⥌𝓮↦ƒ(,𝓮);
+    .dropInto = ⥌𝓮,𝜺↦ƒ(,𝓮,𝜺);
     ↪; }; }

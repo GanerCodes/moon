@@ -27,9 +27,15 @@ isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument ∨ x instanceof 
 🃌 = 󰲡xˡᵉⁿᵍᵗʰ;
 𝗙 = 󰲡x instanceof Function;
 𝑙 = 󰲡[⠤x];
-󱅏 = Mathʳᵃⁿᵈᵒᵐ;
-􋑯 = ⥌x,b=Mathᴱ↦Mathˡᵒᵍ(x)÷Mathˡᵒᵍ(b);
+𝔓(ᔐ)􋄽 = function() { ↪this.toUpperCase(); };
+𝔓(ᔐ)􋄼 = function() { ↪this.toLowerCase(); };
+𝔓(𝑖)􋄽 = function() { ↪ Mathᵃᵇˢ (this);    };
+𝔓(𝑖)􋄼 = function() { ↪-Mathᵃᵇˢ (this);    };
+𝔓(𝑖)􋅒 = function() { ↪ Mathˢⁱᵍⁿ(this);    };
+𝔓(𝑖)􍣋 = function(n){ ↪(this%n+n)%n;       };
 [⬓,▢,⬒] = [Mathᶠˡᵒᵒʳ,Mathʳᵒᵘⁿᵈ,Mathᶜᵉⁱˡ];
+􋑯 = ⥌x,b=Mathᴱ↦Mathˡᵒᵍ(x)÷Mathˡᵒᵍ(b);
+󱅏 = Mathʳᵃⁿᵈᵒᵐ;
 ⤈ = 󰲟Mathᵐⁱⁿ(⠤𝔸.flat(∞));
 ⤉ = 󰲟Mathᵐᵃˣ(⠤𝔸.flat(∞));
 󷹄 = 󰲥⤈(⤉(x,y),z);
@@ -70,7 +76,6 @@ mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars
   ƒ(𝚂𝘴,𝚂𝘳)(⠤𝔸);
   ↪[𝙲𝘴,𝙲𝘳]; }
 
-𝔓(Number).mod = function(n){ ↪(this%n+n)%n; };
 𝔍 = {↑:JSONˢᵗʳⁱⁿᵍⁱᶠʸ, ↓:JSONᵖᵃʳˢᵉ};
 𝔏𝔖 = { ↑: 󰲣localStorageₓ = 𝔍􋀫(y),
        ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
