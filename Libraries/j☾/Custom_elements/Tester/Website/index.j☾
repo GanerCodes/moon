@@ -20,8 +20,10 @@ popup({:✓,󰅙:✓,noAppend:✓},‹hi›)
 󰈙.body􍪙(pageNumBar({w:1},13));
 🟑
 
-© boxy = 󰲣dragItem(󱀝 div ⦅𝚠 25px;𝚑 25px;𝚋 #⟦x⟧⟦y⟧⟦9-x⟧⦆ ‹›);
-󰈙.body􍪙(
-  󱀝 div ⦅𝚏→⦆ ⟦[
-    dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛4))⟧),
-    dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛F))⟧) ]⟧);
+ © boxy = 󰲣dragItem(󱀝 div ⦅𝚠 25px;𝚑 25px;𝚋 #⟦x⟧⟦y⟧⟦9-x⟧⦆ ‹›);
+ 󰈙.body􍪙(
+   󱀝 div ⦅𝚏→⦆ ⟦[
+     dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛4))⟧),
+     dragHold(󱀝 div {𝐶 bruh} ⟦⭥(5)􊾡(󰲡boxy(x,␛F))⟧) ]⟧);
+
+󰈙.body􍪙(󱀝 T ‹This is a test, custom_elements isn't really a standalone thing atp. Might either fix it or remove it one day›);

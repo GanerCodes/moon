@@ -38,6 +38,7 @@ isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument ∨ x instanceof 
 󱅏 = Mathʳᵃⁿᵈᵒᵐ;
 ⤈ = 󰲟Mathᵐⁱⁿ(⠤𝔸.flat(∞));
 ⤉ = 󰲟Mathᵐᵃˣ(⠤𝔸.flat(∞));
+ ⟷ = 󰲟[⤈(⠤𝔸),⤉(⠤𝔸)];
 󷹄 = 󰲥⤈(⤉(x,y),z);
 ↨ = 󰲡[⠤x].map(⥌x,i↦[i,x]);
 ⭥ = 󰲣isArr(x) ⭜[⠤x.keys()]⭝ ⭥(𝐴(y≅󱣩⭜x⭝y-x))􊾡(⥌v↦v+(y≅󱣩⭜0⭝x));

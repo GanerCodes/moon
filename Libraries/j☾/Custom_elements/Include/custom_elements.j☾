@@ -48,19 +48,6 @@
   ↪ 󱀝 div {𝐶 box⍮⦅𝚏↓;𝚊𝚂󷷣⦆} ⟦C⟧
 };
 
- : clicking external
- 󰅙: has an x to close
-Ϣ.popup = ⥌Ѧ,c↦{
-  ⎉ ,btn;
-  󱀝: dialog {closedby ⟦Ѧ􊯛􈕀⭜‹any›⭝‹none›⟧} [
-    ⟦Ѧ􊯛􈔲 ⭜(󱀝:btn button {𝐶 dialogCloseBtn} ‹✗›)⭝ []⟧
-    ⟦c⟧ ]
-  AEL(,‹close›,𝚲(Ѧᵒⁿᶜˡᵒˢᵉ⸮(),.remove()));
-  ¿(btn) btn.onclick = 𝚲.close();
-  ¿(¬Ѧⁿᵒᴬᵖᵖᵉⁿᵈ) { 󰈙.body􍪙();
-                  .showModal(); }
-  ↪ };
-
 Ϣ.table = ⥌Ѧ,rows↦{
   ⎉ ə;
   󱀝:ə {𝐶 table⍮⦅grid-template-columns repeat(⟦🃌(rows₀)⟧,minmax(max-content, 1fr))⦆⍮⠤Ѧ}

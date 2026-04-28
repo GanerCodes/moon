@@ -39,17 +39,6 @@
     >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
     >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
 
-  dialog::backdrop ∣ 𝚋 ⦑b0⦒80; 𝚋𝚐𝚏 blur(5px)
-  dialog:open ∣ 𝚏↓; 𝚊𝚂󷷣; 𝚠≥ 400px; 𝚑≥ 650px
-                𝚙 30px
-                 ⦑f0⦒; 𝚋 ⦑b0⦒DD
-                𝚋 2px solid ⦑f0⦒; 𝚋𝚛 10px
-                𝚜 ⦑f0⦒33 0px 0px 20px 0px
-  .dialogCloseBtn
-    𝚙𝚘𝚜a; → 0.333em; ↑ 0px
-     ⦑f4⦒; 󰊄𝚜 35px
-    􎁎 ∣  ⦑f2⦒; 𝚋𝚐 􋄅
-    􀴗 ∣  ⦑f1⦒; 𝚋𝚐 􋄅
   .roundBtn
     𝚙 4px
     𝚋 2px solid ⦑f4⦒; 𝚋𝚛 4px
