@@ -36,10 +36,11 @@
   
   Ѧᵘᵖᵈᵃᵗᵉ = 󰲟{ Ѧᵛ = fldᵛᵃˡᵘᵉ
                Ѧᵒⁿⁱⁿᵖᵘᵗ⸮(Ѧᵛ);  󰤱 move this?
-               ¿(¬Ѧ􇦭) ↪;
+               ¿(¬Ѧ􇦭) ↪✓;
                Ѧᵛᵃˡⁱᵈ = Ѧ􇦭(Ѧᵛ);
                fld.setCustomValidity(Ѧᵛᵃˡⁱᵈ⭜ᐦ⭝␛✗);
-               fld.reportValidity(); };
+               fld.reportValidity();
+               ↪Ѧᵛᵃˡⁱᵈ; };
   AEL(fld,‹input›,Ѧᵘᵖᵈᵃᵗᵉ);
   Ѧᵛ=fldᵛᵃˡᵘᵉ;
   ¿(Ѧⁱⁿⁱᵗ) Ѧᵘᵖᵈᵃᵗᵉ();

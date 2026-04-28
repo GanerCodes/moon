@@ -79,7 +79,11 @@ mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars
 
 𝔍 = {↑:JSONˢᵗʳⁱⁿᵍⁱᶠʸ, ↓:JSONᵖᵃʳˢᵉ};
 𝔏𝔖 = { ↑: 󰲣localStorageₓ = 𝔍􋀫(y),
-       ↓: 󰲣x∈localStorage⭜𝔍􋀭(localStorageₓ)⭝y,
+       ↓: 󰲣{ ¿(x∈localStorage) {
+                    { ↪𝔍􋀭(localStorageₓ); }
+               catch { ☾(‹Failed to decode ⟦x⟧ from 𝔏𝔖! Removing.›);
+                       󰆴 localStorageₓ; } }
+             ↪y; },
        ⸓: 󰲥𝔏𝔖􋀫(x,y(𝔏𝔖􋀭(x,z))) };
 { © arrayLikeƒ = {  : ⥌x,ƒ   ↦{ O = {};
                                  x􋁃(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
