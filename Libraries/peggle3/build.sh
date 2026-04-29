@@ -1,26 +1,30 @@
 #!/bin/bash -e
-name="peggle3"
 ulimit -s unlimited
 
-☾ noparen.☾ "$name" || :
-gcc -O3 c-vector/vec.c "${name}.c" -Ic-vector -lpcre2-8 -Wno-implicit-int \
-    -flto -fPIC -shared -o "lib${name}.so"
-☾ TEST.☾
+☾ noparen.☾ "peggle3" || :
 
-exit 0
-emcc -O3 -fPIC -Wno-implicit-int \
-    peggle3.c \
-    c-vector/vec.c \
-    wasm_build/libpcre2-8-wasm.a \
-    -Ic-vector \
-    -Iwasm_build \
-    -Iwasm_build/src \
-    -DPCRE2_CODE_UNIT_WIDTH=8 \
-    -s MODULARIZE=1 \
-    -s WASM_BIGINT=1 \
-    -s EXPORT_ALL=1 \
-    -o libpeggle3.wasm \
-    -s SIDE_MODULE=1
+gcc -O3 "peggle3.c" -lpcre2-8 -Wno-implicit-int -flto -fPIC -shared -o "libpeggle3.so"
+
+# gcc -O3 "peggle3.c" -lpcre2-8 -Wno-implicit-int -flto -fPIC -o "bruh.out" && ./bruh.out
+# gcc -O3 "peggle3.c" -lpcre2-8 -Wno-implicit-int -flto -fPIC -shared -o "libpeggle3_test.so"
+# ☾ TEST.☾
+
+
+####################################
+
+# emcc -O3 -fPIC -Wno-implicit-int \
+#     peggle3.c \
+#     c-vector/vec.c \
+#     wasm_build/libpcre2-8-wasm.a \
+#     -Ic-vector \
+#     -Iwasm_build \
+#     -Iwasm_build/src \
+#     -DPCRE2_CODE_UNIT_WIDTH=8 \
+#     -s MODULARIZE=1 \
+#     -s WASM_BIGINT=1 \
+#     -s EXPORT_ALL=1 \
+#     -o libpeggle3.wasm \
+#     -s SIDE_MODULE=1
 
 # export LD_LIBRARY_PATH="$(realpath ./pcre2/local/lib)"
 # DEBUG_FLAGS="-g -fsanitize=undefined -fsanitize-address-use-after-scope -fsanitize=address -fsanitize=bounds -fsanitize=leak -fno-omit-frame-pointer"

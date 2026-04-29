@@ -1,5 +1,3 @@
-fcache = 𝚲󰻾
-
 ⦃from cffi import FFI⦄
 ⨡ text_format
 
@@ -31,33 +29,27 @@ typedef struct pcre2_code pcre2_code;
 typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
 typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
 typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
-typedef struct ArenaBlock {
-  struct ArenaBlock *next;
-  size_t used,cap;
-  char data[]; } ArenaBlock;
-typedef struct { ArenaBlock *head; } Arena;
-Match* parse(Arena *Ѧ, Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
+Match* parse(Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
 pcre2_code* create_regex(ᔐ P);
 void pcre2_code_free(pcre2_code *c);
-void arena_init(Arena *Ѧ);
-void arena_free_all(Arena *Ѧ);
 󰦥󰦥󰦥󰦥󰦥 Ų)
 lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
 
 N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
 
-󱀘 Cleaner: ⊢__init__ (𝕊,ƒ,x=□): 𝕊􊽺,𝕊ˣ = ƒ,x
-           ⊢__enter__(𝕊      ): □
-           ⊢__exit__ (𝕊,⠤𝔸   ): 𝕊􊽺􀃅
+󱀘 Freeable: ⊢__init__ (𝕊,x,e): 𝕊ˣ,𝕊ᵉ = x,e
+            ⊢__enter__(𝕊    ): □
+            ⊢__exit__ (𝕊,⠤𝔸 ): 𝕊ᵉ􀃅
 
-CSTR_MEM,CRGX_MEM,TEMP_MEM = {},{},⦉⦊
+CSTR_MEM,CRGX_MEM = {},{}
+TEMP_MEM = ⦉⦊
 ⊢cstr(s,freeable=✗,_type=‹ᔐ*›Ų):
   ¿freeable􀌐 􀛾 s􀉧CSTR_MEM: ↪CSTR_MEMₛ
   e = s.encode(‹utf-8›)
   A = ffi.new(‹uint8_t[]›,e)
-  TEMP_MEM.add(A)
+  TEMP_MEM.add(A)  idk if this is even needed just having A in that 𝚲 might work
   r = ffi.new(_type,(A,e􀊹))
-  ¿freeable: ↪Cleaner(𝚲TEMP_MEM.remove(A),r)
+  ¿freeable: ↪Freeable(r,𝚲TEMP_MEM.remove(A))
   ↪CSTR_MEMₛ􀯍r
 ⊢crgx(r):
   ¿r􀉧CRGX_MEM: ↪CRGX_MEMᵣ
@@ -128,10 +120,8 @@ TEST_GRAM_CACHE = {}
      DEBUG􀌐􀞽˜‹DEBUG not implemented›
      c_input ⛯ cstr(c,✓)
      c_input = c_inputˣ
-     Ѧ = ffi.new(‹Arena *›)
-     ⛯ Cleaner(𝚲lib.arena_free_all(Ѧ))
-     lib.arena_init(Ѧ)
-     r = lib.parse(Ѧ,rules,rules􀊹,c_input₀,id to_n,remove_trashes)
+     
+     r = lib.parse(rules,rules􀊹,c_input₀,id to_n,remove_trashes)
      W_len􀌢E_len􀕲W_fail􀌢E_fail􀞽
      ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􀸩􍛏˜‹Failed to parse›
           ↪

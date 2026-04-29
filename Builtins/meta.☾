@@ -15,8 +15,8 @@ TRANSPILE_REF = Holder
 dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_relative_to(moon_dir)ᐸ␛
               ᐖ‹⟦moon_dir ⟞₀.relative_to ᔐ repr⟧:strd(⟦⟞₁.native_code stre repr⟧)›ᐸ␛
               ᑀ⨝␛,⟧})›
-⊢ (cache_) moon_to_py_cached(𝚌): TRANSPILE_REF⨳‹Cannot transpile without transpiler!›
-                                 ↪𝚌⭢(+TRANSPILE_REF)
+⊢ (cache_) moon_to_py_cached(𝚌): TRANSPILE_REF􀉓‹Cannot transpile without transpiler!›
+                                 ↪𝚌􇀥(􀊩TRANSPILE_REF)
 ⊢ 󱠨(𝚌,ns=□,get_code=✗,include_builtins=✓,native=✗,ƒ=EXEC_NATIVE,
     ret=✗,init_ns=✓,code_ref=✓,custom_errors=✓,show_error_𝕂={}):
     ¿env.get(‹MOON_DISABLE_CUSTOM_ERRORS›): custom_errors = ✗

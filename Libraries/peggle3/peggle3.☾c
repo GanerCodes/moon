@@ -1,5 +1,7 @@
  #define DEBUG_PRINTS
 
+ 󰤱 i fixed average mem usage but also it spikes rlly high when doing peggle stuff
+
 #define Ƈ case
 #define 𝼝 break; Ƈ
 #define 𝼝 break; Ƈ
@@ -23,17 +25,13 @@
 #define _ARRSIZE2(x,ε) (sizeof(x)/sizeof(ε))
 #define _ARRSIZE1(x) _ARRSIZE2(x,(x)[0])
 #define ARRSIZE(...) GET_MACRO(__VA_ARGS__, _ARRSIZE2, _ARRSIZE1)(__VA_ARGS__)
-#define NEW(T) (T*) malloc(sizeof(T));
 #define MIN(x,y) ((x)<(y)?(x):(y))
 #define MAX(x,y) ((x)>(y)?(x):(y))
 #define ƨ "%.*s"
 #define Ƨ(x) (x).l, (x).s
 
-#include <vec.h>
+#include "avec.h"
 #include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
 #define PCRE2_CODE_UNIT_WIDTH 8
 #include <pcre2.h>
 
@@ -86,30 +84,29 @@ void show_match(Rule* 𝚁, Match* 𝚖, ᔐ 𝚌, u32 tab)
     for(u32 i=0; i<𝚖->nK; i++) show_match(𝚁,𝚖->K+i,𝚌,tab+2);
 
 pcre2_code* create_regex(ᔐ P)
-    i32 errcode;
-    PCRE2_SIZE erroff;
-    pcre2_code* 𝚙 = pcre2_compile((PCRE2_SPTR)P.s, P.l, PCRE2_UTF|PCRE2_NO_UTF_CHECK|PCRE2_ANCHORED, &errcode, &erroff, ᗜ);
-    if(𝚙==ᗜ) ⇒ PCRE2_UCHAR buf[256];
-               pcre2_get_error_message(errcode,buf,sizeof(buf));
-               printf("Error creating regex! offset %zu: %d: %s\n",erroff,errcode,buf);
-               ret ᗜ;
-    ret 𝚙;
+  i32 errcode;
+  PCRE2_SIZE erroff;
+  pcre2_code* 𝚙 = pcre2_compile((PCRE2_SPTR)P.s, P.l, PCRE2_UTF|PCRE2_NO_UTF_CHECK|PCRE2_ANCHORED, &errcode, &erroff, ᗜ);
+  if(𝚙==ᗜ) ⇒ PCRE2_UCHAR buf[256];
+             pcre2_get_error_message(errcode,buf,sizeof(buf));
+             printf("Error creating regex! offset %zu: %d: %s\n",erroff,errcode,buf);
+             ret ᗜ;
+  ret 𝚙;
 
 i32 peggle3_regexec(pcre2_code* 𝚙, ᔐ 𝚌, u32 pos)
-    pcre2_match_data* md = pcre2_match_data_create_from_pattern(𝚙,ᗜ);
-    i32 rc = pcre2_match(𝚙, (PCRE2_SPTR)(𝚌.s + pos), 𝚌.l - pos, 0, 0, md, ᗜ);
-    if(rc <= 0) ⇒ pcre2_match_data_free(md);
-                  ret -1;
-    PCRE2_SIZE* R = pcre2_get_ovector_pointer(md);
-    u32 end = pos+R[1];
-     printf("Regex matched: %i…%i\n", pos+R[0], end);
-    pcre2_match_data_free(md);
-    ret end;
+  pcre2_match_data* md = pcre2_match_data_create_from_pattern(𝚙,ᗜ);
+  i32 rc = pcre2_match(𝚙, (PCRE2_SPTR)(𝚌.s + pos), 𝚌.l - pos, 0, 0, md, ᗜ);
+  if(rc <= 0) ⇒ pcre2_match_data_free(md);
+                ret -1;
+  PCRE2_SIZE* R = pcre2_get_ovector_pointer(md);
+  u32 end = pos+R[1];
+   printf("Regex matched: %i…%i\n", pos+R[0], end);
+  pcre2_match_data_free(md);
+  ret end;
 
-#define PUSH(𝙺,X) do{Match* V=(X); if(V!=ᗜ) { Match* _=vector_add_dst(&𝙺); _->id=V->id; _->p=V->p; _->l=V->l; _->K=V->K; _->nK=V->nK; }}while(0)
-
- 󰤱 make no-append RULE_S/R id=-1?
-Match* chain_cond(Rule* 𝚁, Match* 𝙺, u32 r, Match* 𝘮)
+#define PUSH(𝙺,X) do{Match* V=(X); if(V!=ᗜ) { Match* _=vector_add_dst(Ѧ,&𝙺); _->id=V->id; _->p=V->p; _->l=V->l; _->K=V->K; _->nK=V->nK; }}while(0)
+Match* chain_cond(Arena* Ѧ, Rule* 𝚁, Match* 𝙺, u32 r, Match* 𝘮)
+   󰤱 make no-append RULE_S/R id=-1?
   bool append = r&R_NAME;
   u32 𝘪 = 𝘮->id;
   Rule 𝘳 = 𝚁[𝘪];
@@ -124,34 +121,35 @@ Match* chain_cond(Rule* 𝚁, Match* 𝙺, u32 r, Match* 𝘮)
   ret 𝙺;
 #undef PUSH
 
-Match* makeMatches(Rule* 𝚁, u32 𝚁𝚗, bool trash, u32 𝘱, u32 𝘪, u32 𝚌l, u32 𝙼[𝚌l][𝚁𝚗])
+Match* makeMatches(Arena* Ѧ, Rule* 𝚁, u32 𝚁𝚗, bool trash, u32 𝘱, u32 𝘪, u32 𝚌l, u32 𝙼[𝚌l][𝚁𝚗])
   Rule 𝘳 = 𝚁[𝘪];
   u32 𝐜 = 𝙼[𝘱][𝘪];
-  Match *𝘮 = NEW(Match);
+  Match* 𝘮 = (Match*)arena_alloc(Ѧ,sizeof(Match));
+  
   𝘮->id=𝘪; 𝘮->p=𝘱; 𝘮->l=(𝐜&~C_FLAG)-𝘱;
    printf("%lu "ƨ" : %lu "ƨ"\n",𝘪,Ƨ(rule_flags(𝘵)),𝘱,Ƨ(parse_flags(𝐜)));
-  Match* 𝙺 = vector_create();
+  Match* 𝙺 = ᗜ;
   Ⴝ(𝘳.t) ⇒ Ƈ RULE_S:
            Ƈ RULE_R:
            Ƈ RULE_Y:
            𝼝 RULE_Q: ⇒ if(𝐜&C_ALTR) break;
            Ƈ RULE_M:
            Ƈ RULE_F: ⇒ if(trash && 𝘳.cL&R_TRSH) break;
-                       𝙺  =chain_cond(𝚁,𝙺,𝘳.cL,makeMatches(𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
+                       𝙺  =chain_cond(Ѧ,𝚁,𝙺,𝘳.cL,makeMatches(Ѧ,𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
            𝼝 RULE_O: ⇒ u32 c = 𝐜&C_ALTR ?𝘳.cR: 𝘳.cL;
                        if(trash && c&R_TRSH) break;
-                       𝙺  =chain_cond(𝚁,𝙺,   c,makeMatches(𝚁,𝚁𝚗,trash,𝘱,   c&~R_FLAG,𝚌l,𝙼));
+                       𝙺  =chain_cond(Ѧ,𝚁,𝙺,   c,makeMatches(Ѧ,𝚁,𝚁𝚗,trash,𝘱,   c&~R_FLAG,𝚌l,𝙼));
            𝼝 RULE_A: ⇒ if(!(trash && 𝘳.cL&R_TRSH))
-                         𝙺=chain_cond(𝚁,𝙺,𝘳.cL,makeMatches(𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
+                         𝙺=chain_cond(Ѧ,𝚁,𝙺,𝘳.cL,makeMatches(Ѧ,𝚁,𝚁𝚗,trash,𝘱,𝘳.cL&~R_FLAG,𝚌l,𝙼));
                        if(trash && 𝘳.cR&R_TRSH) break;
                        u32 𝘗 = 𝙼[𝘱][𝘳.cL&~R_FLAG]&~C_FLAG;
-                       𝙺  =chain_cond(𝚁,𝙺,𝘳.cR,makeMatches(𝚁,𝚁𝚗,trash,𝘗,𝘳.cR&~R_FLAG,𝚌l,𝙼));
+                       𝙺  =chain_cond(Ѧ,𝚁,𝙺,𝘳.cR,makeMatches(Ѧ,𝚁,𝚁𝚗,trash,𝘗,𝘳.cR&~R_FLAG,𝚌l,𝙼));
   𝘮->K=𝙺; 𝘮->nK=vector_size(𝙺);
   ret 𝘮;
 
 #undef PUSH
-#define PUSH(x,y) do{RuleQ* _=vector_add_dst(&𝚂); _->id=(x); _->p=(y);}while(0)
-Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
+#define PUSH(x,y) do{RuleQ* _=vector_add_dst(Ѧ,&𝚂); _->id=(x); _->p=(y);}while(0)
+Match* parse(Arena *Ѧ, Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
   #ifdef DEBUG_PRINTS
   printf("Parsing \""ƨ"\" with id=%i from rules:\n", Ƨ(𝚌), id);
   for(u32 i=0; i<𝚁𝚗; i++)
@@ -161,7 +159,7 @@ Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
   u32 𝙼[𝚌.l+1][𝚁𝚗];
   for(u32 p=0; p<ARRSIZE(𝙼,u32); p++) ((u32*)𝙼)[p] = C_NONE;
   
-  RuleQ* 𝚂 = vector_create();
+  RuleQ *𝚂 = ᗜ;
   PUSH(id,0);
   
   while(vector_size(𝚂))
@@ -195,7 +193,6 @@ Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
                                    ef(𝐫 & C_FAIL) ⇒ 𝙼[𝘱][𝘪] = C_FAIL;
                                    el             ⇒ 𝙼[𝘱][𝘪] = C_GOOD|𝐫&~C_FLAG;
     vector_pop(𝚂);
-  vector_free(𝚂);
   
   #ifdef DEBUG_PRINTS
   printf("Cache table:\n");
@@ -205,7 +202,7 @@ Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
        for(u32 i=0; i<=𝚌.l; i++)
          printf("%s%-3d%s", i?"":"  ", 𝙼[i][o]&~C_FLAG, i==𝚌.l?"\n":" ");
   #endif
-  Match* r = 𝙼[0][id]&C_FAIL ?ᗜ: makeMatches(𝚁,𝚁𝚗,trash,0,id,𝚌.l+1,𝙼);
+  Match* r = 𝙼[0][id]&C_FAIL ?ᗜ: makeMatches(Ѧ,𝚁,𝚁𝚗,trash,0,id,𝚌.l+1,𝙼);
   #ifdef DEBUG_PRINTS
   printf("Raw tree:\n");
   show_match(𝚁,r,𝚌,2);
@@ -214,7 +211,7 @@ Match* parse(Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
 
 main() ⇒ printf("Testing "__FILE__"\n");
          
-         🟑
+          🟑
          /*
          expr = elm (op elm)*
          elm = grp ∨ num
@@ -241,7 +238,7 @@ main() ⇒ printf("Testing "__FILE__"\n");
            { RULE_Q,  5       ,  0                      },
          ;
          ᔐ s = (ᔐ){"(1+1)*0+1*(1*((1)+1*0))",23};
-         🟑
+          🟑
          
          🟑
          pcre2_code* rx = create_regex((ᔐ){"[0-9]{2}",8});
@@ -283,11 +280,17 @@ main() ⇒ printf("Testing "__FILE__"\n");
          ᔐ s = (ᔐ){"ABAB",4};
          🟑
          
+         🟑
          Rule rules[] = 
           { RULE_A, 1, 2                      },
           { RULE_S, 0, 0, {.s = {(u8*)"A",1}} },
           { RULE_S, 0, 0, {.s = {(u8*)"B",1}} },
          ;
          ᔐ s = (ᔐ){"AB",2};
+         🟑
          
-         parse(rules,ARRSIZE(rules,Rule),s,0,ⴳ);
+         Arena Ѧ;
+         arena_init(&Ѧ);
+         Match* M = parse(&Ѧ,rules,ARRSIZE(rules,Rule),s,0,ⴳ);
+         show_match(rules,M,s,0);
+         arena_free_all(&Ѧ);

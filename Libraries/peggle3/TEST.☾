@@ -1,6 +1,5 @@
 ⨡􋀸 peggle3
 ⨡􋀸 peggle3/gram_tools
- ⨡ peggle3
 
  gram = peggle(󰦥󰦥󰦥󰦥󰦥
  x = andcheck andstarcheck redirstar
@@ -11,6 +10,11 @@
  z = ✓
  󰦥󰦥󰦥󰦥󰦥, DEBUG=✓)
 
+ gram = peggle(‹main=a b
+                a="A"
+                b="B"›, DEBUG=✓)
+ 󱁕 = ‹AB› gram 𝑩𝑩
+ exit􀃅
 
 gram = peggle(󰦥󰦥󰦥󰦥󰦥
 _ = ⠶(a b+)
@@ -19,12 +23,12 @@ b = "B"
 󰦥󰦥󰦥󰦥󰦥, DEBUG=✓)
 c = 󰦥󰦥󰦥󰦥󰦥ABBB󰦥󰦥󰦥󰦥󰦥
 
-󱁕 = c gram 𝑩𝑩
-exit
+󱁕 = c gram􀯖ᴾ􀃅
+exit􀃅
 
 
 󱁕 = reform_positions(󱁕,c) 𝑩𝑩
-exit
+exit􀃅
 
  ⠶(str_nsub1 ∨ str_nsub2) ITS ALWAYS SOMETYHING
 

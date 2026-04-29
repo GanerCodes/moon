@@ -2,7 +2,7 @@
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
 ⦃from sys import stdin as ⦃ℑ𝔑⦄,stdout as ⦃𝔒𝔘𝔗⦄,stderr as ⦃𝔈ℜℜ⦄,argv as ⦃𝔸⦄⦄
-⦃from sys import exit,setrecursionlimit,path as ⦃syspath⦄⦄
+⦃from sys import exit,setrecursionlimit,path as ⦃syspath⦄,getsizeof as ⦃𝔖ℨ⦄⦄
 ⦃from math import *⦄
 ⦃from site import getsitepackages⦄
 ⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄

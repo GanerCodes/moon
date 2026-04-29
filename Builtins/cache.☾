@@ -1,33 +1,33 @@
 󱀘Cacher:
   ⊢__init__(𝕊,ƒ,𝘩,𝘦,𝘥): 𝕊􊽺,𝕊􍺪,𝕊􍺤,𝕊􍺢,𝕊􎀞 = ƒ,𝘩,𝘦,𝘥,{}
   ⊢__call__(𝕊,⠤𝔸,⠶𝕂): 𝚎=𝕊􍺪(getattr(𝕊􊽺,‹__name__›,󷺗),⠤𝔸,⠶𝕂)
-                      ¿𝕊.chk_cache(𝚎)≕v≇␀: ↪𝕊􍺢(v)
+                      ¿𝕊.chk_cache(𝚎)􀯑v􀝶␀: ↪𝕊􍺢(v)
                       v=𝕊􊽺(⠤𝔸,⠶𝕂)
                       𝕊.add_cache(𝚎,𝕊􍺤(v))
                       ↪v
   ⊢chk_cache(𝕊,x  ): ↪𝕊􎀞.get(x,␀)
-  ⊢add_cache(𝕊,x,y): ↪𝕊􎀞ₓ≔y
+  ⊢add_cache(𝕊,x,y): ↪𝕊􎀞ₓ􀯍y
 
-󱀘FileCacher(Cacher):
-  ⊢__init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=ᐦ,file_only=✗):
-     super().__init__(ƒ,𝘩,𝘦,𝘥)
-     𝕊􀲥􀲷,𝕊􀲥􀲹=file_only,mkd(fpᐹ𝐩∧fp.is_absolute ⭜fp⭝ CACHEDIR/fp)
-  ⊢__call__(𝕊,⠤𝔸,⠶𝕂): log = ‹MOON_LOG_FCACHE›∈env
-                      𝚎=𝕊􍺪(fname≔getattr(𝕊􊽺,‹__name__›,󷺗),⠤𝔸,⠶𝕂)
-                      ¿𝕊.chk_cache(𝚎)≕v≇␀: ¿log: ‹Cache hit (⟦fname∨□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›☾
+󱀘FileCacher(Cacher):  󰤱 more dynamic, like a max total size and max per-object size 
+  ⊢__init__(𝕊,ƒ,𝘩,𝘦,𝘥,fp=ᐦ,file_only=✓):
+   super().__init__(ƒ,𝘩,𝘦,𝘥)
+   𝕊􀲥􀲷,𝕊􀲥􀲹=file_only,mkd(fp􀊜𝐩􀛾fp.is_absolute􀃅 􇂖fp􇂗 CACHEDIR􀋋fp)
+  ⊢__call__(𝕊,⠤𝔸,⠶𝕂): log = ‹MOON_LOG_FCACHE›􀉧env
+                      𝚎=𝕊􍺪(fname􀯍getattr(𝕊􊽺,‹__name__›,󷺗),⠤𝔸,⠶𝕂)
+                      ¿𝕊.chk_cache(𝚎)􀯑v􀝶␀: ¿log: ‹Cache hit (⟦fname􀉖□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›􀊸
                                            ↪𝕊􍺢(v)
                       v=𝕊􊽺(⠤𝔸,⠶𝕂)
                       𝕊.add_cache(𝚎,𝕊􍺤(v))
-                      ¿log: ‹Cache fail (⟦fname∨□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›☾
+                      ¿log: ‹Cache fail (⟦fname􀉖□⟧)!𝗻𝔸=⟦ᔐ(𝔸)⟧𝗻𝕂=⟦ᔐ(𝕂)⟧𝗻⇒⟦ᔐ(v)⟧›􀊸
                       ↪v
-  ⊢chk_cache(𝕊,x  ): ¿𝕊􀲥􀲷¬∧x∈𝕊􎀞: ↪𝕊􎀞ₓ
-                     ¿(𝕊􀲥􀲹/x≕f).exists: v=ᵇ(f)
-                                         ↪𝕊􀲥􀲷⭜𝕊􎀞ₓ≔v⭝v
+  ⊢chk_cache(𝕊,x  ): ¿𝕊􀲥􀲷􀌐􀛾x􀉧𝕊􎀞: ↪𝕊􎀞ₓ
+                     ¿(𝕊􀲥􀲹􀋋x􇀠f).exists􀃅: v=ᵇ(f)
+                                         ↪𝕊􀲥􀲷􇀦v􇀧𝕊􎀞ₓ􀯍v
                      ↪␀
-  ⊢add_cache(𝕊,x,y): ᵇ(𝕊􀲥􀲹/x, 𝕊􎀞ₓ≔y)
+  ⊢add_cache(𝕊,x,y): ᵇ(𝕊􀲥􀲹􀋋x, 𝕊􀲥􀲷􇀦y􇀧𝕊􎀞ₓ􀯍y)
 
-mkmk_cache = Ƈ↦⥌𝘩=sha,𝘦=pdump,𝘥=pload,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
-cache,fcache = Cacher􀊱FileCacher 􀓅 mkmk_cache
+mkmk_cache = Ƈ↦⥌𝘩=􇦆,𝘦=pdump,𝘥=pload,⠤𝘈,⠶𝘒↦ƒ↦Ƈ(ƒ,𝘩,𝘦,𝘥,⠤𝘈,⠶𝘒)
+cache,fcache = Cacher􀊱FileCacher 􀜗 mkmk_cache
 
 🟑 sqc = fcache(fp="/tmp/weed")(☾○√)
   sqc(5)
