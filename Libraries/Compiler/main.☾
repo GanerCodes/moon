@@ -115,19 +115,28 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 
 ⊢try_update_git:
   moon_dir cd
-  ¿$git pull󷹹: ↪‹Failed to pull!›􀊸
+  ¿$ᵒᵉgit pull󷹹: ↪‹Failed to pull!›􀊸
   moon_dir􀋋‹install›􀯖ᔐᐒos.execv(⟞,⟞􀋁)
 
 ⊢transpiler_cli(⠤𝖠):
-  show_docs = 𝚲‹Usage: ∅                  (cli mode)
-                       <file_path>        (run ☾ file)
-                       -h                 (show this)
-                       -c <code_to_run>   (eval mode)
-                       -C <code_to_run>   (exec mode)
-                       -B <boostrap_dest>
-                       -e <str_to_encode>
-                       -d <str_to_decode>
-                       -o <file_in> <file_out?stdout>›􀊸
+  show_docs = 𝚲‹Usage:
+                  <file_path> <𝔸₀?> <𝔸₁?> …
+                     Run ☾ file
+                  -o <file_in> <file_out?stdout>
+                     Compile file but do not run
+                  --get-dir
+                     Output ☾ directory
+                  --update
+                     Update ☾ (pulls git and installs)
+                  ∅                  ∣ CLI mode
+                  -h                 ∣ Show this
+                  -c <code_to_run>   ∣ Eval mode, output return value + newline
+                  -󷱉 <code_to_run>   ∣ Eval mode, output return value
+                  -. <code_to_run>   ∣ Eval mode, no return output
+                  -C <code_to_run>   ∣ Exec mode, no return output
+                  -B <boostrap_dest> ∣ Bootstrap to file
+                  -e <str_to_encode> ∣ Escape var name
+                  -d <str_to_decode> ∣ Unescape var name›􀊸
   𝖠,f=[⠤𝖠],∅
   ∀𝖠 􀛾 𝖠₀􀯑𝖺􀯖₀􀒰␛- ¿ f􇀞􀊳(0 𝖠.pop 􀯖₁﹕ᑀ₀􀉞␛-􇀶􍪵􍪴􊬤􊲯) 􁁯 𝖺􀉟2␛-: □
   ¿␛R􀉧f: þdo_imps􀃅
@@ -138,7 +147,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   ⸘f􀒪𝖠􀊹􀌐: 0 𝔸.pop
           ↪󱠨(𝖠₀, ns={__file__=𝖠₀,__dir__=𝖠₀𝐩􀯖.parent,__name__=‹__main__›}, ƒ=󰲣EXEC_NATIVE(x,y,y))
   ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
-  ⸘f􀉨‹get-dir›: moon_dir􀊸
+  ⸘f􀉨‹get-dir›: moon_dir􀊸  󰤱􊽨 don't output newline? also for all forms of output...?
   ⸘f􀉨‹update󷺗›: try_update_git􀃅
   ⸘f􀉨‹.󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval
   ⸘f􀉨‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦
