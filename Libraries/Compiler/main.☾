@@ -116,7 +116,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 ⊢try_update_git:
   moon_dir cd
   ¿$git pull󷹹: ↪‹Failed to pull!›􀊸
-  os.execv("./install",[moon_dir􀋋‹install›􀯖ᔐ])
+  moon_dir􀋋‹install›􀯖ᔐᐒos.execv(⟞,⟞􀋁)
 
 ⊢transpiler_cli(⠤𝖠):
   show_docs = 𝚲‹Usage: ∅                  (cli mode)

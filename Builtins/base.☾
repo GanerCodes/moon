@@ -1,3 +1,5 @@
+ 󷹇 The following already exist at this point:
+     BOOTSTRAP_HASH, 𝐩, env, moon_dir
 ⦃import os,sys,inspect,traceback,threading,errno,struct⦄
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
 ⦃from os import environ as ⦃env⦄⦄
