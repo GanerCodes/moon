@@ -113,6 +113,11 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
     ¡KeyboardInterrupt: ᐦ􀊸
                         0 exit
 
+⊢try_update_git:
+  moon_dir cd
+  ¿$git pull󷹹: ↪‹Failed to pull!›􀊸
+  os.execv("./install",[moon_dir􀋋‹install›􀯖ᔐ])
+
 ⊢transpiler_cli(⠤𝖠):
   show_docs = 𝚲‹Usage: ∅                  (cli mode)
                        <file_path>        (run ☾ file)
@@ -132,12 +137,13 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   ¿f􀒪𝖠: þdo_imps􀃅 􀊰 moon_cli􀃅
   ⸘f􀒪𝖠􀊹􀌐: 0 𝔸.pop
           ↪󱠨(𝖠₀, ns={__file__=𝖠₀,__dir__=𝖠₀𝐩􀯖.parent,__name__=‹__main__›}, ƒ=󰲣EXEC_NATIVE(x,y,y))
+  ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
+  ⸘f􀉨‹get-dir›: moon_dir􀊸
+  ⸘f􀉨‹update󷺗›: try_update_git􀃅
   ⸘f􀉨‹.󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval
   ⸘f􀉨‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦
   ⸘f􀉨‹󷱉󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦􊾖
   ⸘f􀉨‹C󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 EXEC_NATIVE
-  ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
-  ⸘f􀉨‹get-dir›: moon_dir􀊸
   ¡: þdo_imps􀃅
      ¿f􀉨‹D󷺗󷺗󷺗󷺗󷺗󷺗›: x = ⍁
                    ∀:           input􀃅 x.append
