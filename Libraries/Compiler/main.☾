@@ -113,9 +113,12 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
     ¡KeyboardInterrupt: ᐦ􀊸
                         0 exit
 
-⊢try_update_git:
+⊢try_update_git(tag=□):
   moon_dir cd
-  ¿$ᵒᵉgit pull󷹹: ↪‹Failed to pull!›􀊸
+  ¿tag􇪨: $ᵒᵉᴰgit fetch󷺗󷺗󷺗 --tags󷺗󷺗 origin󷺗󷺗󷺗󷺗󷹹 􀊚 exit
+         $ᵒᵉᴰgit checkout --detach tags/⟦tag⟧󷹹 􀊚 exit
+  ¡    : $ᵒᵉᴰgit checkout 󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗main󷺗󷺗󷺗󷺗󷺗󷺗󷹹 􀊚 exit
+         $ᵒᵉᴰgit pull󷺗󷺗󷺗󷺗 󷺗󷺗origin main󷺗󷺗󷺗󷺗󷺗󷺗󷹹 􀊚 exit
   moon_dir􀋋‹install›􀯖ᔐᐒos.execv(⟞,⟞􀋁)
 
 ⊢transpiler_cli(⠤𝖠):
@@ -126,8 +129,9 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
                      Compile file but do not run
                   --get-dir
                      Output ☾ directory
-                  --update
-                     Update ☾ (pulls git and installs)
+                  --update <tag?>
+                     Updates ☾ from git and then installs
+                     (Without providing tag it pulls most recent version)
                   ∅                  ∣ CLI mode
                   -h                 ∣ Show this
                   -c <code_to_run>   ∣ Eval mode, output return value + newline
@@ -148,7 +152,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
           ↪󱠨(𝖠₀, ns={__file__=𝖠₀,__dir__=𝖠₀𝐩􀯖.parent,__name__=‹__main__›}, ƒ=󰲣EXEC_NATIVE(x,y,y))
   ⸘f􀉨‹h󷺗󷺗󷺗󷺗󷺗󷺗›: show_docs􀃅
   ⸘f􀉨‹get-dir›: moon_dir􀊸  󰤱􊽨 don't output newline? also for all forms of output...?
-  ⸘f􀉨‹update󷺗›: try_update_git􀃅
+  ⸘f􀉨‹update󷺗›: try_update_git(⠤𝖠)
   ⸘f􀉨‹.󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval
   ⸘f􀉨‹c󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦
   ⸘f􀉨‹󷱉󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀋢𝘀 􀯖 ƒ 􀯖 eval ᑀ􀊚􇪹􀁦􊾖
