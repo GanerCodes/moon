@@ -1,7 +1,7 @@
 ⨡ peggle3/rgx_golfatron
 ⦃import re⦄
 
-sty = ‹⟦moon_dir⟧/Builtins/Data/style.json›  𝔍󰄟 ℵ
+sty = moon_dir􀋋‹Builtins/Data/style.json› 􀯖􀯖𝔍󰄟􀯖ℵ
 󰦥󰦥󰦥󰦥󰦥 ␛'"‹›⦃⦄()[]⁅⁆⟨⟩⟦⟧󰦥󰦥󰦥󰦥󰦥ᐖsty.pop(⟞,□)
 ∀k,v⬠sty: styₖ = [‹fg›≕h∈v⭜(h,vₕ h2r r2hl),
                   ‹bg›≕h∈v⭜(h,vₕ h2r r2hl)]󰈲 ⭢ ℵ
@@ -18,14 +18,17 @@ tlangj = ‹grammar_basis.json›  𝔍󰄟
 stylej = ‹󷺗󷺗color_basis.json›  𝔍󰄟
 repo,ttoks,tpats = tlangj[‹repository›],stylej[‹tokenColors›],⍁
 
-∀i,(S,r)⬠mp↨:
-    s = ‹symbol.⟦n≔‹sty⟦i⟧›⟧.moon›
-    α=ℵ
-    ¿‹fg›≕x∈S: α.foreground = Sₓ
-    ¿‹bg›≕x∈S: α.background = Sₓ
-    repo[n] = { name=s, match=‹(⟦r⟧)+› }
-    tpats.append({ include=‹#⟦n⟧› })
-    ttoks.append({ scope=s, settings=α })
+i=0
+∀S,r⬠mp:
+  s = ‹symbol.⟦n􀯍‹sty⟦i⟧›⟧.moon›
+  α=ℵ
+  ¿‹fg›􀯑x􀜋S: α.foreground = Sₓ
+  ¿‹bg›􀯑x􀜋S: α.background = Sₓ
+  ¿α􀌐: ↺
+  repo[n] = { name=s, match=‹(⟦r⟧)+› }
+  tpats.append({ include=‹#⟦n⟧› })
+  ttoks.append({ scope=s, settings=α })
+  i􇀞􀊩1
 repo[‹syms›][‹patterns›] = tpats
 stylef 󱖔􍡩 stylej 𝔍󰄞
 tmlngf 󱖔􍡩 tlangj 𝔍󰄞

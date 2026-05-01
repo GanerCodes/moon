@@ -4,9 +4,11 @@
   "repository": {
     "syms"      : { "patterns": [] },
     
-    "gen"       : { "patterns": [{ "include": "#com"  },
-                                 { "include": "#str"  },
-                                 { "include": "#syms" }] },
+    "gen"       : { "patterns": [{ "include": "#com"      },
+                                 { "include": "#str"      },
+                                 { "include": "#syms"     },
+                                 { "match": ".",
+                                   "name": "source.moon"  }] },
     
     "com"       : { "patterns": [{ "include": "#com_ln" },
                                  { "include": "#com_il" }] },
@@ -65,7 +67,7 @@
                                 { "include": "#str_esc"  },
                                 { "include": "#spec_char"}] },
     
-    "embed"    : { "name"         : "source.moon",
+    "embed"    : { "contentName"  : "meta.embedded.moon",
                    "begin"        : "⟦",
                    "end"          : "⟧",
                    "beginCaptures": { "0": { "name": "punctuation.strsub.moon" }},

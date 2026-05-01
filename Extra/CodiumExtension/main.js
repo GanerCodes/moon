@@ -35,11 +35,11 @@ const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.
 const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
 const highlights = [
-  [/␛(.)/gu, { color:"#22ff22", backgroundColor:"#006600aa" }],
-  [   / /gu, { backgroundColor:"#ffff0044", borderWidth:"1px",
-               borderStyle:"solid", borderColor:"#ff0" }],
-  [   / /gu, { backgroundColor:"#0000ff66", borderWidth:"1px",
-               borderStyle:"solid", borderColor:"#00f" }] ];
+  [/␛(.)/dgu, { color:"#22ff22", backgroundColor:"#006600aa" }],
+  [   / /dgu, { backgroundColor:"#ffff0044", borderWidth:"1px",
+                borderStyle:"solid", borderColor:"#ff0" }],
+  [   / /dgu, { backgroundColor:"#0000ff66", borderWidth:"1px",
+                borderStyle:"solid", borderColor:"#00f" }] ];
 highlights.forEach(x => x[1] = vs.window.createTextEditorDecorationType(x[1]));
 
 let mapS;
@@ -155,23 +155,23 @@ const a1 = (𝐸,𝚜) => tin(𝐸,𝚜,𝚜=>[𝚜[0],𝚜[1],𝚜[2],𝚜[3]+1
 const nzSel = (𝐸,𝚜) => (𝚜=>𝔏𝔖(...𝚜[0]==𝚜[2]&&𝚜[1]==𝚜[3] ?a1(𝐸,𝚜): [𝚜[0],𝚜[1],𝚜[2],𝚜[3]]))(𝔖𝔏(𝚜));
 
 const activateHighlighter = ℭ => {
-    const updateDecorations = 𝐸 => {
-        if(!𝐸) return;
-        const text = 𝐸.document.getText();
-        for(const [R,S] of highlights) {
-            const locs = [];
-            let m;
-            while((m = R.exec(text))) {
-                const [s,e] = [m.index,m.index+m[0].length].ᴍ(𝐸.document.positionAt);
-                locs.push({ range: new vs.Range(s,e) }); }
-            𝐸.setDecorations(S,locs); } };
-    const activeEditor = vs.window.activeTextEditor;
-    if(activeEditor) updateDecorations(activeEditor);
-    vs.window.onDidChangeActiveTextEditor(updateDecorations, null, ℭ.subscriptions);
-    vs.workspace.onDidChangeTextDocument(ε => {
-        const 𝐸 = vs.window.activeTextEditor;
-        if(𝐸 && ε.document === 𝐸.document) updateDecorations(𝐸);
-    }, null, ℭ.subscriptions); };
+  const updateDecorations = 𝐸 => {
+    if(!𝐸) return;
+    const text = 𝐸.document.getText();
+    for(const [R,S] of highlights) {
+      const locs = [];
+      let m;
+      while((m = R.exec(text)))
+        (x=>x.length>1 ?x.slice(1): x)(m.indices).forEach(
+          r => locs.push({ range: new vs.Range(...r.map(𝐸.document.positionAt)) }));
+      𝐸.setDecorations(S,locs); } };
+  const activeEditor = vs.window.activeTextEditor;
+  if(activeEditor) updateDecorations(activeEditor);
+  vs.window.onDidChangeActiveTextEditor(updateDecorations, null, ℭ.subscriptions);
+  vs.workspace.onDidChangeTextDocument(ε => {
+    const 𝐸 = vs.window.activeTextEditor;
+    if(𝐸 && ε.document === 𝐸.document) updateDecorations(𝐸);
+  }, null, ℭ.subscriptions); };
 
 const activateSelectionTools = ℭ => {
     𝒪ℒ(tools).ᴍ(([k,v])=>

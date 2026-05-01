@@ -5,7 +5,6 @@
 
 ☾ ./configure_ext.☾
 yes | npx vsce package
-OUT=
 code=$(command -v codium || command -v vscodium || command -v vscode)
 $code --uninstall-extension "moon-0.0.1.vsix" || :
 $code   --install-extension "moon-0.0.1.vsix"
