@@ -1,12 +1,17 @@
+ dummy file to make sure grammar changes don't break stuff.
+ 󰤱 fix the obvious bugs shown here, esp ⟦⟧ not making parenthesis and ␛␛X highlighting X
+
 𝗻
 ‹a bc def x›⍭
 ("a(b")
+␛␛ab
+␛a␛ab
 ('a␛'(b')
 (‹󷺗𝗻x(y›)
 (␛(𝗻)
 ‹joe𝟬𝟮𝗻xy␛xzd›
 asd ‹w𝗮e
-e⟦2+𝗻+‹jo⟦joe⟧e›+2⟧ddd›
+e⟦2+𝗻+‹jo⟦joe􁊻abc(␛x)⟧e›+2⟧ddd›
 
 ‹e⟦2+2⟧gg
  two›

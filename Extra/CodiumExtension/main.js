@@ -35,12 +35,11 @@ const 𝔖𝔏 = 𝚜=>[𝚜.start.line,𝚜.start.character,𝚜.end.line,𝚜.
 const 𝔏𝔖 = (αl,αc,βl,βc)=>new vs.Selection(new vs.Position(αl,αc),new vs.Position(βl,βc));
 
 const highlights = [
-    [/(?<=␛)./gu, { color:"#22ff22", backgroundColor:"#006600aa" }],
-    [/ /gu      , { backgroundColor:"#ffff0044", borderWidth:"1px",
-                    borderStyle:"solid", borderColor:"#ff0" }],
-    [/ /gu      , { backgroundColor:"#0000ff66", borderWidth:"1px",
-                    borderStyle:"solid", borderColor:"#00f" }]
-];
+  [/␛(.)/gu, { color:"#22ff22", backgroundColor:"#006600aa" }],
+  [   / /gu, { backgroundColor:"#ffff0044", borderWidth:"1px",
+               borderStyle:"solid", borderColor:"#ff0" }],
+  [   / /gu, { backgroundColor:"#0000ff66", borderWidth:"1px",
+               borderStyle:"solid", borderColor:"#00f" }] ];
 highlights.forEach(x => x[1] = vs.window.createTextEditorDecorationType(x[1]));
 
 let mapS;

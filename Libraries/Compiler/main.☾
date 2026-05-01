@@ -117,8 +117,8 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   moon_dir cd
   ¿tag􇪨: $ᵒᵉᴰgit fetch󷺗󷺗󷺗 --tags󷺗󷺗 origin󷺗󷺗󷺗󷺗󷹹 􀊚 exit
          $ᵒᵉᴰgit checkout --detach tags/⟦tag⟧󷹹 􀊚 exit
-  ¡    : $ᵒᵉᴰgit checkout 󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗main󷺗󷺗󷺗󷺗󷺗󷺗󷹹 􀊚 exit
-         $ᵒᵉᴰgit pull󷺗󷺗󷺗󷺗 󷺗󷺗origin main󷺗󷺗󷺗󷺗󷺗󷺗󷹹 􀊚 exit
+  ¡    : $ᵒᵉᴰgit checkout 󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗master󷺗󷺗󷺗󷺗󷹹 􀊚 exit
+         $ᵒᵉᴰgit pull󷺗󷺗󷺗󷺗 󷺗󷺗origin master󷺗󷺗󷺗󷺗󷹹 􀊚 exit
   moon_dir􀋋‹install›􀯖ᔐᐒos.execv(⟞,⟞􀋁)
 
 ⊢transpiler_cli(⠤𝖠):
