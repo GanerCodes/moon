@@ -1,41 +1,37 @@
             │ ⟵ screenshot width ≥ that  🮦🮧
 EXPR = 󰦥󰦥󰦥󰦥󰦥
-󷺹⨝<´󷹎ᐖABC󰈲􋋎⬤∖⟞󰆩⨁ᐸ⨝𝗻
+󷺹􀊐󷺹􀞚􍪴􂔛􈊝ᐸ􀊉₂􀋃
 󰦥󰦥󰦥󰦥󰦥
-SS1 = ‹https://ganer.xyz/s/5020c9cf556ebb1c›
+SS1 = ‹https://ganer.xyz/s/5ce275ad6c95e764›
 
 EXPO = 󰦥󰦥󰦥󰦥󰦥
-󷺹🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦  ƒ of 1 var, inserted here 
- ⨝🮦🮦                 join by
-  <´                 less than (here in regards to unicode)
- 🮧🮧🮧󷹎                split by falsy
- 🮧🮧🮧🮧ᐖ🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦    map into function
-      ABC              capital alphabet
-      🮧🮧🮧󰈲􋋎🮦🮦🮦🮦        replace matches with space
-           ⬤           arg to curry
-           🮧∖🮦🮦        set minus
-             ⟞         the function's arg
-             🮧󰆩        deshape
-      🮧🮧🮧🮧🮧🮧🮧🮧🮧⨁       add together
-                ᐸ    close function
- 🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧🮧⨝🮦  join
-                  𝗻  by newlines
+󷺹🮦🮦🮦🮦🮦🮦🮦🮦🮦🮦  func of 1 var, inserted here
+ 􀊐🮦🮦🮦🮦🮦      compose func n times (n can be on either side)
+  󷺹🮦🮦🮦🮦🮦     func of 1 var, inserted here
+   􀞚🮦🮦🮦      append to input the following
+             the next 3 chars are subscripted so form a len 1 list
+    􍪴          the input of this func
+    🮧􂔛         multiply values together
+    🮧🮧􈊝        add one
+       ᐸ    
+ 🮧🮧🮧🮧🮧🮧🮧􀊉🮦   call with 
+         ₂   list containing 2
+ 🮧🮧🮧🮧🮧🮧🮧🮧🮧􀋃  N-ary-and (returns last truthy)
 󰦥󰦥󰦥󰦥󰦥
-SS2 = ‹https://ganer.xyz/s/0d6f0606b152d8fb›
+SS2 = ‹https://ganer.xyz/s/2046673b469c26ab›
 
-EXTRA_INFO = 󰦥󰦥󰦥󰦥󰦥
-For context, here is what the first two operations are actually doing:
-󰦥󰦥󰦥󰦥󰦥
-SS3 = ‹https://ganer.xyz/s/15ad3658fedff3e6›
+EXTRA_INFO = ᐦ
+SS3 = ᐦ
 
 EXEC = 𝚲󰦥󰦥󰦥󰦥󰦥
 ƒ = %EXPR%
 ƒ("ANTIDISESTABLISHMENTARIANISM")☾
-󰦥󰦥󰦥󰦥󰦥 ⥉ ‹%EXPR%› 󰛔 EXPR
+󰦥󰦥󰦥󰦥󰦥 􀯖 ‹%EXPR%›􀁮EXPR
 
  󰤱 auto-generate screenshots somehow
 
-⨡ urllib.parse ; quote = urllib.parse.quote
+⦃import urllib.parse⦄
+quote = urllib.parse.quote
 EXPR󷸊⬄𝗻𝘀 ; EXPO󷸊⬄𝗻𝘀 ; EXEC󷸊⬄𝗻𝘀
 
 ‹
@@ -54,4 +50,4 @@ Note: ☾ uses a custom font, but you can run this code in the [Web UI][2]
   [3]: ⟦SS1⟧
   [4]: ⟦SS2⟧
   ⟦SS3⭜‹[5]: ⟦SS3⟧›⭝ᐦ⟧
-›⬄→☾⥉
+›⬄→☾→
