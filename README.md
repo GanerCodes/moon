@@ -17,7 +17,7 @@ To install (Linux/WSL): `git clone --depth 1 github.com/ganercodes/moon ; ./moon
 Run a file: `☾ ./somefile.☾`  
 Show help: `☾ -h`  
 
-Once installed, there's a VScodium/VSCode extension for syntax highlighting, superscript/subscripting, switching operator orders, etc.  
+Once installed, there's a VScodium/VSCode extension for syntax highlighting, superscript/subscripting, switching operator orders, alignment tools, etc.  
 > It's the .vsix file found inside /Extra/CodiumExtension. Note that ☾ must be in $PATH to function properly.  
 
 ### Collaborators
