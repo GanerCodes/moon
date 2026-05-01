@@ -136,7 +136,12 @@ TEST_GRAM_CACHE = {}
      ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􀸩􍛏˜‹Failed to parse›
           ↪
      𝚌 = c 𝑀
-     ¿E_len􀉖W_len: rˡ􀒰𝚌􀊹􀞽ᵂ􋕟ˡᵉⁿ􀸩􍛏˜‹Short parse length ⟦𝚌􊬋ᵣ􊫂𝑀􀊹⟧􀉣⟦𝚌􊬋ᵣ􊫂𝑀􀯖􍧞􍧰􊬋⟧ (⟦𝚌⟧)›
+     ¿E_len􀉖W_len 􁀙 rˡ􀜃𝚌􀊹:
+       g = 𝚌􊬋ᵣ􊫂𝑀
+       α,β = dotrim(g􀋂,32)􀋂,dotrim(c􂕚􊬋,32)
+       n = termclr(␛𝗻,‹5443fd›)􀝍termclr(ᐦ,‹FFF›)􀯑W
+       samp = α􀊱‹244526›􀝕β􀊱‹601616›􀜘󰲣termclr(𝗻􀋀ˣn,□,y)󰅂􀞆
+       ✗􀞽ᵂ􋕟ˡᵉⁿ􇅦􍛏􁏟‹Short parse length (⟦g􀊹⟧􀉣⟦c􀊹⟧):⟦W⟧ ⟦samp⟧›
      
      to_c = c􀉳𝑀􀉸⁰󷺹􀝍􀊹󷺽􀋳􀉳􀁰􀯖ℵ
      ⊢dep(󱁕): 𝘒 = 󱁕↦󱁕ⁿᴷ􀋲ᐖ󱁕ᴷ􍪴dep  󰤱 code duplication and 0 efficiency found here

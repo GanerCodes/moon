@@ -54,7 +54,7 @@
     ¿x􀋑∞: ↪‹󰤱 ∞ primes›
     ¿𝚜􀋑␀: ¿x􀉦1: ↪[2]􀋈x  󰤱 speedup
           t,p=[2],3
-          ∀t􀊹􀜇x: ¿p􀉧¶: t.append(p)
+          ∀t􀊹􀜇x: ¿p􀉧􀂴: t.append(p)
                  p􇀞􀊩2
           ↪t
     ¿𝚜􀊜ℤ: t=0
