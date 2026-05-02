@@ -22,6 +22,8 @@ isArr = 󰲡x instanceof Array;
 isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument ∨ x instanceof ShadowRoot;
 
 𝔓 = 󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ;
+⨳ = 󰲟{ ¿(¬𝔸₀) throw {name:‹AssertionError›, message:‹Assertion failed: ⟦𝔸⟧›};
+       ↪𝔸₀; };
 ☾ = 󰲟(console.log(⠤𝔸),𝔸₀);
 󷹝 = Stringᶠʳᵒᵐ󰀂ʰᵃʳ󰀂ᵒᵈᵉ;
 🃌 = 󰲡xˡᵉⁿᵍᵗʰ;
