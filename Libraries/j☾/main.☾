@@ -10,7 +10,6 @@
                  O.preserve_newlines = ✓
                  O.max_preserve_newlines = 2
                  ↪jsbeautifier.beautify(𝚌,O)
- prettify_js = 󰻾  epic broken package moment
 
 JOON_HEADER = __dir__􀋋‹Include/header.j☾󷺗› 􇀥 
 MOSS_HEADER = __dir__􀋋‹Include/header.☾ss› 􇀥 
