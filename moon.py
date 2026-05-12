@@ -1,10 +1,10 @@
 #!/bin/python
-BOOTSTRAP_HASH='KT5O7SUOmSejMXvYw9HYWZsRJJjeJ3_mKGjfrscFC2E'
+BOOTSTRAP_HASH='xk7dRE2R8RNEj-OQXVOD6JRFFrCrD8zbRhpiJ-jezcI'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
 moon_dir = áÌî(moon_dir) if moon_dir else áÌî(__file__).parent
-#base.☾ (10182 ⟶ 21398)
+#base.☾ (10202 ⟶ 21435)
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/base.☾')).parent
 import os,sys,inspect,traceback,threading,errno,struct
 from threading import get_ident as áÐèþÂÐðþáÐØ
@@ -116,6 +116,7 @@ class ÂÐô:
 (ÄÝöú:=(lambda x,y:ÂÕÃ(ÂÕØ(x,y),ÂÕÖ(x,y))))
 (ÂÕØ:=(lambda x,y:((({*x} | {*y}))if(ÁØö(x,áÍè))else([*x,*([(z)for z in(y)if((z not in x))])]))))
 (ÂÕÖ:=(lambda x,y:((({*x} & {*y}))if(ÁØö(x,áÍè))else([(z)for z in(x)if((z in y))]))))
+(ÄÝöù:=(lambda x,y:(not ÂÕÖ(x,y) )))
 (ÂÕÃ:=(lambda x,y:(((x - {*y}))if(ÁØö(x,áÍè))else([(z)for z in(x)if((z not in y))]))))
 (ÂøÚ:=(lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:Áÿú(product(*(((([áØÆ] * áØÁ))if(((áØÇ is ÂÞÅ) and (áØÁ is not ÂÞÅ)))else(((([áØÆ,áØÇ])if((áØÇ is not ÂÞÅ))else(áØÆ)) * ((áØÁ)if((áØÁ is not ÂÞÅ))else(1))))))),áÍá)))
 (ÂØÑ:=(lambda *áÑË,áØÁ=1:((Æå:=(lambda *áÑË,n=1,r=[]:(lambda ÂîÓ:Áÿú(ÂîÓ[0],(lambda x:((Æå(*(ÂîÓ[slice(1,None)]),r=(r + [x])))if((ãÊú(ÂîÓ) > 1))else((r + [x]))))))((áÑË * n)))))(*áÑË,n=áØÁ)))

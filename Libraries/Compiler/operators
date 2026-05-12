@@ -300,9 +300,12 @@
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
+󷰬 󷹨󰁖 𝚡∨𝚢 us/𝕊 empty intersection
+    ❗ susceptible to change with non-set args! ❗
+    󰤱˜ docs
 󷰬 ∖ 𝚡∧𝚢 c\ set minus
-    𝑠 ∖ 𝗜 = x-𝑠(right)
-    𝗜 ∖ 𝗜 = left󰈳󷺹∈right
+    𝑠 ∖ 𝗜 = 𝚡􀊪𝑠(right)
+    𝗜 ∖ 𝗜 = 𝚡􀉼󷺹􀉧right
     ❗ susceptible to change with non-set args! ❗
     󰤱˜ docs
 󷰬 ⨉ 𝚡∨􊽨𝚡 XX cross product
@@ -318,6 +321,7 @@
     󰤱 docs
 󷰭 ? 𝚡.   do if valid attribute
     󰤱 docs
+    󰤱 generalize
 󷰭 ⍰󷸆 𝚡󷺤􊽨𝚡 Q?⟦𝕊/⟧ check value is{ not,} □
     `□⍰ ≡ ✗`
     `□󷸆 ≡ ✓`
@@ -327,7 +331,8 @@
     󰤱 finalize (ᔨ ⦢ etc)
     󰤱 docs
 󷰭 ⵌ 𝚡∨􊽨𝚢 cou𝕊 {count 󰤱}
-    󰤱 test that may or may not ever be used/implemented
+    Without 𝚜 this is simply 𝚡􀉻𝚢􀊹
+    󰤱 all other forms of argument lol
 󷰭 🃌󷸑󷸒󷷨󷷫 𝚡󷺤􊽨𝚡 c⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆NU⟧ {cardinality (length),shape,depth,count 󰤱,unique count 󰤱}
     𝗜 🃌: Length of arg
         `‹egg›🃌 ≡ 3`

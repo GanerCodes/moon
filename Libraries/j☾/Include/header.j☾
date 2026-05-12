@@ -1,17 +1,20 @@
 BASE_CHARSET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-makeProxy = ⥌𝚐,𝚜,o={}↦
-  🆕 Proxy(o,{ get(_,k  ) { ↪𝚐(k  ); },
-              set(_,k,v) { ↪𝚜(k,v); }});
-󰻾 = 󰲡x;
+makeProxy = ⥌{ƒ,𝚐,𝚜,𝚍},o={}↦🆕 Proxy(o,{
+  get           (𝕊,k  ) { ↪k∈𝕊 ⭜𝕊ₖ⭝ 𝚐 ⭜𝚐(k)⭝ 󱣩; },
+  set           (𝕊,k,v) { ↪𝚜 ⭜𝚜(k,v)⭝ (𝕊ₖ=v)  ; },
+  deleteProperty(𝕊,k  ) { ↪𝚍 ⭜𝚍(k  )⭝ (󰆴 𝕊ₖ)  ; },
+  apply         (𝕊,𝕤,𝔸) { ↪ƒ ⭜ƒ( ⠤𝔸)⭝  󱣩      ; }
+              });
+[󰻾,𝔓] = [󰲡x,󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ];
 [Ϣ,󰈙] = [window,document];
-[𝐴,𝐸,𝑜,ᔐ,𝑖,∞] = [Array,Element,Object,String,Number,Infinity];
-Type = [HTMLDocument,ShadowRoot,Element];
+[𝐴,𝐸,𝑜,ᔐ,𝑖] = [Array,Element,Object,String,Number];
+[∞,Type] = [Infinity,[HTMLDocument,ShadowRoot,Element]];
 [𝒪,𝒟,𝒪k,𝒪v] = [𝑜ᵉⁿᵗʳⁱᵉˢ,𝑜ᶠʳᵒᵐᴱⁿᵗʳⁱᵉˢ,𝑜ᵏᵉʸˢ,𝑜ᵛᵃˡᵘᵉˢ];
 𝒪ℳ = 󰲡x􋔩(󰲣({⠤x,⠤y}));
 𝒪𝑏 = ⥌o,n=✗,y=o↦{ ∀(©_∈o) ↪y; ↪n; };
 𝒮 = ⥌d,k,v↦(¬(k∈d) ∨ dₖ≅␀) ⭜(dₖ=v)⭝ dₖ;  get-setdefault
-𝒫 = (⥌ƒ↦makeProxy(⥌𝚔↦󰲡ƒ(x,𝚔,⠤𝔸),󰻾,ƒ))
+𝒫 = (⥌ƒ↦makeProxy({𝚐:⥌𝚔↦󰲡ƒ(x,𝚔,⠤𝔸),󰻾,ƒ}))
     (⥌d,k,v=󱣩↦k∈d⭜(v=dₖ,󰆴dₖ,v)⭝v);
 𝓟 = 󰲣[x,ᴍv(y,⥌v,k↦𝒫ₖ(x,v))];  partition 𝒪 with default
 
@@ -21,14 +24,13 @@ isNum = 󰲡typeof x ≅ ‹number›;
 isArr = 󰲡x instanceof Array;
 isElm = 󰲡x instanceof Element ∨ x instanceof HTMLDocument ∨ x instanceof ShadowRoot;
 
-𝔓 = 󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ;
+𝗙 = 󰲡x instanceof Function;
+
 ⨳ = 󰲟{ ¿(¬𝔸₀) throw {name:‹AssertionError›, message:‹Assertion failed: ⟦𝔸⟧›};
        ↪𝔸₀; };
 ☾ = 󰲟(console.log(⠤𝔸),𝔸₀);
 󷹝 = Stringᶠʳᵒᵐ󰀂ʰᵃʳ󰀂ᵒᵈᵉ;
-🃌 = 󰲡xˡᵉⁿᵍᵗʰ;
-𝗙 = 󰲡x instanceof Function;
-𝑙 = 󰲡[⠤x];
+[𝑙,🃌] = [󰲡[⠤x], 󰲡xˡᵉⁿᵍᵗʰ];
 𝔓(ᔐ)􋄽 = function() { ↪this.toUpperCase(); };
 𝔓(ᔐ)􋄼 = function() { ↪this.toLowerCase(); };
 𝔓(𝑖)􋄽 = function() { ↪ Mathᵃᵇˢ (this);    };
@@ -87,6 +89,8 @@ mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars
                        󰆴 localStorageₓ; } }
              ↪y; },
        ⸓: 󰲥𝔏𝔖􋀫(x,y(𝔏𝔖􋀭(x,z))) };
+𝔏𝔖 = makeProxy({𝚐:𝔏𝔖􋀭,𝚜:𝔏𝔖􋀫,𝚍:󰲡󰆴 localStorageₓ},𝔏𝔖);
+
 { © arrayLikeƒ = {  : ⥌x,ƒ   ↦{ O = {};
                                  x􋁃(󰲡(⥌y↦y∈O ⭜O.push(x)⭝ (O=[x]))(ƒ(x,⠤𝔸)));
                                  ↪O; },
@@ -137,9 +141,8 @@ AEL = ⥌,⠤𝔸↦(.addEventListener(⠤𝔸),𝚲REL(,⠤𝔸));
 REL = ⥌,⠤𝔸↦.removeEventListener(⠤𝔸);
 
 󰈙 = 󰈙ᵈᵒᶜᵘᵐᵉⁿᵗᴱˡᵉᵐᵉⁿᵗ;
-𝚟 = makeProxy(
-  ⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
-  ⥌p,v=ᐦ,=󰈙↦󰈙􋛟.setProperty(‹--⟦p⟧›,v))
+𝚟 = makeProxy({ 𝚐:⥌p,    =󰈙↦getComputedStyle().getPropertyValue(‹--⟦p⟧›),
+                 𝚜:⥌p,v=ᐦ,=󰈙↦                󰈙􋛟.setProperty     (‹--⟦p⟧›,v) });
 
 showə = ⥌,y=󱣩↦􈛣(‹hidden›,⠤y≅󱣩⭜[]⭝[¬y]);
 swapə = 󰲣{ ¿(x≅y) ↪;
