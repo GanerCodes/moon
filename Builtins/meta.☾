@@ -25,7 +25,7 @@ dump_cached_imports = 𝚲‹TP_CACHE.update({⟦__þIMPORTS__󰈲󷺹₀.is_rel
               𝚌 = moon_to_py_cached(𝚌)
                ‹←← moon_to_py_cached›☾
     ¿get_code: ↪𝚌
-    ¿init_ns: ns = BOOTSTRAP_GLOBALS.copy|(ns≅□⭜ⁿˢ{})
+    ¿init_ns: ns = BOOTSTRAP_GLOBALS.copy|(ns􈇇􇀦ⁿˢ{})
     ¿code_ref∧native¬: ns[‹__moon_code__›]=𝘤
            ‹→ 󱠨›☾
            r=ƒ(𝚌,ns)

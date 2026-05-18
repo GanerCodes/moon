@@ -1,0 +1,13 @@
+󱀘DatabaseError(𝑒): ⊢__init__(𝕊,msg=‹Error!›,ε=□,tb=□):
+                     super().__init__(msg)
+                     ¿ε 􇪨: 𝕊.__cause__ = ε
+                           𝕊.__suppres_context__ = ✓
+                     ¿tb􇪨: 𝕊.__traceback__ = tb
+󱀘DataBaseMalformedDataError(DatabaseError):□
+󱀘DatabaseBulkTransactionError(DatabaseError):□
+󱀘DatabaseRecordError(DatabaseError):□
+󱀘DatabaseRecordMissingError(DatabaseRecordError):□
+󱀘DatabaseRecordConflictError(DatabaseRecordError):□
+
+⭷ DatabaseError,DataBaseMalformedDataError,DatabaseBulkTransactionError,␛
+  DatabaseRecordError,DatabaseRecordMissingError,DatabaseRecordConflictError

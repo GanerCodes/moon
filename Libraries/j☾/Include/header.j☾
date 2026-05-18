@@ -65,6 +65,8 @@ mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars
                   ☾(‹ƒ: Returning›, r);
                   ↪r };
 
+──── SPLIT ────
+
 © 𝑙Replace = 󰲣(x.splice(0,∞,⠤y),x);
 © 𝑜Replace = 󰲣{ y = structuredClone(y);  replace x with copy of y
                 ∀(⎉k∈x) 󰆴 xₖ;
@@ -116,6 +118,8 @@ mk_id = ⥌l,chars=abcABC123↦⭥(l)􊾡(𝚲chars􋕛(𝑖(󱅏()⋅🃌(chars
 
 abcABC123 = 󷹝(⠤⭥(97,123),⠤⭥(65,91),⠤⭥(48,58));
  Pretty much dom stuff from here on
+
+──── SPLIT ────
 
 𝒪({ 󰠗: HAT = 󰲡boxᴍ(𝔸,⥌a↦x.hasAttribute(a))􋂃(),
     󱀡: GAT = 󰲣y≇󱣩 ⭜x.getAttribute(y)⭝ x.attributes,

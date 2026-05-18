@@ -1,33 +1,36 @@
 ⦃from time import time,sleep⦄
 
+⊢PL_MEM_USAGE: ⦃import psutil⦄
+               𝚙 = psutil.Process􀃅
+               ↪𝚙.memory_info􀃅.rss
 ⊢PL_CPU_COUNT: ⦃import multiprocessing⦄
-               ↪multiprocessing.cpu_count
+               ↪multiprocessing.cpu_count􀃅
 ⊢PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄
                      atom = []
-                     T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)≕t→.start
-                     ↪𝚲t.join ► atom₀
+                     T(target=ᐳƒ(⠤𝔸,⠶𝕂) atom.append)􀯑t􇀥.start􀃅
+                     ↪𝚲t.join􀃅 􀊰 atom₀
 ⊢PL_WAIT_PID(p):   os.kill(p,0)
                  ¡: ↪□
                  os.waitpid(p,0)
-⊢PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀¬  󰤱􊽨 windows
+⊢PL_CHECK_PID(p): ↪os.waitpid(p,os.WNOHANG)₀􀌐  󰤱􊽨 windows
  ¿p: ↪p, 𝚲p PL_WAIT_PID ► f ᵇ pload ◄ f os.remove
  f 󱖔􍡩􊾶 ƒ(⠤𝔸,⠶𝕂) pdump
 ⊢PL_FORK(ƒ,⠤𝔸,⠶𝕂): ¿env.get(‹MOON_NO_FORK›): ↪ƒ(⠤𝔸,⠶𝕂) pdump pload
                    ⦃from multiprocessing import shared_memory⦄
                    𝗆 = shared_memory.SharedMemory(create=✓,size=2²⁰)
-                   𝔲 = 󷺹[4:4+struct.unpack(␛I,⟞﹕₄)₀]
-                   p = os.fork
-                   ¿p: ↪p, 𝚲p PL_WAIT_PID ► 𝔲(𝗆.buf) pload ◄ (𝗆.close►𝗆.unlink)
+                   𝔲 = 󷺹[4:4􀊩struct.unpack(␛I,⟞􊬋₄)₀]
+                   p = os.fork􀃅
+                   ¿p: ↪p, 𝚲p PL_WAIT_PID 􀊰 𝔲(𝗆.buf) pload 􀊯 (𝗆.close􀃅􀊰𝗆.unlink􀃅)
                    v = ƒ(⠤𝔸,⠶𝕂) pdump
-                   𝗆.buf﹕₄ = struct.pack(␛I,v🃌)
-                   𝗆.buf₄﹕₄₊ᵥ􊹳 = v
+                   𝗆.buf􊬋₄ = struct.pack(␛I,v􀊹)
+                   𝗆.buf₄􊬋₄􂧮ᵥ􂕚 = v
                    0 os._exit
 ⊢PL_SLEEP(x): sleep(x)
-⊢PL_TIME    : ↪time
+⊢PL_TIME    : ↪time􀃅
 ⊢PL_TEXT_COPY(x):  ⦃from clipboard import copy⦄
                     ↪copy(x)
-                  ✗ 􁀒˜ ‹Failed to copy󷺗! Do you have clipboard installed?›
+                  ✗ 􁀒􁏟 ‹Failed to copy󷺗! Do you have clipboard installed?›
 ⊢PL_TEXT_PASTE  :  ⦃from clipboard import paste⦄
                     ↪paste()
-                  ✗ 􁀒˜ ‹Failed to paste! Do you have clipboard installed?›
+                  ✗ 􁀒􁏟 ‹Failed to paste! Do you have clipboard installed?›
 ⊢PL_URANDOM(n): ↪os.urandom(n)

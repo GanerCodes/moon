@@ -1,0 +1,104 @@
+⨡ j☾ ⭸ proc,prettify_js,transpile_dir
+
+⊢test(x): x􀊸
+          ␛→50􀊸
+          r = proc(x)􋒷􀊸
+          ␛─3􀊸
+          r prettify_js 􀊸
+          ␛←50􀊸􋋉􋋉
+
+¿𝔸􀊹􀉞2: 𝔸₁ test
+       exit􀃅
+¿𝔸􀊹􀉞3: transpile_dir(𝔸₁,𝔸₂)
+       exit􀃅
+
+🟑 test(󰦥󰦥󰦥󰦥󰦥
+↪ 󱀝 {𝐶 fr fas tac⍮ 𝑆 min-width:80%;max-width:97%} [
+      󱀝 {𝐶 fc fjc w2 h} [
+          󱀝 txt ‹Connected›
+          󱀝:α div {𝐶 ha⍮ 𝑆 min-height:30px;border:1px solid #FFF} []
+      ]
+  ];
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+f=
+𝚲(
+𝑙(
+‹h
+el
+lo
+ w
+or
+ld
+›)
+􋐉(
+󰲡x
+≠𝗻
+))
+􌿑(
+ᐦ)
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+© ə_dev_mode_selector = ⥌ƒ↦
+    󱀝 {𝐶 vcentered margKids2}[
+        󱀝 button {onclick ⟦𝚲ƒ('B')⟧} ‹Connect via Bluetooth›
+        󱀝 button {onclick ⟦𝚲ƒ('I')⟧} ‹Connect via Internet›
+    ];
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    A=␛h
+    B=𝗻
+    C=‹␛A›
+    D=‹𝗻›
+    E=‹\a›
+    F="\x"
+    G=␛\
+    H=␛𝗻
+    I=‹␛𝗻𝘁𝘀(󷺗)abc␛a␛𝗻␛›a␛␛›
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    joe=⥌x,y↦x+y
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    ble_dev_to_str = ⥌𝐒↦𝒪(𝐒).map(⥌[𝐬,𝐂]↦‹⟦𝐬⟧⟦𝐂.map(⥌𝐜↦‹𝗻    ⟦𝐜⟧›).join(ᐦ)⟧›).join(𝗻);
+    joe
+    󱀝:ə div
+
+    󱀝:ə div {𝑆 asdad} [‹hi› ⟦2+2⟧]
+            asdasdasd
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    󱀝 ‹a›{‹b›:‹c›}‹d›
+󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    󱀝 [
+        󱀝 {𝐶 fieldEntry} [
+            󱀝:α input {𝑃𝐻 SSID}
+        ]
+        󱀝 {𝐶 fieldEntry} [
+            󱀝 input {𝑇 password⍮ 𝑃𝐻 ‹Password›}
+        ]
+        󱀝:β button {𝐶 fieldButton⍮ onclick ⟦𝚲☾("hi", α, β)⟧} 󷺗
+    ]
+󰦥󰦥󰦥󰦥󰦥) 🟑
+
+
+ test(󰦥󰦥󰦥󰦥󰦥[‹𝚌 def⟦2+2⟧›, ⦅𝚌 def⟦2+2⟧⦆]󰦥󰦥󰦥󰦥󰦥)
+
+test(󰦥󰦥󰦥󰦥󰦥
+    © my_awesome_element = 󱀝 div ⦅𝚏 𝚏LR 𝚊𝙿c⦆ [
+        󱀝 h4 [
+            ‹sonic i have an announcement, ⟦‹your Gay›􋄽()⟧›
+            󱀝 h6 ⦅𝚌 red⦆ ‹hi im red!!›
+        ]
+        󱀝 video{src https://website.gov/cool.mp4⍮ 𝐶 coolvideo⍮ ⦅𝚠 1000px; 𝚑 1000px;⦆}
+        󱀝:joe div
+    ];
+󰦥󰦥󰦥󰦥󰦥)

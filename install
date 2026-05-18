@@ -9,17 +9,18 @@ chk_py_ver() {
             echo "Using $1 at \"$PYTHON\""; } } }
 chk_py_pip() { "$PYTHON" -c "import pip" 2>/dev/null; }
 
-[ -z "$PYTHON" ] && chk_py_ver "python"     || :
-[ -z "$PYTHON" ] && chk_py_ver "python3"    || :
+[ -z "$PYTHON" ] && chk_py_ver "python3.15" || :
 [ -z "$PYTHON" ] && chk_py_ver "python3.14" || :
 [ -z "$PYTHON" ] && chk_py_ver "python3.13" || :
 [ -z "$PYTHON" ] && chk_py_ver "python3.12" || :
+[ -z "$PYTHON" ] && chk_py_ver "python3"    || :
+[ -z "$PYTHON" ] && chk_py_ver "python"     || :
 [ -z "$PYTHON" ] && { echo "Unable to find a valid python install!"
                       exit 1; }
 
 chk_py_pip || { echo "pip is not installed. Running ensurepip."
                 "$PYTHON" -m ensurepip || echo "Failed to run ensurepip ⎺⟍_⟨⍩⟩_⟋⎺"; }
-chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U pycryptodome cffi regex clipboard \
+chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U psutil pycryptodome cffi regex clipboard \
            || echo "Failed to run pip ⎺⟍_⟨⍩⟩_⟋⎺"
 
 DEST=$([ "$(id -u)" -eq 0       ] && echo "/bin/☾"             || (\

@@ -24,20 +24,6 @@
          𝚋 ⦑f2⦒33
     􀴗 ∣ 𝚃𝚏 scale(1.03)
          𝚋 ⦑f1⦒33
-  .box ∣ 𝚠;𝚙 1em
-         􊽬(.noOutline) ∣ 𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-         .noOutline    ∣ 𝚋 1px solid #0000
-         >* ∣ 𝚖 0.25em
-  .boxInput
-    𝚏→; 𝚊𝚂󷷣; 𝚙0
-     ⦑f0⦒; 𝚋 ⦑b0⦒
-    𝚋 1px solid ⦑f2⦒; 𝚋𝚛 5px
-    􍴍         ∣ 𝚋 ⦑b1⦒
-                 𝚋 1px solid ⦑f0⦒
-    􋁋(input􍳷) ∣ 𝚋 1px solid #f00
-     * ∣ 󰊄𝚜 24px
-    >⁰ ∣ 𝚙󷷢 8px; 𝚋𝚛← 4px
-    >􍨅 ∣ 𝚙󷷢 8px; 𝚋𝚛→ 4px
 
   .roundBtn
     𝚙 4px
@@ -64,8 +50,8 @@
 
   *[canDrag] ∣ 𝚃 all 0.1s ease-in-out
                𝚖𝚙 pointer
-  *[dragging]  ∣ 𝚃𝚏 scale(0.5)
-                 user-select 􋄅
+  *[dragging] ∣ 𝚃𝚏 scale(0.5)
+                user-select 􋄅
                   touch-action 􋄅
    *[maydrop]   ∣ 𝚋 2px dashed #FF0
 

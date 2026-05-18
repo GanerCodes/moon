@@ -1,0 +1,85 @@
+⦃from threading import RLock⦄
+⨡ text_format
+⨡ 󰆼_types
+⨡ LMDB
+
+󱀘󰆼: 𝘥 = ⥌𝕊,k↦􀂽´􀋑k􀕮k􀋑□ 􇂖𝕊􀲯􇂗 k ᔐ
+    𝘵 = ⥌𝕊,p↦‹⟦𝕊􀲵⟧_⟦p⟧›
+    ⊢__init__(𝕊,𝚗,ω,𝚍,𝙿,𝙲):
+      𝕊􀲵,𝕊󰁤,𝕊􀲡,𝕊􀳭,𝕊􀳓,𝕊􀲯 = 𝚗,ω,𝚍,𝙿,𝙲,𝙿₀
+      𝕊􀲟􀲷􀲱􀲿 = 𝙿􀋶𝙲
+      𝕊.__dict__.update(𝙿ᐵ,󰆼_proxy(𝕊,⟞)ᐸ𝑑)
+    __pow__     = ⥌𝕊,x↦x􀋑􀂽´􀞽􇂖ƒ↦𝚲ⓦ(𝕊,󷺻ƒ(⠤𝔸,⠶𝕂))
+    __repr__    = 𝕊↦‹󰆼[⟦𝕊􀳭􀋢𝘀⟧](⟦𝕊􀳓􀋢𝘀⟧) with ⟦𝕊􀊹⟧ rows (⟦𝕊􀲡⟧)›
+    __enter__   = 𝕊↦𝕊󰁤.__enter__(⠤𝔸,⠶𝕂)􀊰𝕊
+    __exit__    = 𝕊↦𝕊󰁤.__exit__ (⠤𝔸,⠶𝕂)
+    __iter__    = 𝕊↦𝕊.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
+    __len__     = 𝕊↦𝕊.len (𝕊􀲯,⠤𝔸,⠶𝕂)
+    __contains__= 𝕊↦𝕊.has (𝕊􀲯,⠤𝔸,⠶𝕂)
+    __getitem__ = 𝕊↦𝕊.get (𝕊􀲯,⠤𝔸,⠶𝕂)
+    __setitem__ = 𝕊↦𝕊.set (𝕊􀲯,⠤𝔸,⠶𝕂)
+    __delitem__ = 𝕊↦𝕊.del (𝕊􀲯,⠤𝔸,⠶𝕂)
+    ⊢__or__(𝕊,⠤𝚁): ¿𝚁ᐹ𝑑: 𝚁􇀞􀋁
+                   ¡   : 𝚁􀊜𝗜 􁀒
+                    ∀𝚛⬠𝚁: 𝕊􀲯􀉧𝚛 􁁖 DataBaseMalformedDataError(‹Record ⟦𝚛⟧ has no superprimary key!›)
+                           𝕊󰁤.set(𝕊􀲯𝕊􍻂,𝚛􊶊􀵂,𝚛)
+                   ¡ε=𝑒: DatabaseRecordError(‹Failed to update records: 𝚁=⟦𝚁⟧›,ε) 􁁖
+                   ↪𝕊
+    ⊢show(𝕊,header=␀,print=✓):
+      r = grid([𝕊􀳭􀉳ŧ𝼝(⬤,,‹333›)􀠓𝕊􀳓􀉳ŧ𝼝(⬤,,‹111›)􀠓􊬏􊬐,⠤𝕊ᐖ[⠤⟞₁ᑀ.get(⟝,␛␀)ᔐᐛC􀯽𝕊􀳭􀊩𝕊􀳓,⟞₁􀊪C→ᔐ]])
+      ¿header􀋒□: ¿header􀋑␀: header=‹⟦𝕊􀲡.stem⟧ ─ ⟦𝕊􀲵⟧›
+                 ¡        : header􀯏ᔐ
+                 r􀯏title(header,⬤)
+      ↪r􀊚ᵖʳⁱⁿᵗ􀁦
+    ⊢iter(𝕊,P      ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      ¿P􀉞𝕊􀲯: ↪iter(𝕊󰁤.iter(P 𝕊􍻂))
+                      ↪iter(𝕊󰁤.iter(P 𝕊􍻂)􀉴󷺹,𝕊󰁤.get(𝕊􀲯𝕊􍻂,⟝)󷺿)
+    ⊢len (𝕊,P      ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      ↪𝕊󰁤.len(P 𝕊􍻂)
+    ⊢has (𝕊,P,k    ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      ↪𝕊󰁤.has(P 𝕊􍻂,k ᔐ)
+    ⊢get (𝕊,P,k,a=␀): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      ¿𝕊󰁤.has(P 𝕊􍻂,k􀯏ᔐ)􀌐:
+                        ↪a􀋒␀ 􇀦a􇀧 DatabaseRecordMissingError(‹⟦k⟧∉⟦𝕊.‹⟦P⟧›⟧›) 􀊗
+                      ↪P􀋑𝕊􀲯 􇀦𝕊󰁤.get(𝕊􀲯𝕊􍻂,k)􇀧 𝕊󰁤.get(𝕊􀲯𝕊􍻂,𝕊󰁤.get(P 𝕊􍻂,k)) 􇂕 ℵ
+    ⊢set (𝕊,P,k,v  ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      P􀕶𝕊􀲯 􁁖 DatabaseError(‹󰤱›)
+                      id,v = k ᔐ, vℵ􀓆􁎡󷺹􀯏ᔐ,⟞􀉧𝕊􀳭 􇂖􍪹 ᔐ􀊉󷺽
+                      ¿k∈v: v􊶊􀵂􀉞id 􁁖 DatabaseRecordConflictError(‹Superprimary record field "⟦𝕊􀲯⟧" ⟦v􊶊􀵂⟧ ≠ ⟦id⟧›)  󰤱􊽨 make this do .move() instead?
+                      ¡   : v􊶊􀵂=id
+                      
+                      ¿𝕊󰁤.has(𝕊􀲯𝕊􍻂,id): (𝕊󰁤.get(𝕊􀲯𝕊􍻂,id)􀊦𝕊􀳭)􁎡􀊷v􁎡 􀟞 󰲣𝕊󰁤.del(x 𝕊􍻂,y)
+                      
+                      ∀k,x⬠v􀖾𝕊􀳭􀗂􊶊􀵂:
+                        ¿𝕊󰁤.has(k 𝕊􍻂,x): 𝕊󰁤.get(k 𝕊􍻂,x)􀯑y􀒰id 􁁖 DatabaseRecordConflictError(‹⟦𝕊􀲯⟧=⟦id⟧ wants ⟦k⟧=⟦vₖ⟧, but ⟦k⟧ ⟦vₖ⟧ → ⟦𝕊􀲯⟧=⟦y⟧›)
+                        ¡              : 𝕊󰁤.set(k 𝕊􍻂,x,id)
+                      𝕊󰁤.set(𝕊􀲯𝕊􍻂,id,v)
+                      ↪v
+    ⊢del (𝕊,P,k    ): P􇀞􀋑□􀰈􋉌􀵃P ᔐ
+                      ¿𝕊󰁤.has(P 𝕊􍻂,k): 𝐱 = 𝕊󰁤.get(P 𝕊􍻂,k)
+                                       ∀k,v⬠𝕊􀳭􀖾𝐱: 𝕊󰁤.del(k 𝕊􍻂,v)
+                      ↪𝐱
+    ⊢move(𝕊,k,K    ): ✗⨳‹󰤱􊽨›
+󱀘󰆼_proxy(󰆼):
+  ⊢__init__(𝕊,𝙿,𝚔): 𝕊􀳭,𝕊􀲯 = 𝙿,𝚔
+  __repr__  = 𝕊↦‹Proxy of primary column ⟦𝕊􀲯⟧ of ⟦𝕊􀳭⟧›
+  __enter__ = 𝕊↦𝕊􀳭.__enter__(⠤𝔸,⠶𝕂)􀊰𝕊
+  __exit__  = 𝕊↦𝕊􀳭.__exit__ (⠤𝔸,⠶𝕂)
+  iter = __iter__     = 𝕊↦𝕊􀳭.iter(𝕊􀲯,⠤𝔸,⠶𝕂)
+  len  = __len__      = 𝕊↦𝕊􀳭.len (𝕊􀲯,⠤𝔸,⠶𝕂)
+  has  = __contains__ = 𝕊↦𝕊􀳭.has (𝕊􀲯,⠤𝔸,⠶𝕂)
+  get  = __getitem__  = 𝕊↦𝕊􀳭.get (𝕊􀲯,⠤𝔸,⠶𝕂)
+  set  = __setitem__  = 𝕊↦𝕊􀳭.set (𝕊􀲯,⠤𝔸,⠶𝕂)
+  del  = __delitem__  = 𝕊↦𝕊􀳭.del (𝕊􀲯,⠤𝔸,⠶𝕂)
+⊢DB_WRAP(Ω,β=󰆼):  Ω(𝐩,[ᔐ]) → iter,len,has,get,set,del
+  ⊢ƒ(𝚍,⠶𝕂): 𝕂􀯿􀉴⁺󰲣y􀉳²ᔐ󰅂􀯖ℵ
+            ω=Ω(𝚍􀯿𝐩,𝕂􀉴󰲣y₀ᐖ‹⟦x⟧_⟦⟞⟧›󰅂􀋶)
+            ↪𝕂􀉴󰲣β(x,ω,𝚍,⠤y)
+  ↪ƒ
+
+󰆼 = DB_WRAP(LMDB)
+
+⭷ 󰆼,DatabaseError,DataBaseMalformedDataError,DatabaseBulkTransactionError,␛
+    DatabaseRecordError,DatabaseRecordMissingError,DatabaseRecordConflictError
+
+¿__name__≡‹__main__›: ⨡ 󰆼/󰆼_test

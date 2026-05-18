@@ -1,0 +1,14 @@
+ 󰤱 this file is basically just a result of optimizing for the VPS
+
+⦃import jsbeautifier⦄  INSTALL THE UNICODE FIXED VERSION
+⊢prettify_js(𝚌): O = jsbeautifier.default_options􀃅
+                 O.indent_size = 2
+                 O.indent_char = 𝘀
+                 O.preserve_newlines = ✓
+                 O.max_preserve_newlines = 2
+                 ↪jsbeautifier.beautify(𝚌,O)
+
+transpile_file = ⥌    α,β,ƒ↦(β,α  ƒ)
+transpile_type = ⥌dir,α,β,ƒ↦dir.glob(‹**/*.⟦α⟧›)ᐖtranspile_file(⟞,⟞ᵖᵃʳᵉⁿᵗ􀝯‹⟦⟞ˢᵗᵉᵐ⟧.⟦β⟧›,ƒ) 􀊰 ⟞.unlink􀃅
+
+⭷ prettify_js,transpile_file,transpile_type

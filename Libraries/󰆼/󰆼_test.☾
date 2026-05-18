@@ -1,0 +1,56 @@
+⨡ 󰆼
+db,⠤_ = 󰆼(‹/tmp/DB_TEST›,main="uname email hand"􀌌)
+db.show
+db["joe"] = {email="weed@google.gov",weeds=22,ohno=␀}ℵ
+db["guywithoutanything"] = ℵ
+db☾
+db["joe"]☾
+db.show
+db["joe"] = {email="sand@google.gov"}ℵ
+db["slambert"] = {guns=295,hand=␛h􀊱25}ℵ
+ db["badguy"] = {email="sand@google.gov"}ℵ
+  ✗⨳‹Wee›
+¡ε=DatabaseRecordConflictError:
+  ‹Error is expected here: "⟦ε⟧"›☾
+db?􋕨ⱼ󰂼ₑ􋕨☾
+db?􋕨ⱼ󰂼ₑₛ􋕨☾
+db.show
+󰆴 db["joe"]
+db.show
+db􀊹􀜂2 􁀒
+⊢(󰲡𝚲ⓦ(db,⥌⠤_↦x)) test: db["h"] = {email="yo@yo.yo"}ℵ
+                        db["h"]☾
+                        db["abc"] = {}ℵ
+                        db.show􀃅
+                        ✗􀉓‹Yay›
+      test
+¡ε=𝑒𝑒: ‹Error is expected here: ⟦ε⟧›􀊸
+db.show
+db􀊹􀜂2 􁀒
+󰆴 db
+
+𝔇,𝔉 = 󰆼(‹/tmp/DB_TEST2›,main="p v"􀌌,sneed="p v sand"􀌌)
+𝔇[‹x›] = {v=␛1}ℵ
+𝔇
+⊢(ƒ↦𝚲ⓦ(𝔇,⥌⠤_↦ƒ)) A: ‹A₀: x≡⟦𝔇[‹x›]⟧›􀊸
+                     ½ sleep
+                     ‹A₁: x≡⟦𝔇[‹x›]⟧›􀊸
+                     𝔇[‹x›] = ℵ(v=␛A)
+                     ‹A₂: x≡⟦𝔇[‹x›]⟧›􀊸
+                     ‹𝔇[␛x]=⟦𝔇[␛x]⟧𝗻𝔇.p[␛x]=⟦𝔇.p[␛x]⟧𝗻𝔇.get(␛p,␛x)=⟦𝔇.get(␛p,␛x)⟧𝗻𝔇.p.get(␛x)=⟦𝔇.p.get(␛x)⟧›☾
+                     𝔇[␛x]ᵛ 􀉞 𝔇.p[␛x]ᵛ 􀉞 𝔇.get(␛p,␛x)ᵛ 􀉞 𝔇.p.get(␛x)ᵛ 􀉞 ␛A 􁀒
+⊢(𝔉􁏦) B: ‹B₀: x≡⟦𝔇[‹x›]⟧›􀊸
+         ⅕ sleep
+         ‹B₁: x≡⟦𝔇[‹x›]⟧›􀊸
+         𝔇[‹x›] = ℵ(v=␛B)
+         ‹B₂: x≡⟦𝔇[‹x›]⟧›􀊸
+⊢(ƒ↦𝚲ⓦ(𝔉,⥌⠤_↦ƒ)) C: 𝔉[‹x›] = ℵ(v=␛C)
+                     ‹C₁: x≡⟦𝔉.p.get(␛x)⟧›􀊸
+PL_THREAD(A)
+PL_THREAD(B)
+PL_THREAD(C)
+1 sleep
+𝔇.show
+𝔉.show
+
+ 󰤱 demonstate ⛯ usage

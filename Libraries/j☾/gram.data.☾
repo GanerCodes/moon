@@ -1,0 +1,89 @@
+GRAM=󰦥󰦥󰦥󰦥󰦥
+
+main = (keeper ∨ str ∨ script ∨ 󱀝 ∨ λ_head ∨ special ∨ grp ∨ num ∨ var ∨ 𝗪)*
+main_comments = (str ∨ comment ∨ ~‹.|\n›)*
+script  = (sub   = ~‹%SCRIPTD%+› ) ∨ (sup   = ~‹%SCRIPTU%+› )
+special = (const = ~‹%CONSTANTS%›) ∨ (opert = ~‹%OPERATORS%›)
+
+keeper = 󰆴'⦋' ~‹([^⦌]|\Z)*› 󰆴'⦌'
+
+λ_head = 󰆴'⥌' main 󰆴'↦'
+grp = ~‹[[{(]› main ~‹[\]})]›
+num = pos_num ∨ neg_num
+pos_num = ƨ(~‹0([bB][01]+|[oO][0-7]+|[xX][0-9a-fA-F]+)|([0-9]+(\.[0-9]*)?|[0-9]*\.[0-9]+)(e[+\-]?[0-9]+)?›)
+neg_num = ƨ(~‹󷰽([󷱈󷱐][󷰽󷰾]+|[󷱍󷱕][󷰽-󷱄]+|[󷱎󷱖][󷰽-󷱆󷱇-󷱌󷱏-󷱔]+)|([󷰽-󷱆]+(\.[󷰽-󷱆]*)?|[󷰽-󷱆]*\.[󷰽-󷱆]+)(󷱋[+\-]?[󷰽-󷱆]+)?›)
+
+var = ¬(~‹[0-9]›) ƨ((¬script ¬special ~‹[^\]\-\\␛‹␛›^[\n\t ⥌↦⟦⟧⦃⦄(){}⟨⟩󱀝!%@&+|`'"#$,.:;⍮?*/<>~=]›)+)
+str = ᔐ_star ∨ ᔐ_☾ ∨ ᔐ_moss ∨ ᔐ_basic ∨ ᔐ_escape ∨ ᔐ_spec_char
+ᔐ_star = (󰆴(~‹󰦥{5}›)) ~‹((?!󰦥{5})(.|\n))*› 󰆴((~‹󰦥{5}›) ∨ ✓)
+ᔐ_☾    = 󰆴'‹' (⠶ᔐ_☾_inner)* 󰆴'›'
+ᔐ_moss = 󰆴'⦅' (⠶ᔐ_☾_inner)* 󰆴'⦆'
+ᔐ_☾_inner = ᔐ_escape ∨ ᔐ_sub ∨ ᔐ_spec_char ∨ ᔐ_guts ∨ 𝗪
+ᔐ_sub = 󰆴'⟦' main 󰆴'⟧'
+
+ᔐ_spec_char = ~‹[𝗮-𝘇]› ∨ 󰆴'󷺗'
+ᔐ_guts = ~‹[^𝗮-𝘇󷺗⟦⦆␛␛␛›]+›
+ᔐ_escape = 󰆴"␛␛" ~‹.›
+ᔐ_basic = ((‹"› (ᔐ_basic_sub ∨ ~‹[^"\\]+›)* ‹"›)
+         ∨ (‹'› (ᔐ_basic_sub ∨ ~‹[^'\\]+›)* ‹'›))
+ᔐ_basic_sub = ~‹\\.›
+
+󱀝_inj   = str ∨ 󱀝_code
+󱀝_pairk = ⠶󱀝_inj ∨ (~‹[^⟧⠤}\n\t :]+›)
+󱀝_pairv = ⠶󱀝_inj ∨ (~‹[^⟧}⍮]+›      )
+󱀝_ə_typ = ⠶󱀝_inj ∨ (~‹[^⟧[{\n\t: ]+›) ∨ ✓
+󱀝_ə_nam = ⠶󱀝_inj ∨ (~‹[^⟧[{\n\t ]+› )
+󱀝_ə_val = ⠶󱀝_inj ∨ 󱀝_brack
+󱀝_kid   = ⠶󱀝_inj ∨ 󱀝
+󱀝_pair  = 󱀝_pairk 󰆴(CLN ∨ 𝗪) 󱀝_pairv ∨ (󱀝_pairm = 󰆴('⠤' 𝗪?) main)
+󱀝_attr  = 󱀝_pair ∨ ᔐ_moss
+󱀝_brack = 󰆴('[' 𝗪?) ( 󱀝_kid           󰆴𝗪?)* 󰆴(𝗪? ']')
+󱀝_attrs = 󰆴('{' 𝗪?)  ⠶󱀝_attr? (󰆴⍮ ⠶󱀝_attr)* 󰆴(𝗪? '}') ∨ (󱀝_alt_attrs = ᔐ_moss)
+󱀝_code  = 󰆴'⟦' main 󰆴'⟧'
+󱀝 = 󰆴('󱀝' 𝗪?) (󰆴CLN 󱀝_ə_nam 󰆴𝗪? ∨ ✓) 󱀝_ə_typ (󰆴𝗪? 󱀝_attrs ∨ ✓) (󰆴𝗪? 󱀝_ə_val ∨ ✓)
+
+CLN = (𝗪?) ↷ ':'
+⍮   = (𝗪?) ↷ '⍮'
+
+𝘄 = ~‹[ \t]+›
+𝗪 = ~‹[ \t\n]+›
+comment = ~‹([^\n]*(?=\n|\Z))|(🟑[^🟑]*(🟑|\Z))|(֎[^֎]*(֎|\Z))›
+
+󰦥󰦥󰦥󰦥󰦥
+
+reps = 󰦥󰦥󰦥󰦥
+    © const ⎉ let
+    ↦ => ⠤ ... ᐦ ""
+    𝚲 ()=>
+    󰲟 (...𝔸)=>
+    󰲡 (x,...𝔸)=>
+    󰲣 (x,y,...𝔸)=>
+    󰲥 (x,y,z,...𝔸)=>
+    󰲧 (x,y,z,w,...𝔸)=>
+    󰲩 (x,y,z,w,v,...𝔸)=>
+    ✓ true ✗ false ␀ null
+    ¿ if ⸘ else if ¡ else
+    ⌾ switch ᐂ case ⊳ default
+     try 󰛕 finally
+    ⇥ break ↺ continue 󰆴 delete
+    󱟱 async 󱫬 await ➰ while ∀ for ↪ return
+    ∈ in ⎔ of ☾ log
+    ¬ ! ⭜ ? ⭝ : ⸮ ?. ⋅ * ÷ / ⌃ ** ∧ && ∨ || ⪢ >> ⪡ << ≠ != ≥ >= ≤ <=
+    ≡ == ≅ === ≇ !== 🆕 new 󱣩 undefined ∧= &&= ∨= ||=
+󰦥󰦥󰦥󰦥.strip󷺻𝗻󰛔􍪵␛ ᐸ⍭ᐵ.strip󷹎¹𝘀ᐸ→ℵ
+
+specials = ℵ(␛𝗻␛𝘁␛𝘀␛󷺗󱑼[␛\␛n,␛\␛t,𝘀,ᐦ])
+attr_repl = ‹
+  🃌 length @ at : slice ¶ style ∋ includes 󰊄 innerText 󰿨 children
+   disabled 󱇙 classList 󰌷 append + add - remove ∀ forEach
+  󱗠 classList.remove 󰆂 classList.toggle 󰆃 classList.add 󰆆 classList.contains
+›ᐒ𝗻􀋀􍪵􁘷␛ 􀌌􀋅≺􀋀
+
+CONSTANTS = ‹ⴳⴴ✓✗□ᐦ󰮈␛⬤îĵ󷺈ℇτπ󷺍󷺏∞󷱪󷱽󷱾󷱫󷱬󷱭󷱮󷱯󷱰󷱩↉½⅓¼⅕⅙⅐⅛⅑⅒⅔⅖¾⅗⅜⅘⅚⅝⅞›
+OPERATORS = ‹* | & = ? >> <<›􀌌ᐵ􀝕⟞􀊩⟞₀ᐵ􀝕⟞␛=ᐸᐸ􀋶²   􀞚␛
+            ‹!= !== => // /= %= -= += -- ++ ?.›􀌌􀞚␛
+            ‹∧= ∨=›                            􀌌􀞚␛
+            ‹!%&*+,-./:;<=>?@^|~¿⸮󰆴󱟱󱫬󰲟󰲡󰲣󰲥󰲧󰲩󰲫󰲭󰲯󰲱𝚲󱣩🆕⎉©⎔¡¬¯±÷ſϜᐴᐹᗢᙎᙡᙧᚤᣆᴙℵℶ↨↪↺⇥∀∅∈∉∋∌∓∖∘√∣∤∧∨∩∪∾≅≇≔≕≠≡≤≥⊂⊃⊄⊅⊊⊋⊚⊛⊜⊞⋀⋁⋄⋅⌃⍁⍉⍜⍟⍭▢►◄○☾⛶➰⟕⟖⟗⠤⠶⤈⤉⨀⨁⨉⨝⨡⨳⩓⩔⪡⪢⫯⫰⬄⬒⬓⭜⭝⭥⮂⮌ⴵ⸘⹏ꟿ𝌂🃌🟕🟖󰈲󰈳󰌷󰑅󰒼󰒽󰔶󰛔󰬩󰬫󰸵󰸷󰻾󱅏󱑼󱖘󱖚󷸉󷸊󷸋󷸌󷸍󷸎󷸕󷸖󷸗󷸘󷸙󷸚󷸛󷸜󷸸󷸹󷸺󷸻󷹄󷹅󷹌󷹍󷹎󷹓󷹔󷹕󷹖󷹜󷹝󷹴󷹵󷺒󷺤󷺥󷺦󷺫󷺬› ␛
+            􀞙
+
+⭷ GRAM,reps,specials,attr_repl,CONSTANTS,OPERATORS

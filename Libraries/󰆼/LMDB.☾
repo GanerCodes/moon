@@ -1,0 +1,40 @@
+⦃from threading import RLock⦄
+     ⦃import lmdb⦄
+¡ε=𝑒: ✗􀛷‹Cannot import lmdb, did you install it with pip? "⟦ε⟧"›
+⨡ 󰆼_types
+
+LMDB_et = 𝑀
+LMDB_ek,LMDB_dk = 𝑀,𝑀
+LMDB_ev,LMDB_dv = pdump,pload
+󱀘LMDB:
+  ⊢__init__(𝕊,𝚍,tables,map_size=256 1024²):
+    𝕊.db = lmdb.open(𝚍􀯏𝐩􀰆ᔐ,max_dbs=tables􀊹,map_size=map_size,sync=✓,metasync=✓,writemap=✓)
+    𝕊􀲡,𝕊ᵀ = 𝚍,□
+    𝕊.tables = tablesᐵᔐ,𝕊ᵈᵇ.open_db(⟞ LMDB_et)ᐸℵ
+    𝕊.lock = RLock􀃅
+  tx   = ⥌𝕊,ƒ,w=✓↦ⓦ(𝕊.lock, ⥌⠤_↦𝕊ᵀ􇪨 􇀶ƒ(𝕊.T)􇀷 ⓦ(𝕊ᵈᵇ.begin(write=w), ƒ))
+  iter = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.cursor(𝕊.tables󰂢)􀉴󰲣LMDB_dk(x)⋄LMDB_dv(y)                                                              , ✗)
+  len  = ⥌𝕊,P    ↦𝕊ᵗˣ(󷺹.stat  (                      db=𝕊.tables󰂢)􋕨ₑₙₜᵣᵢₑₛ􋕨                                                   , ✗)
+  has  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􇪨                                                           , ✗)
+  get  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.get   (LMDB_ek(k),           db=𝕊.tables󰂢)􀯑v􇪨􇀆LMDB_dv(v)􇀇KeyError(‹Table ⟦P⟧ does not contain ⟦k⟧!›) 􀊗, ✗)
+  set  = ⥌𝕊,P,k,v↦𝕊ᵗˣ(󷺹.put   (LMDB_ek(k),LMDB_ev(v),db=𝕊.tables󰂢)                                                            , ✓)
+  del  = ⥌𝕊,P,k  ↦𝕊ᵗˣ(󷺹.delete(LMDB_ek(k),           db=𝕊.tables󰂢)                                                            , ✓)
+  ⊢__enter__(𝕊):
+    ¿‹MEASURE_DB›􀉧env: ‹DB Enter @ ⟦time􀃅⟧›􀊸
+    𝕊.lock.acquire􀃅
+    ¿𝕊ᵀ􈇇: 𝕊ᵀ=𝕊ᵈᵇ.begin(write=✓).__enter__()
+    ↪𝕊
+  ⊢__exit__(𝕊,ε_type,ε,tb):
+    r = □
+    ¿𝕊ᵀ􇪨:        r = 𝕊ᵀ.__exit__(ε_type,ε,tb)
+          ¡𝜺=𝑒𝑒: ‹Strange and unusual database bruh moment error exception!›􀊸
+                 􀛷 𝜺
+                 1 exit
+                  𝜺.__context__ = ε
+    𝕊ᵀ = □
+    𝕊.lock.release􀃅
+    ¿‹MEASURE_DB›􀉧env: ‹DB Exit @ ⟦time􀃅⟧›􀊸
+    ¿ε: ε.with_traceback(DatabaseBulkTransactionError(‹Error in bulk transaction!›,ε,tb).__traceback__)􀊗
+    ↪r
+
+⭷ LMDB

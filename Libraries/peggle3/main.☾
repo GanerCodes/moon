@@ -101,13 +101,17 @@ R_FLAG = R_NAME􀊤R_TRSH
           ℜ􍺫=[𝘳,⠤𝘷ᐵ₀􀉞i 􇂖􍪵 ⟞􀊩v]
   ↪ℜ
 
+escNL = ⥌x,f=‹5443fd›,e=‹FFF›↦𝗻􀝤ˣtermclr(␛𝗻,f)􀊩termclr(ᐦ,e)
+
 TEST_GRAM_CACHE = {}
-⊢convert_gram(𝚁,DEBUG=✗):
+⊢convert_gram(𝚁,DEBUG=✗,DEBUG_MEM=‹DEBUG_PEGGLE_MEM›􀉧env):
   𝚁􀯏ℵ
   TEST_HASH = 𝗛(𝚁􁎡􀯖𝑡)
   ¿TEST_HASH􀉧TEST_GRAM_CACHE:
-    ‹Cache hit!›5􀊸
+    ¿DEBUG: ‹[Peggle] Cache hit!›􀊸
     ↪TEST_GRAM_CACHE󰂦󰂗󰂥󰂦􋕞󰂚󰂓󰂥󰂚
+  
+  ¿DEBUG_MEM: ‹[Peggle] [Rule Conversion] → ⟦PL_MEM_USAGE􀃅􀋆1024²􀋪³⟧MiB 𝚁􀊹=⟦𝚁􀊹⟧›􀊸
   
   ¿DEBUG: ‹Pre󷺗-rules:›􀊸; 𝚁 􀉴󰲣‹  ⟦x⟧: ⟦y⟧›􀊸
   to_n = 𝚁⁻􀋳􀉳􀁰􀯖ℵ􇀠nmapᑀ􍪸󷺿
@@ -125,7 +129,8 @@ TEST_GRAM_CACHE = {}
   rules = N(‹Rule[]›, R􀋳􀜘fmt)
   names = 𝚁 ℵ􀯖⁻
   ⊢ƒ(c,id=‹main›􀉧names􇀦‹main›􇀧names₀,remove_trashes=✓,W_len=✓,E_len=✗,W_fail=✗,E_fail=✓,DEBUG=✗):
-     DEBUG􀌐􀞽˜‹DEBUG not implemented›
+     ¿DEBUG_MEM: ‹[Peggle] → ⟦PL_MEM_USAGE􀃅􀋆1024²􀋪³⟧MiB rules􀊹=⟦R􀊹⟧ c􀊹=⟦c􀊹⟧ start=⟦c􊬋₆₄ escNL⟧›􀊸
+     DEBUG􀌐􀞽􁏟‹DEBUG not implemented›
      c_input ⛯ cstr(c,✓)
      c_input = c_inputˣ
      Ѧ = ffi.new(‹Arena *›)
@@ -133,15 +138,14 @@ TEST_GRAM_CACHE = {}
      lib.arena_init(Ѧ)
      r = lib.parse(Ѧ,rules,rules􀊹,c_input₀,id to_n,remove_trashes)
      W_len􀌢E_len􀕲W_fail􀌢E_fail􀞽
-     ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􀸩􍛏˜‹Failed to parse›
+     ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􇅦􍛏􁏟‹Failed to parse›
           ↪
      𝚌 = c 𝑀
      ¿E_len􀉖W_len 􁀙 rˡ􀜃𝚌􀊹:
        g = 𝚌􊬋ᵣ􊫂𝑀
        α,β = dotrim(g􀋂,32)􀋂,dotrim(c􂕚􊬋,32)
-       n = termclr(␛𝗻,‹5443fd›)􀝍termclr(ᐦ,‹FFF›)􀯑W
-       samp = α􀊱‹244526›􀝕β􀊱‹601616›􀜘󰲣termclr(𝗻􀋀ˣn,□,y)󰅂􀞆
-       ✗􀞽ᵂ􋕟ˡᵉⁿ􇅦􍛏􁏟‹Short parse length (⟦g􀊹⟧􀉣⟦c􀊹⟧):⟦W⟧ ⟦samp⟧›
+       samp = α􀊱‹244526›􀝕β􀊱‹601616›􀜘󰲣termclr(x escNL,□,y)󰅂􀞆
+       ✗􀞽ᵂ􋕟ˡᵉⁿ􇅦􍛏􁏟‹Short parse length (⟦g􀊹⟧􀉣⟦c􀊹⟧):⟦termclr(ᐦ,‹FFF›)⟧ ⟦samp⟧›
      
      to_c = c􀉳𝑀􀉸⁰󷺹􀝍􀊹󷺽􀋳􀉳􀁰􀯖ℵ
      ⊢dep(󱁕): 𝘒 = 󱁕↦󱁕ⁿᴷ􀋲ᐖ󱁕ᴷ􍪴dep  󰤱 code duplication and 0 efficiency found here
@@ -156,10 +160,14 @@ TEST_GRAM_CACHE = {}
                                  ¡      : ↪𝑬(Ń(namesₜ,⠤󱁕 𝘒),𝙿)
                           ⸘𝘴∈␛ᔐ␛Ʀ: ↪𝑬(c􀳬􊬣﹕􀳬􊬤,𝙿)
                           ⸘𝘴≡␛✓  : ↪𝑬(Ń(␛✓),𝙿)
-                          ⸘𝘴≡␛ƨ  : ↪𝑬(󱁕 𝘒ᐵ􋒷ᐸ􀖑􊾖􇀰t,𝙿₀􀝕𝙿₀􀓻t􀊹)
+                          ⸘𝘴≡␛ƨ  : ↪𝑬(󱁕 𝘒ᐵ􋒷ᐸ􀉹􊾖􇀠t,𝙿₀􁁰𝙿₀􀝍t􀊹)
               ✗⨳
-     ↪r 􀯗􋄅 r dep
+     r = r 􀯗􋄅 r dep
+     ¿DEBUG_MEM: ‹[Peggle] ← ⟦PL_MEM_USAGE􀃅􀋆1024²􀋪³⟧MiB›􀊸
+     ↪r
   TEST_GRAM_CACHE󰂦󰂗󰂥󰂦􋕞󰂚󰂓󰂥󰂚 = ƒ
+  
+  ¿DEBUG_MEM: ‹[Peggle] [Rule Conversion] ← ⟦PL_MEM_USAGE􀃅􀋆1024²􀋪³⟧MiB R􀊹=⟦R􀊹⟧›􀊸
   ↪ƒ
 
 ⊢generate_gramgram:
