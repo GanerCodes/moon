@@ -91,6 +91,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
 
 ⊢moon_cli(extract=✗,ia=✓,rl=✓):  󰤱 `AST <𝚌>` for ast
   ⦃import traceback⦄
+  ⦃import subprocess⦄
   ¿ia􀉚rl: ⦃import readline⦄
           HIST_FILE = TMPDIR􀋋‹☾_cli_history› 􀯖 mkf
           HIST_FILE ᔐ readline.read_history_file
@@ -99,7 +100,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   ⊢ƒ(input): 𝚌 = ns[‹__moon_code__›] = input(⠤ia ⭜[pfx]⭝ ⍁)
              ¿𝚌􀌐: ↪‹God is good!›􀊸
              ¿rl: readline.write_history_file(HIST_FILE)
-             ¿𝚌≡‹clr›: ↪os.system(‹clear›)  󰤱 compatability
+             ¿𝚌≡‹clr›: ↪subprocess.run(‹clear›)  󰤱 compatability
              ¿ia􀉚rl: ‹⟦pfx⟧𝟭𝗯[1A⟦𝚌 __highlighter__⟧𝟭𝗯[K›􀊸  󰤱 ?
              ¡     : 𝚌 __highlighter__ 􀊸
              𝘤 = 𝚌 compile_code
