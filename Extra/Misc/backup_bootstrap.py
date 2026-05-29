@@ -1,5 +1,5 @@
 #!/bin/python
-BOOTSTRAP_HASH='OaoqR3yoBGUlG_RLeHAuEyOaRVbj3Vs096L7hD3ta4M'
+BOOTSTRAP_HASH='eSHyhFl1iFflF1pReEmRSi-8GIeijQvOXgZMCdJrM0w'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir = env.get("MOON_BASE_DIR")
@@ -2095,6 +2095,70 @@ def ÂÛí(áØÆ,áØÁ=ÂÞÅ):
 
 def ÄÝõÒ(áØÆ,áØÁ=ÂÞÅ):
     return ((True)if((áØÆ is None))else(((áØÁ)if((áØÁ is not ÂÞÅ))else(False))))
+
+
+#combo.☾ (1114 ⟶ 2580)
+__dir__=(__file__:=áÌî(moon_dir/'Builtins/combo.☾')).parent
+@OPWRAP_(*(("󷺘󷺙󷺚󷺛")))
+def _(áÑã,áØÆ,áØÁ=ÂÞÅ):
+    ((ÄÊPOP(0))if(ÄÊPSH((áØÁ is ÂÞÅ)))else(ÂùÆ(ÄÊPOP(0),("󰤱"))))
+    ((ÄÊPOP(0))if(ÄÊPSH(ÁØö(áÑã,((áÍá | áÍé) | ÁÜÙ))))else(ÂùÆ(ÄÊPOP(0),("󰤱"))))
+    if (áÑã == ("󷺘")):
+        return ÁØòþë((lambda ÂîÓ,ÄÝõÌ,ÄÝõË:ÁØòþë((lambda ÂîÓ,ÄÝõÌ,ÄÝõË:((áØÆ[ÄÝõÌ])if(ÂîÓ)else(ÄÔýò))))(ÂîÓ)))(MOD(ÂÿÇ,áØÁ=ãÊú(áØÆ))(2))
+    
+    if (áÑã == ("󷺙")):
+        return ÁãÁ(MOD(ÄÝøî,áØÁ=áØÁ)(áØÆ),ÄÔàÑ)
+    
+    if (áÑã == ("󷺚")):
+        (R:=ÂÚü())
+        for x in(ÂÿÇ(â(ãÊú(áØÆ)))):
+            (ÄÊPSH((ÂÚü(),0)),((D:=ÄÊPKE(0)[0]),(i:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
+            while(x):
+                (ÄÊPSH(divmod(x,(ÄÊPSH(i),ÄÊPSH(ÄÕÇè(ÄÊPKE(0))),(i:=ÄÊPKE(0)),ÄÊDEL(2))[2])),((x:=ÄÊPKE(0)[0]),(r:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
+                (D).append(r)
+            
+            (áÑÈ:=[*áØÆ])
+            (R).append(Áÿú(MOD(ÄÕÊÂ,áØÁ=0)(ÂÀÇ(D),ãÊú(áØÆ)),(áÑÈ).pop))
+        
+        return R
+    
+    if (áÑã == ("󷺛")):
+        return ÆÑ(ÁØòþë((lambda ÂîÓ,ÄÝõÌ,ÄÝõË:MOD(ÂøÚ,áØÁ=ÄÝõÌ)(áØÆ)))(ÄÝöÊ(ãÊú(áØÆ))),ÂÕØ)
+    
+
+def Âûô(x,y):
+    if (ÁØö(x,áÍÞ) and ÁØö(y,áÍÞ)):
+        return (MOD(â,áØÁ=(- y ))(x) // â(y))
+    
+    if (ÄÝøÇ(x,áÓö) and ÁØö(y,áÍÞ)):
+        return (MOD(â,áØÁ=(- y ))(x) / â(y))
+    
+    if (ÁØö(x,ÂÐá) and ÁØö(y,ÂÐá)):
+        return (â(x) / (â(y) * â((x - y))))
+    
+    if (ÁØö(x,áÓö) and ÁØö(y,ÂÐá)):
+        ((ÄÊPOP(0))if(ÄÊPSH((ÁØö(y,áÍÞ) and (y >= 0))))else(ÂùÆ(ÄÊPOP(0),("can\u0027t choose %s things from a list")%(y,))))
+        if (ãÊú(x) < y):
+            return ÂÚü()
+        
+        if (not y ):
+            return MOD(ÂÚü,áØÁ=((- 1 )))()
+        
+        return (Âûô(x[slice(None,((- 1 )))],y) + ÁØò((lambda ÂîÓ:(ÂîÓ + [x[((- 1 ))]])))(Âûô(x[slice(None,((- 1 )))],((y - 1)))))
+    
+    if (ÁØö(x,ÂÐá) and ÁØö(y,áÓö)):
+        return (((â(x) // ÂøÐ(Áÿú(((y + [(x - ÂøÑ(y))])),â))))if((ÁØö(x,áÍÞ) and ÂØô((ÁØò((lambda ÂîÓ:ÁØö(ÂîÓ,áÍÞ)))(y)))))else(ð(â(x),ÂøÐ(Áÿú(((y + [(x - ÂøÑ(y))])),â)))))
+    
+    if (ÁØö(x,áÓö) and ÁØö(y,áÓö)):
+        ((ÄÊPOP(0))if(ÄÊPSH(ÂØô(ÁØò((lambda ÂîÓ:(ÁØö(ÂîÓ,áÍÞ) and (ÂîÓ >= 0))))(y))))else(ÂùÆ(ÄÊPOP(0),("can\u0027t choose groups %s from a list")%(y,))))
+        if (ãÊú(x) < ÂøÑ(y)):
+            return ÂÚü()
+        
+        if ÄÝõÔ(y):
+            return [MOD(ÂÚü,áØÁ=ãÊú(y))()]
+        
+        return (Âûô(x[slice(None,((- 1 )))],y) + ÂøÑ(ÁØò((lambda ÂîÓ:ÁÙÇ((lambda ÂîÒ:ÁÙÇ((lambda ÂîÒ:(ÂîÒ[1] + (((ÂîÒ[0] == ÂîÓ)) * [x[((- 1 ))]]))))(ÂÓÏ(ÂîÒ))))(Âûô(x[slice(None,((- 1 )))],(ÁÙÇ((lambda ÂîÒ:(ÂîÒ[1] - ((ÂîÒ[0] == ÂîÓ)))))(ÂÓÏ(y)))))))((ÄÔÔç(ÂÿÇ(y),(lambda x:y[x]))))))
+    
 
 
 #extra_globals.☾ (2780 ⟶ 4025)

@@ -21,7 +21,7 @@ go = ⨡􋀸 Compiler/generate_operators
 𝔭.greek  = ‹ςΘθϑαβδ∇∂ΔεηφϕΦικλΛμπΨΠψρσΣτυνωΩΞχγΓζξ›
 𝔭.lngeek = ‹␛⟦⟦𝔭.letnum⟧⁅𝕄␛⟦⟦𝔭.greek⟧␛⟧⁆␛⟧›
 
-CONFIG       = __dir__􀋋CONFIG􀯖
+CONFIG       = __dir__􀋋‹CONFIG›􀯖
 REMOVES      = 󰦥󰦥󰦥󰦥󰦥 ☝✋✌✍✨✊❣☺☹ 󰦥󰦥󰦥󰦥󰦥
 SCRIPT_EXIST = 󰦥󰦥󰦥󰦥󰦥 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789αβγδεζηθικλμνξπρςστυφχψωΓΔΘΞΠΣΦΨΩ,<>;+-*=()[]{}~?&$%:!
                      ₐₑₕᵢⱼₖₗₘₙ󰂼ₚᵣₛₜᵤᵥₓ󰂓󰂔󰂕󰂖󰂗󰂘󰂙󰂚󰂛󰂜󰂝󰂞󰂟󰂠󰂡󰂢󰂣󰂤󰂥󰂦󰂧󰂨󰂩󰂪󰂫󰂬₀₁₂₃₄₅₆₇₈₉󰃤󰃥󰃦󰃧󰃨󰃩󰃪󰃫󰃬󰃭󰃮󰃯󰃰󰃱󰃳󰃴󰃵󰃶󰃷󰃸󰃹󰃺󰃻󰃼󰃎󰃏󰃓󰃙󰃛󰃝󰃠󰃢󰃣󰄎󰄟󰄞󰄏₊₋₌₍₎󰄗󰄘󰄕󰄖˷﹖﹠﹩﹪﹕◌

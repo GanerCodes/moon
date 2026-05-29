@@ -316,6 +316,8 @@
     `‹ab›⊞‹de› ≡ [[['a', 'd'], ['a', 'e']], [['b', 'd'], ['b', 'e']]]`
     `‹ab›⊞² ≡ [[['a', 'a'], ['a', 'b']], [['b', 'a'], ['b', 'b']]]`
     󰤱˜ docs
+󷰬 󷺘󷺙󷺚󷺛 𝚡󷺤􊽨𝚡 PS⟦ᐦR⟧⟦ᐦO⟧𝕊 {un,,un,}ordered powerset with{out,out,,} repetition
+    󰤱 docs
 󷰭 ☾ 𝚡󷺤􊽨𝚡 cp𝕊 print
     "‹hello›☾" ⟶ prints "hello" to stdout
     󰤱 docs
