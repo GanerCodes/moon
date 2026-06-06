@@ -12,7 +12,6 @@
 § TODOs ------------------------------------
     󰤱  Documentation
     󰤱  Reduce the amount of operator orders
-       󰤱 COMPILER: make it so like x􀉻􀔋 evals like x􀉻→􀔋
        󰤱 Cull orders
           |􀀁􀃇􀆍􀉓􀌙􀏟􀒥􀕫􀘱􀛷􀞽􀢃􀥉􀨏􀫕􀽌􁀒􁃘􁆞􁉤
          ✗| 􀃇􀆍 􀌙􀏟  􀘱 􀞽􀢃 􀨏 􀽌 􁃘􁆞
@@ -99,7 +98,7 @@
         󰤱 rlly combinators need overhaul like where is good under
     󰤱  Better ☾
     󰤱  proper cli for generating font
-    󰤱  side-invarient unary doesnt work ⓦ implicit multiplication
+    󰤱  side-invarient unary doesnt work w/ implicit multiplication
     󰤱  implicit imports are jank
     󰤱  Font generator slow
     󰤱  Better AST

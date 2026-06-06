@@ -1,3 +1,8 @@
+#ifdef __EMSCRIPTEN__
+#include <emscripten/emscripten.h>
+#else
+#define EMSCRIPTEN_KEEPALIVE
+#endif
 #define Ƈ case
 #define 𝼝 break; Ƈ
 #define 𝼝 break; Ƈ
@@ -93,6 +98,7 @@ void show_match(Rule* 𝚁, Match* 𝚖, ᔐ 𝚌, u32 tab)
         for(u32 i=0; i<𝚖->nK; i++) show_match(𝚁,𝚖->K+i,𝚌,tab+2);
     }
 }
+EMSCRIPTEN_KEEPALIVE
 pcre2_code* create_regex(ᔐ P)
 {
     i32 errcode;
@@ -191,6 +197,7 @@ Match* makeMatches(Arena* Ѧ, Rule* 𝚁, u32 𝚁𝚗, bool trash, u32 𝘱, u3
 }
 #undef PUSH
 #define PUSH(x,y) do{RuleQ* _=vector_add_dst(Ѧ,&𝚂); _->id=(x); _->p=(y);}while(0)
+EMSCRIPTEN_KEEPALIVE
 Match* parse(Arena *Ѧ, Rule* 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, bool trash)
 {
     #ifdef DEBUG_PRINTS

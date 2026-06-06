@@ -1,27 +1,27 @@
  󷹇 The following already exist at this point:
      BOOTSTRAP_HASH, 𝐩, env, moon_dir
+moon_platform = env.get(‹MOON_PLATFORM›,‹NATIVE›)
 ⦃import os,sys,inspect,traceback,threading,errno,struct⦄
 ⦃from threading import get_ident as ⦃𝔗ℑ𝔇⦄⦄
-⦃from os import environ as ⦃env⦄⦄
 ⦃from sys import stdin as ⦃ℑ𝔑⦄,stdout as ⦃𝔒𝔘𝔗⦄,stderr as ⦃𝔈ℜℜ⦄,argv as ⦃𝔸⦄⦄
 ⦃from sys import exit,setrecursionlimit,path as ⦃syspath⦄,getsizeof as ⦃𝔖ℨ⦄⦄
 ⦃from math import *⦄
 ⦃from site import getsitepackages⦄
 ⦃from json import dumps as ⦃jdumps__⦄,loads as ⦃jloads__⦄⦄
+⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
 ⦃from cmath import *⦄
 ⦃from types import UnionType⦄
 ⦃from random import shuffle,choice,uniform,randint⦄
+⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
+⦃from base64 import urlsafe_b64encode,urlsafe_b64decode,b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
+⦃from hashlib import sha256 as ⦃_sha256⦄⦄
 ⦃from tempfile import gettempdir⦄
 ⦃from builtins import setattr as ⦃setattr_⦄⦄
 ⦃from operator import setitem as ⦃setitem_⦄,__gt__,__lt__,__ge__,__le__,rshift,lshift,getitem,delitem⦄
-⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 ⦃from functools import reduce,partial as ⦃MOD⦄,cache as ⦃cache_⦄⦄
-⦃from pickle import dumps as ⦃pdump⦄,loads as ⦃pload⦄⦄
-⦃from hashlib import sha256 as ⦃_sha256⦄⦄
-⦃from base64 import urlsafe_b64encode,urlsafe_b64decode,b85encode as ⦃b85e⦄,b85decode as ⦃b85d⦄⦄
-⦃from zlib import compress as ⦃zibe⦄,decompress as ⦃zibd⦄⦄
+⦃from itertools import chain,filterfalse,product,accumulate,zip_longest⦄
 syspath.extend(getsitepackages())
-setrecursionlimit(100000)
+setrecursionlimit(2¹⁸)
 󰆴 getsitepackages,factorial,e,pi,tau,sqrt,cbrt,pow
 
 setattr = 󰲥setattr_(x,y,z)􀉖z
@@ -213,7 +213,8 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
   ⸘𝚜􀋑~´: 𝖻,𝗆 = 𝚠,‹Warning⟦𝚠􀯗􊾖‹ [as Error]›⟧›
   ¡    : 𝖻,𝗆 = ✓,‹Assertion failed›
   𝗆 􇀞􀊩 ‹ ⟨⟦𝚡⟧⟩⟦𝚢􀋒␀ 􇂖􊾖 𝘀􀝍E􀯗􀳋􋘳􊾚‹⟦𝚢􀊜􀯖.__name__⟧(⟦getattr(𝚢,‹args›,⍁)􀋢␛,⟧)›⟧›
-  termclr(𝗆,𝖻􀯗‹f22›􀯘‹ff2›)􀊸
+    termclr(𝗆,𝖻􀯗‹f22›􀯘‹ff2›)􀊸
+  ¡: 𝗆􀊸  for errors before 🌈.☾ is imported
   ¿𝖻: ¿E: ⦃raise ⦃𝚢⦄⦄
       ⦃raise ⦃𝗆 AssertionError⦄⦄
   ↪𝚡

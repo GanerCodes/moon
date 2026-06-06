@@ -1,6 +1,5 @@
 fcache = 𝚲󰻾
 
-⦃from cffi import FFI⦄
 ⨡ text_format
 
 𝔗 = 󰲡Ń(xᐹŃ⭜+x⭝ᔐ(x),e=ℵ􋄅(T=✓,⠶𝕂.get(␛e,{})))󱖔􋔡x
@@ -15,48 +14,81 @@ n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ ⭜􋑻 𝔗(󱁕)
           ↪󱁕
  copy e
 ⊢𝑬(󱁕,𝒑): 󱁕 = n󱁕m(󱁕)
-         ¿𝒑􀓮ᔐ: ↪󱁕
-         ¿𝒑􀓮𝑡􀊤𝑙: 󱁕ᵉ ᵖ = 𝒑 𝑡
-         ¡     : 󱁕ᵉ = 𝒑ᵉ.copy
+         ¿𝒑􀝀ᔐ: ↪󱁕
+         ¿𝒑􀝀𝑡􀊤𝑙: 󱁕ᵉ ᵖ = 𝒑 𝑡
+         ¡     : 󱁕ᵉ = 𝒑ᵉ.copy􀃅
          ↪󱁕
 𝑩𝑩 = 󱁕↦BOX(✗ 󱁕ᴾ􀯑d􁊺ᵜ𝔸ᐖpadc(􍪴􀋥𝘀,d,␛─)􀊩𝗻ᐸ􀋢)􀊸􀔂󱁕
 
-Ų = 󷺹ᐵ􀊾􀜈255􇁖􍪵␛v􀝍⟞􀊾􀊿¹⁶ᐸ􀋢
+¿moon_platform􀉞‹WASM›:
+  ⦃from js import peggle3 as ⦃lib_peggle3_wasm⦄⦄
+  ✗􀉓‹󰤱›
+   󱀘WasmPtr: 
+     ⊢__init__(𝕊,p,t=□): 𝕊ᵖ,𝕊ᵗ = 𝑖(p),t
+     __index__ = 󷺹ᵖ
+   ffi = WasmFFI􀃅
+   󱀘WasmFFI:
+     structs = { ᔐ    =‹s ptr l u32›                    􀌌,
+                 Rule =‹t u32 cL u32 cR u32 dat union›  􀌌,
+                 Match=‹id u32 p u32 l u32 K ptr nK u32›􀌌 }
+     malloc = ⥌𝕊,𝚋,𝚝=□↦WasmPtr(𝕊ᴹ._malloc(𝚋),𝚝)
+     free   = ⥌𝕊,𝚙↦𝕊ᴹ._free(𝚙 𝑖)
+     ⊢__init__(𝕊,M):
+       𝕊ᴹ,𝕊ᵘ⁸,𝕊ᵘ³² = M,Mᴴᴱᴬᴾᵁ⁸,Mᴴᴱᴬᴾ³²
+     ⊢new(𝕊,𝚝,𝚟=□):
+       ¿𝚝􀉞‹uint8_t[]›:
+         ¿𝚟􀊜ᔐ: 𝚟􀯏𝑀
+         𝚙 = 𝕊ᵐᵃˡˡᵒᶜ(𝚜􇀜𝚟􀊚􋅂􁍵􋇖􀊹𝚝􊬋􍧰)
+         ∀i⬠𝚜􀋲: 𝕊ᵘ⁸[𝚙 𝑖􀊩i] = 𝚟􇪨􇀦⁰𝚟ᵢ
+         ↪𝚙
+       ¿𝚝􍨄􀉞␛*:
+         𝚝􀯏􊬋􍨄
+         layout = 𝕊ˢᵗʳᵘᶜᵗˢ􀳀
+         sizes = { u32=4, ptr=4, union=8 }
+         p = 𝕊ⁿᵉʷ(‹uint8_t[]›,layoutᐖsizes􍪴􊬤ᐸ􀉹)
+         pᵗ = 𝚟
+         ↪p
+   󱀘WasmLib:
+     __getattr__ = ⥌𝕊,name↦lib_peggle3_wasm.‹_⟦name⟧›
+   ffi = WasmFFI􀃅
+   lib = WasmLib􀃅
+   N = 󰲡ffi.new(x,⠤𝔸,⠶𝕂)
+¡:
+  Ų = 󷺹ᐵ􀊾􀜈255􇁖􍪵␛v􀝍⟞􀊾􀊿¹⁶ᐸ􀋢
+  ⦃from cffi import FFI⦄
+  ffi = FFI􀃅
+  ffi.cdef(󰦥󰦥󰦥󰦥󰦥
+  typedef unsigned char uint8_t;
+  typedef unsigned int  uint32_t;
+  typedef struct pcre2_code pcre2_code;
+  typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
+  typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
+  typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
+  typedef struct ArenaBlock {
+    struct ArenaBlock *next;
+    size_t used,cap;
+    char data[]; } ArenaBlock;
+  typedef struct { ArenaBlock *head; } Arena;
+  Match* parse(Arena *Ѧ, Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
+  pcre2_code* create_regex(ᔐ P);
+  void pcre2_code_free(pcre2_code *c);
+  void arena_init(Arena *Ѧ);
+  void arena_free_all(Arena *Ѧ);
+  󰦥󰦥󰦥󰦥󰦥 Ų)
+  lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
+  N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
 
-ffi = FFI􀃅
-ffi.cdef(󰦥󰦥󰦥󰦥󰦥
-typedef unsigned char uint8_t;
-typedef unsigned int  uint32_t;
-typedef struct pcre2_code pcre2_code;
-typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
-typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
-typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
-typedef struct ArenaBlock {
-  struct ArenaBlock *next;
-  size_t used,cap;
-  char data[]; } ArenaBlock;
-typedef struct { ArenaBlock *head; } Arena;
-Match* parse(Arena *Ѧ, Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
-pcre2_code* create_regex(ᔐ P);
-void pcre2_code_free(pcre2_code *c);
-void arena_init(Arena *Ѧ);
-void arena_free_all(Arena *Ѧ);
-󰦥󰦥󰦥󰦥󰦥 Ų)
-lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
-
-N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
-
-󱀘 Cleaner: ⊢__init__ (𝕊,ƒ,x=□): 𝕊􊽺,𝕊ˣ = ƒ,x
-           ⊢__enter__(𝕊      ): □
-           ⊢__exit__ (𝕊,⠤𝔸   ): 𝕊􊽺􀃅
+󱀘Cleaner: ⊢__init__ (𝕊,ƒ,x=□): 𝕊􊽺,𝕊ˣ = ƒ,x
+          ⊢__enter__(𝕊      ): □
+          ⊢__exit__ (𝕊,⠤𝔸   ): 𝕊􊽺􀃅
 
 CSTR_MEM,CRGX_MEM,TEMP_MEM = {},{},⦉⦊
-⊢cstr(s,freeable=✗,_type=‹ᔐ*›Ų):
+⊢cstr(s,freeable=✗):
   ¿freeable􀌐 􀛾 s􀉧CSTR_MEM: ↪CSTR_MEMₛ
   e = s.encode(‹utf-8›)
-  A = ffi.new(‹uint8_t[]›,e)
+  A = N(‹uint8_t[]›,e)
   TEMP_MEM.add(A)
-  r = ffi.new(_type,(A,e􀊹))
+  r = N(‹ᔐ*›,(A,e􀊹))
   ¿freeable: ↪Cleaner(𝚲TEMP_MEM.remove(A),r)
   ↪CSTR_MEMₛ􀯍r
 ⊢crgx(r):
@@ -133,7 +165,7 @@ TEST_GRAM_CACHE = {}
      DEBUG􀌐􀞽􁏟‹DEBUG not implemented›
      c_input ⛯ cstr(c,✓)
      c_input = c_inputˣ
-     Ѧ = ffi.new(‹Arena *›)
+     Ѧ = N(‹Arena *›)
      ⛯ Cleaner(𝚲lib.arena_free_all(Ѧ))
      lib.arena_init(Ѧ)
      r = lib.parse(Ѧ,rules,rules􀊹,c_input₀,id to_n,remove_trashes)

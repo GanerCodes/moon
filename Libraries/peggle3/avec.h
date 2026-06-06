@@ -22,6 +22,7 @@ typedef struct ArenaBlock {
 } ArenaBlock;
 typedef struct { ArenaBlock *head; } Arena;
 
+EMSCRIPTEN_KEEPALIVE
 void arena_init(Arena *Ѧ) { Ѧ->head = NULL; }
 
 static inline void *arena_alloc(Arena *Ѧ, size_t sz) {
@@ -38,6 +39,7 @@ static inline void *arena_alloc(Arena *Ѧ, size_t sz) {
   b->used += sz;
   return ptr; }
 
+EMSCRIPTEN_KEEPALIVE
 void arena_free_all(Arena *Ѧ) {
   ArenaBlock *b = Ѧ->head;
   while(b) { ArenaBlock *n = b->next;

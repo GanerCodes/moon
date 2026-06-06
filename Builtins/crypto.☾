@@ -65,7 +65,7 @@ stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
      and implement the extra stuff on top of that 🟑
   ⦃from Crypto.Cipher import AES⦄
    ⦃from Crypto.Util.Padding import pad,unpad⦄
-¡: ✗ 􁀒˜ ‹Failed to import AES libraries! Do you have pycryptodome installed?›
+¡: ✗ 􁀒􁏟 ‹Failed to import AES libraries! Do you have pycryptodome installed?›
 
 ⊢AES_ENC_SIV(𝚖,k): ↪AES.new(k,AES.MODE_SIV).encrypt_and_digest(𝚖)􀉹
 ⊢AES_DEC_SIV(m,k): ↪AES.new(k,AES.MODE_SIV).decrypt_and_verify(⠤m􀋴󷰾󷱃)
