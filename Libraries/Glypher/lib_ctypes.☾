@@ -73,8 +73,24 @@ A,U,S,F = ‹dec_alias dec_union dec_struct dec_func›􀌌ᐵ󱁕.sepᐵ�
 A􇀞􀉴􁎀󰲣y₀􋒷
 F􇀞􀉴􁎀󰲣y􀊹􀉞1􇀦ʸ[y₀,Ń(‹func_ret›,Ń(‹type›,𝔗(‹void›)))]
 
-∀t,x⬠‹AUSF›􀝄A􀊱U􀊱S􀊱F: ‹⟦t⟧:›􀊸
-                     ∀k,v⬠x: ¿v􀊜𝑙: k􀊸
-                                   v􀉳󷺹􀊜Ń􇀦⟞ 𝑩𝑩􇀧⟞􀊸ᐸ
-                             ¡   : ‹⟦k⟧ → ⟦v⟧›􀊸
-                     ᐦ􀊸
+󱀘UNION (ℵ´): □
+󱀘STRUCT(ℵ´): □
+󱀘PTR   (  ): ⊢__init__(𝕊,x): 𝕊ᵛ=x
+             __call__ = 󷺹ˣ
+
+⊢ƒ(󱁕): 󱁕􀊸
+       ¿󱁕ᵗ􀜋􀌌‹struct union›:
+         ↪(󱁕ᵗ􀉞‹struct›􇀦STRUCT􇀧UNION)(󱁕ᐵ₁􋒷,⟞₀ƒᐸ)
+       ¿󱁕ᵗ􀉞‹ptr󷺗›: ↪PTR(󱁕₀ƒ)
+       ¿󱁕ᵗ􀉞‹type›: ↪󱁕􋒷
+        󰤱 arr, arr_static
+       ✗􀉓
+
+ ∀t,x⬠‹AUSF›􀝄A􀊱U􀊱S􀊱F: ‹⟦t⟧:›􀊸
+                      ∀k,v⬠x: ¿v􀊜𝑙: k􀊸
+                                    v􀉳󷺹􀊜Ń􇀦⟞ 𝑩𝑩􇀧⟞􀊸ᐸ
+                              ¡   : ‹⟦k⟧ → ⟦v⟧›􀊸
+                      ᐦ􀊸
+
+∀k,v⬠S: k􀊸
+        v₀ƒ􀊸
