@@ -23,7 +23,7 @@ n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ ⭜􋑻 𝔗(󱁕)
 ¿moon_platform􀉞‹WASM›:
   ⦃from js import peggle3 as ⦃lib_peggle3_wasm⦄⦄
   ✗􀉓‹󰤱›
-   󱀘WasmPtr: 
+   󱀘WasmPtr:
      ⊢__init__(𝕊,p,t=□): 𝕊ᵖ,𝕊ᵗ = 𝑖(p),t
      __index__ = 󷺹ᵖ
    ffi = WasmFFI􀃅

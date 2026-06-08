@@ -28,25 +28,25 @@
     ⊢part(󱁕): 󱁕ᶜ = 󱁕ᶜ􀊷󱁕ᵉ ⁺
               ↪󱁕,󱁕ᵉ
     ⊢frp(󱁕,ƒ,r,pre=✗,not_T=✓):
-       ¿r􀋑□: ↪󰲡󱁕.frp(ƒ,x,pre,not_T)
-       ƒ 􀯏 Ńᴹ󰀂ᴴ
-       ¿not_T: ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
-       ¿pre: ¿󱁕􀊹􀌐: ↪ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
-             𝚂,𝚃 = 𝔡𝔮(􋑺),𝔡𝔮()
-             pl,ex,al = 𝚂.popleft,𝚂.extend,𝚃.appendleft
-             ∀𝚂: C = pl()
-                 ex([c∀c⬠C¿cᶜ])
-                 al(C)
-             ∀C⬠𝚃: ∀i,c⬠enumerate(C)¿ƒ(c): Cᵢ=r(c)
-             ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
-       ¡: ⊢ 𝓡(󱁕): ¿ƒ(󱁕): ↪r(󱁕)
-                  ∀i,y⬠enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
-                  ↪󱁕  󰤱 rewrite this to be fast
-          ↪𝓡(󱁕)
+      ¿r􀋑□: ↪󰲡󱁕.frp(ƒ,x,pre,not_T)
+      ƒ 􀯏 Ńᴹ󰀂ᴴ
+      ¿not_T: ƒ = ⥌󱁕,ƒ=ƒ↦󱁕ᵉ ᵀ¬ ∧ ƒ(󱁕)
+      ¿pre: ¿󱁕􀊹􀌐: ↪ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+            𝚂,𝚃 = 𝔡𝔮(􋑺),𝔡𝔮()
+            pl,ex,al = 𝚂.popleft,𝚂.extend,𝚃.appendleft
+            ∀𝚂: C = pl()
+                ex([c∀c⬠C¿cᶜ])
+                al(C)
+            ∀C⬠𝚃: ∀i,c⬠enumerate(C)¿ƒ(c): Cᵢ=r(c)
+            ↪ ƒ(󱁕) ⭜r(󱁕)⭝ 󱁕
+      ¡: ⊢ 𝓡(󱁕): ¿ƒ(󱁕): ↪r(󱁕)
+                 ∀i,y⬠enumerate(󱁕): 󱁕ᵢ = 𝓡(y)
+                 ↪󱁕  󰤱 rewrite this to be fast
+         ↪𝓡(󱁕)
     ⊢ftrp(󱁕,fs,ƒ,pre=✗,not_T=✓,⠶𝓚):
-       ¿ƒ􀋑□: ↪󰲡󱁕.ftrp(fs,x,pre,not_T,⠶𝓚)
-       ƒ 􀯏 Ńᴹ󰀂ᴴ
-       ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(fsᐹᔐ ⭜󰲡xᵗ≡fs󰅂⭝ 󰲡xᵗ∈fs󰅂,ƒ,pre,not_T,⠶𝓚)
+      ¿ƒ􀋑□: ↪󰲡󱁕.ftrp(fs,x,pre,not_T,⠶𝓚)
+      ƒ 􀯏 Ńᴹ󰀂ᴴ
+      ↪ not_T∧󱁕ᵉ ᵀ ⭜󱁕⭝ 󱁕.frp(fsᐹᔐ ⭜󰲡xᵗ≡fs󰅂⭝ 󰲡xᵗ∈fs󰅂,ƒ,pre,not_T,⠶𝓚)
     ⊢ftrpm(󱁕,⠤𝔸,not_T=✓):
       M = {}
       ∀k,v⬠𝔸: ¿k􀝀𝑡􀊤𝑙: ∀κ⬠k: M󰃭=v
@@ -110,24 +110,24 @@
                    ∀𝒏⬠󱁕﹕﹕􍨄¿𝒏.first_r(ƒ)≕r≇□: ↪r  sort t⟶b, r⟶l
     first_sides = ⥌󱁕,ƒ↦󱁕.first_l(ƒ),󱁕.first_r(ƒ)󰅂
     filter = ⥌󱁕,ƒ,⠤𝔸,⠶𝕂↦󱁕.rm(􀂾􀊊ƒ,⠤𝔸,⠶𝕂)
-    ⊢ (property) 󰊄(𝕊): ↪􀊩𝕊
-    ⊢ P(󱁕,fs=✓): ¿hasattr(Ń,‹txt_format_imported›)􀌐:
-                   Ń.txt_format_imported = ✓
-                   ⨡ text_format
-                 NA,AR,yl,yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
-                 ¿󱁕󷹵Ń: ↪ŧ𝼝(ᔐ(󱁕),‹f00›)
-                 ⊢ format_e(e): ¿¬e: ↪ᐦ
-                                r = eꟿ󰲣x∈⦉⠤‹Tpρ›⦊ ⭜󰮈⭝ yᐹŃ ⭜‹⟦x⟧⟦AR⟧⟦yᵗ⟧›⭝ ‹⟦x⟧=⟦y⟧›
-                                ↪ (␛p∈e ⭜􊾖 ŧ𝼝(e  ᵖᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛…󷸓, ‹ff0›))␛
-                                 +(␛ρ∈e ⭜􊾖 ŧ𝼝(e.␛ρᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛…󷸓, ‹0ff›))␛
-                                 ⭢ᣆʳ 󷺻stackr(⟞,r⨝𝗻)
-                 𝚛 = box((󱁕ᵗᐹŃ ⭜✗ 󱁕ᵗ ᴾ⭝ 󱁕ᐹŃ ⭜stackr(ŧ𝼝(󱁕ᵗ,‹f55›),󱁕ᵉ format_e)⭝ ᔐ(󱁕ᵗ)) ∨ NA,
-                         fg=󱁕ᐹŃ∧󱁕ᵉ ᵀ ⭜‹0f0›⭝ ‹00007f›)
-                 ¿󱁕🃌: ─,╰,├,┬,│ = ‹─╰├┬│›ᴍŧ𝼝(⬤,fg=‹11a›)
-                      𝚛 = stackr(𝚛,󱁕↨ꟿ󰲣✗ yᴾ lines ↨ꟿ󷺻⟝+ᵜ(⟞󷺥󱁕🃌≠1 ⭜  ─  ⭝  ␛
-                                                         x≡󱁕🃌-1 ⭜⟞∧𝘀∨╰⭝  ␛
-                                                         ⟞󷺥󱁕🃌≡0 ⭜x∧├∨┬⭝│ )󷺿⭢⨝𝗻󰅂⭢⨝𝗻)
-                 ↪ fs ⭜𝚛☾►󱁕⭝ 𝚛
+    ⊢(property) 󰊄(𝕊): ↪􀊩𝕊
+    ⊢P(󱁕,fs=✓): ¿hasattr(Ń,‹txt_format_imported›)􀌐:
+                  Ń.txt_format_imported = ✓
+                  ⨡ text_format
+                NA,AR,yl,yr = ‹∅ f00 → 00f 󰅁 ff0 󰅂 ff0›⍭ꟿŧ𝼝
+                ¿󱁕󷹵Ń: ↪ŧ𝼝(ᔐ(󱁕),‹f00›)
+                ⊢ format_e(e): ¿¬e: ↪ᐦ
+                               r = eꟿ󰲣x∈⦉⠤‹Tpρ›⦊ ⭜󰮈⭝ yᐹŃ ⭜‹⟦x⟧⟦AR⟧⟦yᵗ⟧›⭝ ‹⟦x⟧=⟦y⟧›
+                               ↪ (␛p∈e ⭜􊾖 ŧ𝼝(e  ᵖᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛…󷸓, ‹ff0›))␛
+                                +(␛ρ∈e ⭜􊾖 ŧ𝼝(e.␛ρᑀ🃌≡4 ⭜⟞⭥ᴍ􎘉󰄎􎘁ᓕ⭢󱑼⟞ꟿ∘→⨝⭝ ⟞⨝␛…󷸓, ‹0ff›))␛
+                                ⭢ᣆʳ 󷺻stackr(⟞,r⨝𝗻)
+                𝚛 = box((󱁕ᵗᐹŃ ⭜✗ 󱁕ᵗ ᴾ⭝ 󱁕ᐹŃ ⭜stackr(ŧ𝼝(󱁕ᵗ,‹f55›),󱁕ᵉ format_e)⭝ ᔐ(󱁕ᵗ)) ∨ NA,
+                        fg=󱁕ᐹŃ∧󱁕ᵉ ᵀ ⭜‹0f0›⭝ ‹00007f›)
+                ¿󱁕🃌: ─,╰,├,┬,│ = ‹─╰├┬│›ᴍŧ𝼝(⬤,fg=‹11a›)
+                     𝚛 = stackr(𝚛,󱁕↨ꟿ󰲣✗ yᴾ lines ↨ꟿ󷺻⟝+ᵜ(⟞󷺥󱁕🃌≠1 ⭜  ─  ⭝  ␛
+                                                        x≡󱁕🃌-1 ⭜⟞∧𝘀∨╰⭝  ␛
+                                                        ⟞󷺥󱁕🃌≡0 ⭜x∧├∨┬⭝│ )󷺿⭢⨝𝗻󰅂⭢⨝𝗻)
+                ↪ fs ⭜𝚛☾►󱁕⭝ 𝚛
 
 🟑
 ⊢ test_Ń: Ń(‹the›,Ń(‹joe›,e={T=✓,p=2⋄4,swag=‹loog›}ℵ􋄅),
