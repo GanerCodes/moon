@@ -4,8 +4,7 @@ makeProxy = ⥌{ƒ,𝚐,𝚜,𝚍},o={}↦🆕 Proxy(o,{
   get           (𝕊,k  ) { ↪k∈𝕊 ⭜𝕊ₖ⭝ 𝚐 ⭜𝚐(k)⭝ 󱣩; },
   set           (𝕊,k,v) { ↪𝚜 ⭜𝚜(k,v)⭝ (𝕊ₖ=v)  ; },
   deleteProperty(𝕊,k  ) { ↪𝚍 ⭜𝚍(k  )⭝ (󰆴 𝕊ₖ)  ; },
-  apply         (𝕊,𝕤,𝔸) { ↪ƒ ⭜ƒ( ⠤𝔸)⭝  󱣩      ; }
-              });
+  apply         (𝕊,𝕤,𝔸) { ↪ƒ ⭜ƒ( ⠤𝔸)⭝  󱣩      ; } });
 [󰻾,𝔓] = [󰲡x,󰲡xᵖʳᵒᵗᵒᵗʸᵖᵉ];
 [Ϣ,󰈙] = [window,document];
 [𝐴,𝐸,𝑜,ᔐ,𝑖] = [Array,Element,Object,String,Number];

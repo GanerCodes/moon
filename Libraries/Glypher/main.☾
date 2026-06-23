@@ -1,7 +1,3 @@
- 󰤱 once added
-   0x2B96
-   some stuff in https://www.unicode.org/charts/PDF/Unicode-17.0/U170-16EA0.pdf
-
 __dir__ cd
 
 ⊢cp(𝕊,t): ⦃import shutil⦄
@@ -38,14 +34,15 @@ SCRIPT_DEPTH      = 2  you'd be cooked to increase this
 CHECK_REPOS       = ✓
 NERDFONT          = ✓
 CUSTOM_SYMBOLS    = ✓
-COPY_OUT_XCOMPOSE = ✓ 􀯗 ‹/c/SystemConf/.XCompose›𝐩
-COPY_OUT_FONT_DIR = ✓ 􀯗 ‹/c/Fonts›𝐩
+COPY_OUT_XCOMPOSE = ‹SYSTEM›􀉧env 􇀦 ‹/c/SystemConf/.XCompose›𝐩
+COPY_OUT_FONT_DIR = ‹SYSTEM›􀉧env 􇀦 ‹/c/Fonts›𝐩
 OUTPUT_EXTS       = ‹otf ttf woff2›􀌌
-scrpt_out = moon_dir􀋋‹Builtins/Data/script.map›𝐩
-style_out = moon_dir􀋋‹Builtins/Data/style.json›𝐩
-opord_out = moon_dir􀋋‹Builtins/Data/opord󷺗󷺗󷺗󷺗󷺗›𝐩
-binds_out =          ‹Output/.bindings󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
-xcomp_out =          ‹Output/.XCompose󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›𝐩
+scrpt_out  = moon_dir􀋋‹Builtins/Data/script.map›𝐩
+style_out  = moon_dir􀋋‹Builtins/Data/style.json›𝐩
+opord_out  = moon_dir􀋋‹Builtins/Data/󷺗󷺗󷺗󷺗󷺗opord›𝐩
+binds_out  =          ‹Output󷺗󷺗/󷺗󷺗󷺗󷺗󷺗󷺗.bindings›𝐩
+xcomp_out  =          ‹Output󷺗󷺗/󷺗󷺗󷺗󷺗󷺗󷺗.XCompose›𝐩
+f_symbol   =          ‹󷺗MoonCustomSymbols.woff2›𝐩
 fi,fo = ‹External/JuliaMono/JuliaMono-Regular.ttf Output/FontNerd.ttf›􀌌􀉳𝐩
 
 REMOVES      􇂾 􀌎
@@ -68,8 +65,7 @@ c = parse_config(CONFIG,CONFIG􀊩MULTICHARS ᔐ,𝔭)
   ‹JuliaMono-Regular.ttf›𝐩􀯖.rename(fo)
 
 (fi,fo)󷸊₁⋄‹Output/FontNerdSymbols.ttf›𝐩
-¿CUSTOM_SYMBOLS 􀛺 fo.is_file􀃅􀌐:
-  merge_into_font(‹MoonCustomSymbols.ttf›𝐩,fi).generate(fo ᔐ)
+¿CUSTOM_SYMBOLS 􀛺 fo.is_file􀃅􀌐: merge_into_font(f_symbol,fi).generate(fo ᔐ)
 𝚏 = load_font(fo)
 
 ‹Removing pre-existing scripts & bad chars: ›􀊸􊾖

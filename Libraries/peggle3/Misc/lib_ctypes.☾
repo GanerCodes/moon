@@ -1,0 +1,120 @@
+ 󷹇 this is an incomplete manual WASM cffi implementation. This was started before I figured out how to get cffi working in WASM
+
+ 󰤱 we index unions and structs at different times so they can't resolve eachother by name
+
+ base types: any, ptr, u8, u32
+ any: only used as pointer
+ structs are padded to u32
+ pointers are ⟨type⟩
+ ⵌtypeⵌℕ is an array of fixed size 
+ [type] is a pointer to an array of unknown size
+
+BASE_SIZES = {u8=1,u32=4,ptr=4,any=4}
+GRAM = 󰦥󰦥󰦥󰦥
+
+main       = (dec_alias ∨ dec_union ∨ dec_struct ∨ dec_func ∨ 󰆴(~‹[ \t\n]+›))*
+block_body = named_type (󰆴(~‹[ \t]*\n[ \t\n]*›) ⠶block_body ∨ 󰆴(~‹[ \n\t]*›?))
+general    = struct ∨ union ∨ arr_static ∨ ptr ∨ arr_ptr ∨ type
+
+struct     = 󰆴('{'𝘄?) ⠶block_body 󰆴(𝘄?'}')
+union      = 󰆴('⦑'𝘄?) ⠶block_body 󰆴(𝘄?'⦒')
+ptr        = 󰆴('⟨'𝘄?) ⠶general    󰆴(𝘄?'⟩')
+arr_ptr    = 󰆴('['𝘄?) ⠶general    󰆴(𝘄?']')
+arr_static = 󰆴('ⵌ'𝘄?) ⠶general    󰆴(𝘄?'ⵌ'𝘄?) ~‹[0-9]*›
+
+named_type = ⠶general 󰆴(𝘄?     ) name
+dec_alias  = name     󰆴(𝘄?'='𝘄?) name
+dec_union  = name     󰆴(𝘄?     ) union
+dec_struct = name     󰆴(𝘄?     ) struct
+dec_func   = 󰆴('⊢'𝘄?) name 󰆴(𝘄?'('𝘄?) (func_param ∨ '') 󰆴(𝘄?')') (󰆴(𝘄?) func_ret)?
+func_param = named_type (󰆴(𝘄?','𝘄?) ⠶func_param)?
+func_ret   = 󰆴(𝘄?'→'𝘄?) ⠶general
+type       = ⠶name
+
+name = ~‹[^ \t\n,=⊢→ⵌ{}⦑⦒⟨⟩()\[\]]+›
+𝘄 = ~‹[ \t]+›
+
+󰦥󰦥󰦥󰦥
+
+TEST = 󰦥󰦥󰦥󰦥󰦥
+𝑏 = u8
+i8 = u8
+size_t = u32
+pcre2_code = any
+ᔐ { [u8] s
+    u32  l }
+Rule { u32 t
+       u32 cL
+       u32 cR
+       ⦑ ᔐ s
+         ⟨pcre2_code⟩ r ⦒ dat }
+Match { u32 id
+        u32 p
+        u32 l
+        [Match] K
+        u32 nK }
+ArenaBlock { ⟨ArenaBlock⟩ next
+             size_t used
+             size_t cap
+             ⵌi8ⵌ0 data }
+Arena { ⟨ArenaBlock⟩ head }
+
+⊢parse          (⟨Arena⟩ Ѧ, [Rule] 𝚁, u32 𝚁𝚗, ᔐ 𝚌, u32 id, 𝑏 trash) → ⟨Match⟩
+⊢create_regex   (ᔐ P                                              ) → ⟨pcre2_code⟩
+⊢pcre2_code_free(⟨pcre2_code⟩ c                                   )
+⊢arena_init     (⟨Arena⟩ Ѧ                                        )
+⊢arena_free_all (⟨Arena⟩ Ѧ                                        )
+󰦥󰦥󰦥󰦥󰦥
+
+⨡ peggle3
+⨡ peggle3/gram_tools
+
+gram = GRAM peggle3
+󱁕 = TEST gram
+󱁕.ftrp(‹arr_ptr›,󷺹ˢᵉᵗ(t=‹ptr›),✓)
+A,U,S,F = ‹dec_alias dec_union dec_struct dec_func›􀌌ᐵ󱁕.sepᐵ₀􋒷,⟞₁􊬋ᐸℵ
+A􇀞􀉴􁎀󰲣y₀􋒷
+F􇀞􀉴􁎀󰲣y􀊹􀉞1 􇀦y₀􀊱Ń(‹type›,𝔗(‹void›))􇀧 y₀􀊱y₁ ₀
+
+⊢Σ(t):  ‹Σ(⟦t⟧)›􀊸
+       ¿t􀝀PTR􀊤ARR􀊤UNION􀊤STRUCT: ↪t.␛Σ
+       ¿t􀉧BASE_SIZES: ↪BASE_SIZESₜ
+       ¿t􀉧A         : ↪AₜΣ
+       ✗􀉓‹idk how big ⟦t⟧ is›
+
+󱀘PTR   (  ): ⊢__init__(𝕊,x): 𝕊ˣ=x
+                             𝕊.␛Σ = 4
+             __repr__ = 𝕊↦‹⟨⟦𝕊ˣ⟧⟩⟦𝕊.␛Σᔐ􀋓⟧›
+󱀘ARR   (  ): ⊢__init__(𝕊,x,n=□): 𝕊ˣ,𝕊ⁿ=x,n
+                                 𝕊.␛Σ = n􇪨􇀦⁴n􀋈Σ(x)
+             __repr__ = 𝕊↦‹[⟦𝕊ˣ⟧ ⨯ ⟦𝕊ⁿ⟧]⟦𝕊.␛Σᔐ􀋓⟧›
+󱀘UNION (ℵ´): ⊢__init__(𝕊,x): super().__init__(x)
+                             𝕊.␛Σ = 𝕊􁎀􀉳Σ􀉹  󰤱 alignment
+             __repr__ = 𝕊↦‹⦑⟦𝕊􁎡􀉴‹⬤:⬤›􀋢␛,𝘀⟧⦒⟦𝕊.␛Σᔐ􀋓⟧›
+󱀘STRUCT(ℵ´): ⊢__init__(𝕊,x): super().__init__(x)
+                             𝕊.␛Σ = 𝕊􁎀􀉳Σ􀋯  󰤱 alignment
+             __repr__ = 𝕊↦‹{⟦𝕊􁎡􀉴‹⬤:⬤›􀋢␛,𝘀⟧}⟦𝕊.␛Σᔐ􀋓⟧›
+󱀘FUNC  (  ): ⊢__init__(𝕊,p,r): 𝕊ᵖ,𝕊ʳ = p,r
+             ⊢__call__(𝕊,p): ✗􀉓␛󰤱
+
+⊢ƒ(󱁕): ¿󱁕ᵗ􀜋􀌌‹struct union func_param›:
+         r = 󱁕ᐵ₁􋒷,⟞₀ƒᐸ
+         ¿󱁕ᵗ􀉞‹func_param›: ↪r
+         ↪(󱁕ᵗ􀉞‹struct›􇀦STRUCT􇀧UNION)(r)
+       ¿󱁕ᵗ􀉞‹ptr󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪PTR(󱁕₀ƒ)
+       ¿󱁕ᵗ􀉞‹type󷺗󷺗󷺗󷺗󷺗󷺗›: ↪󱁕􋒷
+       ¿󱁕ᵗ􀉞‹arr󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪PTR(ARR(󱁕₀ƒ))
+       ¿󱁕ᵗ􀉞‹arr_static›: ↪ARR(󱁕₀ƒ,󱁕₁􋒷𝑖)
+       ✗􀉓‹idk what ⟦󱁕ᵗ⟧ is›
+
+ ∀t,x⬠‹AUSF›􀝄A􀊱U􀊱S􀊱F: ‹⟦t⟧:›􀊸
+                      ∀k,v⬠x: ¿v􀊜𝑙: k􀊸
+                                    v􀉳󷺹􀊜Ń􇀦⟞ 𝑩𝑩􇀧⟞􀊸ᐸ
+                              ¡   : ‹⟦k⟧ → ⟦v⟧›􀊸
+                      ᐦ􀊸
+
+∀k,v⬠S: k􀊸; v₀𝑩𝑩
+        Aₖ=v₀ƒ 􀊸
+
+∀k,v⬠F: p,r = v􀉳ƒ
+        ‹⟦k⟧: ⟦p⟧ → ⟦r⟧›􀊸

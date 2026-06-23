@@ -8,12 +8,10 @@ real_files = ‹moon_wasm.zip font.ttf index.j☾›􀌌
 
 JS     = ‹⟦joon_header⟧𝗻⟦‹index.j☾›  transpile_joon⟧›
 DOCS   = ops to_docs 𝔍󰄞
-P3WASM = moon_dir􀋋‹Libraries/peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗/libpeggle3.wasm›􀯖ᵇ
-P3JS   = moon_dir􀋋‹Libraries/peggle3󷺗󷺗󷺗󷺗󷺗󷺗󷺗/libpeggle3.js󷺗󷺗›􀯖ᵇ
-STYLE  = moon_dir􀋋‹Builtins/Data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗/style󷺗󷺗󷺗󷺗󷺗.json›􀯖ᵇ
+STYLE  = moon_dir􀋋‹Builtins󷺗/Data󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗/style󷺗󷺗󷺗󷺗.json›􀯖ᵇ
+LOGO   = moon_dir􀋋‹Extra󷺗󷺗󷺗󷺗/Assets󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗/moon󷺗󷺗󷺗󷺗󷺗.svg󷺗›􀯖ᵇ
 FONTA  = moon_dir􀋋‹Libraries/Glypher/Output/moonfont_A.ttf󷺗›􀯖ᵇ
 FONTB  = moon_dir􀋋‹Libraries/Glypher/Output/moonfont_B.ttf󷺗›􀯖ᵇ
-LOGO   = moon_dir􀋋‹Extra/Assets󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗/moon󷺗󷺗󷺗󷺗󷺗󷺗.svg󷺗›􀯖ᵇ
 
 cors = {‹access-control-allow-origin›: ␛*}
 ⊢(HTTP_Server) server(𝚖,𝚙,𝙷,𝚎):
@@ -23,15 +21,19 @@ cors = {‹access-control-allow-origin›: ␛*}
   ¿P􀉞‹info󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪DOCS  , ℵ(𝙲𝚃=‹.json›,⠶cors)
   ⸘P􀉞‹style󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪STYLE , ℵ(𝙲𝚃=‹.json›,⠶cors)
   ⸘P􀉞‹index.js󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪JS    , ℵ(𝙲𝚃=‹.js󷺗󷺗›,⠶cors)
-  ⸘P􀉞‹libpeggle3.wasm›: ↪P3WASM, ℵ(𝙲𝚃=‹.wasm›,⠶cors)
-  ⸘P􀉞‹libpeggle3.js󷺗󷺗›: ↪P3JS  , ℵ(𝙲𝚃=‹.js󷺗󷺗›,⠶cors)
   ⸘P􀉞‹fontA.ttf󷺗󷺗󷺗󷺗󷺗󷺗›: ↪FONTA , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
   ⸘P􀉞‹fontB.ttf󷺗󷺗󷺗󷺗󷺗󷺗›: ↪FONTB , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
   ⸘P􀉞‹moon.svg󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪LOGO  , ℵ(𝙲𝚃=‹.svg󷺗›,⠶cors)
-  ⸘P􊬋􊹳ₓ􊮝􊬏ᵤₙᵢ󰂼ₑ􊬐≡x:
-      syms = ucod󰈲󷺹₀∋ᑅPₓ􊹳₊₁﹕⫯⭢ᴍ󷸺
-      ↪ ‹<!DOCTYPE html>𝗻<html><head><meta charset="UTF-8"><style>html,body{display:flex;flex-wrap:wrap;background:#000;color:#fff;width:100%;height:100%}body{height:min-content;}z{width:20px;height:20px;}</style></head><body>⟦symsᐖ‹<z>⟦⟞⟧</z>›ᐸ⨝⟧</body></html>›,␛
-        ℵ(𝙲𝚃=‹.html›,⠶cors)
-  ¡:  ↪ ᵇ(P∈real_files ⭜P⭝ ‹index.html›), cors
+  
+  ¿P􀉧os.listdir(moon_dir􀋋‹Libraries/peggle3/build/pyodide/dist›􇀠dist):  󰤱 see peggle3/build.sh
+    P 􀯏 ‹⟦dist⟧/⬤›
+  ⸘P􀉩real_files:
+    P = ‹index.html›
+  ↪P ᵇ, ℵ(𝙲𝚃=P 𝐩􀯖.suffix,⠶cors)
 
-‹Running server›☾ ► server(port=𝔸􀊹􀉤1 􇀦𝔸₁𝑖􇀧 1984)
+‹Running server›􀊸 􀝔 server(port=𝔸􀊹􀉤1 􇀦𝔸₁𝑖􇀧 1984)
+
+ ⸘P􊬋􊹳ₓ􊮝􊬏ᵤₙᵢ󰂼ₑ􊬐≡x:
+       syms = ucod󰈲󷺹₀∋ᑅPₓ􊹳₊₁﹕⫯⭢ᴍ󷸺
+       ↪ ‹<!DOCTYPE html>𝗻<html><head><meta charset="UTF-8"><style>html,body{display:flex;flex-wrap:wrap;background:#000;color:#fff;width:100%;height:100%}body{height:min-content;}z{width:20px;height:20px;}</style></head><body>⟦symsᐖ‹<z>⟦⟞⟧</z>›ᐸ⨝⟧</body></html>›,␛
+         ℵ(𝙲𝚃=‹.html›,⠶cors)

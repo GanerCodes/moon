@@ -20,63 +20,29 @@ n󱁕m = 󱁕↦󱁕ᐹᔐ|ℤ ⭜􋑻 𝔗(󱁕)
          ↪󱁕
 𝑩𝑩 = 󱁕↦BOX(✗ 󱁕ᴾ􀯑d􁊺ᵜ𝔸ᐖpadc(􍪴􀋥𝘀,d,␛─)􀊩𝗻ᐸ􀋢)􀊸􀔂󱁕
 
-¿moon_platform􀉞‹WASM›:
-  ⦃from js import peggle3 as ⦃lib_peggle3_wasm⦄⦄
-  ✗􀉓‹󰤱›
-   󱀘WasmPtr:
-     ⊢__init__(𝕊,p,t=□): 𝕊ᵖ,𝕊ᵗ = 𝑖(p),t
-     __index__ = 󷺹ᵖ
-   ffi = WasmFFI􀃅
-   󱀘WasmFFI:
-     structs = { ᔐ    =‹s ptr l u32›                    􀌌,
-                 Rule =‹t u32 cL u32 cR u32 dat union›  􀌌,
-                 Match=‹id u32 p u32 l u32 K ptr nK u32›􀌌 }
-     malloc = ⥌𝕊,𝚋,𝚝=□↦WasmPtr(𝕊ᴹ._malloc(𝚋),𝚝)
-     free   = ⥌𝕊,𝚙↦𝕊ᴹ._free(𝚙 𝑖)
-     ⊢__init__(𝕊,M):
-       𝕊ᴹ,𝕊ᵘ⁸,𝕊ᵘ³² = M,Mᴴᴱᴬᴾᵁ⁸,Mᴴᴱᴬᴾ³²
-     ⊢new(𝕊,𝚝,𝚟=□):
-       ¿𝚝􀉞‹uint8_t[]›:
-         ¿𝚟􀊜ᔐ: 𝚟􀯏𝑀
-         𝚙 = 𝕊ᵐᵃˡˡᵒᶜ(𝚜􇀜𝚟􀊚􋅂􁍵􋇖􀊹𝚝􊬋􍧰)
-         ∀i⬠𝚜􀋲: 𝕊ᵘ⁸[𝚙 𝑖􀊩i] = 𝚟􇪨􇀦⁰𝚟ᵢ
-         ↪𝚙
-       ¿𝚝􍨄􀉞␛*:
-         𝚝􀯏􊬋􍨄
-         layout = 𝕊ˢᵗʳᵘᶜᵗˢ􀳀
-         sizes = { u32=4, ptr=4, union=8 }
-         p = 𝕊ⁿᵉʷ(‹uint8_t[]›,layoutᐖsizes􍪴􊬤ᐸ􀉹)
-         pᵗ = 𝚟
-         ↪p
-   󱀘WasmLib:
-     __getattr__ = ⥌𝕊,name↦lib_peggle3_wasm.‹_⟦name⟧›
-   ffi = WasmFFI􀃅
-   lib = WasmLib􀃅
-   N = 󰲡ffi.new(x,⠤𝔸,⠶𝕂)
-¡:
-  Ų = 󷺹ᐵ􀊾􀜈255􇁖􍪵␛v􀝍⟞􀊾􀊿¹⁶ᐸ􀋢
-  ⦃from cffi import FFI⦄
-  ffi = FFI􀃅
-  ffi.cdef(󰦥󰦥󰦥󰦥󰦥
-  typedef unsigned char uint8_t;
-  typedef unsigned int  uint32_t;
-  typedef struct pcre2_code pcre2_code;
-  typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
-  typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
-  typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
-  typedef struct ArenaBlock {
-    struct ArenaBlock *next;
-    size_t used,cap;
-    char data[]; } ArenaBlock;
-  typedef struct { ArenaBlock *head; } Arena;
-  Match* parse(Arena *Ѧ, Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
-  pcre2_code* create_regex(ᔐ P);
-  void pcre2_code_free(pcre2_code *c);
-  void arena_init(Arena *Ѧ);
-  void arena_free_all(Arena *Ѧ);
-  󰦥󰦥󰦥󰦥󰦥 Ų)
-  lib = (__dir__􀋋‹libpeggle3.so›) ᔐ ffi.dlopen
-  N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
+Ų = 󷺹ᐵ􀊾􀜈255􇁖􍪵␛v􀝍⟞􀊾􀊿¹⁶ᐸ􀋢
+⦃from cffi import FFI⦄
+ffi = FFI􀃅
+ffi.cdef(󰦥󰦥󰦥󰦥󰦥
+typedef unsigned char uint8_t;
+typedef unsigned int  uint32_t;
+typedef struct pcre2_code pcre2_code;
+typedef struct ᔐ { uint8_t *s; uint32_t l; } ᔐ;
+typedef struct Rule { uint32_t t; uint32_t cL; uint32_t cR; union {ᔐ s; pcre2_code* r; } dat; } Rule;
+typedef struct Match { uint32_t id,p,l; struct Match *K; uint32_t nK; } Match;
+typedef struct ArenaBlock {
+  struct ArenaBlock *next;
+  size_t used,cap;
+  char data[]; } ArenaBlock;
+typedef struct { ArenaBlock *head; } Arena;
+Match* parse(Arena *Ѧ, Rule* 𝚁, uint32_t 𝚁𝚗, ᔐ 𝚌, uint32_t id, bool trash);
+pcre2_code* create_regex(ᔐ P);
+void pcre2_code_free(pcre2_code *c);
+void arena_init(Arena *Ѧ);
+void arena_free_all(Arena *Ѧ);
+󰦥󰦥󰦥󰦥󰦥 Ų)
+lib = (__dir__􀋋‹Out/libpeggle3.⟦moon_platform􀉞‹WASM›􇀦‹wasm›􇀧‹so›⟧›) ᔐ ffi.dlopen
+N = 󰲡ffi.new(x Ų,⠤𝔸,⠶𝕂)
 
 󱀘Cleaner: ⊢__init__ (𝕊,ƒ,x=□): 𝕊􊽺,𝕊ˣ = ƒ,x
           ⊢__enter__(𝕊      ): □
@@ -106,14 +72,14 @@ R_FLAG = R_NAME􀊤R_TRSH
 ⊢(fcache􀃅)gram_rule_machine(𝚁,nmap):  warning: little foresight
   ℜ=⍁􀳱􁗢; add = 󷺹≅□ 􇃆ℜ􀊹􀝓[⠤𝓐] ℜ.append􇃇 ⟞􀝓ℜ􍪴􀯍[⠤𝓐]
   ⊢ƒ(𝚛,r=□): ¿𝚛􀊜𝑖: ↪[𝚛]
-             ¿𝚛􀊜ᔐ: ¿𝚛≡␛✓: ↪ƒ(␛✓⛶􋇡,r)  Weird!
-                   ¿r≇□: 𝚛=[␛•,𝚛]
+             ¿𝚛􀊜ᔐ: ¿𝚛􀉞␛✓: ↪ƒ(␛✓⛶􋇡,r)  Weird!
+                   ¿r􀋒□: 𝚛=[␛•,𝚛]
                    ¡   : ↪[nmap􀲼]
              𝘳,⠤𝘊 = 𝚛
              ¿𝘳∈‹󰆴⠶󷺗󷺗󷺗›: ¿𝘳􀉞␛⠶􀛾r􀋒□:
                            ↪ƒ((␛∧,(␛󰆴,(␛✓,)),𝚛),r)  Weird!
                          𝘤 = 𝘊₀
-                         ¿𝘳≡␛󰆴: ↪[⠤ƒ(𝘤,r),𝘳]
+                         ¿𝘳􀉞␛󰆴: ↪[⠤ƒ(𝘤,r),𝘳]
                          ⊢ꬶ(𝚛): ¿𝚛ᐹᔐ􀊤𝑖􀟀𝚛₀􀉧‹ᔐƦƨ›: ↪𝚛
                                 ↪(𝚛₀,⠤𝚛₁﹕ᐵ􀓮ᔐ􀊤𝑖􇀶(␛⠶,⟞)􇀷⟞ ꬶ)
                          ↪[⠤ƒ(𝘤 ꬶ,r),𝘳]
@@ -162,13 +128,15 @@ TEST_GRAM_CACHE = {}
   names = 𝚁 ℵ􀯖⁻
   ⊢ƒ(c,id=‹main›􀉧names􇀦‹main›􇀧names₀,remove_trashes=✓,W_len=✓,E_len=✗,W_fail=✗,E_fail=✓,DEBUG=✗):
      ¿DEBUG_MEM: ‹[Peggle] → ⟦PL_MEM_USAGE􀃅􀋆1024²􀋪³⟧MiB rules􀊹=⟦R􀊹⟧ c􀊹=⟦c􀊹⟧ start=⟦c􊬋₆₄ escNL⟧›􀊸
-     DEBUG􀌐􀞽􁏟‹DEBUG not implemented›
+     DEBUG􀌐􀞽􁏟‹󰤱 DEBUG not implemented›
      c_input ⛯ cstr(c,✓)
      c_input = c_inputˣ
      Ѧ = N(‹Arena *›)
      ⛯ Cleaner(𝚲lib.arena_free_all(Ѧ))
      lib.arena_init(Ѧ)
      r = lib.parse(Ѧ,rules,rules􀊹,c_input₀,id to_n,remove_trashes)
+     ¿DEBUG_MEM: ‹󰤱 4: r=⟦r⟧›􀊸
+     
      W_len􀌢E_len􀕲W_fail􀌢E_fail􀞽
      ¿r􀌐: ¿E_fail􀉖W_fail: r􀞽ᵂ􋕟ᶠᵃⁱˡ􇅦􍛏􁏟‹Failed to parse›
           ↪

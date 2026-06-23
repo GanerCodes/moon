@@ -35,4 +35,4 @@ chmod a+x "$DEST"
 echo "Preloading cache…"
 "$DEST" -c '󷺹􁁧1􀌉3􀝬􀌊􀌇ᐸ􀊒󷺹􍨄􀉞␛!ᐸ􀜭‹Welcome to ☾!  ›3􀞆𝗻'
 
-exit 0; }
+exit $?; }

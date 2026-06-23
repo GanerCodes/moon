@@ -1,0 +1,63 @@
+src/libpcre2_8_la-pcre2_extuni.lo: src/pcre2_extuni.c src/config.h \
+  src/pcre2_internal.h \
+  /home/ganer/.cache/emscripten/sysroot/include/ctype.h \
+  /home/ganer/.cache/emscripten/sysroot/include/features.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h \
+  /opt/emscripten-llvm/lib/clang/23/include/limits.h \
+  /home/ganer/.cache/emscripten/sysroot/include/limits.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/limits.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stddef.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stddef.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdio.h \
+  /home/ganer/.cache/emscripten/sysroot/include/wasi/api.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/alloca.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/strings.h src/pcre2.h \
+  /opt/emscripten-llvm/lib/clang/23/include/inttypes.h \
+  /home/ganer/.cache/emscripten/sysroot/include/inttypes.h \
+  src/pcre2_ucp.h src/pcre2_intmodedep.h src/pcre2_util.h
+src/config.h:
+src/pcre2_internal.h:
+/home/ganer/.cache/emscripten/sysroot/include/ctype.h:
+/home/ganer/.cache/emscripten/sysroot/include/features.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h:
+/opt/emscripten-llvm/lib/clang/23/include/limits.h:
+/home/ganer/.cache/emscripten/sysroot/include/limits.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/limits.h:
+/opt/emscripten-llvm/lib/clang/23/include/stddef.h:
+/home/ganer/.cache/emscripten/sysroot/include/stddef.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdio.h:
+/home/ganer/.cache/emscripten/sysroot/include/wasi/api.h:
+/opt/emscripten-llvm/lib/clang/23/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/alloca.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/strings.h:
+src/pcre2.h:
+/opt/emscripten-llvm/lib/clang/23/include/inttypes.h:
+/home/ganer/.cache/emscripten/sysroot/include/inttypes.h:
+src/pcre2_ucp.h:
+src/pcre2_intmodedep.h:
+src/pcre2_util.h:

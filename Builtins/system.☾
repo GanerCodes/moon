@@ -1,8 +1,10 @@
 ⦃from time import time,sleep⦄
 
-⊢PL_MEM_USAGE: ⦃import psutil⦄
-               𝚙 = psutil.Process􀃅
-               ↪𝚙.memory_info􀃅.rss
+⊢PL_MEM_USAGE:  ⦃import psutil⦄
+                 𝚙 = psutil.Process􀃅
+                 ↪𝚙.memory_info􀃅.rss
+               ✗ 􁀒􁏟 ‹Failed to get memory! Do you have psutil installed?›
+               ↪0
 ⊢PL_CPU_COUNT: ⦃import multiprocessing⦄
                ↪multiprocessing.cpu_count􀃅
 ⊢PL_THREAD(ƒ,⠤𝔸,⠶𝕂): ⦃from threading import Thread as ⦃T⦄⦄

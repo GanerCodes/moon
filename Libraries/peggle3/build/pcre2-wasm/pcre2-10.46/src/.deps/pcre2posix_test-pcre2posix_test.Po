@@ -1,0 +1,45 @@
+src/pcre2posix_test-pcre2posix_test.o: src/pcre2posix_test.c \
+  /home/ganer/.cache/emscripten/sysroot/include/stdio.h \
+  /home/ganer/.cache/emscripten/sysroot/include/wasi/api.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stddef.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stddef.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h \
+  /home/ganer/.cache/emscripten/sysroot/include/features.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/strings.h \
+  src/pcre2posix.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/alloca.h
+/home/ganer/.cache/emscripten/sysroot/include/stdio.h:
+/home/ganer/.cache/emscripten/sysroot/include/wasi/api.h:
+/opt/emscripten-llvm/lib/clang/23/include/stddef.h:
+/home/ganer/.cache/emscripten/sysroot/include/stddef.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h:
+/opt/emscripten-llvm/lib/clang/23/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h:
+/home/ganer/.cache/emscripten/sysroot/include/features.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/strings.h:
+src/pcre2posix.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/alloca.h:

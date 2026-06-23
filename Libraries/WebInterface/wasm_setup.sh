@@ -1,6 +1,5 @@
 #!/bin/bash -e
-{
-cd "$(dirname `realpath -s $0`)"
+{ cd "${0%/*}"
 
 # b/c `zip` sometimes cares
 export LANG=en_US.UTF-8
@@ -17,17 +16,20 @@ rm -r "$ZF" "$MOON_CACHEDIR" || :
 
 pushd "$MOON_TMPDIR"; zip "$ZF" -r `basename "$MOON_CACHEDIR"`
                       popd
-pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins         \
-                               -x "Libraries/WebInterface/*" \
-                               -x "Libraries/Glypher/*"      \
-                               -x "Libraries/󰆼/*"            \
-                               -x "Libraries/󰤱_Tests/*"      \
+pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins               \
+                               -x "Libraries/WebInterface/*"       \
+                               -x "Libraries/Glypher/*"            \
+                               -x "Libraries/󰆼/*"                  \
+                               -x "Libraries/󰤱_Tests/*"            \
+                               -x "Libraries/peggle3/Libpeggle3/*" \
+                               -x "Libraries/peggle3/build/*"      \
+                               -x "Libraries/peggle3/Misc"         \
                                -x "Libraries/peggle4/*"
                      cp moon.py "$MOON_CACHEDIR/moon.py"
                      pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py
                                              popd
                      popd
 [ $# -ge 1 ] && ☾ server.☾ 1984 || :
-exit 0
-}
+
+exit $?; }
 # rm -r /tmp/moon{,moon_wasm_cache} ; mkdir -p /tmp/moon ; cp ~/Projects/moon/Libraries/WebInterface/moon_wasm.zip /tmp/moon ; cd /tmp/moon ; unzip moon_wasm.zip ; mv moon_wasm_cache /tmp/moon_wasm_cache ; { export MOON_TMPDIR="/tmp"; export MOON_CACHEDIR="/tmp/moon_wasm_cache"; export MOON_NO_FORK="1"; export MOON_DISABLE_CUSTOM_ERRORS="1"; export MOON_LOG_IMPORTS="1"; python; }

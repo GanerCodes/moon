@@ -1,0 +1,95 @@
+src/pcre2grep-pcre2grep.o: src/pcre2grep.c src/config.h \
+  /home/ganer/.cache/emscripten/sysroot/include/ctype.h \
+  /home/ganer/.cache/emscripten/sysroot/include/features.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h \
+  /home/ganer/.cache/emscripten/sysroot/include/locale.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdio.h \
+  /home/ganer/.cache/emscripten/sysroot/include/wasi/api.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stddef.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stddef.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h \
+  /opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h \
+  /opt/emscripten-llvm/lib/clang/23/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdint.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/string.h \
+  /home/ganer/.cache/emscripten/sysroot/include/strings.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/stdlib.h \
+  /home/ganer/.cache/emscripten/sysroot/include/alloca.h \
+  /home/ganer/.cache/emscripten/sysroot/include/errno.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/errno.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/types.h \
+  /opt/emscripten-llvm/lib/clang/23/include/endian.h \
+  /home/ganer/.cache/emscripten/sysroot/include/endian.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/select.h \
+  /home/ganer/.cache/emscripten/sysroot/include/compat/sys/stat.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/stat.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/stat.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/wait.h \
+  /home/ganer/.cache/emscripten/sysroot/include/signal.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/signal.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/resource.h \
+  /home/ganer/.cache/emscripten/sysroot/include/sys/time.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/resource.h \
+  /home/ganer/.cache/emscripten/sysroot/include/unistd.h src/pcre2.h \
+  /opt/emscripten-llvm/lib/clang/23/include/limits.h \
+  /home/ganer/.cache/emscripten/sysroot/include/limits.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/limits.h \
+  /opt/emscripten-llvm/lib/clang/23/include/inttypes.h \
+  /home/ganer/.cache/emscripten/sysroot/include/inttypes.h \
+  /home/ganer/.cache/emscripten/sysroot/include/dirent.h \
+  /home/ganer/.cache/emscripten/sysroot/include/bits/dirent.h
+src/config.h:
+/home/ganer/.cache/emscripten/sysroot/include/ctype.h:
+/home/ganer/.cache/emscripten/sysroot/include/features.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/alltypes.h:
+/home/ganer/.cache/emscripten/sysroot/include/locale.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdio.h:
+/home/ganer/.cache/emscripten/sysroot/include/wasi/api.h:
+/opt/emscripten-llvm/lib/clang/23/include/stddef.h:
+/home/ganer/.cache/emscripten/sysroot/include/stddef.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_header_macro.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_ptrdiff_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_size_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_wchar_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_null.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_max_align_t.h:
+/opt/emscripten-llvm/lib/clang/23/include/__stddef_offsetof.h:
+/opt/emscripten-llvm/lib/clang/23/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdint.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/string.h:
+/home/ganer/.cache/emscripten/sysroot/include/strings.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/stdlib.h:
+/home/ganer/.cache/emscripten/sysroot/include/alloca.h:
+/home/ganer/.cache/emscripten/sysroot/include/errno.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/errno.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/types.h:
+/opt/emscripten-llvm/lib/clang/23/include/endian.h:
+/home/ganer/.cache/emscripten/sysroot/include/endian.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/select.h:
+/home/ganer/.cache/emscripten/sysroot/include/compat/sys/stat.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/stat.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/stat.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/wait.h:
+/home/ganer/.cache/emscripten/sysroot/include/signal.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/signal.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/resource.h:
+/home/ganer/.cache/emscripten/sysroot/include/sys/time.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/resource.h:
+/home/ganer/.cache/emscripten/sysroot/include/unistd.h:
+src/pcre2.h:
+/opt/emscripten-llvm/lib/clang/23/include/limits.h:
+/home/ganer/.cache/emscripten/sysroot/include/limits.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/limits.h:
+/opt/emscripten-llvm/lib/clang/23/include/inttypes.h:
+/home/ganer/.cache/emscripten/sysroot/include/inttypes.h:
+/home/ganer/.cache/emscripten/sysroot/include/dirent.h:
+/home/ganer/.cache/emscripten/sysroot/include/bits/dirent.h:
