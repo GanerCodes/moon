@@ -1,5 +1,6 @@
-#!/bin/bash -e
-{ cd "$(dirname $(realpath $0))" # realpath -s $0
+#!/bin/sh -e
+{ cd "$(cd -- "$(dirname -- "$0")" && pwd)"
+
 
 chk_py_ver() {
     command -v "$1" >/dev/null 2>&1 && {
@@ -22,19 +23,22 @@ chk_py_pip || { echo "pip is not installed. Running ensurepip."
                 "$PYTHON" -m ensurepip || echo "Failed to run ensurepip ⎺⟍_⟨⍩⟩_⟋⎺"; }
 chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U psutil pycryptodome cffi regex clipboard \
            || echo "Failed to run pip ⎺⟍_⟨⍩⟩_⟋⎺"
+chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U ./Extra/Misc/jsbeautifier-2.0.1 \
+           || echo "Failed to install jsbeautifier :<"
 
-pushd ./Extra/Misc/jsbeautifier-2.0.1
-  chk_py_pip && "$PYTHON" -m pip install --break-system-packages -U . \
-             || echo "Failed to install jsbeautifier :<"
-  popd
-
-DEST=$([ "$(id -u)" -eq 0       ] && echo "/bin/☾"             || (\
-       [ "$(uname)" == "Darwin" ] && echo "/usr/local/bin/☾"   || (\
-                				             echo "$HOME/.local/bin/☾"    )))
-echo "Installing to \"$DEST\""
-
-(rm "$DEST" || :) >/dev/null 2>&1
-echo -e "#!/bin/sh\nulimit -s unlimited\nexec \"$PYTHON\" -S -u \"$(realpath moon.py)\" \"\$@\"" > "$DEST"
+DEST=$([ "$(id -u)" -eq 0      ] && echo "/bin/☾"             || (\
+       [ "$(uname)" = "Darwin" ] && echo "/usr/local/bin/☾"   || (\
+                                    echo "$HOME/.local/bin/☾"    )))
+echo "Installing script to \"$DEST\""
+rm -f "$DEST" 2>/dev/null
+printf '%s' "\
+#!/bin/sh
+PY=\"$PYTHON\"
+MOON=\"$(realpath moon.py)\""'
+PY="${MOON_PYTHON_BIN:-$PY}"
+[ "$1" = "--py" ] && { shift; exec "$PY" "$@"; }
+ulimit -s unlimited
+exec "$PY" -Su "$MOON" "$@"' > "$DEST"
 chmod a+x "$DEST"
 
 echo "Preloading cache…"

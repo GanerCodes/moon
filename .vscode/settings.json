@@ -1,6 +1,7 @@
 { "search.exclude": {
     "Builtins/Data/*"                                       : true,
     "Libraries/peggle3/build/*"                             : true,
+    "Libraries/peggle3/Out/*"                               : true,
     "Libraries/Glypher/PuaMaps/*"                           : true,
     "Libraries/Glypher/External/*/*"                        : true,
     "Libraries/Glypher/Output/.XCompose"                    : true,
@@ -8,9 +9,12 @@
     "Libraries/Glypher/.SCRIPT_MAP"                         : true,
     "Libraries/j☾/Custom_elements/Tester/website_compiled/*": true,
     "Extra/CodiumExtension/themes/theme.json"               : true,
-    "Extra/CodiumExtension/color_basis.json"                : true },
+    "Extra/CodiumExtension/color_basis.json"                : true,
+    "Extra/Misc/jsbeautifier-2.0.1/*"                       : true },
   "files.exclude": {
     "Libraries/peggle3/build/*/*"                           : true,
+    "Libraries/peggle3/Out/Pyodide/*"                       : true,
     "Libraries/Glypher/PuaMaps/Old/*"                       : true,
     "Libraries/Glypher/External/*/*"                        : true,
-    "Libraries/j☾/Custom_elements/Tester/website_compiled/*": true } }
+    "Libraries/j☾/Custom_elements/Tester/website_compiled/*": true,
+    "Extra/Misc/jsbeautifier-2.0.1/*"                       : true } }
