@@ -16,14 +16,15 @@ rm -r "$ZF" "$MOON_CACHEDIR" || :
 
 pushd "$MOON_TMPDIR"; zip "$ZF" -r `basename "$MOON_CACHEDIR"`
                       popd
-pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins               \
-                               -x "Libraries/WebInterface/*"       \
-                               -x "Libraries/Glypher/*"            \
-                               -x "Libraries/󰆼/*"                  \
-                               -x "Libraries/󰤱_Tests/*"            \
-                               -x "Libraries/peggle3/Libpeggle3/*" \
-                               -x "Libraries/peggle3/build/*"      \
-                               -x "Libraries/peggle3/Misc"         \
+pushd `☾ --get-dir`; zip "$ZF" -r Libraries Builtins                \
+                               -x "Libraries/WebInterface/*"        \
+                               -x "Libraries/Glypher/*"             \
+                               -x "Libraries/󰆼/*"                   \
+                               -x "Libraries/󰤱_Tests/*"             \
+                               -x "Libraries/peggle3/Out/Pyodide/*" \
+                               -x "Libraries/peggle3/Libpeggle3/*"  \
+                               -x "Libraries/peggle3/build/*"       \
+                               -x "Libraries/peggle3/Misc"          \
                                -x "Libraries/peggle4/*"
                      cp moon.py "$MOON_CACHEDIR/moon.py"
                      pushd "$MOON_CACHEDIR"; zip "$ZF" moon.py

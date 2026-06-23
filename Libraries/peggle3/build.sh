@@ -1,8 +1,6 @@
 #!/bin/bash -e
 { cd "${0%/*}"
 
-# 󰤱  Cherrypick needed stuff from build/pyodide/dist and put them into 
-#    a new dir "Out/Pyodide" and update paths (and fix jank within) Webinterface server
 # 󰤱  Reduce size/load times of Pyodide/WASM ☾
 # 󰤱􊽨 Redo peggle3.☾c to not use stack for rule result table as ☾ always needs large stack atm
 
@@ -35,6 +33,7 @@ pushd build
                    -sSIDE_MODULE=1 -sWASM_BIGINT           \
                    -Wno-implicit-int -fPIC -O3 -o ../Out/libpeggle3.wasm
   
+  mkdir -p ../Out/Pyodide
   [ ! -d pyodide ] && git clone --recursive --depth=1 https://github.com/pyodide/pyodide
   pushd pyodide
     [ ! -d pyodide-recipes ] && git clone https://github.com/pyodide/pyodide-recipes
@@ -45,9 +44,12 @@ pushd build
         export EMSDK_NUM_CORE=$NCORES
         export EMCC_CORES=$NCORES
         export PYODIDE_JOBS=$NCORES
-        pyodide build-recipes "regex,cffi,pycryptodome" --recipe-dir pyodide-recipes/packages --install
+        pyodide build-recipes \"regex,cffi,pycryptodome\" --recipe-dir pyodide-recipes/packages --install
         make -j$NCORES
       "
+    rm ../../Out/Pyodide/* || :
+    cp dist/{python_stdlib.zip,pyodide{-lock.json,.mjs,.asm.{wasm,mjs}},{pycryptodome,regex,cffi,pycparser}*.whl} \
+       ../../Out/Pyodide
     popd
   popd
 

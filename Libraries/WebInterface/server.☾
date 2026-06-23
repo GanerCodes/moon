@@ -18,14 +18,14 @@ cors = {‹access-control-allow-origin›: ␛*}
   ‹⟦𝚖⟧:⟦𝚙⟧›􀊸
   ¿𝚖≠‹GET›: ↪
   P = 𝚙₁﹕
-  ¿P􀉞‹info󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪DOCS  , ℵ(𝙲𝚃=‹.json›,⠶cors)
-  ⸘P􀉞‹style󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪STYLE , ℵ(𝙲𝚃=‹.json›,⠶cors)
-  ⸘P􀉞‹index.js󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪JS    , ℵ(𝙲𝚃=‹.js󷺗󷺗›,⠶cors)
-  ⸘P􀉞‹fontA.ttf󷺗󷺗󷺗󷺗󷺗󷺗›: ↪FONTA , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
-  ⸘P􀉞‹fontB.ttf󷺗󷺗󷺗󷺗󷺗󷺗›: ↪FONTB , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
-  ⸘P􀉞‹moon.svg󷺗󷺗󷺗󷺗󷺗󷺗󷺗›: ↪LOGO  , ℵ(𝙲𝚃=‹.svg󷺗›,⠶cors)
+  ¿P􀉞‹info󷺗󷺗󷺗󷺗󷺗›: ↪DOCS  , ℵ(𝙲𝚃=‹.json›,⠶cors)
+  ⸘P􀉞‹style󷺗󷺗󷺗󷺗›: ↪STYLE , ℵ(𝙲𝚃=‹.json›,⠶cors)
+  ⸘P􀉞‹index.js󷺗›: ↪JS    , ℵ(𝙲𝚃=‹.js󷺗󷺗›,⠶cors)
+  ⸘P􀉞‹fontA.ttf›: ↪FONTA , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
+  ⸘P􀉞‹fontB.ttf›: ↪FONTB , ℵ(𝙲𝚃=‹.ttf󷺗›,⠶cors)
+  ⸘P􀉞‹moon.svg󷺗›: ↪LOGO  , ℵ(𝙲𝚃=‹.svg󷺗›,⠶cors)
   
-  ¿P􀉧os.listdir(moon_dir􀋋‹Libraries/peggle3/build/pyodide/dist›􇀠dist):  󰤱 see peggle3/build.sh
+  ¿P􀉧os.listdir(moon_dir􀋋‹Libraries/peggle3/Out/Pyodide›􇀠dist):
     P 􀯏 ‹⟦dist⟧/⬤›
   ⸘P􀉩real_files:
     P = ‹index.html›

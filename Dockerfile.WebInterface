@@ -4,4 +4,4 @@ COPY . .
 RUN ./install
 EXPOSE 8000
 WORKDIR /moon/Libraries/WebInterface
-CMD ["sh", "-c", "☾ server.☾ 8000"]
+CMD ["sh", "-c", "☾ --update && ☾ server.☾ 8000"]
