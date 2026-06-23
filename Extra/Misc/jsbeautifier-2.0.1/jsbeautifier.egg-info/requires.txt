@@ -1,0 +1,2 @@
+editorconfig>=0.12.2
+regex>=2026.2.19

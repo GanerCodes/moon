@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: jsbeautifier
+Version: 2.0.1
+Summary: JavaScript unobfuscator and beautifier.
+Home-page: https://beautifier.io
+Author: Liam Newman, Einar Lielmanis, et al.
+Author-email: team@beautifier.io
+License: MIT
+Requires-Dist: editorconfig>=0.12.2
+Requires-Dist: regex>=2026.2.19
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+Beautify, unpack or deobfuscate JavaScript. Handles popular online obfuscators.
