@@ -16,4 +16,4 @@ __pycache__/
 !/Libraries/Glypher/Output/style.json
 !/Libraries/Glypher/Output/style_regex.json
 
-/Libraries/Peggle3/build
+/Libraries/peggle3/build/
