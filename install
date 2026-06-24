@@ -1,7 +1,6 @@
 #!/bin/sh -e
 { cd "$(cd -- "$(dirname -- "$0")" && pwd)"
 
-
 chk_py_ver() {
     command -v "$1" >/dev/null 2>&1 && {
         version_check=$("$1" -c 'import sys; print(sys.version_info >= (3, 12))' 2>/dev/null)

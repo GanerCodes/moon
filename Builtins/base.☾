@@ -191,8 +191,8 @@ VEP = 󷺹􀡞SPE􀨷􍯏􋔳􋎒􊾰􊾦􋅄ᵈᵉᶜ􀱙􋐏􊿑􋅘􋄠ˣ􋄡
               ↪R
 
 𝗙,𝗜 = callable,󰲡hasattr(x,‹__iter__›)
-⊢ 𝗛(x): ↪hash(x)
-        ↪ ✗
+⊢𝗛(x): ↪hash(x)
+       ↪ ✗
 𝑀 = ⥌x,y=‹utf-8›↦xᐹᔐ ⭜x.encode(y,⠤𝔸,⠶𝕂)⭝ x.decode(y,⠤𝔸,⠶𝕂)
 󱀘 ´ⴳ´(𝑖): __new__  = ℭ↦𝑖.__new__(ℭ,1)
           __call__ = ⥌⠤𝔸,⠶𝕂↦ⴳ
