@@ -109,19 +109,23 @@ ast_clean_e  = ⥌󱁕,ok=⦉⠤‹Tpρ›⦊↦󱁕.frp(ⴳ,󷺹.set(e=ℵ􋄅(
 ast_add_pos  = ⥌󱁕,i=0↦󱁕ᵉ ᵖ≔(i,󱁕ᣆ􋑻􊾸􋘳􊾲(⬤ſⁱ∾ast_add_pos,󷺹􋒷🃌+i))➡₁  󰤱 put this func in peggle
 ast_swap_pos = ⥌󱁕↦(␛p∈󱁕ᵉ⭜󱁕.set(e=󱁕ᵉᐒ{ρ=⟞ᵖ,T=⟞ᵀ}ℵ􋄅))►󱁕ᴍast_swap_pos
 
-⊢ ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
-    󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁).cpr
-    󱁕 = 󱁕 ast_clean_e fill_󱁕_holes_basic
-    pyc = 󱁕􋒷
-    󱁕 ast_swap_pos
-    󱁕 ast_add_pos
-    ¿get_tree: ↪󱁕
-    ¿reparse¬: ↪pyc
-    ⦃import ast⦄
-          ↪ast.unparse(ast.parse(pyc))
-     ¡ε=𝑒: ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›􀊸
-           ✗􀉓‹Error in python reparsing! ⟦ε⟧›
-    ↪ast.unparse(ast.parse(pyc))
+⊢ast_to_py(󱁕,𝚌,get_tree=✗,no_rename_vars=✗,reparse=✗):
+  󱁕 = expand_ast_py(󱁕,⠤no_rename_vars⭜􋒌⭝⍁).cpr
+  󱁕 = 󱁕 ast_clean_e fill_󱁕_holes_basic
+  pyc = 󱁕􋒷
+  󱁕 ast_swap_pos
+  󱁕 ast_add_pos
+  ¿get_tree: ↪󱁕
+  ↪pyc
+  
+   ¿reparse¬: ↪pyc
+        ↪ast.unparse(ast.parse(pyc))
+   ¡ε=𝑒: ‹Code:𝗻⟦linewnum(pyc,d=175,s=ŧ𝼝(⬤,fg=‹915›))⟧›􀊸
+         ✗􀉓‹Error in python reparsing! ⟦ε⟧›
+    ⦃import python_minifier⦄
+     ↪python_minifier.minify(pyc,hoist_literals=✗)
+   ⦃import ast⦄
+   ↪ast.unparse(ast.parse(pyc))
 
 ⭷ ast_to_py,PEV,VEP
 

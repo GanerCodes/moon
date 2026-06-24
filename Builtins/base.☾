@@ -115,8 +115,6 @@ CURR= ⥌ƒ,⠤𝙰,⠶𝙺↦𝙰🃌≥2 ⭜ƒ(⠤𝙰,⠶𝙺)⭝ ⥌⠤𝙱,
 ⍭´ = ⥌𝚡,𝚜=␀↦𝚜􀋑␀ 􇀦𝚡􀌌􀳉􁖑􋂝􊿖􁡃􋂝􊿖􁩶􋂝􊿉􇀧 𝚡.split(𝚜₀) 􀊚􀲿􋌵󰂁¹ 󷺺􀌌􀲿􊿦􋅱
 ▢´ = ⥌𝚡,𝚜=␀↦𝚡􀊜􋁜ℂ 􇀦𝚡􀋻􀉳􀂘􀲿􀋻􇀧 𝚜􀋑␀ 􇀦𝑖(round(𝚡))􇀧 round(𝚡,𝚜)  󰤱 support quaternions
 ⬓´,⬒´ = floor,ceil  󰤱 make this support modifier
-󷸛´,󷸚´ = ⥌𝚡↦𝚡.real,⥌𝚡↦𝚡.imag
-󷸜´ = ⥌𝚡↦𝚡􀓮𝑙􀊤𝑡 􇀦ℂ(⠤𝚡)􇀧 (𝚡􀋸,𝚡􀋷)  󰤱 weird globals thing w/ ℍ
 ⍉´ = ⥌𝚡,𝚜=␀↦𝚡􀊠􀲿
 ⬄´ = ᔐ.strip
 

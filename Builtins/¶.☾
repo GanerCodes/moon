@@ -1,0 +1,134 @@
+ 󰤱negative k and speedup with ⹏ and % magic
+⊢smolfactor(n,k=1): ¿k􀉤n: ↪0
+                    ¿k􀉣1: ↪1
+                    ¿k􀉞1􀛾2􀉡n: ↪2
+                    ∀p⬠k􀋡n¿p􀉡n: ↪p
+                    ↪n
+
+⊢firstℕbool(c,r=2): ¿c(1): ↪1
+                    ub=1
+                    ∀c(ub)􀌐: ub􇀞􀋈r
+                    lb=ub􀋇r
+                    ∀ub􀊪lb􀜈1: m=ub􀊩lb􀝫2
+                              ¿c(m): ub=m
+                              ¡    : lb=m
+                    ↪ub
+
+󱀘 ¶´:
+  ⊢(cache_)__contains__(𝕊,n):
+    ¿n≤1: ↪✗
+    ¿2∣n: ↪n≡2
+    ¿n<10000:  small factor test
+        ∀k⬠3􀞄²􀌀n􀋫¿k∣n: ↪✗
+        ↪✓
+    ∀k⬠3􀋠²100¿k∣n: ↪✗
+     strong pseudoprime check
+    ¿pow(2,(n-1)⹏2⌃(s≔(n-1)¶²),n)≕a≠1:
+        ∀r⬠s⭥: ¿a≡n-1: ⇥
+               a󷸊 ²%n
+        ¡    : ↪✗
+     check for square number 󰤱 make faster by using binary to get good first approx
+    ¿firstℕbool(󷺹²≥n)²≡n: ↪✗
+     strong lucas pseudoprime check
+    D=5
+    ∀(✿)(D,n)≠󷰾: D󷸊ⴵ⋅󷰿-D
+    s=(n+1)¶²
+    d=n+1→⹏2⌃s
+    B=bin(d)₃﹕
+    P,Q=1,(1-D)⹏4
+    U,V,Qk=1,P,Q
+    
+    ∀b⬠B: U, V, Qk = U⋅V%n, (V²-2Qk)%n, pow(Qk,2,n)
+          ¿b≡␛1:
+              U, V, Qk = ((2∣𝓽≔P⋅U+V)⭜𝓽⭝𝓽+n)⹏2%n, ((2∣𝓽≔D⋅U+P⋅V)⭜𝓽⭝𝓽+n)⹏2%n, Qk⋅Q%n
+    ¿U: ∀r⬠s⭥: ¿¬V: ⇥
+               U,V,Qk=U⋅V%n,(V²-2Qk)%n,pow(Qk,2,n)
+        ¡    : ↪✗
+    ¿n<2⁶⁴: ↪✓  Baillie PSW test stops being known here
+     󰤱 pocklington test
+     󰤱 tell if n-1 is easily factored?
+    n<2¹⁵⁰⁰⨳‹󰤱 implement APRCL for n<2¹⁵⁰⁰›  󰤱 APRCL
+          ✗⨳‹󰤱 implement ECPP󷺗 for n>2¹⁵⁰⁰›  󰤱 ECPP
+  __getitem__ = ⥌𝕊,t↦𝚲𝕊.__call__(⠤𝔸,s=t)
+  ⊢ __call__(𝕊,x,𝚜=␀):
+    ¿x􀋑∞: ↪‹󰤱 ∞ primes›
+    ¿𝚜􀋑␀: ¿x􀉦1: ↪[2]􀋈x  󰤱 speedup
+          t,p=[2],3
+          ∀t􀊹􀜇x: ¿p􀉧􀂴: t.append(p)
+                 p􇀞􀊩2
+          ↪t
+    ¿𝚜􀊜ℤ: t=0
+          ∀𝚜􀉡x: t􇀞􀊩1
+                x􇀞􀋇𝚜
+          ↪t
+    ¿𝚜􀋑<´: ↪2􀋞x􀉻󷺹􀉧􀂴  󰤱 speedup
+     󰤱 avoid floats and speedup with ⹏ and % tricks and allow negatives
+    ¿𝚜􀋑+´: ¿(r≔▢(√x))²≡x: ↪(1󷸹r󰈳ᐳx%󷺽)≕f→+[r]+←fᴙᐵ⹏ᵜx
+           ↪(1󷸻r󰈳ᐳx%󷺽)≕f→+←fᴙᐵ⹏ᵜx
+    ¿𝚜􀋑∣´: ↪[⠤x􀌆􀉶󰻾]  󰤱 speedup
+    ¿𝚜􀋑*´: x􇀞􀋖  󰤱 speedup
+           ¿x􀉞1: ↪⍁
+           t=⍁
+           ∀2􀉡x: t􇀞􀊩₂
+                 x􇀞􀋇2
+           ∀k⬠3􀋠²100: ∀k􀉡x: t􇀞􀊩ₖ
+                            x􇀞􀋇k
+           ¿x􀉞1: ↪t
+           ¿x􀉧􀂴: ↪t􀊩ₓ
+           ¿firstℕbool(󷺹²􀉥x)􀯑r²􀜂x: ↪t􀝍r􀌆􀋈2􀜡
+            Dixon's factorization algorithm
+            p=⬓􋐼(√(􋑯(x)⋅􋑯(􋑯(x))))¶󰂂
+           p=25􀌆󰂂
+           ass,bs,vs=⍁³
+           a=r
+           ∀a≤x⹏2: b=a²%x
+                   v=pᐖb¶􍪵
+                   B=p󱑼vꟿ⌃⨀
+                   xx=b⹏B
+                   ¿firstℕbool(󷺹²≥xx)≕pp²≠xx:
+                    ¿xx≠1:
+                       a󷸊+1
+                       ↺
+                    ☾(‹a=›,a)  ☾(‹b=a²%x=›,b)  ☾(‹pp=›,pp)  ☾(‹v=›,v)  ☾ᐦ
+                   ass󷸊+ₐ
+                   bs󷸊+
+                   vs󷸊+ᵥ
+                    󰤱 after matrices and finite fields, make fasst with 𝔽₂
+                   g=2⭥⨉ᵛˢ􋌵→󰈳⋁○󷺻vs⍉ᴍ󰲡x󱑼⟞ꟿ⋅⨁→%2
+                   ¿🃌g>1: y=ass󱑼g₁ꟿ⌃⨀
+                          z=firstℕbool(󷺹²≥bs󱑼g₁ꟿ⌃⨀)
+                          ¿􋑂(y-z,x)≕f∈[1,x]: vs=vs﹕􍨄
+                          ¡                : 🟑☾a;🟑 ↪t+f¶+x⹏f¶→󰒼
+                   a󷸊+1
+           ✗⨳‹Dixon's alg failed and I don't feel like doing the 󰤱 big boi next step yet.›
+    ¿𝚜􀋑⊞´: ↪ℵ⁰(x¶󰻾ꟿ⁺󷺻🃌󷺽)  󰤱 speedup
+    ¿𝚜􀋑⨉´: ↪x¶􋁼ꟿ⁺󷺹⛶􍪹󷺿
+    ¿𝚜􀋑􋑂 : ↪x¶􋁒Ϝⁿ󷺹⋅(⟝-1)⹏󷺽  󰤱 speedup
+    ¿𝚜􀋑%´: t=󷰾²􋁒ˣ  󰤱 speedup
+           ¿t<0: x󷸊⹏2
+           ¿2∣x: ↪0
+           p=3
+           ∀p≤x: ¿p∣x: ¿p²∣x: ↪0
+                       x󷸊⹏p
+                       t=-t
+                 p󷸊+2
+           ↪t
+    ¿𝚜􀋑􋑯: ¿2∣x: ∀2∣x: x󷸊⹏2  󰤱 speedup
+                ↪x􀉞1􀛾􋑯(2)
+          p=3
+          ∀p<⬒√x: ¿p∣x: ∀p∣x: x󷸊⹏p
+                        ↪x≡1∧􋑯(p)
+                  p󷸊+2
+          ↪􋑯(x)
+¶´ = ¶´􀃅
+
+⊢✿´(x,y,𝚜=␀): ¿y≡0: ↪𝑖(x􀋖􀜂1)
+              ¿x≡0: ↪𝑖(y􀜋􀊬1)
+              ¿􋑂(x,y)􀉤1: ↪0
+              ¿x􀉞1: ↪1
+              t=󷰾⁰􁖍ˣ􁨧⁰􁖍ʸ
+              ¿y􀌆²􀯑r􀋉2􀛾x􀋉8􀉧[3,5]: t=􀊪t
+              y􇀞􀋖􀋇2ʳ
+              ¿y􀉞1: ↪t
+              x􇀞􀋉y
+              ↪t􀋈(􀌄´)(y,x)􀋈(󷰾􀞶(x􀋇2ˣ􁘯􊽮􀊪1)􀋈(y􀊪1)􀋇4)

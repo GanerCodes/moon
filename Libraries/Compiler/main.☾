@@ -47,19 +47,32 @@ moon_to_py􋈨 = {}
 compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
  compile_files = 󷺹􀉳compile_code(⬤,✓,log=✓)􀋢𝗻
 
-⊢generate_bootstrap(dest=TMP􀋋‹moon.py›):
+⊢minify_py(𝚌):     ⦃import python_minifier⦄
+                  ¡: ✗􁀒‹Failed to import python_minifier, did you install it with pip?›
+                    ↪python_minifier.minify(𝚌,hoist_literals=✗)
+                  ¡: ✗􁀒‹Failed to run python_minifier!›
+               ⦃import ast⦄
+                  ↪ast.unparse(ast.parse(𝚌))
+                 ¡: ✗􁀒‹Failed to run python AST on code, bootstrap is likely invalid!›
+               ↪𝚌
+
+⊢generate_bootstrap(dest=TMP􀋋‹moon.py›,minify=✓):
+  write_exe = 󰲣(x,y) 􀊰 os.chmod(x,0o775) 􀊰 x  chmod(fp,‹+x›)  󰤱􊽨
+  
   file_canon = __file__.with_suffix(‹.☾›)
    _,ƒ = PL_FORK(compile_code,file_canon,✓,log=✓)
   ƒ = compile_code(file_canon,✓,log=✓)ᐒ󰲟⟞
+  dest􀯏𝐩
   pyc = ‹⟦pathlib_import⟧
          ⟦header_com compile_files⟧
          ⟦dump_cached_imports􀃅⟧
          ⟦ƒ􀃅⟧›ᐒ␛
-        ‹#!/bin/python
+        ‹#!/bin/python -Su
          BOOTSTRAP_HASH=⟦⟞ sha repr⟧
-         ⟦⟞⟧›
-  ¿dest: (dest􀯏𝐩,pyc)
-         os.chmod(dest,0o775)  chmod(dest,‹+x›)  󰤱􊽨
+         ⟦⟞⟧›  󰤱 make #!/bin/python be the exe running right now?
+  ¿minify: ¿dest: ‹Wrote unminified code to ⟦write_exe(tmpf􀃅􀯑f,pyc)⟧›􀊸
+           pyc􀯏minify_py
+  ¿dest: write_exe(dest,pyc)
   ↪pyc
 
 ⊢force_reimport_compiler:
@@ -86,7 +99,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
   show_imports􀃅
   ↪c
 ⊢generate_bootstrap_live(⠤𝔸,⠶𝕂):
-  force_reimport_compiler􀃅.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›)
+  force_reimport_compiler􀃅.generate_bootstrap(𝔸 􀯗𝔸₀􀯘 ‹bootstrap.py›,⠶𝕂)
   ŧ𝼝(‹Generated bootstrap!›,‹f0f›)􀊸
 
 ⊢moon_cli(extract=✗,ia=✓,rl=✓):  󰤱 `AST <𝚌>` for ast
@@ -169,7 +182,7 @@ compile_files = 󷺹􀉵compile_code(⬤,✓,log=✓)􀋢𝗻
      ⸘f􀉨‹o󷺗󷺗󷺗󷺗󷺗󷺗›: 𝖠􀜦0􀊱1􀊱2􀜙󰲡compile_code(x₀,ƒ=ƒ)􀯖(x₁􀯗(x₁,⬤)􀯘􀁦)
      ¡           : ‹Invalid mode(s): ⟦f⟧›􀊸 􀝔 show_docs􀃅
 
-⭷ moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,transpiler_cli,moon_cli
+⭷ minify_py,moon_to_py,moon_to_py_debug,compile_files,generate_bootstrap,transpiler_cli,moon_cli
 
 TRANSPILE_REF(moon_to_py)
 
