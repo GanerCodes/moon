@@ -20,6 +20,19 @@
       for 􋇙 maybe use a 𐞑 or somethingiadfsj
 󰤱  ∀a⬠bᐖ1:1  check for this type beat
 
+Make this the way to create operators (note 󷰬 should be optional and prob deprecate at some point):
+```
+󰨃󰁌󰁖󷰬 PS⟦ᐦR⟧⟦ᐦO⟧𝕊⟶󷺘󷺙󷺚󷺛 𝚡󷺤􊽨𝚡󰨂(
+  ‹un  un  out out  ›􀌌􀊠􀉴‹⬤ordered powerset with⬤ repetition›,
+  
+  󰦥󰦥󰦥󰦥󰦥
+  documentation block
+  here
+  󰦥󰦥󰦥󰦥󰦥
+)(𝕏,𝚡,𝚜=␀):
+  □  code goes here
+```
+
  🐈‍⬛‍⬛‍⬛‍⬛‍⬛‍🟩‍🟫
 All orders for all operators
 Colors and number-labels of ⬤
