@@ -2,7 +2,6 @@
 ![☾ Logo Code Golf](./Extra/Assets/golf1.png)
 
 [Online Version](https://ganer.xyz/moon/)
-> It is outdated. WASM experts hmu, I pay handsomely (all payment is in the form a README shoutout on a repo with 20 stars and 3 watchers)
 
 ## Local install  
 Requires python3.14 or above  
