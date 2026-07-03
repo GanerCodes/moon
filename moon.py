@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='ek1i82QhFyxvOx4xB6KSQ6wohzcreYkBzFtGtkgux1c'
+BOOTSTRAP_HASH='F5bAg_366PD2xibfUPME0S_EhNyHY0VqfiNvzYObkmo'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -617,18 +617,28 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
 	(r:=[*zip(*áÖÒ)]);return Áÿú(r,ÄÊCUR((1,),{},ÄÔÔè,ÂýÃ,ÄÔýò))if áØÁ is ÄÔýò else r
 @OPWRAP_(*'\U000f7e62\U000f7e63')
 def _(áÑã,áØÆ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
-	ÄÊPOP(0)if ÄÊPSH(áÑã=='\U000f7e62')else ÂùÆ(ÄÊPOP(0),'\U000f0931')
 	if ÂÞÅ is áØÇ:(áØÇ:=2)
 	if(ÄÝøÆ(ÁÜÙ,ÄÊPSH(áØÆ))and ÄÝøÇ(ÄÊPOP(0),ÄÊPSH(áÍá)))and(ÄÊDEL(1)or True)or(ÄÊDEL(1)or False):(ÄÊPSH(áØÆ),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÍá)),(áØÆ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
 	if ÁØñ(ÁÜÙ,áØÆ)and((ÂÞÅ is not ÄÊPSH(áØÁ)and ÄÊPOP(0)is not ÄÊPSH(ÄÔýò))and(ÄÊDEL(1)or True)or(ÄÊDEL(1)or False)):(ÄÊPSH(áØÁ),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),ÁÜÙ)),(áØÁ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
-	(áØÅ:=Âüð(ÄÝõè(áØÇ))or 2);(ÏÁ:=(lambda ÂîÓ:ÂîÓ if ÂîÓ>0 else áØÅ+ÂîÓ)(Âüð(ÄÝõç(áØÇ))));(ÄÊPSH((0,ãÊú(áØÆ),ÂÚü())),((i:=ÄÊPKE(0)[0]),(áÖù:=ÄÊPKE(0)[1]),(áÖä:=ÄÊPKE(0)[2])),ÄÊDEL(1))[1]
-	while i<áÖù:
-		if(e:=i+áØÅ>áÖù)and áØÁ is ÂÞÅ:return áÖä
-		(áØÀ:=áØÆ[slice(i,i+áØÅ)])
-		if e and áØÁ is not ÄÔýò:
-			if ÁØö(áØÆ,ÁÜÙ):(ÄÊPSH(áØÀ),ÄÊPSH(ÄÊPKE(0)+(ÂüË(ãÊú(áØÀ))+áØÅ)*áØÁ),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
-			else:(ÄÊPSH(áØÀ),ÄÊPSH(ÄÊPKE(0)+(ÂüË(ãÊú(áØÀ))+áØÅ)*[áØÁ]),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
-		(ÄÊPSH(áÖä),ÄÊPSH(ÄÊPKE(0)+[áØÀ]),(áÖä:=ÄÊPKE(0)),ÄÊDEL(2))[2];(ÄÊPSH(i),ÄÊPSH(ÄÊPKE(0)+ÏÁ),(i:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+	(áØÅ:=Âüð(ÄÝõè(áØÇ))or 2);(ÏÁ:=(lambda ÂîÓ:ÂîÓ if ÂîÓ>0 else áØÅ+ÂîÓ)(Âüð(ÄÝõç(áØÇ))));(ÄÊPSH((ãÊú(áØÆ),ÂÚü())),((áÖù:=ÄÊPKE(0)[0]),(áÖä:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
+	if áÑã=='\U000f7e62':
+		(i:=0)
+		while i<áÖù:
+			if(e:=i+áØÅ>áÖù)and áØÁ is ÂÞÅ:return áÖä
+			(áØÀ:=áØÆ[slice(i,i+áØÅ)])
+			if e and áØÁ is not ÄÔýò:
+				if ÁØö(áØÆ,ÁÜÙ):(ÄÊPSH(áØÀ),ÄÊPSH(ÄÊPKE(0)+(ÂüË(ãÊú(áØÀ))+áØÅ)*áØÁ),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+				else:(ÄÊPSH(áØÀ),ÄÊPSH(ÄÊPKE(0)+(ÂüË(ãÊú(áØÀ))+áØÅ)*[áØÁ]),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+			(ÄÊPSH(áÖä),ÄÊPSH(ÄÊPKE(0)+[áØÀ]),(áÖä:=ÄÊPKE(0)),ÄÊDEL(2))[2];(ÄÊPSH(i),ÄÊPSH(ÄÊPKE(0)+ÏÁ),(i:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+	else:
+		(i:=áÖù)
+		while i>0:
+			if(s:=i-áØÅ<0)and áØÁ is ÂÞÅ:return áÖä
+			(áØÀ:=áØÆ[slice(ÂóÍ(i-áØÅ,0),i)])
+			if s and áØÁ is not ÄÔýò:
+				if ÁØö(áØÆ,ÁÜÙ):(ÄÊPSH(áØÀ),ÄÊPSH(ÂÁÍ(ì)(ÄÊPKE(0),(ÂüË(ãÊú(áØÀ))+áØÅ)*áØÁ)),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+				else:(ÄÊPSH(áØÀ),ÄÊPSH(ÂÁÍ(ì)(ÄÊPKE(0),(ÂüË(ãÊú(áØÀ))+áØÅ)*[áØÁ])),(áØÀ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
+			(ÄÊPSH(áÖä),ÄÊPSH(ÂÁÍ(ì)(ÄÊPKE(0),[áØÀ])),(áÖä:=ÄÊPKE(0)),ÄÊDEL(2))[2];(ÄÊPSH(i),ÄÊPSH(ÄÊPKE(0)-ÏÁ),(i:=ÄÊPKE(0)),ÄÊDEL(2))[2]
 	return áÖä
 def ÁÛÛ(áØÆ,áØÁ=ÂÞÅ):
 	def Æå(áØÁ):
