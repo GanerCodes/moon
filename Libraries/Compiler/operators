@@ -141,13 +141,12 @@
         󷹇 right arg is function of 1 variable
     󰤱 examples
     󷹇 Supports ᔨ and 󰮈
-󷰠 ᗢᙧᙎᙡ 𝚡󷸐􊽨𝚡 cw⟦ᐦp⟧⟦ᐦt⟧𝕊 window sides {✗ ; ✗,✗ ; ✓,✓ ; ✗,✓ ; ✓} middle
+󷰠 ᗢᙧᙎᙡ 𝚡󷸐􊽨𝚡 cw⟦ᐦp⟧⟦ᐦt⟧𝕊 (deprecated) window sides {✗ ; ✗,✗ ; ✓,✓ ; ✗,✓ ; ✓} middle
+    󷹇 this is deprecated because the semantics were cooked
     ᗢ: no sides, no middle
     ᙧ: no sides, include middle
     ᙎ: include sides, no middle
     ᙡ: include sides, include middle
-    ❗ window operator′s order & default window size may change ❗
-    󰤱 docs
 󷰠 ᖘ 𝚡∧􋅂𝚡 can "candycane", apply to select
     𝗜≕𝕏 ᖘ􊽺 ꬶ
     calls ƒ(𝕏) to get list of indicies
@@ -242,6 +241,8 @@
    
     󷹅: same as 󱑼 but elements are aligned towards the right
         `[1,2] 󷹅 [1,2,3] ≡ [[1,2],[2,3]]`
+󷰢 󷹢󷹣 𝚡∨􊽨𝚡 cw⟦ad⟧𝕊 window {left,right} aligned 
+    󰤱
 󷰢 ᓕ 𝚡󷺤􋅂𝚡 cat𝕊 at indices
     `[5,‹joe›,‹zek›]ᓕ²󰁱¹ ≡ "e"`
     `[1,2,[5,2,2,9]] ᓕ²󰁱³ ≡ 9`
