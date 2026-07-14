@@ -35,9 +35,6 @@
     󰤱  should I like prefix/suffix names inside ℵ to avoid accidently doing like '.setdef'?
          what about like .items, this might be cooked
     󰤱  Webinterface
-	       It broke rn
-           Fix emscripten compile peggle3 + lpcre
-           Make it load libraries dynamically in peggle3/main.☾
          Update the intro print statement w new stuff
          Show colors in editor
          Mac keybinds
@@ -48,7 +45,6 @@
          what?
     󰤱  versions of ⭜ ⭝ that foward the value like 󷸊
     󰤱  version fold with multiple (optionally all) prev vals
-    󰤱􊽨 󰶡 and 󰶣 for minus/plus one?
     󰤱  ⍭ inverse so like join by seperators in conseq order (default ᐦ𝗻?)
     󰤱  heckin detect byte mode  to implicitly cast input to ᔐ
     󰤱  Under
@@ -88,6 +84,7 @@
          [5,2,0,1,0,0,2] b ☾
     󰤱  way to map over contingious truthy groups of 𝌂
     󰤱  finish sup/sub 󷸓󷸔
+    󰤱  Expand 󰶡/󰶣 functionality
     󰤱  expose text_format stuff
     󰤱  Better window, multidimentional
     󰤱  easy mutexs

@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='F5bAg_366PD2xibfUPME0S_EhNyHY0VqfiNvzYObkmo'
+BOOTSTRAP_HASH='30n9ZOyYwO7jowJOq7lmOXrvOwJicmyL2_mJkoqlVJ4'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -1332,6 +1332,7 @@ __dir__=(__file__:=áÌî(moon_dir/'Builtins/⫚.☾')).parent
 @OPWRAP_(*'\U000f7e98\U000f7e99\U000f7e9a\U000f7e9b')
 def _(áÑã,áØÆ,áØÁ=ÂÞÅ):
 	ÄÊPOP(0)if ÄÊPSH(áØÁ is ÂÞÅ)else ÂùÆ(ÄÊPOP(0),'\U000f0931');ÄÊPOP(0)if ÄÊPSH(ÁØö(áÑã,áÍá|áÍé|ÁÜÙ))else ÂùÆ(ÄÊPOP(0),'\U000f0931')
+	if not áØÆ:return ÂÚü()
 	if áÑã=='\U000f7e98':return ÁØòþë(lambda ÂîÓ,ÄÝõÌ,ÄÝõË:ÁØòþë(lambda ÂîÓ,ÄÝõÌ,ÄÝõË:áØÆ[ÄÝõÌ]if ÂîÓ else ÄÔýò)(ÂîÓ))(MOD(ÂÿÇ,áØÁ=ãÊú(áØÆ))(2))
 	if áÑã=='\U000f7e99':return ÁãÁ(MOD(ÄÝøî,áØÁ=áØÁ)(áØÆ),ÄÔàÑ)
 	if áÑã=='\U000f7e9a':
