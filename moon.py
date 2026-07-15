@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='30n9ZOyYwO7jowJOq7lmOXrvOwJicmyL2_mJkoqlVJ4'
+BOOTSTRAP_HASH='6R_4Qqs-HOu4DmBQ2xS8hyDwHGQAt28rTabKFVkrmtQ'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -1430,7 +1430,7 @@ class Âÿ:
 		if áØÁ is ÂÕÐ:return[*ÐÌÛ(MOD(Âÿ,áØÁ=ë)(x),ÄÕÍÔ)]
 		if áØÁ is ë:
 			(ÄÊPSH(x),ÄÊPSH(ÂüÌ(ÄÊPKE(0))),(x:=ÄÊPKE(0)),ÄÊDEL(2))[2]
-			if x==1:return ÂÚü()
+			if x<=1:return ÂÚü()
 			(t:=ÂÚü())
 			while ÂÕÐ(2,x):(ÄÊPSH(t),ÄÊPSH(ÄÊPKE(0)+[2]),(t:=ÄÊPKE(0)),ÄÊDEL(2))[2];(ÄÊPSH(x),ÄÊPSH(ÄÊPKE(0)//2),(x:=ÄÊPKE(0)),ÄÊDEL(2))[2]
 			for k in MOD(ÄÝöÊ,áØÁ=2)(3,100):
