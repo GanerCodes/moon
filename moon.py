@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='6R_4Qqs-HOu4DmBQ2xS8hyDwHGQAt28rTabKFVkrmtQ'
+BOOTSTRAP_HASH='5_oNQJEX5XPC-Om8UCvX9HBaneq_UWF3e5eFLz45VFY'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -857,7 +857,7 @@ def _(áÑã,áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
 (ÄïÉð:=(sha:=Cmap(ÁÁ,{ÁÁ:lambda*áÑË,**áÑÕ:ÂÞÅCAT(_sha256(áÍÇ(ÁÜÙ(áÑË)+ÁÜÙ(áÑÕ))).digest(),ÄïÊÀ),áÍî:lambda x:_sha256(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ)).digest()})))
 (ÄÊPSH((MOD(lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),zibe),b85e),áÍÇ)),MOD(lambda ÂîÓ:ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂÞÅCAT(ÂîÓ,áÍÇ),b85d),zibd),áÍÇ)))),((stre:=ÄÊPKE(0)[0]),(strd:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 (ÄïÉö:=(ÄïÉù:=(áÐÞ:=Cmap(ÁÁ,{ÁÁ:ÄÊCUR((1,),{'ensure_ascii':False,'indent':None,'separators':',:'},jdumps__,ÂýÃ),ÿ:jloads__}))))
-(ÄïÊÀ:=Cmap(ÁÁ,{ÁÁ:lambda x:áÍÇ(urlsafe_b64encode(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ))).rstrip('='),ÿ:lambda x:urlsafe_b64decode(áÍÇ(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÁØö,ÂýÃ,áÍî))(x,áÍÇ)+'='*(4-ãÊú(x)%4)))}))
+(ÄïÊÀ:=Cmap(ÁÁ,{ÁÁ:lambda x:áÍÇ(urlsafe_b64encode(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÄÝøÇ,ÂýÃ,áÍî))(x,áÍÇ))).rstrip('='),ÿ:lambda x:urlsafe_b64decode(áÍÇ(MOD(Áëý,áØÁ=ÄÊCUR((1,),{},ÁØö,ÂýÃ,áÍî))(x,áÍÇ)+(4-ãÊú(x)%4)%4*'='))}))
 try:from Crypto.Cipher import AES;from Crypto.Util.Padding import pad,unpad
 except áÍÚ as Ðáü:ÄÊPOP(0)if ÄÊPSH(False)else MOD(ÂùÆ,áØÁ=ÂÄ)(ÄÊPOP(0),'Failed to import AES libraries! Do you have pycryptodome installed?')
 def AES_ENC_SIV(áÖú,k):return ÂøÑ(AES.new(k,AES.MODE_SIV).encrypt_and_digest(áÖú))

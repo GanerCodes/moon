@@ -58,7 +58,7 @@ stre, strd = 󷺹𝑀 zibe b85e 𝑀, 󷺹𝑀 b85d zibd 𝑀
 
 􇦌 = 􇦎 = 𝔍 = Cmap(>,{>:jdumps__(⬤,ensure_ascii=✗,indent=□,separators=‹,:›),<:jloads__})
 􇦔 = Cmap(>,{ >:󰲡𝑀(urlsafe_b64encode(x􀊚􋅂􁗇􋇦𝑀)).rstrip(␛=),
-             <:󰲡  urlsafe_b64decode(𝑀(x􀊚􋅂􁗅􋇦𝑀 􀾢 ␛=􀝬4􀓼x􀊹􀋉4)) })
+             <:󰲡  urlsafe_b64decode(𝑀(x􀊚􋅂􁗅􋇦𝑀 􁁨 4􀗂x􀊹􀋉4􀝭4􀝬␛=)) })
 
 🟑 § Encryption/Decryption §
   󰤱􊽨 make AES_ENC and AES_DEC functions the basic ℤ₁₂₈⨉ℤ₂₅₆↦ℤ₁₂₈ version
