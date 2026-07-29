@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='5_oNQJEX5XPC-Om8UCvX9HBaneq_UWF3e5eFLz45VFY'
+BOOTSTRAP_HASH='hyMgV4f5YT4VMs_ti1sG9sOTzD8Ogtm7DUeAioQMtec'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -115,7 +115,7 @@ def ÂÖÑ(áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ):
 	if áØÁ is ÂÞÅ:return áØÆ==áØÇ
 	if áÓó(áØÁ):return áØÁ(áØÆ)==áØÁ(áØÇ)
 	if áÓö(áØÁ):(ÄÊPSH(áØÁ),ÄÊPSH(ãÊú(ÄÊPKE(0))),(áØÁ:=ÄÊPKE(0)),ÄÊDEL(2))[2]
-	return x%áØÁ==y%áØÁ
+	return áØÆ%áØÁ==áØÇ%áØÁ
 (ÂÖÐ:=lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:not MOD(ÂÖÑ,áØÁ=áØÁ)(áØÆ,áØÇ))
 (ÂØú:=lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:áØÆ*áØÇ if áØÁ is ÂÞÅ else áØÆ*áØÇ%MOD(Áëý,áØÁ=áÓö)(áØÁ,ãÊú))
 (ÄÃ:=lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:áØÆ/áØÇ if áØÁ is ÂÞÅ else áØÆ/áØÇ%MOD(Áëý,áØÁ=áÓö)(áØÁ,ãÊú))

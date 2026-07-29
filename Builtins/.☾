@@ -1,4 +1,4 @@
- gettempdir
+ gettempdir􀃅
   TMPDIR = env.get(‹MOON_TMP󷺗󷺗DIR›,‹/dev/shm›𝐩 􀋋 ‹☾_tmp›) 𝐩
 CACHEDIR = env.get(‹MOON_CACHEDIR›,     TMPDIR 􀋋 ‹cache›) 𝐩
 mkd  = ⥌f,e=✓,p=✓↦    f 𝐩≕p           →.mkdir(exist_ok=e,parents=p) ► p
@@ -10,49 +10,49 @@ tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIRᑀ􀜾ᵇ⬤􀋋bᐸ􀋋(f􀋑␀ 􇂖n 
            __call__ = ⥌𝕊,⠤𝔸,⠶𝕂↦𝕊􊽺(⠤𝔸,⠶𝕂)
            __getitem__ = __getattr__ = ⥌𝕊,x↦𝚲𝕊􊽺(⠤𝔸,x,⠶𝕂)
 
- = ⥌x=␀↦x≅␀ ⭜PL_TEXT_PASTE⭝ x ᔐ PL_TEXT_COPY ► x
+ = ⥌x=␀↦x≅␀ ⭜PL_TEXT_PASTE􀃅⭝ x ᔐ PL_TEXT_COPY ► x
  = suppar2(⥌f  ,o=ᐦ↦𝐩(f).open(o))
- = suppar2(⥌f  ,o=ᐦ↦ⓦ(y≔􊯛ᵣ₊󰂼(f), 󰲡x.read       ))
+ = suppar2(⥌f  ,o=ᐦ↦ⓦ(y≔􊯛ᵣ₊󰂼(f), 󰲡x.read  􀃅     ))
  = suppar2(⥌f,𝓬,o=ᐦ↦ⓦ(y≔􊯛₊󰂼(f), 󰲡x.write(𝓬) ► y))
 
-pwd = 𝚲𝐩(os.getcwd)
+pwd = 𝚲𝐩(os.getcwd􀃅)
 󱀘 cd: s,c = ⍁²
       ⊢ __init__(𝕊, d=□): 𝕊ᵈ = d
       ⊢ __enter__(𝕊): x = 𝕊ᵈ
-                      cdˢ.append((cdᶜ🃌,x≔pwd))
+                      cdˢ.append((cdᶜ🃌,x≔pwd􀃅))
                       ¿x≇□: os.chdir(𝐩(x))
-                      ↪pwd
+                      ↪pwd􀃅
       ⊢ __exit__(𝕊,⠤𝔸): i,d = cdˢ.pop(󷰾)
                         cdᶜ = cdᶜ﹕ᵢ
                         os.chdir(d)
-                        ↪pwd
+                        ↪pwd􀃅
       ⊢ __call__(𝕊,d=□): ¿d≅@´: ↪cd(𝐩(inspect.stack()₁.filename).parent)
                          ¿d≅□ : os.chdir(cdᶜ.pop(󷰾))
-                                ↪pwd
-                         cdᶜ.append(pwd)
+                                ↪pwd􀃅
+                         cdᶜ.append(pwd􀃅)
                          os.chdir(d)
-                         ↪pwd
+                         ↪pwd􀃅
       ⊢ __getitem__(𝕊,d): ↪𝕊􋕟􋕟ᶜˡᵃˢˢ􋕟􋕟(d)
-cd = cd
+cd = cd􀃅
 
 🟑
 mkd(‹/tmp/eggs›)
-pwd☾
+pwd􀃅☾
 cd∘‹/tmp›
-pwd☾
+pwd􀃅☾
 cd∘‹eggs›
-pwd☾
+pwd􀃅☾
 ⊢ (󰲡ⓦ(cd,x)) ():
-    pwd☾
-    cd
-    pwd☾
+    pwd􀃅☾
+    cd􀃅
+    pwd􀃅☾
     ⊢ (󰲡ⓦ(cd[‹cpy_temp›],x)) ():
-        pwd☾
-    pwd
-    cd
-    pwd☾
-pwd☾
+        pwd􀃅☾
+    pwd􀃅
+    cd􀃅
+    pwd􀃅☾
+pwd􀃅☾
 
 ∘‹joexd›
-(‹/tmp/eggasdasd›, )
+(‹/tmp/eggasdasd›, 􀃅)
 (‹/tmp/eggasdasd›)☾
