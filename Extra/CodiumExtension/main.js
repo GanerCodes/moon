@@ -1,3 +1,5 @@
+// 󰤱 alternate paste that aligns next lines based on where first line ends up
+
 const Ų = undefined;
 const ζ = (...𝔸)=>𝔸.s(x=>x.length).at(-1).ᴍ((_,i)=>𝔸.ᴍ(x=>x[i]));
 const ꟿ = (x,y,...𝔸)=>[...x].ᴍ((x,...𝔸)=>y(...x)); // 󰤱 we throw out 𝔸's, fix that but make sure it doesn't break anything
@@ -182,7 +184,7 @@ const activateSelectionTools = ℭ => {
                                        .forEach(𝚜 => 𝑒𝑏.replace(𝚜,v(𝐸.document.getText(𝚜))))); })
     ).forEach(ℭ.subscriptions.push); };
 
-const activate = ℭ => { activateHighlighter(ℭ); activateSelectionTools(ℭ); }
+const activate = ℭ => (activateHighlighter(ℭ), activateSelectionTools(ℭ));
 const deactivate = _ => {};
 
-module.exports = { activate, deactivate };
+module.exports = {activate,deactivate};

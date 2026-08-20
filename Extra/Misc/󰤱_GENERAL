@@ -10,6 +10,7 @@
         "abc 123 4 5a234"𝌂󷺹∈num⭜􍭓✓
 
 § TODOs ------------------------------------
+    󰤱  has ℵ rlly not had __delitem__ this entire time???
     󰤱  Documentation
     󰤱  Reduce the amount of operator orders
        󰤱 Cull orders
