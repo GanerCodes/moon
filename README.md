@@ -1,7 +1,7 @@
 # ☾  
-![☾ Logo Code Golf](./Extra/Assets/golf1.png)
+![☾ Logo Code Golf](./Extra/Assets/moon-golf.png)
 
-[Online Version](https://ganer.xyz/moon/)
+[Online Version](https://ganer.xyz/moon)
 
 ## Local install  
 Requires python3.14 or above  
@@ -17,7 +17,7 @@ Run a file: `☾ ./somefile.☾`
 Show help: `☾ -h`  
 
 Once installed, there's a VScodium/VSCode extension for syntax highlighting, superscript/subscripting, switching operator orders, alignment tools, etc.  
-> It's the .vsix file found inside /Extra/CodiumExtension. Note that ☾ must be in $PATH to function properly.  
+> It's the .vsix file found inside /Extra/CodiumExtension. Note that ☾ should be in $PATH to function properly.  
 
 ### Collaborators
 [Used1Brain](https://github.com/Used1Brain/): Mathematical libraries and initial glyph generator

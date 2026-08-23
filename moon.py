@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='4o5tBFPimvtyL-OMMSi22kREOut5UqPgg0I0WTiLJBo'
+BOOTSTRAP_HASH='TRTQqSnxutzl7d-1Cp3zk_FqBKi6T29uMcmLLDmLs1g'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -871,15 +871,15 @@ class ÄïÉï:(__getitem__:=lambda x,y:Cmap(ÁÁ,{ÁÁ:lambda x:ENC_BYTES(ÂÞ�
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/\uea7b.☾')).parent
 (TMPDIR:=ÂÞÅCAT(env.get('MOON_TMPDIR',ð(ÂÞÅCAT('/dev/shm',áÌî),'☾_tmp')),áÌî))
 (CACHEDIR:=ÂÞÅCAT(env.get('MOON_CACHEDIR',ð(TMPDIR,'cache')),áÌî))
-(mkd:=lambda f,e=True,p=True:ÂåÔ((p:=ÂÞÅCAT(f,áÌî)).mkdir(exist_ok=e,parents=p),p))
-(mkf:=lambda f,e=True:ÂåÔ(ÂåÔ(mkd((p:=ÂÞÅCAT(f,áÌî)).parent),p).touch(exist_ok=e),p))
+(mkd:=lambda f,e=True,p=True:ÂåÔ((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2].mkdir(exist_ok=e,parents=p),f))
+(mkf:=lambda f,e=True:ÂåÔ(mkd((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2].parent).touch(exist_ok=e),f))
 (tmpf:=lambda b=ÁØã,f=ÂÞÅ,n=14:mkf(ð((lambda ÂîÓ:MOD(Áëý,áØÁ=b)(ÂîÓ,ÄÊCUR((1,),{},ð,ÂýÃ,b)))(TMPDIR),ÂÞÅCAT(n,SR_str)if f is ÂÞÅ else f)))
 (tmpd:=lambda b=ÁØã,f=ÂÞÅ,n=14:mkd(ð((lambda ÂîÓ:MOD(Áëý,áØÁ=b)(ÂîÓ,ÄÊCUR((1,),{},ð,ÂýÃ,b)))(TMPDIR),ÂÞÅCAT(n,SR_str)if f is ÂÞÅ else f)))
-class suppar2:(__init__:=lambda áÑÞ,Æå:ÂåÔ((ÄÊPSH(Æå),ÄÊPSH(áÑÞ),ÄÊPSH('Æå'),setattr(ÄÊPKE(1),ÄÊPKE(0),ÄÊPKE(2)),ÄÊDEL(3))[3],None));(__call__:=lambda áÑÞ,*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,**áÑÕ));(__getitem__:=(__getattr__:=lambda áÑÞ,x,*áÑË,**áÑÕ:lambda*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,x,**áÑÕ)))
+class suppar2:(__init__:=lambda áÑÞ,Æå:ÂåÔ((ÄÊPSH(Æå),ÄÊPSH(áÑÞ),ÄÊPSH('Æå'),setattr(ÄÊPKE(1),ÄÊPKE(0),ÄÊPKE(2)),ÄÊDEL(3))[3],None));(__call__:=lambda áÑÞ,*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,**áÑÕ));(__pow__:=(__getitem__:=(__getattr__:=lambda áÑÞ,x,*áÑË,**áÑÕ:lambda*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,x,**áÑÕ))))
 (ÐâÒ:=lambda x=ÂÞÅ:ÐÌü(PL_TEXT_PASTE)if x is ÂÞÅ else ÂåÔ(ÂÞÅCAT(ÂÞÅCAT(x,ÁÜÙ),PL_TEXT_COPY),x))
 (ÐÈÃ:=suppar2(lambda f,o=ÁØã:áÌî(f).open(o)))
 (ÐØó:=suppar2(lambda f,o=ÁØã:Âáõ((y:=ÐÈÃ['r'+o](f)),lambda x:ÐÌü(x.read))))
-(ÐØì:=suppar2(lambda f,áÏû,o=ÁØã:Âáõ((y:=ÐÈÃ['w'+o](f)),lambda x:ÂåÔ(x.write(áÏû),y))))
+(ÐØì:=suppar2(lambda f,áÏû,o=ÁØã:Âáõ((y:=ÐÈÃ[('w'if'a'not in o else ÁØã)+o](f)),lambda x:ÂåÔ(x.write(áÏû),y))))
 (pwd:=lambda*áÑË,**áÑÕ:áÌî(ÐÌü(os.getcwd)))
 class cd:
 	(ÄÊPSH(MOD(ÂÚü,áØÁ=2)()),((s:=ÄÊPKE(0)[0]),(c:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
