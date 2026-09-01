@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='zBzPazk13tA5NtPDxJwpLVG15RDuhZt50YWWeI4JFW8'
+BOOTSTRAP_HASH='YN2ltJ0TDIAOLACyqnBKkagiTNBktZBysqVNy_jMJBo'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -98,7 +98,7 @@ class ÂÐô:None
 (ÄÝöù:=lambda x,y:not ÂÕÖ(x,y))
 (ÂÕÃ:=lambda x,y:x-{*y}if ÁØö(x,áÍè)else[z for z in x if z not in y])
 (ÂøÚ:=lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:Áÿú(product(*([áØÆ]*áØÁ if áØÇ is ÂÞÅ and áØÁ is not ÂÞÅ else([áØÆ,áØÇ]if áØÇ is not ÂÞÅ else áØÆ)*(áØÁ if áØÁ is not ÂÞÅ else 1))),áÍá))
-(ÂØÑ:=lambda*áÑË,áØÁ=1:(Æå:=lambda*áÑË,n=1,r=[]:(lambda ÂîÓ:Áÿú(ÂîÓ[0],lambda x:Æå(*ÂîÓ[slice(1,None)],r=r+[x])if ãÊú(ÂîÓ)>1 else r+[x]))(áÑË*n))(*MOD(Áëý,áØÁ=ãÊú(áÑË)==1)(áÑË,MOD(lambda ÂîÓ:ÂîÓ[0])),n=áØÁ))
+(ÂØÑ:=lambda*áÑË,áØÁ=ÂÞÅ:(Æå:=lambda*áÑË,n=ÂÞÅ,r=[]:(lambda ÂîÓ:Áÿú(ÂîÓ[0],lambda x:Æå(*ÂîÓ[slice(1,None)],r=r+[x])if ãÊú(ÂîÓ)>1 else r+[x]))(áÑË if n is ÂÞÅ else MOD(Âêà,áØÁ=n)(áÑË)))(*MOD(Áëý,áØÁ=ãÊú(áÑË)==1)(áÑË,MOD(lambda ÂîÓ:ÂîÓ[0])),n=áØÁ))
 (ÄÊPSH((lambda x,y:x%y,lambda x,y:x//y)),((æ:=ÄÊPKE(0)[0]),(ÃËÕ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 (ÄÊPSH((lambda x,y:x is y,lambda x,y:x is not y)),((ÂÕó:=ÄÊPKE(0)[0]),(ÂÕõ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 (ÄÊPSH((lambda x:~x,lambda x,y:x@y)),((ÂÄ:=ÄÊPKE(0)[0]),(ÁÃ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
