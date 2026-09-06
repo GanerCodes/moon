@@ -1,8 +1,8 @@
  gettempdir􀃅
   TMPDIR = env.get(‹MOON_TMP󷺗󷺗DIR›,‹/dev/shm›𝐩 􀋋 ‹☾_tmp›) 𝐩
 CACHEDIR = env.get(‹MOON_CACHEDIR›,     TMPDIR 􀋋 ‹cache›) 𝐩
-mkd  = ⥌f,e=✓,p=✓↦   (f􀯏𝐩       ).mkdir(exist_ok=e,parents=p) 􀊰 f
-mkf  = ⥌f,e=✓    ↦mkd(f􀯏𝐩􀯖ᵖᵃʳᵉⁿᵗ).touch(exist_ok=e          ) 􀊰 f
+mkd  = ⥌f,e=✓,p=✓↦   (f􀯏𝐩       )􀊰fᵐᵏᵈⁱʳ(exist_ok=e,parents=p) 􀊰 f
+mkf  = ⥌f,e=✓    ↦mkd(f􀯏𝐩􀯖ᵖᵃʳᵉⁿᵗ)􀊰fᵗᵒᵘᶜʰ(exist_ok=e          ) 􀊰 f
 tmpf = ⥌b=ᐦ,f=␀,n=14↦mkf(TMPDIRᑀ􀜾ᵇ⬤􀋋bᐸ􀋋(f􀋑␀ 􇂖n SR_str􇂗 f))
 tmpd = ⥌b=ᐦ,f=␀,n=14↦mkd(TMPDIRᑀ􀜾ᵇ⬤􀋋bᐸ􀋋(f􀋑␀ 􇂖n SR_str􇂗 f))
 

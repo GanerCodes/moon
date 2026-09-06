@@ -1,5 +1,5 @@
 #!/bin/python -Su
-BOOTSTRAP_HASH='TRTQqSnxutzl7d-1Cp3zk_FqBKi6T29uMcmLLDmLs1g'
+BOOTSTRAP_HASH='j7MYOajr_15GwuQX50b0bQ6kLvGqKAbMt2-0qORJeNs'
 from pathlib import Path as áÌî
 from os import environ as env
 moon_dir=env.get('MOON_BASE_DIR')
@@ -98,7 +98,7 @@ class ÂÐô:None
 (ÄÝöù:=lambda x,y:not ÂÕÖ(x,y))
 (ÂÕÃ:=lambda x,y:x-{*y}if ÁØö(x,áÍè)else[z for z in x if z not in y])
 (ÂøÚ:=lambda áØÆ=ÂÞÅ,áØÇ=ÂÞÅ,áØÁ=ÂÞÅ:Áÿú(product(*([áØÆ]*áØÁ if áØÇ is ÂÞÅ and áØÁ is not ÂÞÅ else([áØÆ,áØÇ]if áØÇ is not ÂÞÅ else áØÆ)*(áØÁ if áØÁ is not ÂÞÅ else 1))),áÍá))
-(ÂØÑ:=lambda*áÑË,áØÁ=1:(Æå:=lambda*áÑË,n=1,r=[]:(lambda ÂîÓ:Áÿú(ÂîÓ[0],lambda x:Æå(*ÂîÓ[slice(1,None)],r=r+[x])if ãÊú(ÂîÓ)>1 else r+[x]))(áÑË*n))(*áÑË,n=áØÁ))
+(ÂØÑ:=lambda*áÑË,áØÁ=ÂÞÅ:(Æå:=lambda*áÑË,n=ÂÞÅ,r=[]:(lambda ÂîÓ:Áÿú(ÂîÓ[0],lambda x:Æå(*ÂîÓ[slice(1,None)],r=r+[x])if ãÊú(ÂîÓ)>1 else r+[x]))(áÑË if n is ÂÞÅ else MOD(Âêà,áØÁ=n)(áÑË)))(*MOD(Áëý,áØÁ=ãÊú(áÑË)==1)(áÑË,MOD(lambda ÂîÓ:ÂîÓ[0])),n=áØÁ))
 (ÄÊPSH((lambda x,y:x%y,lambda x,y:x//y)),((æ:=ÄÊPKE(0)[0]),(ÃËÕ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 (ÄÊPSH((lambda x,y:x is y,lambda x,y:x is not y)),((ÂÕó:=ÄÊPKE(0)[0]),(ÂÕõ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
 (ÄÊPSH((lambda x:~x,lambda x,y:x@y)),((ÂÄ:=ÄÊPKE(0)[0]),(ÁÃ:=ÄÊPKE(0)[1])),ÄÊDEL(1))[1]
@@ -871,8 +871,8 @@ class ÄïÉï:(__getitem__:=lambda x,y:Cmap(ÁÁ,{ÁÁ:lambda x:ENC_BYTES(ÂÞ�
 __dir__=(__file__:=áÌî(moon_dir/'Builtins/\uea7b.☾')).parent
 (TMPDIR:=ÂÞÅCAT(env.get('MOON_TMPDIR',ð(ÂÞÅCAT('/dev/shm',áÌî),'☾_tmp')),áÌî))
 (CACHEDIR:=ÂÞÅCAT(env.get('MOON_CACHEDIR',ð(TMPDIR,'cache')),áÌî))
-(mkd:=lambda f,e=True,p=True:ÂåÔ((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2].mkdir(exist_ok=e,parents=p),f))
-(mkf:=lambda f,e=True:ÂåÔ(mkd((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2].parent).touch(exist_ok=e),f))
+(mkd:=lambda f,e=True,p=True:ÂåÔ(ÂåÔ((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2],f.mkdir(exist_ok=e,parents=p)),f))
+(mkf:=lambda f,e=True:ÂåÔ(ÂåÔ(mkd((ÄÊPSH(f),ÄÊPSH(ÂÞÅCAT(ÄÊPKE(0),áÌî)),(f:=ÄÊPKE(0)),ÄÊDEL(2))[2].parent),f.touch(exist_ok=e)),f))
 (tmpf:=lambda b=ÁØã,f=ÂÞÅ,n=14:mkf(ð((lambda ÂîÓ:MOD(Áëý,áØÁ=b)(ÂîÓ,ÄÊCUR((1,),{},ð,ÂýÃ,b)))(TMPDIR),ÂÞÅCAT(n,SR_str)if f is ÂÞÅ else f)))
 (tmpd:=lambda b=ÁØã,f=ÂÞÅ,n=14:mkd(ð((lambda ÂîÓ:MOD(Áëý,áØÁ=b)(ÂîÓ,ÄÊCUR((1,),{},ð,ÂýÃ,b)))(TMPDIR),ÂÞÅCAT(n,SR_str)if f is ÂÞÅ else f)))
 class suppar2:(__init__:=lambda áÑÞ,Æå:ÂåÔ((ÄÊPSH(Æå),ÄÊPSH(áÑÞ),ÄÊPSH('Æå'),setattr(ÄÊPKE(1),ÄÊPKE(0),ÄÊPKE(2)),ÄÊDEL(3))[3],None));(__call__:=lambda áÑÞ,*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,**áÑÕ));(__pow__:=(__getitem__:=(__getattr__:=lambda áÑÞ,x,*áÑË,**áÑÕ:lambda*áÑË,**áÑÕ:áÑÞ.Æå(*áÑË,x,**áÑÕ))))
